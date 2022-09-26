@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Order Product Activation</fullName>
+        <default>false</default>
+        <label>Order Product Activation</label>
+    </customValue>
+    <customValue>
+        <fullName>Manual</fullName>
+        <default>false</default>
+        <label>Manual</label>
+    </customValue>
+    <masterLabel>Invoice Plan Creation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>GigaBytes</fullName>
+        <default>false</default>
+        <label>GigaBytes</label>
+    </customValue>
+    <customValue>
+        <fullName>Hours</fullName>
+        <default>false</default>
+        <label>Hours</label>
+    </customValue>
+    <customValue>
+        <fullName>Leads</fullName>
+        <default>false</default>
+        <label>Leads</label>
+    </customValue>
+    <masterLabel>Unit Of Measure</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

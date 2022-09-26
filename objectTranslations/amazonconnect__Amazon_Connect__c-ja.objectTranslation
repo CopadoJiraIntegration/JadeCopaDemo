@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Toolkit for Amazon Connect --></value>
+    </caseValues>
+    <fields>
+        <help>AC_AssociateCCACase トリガーを有効または無効にします。これにより、Case が Contact Channel Analytics レコードに関連付けられます。</help>
+        <label><!-- Disable the CCA Case Trigger --></label>
+        <name>amazonconnect__disableCCACase__c</name>
+    </fields>
+    <fields>
+        <help>AC_AssociateCCAContact トリガーを有効または無効にします。これにより、Contact が Contact Channel Analytics レコードに関連付けられます。</help>
+        <label><!-- Disable the CCA Contact Trigger --></label>
+        <name>amazonconnect__disableCCAContact__c</name>
+    </fields>
+    <fields>
+        <help>AC_AssociateCaseContactCCA トリガーを有効または無効にします。これにより、Case と Contact が Contact Channel Analytics レコードに関連付けられます。</help>
+        <label><!-- Disable the Case Contact CCA Trigger --></label>
+        <name>amazonconnect__disableCaseContactCCA__c</name>
+    </fields>
+    <fields>
+        <help>AC_TaskTrigger を有効にするか、無効にするかを選択します。</help>
+        <label><!-- Disable the Task Trigger --></label>
+        <name>amazonconnect__disableTaskTrigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose to enable or disable the AC_VoiceIdChannel trigger, which associates Cases and Contacts with a Voice Id Channel Record --></help>
+        <label><!-- Disable the Voice Id Channel Trigger --></label>
+        <name>amazonconnect__disableVoiceIdTrigger__c</name>
+    </fields>
+    <fields>
+        <help>Amazon Connect インスタンスのドメインの URL を入力してください (例: https://yourinstancename.awsapps.com)。</help>
+        <label><!-- Url --></label>
+        <name>amazonconnect__url__c</name>
+    </fields>
+</CustomObjectTranslation>

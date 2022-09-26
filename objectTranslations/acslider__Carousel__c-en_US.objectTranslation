@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>acslider__Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Content which will be placed on the image. HTML is supported. --></help>
+        <label><!-- Content --></label>
+        <name>acslider__Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image --></label>
+        <name>acslider__Image__c</name>
+    </fields>
+</CustomObjectTranslation>

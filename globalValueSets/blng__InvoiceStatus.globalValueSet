@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Draft</fullName>
+        <default>true</default>
+        <label>Draft</label>
+    </customValue>
+    <customValue>
+        <fullName>Error</fullName>
+        <default>false</default>
+        <label>Error</label>
+    </customValue>
+    <customValue>
+        <fullName>Initiated</fullName>
+        <default>false</default>
+        <label>Initiated</label>
+    </customValue>
+    <customValue>
+        <fullName>Posted</fullName>
+        <default>false</default>
+        <label>Posted</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </customValue>
+    <customValue>
+        <fullName>Rebilled</fullName>
+        <default>false</default>
+        <label>Rebilled</label>
+    </customValue>
+    <customValue>
+        <fullName>Post In progress</fullName>
+        <default>false</default>
+        <label>Post In progress</label>
+    </customValue>
+    <description>Invoice Status is an internal Global Value Set. Changing it could cause basic functionality to fail or become unstable.</description>
+    <masterLabel>Invoice Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

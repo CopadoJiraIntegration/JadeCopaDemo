@@ -1,0 +1,6 @@
+<apex:page standardcontroller="Contact" extensions="pi.PardotResourceBaseByUserExtension" showHeader="false" sidebar="false" standardStylesheets="false">
+  <style>
+     Body { Background: transparent; }
+  </style>
+    <c:FilteredFrame src="{!pardotBaseUrl}/prospect/activity/email/{!URLENCODE(Contact.Email)}{!authenticatedQueryStringWithContext}&serverurl={!$Api.Partner_Server_URL_90}&source=salesforce&tab=contact&style={!$User.UIThemeDisplayed}&fid={!Contact.ID}" scrolling="true" height="100%" id="prospect_insight"/>
+</apex:page>

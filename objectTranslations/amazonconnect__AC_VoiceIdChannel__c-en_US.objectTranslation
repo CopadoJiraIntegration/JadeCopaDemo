@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Authentication Result Decision --></label>
+        <name>amazonconnect__AuthenticationResultDecision__c</name>
+        <picklistValues>
+            <masterLabel>Authenticated</masterLabel>
+            <translation><!-- Authenticated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NotAuthenticated</masterLabel>
+            <translation><!-- NotAuthenticated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NotEnabled</masterLabel>
+            <translation><!-- NotEnabled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NotEnrolled</masterLabel>
+            <translation><!-- NotEnrolled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OptedOut</masterLabel>
+            <translation><!-- OptedOut --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Authentication Result Score --></label>
+        <name>amazonconnect__AuthenticationResultScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>amazonconnect__Case__c</name>
+        <relationshipLabel><!-- Voice Id Channel Case --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>amazonconnect__ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Number --></label>
+        <name>amazonconnect__CustomerNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fraud Detection Result Decision --></label>
+        <name>amazonconnect__FraudDetectionResultDecision__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HighRisk</masterLabel>
+            <translation><!-- HighRisk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inconclusive</masterLabel>
+            <translation><!-- Inconclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LowRisk</masterLabel>
+            <translation><!-- LowRisk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NotEnabled</masterLabel>
+            <translation><!-- NotEnabled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fraud Detection Result Reasons --></label>
+        <name>amazonconnect__FraudDetectionResultReasons__c</name>
+        <picklistValues>
+            <masterLabel>KNOWN_FRAUDSTER</masterLabel>
+            <translation><!-- KNOWN_FRAUDSTER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REPLAYED_SPEECH</masterLabel>
+            <translation><!-- REPLAYED_SPEECH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYNTHETIC_SPEECH</masterLabel>
+            <translation><!-- SYNTHETIC_SPEECH --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fraud Detection Result Risk Details --></label>
+        <name>amazonconnect__FraudDetectionResultRiskDetails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Contact --></label>
+        <name>amazonconnect__SfContact__c</name>
+        <relationshipLabel><!-- Voice ID Channel Contact --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Speaker Id --></label>
+        <name>amazonconnect__SpeakerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speaker Status --></label>
+        <name>amazonconnect__Status__c</name>
+        <picklistValues>
+            <masterLabel>ENROLLED</masterLabel>
+            <translation><!-- ENROLLED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPT_OUT</masterLabel>
+            <translation><!-- OPT_OUT --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

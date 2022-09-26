@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ANI --></label>
+        <name>amazonconnect__ANI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>amazonconnect__ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>amazonconnect__Contact_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>amazonconnect__Contact__c</name>
+        <relationshipLabel><!-- AWS Phone Calls --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- DNIS --></label>
+        <name>amazonconnect__DNIS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ended --></label>
+        <name>amazonconnect__Ended__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording --></label>
+        <name>amazonconnect__Recording__c</name>
+    </fields>
+    <fields>
+        <label><!-- Started --></label>
+        <name>amazonconnect__Started__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>amazonconnect__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+    </fields>
+    <recordTypes>
+        <label><!-- Completed Calls --></label>
+        <name>amazonconnect__Completed_Calls</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- In-Progress Calls --></label>
+        <name>amazonconnect__In_Progress_Calls</name>
+    </recordTypes>
+</CustomObjectTranslation>

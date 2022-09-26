@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <amount>true</amount>
+    <dateType>2</dateType>
+    <developerName>FY20212</developerName>
+    <hasProductFamily>true</hasProductFamily>
+    <masterLabel>Product Family Revenue by Territory and Schedule Date</masterLabel>
+    <quantity>false</quantity>
+    <roleType>Y</roleType>
+    <territory2Model>FY2021</territory2Model>
+</ForecastingType>

@@ -280,9 +280,120 @@
         <label>Copado License Manager</label>
     </fieldSets>
     <fields>
+        <fullName>Allow_Global_Filter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Allow Global Filter</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>ManagerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DefaultProductLookupTab__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default tab for this user in Product Lookup page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customize default tab in Product Lookup page.</inlineHelpText>
+        <label>Default Product Lookup Tab</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Guided Selling</fullName>
+                    <default>true</default>
+                    <label>Guided Selling</label>
+                </value>
+                <value>
+                    <fullName>Search Filters</fullName>
+                    <default>false</default>
+                    <label>Search Filters</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DiagnosticToolEnabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable to run pricing diagnostics during a Quote Line Editor Calculate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use to enable CPQ Diagnostic Tool, only available if org setting is enabled. Contact support to enable this capability.</inlineHelpText>
+        <label>Enable Diagnostic Tool</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OutputFormatChangeAllowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag that indicates whether this user is allowed to change output format of quote documents.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to allow this user to change output format of quote documents.</inlineHelpText>
+        <label>Allow Output Format Change</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProductSortPreference__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Product sort preference for this user. Currently only Chatter Follows are supported.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select &quot;Followed&quot; to display products you follow in Chatter before others when adding to quote.</inlineHelpText>
+        <label>Product Sort Preference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Followed</fullName>
+                    <default>false</default>
+                    <label>Followed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ResetProductLookup__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag that determines whether Product Lookup data (guided selling questions, search filters and search results) are cleared after user selects desired products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to clear search filters and results every time you add products to your quotes. Otherwise, your previous selections are kept.</inlineHelpText>
+        <label>Reset Product Lookup</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Theme__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field that will be set by Select Theme custom link, once one is selected.</description>
+        <externalId>false</externalId>
+        <label>Theme</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>amazonconnect__Amazon_Connect_Username__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Amazon Connect Username</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__API_URL__c</fullName>
@@ -325,6 +436,82 @@
         <type>LongTextArea</type>
         <visibleLines>2</visibleLines>
     </fields>
+    <fields>
+        <fullName>dsfs__DSProSFUsername__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign username</description>
+        <externalId>false</externalId>
+        <label>DSProSFUsername</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pi__Can_View_Not_Assigned_Prospects__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Can View Not Assigned Prospects</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_Api_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pardot Api Key</label>
+        <length>100</length>
+        <maskChar>X</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_Api_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pardot Api Version</label>
+        <length>1</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_User_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pardot User Id</label>
+        <length>100</length>
+        <maskChar>X</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_User_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pardot User Key</label>
+        <length>100</length>
+        <maskChar>X</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_User_Role__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pardot User Role</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <listViews>
         <fullName>ActiveUsers</fullName>
         <columns>FULL_NAME</columns>
@@ -366,8 +553,60 @@
         <columns>CORE.USER_ROLE.NAME</columns>
         <columns>CORE.USERS.ACTIVE</columns>
         <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.EMAIL</columns>
+        <columns>MARKETING_USER</columns>
         <filterScope>Everything</filterScope>
         <label>All Users</label>
+    </listViews>
+    <listViews>
+        <fullName>dsfs__DocuSignActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>dsfs__DSProSFUsername__c</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </filters>
+        <filters>
+            <field>dsfs__DSProSFUsername__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>DocuSign Active Users</label>
+    </listViews>
+    <listViews>
+        <fullName>dsfs__DocuSignInactiveUsers</fullName>
+        <booleanFilter>(1 or 2) and 3</booleanFilter>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>dsfs__DSProSFUsername__c</field>
+            <operation>equals</operation>
+            <value>null</value>
+        </filters>
+        <filters>
+            <field>dsfs__DSProSFUsername__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>DocuSign Inactive Users</label>
     </listViews>
     <searchLayouts>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
@@ -383,4 +622,22 @@
         <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
+    <webLinks>
+        <fullName>SBQQ__Select_Theme</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Select Theme</masterLabel>
+        <openType>newWindow</openType>
+        <page>SBQQ__ThemeLookup</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
 </CustomObject>

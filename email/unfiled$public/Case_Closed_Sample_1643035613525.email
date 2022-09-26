@@ -1,0 +1,1 @@
+<html><head></head><body>Hello,<br /><br />We’ve gone ahead and closed your case #{{{Case.CaseNumber}}}.<br /><br />To reopen the case, reply to this email.<br /><br />Thank you,<br /><br />{{{Organization.Name}}} Customer Service</body></html>

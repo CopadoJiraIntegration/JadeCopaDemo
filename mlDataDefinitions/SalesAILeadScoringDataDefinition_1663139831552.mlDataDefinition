@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MLDataDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>SalesAILeadScoringDataDefinition_1663139831552</developerName>
+    <entityDeveloperName>Lead</entityDeveloperName>
+    <parentDefinitionDevName>SalesAILeadScoringPredictionDefinition_1663139830195</parentDefinitionDevName>
+    <type>Prediction</type>
+</MLDataDefinition>

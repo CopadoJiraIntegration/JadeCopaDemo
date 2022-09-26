@@ -1,0 +1,84 @@
+<apex:page showHeader="true" sidebar="true" standardController="blng__Payment__c" standardStylesheets="true" extensions="blng.CurrencyUtils">
+    <!-- Include a JavaScript file in your Visualforce page -->
+     <apex:includeScript value="/lightning/lightning.out.js" />
+     <script src="../../soap/ajax/38.0/connection.js" type="text/javascript"/>
+    <style>
+        /* This prevents page shifting when scrollbar appears/disappears */
+        html {
+            overflow-y:scroll;
+        }
+    </style>
+
+     <article class="slds-card"  id="MessagingWindow" style="display:none;min-height:14rem;">
+      <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media--center slds-has-flexi-truncate">
+              <apex:form >
+                  <apex:pageMessage summary="{!JSENCODE($Label.blng__NoPostedRecordstoDisplay)}" severity="info" strength="3" />
+                  <apex:pageMessages />
+                  <apex:commandButton value="Back" action="{!Cancel}" />
+              </apex:form>
+          </header>
+      </div>
+     </article>
+    
+    <div id="lightning" style="position:relative">
+        <div id="spinnerId" class="slds-spinner_container slds-show">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        sforce.connection.sessionId='{!GETSESSIONID()}';
+        var invoice = '{!JSENCODE(BillingRawPrefix)}'; 
+        var invoice1 = '{!JSENCODE(BillingBarPrefix)}'; 
+        var namespace = invoice != '' ? invoice : 'c'; 
+        var prefix = invoice1 != '' ? invoice1 : '';
+        var status = '';
+        var currencyIsoCode = '';
+        currencyIsoCode = '{!JSENCODE(currencyISOCode)}';
+        var IdValue = '{!$CurrentPage.parameters.Id}';
+        var queryValue = "SELECT "+prefix+"Status__c from "+prefix+"Payment__c WHERE Id='"+IdValue+"'";
+        var result = sforce.connection.query(queryValue);
+        var records = result.getArray("records");
+        status = records[0][prefix+'Status__c'];
+        /*
+          W-6106804 :
+          paymentAllocationAccessFlag returns true , whether user has access to payment, payment allocation (invoice, invoiceLine) objects.
+          else "looks like you don't have permission to access this page and salesforce admin can help you with that" message will be shown.
+         */
+        if((status === 'Posted') && {!paymentAllocationAccessFlag})
+        {
+
+            $Lightning.use(namespace+":allocatePaymentToInvoiceAndLineApp", function() {
+                $Lightning.createComponent(namespace+":allocatePaymentToInvoiceAndLine",
+                    {
+                        "recordId" : "{!$CurrentPage.parameters.Id}",
+                        "currencyIsoCode" : currencyIsoCode,
+                        "prefix" : prefix
+                    },
+                    "lightning",
+                    function(cmp) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+            });
+        }
+        else if(status === 'Posted') {
+            $Lightning.use("blng:permissionApp", function () {
+                $Lightning.createComponent("blng:permissionComp", {"recordId" : "{!$CurrentPage.parameters.Id}" , "navigateToParent" : "{!JSENCODE($Label.LIGHTNING_BUTTON_TEXT_RETURN_TO_PAYMENT)}"},
+                    "lightning",
+                    function (cmp) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+            });
+        }
+        else
+        {
+            document.getElementById('spinnerId').style.display = 'none';
+            document.getElementById('MessagingWindow').style.display = 'block';
+        }
+
+    </script>
+</apex:page>

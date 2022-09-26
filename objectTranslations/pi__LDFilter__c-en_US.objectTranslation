@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- user that owns this filter --></help>
+        <label><!-- User --></label>
+        <name>pi__User__c</name>
+        <relationshipLabel><!-- Lead Deck Filters --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned to All Users --></label>
+        <name>pi__assignedToAllUsers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criteria Hash --></label>
+        <name>pi__criteriaHash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criteria --></label>
+        <name>pi__criteria__c</name>
+    </fields>
+    <fields>
+        <help><!-- boolean to determine whether this is this a default filter --></help>
+        <label><!-- Default Filter --></label>
+        <name>pi__defaultFilter__c</name>
+    </fields>
+    <fields>
+        <help><!-- the mode of the card to determine what should be displayed as the source of the card --></help>
+        <label><!-- Display Mode --></label>
+        <name>pi__displayMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metadata --></label>
+        <name>pi__metadata__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Owner ID --></label>
+        <name>pi__pardotOwnerId__c</name>
+    </fields>
+    <fields>
+        <help><!-- boolean to determine whether notifications should be shown on the desktop version --></help>
+        <label><!-- Show Notifications --></label>
+        <name>pi__showNotifications__c</name>
+    </fields>
+    <fields>
+        <help><!-- title of the filter --></help>
+        <label><!-- Title --></label>
+        <name>pi__title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Version --></label>
+        <name>pi__version__c</name>
+    </fields>
+</CustomObjectTranslation>

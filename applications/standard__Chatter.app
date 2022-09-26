@@ -10,4 +10,5 @@
     <tabs>standard-OtherUserProfile</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <uiType>Aloha</uiType>
 </CustomApplication>

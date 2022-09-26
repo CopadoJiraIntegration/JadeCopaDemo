@@ -1,0 +1,32 @@
+<!--
+  @description       : This aura component is called from custom action
+  @author            : JadeGlobal
+  @last modified on  : 05-19-2021
+  @last modified by  : JadeGlobal
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   05-19-2021   JadeGlobal     Initial Version
+-->
+<aura:component controller="searchFavoriteController_LC" implements="force:appHostable,lightning:isUrlAddressable,force:lightningQuickAction,lightning:hasPageReference,lightning:availableForFlowScreens,lightning:availableForFlowActions" access="global" >
+      
+      <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+      <!--aura:registerEvent name="oSelectedMessageEvent" type="c:SendMessageToVFPage"/-->
+      <aura:attribute name="message" type="String"/>
+      <!--QuoteId-->
+      <aura:attribute name="quoteId" type="String" default="" />    
+      <!-- Current login user Id -->
+      <aura:attribute name="userId" type="Id" />  
+      <aura:attribute name="quoteGroupId" type="Id" /> 
+      <aura:handler name="change" value="{!v.pageReference}" action="{!c.reInit}" />
+      <aura:attribute name="callLWCFav" type="Boolean" default="false" />
+    
+    
+      <aura:if isTrue="{!v.callLWCFav}">
+          <!--c:favorites name="favorite LWC"/-->
+        <c:favorites name="search Favorite lwc" sourceQuteGroupId="{!v.quoteGroupId}" 
+                          sourceQuoteId="{!v.quoteId}" sourceUserId="{!v.userId}" 
+                          onshowtoast="{!c.showtoastmessage}" recordId="{!v.quoteId}" 
+                          oncloseTab="{!c.changeTabTitle}"/>
+      </aura:if>	
+
+</aura:component>

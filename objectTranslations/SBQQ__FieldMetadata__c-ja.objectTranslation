@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- 項目メタデータ --></value>
+    </caseValues>
+    <fields>
+        <help>項目の API 参照名を入力します。</help>
+        <label><!-- Field Name --></label>
+        <name>SBQQ__FieldName__c</name>
+    </fields>
+    <fields>
+        <help>項目を含むオブジェクトの API 参照名を入力します。</help>
+        <label><!-- Object Name --></label>
+        <name>SBQQ__ObjectName__c</name>
+    </fields>
+</CustomObjectTranslation>

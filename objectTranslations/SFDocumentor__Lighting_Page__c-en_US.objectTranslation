@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>SFDocumentor__CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created by Name --></label>
+        <name>SFDocumentor__Created_by_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SFDocumentor__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer Name --></label>
+        <name>SFDocumentor__DeveloperName__c</name>
+    </fields>
+    <fields>
+        <label><!-- EntityDefinitionId --></label>
+        <name>SFDocumentor__EntityDefinitionId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>SFDocumentor__LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- LightingPage Id --></label>
+        <name>SFDocumentor__LightingPage_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Link_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link --></label>
+        <name>SFDocumentor__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Namespace Prefix --></label>
+        <name>SFDocumentor__NamespacePrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>SFDocumentor__Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent FlexiPage --></label>
+        <name>SFDocumentor__ParentFlexiPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>SFDocumentor__Type__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

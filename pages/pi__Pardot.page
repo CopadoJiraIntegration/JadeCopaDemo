@@ -1,0 +1,27 @@
+<apex:page sidebar="false" controller="pi.AccessPardotControllerByUserClassic" showHeader="false">
+    <c:FilteredFrame height="800" className="pardotIframe" filteredFrameName="pardotIframe" src="{!pardotBaseUrl}{!authenticatedQueryString}&serverurl={!$Api.Partner_Server_URL_90}" width="100%"/>
+    <style type="text/css">
+        td.noSidebarCell {
+            padding: 0px;
+        }
+
+        .pardotIframe {
+            border: none;
+        }
+    </style>
+    <script>
+        // Use a crude method to ensure there aren't double scrollbars on load or resize
+        if (window.addEventListener) {
+            // If IE9+ or other
+            window.addEventListener('load', pardotAdaptIframeHeight);
+            window.addEventListener('resize', pardotAdaptIframeHeight);
+        } else if (window.attachEvent)  {
+            // If IE8 or under
+            window.attachEvent('onload', pardotAdaptIframeHeight);
+            window.attachEvent('onresize', pardotAdaptIframeHeight);
+        }
+        function pardotAdaptIframeHeight() {
+            document.getElementsByClassName('pardotIframe').height = window.innerHeight - 240;
+        }
+    </script>
+</apex:page>

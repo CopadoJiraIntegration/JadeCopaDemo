@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>blng__revenueDistributionHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>blng__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>blng__DistributionMethod__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select how revenue will be recognized — daily, monthly, or the total all at once</inlineHelpText>
+        <label>Distribution Method</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueDistributionMethod</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__FullRecognitionDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If the selected distribution method is full, select Manual to enter a date.</inlineHelpText>
+        <label>Full Recognition Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__FullRecognitionDate</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__MonthlyRecognitionProration__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Monthly Recognition  Proration</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__MonthlyRecognitionProration</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueScheduleTermEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>End date can be based on the object&apos;s end date or entered manually. For full recognition,
+        set it to None.</inlineHelpText>
+        <label>Revenue Schedule Term End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueScheduleEndDate</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueScheduleTermStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Start date can be based on the object&apos;s start date or entered manually. For full recognition,
+        set it to None.</inlineHelpText>
+        <label>Revenue Schedule Term Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueScheduleStartDate</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueTransactionCreationProcess__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select whether revenue transactions are created automatically or manually</inlineHelpText>
+        <label>Revenue Transaction Creation Process</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueTransactionCreationProcess</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select which type of record to use for revenue distribution.</inlineHelpText>
+        <label>Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueDistributionMethodType</valueSetName>
+        </valueSet>
+    </fields>
+    <label>Revenue Distribution Method</label>
+    <listViews>
+        <fullName>blng__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Revenue Distribution Methods</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>blng__CannotSpecifyRevDatesifTransTypeAutomati</fullName>
+        <active>true</active>
+        <errorConditionFormula>((ISPICKVAL(blng__RevenueTransactionCreationProcess__c  , &apos;Automatic&apos;))  &amp;&amp;  
+(ISPICKVAL(blng__RevenueScheduleTermStartDate__c, &apos;Manual&apos;) ))
+ || 
+(ISPICKVAL(blng__RevenueTransactionCreationProcess__c, &apos;Automatic&apos;)
+&amp;&amp;
+(ISPICKVAL(blng__RevenueScheduleTermEndDate__c, &apos;Manual&apos;)))</errorConditionFormula>
+        <errorMessage>Cannot select Manual on Revenue Schedule Term Start Date or Revenue Schedule End Date when Revenue Transaction Creation Process is Automatic</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__DontSpecifyDatesIfCreationProcessManual</fullName>
+        <active>true</active>
+        <errorConditionFormula>((!ISPICKVAL(blng__DistributionMethod__c, &apos;Full Recognition&apos;) )
+|| 
+(!ISPICKVAL(blng__DistributionMethod__c, &apos;Manual&apos;)))
+ &amp;&amp; 
+(ISPICKVAL( blng__RevenueTransactionCreationProcess__c, &apos;Manual&apos;) )
+ &amp;&amp; 
+((ISPICKVAL(blng__RevenueScheduleTermStartDate__c, &apos;Invoice Line Start Date&apos;))
+ || 
+(ISPICKVAL( blng__RevenueScheduleTermStartDate__c, &apos;Order Product Start Date&apos;))) 
+
+ || 
+
+(ISPICKVAL( blng__RevenueTransactionCreationProcess__c, &apos;Manual&apos;) )
+ &amp;&amp; 
+((ISPICKVAL(blng__RevenueScheduleTermEndDate__c, &apos;Invoice Line End Date&apos;))
+ || 
+(ISPICKVAL( blng__RevenueScheduleTermEndDate__c, &apos;Order Product End Date&apos;)))</errorConditionFormula>
+        <errorMessage>Revenue Schedule Start Date and End Date should only be manual when Revenue Transaction Creation Process is Manual</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__DontSpecifyFRDateIfCreationProcessManual</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(blng__DistributionMethod__c, &apos;Full Recognition&apos;)
+&amp;&amp;
+ISPICKVAL( blng__RevenueTransactionCreationProcess__c, &apos;Automatic&apos;)
+&amp;&amp;
+ISPICKVAL(  blng__FullRecognitionDate__c , &apos;Manual&apos;)</errorConditionFormula>
+        <errorMessage>Full Recognition date cannot be Manual when Revenue Transaction Creation Process is Automatic</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__DontSpecifyStartDateEndDateForFullRecogn</fullName>
+        <active>true</active>
+        <errorConditionFormula>(ISPICKVAL(blng__DistributionMethod__c, &apos;Full Recognition&apos;))
+&amp;&amp;
+(
+(!ISPICKVAL(blng__RevenueScheduleTermEndDate__c, &apos;&apos;))
+|| 
+(!ISPICKVAL(blng__RevenueScheduleTermStartDate__c, &apos;&apos;))
+)</errorConditionFormula>
+        <errorMessage>Revenue Schedule Start Date and End Date should not be specified when distribution method is Full Recognition</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__FulRecDateCanbeManualifTransTypeManual</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(blng__DistributionMethod__c, &apos;Full Recognition&apos;)
+&amp;&amp;
+ISPICKVAL(blng__RevenueTransactionCreationProcess__c, &apos;Manual&apos;)
+&amp;&amp;
+(!ISPICKVAL(blng__FullRecognitionDate__c , &apos;Manual&apos;))</errorConditionFormula>
+        <errorMessage>Full Recognition Date should only be manual when Revenue Transaction Creation Process is Manual</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__FullRecDateEmptyForDailyMonthlyMethod</fullName>
+        <active>true</active>
+        <errorConditionFormula>(
+(!ISPICKVAL(blng__DistributionMethod__c, &apos;Full Recognition&apos;))
+&amp;&amp;
+(!ISPICKVAL(blng__FullRecognitionDate__c,&apos;&apos;))
+)</errorConditionFormula>
+        <errorMessage>Full Recognition Date cannot be selected when Distribution Method is other than Full Recognition</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__FullRecognitionDateIsRequired</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(blng__DistributionMethod__c, &apos;Full Recognition&apos;)
+&amp;&amp; 
+ISPICKVAL( blng__FullRecognitionDate__c,&apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>blng__FullRecognitionDate__c</errorDisplayField>
+        <errorMessage>Full Recognition Date is required when Distribution Method = Full Recognition</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__RevenueScheduleEndDateAlignWithType</fullName>
+        <active>true</active>
+        <description>Revenue Schedule End Date should align with Type.</description>
+        <errorConditionFormula>(ISPICKVAL(blng__Type__c, &apos;Order&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Invoice&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Credit Note&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Debit Note&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Other&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermEndDate__c, &apos;Debit Note Line End Date&apos;))
+)</errorConditionFormula>
+        <errorMessage>Revenue Schedule End Date should be aligned with Type</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__RevenueScheduleStartDateAlignWithType</fullName>
+        <active>true</active>
+        <description>Revenue Schedule Start Date should align with Type.</description>
+        <errorConditionFormula>(ISPICKVAL(blng__Type__c, &apos;Order&apos;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Other&apos;))
+)
+
+|| 
+
+(ISPICKVAL(blng__Type__c, &apos;Invoice&apos;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Credit Note&apos;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Debit Note&apos;) 
+&amp;&amp; 
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Other&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__RevenueScheduleTermStartDate__c, &apos;Credit Note Line Start Date&apos;))
+)</errorConditionFormula>
+        <errorMessage>Revenue Schedule Start Date should be aligned with Type</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__TYPESHOULDALIGNFULLRECOGNITIONDATE</fullName>
+        <active>true</active>
+        <description>Full Recognition Date End Date should align with Type.</description>
+        <errorConditionFormula>(ISPICKVAL(blng__Type__c, &apos;Order&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Invoice&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Credit Note&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Debit Note&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Other&apos;))
+)
+
+||
+
+(ISPICKVAL(blng__Type__c, &apos;Other&apos;)
+&amp;&amp;
+(ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line End Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Invoice Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Order Product Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Line Start Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Debit Note Date&apos;)
+||
+ISPICKVAL
+(blng__FullRecognitionDate__c, &apos;Credit Note Date&apos;))
+)</errorConditionFormula>
+        <errorMessage>Full Recognition Date End Date should align with Type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__TermEndDateIsRequired</fullName>
+        <active>true</active>
+        <errorConditionFormula>((ISPICKVAL( blng__DistributionMethod__c, &apos;Monthly&apos;))
+ || 
+(ISPICKVAL( blng__DistributionMethod__c, &apos;Daily&apos;)))
+&amp;&amp;
+ISPICKVAL( blng__RevenueScheduleTermEndDate__c, &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>blng__RevenueScheduleTermEndDate__c</errorDisplayField>
+        <errorMessage>Term End Date is required when Distribution Method = Monthly / Daily</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__TermStartDateIsRequired</fullName>
+        <active>true</active>
+        <errorConditionFormula>((ISPICKVAL( blng__DistributionMethod__c, &apos;Monthly&apos;))
+ || 
+(ISPICKVAL( blng__DistributionMethod__c, &apos;Daily&apos;)))
+&amp;&amp;
+ISPICKVAL( blng__RevenueScheduleTermStartDate__c, &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>blng__RevenueScheduleTermStartDate__c</errorDisplayField>
+        <errorMessage>Term Start Date  is required when Distribution Method = Monthly / Daily</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

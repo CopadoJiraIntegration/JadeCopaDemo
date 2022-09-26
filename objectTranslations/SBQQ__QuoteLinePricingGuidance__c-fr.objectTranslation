@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prix indicatif de ligne de devis</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Prix indicatifs de ligne de devis</value>
+    </caseValues>
+    <fields>
+        <help>Une explication de ce prix indicatif et des recommandations sur les remises à fournir. Les commerciaux peuvent afficher cette explication avec les prix indicatifs dans l&apos;éditeur de ligne de devis.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Remise élevée pour les prix d&apos;exception basés sur les ventes passées. Si un commercial souhaite utiliser ce prix, il doit appliquer la remise de la ligne de devis manuellement. Cette remise peut nécessiter des approbations en fonction des paramètres d&apos;approbation de votre organisation.</help>
+        <label><!-- Floor --></label>
+        <name>SBQQ__Floor__c</name>
+    </fields>
+    <fields>
+        <help>Un commercial a accepté la remise cible à partir de ce prix indicatif dans l&apos;éditeur de ligne de devis.</help>
+        <label><!-- Guidance Used --></label>
+        <name>SBQQ__GuidanceUsed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>SBQQ__IsViewed__c</name>
+    </fields>
+    <fields>
+        <help>Remise moyenne basée sur les ventes passées. Si un commercial souhaite utiliser ce prix, il doit appliquer la remise de la ligne de devis manuellement. Cette remise peut nécessiter des approbations en fonction des paramètres d&apos;approbation de votre organisation.</help>
+        <label><!-- Norm --></label>
+        <name>SBQQ__Norm__c</name>
+    </fields>
+    <fields>
+        <help>La ligne de devis associée au prix indicatif.</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Le devis qui contient la ligne de devis associée au prix indicatif.</help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Faible remise idéale basée sur les ventes passées. Si un commercial accepte ce prix indicatif, Salesforce CPQ accorde une remise pour atteindre ce prix.</help>
+        <label><!-- Target --></label>
+        <name>SBQQ__Target__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

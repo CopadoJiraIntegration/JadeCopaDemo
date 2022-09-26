@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ACW Duration --></label>
+        <name>amazonconnect__AfterContactWorkDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hold Duration --></label>
+        <name>amazonconnect__AgentCustomerHoldDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Login Username --></label>
+        <name>amazonconnect__AgentLoginUsername__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Name --></label>
+        <name>amazonconnect__AgentName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attributes --></label>
+        <name>amazonconnect__Attributes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call End Timestamp --></label>
+        <name>amazonconnect__CallEndTimestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Recording --></label>
+        <name>amazonconnect__CallRecording__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Start Timestamp --></label>
+        <name>amazonconnect__CallStartTimestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Status --></label>
+        <name>amazonconnect__CallStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incoming</masterLabel>
+            <translation><!-- Incoming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missed</masterLabel>
+            <translation><!-- Missed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>amazonconnect__Case__c</name>
+        <relationshipLabel><!-- AC Contact Channels --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>amazonconnect__Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>amazonconnect__ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Callback Number --></label>
+        <name>amazonconnect__CustomerCallbackNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Number --></label>
+        <name>amazonconnect__CustomerNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dialed Number --></label>
+        <name>amazonconnect__DialedNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initiation Method --></label>
+        <name>amazonconnect__InitiationMethod__c</name>
+        <picklistValues>
+            <masterLabel>Callback</masterLabel>
+            <translation><!-- Callback --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chat</masterLabel>
+            <translation><!-- Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inbound</masterLabel>
+            <translation><!-- Inbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound</masterLabel>
+            <translation><!-- Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interaction Duration --></label>
+        <name>amazonconnect__InteractionDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Name --></label>
+        <name>amazonconnect__QueueName__c</name>
+    </fields>
+    <fields>
+        <label><!-- RelatedToWhatId --></label>
+        <name>amazonconnect__RelatedToWhatId__c</name>
+    </fields>
+    <fields>
+        <label><!-- RelatedToWhoId --></label>
+        <name>amazonconnect__RelatedToWhoId__c</name>
+    </fields>
+</CustomObjectTranslation>

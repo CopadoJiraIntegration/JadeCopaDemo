@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Credit GL Account --></label>
+        <name>blng__CreditGLAccount__c</name>
+        <relationshipLabel><!-- Finance Balance Snapshots (Credit GL Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debit GL Account --></label>
+        <name>blng__DebitGLAccount__c</name>
+        <relationshipLabel><!-- Finance Balance Snapshots (Debit GL Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Book --></label>
+        <name>blng__FinanceBook__c</name>
+        <relationshipLabel><!-- Finance Balance Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>blng__FinancePeriod__c</name>
+        <relationshipLabel><!-- Finance Balance Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Finance Balance Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Finance Balance Snapshots --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

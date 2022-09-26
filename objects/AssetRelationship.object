@@ -135,6 +135,10 @@
         <type>MasterDetail</type>
     </fields>
     <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>FromDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>

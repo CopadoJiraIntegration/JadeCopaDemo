@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Billing (Product, Order, Invoice)</fullName>
+        <default>false</default>
+        <label>Billing (Product, Order, Invoice)</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue (Product, Order, Revenue Schedule)</fullName>
+        <default>false</default>
+        <label>Revenue (Product, Order, Revenue Schedule)</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment</fullName>
+        <default>false</default>
+        <label>Payment</label>
+    </customValue>
+    <customValue>
+        <fullName>Refund</fullName>
+        <default>false</default>
+        <label>Refund</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Note</fullName>
+        <default>false</default>
+        <label>Credit Note</label>
+    </customValue>
+    <customValue>
+        <fullName>Debit Note</fullName>
+        <default>false</default>
+        <label>Debit Note</label>
+    </customValue>
+    <masterLabel>GL Rule Association</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -60,7 +60,7 @@
         <default>false</default>
         <label>Proposal/Price Quote</label>
         <closed>false</closed>
-        <forecastCategory>Pipeline</forecastCategory>
+        <forecastCategory>BestCase</forecastCategory>
         <probability>75</probability>
         <won>false</won>
     </standardValue>
@@ -69,7 +69,7 @@
         <default>false</default>
         <label>Negotiation/Review</label>
         <closed>false</closed>
-        <forecastCategory>Pipeline</forecastCategory>
+        <forecastCategory>Forecast</forecastCategory>
         <probability>90</probability>
         <won>false</won>
     </standardValue>

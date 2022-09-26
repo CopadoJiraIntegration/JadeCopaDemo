@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email alert will send to the user who have updated status field last time</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Who Updated Status Field Last Time</name>
+    <style>none</style>
+    <subject>The  {!SFDocumentor__Field_Collection__c.Name} is Now in Use Please updated status</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

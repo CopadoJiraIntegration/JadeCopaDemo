@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>Check_if_status_is_updated_to_closed</name>
+        <label>Check if status is updated to closed</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>update_First_response_time_on_case_0_0_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>case_closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_first_call_closure_first_resp_time</targetReference>
+            </connector>
+            <label>case closed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_the_case_previous_status_was_new</name>
+        <label>Check if the case previous status was new</label>
+        <locationX>380</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Previous_status_New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.First_Response_Time__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_if_status_is_updated_to_closed</targetReference>
+            </connector>
+            <label>Previous status New</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>currentTime</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Flow.CurrentDateTime}</expression>
+    </formulas>
+    <formulas>
+        <name>FirstResolutionTimeCategory</name>
+        <dataType>String</dataType>
+        <expression>IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &lt; 60, &apos;3&apos;,  IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &gt;= 60 &amp;&amp; FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &lt;= 240, &apos;2&apos;, IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &gt; 240, &apos;1&apos;, NULL)))</expression>
+    </formulas>
+    <interviewLabel>Case_BeforeUpdateRecordTriggerFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case_BeforeUpdateRecordTriggerFlow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This flow updates the first response time on case when the agent responded to it for the first time.</description>
+        <name>Update_first_call_closure_first_resp_time</name>
+        <label>Update first call closure &amp; first resp time</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <inputAssignments>
+            <field>First_Call_Closure__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>First_Response_Time__c</field>
+            <value>
+                <elementReference>currentTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This flow updates the first response time on case when the agent responded to it for the first time.</description>
+        <name>update_First_response_time_on_case_0_0_0</name>
+        <label>update First response time on case</label>
+        <locationX>314</locationX>
+        <locationY>551</locationY>
+        <inputAssignments>
+            <field>First_Resolution_time_Categories__c</field>
+            <value>
+                <elementReference>FirstResolutionTimeCategory</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>First_Response_Time__c</field>
+            <value>
+                <elementReference>currentTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_if_the_case_previous_status_was_new</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

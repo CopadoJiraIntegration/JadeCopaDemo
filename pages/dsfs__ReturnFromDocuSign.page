@@ -1,0 +1,14 @@
+<apex:page controller="dsfs.ReturnController" action="{!onReturn}" showHeader="false" sideBar="false">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:includeScript value="{!$Resource.dsfs__UtilJS}"/>
+    <script type="text/javascript">
+        if ({!returnToSource}) {
+            if ({!isNewWindow}) {
+                DSUtil.closeWindow('{!sourceId}');
+            } else {
+                DSUtil.navigateToSObject('{!sourceId}', '{!pathPrefix}');
+            }
+        }
+    </script>
+    <c:FullScreenLoad />
+</apex:page>

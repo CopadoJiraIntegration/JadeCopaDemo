@@ -1,0 +1,7 @@
+.THIS .slds-tree__item {
+    display: revert !important;
+}
+.THIS .buttonRamp {
+    background-color: green !important;
+    fill: white !important;
+}

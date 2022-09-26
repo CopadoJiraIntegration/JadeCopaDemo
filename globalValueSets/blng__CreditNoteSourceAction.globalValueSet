@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cancel &amp; Rebill</fullName>
+        <default>false</default>
+        <label>Cancel &amp; Rebill</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit</fullName>
+        <default>false</default>
+        <label>Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Line Credit</fullName>
+        <default>false</default>
+        <label>Invoice Line Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Negative Lines Conversion</fullName>
+        <default>false</default>
+        <label>Negative Lines Conversion</label>
+    </customValue>
+    <customValue>
+        <fullName>Manual</fullName>
+        <default>true</default>
+        <label>Manual</label>
+    </customValue>
+    <description>Credit Note Source Action</description>
+    <masterLabel>Credit Note Source Action</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

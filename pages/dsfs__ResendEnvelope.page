@@ -1,0 +1,11 @@
+<apex:page id="ResendEnvelope"
+           standardController="dsfs__DocuSign_Envelope__c"
+           extensions="dsfs.ResendController"
+           action="{!resendEnvelope}"
+           tabStyle="dsfs__DocuSign_Status__c"
+           title="{!$Label.dsfs__docusign}">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:form >
+        <c:FullScreenLoad />
+    </apex:form>
+</apex:page>

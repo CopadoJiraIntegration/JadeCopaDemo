@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>This flow will send email to the user who have updated status field vale last time.</description>
+    <environments>Default</environments>
+    <label>Status Field Update send Email</label>
+    <processType>AutoLaunchedFlow</processType>
+</Flow>

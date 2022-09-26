@@ -1,0 +1,9 @@
+<!--
+ - Created by gsalkar on 6/28/18.
+ -->
+<apex:page id="paymentRunCleanUp" standardController="blng__PaymentRun__c" extensions="blng.ControllerPaymentRun" action="{!cleanUpPaymentRun}" sideBar="false">
+    <apex:form >
+        <apex:pageMessages />
+        <apex:commandButton value="Back To Payment Run" action="{!Cancel}" />
+    </apex:form>
+</apex:page>

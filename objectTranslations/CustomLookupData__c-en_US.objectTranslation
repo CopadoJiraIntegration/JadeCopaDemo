@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Custom Lookup Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Custom Lookup Data</value>
+    </caseValues>
+    <fields>
+        <label><!-- Audience Age --></label>
+        <name>Audience__c</name>
+        <picklistValues>
+            <masterLabel>26 - 50</masterLabel>
+            <translation><!-- 26 - 50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - 25</masterLabel>
+            <translation><!-- 3 - 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51 - 99</masterLabel>
+            <translation><!-- 51 - 99 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Content Name --></label>
+        <name>Content_Name__c</name>
+        <relationshipLabel><!-- Custom Lookup Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content__c</name>
+        <picklistValues>
+            <masterLabel>Digital</masterLabel>
+            <translation><!-- Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hard Copy</masterLabel>
+            <translation><!-- Hard Copy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Impressions --></label>
+        <name>Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Price --></label>
+        <name>ListPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max Range --></label>
+        <name>Max_Range__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Range --></label>
+        <name>Min_Range__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Custom Lookup Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reaction --></label>
+        <name>Reaction__c</name>
+        <picklistValues>
+            <masterLabel>16 rxns</masterLabel>
+            <translation><!-- 16 rxns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>48 rxns</masterLabel>
+            <translation><!-- 48 rxns --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reactions --></label>
+        <name>Reactions__c</name>
+        <picklistValues>
+            <masterLabel>16 rxns</masterLabel>
+            <translation><!-- 16 rxns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 rxns</masterLabel>
+            <translation><!-- 4 rxns --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vertical --></label>
+        <name>Vertical__c</name>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Warranty --></label>
+        <name>Warranty__c</name>
+        <picklistValues>
+            <masterLabel>12 months</masterLabel>
+            <translation><!-- 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24 months</masterLabel>
+            <translation><!-- 24 months --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

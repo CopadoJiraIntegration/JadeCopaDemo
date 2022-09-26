@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Salesforce CPQ Community.Content:Customer Support</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Customer Support</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Salesforce CPQ Community.Featured:Customer Support</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Customer Support</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Salesforce CPQ Community.Navigational:Customer Support</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Customer Support</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Category Name --></label>
+        <name>pi__Category_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category Pardot Record Id --></label>
+        <name>pi__Category_Pardot_Record_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Account Id --></label>
+        <name>pi__Pardot_Account_Id__c</name>
+    </fields>
+</CustomObjectTranslation>

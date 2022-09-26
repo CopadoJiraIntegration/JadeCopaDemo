@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <label>Open</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Close</fullName>
+        <default>false</default>
+        <label>Pending Close</label>
+    </customValue>
+    <masterLabel>Financial Period Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

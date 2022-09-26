@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MLPredictionDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiApplicationDeveloperName>SalesAILeadScoring_1663139828138</aiApplicationDeveloperName>
+    <developerName>SalesAILeadScoringPredictionDefinition_1663139830195</developerName>
+    <masterLabel>All Leads (Default)</masterLabel>
+    <priority>0</priority>
+    <status>Enabled</status>
+    <type>ScoringSpecificOutcome</type>
+</MLPredictionDefinition>

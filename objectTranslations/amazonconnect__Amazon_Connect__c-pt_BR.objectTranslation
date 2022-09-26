@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Toolkit for Amazon Connect --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Toolkit for Amazon Connect --></value>
+    </caseValues>
+    <fields>
+        <help>Escolha habilitar ou desabilitar o trigger AC_AssociateCCACase, que associa um caso a um registro de análise de dados do canal de contato.</help>
+        <label><!-- Disable the CCA Case Trigger --></label>
+        <name>amazonconnect__disableCCACase__c</name>
+    </fields>
+    <fields>
+        <help>Escolha habilitar ou desabilitar o trigger AC_AssociateCCAContact, que associa um contato a um registro de análise de dados do canal de contato.</help>
+        <label><!-- Disable the CCA Contact Trigger --></label>
+        <name>amazonconnect__disableCCAContact__c</name>
+    </fields>
+    <fields>
+        <help>Escolha habilitar ou desabilitar o trigger AC_AssociateCaseContactCCA, que associa casos e contatos a um registro de análise de dados do canal de contato.</help>
+        <label><!-- Disable the Case Contact CCA Trigger --></label>
+        <name>amazonconnect__disableCaseContactCCA__c</name>
+    </fields>
+    <fields>
+        <help>Escolha habilitar ou desabilitar o AC_TaskTrigger</help>
+        <label><!-- Disable the Task Trigger --></label>
+        <name>amazonconnect__disableTaskTrigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose to enable or disable the AC_VoiceIdChannel trigger, which associates Cases and Contacts with a Voice Id Channel Record --></help>
+        <label><!-- Disable the Voice Id Channel Trigger --></label>
+        <name>amazonconnect__disableVoiceIdTrigger__c</name>
+    </fields>
+    <fields>
+        <help>Forneça o URL do domínio da sua instância do Amazon Connect, por exemplo, https://yourinstancename.awsapps.com</help>
+        <label><!-- Url --></label>
+        <name>amazonconnect__url__c</name>
+    </fields>
+    
+</CustomObjectTranslation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Approbateur</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Approbateurs</value>
+    </caseValues>
+    <fields>
+        <help>Utilisé avec les Approbations déléguées, référence de l&apos;approbateur délégué de cet approbateur</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegating Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Utilisateur associé à l&apos;approbateur délégué</help>
+        <label><!-- Delegated User Id --></label>
+        <name>sbaa__DelegatedUserId__c</name>
+    </fields>
+    <fields>
+        <help>Date à laquelle la délégation d&apos;approbation se termine</help>
+        <label><!-- Delegation End --></label>
+        <name>sbaa__DelegationEnd__c</name>
+    </fields>
+    <fields>
+        <help>Date à laquelle la délégation d&apos;approbation commence</help>
+        <label><!-- Delegation Start --></label>
+        <name>sbaa__DelegationStart__c</name>
+    </fields>
+    <fields>
+        <help>Si l&apos;approbateur est un groupe au lieu d&apos;un utilisateur unique, renseignez avec l&apos;ID du groupe</help>
+        <label><!-- Group ID --></label>
+        <name>sbaa__GroupId__c</name>
+    </fields>
+    <fields>
+        <help>Approbateur qui doit approuver à la suite de cet approbateur</help>
+        <label><!-- Next Approver --></label>
+        <name>sbaa__NextApprover__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Si Approbateur est un groupe, sélectionné si tous les membres doivent approuver pour valider l&apos;approbation</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </fields>
+    <fields>
+        <help>Si cet approbateur est un utilisateur unique, référencez cet utilisateur</help>
+        <label><!-- User --></label>
+        <name>sbaa__User__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom de l&apos;approbateur</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- Replace --></label>
+        <name>sbaa__Replace</name>
+    </webLinks>
+</CustomObjectTranslation>

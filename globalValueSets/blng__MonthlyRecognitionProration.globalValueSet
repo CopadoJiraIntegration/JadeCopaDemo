@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Number of Days</fullName>
+        <default>false</default>
+        <label>Number of Days</label>
+    </customValue>
+    <masterLabel>Monthly Recognition Proration</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

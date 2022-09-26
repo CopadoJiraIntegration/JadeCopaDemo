@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Description of this Activity. Maps to the Task Comments field when Collections Plans are generated from the related Dunning Method. --></help>
+        <label><!-- Activity Details --></label>
+        <name>SFBD__ActivityDetails__c</name>
+    </fields>
+    <fields>
+        <help><!-- Subject of this Activity. Maps to the Task Subject field when Collections Plans are created from the related Dunning Method. --></help>
+        <label><!-- Activity Subject --></label>
+        <name>SFBD__ActivitySubject__c</name>
+        <picklistValues>
+            <masterLabel>Call</masterLabel>
+            <translation><!-- Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send Letter</masterLabel>
+            <translation><!-- Send Letter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Dunning Method for this Dunning Activity --></help>
+        <label><!-- Dunning Method --></label>
+        <name>SFBD__DunningMethod__c</name>
+        <relationshipLabel><!-- Dunning Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Number of days to offset a task from a Collections Plan start date. --></help>
+        <label><!-- Offset Days --></label>
+        <name>SFBD__OffsetDays__c</name>
+    </fields>
+</CustomObjectTranslation>

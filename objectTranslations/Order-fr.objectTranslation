@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Billing Frequency --></label>
+        <name>BillingFrequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>DefaultPaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- ERP System --></label>
+        <name>ERPSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Date --></label>
+        <name>LastSyncDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Order ID --></label>
+        <name>NetSuiteOrderID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oracle Order Number --></label>
+        <name>OracleOrderID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Order --></label>
+        <name>Original_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready to be Synced --></label>
+        <name>ReadytobeSynced__c</name>
+    </fields>
+    <fields>
+        <help>Indique si la commande est contractée.</help>
+        <label><!-- Contracted --></label>
+        <name>SBQQ__Contracted__c</name>
+    </fields>
+    <fields>
+        <help>« Par date de fin d&apos;abonnement » crée un contrat séparé pour chaque date de fin d&apos;abonnement unique, contenant uniquement ces abonnements. « Contrat unique » crée un contrat contenant tous les abonnements, quelle que soit leur date de fin.</help>
+        <label><!-- Contracting Method --></label>
+        <name>SBQQ__ContractingMethod__c</name>
+    </fields>
+    <fields>
+        <help>Montant total de toutes les réservations de produit de commande.</help>
+        <label><!-- Order Bookings --></label>
+        <name>SBQQ__OrderBookings__c</name>
+    </fields>
+    <fields>
+        <help>Les conditions de paiement de cette commande.</help>
+        <label><!-- Payment Term --></label>
+        <name>SBQQ__PaymentTerm__c</name>
+    </fields>
+    <fields>
+        <help>Le message de statut de calcul du prix</help>
+        <label><!-- Price Calculation Status Message --></label>
+        <name>SBQQ__PriceCalcStatusMessage__c</name>
+    </fields>
+    <fields>
+        <help>Indique le statut de la tâche de calcul du prix de la commande. Il est défini par le système.</help>
+        <label><!-- Price Calculation Status --></label>
+        <name>SBQQ__PriceCalcStatus__c</name>
+    </fields>
+    <fields>
+        <help>Le devis à partir duquel la commande est créée.</help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Spécifiez la durée du renouvellement. Elle correspond par défaut à la durée du contrat d&apos;origine.</help>
+        <label><!-- Renewal Term --></label>
+        <name>SBQQ__RenewalTerm__c</name>
+    </fields>
+    <fields>
+        <help>Le taux du prix de renouvellement augmente.</help>
+        <label><!-- Renewal Uplift (%) --></label>
+        <name>SBQQ__RenewalUpliftRate__c</name>
+    </fields>
+    <fields>
+        <help>Montant de la taxe estimé</help>
+        <label><!-- Estimated Tax --></label>
+        <name>SBQQ__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subsidiary --></label>
+        <name>Subsidiary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync Message --></label>
+        <name>SyncMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Now --></label>
+        <name>blng__BillNow__c</name>
+    </fields>
+    <fields>
+        <help>La somme de toutes les factures pour cette commande (hors taxes).</help>
+        <label><!-- Billed Amount (without tax) --></label>
+        <name>blng__BilledAmountwithouttax__c</name>
+    </fields>
+    <fields>
+        <help>La somme de toutes les taxes sur facture pour cette commande.</help>
+        <label><!-- Billed Tax --></label>
+        <name>blng__BilledTax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account --></label>
+        <name>blng__BillingAccount__c</name>
+        <relationshipLabel><!-- Orders (Billing Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Day Of Month --></label>
+        <name>blng__BillingDayOfMonth__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation>1</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation>10</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation>11</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation>12</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation>13</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation>14</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation>15</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation>16</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation>17</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation>18</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation>19</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation>2</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation>20</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21</masterLabel>
+            <translation>21</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22</masterLabel>
+            <translation>22</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23</masterLabel>
+            <translation>23</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24</masterLabel>
+            <translation>24</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25</masterLabel>
+            <translation>25</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26</masterLabel>
+            <translation>26</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27</masterLabel>
+            <translation>27</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>28</masterLabel>
+            <translation>28</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29</masterLabel>
+            <translation>29</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation>3</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation>30</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31</masterLabel>
+            <translation>31</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation>4</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation>5</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation>6</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation>7</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation>8</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation>9</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Total de tous les produits de commande annulés.</help>
+        <label><!-- Canceled Billing Amount (without tax) --></label>
+        <name>blng__CanceledBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Batch --></label>
+        <name>blng__InvoiceBatch__c</name>
+    </fields>
+    <fields>
+        <help>Total en attente pour tous les produits de commande</help>
+        <label><!-- Pending Billing Amount (without tax) --></label>
+        <name>blng__PendingBillings__c</name>
+    </fields>
+    <fields>
+        <help>La somme de toutes les lignes de facture et taxes pour cette commande.</help>
+        <label><!-- Total Billings --></label>
+        <name>blng__TotalBilling__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t contract the order. Activate the order and try again. --></errorMessage>
+        <name>SBQQ__Cannot_Contract_New_Order</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- EditOrderProducts --></label>
+        <name>SBQQ__EditOrderProducts</name>
+    </webLinks>
+</CustomObjectTranslation>

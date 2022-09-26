@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Body --></label>
+        <name>amazonconnect__Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>amazonconnect__Type__c</name>
+    </fields>
+</CustomObjectTranslation>

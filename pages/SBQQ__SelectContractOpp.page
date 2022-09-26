@@ -1,0 +1,147 @@
+<apex:page id="SelectContractOpp" standardController="Opportunity" extensions="SBQQ.SelectContractOppController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" tabStyle="SBQQ__Quote__c" title="{!$Label.SBQQ__lbl_contract_selector}">
+	<apex:stylesheet value="{!$Resource['sb']}"/>
+	<apex:includeScript value="{!$Resource.SBQQ__QueueableJobChecker}"/>
+	<c:theme />
+	<div id="sbSelectContract" class="sb">
+		<apex:pageMessages id="pageMessages"/>
+		<apex:form >
+			<apex:actionFunction name="displayErrorMessage" rerender="pageMessages" action="{!displayErrorMessage}">
+				<apex:param name="errorMessage" value=""/>
+			</apex:actionFunction>
+			<c:pageHeader title="{!$Label.SBQQ__lbl_existing_contracts}" subtitle="{! opp.name}" iconName="sf-icon-contract-1 resetHeight">
+				<div class="sbButtons">
+					<apex:commandButton styleClass="sbBtn" action="{!onSelect}" onclick="toggleLoadingMask(true)" value="Select"  rendered="{!IF(!isAssetBased && hasContracts, true,false)}"/>
+					<apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="Cancel"/>
+				</div>
+			</c:pageHeader>
+			<div class="sbBody" id="sbCpqSettings">
+				<div class="sbPageBlockSection">
+					<apex:pageMessages />
+					<apex:inputHidden id="selectedContractId" value="{!selectedContractId}"/>
+					<!-- Create Tab panel -->
+					<apex:tabPanel styleClass="sbTabs" switchType="client" selectedTab="activeContractsTab" id="ContractsTabPanel">
+						<apex:tab label="{!$Label.SBQQ__lbl_active_contracts}" name="activeContractsTab" id="tabOne">
+							<c:pageBlockSection >
+								<table class="sbTable" border="0" cellspacing="0" cellpadding="0" width="100%">
+									<thead class="dr-table-thead">
+									<tr class="headerRow">
+										<th class="headerRow">&nbsp;</th>
+										<apex:repeat var="field" value="{!dataTableFields}">
+											<th class="headerRow">
+												<apex:outputText value="{!field['label']}"/>
+											</th>
+										</apex:repeat>
+									</tr>
+									</thead>
+									<tbody>
+									<apex:repeat id="activeContracts" var="contract" value="{!activeContracts}" >
+										<tr class="dataRow">
+												<td class="dataCell">
+													<input style="width:20px !important" type="radio" name="contractSelector" value="{!contract.record.Id}" onclick="document.getElementById('{!JSENCODE($Component.selectedContractId)}').value = this.value"/>
+												</td>
+												<apex:repeat var="field" value="{!dataTableFields}">
+													<td class="dataCell">
+														<apex:outputField value="{!contract.record[field['apiName']]}" />
+													</td>
+												</apex:repeat>
+											</tr>
+									</apex:repeat>
+									</tbody>
+								</table>
+							</c:pageBlockSection>
+						</apex:tab>
+						<apex:tab label="{!$Label.SBQQ__lbl_evergreen_contracts}" name="evergreenContractsTab" id="tabTwo">
+							<c:pageBlockSection >
+								<table class="sbTable" border="0" cellspacing="0" cellpadding="0" width="100%">
+									<thead class="dr-table-thead">
+									<tr class="headerRow">
+										<th class="headerRow">&nbsp;</th>
+										<apex:repeat var="field" value="{!dataTableFields}">
+											<th class="headerRow">
+												<apex:outputText value="{!field['label']}"/>
+											</th>
+										</apex:repeat>
+									</tr>
+									</thead>
+									<tbody>
+									<apex:repeat id="evergreenContracts" var="contract" value="{!evergreenContracts}" >
+										<tr class="dataRow">
+												<td class="dataCell">
+													<input style="width:20px !important" type="radio" name="contractSelector" value="{!contract.record.Id}" onclick="document.getElementById('{!JSENCODE($Component.selectedContractId)}').value = this.value"/>
+												</td>
+												<apex:repeat var="field" value="{!dataTableFields}">
+													<td class="dataCell">
+														<apex:outputField value="{!contract.record[field['apiName']]}" />
+													</td>
+												</apex:repeat>
+											</tr>
+									</apex:repeat>
+									</tbody>
+								</table>
+							</c:pageBlockSection>
+						</apex:tab>
+					</apex:tabPanel>
+				</div>
+			</div>
+		</apex:form>
+	</div>
+		<div class="sbLoadingMask" style="visibility: hidden">
+			<div class="sbLoading sb-icon-loading">
+				<div class="sb-icon-bounce1"></div>
+				<div class="sb-icon-bounce2"></div>
+				<div class="sb-icon-bounce3"></div>
+			</div>
+		</div>
+		<script type="application/javascript">
+			function toggleLoadingMask(show) {
+				document.getElementsByClassName('sbLoadingMask')[0].style.visibility = (show ? "visible" : "hidden");
+			}
+		</script>
+		<apex:outputPanel layout="none" rendered="{!jobId != null}">
+			<script type="application/javascript">
+				var s1 = new Date();
+				var classPrefix = '{!JSENCODE(classPrefix)}';
+				var recordId = '{!JSENCODE(selectedContractId)}';
+				var jobId = '{!JSENCODE(jobId)}';
+
+				// Background job.  So spin
+				function start() {
+					toggleLoadingMask(true);
+				}
+
+				function changed(results) {
+					console.log('Amend contract - ' + results.job.Status + ' - ' + ((new Date().getTime() - s1.getTime())/1000) + ' seconds');
+				}
+
+				function finish(success, results) {
+					toggleLoadingMask(false);
+				// At this point, we know for a fact that one of three things happened:
+				if (!success) {
+					let status = results.job.ExtendedStatus;
+					console.log(results);
+					 displayErrorMessage(status);
+
+				}  else {
+						if (results.redirectUrl) {
+							if (typeof sforce != 'undefined' && sforce && sforce.one) {
+								sforce.one.navigateToURL('{!$Site.Prefix}' + results.redirectUrl);
+							} else {
+								document.location.href = '{!$Site.Prefix}' + results.redirectUrl;
+							}
+						}
+					}
+				}
+				var remote = classPrefix + 'QueueableJobCheckerExt.getJobStatus';
+				var jobType = 'AmendContract';
+				var startingStatus;
+				Visualforce.remoting.Manager.invokeAction(remote, recordId, jobType, jobId, function(results, event) {
+					if (!event.status) {
+						startingStatus = 'Completed';
+					} else {
+						startingStatus = results.job.Status;
+					}
+					QueuableJobChecker(remote, recordId, jobType, jobId, start, finish, changed, startingStatus);
+				}, {escape: false});
+			</script>
+			</apex:outputPanel>
+</apex:page>

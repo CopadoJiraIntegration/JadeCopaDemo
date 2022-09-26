@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Specific Percentage</fullName>
+        <default>false</default>
+        <label>Specific Percentage</label>
+    </customValue>
+    <customValue>
+        <fullName>Flat Amount</fullName>
+        <default>false</default>
+        <label>Flat Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Remainder</fullName>
+        <default>false</default>
+        <label>Remainder</label>
+    </customValue>
+    <customValue>
+        <fullName>Discount Allocation ( for the order)</fullName>
+        <default>false</default>
+        <label>Discount Allocation ( for the order)</label>
+    </customValue>
+    <masterLabel>Revenue Recognition Policy Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

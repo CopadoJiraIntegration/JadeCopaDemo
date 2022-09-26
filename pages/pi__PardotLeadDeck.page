@@ -1,0 +1,126 @@
+<apex:page controller="pi.LeadDeckController" sidebar="false">
+    <style type="text/css">
+        td.noSidebarCell {
+            padding: 0px;
+        }
+
+        .pardotIframe {
+            border: none;
+        }
+
+
+        #legacyLeadDeckAlert {
+            padding-right: 35px;
+            font-size: 13px;
+            margin:10px;
+            display:none;
+        }
+
+        /*
+            It's terrible to manually include these bootstrap styles here,
+            but it's necessary because the alternative is to create an entirely
+            new VF page and reference this page via an iframe. If we created a new VF page,
+            users would need to add that page to their permissions if they're not using a permission set.
+            Since this page will probably be deprecated soon, it's probably not worth the hassle of
+            adding a new VF page.
+        */
+        .alert-warning {
+            color: #8a6d3b;
+            background-color: #fcf8e3;
+            border-color: #faebcc;
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .alert-dismissable .close, .alert-dismissible .close {
+            position: relative;
+            top: -2px;
+            right: -21px;
+            color: inherit;
+        }
+
+        button.close {
+            -webkit-appearance: none;
+            padding: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+        }
+
+        .close {
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: .2;
+        }
+    </style>
+
+
+    <apex:includeScript value="{!URLFOR($Resource.pi__LeadDeck, 'js/lib.min.js')}"></apex:includeScript>
+    <div id="legacyLeadDeckAlert" class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>
+            A recent security update requires that you log into LeadDeck with your Pardot credentials on every visit; however, the desktop version will store your credentials. <a href="http://www2.pardot.com/leaddeck-osx" target='_blank' class="alert-link">Download for Mac</a> <a href="http://www2.pardot.com/leaddeck-windows" target='_blank' class="alert-link">Download for Windows</a>
+        </p>
+        <p>
+            If you do not know your credentials, contact your Pardot administrator. For general information about LeadDeck, <a href="http://help.pardot.com/customer/en/portal/articles/2128371-leaddeck-real-time-prospect-monitor" target='_blank' class="alert-link">please see our Knowledge Base</a>.
+        </p>
+        <p>
+            Please note that Pardot will be ending support for LeadDeck in the next year. We will be reaching out to all of our current users with next steps. 
+        </p>
+    </div>
+    <c:FilteredFrame height="800" id="legacyLeadDeck" className="pardotIframe" filteredFrameName="pardotIframe" src="https://pi.pardot.com/leaddeck/" width="100%"/>
+
+
+    <script>
+        (function() {
+            document.getElementById('legacyLeadDeck').parentElement.style.padding = 0;
+
+            // Use a crude method to ensure there aren't double scrollbars on load or resize
+            if (window.addEventListener) {
+                // If IE9+ or other
+                window.addEventListener('load', pardotAdaptIframeHeight);
+                window.addEventListener('resize', pardotAdaptIframeHeight);
+
+                window.addEventListener('load', displayLegacyLeadDeckAlert);
+            } else if (window.attachEvent)  {
+                // If IE8 or under
+                window.attachEvent('onload', pardotAdaptIframeHeight);
+                window.attachEvent('onresize', pardotAdaptIframeHeight);
+
+                window.attachEvent(('onload'), displayLegacyLeadDeckAlert);
+            }
+
+            function pardotAdaptIframeHeight() {
+                // Buffer for header/footer is ~240 in classic and ~20 in Lightning
+                var buffer = 240;
+                if (document.getElementsByClassName('noSidebarCell').length === 0) {
+                    buffer = 20;
+                }
+                document.getElementById('legacyLeadDeck').height = window.innerHeight - buffer;
+            }
+
+            function displayLegacyLeadDeckAlert() {
+                const ALERT_LOCAL_STORAGE_KEY = 'hasDisplayedLegacyLeadDeckAlert';
+                var legacyLeadDeckAlert = $('#legacyLeadDeckAlert');
+                var hasDisplayedLegacyLeadDeckAlert = localStorage.getItem(ALERT_LOCAL_STORAGE_KEY);
+                if (hasDisplayedLegacyLeadDeckAlert == null) {
+                    legacyLeadDeckAlert.show();
+                }
+
+                legacyLeadDeckAlert.on('closed.bs.alert', function () {
+                    localStorage.setItem(ALERT_LOCAL_STORAGE_KEY, true);
+                });
+            }
+        })();
+    </script>
+</apex:page>

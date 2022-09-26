@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Orientación sobre precios</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Orientaciones sobre precios</value>
+    </caseValues>
+    <fields>
+        <help>Descripción para esta orientación sobre precios.</help>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>Proporciona a los representantes de ventas una explicación sobre esta orientación sobre precios y recomendaciones sobre los descuentos que se pueden proporcionar. Pueden ver esta explicación con la orientación sobre precios en el editor de partidas de presupuesto.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Cuando establezca el nivel de orientación sobre precios para una partida de presupuesto, incluya las cantidades de productos que se vendieron anteriormente</help>
+        <label><!-- Include Prior Purchases --></label>
+        <name>SBQQ__IncludePriorPurchases__c</name>
+    </fields>
+    <fields>
+        <help>Activa esta orientación sobre precios para utilizar en el producto asociado.</help>
+        <label><!-- Active --></label>
+        <name>SBQQ__IsActive__c</name>
+    </fields>
+    <fields>
+        <help>Los parámetros proporcionados para crear esta orientación sobre precios.</help>
+        <label><!-- Summary --></label>
+        <name>SBQQ__Summary__c</name>
+    </fields>
+    <fields>
+        <help>Intervalo: La orientación realiza descuentos empleando únicamente el nivel de orientación sobre precios que se aplica a la cantidad de la partida de presupuesto.</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>Intervalo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Seleccione el tipo de descuento que esta orientación sobre precios aplica a la partida de presupuesto.</help>
+        <label><!-- Unit --></label>
+        <name>SBQQ__Unit__c</name>
+        <picklistValues>
+            <masterLabel>Percent</masterLabel>
+            <translation>Porcentaje</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre</nameFieldLabel>
+</CustomObjectTranslation>

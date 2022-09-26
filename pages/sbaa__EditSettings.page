@@ -1,0 +1,125 @@
+<apex:page id="page" controller="sbaa.SettingsEditorController" setup="true" title="{!$Label.sbaa__lbl_edit_settings}">
+	<apex:stylesheet value="{!$Resource['sb']}"/>
+	<div id="qq" class="sb sbCpqSettings">
+		<apex:form id="form">
+			<c:pageHeader title="{!$Label.sbaa__lbl_edit_settings_long}">
+				<div class="sbButtons">
+					<apex:commandButton action="{!onSave}" value="{!$Label.sbaa__lbl_save}" styleClass="sbBtn"/>
+					<apex:commandButton action="{!onCancel}" value="{!$Label.sbaa__lbl_cancel}" styleClass="sbBtn"/>
+				</div>
+			</c:pageHeader>
+			<div id="sbCpqSettings">
+				<apex:pageBlock mode="edit">
+					<apex:tabPanel styleClass="sbTabs" switchType="client">
+						<apex:tab name="approvalSettings" label="{!$Label.sbaa__lbl_approval_settings}">
+							<apex:pageBlockSection collapsible="false" columns="2">
+								<!-- Approved Keywords -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__ApprovedKeywords__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__ApprovedKeywords__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__ApprovedKeywords__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Rejected Keywords -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__RejectedKeywords__c.inLineHelpText}">
+								<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__RejectedKeywords__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__RejectedKeywords__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Consolidate Approval Emails -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__ConsolidateApprovalEmails__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__ConsolidateApprovalEmails__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__ConsolidateApprovalEmails__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Inbound Approval Email Parsing -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__InboundApprovalEmailParsing__c.inlineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__InboundApprovalEmailParsing__c.label}"/>
+									<apex:selectList value="{!approvalSettings.sbaa__InboundApprovalEmailParsing__c}" size="1">
+										<apex:selectOptions value="{!emailParsingFieldOptions}"/>
+									</apex:selectList>
+								</apex:pageBlockSectionItem>
+								<!-- Inbound Approval Email -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__InboundApprovalEmail__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__InboundApprovalEmail__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__InboundApprovalEmail__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Inbound Approval Email (Long) -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__InboundApprovalEmailLong__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__InboundApprovalEmailLong__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__InboundApprovalEmailLong__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Hide Submit on Preview -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__HideSubmitOnPreview__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__HideSubmitOnPreview__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__HideSubmitOnPreview__c}"/>
+								</apex:pageBlockSectionItem>
+							</apex:pageBlockSection>
+							<!-- Check Upgrade Readiness Steps -->
+                            <apex:pageBlockSection columns="1" id="checkAndAssignPSL">
+                                <hr />
+                                <h3>{!$Label.lbl_chkAndAssignPSLsteps}</h3>
+                                <p><h4>{!$Label.lbl_psl_prepare}
+                                <a href="https://help.salesforce.com/articleView?id=Advanced-Approvals-readiness-for-Permission-Set-License-assignment&language=en_US&type=1&mode=1" target="_blank">{!$Label.lbl_psl_ka_link}</a></h4>
+                                <br/><br/>
+                                <h4>{!$Label.msg_checkpslreadiness_instructions}</h4></p>
+                                <apex:outputPanel layout="inline">
+                                    <apex:commandButton styleClass="sbBtn" action="{!onRunCheckPSLReadiness}" value="{!$Label.sbaa__lbl_check_psl_readiness}" id="runcheckPSLReadiness" reRender="checkAndAssignPSL" />&nbsp;
+                                        <br/>
+                                        <apex:outputPanel id="pslErrorSection" rendered="{!errorsToDisplay}">
+                                            <p><h3>{!$Label.sbaa__lbl_psl_error_msg_header}</h3></p>
+                                            <apex:repeat var="m" value="{!pslErrorMessages}">
+                                                <p><apex:outputText value="{!m}"/></p>
+                                            </apex:repeat>
+                                        </apex:outputPanel><br/>
+                                        <apex:outputPanel id="CSVsection" rendered="{!csvToDisplay}">
+                                            <p><h3>{!$Label.sbaa__lbl_ap_download_csv_header}</h3></p>
+                                            <p><apex:outputLink value="/apex/PslUserCsv" id="UsersWithPSNoMPL" rendered="{!UsersWithPSNoMPLToDisplay}" target="_blank">{!$Label.sbaa__lbl_usr_w_ps_no_mpl_lnk}</apex:outputLink></p>
+                                            <p><apex:outputLink value="/apex/InactiveUsersWithPS" id="InactiveUsersWithPS" rendered="{!InactiveUsersWithPSToDisplay}" target="_blank">{!$Label.sbaa__lbl_inactive_usr_w_ps_lnk}</apex:outputLink></p>
+                                            <p><apex:outputLink value="/apex/UsersNeedPSL" id="UsersNeedPSL" rendered="{!UsersNeedPSLToDisplay}" target="_blank">{!$Label.sbaa__lbl_usr_who_need_psl_lnk}</apex:outputLink></p>
+                                        </apex:outputPanel><br/>
+                                        <apex:outputPanel id="pslSummarySection" rendered="{!summaryToDisplay}">
+                                            <p><h3>{!$Label.sbaa__lbl_ap_org_readiness_header}</h3></p>
+                                            <apex:repeat var="m" value="{!pslSummaryMessages}">
+                                                <p><apex:outputText value="{!m}"/></p>
+                                            </apex:repeat>
+                                        </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:pageBlockSection>
+						</apex:tab>
+						<apex:tab name="dealDeskSettings" label="{!$Label.sbaa__lbl_deal_desk_settings}">
+							<apex:pageBlockSection collapsible="false" columns="2">
+								<!-- Deal Desk Requires Ownership -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskOwnershipRequired__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskOwnershipRequired__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__DealDeskOwnershipRequired__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Deal Desk Stylesheet URL -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskStylesheetURL__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskStylesheetURL__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__DealDeskStylesheetURL__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Deal Desk Active Approve Icon URL -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskActiveApproveIconURL__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskActiveApproveIconURL__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__DealDeskActiveApproveIconURL__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Deal Desk Inactive Approve Icon URL -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskInactiveApproveIconURL__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskInactiveApproveIconURL__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__DealDeskInactiveApproveIconURL__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Deal Desk Active Reject Icon URL -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskActiveRejectIconURL__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskActiveRejectIconURL__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__DealDeskActiveRejectIconURL__c}"/>
+								</apex:pageBlockSectionItem>
+								<!-- Deal Desk Inactive Reject Icon URL -->
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskInactiveRejectIconURL__c.inLineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.sbaa__ApprovalSettings__c.fields.sbaa__DealDeskInactiveRejectIconURL__c.label}"/>
+									<apex:inputField value="{!approvalSettings.sbaa__DealDeskInactiveRejectIconURL__c}"/>
+								</apex:pageBlockSectionItem>
+							</apex:pageBlockSection>
+						</apex:tab>
+					</apex:tabPanel>
+				</apex:pageBlock>
+			</div>
+		</apex:form>
+	</div>
+</apex:page>

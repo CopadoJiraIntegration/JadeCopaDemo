@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AIApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>SalesAILeadScoring_1663139828138</developerName>
+    <masterLabel>SalesAILeadScoring_1663139828138</masterLabel>
+    <status>Enabled</status>
+    <type>SalesAILeadScoring</type>
+</AIApplication>

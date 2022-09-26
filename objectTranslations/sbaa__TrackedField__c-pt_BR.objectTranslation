@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campo rastreado</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campos rastreados</value>
+    </caseValues>
+    <fields>
+        <help>Regra de aprovação que gerará o Valor rastreado para esse Campo rastreado</help>
+        <label><!-- Approval Rule --></label>
+        <name>sbaa__ApprovalRule__c</name>
+        <relationshipLabel><!-- Tracked Fields --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Campo (no objeto Valor rastreado) que representa uma Pesquisa a seu objeto pai</help>
+        <label><!-- Record Field --></label>
+        <name>sbaa__RecordField__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Oportunidade</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Um Campo (em um Objeto rastreado) que está sendo rastreado</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation>Valor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type</masterLabel>
+            <translation>Tipo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Objeto em que o Campo rastreado existe</help>
+        <label><!-- Tracked Object --></label>
+        <name>sbaa__TrackedObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Oportunidade</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Escolha se todos os valores serão rastreados ou apenas as alterações do valor rastreado anterior.</help>
+        <label><!-- Tracking Type --></label>
+        <name>sbaa__TrackingType__c</name>
+        <picklistValues>
+            <masterLabel>All Values</masterLabel>
+            <translation>Todos os valores</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any Change</masterLabel>
+            <translation>Qualquer alteração</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nº do campo rastreado</nameFieldLabel>
+</CustomObjectTranslation>

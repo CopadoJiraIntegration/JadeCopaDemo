@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>cases</category>
+    <deployed>true</deployed>
+    <description>Show entitlements by service contracts.</description>
+    <label>Service Contracts with Entitlements</label>
+    <sections>
+        <masterLabel>Service Contracts</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>Entitlements</masterLabel>
+    </sections>
+</ReportType>

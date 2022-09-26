@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Instantané d’approbation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Instantanés d’approbation</value>
+    </caseValues>
+    <fields>
+        <help>Condition d&apos;approbation à partir de laquelle la valeur est capturée</help>
+        <label><!-- Approval Condition --></label>
+        <name>sbaa__ApprovalCondition__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Approbation associée à l&apos;instantané stocké</help>
+        <label><!-- Approval --></label>
+        <name>sbaa__Approval__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Date capturée</help>
+        <label><!-- Approved Value (Date) --></label>
+        <name>sbaa__ApprovedValueDate__c</name>
+    </fields>
+    <fields>
+        <help>Texte long capturé</help>
+        <label><!-- Approved Value (Long Text) --></label>
+        <name>sbaa__ApprovedValueLongText__c</name>
+    </fields>
+    <fields>
+        <help>Valeur numérique capturée</help>
+        <label><!-- Approved Value (Numeric) --></label>
+        <name>sbaa__ApprovedValueNumeric__c</name>
+    </fields>
+    <fields>
+        <help>Valeur de texte capturée</help>
+        <label><!-- Approved Value (Text) --></label>
+        <name>sbaa__ApprovedValueText__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>N° d&apos;instantané d&apos;approbation</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

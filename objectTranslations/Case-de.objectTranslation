@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Agent Satisfaction Score --></label>
+        <name>Agent_Satisfaction_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Owner Name --></label>
+        <name>Case_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Satisfaction --></label>
+        <name>Customer_Satisfaction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <picklistValues>
+            <masterLabel>Billing</masterLabel>
+            <translation><!-- Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Checked if a case is closed directly after opening --></help>
+        <label><!-- First Call Closure --></label>
+        <name>First_Call_Closure__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Resolution time Categories --></label>
+        <name>First_Resolution_time_Categories__c</name>
+        <picklistValues>
+            <masterLabel>1-4 Hours</masterLabel>
+            <translation><!-- 1-4 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 1 Hour</masterLabel>
+            <translation><!-- Less than 1 Hour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than 4 Hours</masterLabel>
+            <translation><!-- More than 4 Hours --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Responded Time --></label>
+        <name>First_Respond_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Response Time (In Min) --></label>
+        <name>First_Response_Time_In_Min__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field displays when was the first response added by the agent on case --></help>
+        <label><!-- First Response Time --></label>
+        <name>First_Response_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- RMA Internal Id --></label>
+        <name>RMA_Internal_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution Time --></label>
+        <name>Resolution_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amazon Connect Contact Id --></label>
+        <name>amazonconnect__AC_Contact_Id__c</name>
+    </fields>
+    <recordTypes>
+        <description><!-- This is to create a dispute case with TKWW --></description>
+        <label><!-- Dispute --></label>
+        <name>Dispute</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RMA --></label>
+        <name>RMA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- TAC --></label>
+        <name>TAC</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Description --></label>
+        <name>SFDocumentor__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Folder Name --></label>
+        <name>SFDocumentor__Folder_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsDeleted --></label>
+        <name>SFDocumentor__IsDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Link_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report API Name --></label>
+        <name>SFDocumentor__Report_API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Format --></label>
+        <name>SFDocumentor__Report_Format__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>SFDocumentor__Report_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Last Run Date --></label>
+        <name>SFDocumentor__Report_Last_Run_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Last Viewed Date --></label>
+        <name>SFDocumentor__Report_Last_Viewed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report OwnerId --></label>
+        <name>SFDocumentor__Report_OwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Field For  Report --></label>
+        <name>SFDocumentor__Test_Field_For_Report__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Records --></label>
+        <name>SFDocumentor__Total_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Url --></label>
+        <name>SFDocumentor__Url__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

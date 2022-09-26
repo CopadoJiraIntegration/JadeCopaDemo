@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access agent features in Service Cloud Voice contact centers that use your preferred telephony provider.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Contact Center Agent (SFDC)</label>
+    <license>ServiceCloudVoiceExternalTelephonyPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CanAccessCE</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CanToggleCallRecordings</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>IsContactCenterAgentBYOT</name>
+    </userPermissions>
+</PermissionSet>

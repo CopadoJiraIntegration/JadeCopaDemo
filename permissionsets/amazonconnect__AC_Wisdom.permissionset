@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>amazonconnect__WisdomCustomPermission</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AC_Wisdom</label>
+    <pageAccesses>
+        <apexPage>amazonconnect__AC_WisdomCase</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>amazonconnect__AC_WisdomTask</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>amazonconnect__AC_WisdomUI</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabSettings>
+        <tab>amazonconnect__AC_WisdomUI</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

@@ -1,0 +1,102 @@
+<apex:page id="AC_GuidedSetup" showChat="false" showHeader="false" applyHtmlTag="false" applyBodyTag="false" sideBar="false"
+  controller="amazonconnect.AC_GuidedSetup">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en" styles="height:100%">
+  <apex:includeLightning />
+  <apex:slds />
+
+  <apex:stylesheet value="{!$Resource.amazonconnect__AC_CommonStylesheet}" />
+  <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+
+  <apex:iframe id="guidedsetup" src="{!URLFOR($Resource.amazonconnect__GuidedSetup, '/index.html')}" title="GuidedSetup" width="100%"
+    frameborder="1" scrolling="true"></apex:iframe>
+
+  </html>
+
+  <script type="text/javascript">
+    (function (ac) {
+      ac.visualforcePageUrl = '{!URLFOR($CurrentPage.URL)}';
+      ac.onresize = function () {
+        document.getElementById('guidedsetup').height = ac.innerHeight;
+      };
+      ac.onresize();
+      ac.validatePrerequisites = ({ fields, callback }) => Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.AC_GuidedSetup.validatePrerequisites}',
+        fields,
+        callback,
+        { escape: false }
+      );
+      ac.createAmazonConnectInstance = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.createAmazonConnectInstance}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.createKinesisStream = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.createKinesisStream}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.createS3Bucket = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.createS3Bucket}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.associateInstanceStorageConfig = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.associateInstanceStorageConfig}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.setCtiAdapterValues = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.setCtiAdapterValues}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.addUserToCallCenter = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.addUserToCallCenter}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.allowlistUrls = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.allowlistUrls}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.retrieveLambdaParameters = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.retrieveLambdaParameters}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+      ac.setupAudioRecording = ({ values, callback }) => {
+        Visualforce.remoting.Manager.invokeAction(
+          "{!$RemoteAction.AC_GuidedSetup.setupAudioRecording}",
+          values,
+          callback,
+          { escape: false }
+        )      
+      };
+    })(this)
+  </script>
+</apex:page>

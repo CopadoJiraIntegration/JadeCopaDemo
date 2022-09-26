@@ -1,0 +1,118 @@
+<!--
+@description : This LWC components is for Custom Action- Select Favorites.
+-->
+<template>
+    <div data-id="toastModel" style="height: 4rem;" class="slds-hide">
+        <div class="slds-notify_container slds-is-relative">
+            <div class={mainDivClass} role="status">
+                <span class="slds-assistive-text">{variant}</span>
+                <span class={messageDivClass} title={message}>
+                <lightning-icon icon-name={iconName} size="small" variant="inverse"></lightning-icon>
+                </span>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">{message}</h2>
+                </div>
+                <div class="slds-notify__close">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close" onclick={closeModelError}>
+                        <lightning-icon icon-name="utility:close" size="small" variant="inverse"> </lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <lightning-tabset class='slds-tabs_default' active-tab-value='Favorites' style="background:white;">
+        
+        <lightning-tab class='slds-tabs_default' name="Favorites" value ="Favorites" label="Favorites" title="Favorites" id="prodFinder" onactive={tabselect}>
+            <lightning-tabset class='slds-tabs_default'>
+                <template for:each={finderCategory} for:item="tab">
+                    <lightning-tab name={tab.catUniqueName} label={tab.findCategory} key={tab.catUniqueName} title={tab.findCategory}  value ={tab.findCategory} onactive={tabselect}>
+                        <!--lightning-tabset key={tab.catUniqueName}-->
+                            <div class="slds-p-left_medium slds-p-right_medium">
+                                <span class="slds-truncate" style="padding: 20px;">{tab.tabDesc}</span><br/><br/>
+                                <template if:true={innerShowSpinner}>
+                                    <lightning-spinner style="position: absolute;" variant="brand" size="small" alternative-text="Loading..."></lightning-spinner>
+                                </template>
+                                <table class="slds-table slds-max-medium-table_stacked slds-table_bordered slds-table_col-bordered" style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="header-row" style="width:1.5rem;"> 
+                                                <lightning-input type="checkbox" variant="label-hidden" class="checkForAllCategory" name={tabSelected} data-id="selectAll" checked={blnSelectAll} onchange ={productSelectAll} disabled="true">
+                                                </lightning-input>
+                                            </th>
+                                            <th data-id="productName" onclick={sortName}>
+                                                <a class="slds-th__action slds-text-link--reset">
+                                                    <span class="slds-truncate" title="Name" >Name</span>
+                                                    <div if:true={isNameSort}>
+                                                        <div if:true={isAsc}>
+                                                            <lightning-icon icon-name="utility:arrowup" alternative-text="Ascending" title="Ascending" size="xx-small"></lightning-icon>
+                                                        </div>
+                                                        <div if:true={isDsc}>
+                                                            <lightning-icon icon-name="utility:arrowdown" alternative-text="Descending" title="Descending" size="xx-small"></lightning-icon>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </th>
+                                            <th scope="col" class="header-row" data-id="description" onclick={sortCode}>
+                                                <a class="slds-th__action slds-text-link--reset">
+                                                    <span class="slds-truncate" title="Description" style="margin-left: -8px;">Description</span>
+                                                    <div if:true={isCodeSort}>
+                                                        <div if:true={isAsc}>
+                                                            <lightning-icon icon-name="utility:arrowup" alternative-text="Ascending" title="Ascending" size="xx-small"></lightning-icon>
+                                                        </div>
+                                                        <div if:true={isDsc}>
+                                                            <lightning-icon icon-name="utility:arrowdown" alternative-text="Descending" title="Descending" size="xx-small"></lightning-icon>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </th>
+                                            <!-- th scope="col" class="header-row" data-id="originalQuote" onclick={sortPrice}>
+                                                <a class="slds-th__action slds-text-link--reset">
+                                                    <span class="slds-truncate" title="Original Quote" >Original Quote</span>
+                                                    <div if:true={isPriceSort}>
+                                                        <div if:true={isAsc}>
+                                                            <lightning-icon icon-name="utility:arrowup" alternative-text="Ascending" title="Ascending" size="xx-small"></lightning-icon>
+                                                        </div>
+                                                        <div if:true={isDsc}>
+                                                            <lightning-icon icon-name="utility:arrowdown" alternative-text="Descending" title="Descending" size="xx-small"></lightning-icon>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </th -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <template iterator:it={data}>
+                                            <tr key={it.value.uniqueKey}>
+                                                <td style="width: 4.8%;">
+                                                    <lightning-input type="checkbox" variant="label-hidden" class="checkForAllCategory" name={it.value.uniqueKey} checked={it.value.isSelectedForCategory} onchange={productSelect}>
+                                                    </lightning-input> 
+                                                </td>
+                                                <td class="slds-cell-wrap" style="width: 30%;"> {it.value.favouriteName} </td>
+                                                <td style="width:50%"> {it.value.favDescription} </td>
+                                                <!--td style="width:20%;"> {it.value.quoteId} </td-->
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div if:false={displayData}>
+                                No records found.
+                            </div>
+                        <!-- /lightning-tabset-->
+                    </lightning-tab>
+                </template>
+            </lightning-tabset>
+        </lightning-tab>
+
+        <template if:true={isShowSpinner}>
+            <lightning-spinner style="position: fixed;" variant="brand" size="large" alternative-text="Loading..."></lightning-spinner>
+        </template>
+    </lightning-tabset>
+
+    <div class="slds-docked-form-footer" style="position:sticky;z-index: 0;" if:false={showTable}>
+        <lightning-button variant="brand" label="Select" title="Select" onclick={saveQuoteLines} class="slds-p-right_x-small selectBtn" disabled={isDisabledButton}></lightning-button>
+        <lightning-button variant="brand" label="Cancel" title="Cancel" onclick={handleCancel}></lightning-button>
+    </div>
+</template>

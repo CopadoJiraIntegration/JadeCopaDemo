@@ -1,0 +1,22 @@
+<apex:page Controller="dsfs.ErrorController" showHeader="true" sideBar="false" title="{!$Label.dsfs__docusign}">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:includeScript value="{!$Resource.dsfs__UtilJS}"/>
+
+    <div class="docusign-container">
+        <div id="dsAlert">
+            <ul class="alert-messages">
+                <apex:repeat value="{!messages}" var="message">
+                    <li>
+                        <p>
+                            <apex:outputText value="{!message}"/>
+                        </p>
+                    </li>
+                </apex:repeat>
+            </ul>
+            <apex:outputPanel rendered="{!NOT(ISNULL(sourceId))}">
+                <a class="secondary button"
+                   onclick="DSUtil.navigateToSObject('{!sourceId}', '{!pathPrefix}');">{!$Label.Back}</a>
+            </apex:outputPanel>
+        </div>
+    </div>
+</apex:page>

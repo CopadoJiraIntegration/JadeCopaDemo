@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Order Product End Date</fullName>
+        <default>false</default>
+        <label>Order Product End Date</label>
+    </customValue>
+    <customValue>
+        <fullName>Create without Date</fullName>
+        <default>false</default>
+        <label>Create without Date</label>
+    </customValue>
+    <masterLabel>Invoice Plan Line Service Period End</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

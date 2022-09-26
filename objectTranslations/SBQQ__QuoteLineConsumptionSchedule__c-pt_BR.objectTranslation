@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Agenda de consumo da linha de cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Agendas de consumo da linha de cotação</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Compact Layout --></label>
+        <name>SBQQ__CompactLayout</name>
+    </fieldSets>
+    <fields>
+        <help>A unidade utilizada com o termo de faturamento para determinar a frequência de faturamento.</help>
+        <label><!-- Billing Term Unit --></label>
+        <name>SBQQ__BillingTermUnit__c</name>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation>Mês</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation>Trimestre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation>Ano</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>O número utilizado com o termo de faturamento para determinar a frequência de faturamento.</help>
+        <label><!-- Billing Term --></label>
+        <name>SBQQ__BillingTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation>Taxas</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumption Schedule --></label>
+        <name>SBQQ__ConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>A utilização é correspondente com um cronograma de consumo se os registros compartilham do mesmo valor de atributo correspondente.</help>
+        <label><!-- Matching Attribute --></label>
+        <name>SBQQ__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Escolha um caso específico de uso para classificar a utilização mediante este cronograma. Essa é uma lista de opções controladora para o campo Tipo.</help>
+        <label><!-- Rating Method --></label>
+        <name>SBQQ__RatingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Tier</masterLabel>
+            <translation>Nível</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Intervalo: os preços de cronograma utilizando apenas o nível que se aplica à quantidade de utilização. Placa: utilização dentro de um dado limite recebe um preço igual ao valor de seu nível.</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>Intervalo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation>Placa</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Quantidades e taxas de utilização se aplicam a esta unidade de medida.</help>
+        <label><!-- Unit of Measure --></label>
+        <name>SBQQ__UnitOfMeasure__c</name>
+        <picklistValues>
+            <masterLabel>GigaBytes</masterLabel>
+            <translation><!-- GigaBytes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation>Nenhum</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome do Cronograma de consumo da linha d</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- 기능 --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>amazonconnect__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- CTI Adapter --></label>
+        <name>amazonconnect__CtiAdapter__c</name>
+        <relationshipLabel><!-- Features --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>amazonconnect__Value__c</name>
+    </fields>
+    <nameFieldLabel><!-- AC Feature Name --></nameFieldLabel>
+</CustomObjectTranslation>

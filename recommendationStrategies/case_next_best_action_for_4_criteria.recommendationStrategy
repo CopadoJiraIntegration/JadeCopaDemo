@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <filter>
+        <childNode>Pending_Case_Update</childNode>
+        <childNode>Close_Case_Recommendation</childNode>
+        <label>Case Status Not Closed</label>
+        <name>Case_Status_Not_Closed</name>
+        <expression>$Record.IsClosed = false</expression>
+    </filter>
+    <if>
+        <childNode>Onsite_Technician_Needed</childNode>
+        <childNode>Collect_Due_Payments</childNode>
+        <label>Case Update/Close Recommendation</label>
+        <name>Case_Update_Close_Recommendation</name>
+        <childNodeExpression>
+            <childName>Collect_Due_Payments</childName>
+            <expression>$record.Contact.Payment_Status_Text__c = &apos;Due&apos;</expression>
+        </childNodeExpression>
+        <childNodeExpression>
+            <childName>Onsite_Technician_Needed</childName>
+            <expression>$record.Account.Has_Prime_Support__c = true</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>case next best action for 4 criteria</label>
+    <recommendationLoad>
+        <label>Pending Case Update</label>
+        <name>Pending_Case_Update</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>CaseUpdate</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Close Case Recommendation</label>
+        <name>Close_Case_Recommendation</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>CloseCase</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+        <sortField>
+            <name>Ranking__c</name>
+            <nullsFirst>false</nullsFirst>
+            <order>Asc</order>
+        </sortField>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Onsite Technician Needed</label>
+        <name>Onsite_Technician_Needed</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>PrimeCustomer</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Collect Due Payments</label>
+        <name>Collect_Due_Payments</name>
+        <condition>
+            <field>Category__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Payment</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <sort>
+        <childNode>Case_Status_Not_Closed</childNode>
+        <childNode>Case_Update_Close_Recommendation</childNode>
+        <label>Sort Recommendation</label>
+        <name>Sort_Recommendation</name>
+        <limit>5</limit>
+        <field>
+            <name>Ranking__c</name>
+            <nullsFirst>false</nullsFirst>
+            <order>Asc</order>
+        </field>
+    </sort>
+    <union>
+        <childNode>Sort_Recommendation</childNode>
+        <label>Output</label>
+        <name>Output_d62cd1c1f49a4cd6950d1b72bec13936</name>
+    </union>
+</RecommendationStrategy>

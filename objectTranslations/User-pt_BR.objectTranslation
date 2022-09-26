@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Copado License Manager --></label>
+        <name>copado__License_Manager</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Allow Global Filter --></label>
+        <name>Allow_Global_Filter__c</name>
+    </fields>
+    <fields>
+        <help>Personalize a guia padrão na página Pesquisa de produto.</help>
+        <label><!-- Default Product Lookup Tab --></label>
+        <name>SBQQ__DefaultProductLookupTab__c</name>
+        <picklistValues>
+            <masterLabel>Guided Selling</masterLabel>
+            <translation>Venda guiada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search Filters</masterLabel>
+            <translation>Filtros de pesquisa</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Utilize para habilitar a Ferramenta de diagnóstico CPQ, somente disponível se as configurações de organização estiverem habilitadas. Entre em contato com o suporte para habilitar essa capacidade.</help>
+        <label><!-- Enable Diagnostic Tool --></label>
+        <name>SBQQ__DiagnosticToolEnabled__c</name>
+    </fields>
+    <fields>
+        <help>Marque para permitir que esse usuário altere o formato de saída dos documentos de cotação.</help>
+        <label><!-- Allow Output Format Change --></label>
+        <name>SBQQ__OutputFormatChangeAllowed__c</name>
+    </fields>
+    <fields>
+        <help>Selecione &quot;Seguido&quot; para exibir produtos que você segue no Chatter antes de outros ao adicionar à cotação.</help>
+        <label><!-- Product Sort Preference --></label>
+        <name>SBQQ__ProductSortPreference__c</name>
+        <picklistValues>
+            <masterLabel>Followed</masterLabel>
+            <translation>Seguido</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Marque para limpar os filtros e os resultados da pesquisa sempre que adicionar produtos às suas cotações. Caso contrário, suas seleções anteriores serão mantidas.</help>
+        <label><!-- Reset Product Lookup --></label>
+        <name>SBQQ__ResetProductLookup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Theme --></label>
+        <name>SBQQ__Theme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amazon Connect Username --></label>
+        <name>amazonconnect__Amazon_Connect_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- API_URL --></label>
+        <name>copado__API_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- The visibility of the message asking users to rate &amp; feedback Copado on the AppExchange is controlled here. --></help>
+        <label><!-- Hide Copado feedback --></label>
+        <name>copado__Hide_Copado_feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Copado Tips --></label>
+        <name>copado__Show_Copado_Tips__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Manager Panels --></label>
+        <name>copado__Work_Manager_Panels__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFUsername --></label>
+        <name>dsfs__DSProSFUsername__c</name>
+    </fields>
+    <fields>
+        <label><!-- Can View Not Assigned Prospects --></label>
+        <name>pi__Can_View_Not_Assigned_Prospects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Api Key --></label>
+        <name>pi__Pardot_Api_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Api Version --></label>
+        <name>pi__Pardot_Api_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Id --></label>
+        <name>pi__Pardot_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Key --></label>
+        <name>pi__Pardot_User_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Role --></label>
+        <name>pi__Pardot_User_Role__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Select_Theme --></label>
+        <name>SBQQ__Select_Theme</name>
+    </webLinks>
+</CustomObjectTranslation>

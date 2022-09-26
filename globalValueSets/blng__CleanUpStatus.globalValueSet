@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Started</fullName>
+        <default>false</default>
+        <label>Started</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1 : Invoice clean up</fullName>
+        <default>false</default>
+        <label>Step 1 : Invoice clean up</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2 : Order product update</fullName>
+        <default>false</default>
+        <label>Step 2 : Order product update</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3 : Usage Summary update</fullName>
+        <default>false</default>
+        <label>Step 3 : Usage Summary update</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <masterLabel>CleanUp Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

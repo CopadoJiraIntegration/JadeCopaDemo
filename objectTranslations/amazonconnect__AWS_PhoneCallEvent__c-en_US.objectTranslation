@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>amazonconnect__ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- End --></label>
+        <name>amazonconnect__End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formatted Transcript --></label>
+        <name>amazonconnect__FormattedTranscript__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mode --></label>
+        <name>amazonconnect__Mode__c</name>
+        <picklistValues>
+            <masterLabel>Default</masterLabel>
+            <translation><!-- Default --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post</masterLabel>
+            <translation><!-- Post --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real</masterLabel>
+            <translation><!-- Real --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone Call --></label>
+        <name>amazonconnect__PhoneCall__c</name>
+        <relationshipLabel><!-- Phone Call Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Raw Transcript --></label>
+        <name>amazonconnect__RawTranscript__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region Color --></label>
+        <name>amazonconnect__RegionColor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sentiment Label --></label>
+        <name>amazonconnect__SentimentLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sentiment Score --></label>
+        <name>amazonconnect__SentimentScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spoken By --></label>
+        <name>amazonconnect__SpokenBy__c</name>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start --></label>
+        <name>amazonconnect__Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>amazonconnect__Type__c</name>
+        <picklistValues>
+            <masterLabel>Agent Join</masterLabel>
+            <translation><!-- Agent Join --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Leave</masterLabel>
+            <translation><!-- Agent Leave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Join</masterLabel>
+            <translation><!-- Customer Join --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Leave</masterLabel>
+            <translation><!-- Customer Leave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notes</masterLabel>
+            <translation><!-- Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off Hold</masterLabel>
+            <translation><!-- Off Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speech</masterLabel>
+            <translation><!-- Speech --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

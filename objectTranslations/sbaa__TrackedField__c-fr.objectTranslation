@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Champ suivi</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Champs suivis</value>
+    </caseValues>
+    <fields>
+        <help>Règle d&apos;approbation qui génère la valeur suivie de ce champ suivi</help>
+        <label><!-- Approval Rule --></label>
+        <name>sbaa__ApprovalRule__c</name>
+        <relationshipLabel><!-- Tracked Fields --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Champ (dans l&apos;objet Valeur suivie) qui représente une référence à cet objet parent</help>
+        <label><!-- Record Field --></label>
+        <name>sbaa__RecordField__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Opportunité</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Un champ suivi (dans un objet suivi)</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation>Montant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type</masterLabel>
+            <translation>Type</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Objet dans lequel le champ suivi existe</help>
+        <label><!-- Tracked Object --></label>
+        <name>sbaa__TrackedObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Opportunité</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Déterminez si toutes les valeurs sont suivies ou uniquement les modifications de la valeur suivie précédente.</help>
+        <label><!-- Tracking Type --></label>
+        <name>sbaa__TrackingType__c</name>
+        <picklistValues>
+            <masterLabel>All Values</masterLabel>
+            <translation>Toutes les valeurs</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any Change</masterLabel>
+            <translation>N&apos;importe quelle modification</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>N° de champ suivi</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

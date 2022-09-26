@@ -1,0 +1,70 @@
+<apex:page controller="pi.ApplicationConfigurationController">
+	<apex:pageBlock title="Salesforce Engage Configuration">
+
+		<apex:outputPanel rendered="{!IF(hasPermission, false, true)}">
+			<apex:pageMessage summary="You do not have permission to manage Salesforce Engage's Application Configuration." severity="warning" strength="3"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!IF(hasPermission, true, false)}">
+			<apex:stylesheet value="{!URLFOR($Resource.pi__LeadDeck, 'css/bootstrap.css')}"/>
+
+		    <apex:tabPanel switchType="client" selectedTab="featureFlags" id="applicationConfiguration">
+		    	<apex:tab label="Application Mode" name="applicationMode" id="applicationMode">
+					<div class="container-fluid">
+						<br />
+
+			    		<p>The application mode controls what backend Salesforce Engage uses.</p>
+
+			    		<br />
+
+						<apex:form styleClass="form-inline">
+							<div class="form-group">
+								<apex:selectList size="1" value="{!selectedMode}" styleClass="form-control">
+									<apex:selectOptions value="{!selectableModes}"/>
+								</apex:selectList>
+								<apex:commandButton action="{!saveMode}" value="Save" styleClass="btn btn-primary"/>
+							</div>
+						</apex:form>
+
+						<br />
+					</div>
+				</apex:tab>
+			    <apex:tab label="Feature Flags" name="featureFlags" id="featureFlags">
+
+					<div class="container-fluid">
+						<br />
+
+						<p>Princesses and ponies are protected here.</p>
+
+						<br />
+
+						<apex:form >
+
+							<apex:dataTable border="1" cellpadding="2" columnsWidth="150px" value="{!featureFlags}" var="featureFlag" id="featureFlagsTable" styleClass="table table-striped table-bordered">
+
+								<apex:column >
+									<apex:facet name="header">Key</apex:facet>
+									<p class="form-control-static">
+										<apex:outputText value="{!featureFlag.key}"/>
+									</p>
+								</apex:column>
+
+								<apex:column >
+									<apex:facet name="header">Value</apex:facet>
+									<apex:inputHidden value="{!featureFlag.key}"/>
+									<apex:inputText value="{!featureFlag.value}" styleClass="form-control"/>
+								</apex:column>
+
+							</apex:dataTable>
+
+							<apex:commandButton action="{!saveFeatures}" value="Save" styleClass="btn btn-primary pull-right"/>
+						</apex:form>
+
+						<br /><br /><br />
+					</div>
+			    </apex:tab>
+		    </apex:tabPanel>
+		</apex:outputPanel>
+
+	</apex:pageBlock>
+</apex:page>

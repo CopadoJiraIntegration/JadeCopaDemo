@@ -1,0 +1,3 @@
+<apex:page id="AmendmentSave" standardController="Contract" extensions="SBQQ.AmendmentCheckerExt">
+<c:standardRecalculating recordId="{!record.Id}" jobId="{!queueableJobId}" jobType="{!jobType}" inProgressMessage="{!$Label.SBQQ__msg_background_amendment_in_progress}" jobStatus="{!jobStatus}" jobStatusChecker="{!$RemoteAction.AmendmentCheckerExt.getJobStatus}" autoRefresh="{!autoRefresh}" jobDetails="{!jobDetails}"/>
+</apex:page>

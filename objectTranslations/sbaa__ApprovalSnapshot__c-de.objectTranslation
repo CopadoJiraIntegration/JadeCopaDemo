@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Genehmigungs-Snapshot</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Genehmigungs-Snapshots</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungs-Snapshot --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungs-Snapshots --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungs-Snapshot --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungs-Snapshots --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungs-Snapshot --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungs-Snapshots --></value>
+    </caseValues>
+    <fields>
+        <help>Genehmigungsbedingung, aus der der Wert erfasst wird</help>
+        <label><!-- Approval Condition --></label>
+        <name>sbaa__ApprovalCondition__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Zugehörige Genehmigung für den gespeicherten Snapshot</help>
+        <label><!-- Approval --></label>
+        <name>sbaa__Approval__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Datum, das erfasst wird</help>
+        <label><!-- Approved Value (Date) --></label>
+        <name>sbaa__ApprovedValueDate__c</name>
+    </fields>
+    <fields>
+        <help>Langer Text, der erfasst wird</help>
+        <label><!-- Approved Value (Long Text) --></label>
+        <name>sbaa__ApprovedValueLongText__c</name>
+    </fields>
+    <fields>
+        <help>Numerischer Wert, der erfasst wird</help>
+        <label><!-- Approved Value (Numeric) --></label>
+        <name>sbaa__ApprovedValueNumeric__c</name>
+    </fields>
+    <fields>
+        <help>Textwert, der erfasst wird</help>
+        <label><!-- Approved Value (Text) --></label>
+        <name>sbaa__ApprovedValueText__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nummer des Genehmigungs-Snapshot</nameFieldLabel>
+</CustomObjectTranslation>

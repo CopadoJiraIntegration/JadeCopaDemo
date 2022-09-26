@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Alias --></label>
+        <name>SFDocumentor__Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bad Nickname --></label>
+        <name>SFDocumentor__Bad_Nickname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>SFDocumentor__Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>SFDocumentor__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsActive --></label>
+        <name>SFDocumentor__IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsDuplicateEmail --></label>
+        <name>SFDocumentor__IsDuplicateEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>SFDocumentor__Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Locale --></label>
+        <name>SFDocumentor__Locale__c</name>
+    </fields>
+    <fields>
+        <label><!-- Login Status --></label>
+        <name>SFDocumentor__Login_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manager --></label>
+        <name>SFDocumentor__Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- MobilePhone --></label>
+        <name>SFDocumentor__MobilePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nickname --></label>
+        <name>SFDocumentor__Nickname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Name --></label>
+        <name>SFDocumentor__Profile_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent Login Date And Time --></label>
+        <name>SFDocumentor__Recent_Login_Date_And_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>SFDocumentor__Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Setup_Link_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeZone --></label>
+        <name>SFDocumentor__TimeZone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>SFDocumentor__Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- UserLicense Name --></label>
+        <name>SFDocumentor__UserLicense_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Id --></label>
+        <name>SFDocumentor__User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>SFDocumentor__Username__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Create_New_User --></label>
+        <name>SFDocumentor__Create_New_User</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

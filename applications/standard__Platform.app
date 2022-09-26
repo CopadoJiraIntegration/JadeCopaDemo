@@ -12,4 +12,5 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <uiType>Aloha</uiType>
 </CustomApplication>

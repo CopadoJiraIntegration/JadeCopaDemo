@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積品目消費スケジュール</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Compact Layout --></label>
+        <name>SBQQ__CompactLayout</name>
+    </fieldSets>
+    <fields>
+        <help>請求サイクルを決定するために請求期間で使用される単位。</help>
+        <label><!-- Billing Term Unit --></label>
+        <name>SBQQ__BillingTermUnit__c</name>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation>月</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation>四半期</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation>年</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>請求サイクルを決定するために請求期間単位で使用される数値。</help>
+        <label><!-- Billing Term --></label>
+        <name>SBQQ__BillingTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation>レート</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumption Schedule --></label>
+        <name>SBQQ__ConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>レコードで同じ [一致する属性] 値を共有している場合、使用量はレコード消費スケジュールと一致します。</help>
+        <label><!-- Matching Attribute --></label>
+        <name>SBQQ__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>このスケジュールに対して使用量を評価する特定の使用事例を選択します。これは、[種別] 項目の制御選択リストです。</help>
+        <label><!-- Rating Method --></label>
+        <name>SBQQ__RatingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Tier</masterLabel>
+            <translation>階層</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>範囲: 使用数量に適用される階層のみを使用するスケジュール価格。スラブ: 指定された境界内の使用量にその階層の値と等しい価格設定が適用されます</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>範囲</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation>スラブ</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>使用数量とレートはこの測定単位に適用されます。</help>
+        <label><!-- Unit of Measure --></label>
+        <name>SBQQ__UnitOfMeasure__c</name>
+        <picklistValues>
+            <masterLabel>GigaBytes</masterLabel>
+            <translation><!-- GigaBytes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation>なし</translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>見積品目の消費スケジュール名</nameFieldLabel>
+</CustomObjectTranslation>

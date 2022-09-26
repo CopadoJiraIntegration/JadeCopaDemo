@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Contract Number</fullName>
+        <default>false</default>
+        <label>Contract Number</label>
+    </customValue>
+    <customValue>
+        <fullName>Order PO Number</fullName>
+        <default>false</default>
+        <label>Order PO Number</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Entity</fullName>
+        <default>false</default>
+        <label>Legal Entity</label>
+    </customValue>
+    <customValue>
+        <fullName>Separate Invoice</fullName>
+        <default>false</default>
+        <label>Separate Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Group ID</fullName>
+        <default>false</default>
+        <label>Invoice Group ID</label>
+    </customValue>
+    <customValue>
+        <fullName>Order</fullName>
+        <default>false</default>
+        <label>Order</label>
+    </customValue>
+    <masterLabel>Invoice Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

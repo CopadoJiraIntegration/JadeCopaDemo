@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Taux de consommation de la ligne de devis</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Taux de consommation de la ligne de devis</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Rates --></label>
+        <name>SBQQ__Rates</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>La quantité d&apos;utilisation la plus faible pour ce taux de consommation.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Price --></label>
+        <name>SBQQ__OriginalPrice__c</name>
+    </fields>
+    <fields>
+        <help>Le prix de l&apos;utilisation comprise dans les limites de ce taux de consommation.</help>
+        <label><!-- Price --></label>
+        <name>SBQQ__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Fee</masterLabel>
+            <translation>Prix fixe</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation>Par unité</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>L&apos;ordre de traitement du taux d&apos;utilisation entre des taux multiples. Ces taux de consommation sont évalués en commençant par l&apos;ordre de traitement le plus faible.</help>
+        <label><!-- Processing Order --></label>
+        <name>SBQQ__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help>Ce taux fait partie de cette planification.</help>
+        <label><!-- Quote Line Consumption Schedule --></label>
+        <name>SBQQ__QuoteLineConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La quantité d&apos;utilisation la plus élevée pour ce taux de consommation.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du taux de consommation de ligne de </nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

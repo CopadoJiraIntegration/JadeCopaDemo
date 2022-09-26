@@ -1,0 +1,48 @@
+<apex:page docType="html-5.0"
+      showHeader="false"
+      sidebar="false"
+      standardStylesheets="false"
+      standardController="Contact"
+      extensions="pi.ListsController"
+      action="{!init}"
+      >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <apex:slds ></apex:slds>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__Mobile_Design_Templates, 'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__MarketingActions, 'css/lists.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}" />
+  </head>
+  <body>
+    
+<div class="app-wrapper full-height">
+  <div class="success-message">
+     
+    Your changes have been saved
+  </div>
+  <div class="error-message"></div>
+  <div id="lists"></div>
+</div>
+    <apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.pi__jquery_time_ago, 'jquery.timeago.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.js')}"/>
+    <script type='text/javascript' src='/canvas/sdk/js/42.0/publisher.js'/>
+    <script type="text/javascript">
+      window.SalesEdge = {
+          record: {
+              id: '{!CASESAFEID($CurrentPage.parameters.id)}',
+              type: 'contact'
+          }
+      }
+      window.RemoteGetListsAction = '{!$RemoteAction.ListsController.getLimitedListsWithOffset}';
+      window.RemoteGetListDripProgramsAction = '{!$RemoteAction.ListsController.getListDripPrograms}';
+      window.RemoteGetListEngagementStudioProgramsAction = '{!$RemoteAction.ListsController.getListEsPrograms}';
+      window.RemoteGetListMembershipsAction = '{!$RemoteAction.ListsController.getListMemberships}';
+      window.RemoteAddListMembershipAction = '{!$RemoteAction.ListsController.addListMembership}';
+      window.RemoteDeleteListMembershipAction = '{!$RemoteAction.ListsController.deleteListMembership}';
+    </script>
+    <apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/lists_main.js')}"/>
+  </body>
+</apex:page>

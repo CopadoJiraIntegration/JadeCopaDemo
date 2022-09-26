@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ApiVersion --></label>
+        <name>SFDocumentor__ApiVersion__c</name>
+    </fields>
+    <fields>
+        <label><!-- AuraComponent Id --></label>
+        <name>SFDocumentor__AuraComponent_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- CreatedBy --></label>
+        <name>SFDocumentor__CreatedBy__c</name>
+        <relationshipLabel><!-- AuraComponent Collections (CreatedBy) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CreatedDate --></label>
+        <name>SFDocumentor__CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SFDocumentor__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer Name --></label>
+        <name>SFDocumentor__DeveloperName__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastModifiedBy --></label>
+        <name>SFDocumentor__LastModifiedBy__c</name>
+        <relationshipLabel><!-- AuraComponent Collections (LastModifiedBy) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LastModifiedDate --></label>
+        <name>SFDocumentor__LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Link_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link --></label>
+        <name>SFDocumentor__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manageable State --></label>
+        <name>SFDocumentor__ManageableState__c</name>
+    </fields>
+    <fields>
+        <label><!-- NamespacePrefix --></label>
+        <name>SFDocumentor__NamespacePrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>SFDocumentor__Status__c</name>
+        <picklistValues>
+            <masterLabel>USed</masterLabel>
+            <translation><!-- USed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unused</masterLabel>
+            <translation><!-- Unused --></translation>
+        </picklistValues>
+    </fields>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

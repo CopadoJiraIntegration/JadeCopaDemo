@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Chaîne d’approbation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Chaînes d’approbation</value>
+    </caseValues>
+    <fields>
+        <help>Objet ciblé par cette chaîne d&apos;approbation.</help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Opportunité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Quote__c</masterLabel>
+            <translation><!-- SBQQ__Quote__c --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de la chaîne</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

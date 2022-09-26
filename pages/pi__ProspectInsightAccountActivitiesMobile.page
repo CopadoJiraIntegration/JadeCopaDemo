@@ -1,0 +1,11 @@
+<apex:page standardcontroller="Account"
+    extensions="pi.PersonAccountController"
+    showHeader="false"
+    sidebar="false"
+    standardStylesheets="true">
+    <style>
+        Body { Background: transparent; }
+    </style>
+    <c:FilteredFrame rendered="{!IsPersonAccount}" src="{!pardotBaseUrl}/prospect/activity/email/{!URLENCODE(AccountEmail)}{!authenticatedQueryStringWithContext}&serverurl={!$Api.Partner_Server_URL_90}&source=salesforce1&tab=contact&style={!$User.UIThemeDisplayed}&fid={!AccountId}" scrolling="false" height="390" id="prospect_insight"/>
+    <apex:pageMessage severity="warning" rendered="{!(!IsPersonAccount)}" summary="This action is not supported on this page. This action is only supported on Lead, Contact, and Person Account pages." />
+</apex:page>

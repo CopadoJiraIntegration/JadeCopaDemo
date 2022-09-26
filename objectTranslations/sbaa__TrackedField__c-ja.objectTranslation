@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>追跡項目</value>
+    </caseValues>
+    <fields>
+        <help>この追跡項目の追跡値を生成する承認ルール</help>
+        <label><!-- Approval Rule --></label>
+        <name>sbaa__ApprovalRule__c</name>
+        <relationshipLabel><!-- Tracked Fields --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>親オブジェクトへのルックアップを表す (追跡値オブジェクトの) 項目</help>
+        <label><!-- Record Field --></label>
+        <name>sbaa__RecordField__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>商談</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>追跡されている (追跡オブジェクト上の) 項目</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation>金額</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type</masterLabel>
+            <translation>種別</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>追跡項目が存在するオブジェクト</help>
+        <label><!-- Tracked Object --></label>
+        <name>sbaa__TrackedObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>商談</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>すべての値を追跡するか、前の追跡値からの変化のみを追跡するかを選択します。</help>
+        <label><!-- Tracking Type --></label>
+        <name>sbaa__TrackingType__c</name>
+        <picklistValues>
+            <masterLabel>All Values</masterLabel>
+            <translation>すべての値</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any Change</masterLabel>
+            <translation>任意の変更</translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>追跡項目番号</nameFieldLabel>
+</CustomObjectTranslation>

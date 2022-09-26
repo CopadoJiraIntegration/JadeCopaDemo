@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Nivel de Orientación sobre precios</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Niveles de Orientaciones sobre precios</value>
+    </caseValues>
+    <fields>
+        <help>Un alto descuento para precios de excepción basados en ventas anteriores. Si un representante desde utilizar este precio, debe aplicar el descuento a la partida de presupuesto manualmente. Este descuento podría requerir aprobaciones en base a los parámetros de aprobaciones de su organización.</help>
+        <label><!-- Floor Discount (%) --></label>
+        <name>SBQQ__FloorDiscount__c</name>
+    </fields>
+    <fields>
+        <help>La cantidad de la partida de presupuesto más baja que se aplica a este nivel. Este número debe coincidir con el límite superior del nivel anterior.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help>Un descuento mediano basado en ventas anteriores. Si un representante desde utilizar este precio, debe aplicar el descuento a la partida de presupuesto manualmente. Este descuento podría requerir aprobaciones en base a los parámetros de aprobaciones de su organización.</help>
+        <label><!-- Norm Discount (%) --></label>
+        <name>SBQQ__NormDiscount__c</name>
+    </fields>
+    <fields>
+        <help>La orientación sobre precios que contiene este nivel.</help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Es idóneo para descuentos menores basados en ventas anteriores. Si los representantes de ventas aceptan esta orientación sobre precios, Salesforce CPQ aplica un descuento para alcanzar este precio.</help>
+        <label><!-- Target Discount (%) --></label>
+        <name>SBQQ__TargetDiscount__c</name>
+    </fields>
+    <fields>
+        <help>La cantidad de la partida de presupuesto más alta que se aplica a este nivel. Este número debe ser uno por encima de la cantidad más alta que desee que incluya este nivel.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nombre</nameFieldLabel>
+</CustomObjectTranslation>

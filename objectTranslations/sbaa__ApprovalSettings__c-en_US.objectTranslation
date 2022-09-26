@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Comma-delimited list of keywords used for approving via email --></help>
+        <label><!-- Approved Keywords --></label>
+        <name>sbaa__ApprovedKeywords__c</name>
+    </fields>
+    <fields>
+        <help><!-- When checked, each approver will receive a single approval request email in situations where they need to approve the same record for multiple reasons. --></help>
+        <label><!-- Consolidate Approval Emails --></label>
+        <name>sbaa__ConsolidateApprovalEmails__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for active approve icon on Deal Desk page. --></help>
+        <label><!-- Active Approve Icon URL --></label>
+        <name>sbaa__DealDeskActiveApproveIconURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for active reject icon on Deal Desk page. --></help>
+        <label><!-- Active Reject Icon URL --></label>
+        <name>sbaa__DealDeskActiveRejectIconURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for inactive approve icon on Deal Desk page. --></help>
+        <label><!-- Inactive Approve Icon URL --></label>
+        <name>sbaa__DealDeskInactiveApproveIconURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for inactive reject icon on Deal Desk page. --></help>
+        <label><!-- Inactive Reject Icon URL --></label>
+        <name>sbaa__DealDeskInactiveRejectIconURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to require parent record ownership to disposition child records. --></help>
+        <label><!-- Requires Ownership --></label>
+        <name>sbaa__DealDeskOwnershipRequired__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL to custom CSS on Deal Desk page. --></help>
+        <label><!-- Stylesheet URL --></label>
+        <name>sbaa__DealDeskStylesheetURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Disable PSL License Enforcement --></help>
+        <label><!-- Disable PSL License Enforcement --></label>
+        <name>sbaa__DisablePSLLicenseEnforcement__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hide the Submit button on the Preview page if the record is Pending or Approved. --></help>
+        <label><!-- Hide Submit Button on Preview Page --></label>
+        <name>sbaa__HideSubmitOnPreview__c</name>
+    </fields>
+    <fields>
+        <help><!-- Email address for the Email Service used for processing inbound approval emails (Long) --></help>
+        <label><!-- Inbound Approval Email (Long) --></label>
+        <name>sbaa__InboundApprovalEmailLong__c</name>
+    </fields>
+    <fields>
+        <help><!-- Line Break = Captures everything in between the first and second line breaks as comments. Blank Line = Captures everything in betweeen the first line break and the first blank line as comments. --></help>
+        <label><!-- Approval Email Comments End Indicator --></label>
+        <name>sbaa__InboundApprovalEmailParsing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Email address for the Email Service used for processing inbound approval emails --></help>
+        <label><!-- Inbound Approval Email --></label>
+        <name>sbaa__InboundApprovalEmail__c</name>
+    </fields>
+    <fields>
+        <help><!-- Set to True when the customer upgrades from a build before 3.7 to a build 3.7 or later. --></help>
+        <label><!-- Is Legacy Licensed Customer --></label>
+        <name>sbaa__IsLegacyCustomer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comma-delimited list of keywords used for rejecting via email --></help>
+        <label><!-- Rejected Keywords --></label>
+        <name>sbaa__RejectedKeywords__c</name>
+    </fields>
+</CustomObjectTranslation>

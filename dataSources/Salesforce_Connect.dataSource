@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalDataSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <endpoint>https://fa-esev-dev18-saasfademo1.ds-fa.oraclepdemos.com/fscmRestApi/resources/11.13.18.05/salesOrdersForOrderHub/ATG2:6000314033</endpoint>
+    <isWritable>false</isWritable>
+    <label>Salesforce Connect</label>
+    <principalType>Anonymous</principalType>
+    <protocol>NoAuthentication</protocol>
+    <type>SimpleURL</type>
+</ExternalDataSource>

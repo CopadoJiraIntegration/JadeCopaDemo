@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Métadonnée de colonne</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Métadonnées de colonne</value>
+    </caseValues>
+    <fields>
+        <label><!-- Column Validation --></label>
+        <name>SBQQ__ColumnValidation__c</name>
+    </fields>
+    <fields>
+        <help>Taille de la colonne pour le champ correspondant. Par défaut 150px.</help>
+        <label><!-- Field Column Size --></label>
+        <name>SBQQ__FieldColumnSize__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>SBQQ__FieldName__c</name>
+    </fields>
+    <fields>
+        <help>Relation des métadonnées d’ensemble de champs.</help>
+        <label><!-- FieldSet Metadata --></label>
+        <name>SBQQ__FieldSetMetadata__c</name>
+        <relationshipLabel><!-- Columns Metadata --></relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de métadonnées de colonne</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Field Column Size cannot be less than 67. --></errorMessage>
+        <name>SBQQ__ValidateMinimumPixelSize</name>
+    </validationRules>
+</CustomObjectTranslation>

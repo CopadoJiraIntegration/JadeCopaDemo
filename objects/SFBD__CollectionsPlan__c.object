@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SFBD__CollectionsDetails</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>SFBD__CollectionsDetails</fullName>
+        <fields>Name</fields>
+        <fields>SFBD__Status__c</fields>
+        <fields>SFBD__InvoiceBalance__c</fields>
+        <fields>SFBD__StartDate__c</fields>
+        <fields>SFBD__EndDate__c</fields>
+        <label>Collections Details</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Collections Plans track collections activites and related invoices.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>SFBD__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Account that is related to this Collections Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account associated with this Collections Plan</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Collections Plans</relationshipLabel>
+        <relationshipName>Collections_Plans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>If the Collections Plan is related to a case, this lookup can be populated to reference it.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Case that this Collections Plan is related to.</inlineHelpText>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Collections Plans</relationshipLabel>
+        <relationshipName>Collections_Plans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__CloseReason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reason that this Collections Plan was closed</description>
+        <externalId>false</externalId>
+        <label>Close Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Incorrect Billing</fullName>
+                    <default>false</default>
+                    <label>Incorrect Billing</label>
+                </value>
+                <value>
+                    <fullName>Customer Service Issue</fullName>
+                    <default>false</default>
+                    <label>Customer Service Issue</label>
+                </value>
+                <value>
+                    <fullName>Product Fit</fullName>
+                    <default>false</default>
+                    <label>Product Fit</label>
+                </value>
+                <value>
+                    <fullName>Partner Issue</fullName>
+                    <default>false</default>
+                    <label>Partner Issue</label>
+                </value>
+                <value>
+                    <fullName>Send to Collections Agency</fullName>
+                    <default>false</default>
+                    <label>Send to Collections Agency</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SFBD__CollectionsAgent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Collections Agent</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Collections_Plans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__CollectionsContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Contact that collection tasks are related to by default. Maps from the Account Bill To Contact.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact that collection tasks are related to by default. Maps from the Account Bill To Contact.</inlineHelpText>
+        <label>Collections Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Collections Plans</relationshipLabel>
+        <relationshipName>Collections_Plans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__DaysOpen__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Difference between the Collections Plan Start Date and End Date if the plan has an end date. Otherwise the difference between the Plan Start Date and Today.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(SFBD__StartDate__c), 0,
+IF(ISBLANK(SFBD__EndDate__c), TODAY() - SFBD__StartDate__c, SFBD__EndDate__c - SFBD__StartDate__c))</formula>
+        <inlineHelpText>Number of days this Collections Plan has been open</inlineHelpText>
+        <label>Days Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFBD__DunningMethod__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The associated Dunning Method that created this Collections Plan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The associated Dunning Method that created this Collections Plan.</inlineHelpText>
+        <label>Dunning Method</label>
+        <referenceTo>SFBD__DunningMethod__c</referenceTo>
+        <relationshipLabel>Collections Plans</relationshipLabel>
+        <relationshipName>Collections_Plans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__EndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__InvoiceBalance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total balance of all invoices in collections at the start of this Collections Plan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total balance of all invoices in collections at the start of this Collections Plan.</inlineHelpText>
+        <label>Invoice Balance</label>
+        <summarizedField>SFBD__CollectionsInvoice__c.SFBD__InvoiceBalance__c</summarizedField>
+        <summaryForeignKey>SFBD__CollectionsInvoice__c.SFBD__CollectionsPlan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SFBD__StartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SFBD__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Current status of this Collections Plan. &apos;Open&apos; is an active Collections Plan, &apos;Closed&apos; is an inactive Collections Plan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current status of this Collections Plan. &apos;Open&apos; is an active Collections Plan, &apos;Closed&apos; is an inactive Collections Plan.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Collections Plan</label>
+    <listViews>
+        <fullName>SFBD__All</fullName>
+        <columns>NAME</columns>
+        <columns>SFBD__Account__c</columns>
+        <columns>SFBD__Status__c</columns>
+        <columns>SFBD__StartDate__c</columns>
+        <columns>SFBD__EndDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Collections #{000000}</displayFormat>
+        <label>Collections Plan Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Collections Plans</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

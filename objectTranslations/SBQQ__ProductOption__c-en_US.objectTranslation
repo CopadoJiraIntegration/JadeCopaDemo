@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- OptionConfiguration --></label>
+        <name>SBQQ__OptionConfiguration</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- OptionLookup --></label>
+        <name>SBQQ__OptionLookup</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- SearchFilters --></label>
+        <name>SBQQ__SearchFilters</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Audience --></label>
+        <name>Audience__c</name>
+        <picklistValues>
+            <masterLabel>26 - 50</masterLabel>
+            <translation><!-- 26 - 50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - 25</masterLabel>
+            <translation><!-- 3 - 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51 - 99</masterLabel>
+            <translation><!-- 51 - 99 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content__c</name>
+        <picklistValues>
+            <masterLabel>Digital</masterLabel>
+            <translation><!-- Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hard Copy</masterLabel>
+            <translation><!-- Hard Copy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Feature Category --></label>
+        <name>Feature_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impressions --></label>
+        <name>Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Market__c</name>
+        <picklistValues>
+            <masterLabel>Alabama - Birmingham, Huntsville, Tuscaloosa</masterLabel>
+            <translation><!-- Alabama - Birmingham, Huntsville, Tuscaloosa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alabama - Montgomery, Dothan</masterLabel>
+            <translation><!-- Alabama - Montgomery, Dothan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska - Anchorage, Fairbanks</masterLabel>
+            <translation><!-- Alaska - Anchorage, Fairbanks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Samoa - American Samoa</masterLabel>
+            <translation><!-- American Samoa - American Samoa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anguilla - Anguilla</masterLabel>
+            <translation><!-- Anguilla - Anguilla --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antigua and Barbuda - Antigua and Barbuda</masterLabel>
+            <translation><!-- Antigua and Barbuda - Antigua and Barbuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona - Phoenix</masterLabel>
+            <translation><!-- Arizona - Phoenix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona - Tucson</masterLabel>
+            <translation><!-- Arizona - Tucson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas - Little Rock</masterLabel>
+            <translation><!-- Arkansas - Little Rock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aruba - Aruba</masterLabel>
+            <translation><!-- Aruba - Aruba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bahamas - Bahamas</masterLabel>
+            <translation><!-- Bahamas - Bahamas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbados - Barbados</masterLabel>
+            <translation><!-- Barbados - Barbados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belize - Belize</masterLabel>
+            <translation><!-- Belize - Belize --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bermuda - Bermuda</masterLabel>
+            <translation><!-- Bermuda - Bermuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Virgin Islands - British Virgin Islands</masterLabel>
+            <translation><!-- British Virgin Islands - British Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Central Valley, Fresno, Bakersfield</masterLabel>
+            <translation><!-- California - Central Valley, Fresno, Bakersfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Inland Empire</masterLabel>
+            <translation><!-- California - Inland Empire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Los Angeles County</masterLabel>
+            <translation><!-- California - Los Angeles County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Monterey</masterLabel>
+            <translation><!-- California - Monterey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Napa Valley, Sonoma County</masterLabel>
+            <translation><!-- California - Napa Valley, Sonoma County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Orange County</masterLabel>
+            <translation><!-- California - Orange County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Sacramento, Modesto</masterLabel>
+            <translation><!-- California - Sacramento, Modesto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - San Diego, La Jolla, Coronado, Carlsbad</masterLabel>
+            <translation><!-- California - San Diego, La Jolla, Coronado, Carlsbad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - San Francisco, San Jose, Oakland</masterLabel>
+            <translation><!-- California - San Francisco, San Jose, Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Santa Barbara, Ventura, San Luis Obispo</masterLabel>
+            <translation><!-- California - Santa Barbara, Ventura, San Luis Obispo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cayman Islands - Cayman Islands</masterLabel>
+            <translation><!-- Cayman Islands - Cayman Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado - Denver, Colorado Springs, Boulder, Vail</masterLabel>
+            <translation><!-- Colorado - Denver, Colorado Springs, Boulder, Vail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut - Hartford, New Haven</masterLabel>
+            <translation><!-- Connecticut - Hartford, New Haven --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Costa Rica - Costa Rica</masterLabel>
+            <translation><!-- Costa Rica - Costa Rica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curacao - Curacao</masterLabel>
+            <translation><!-- Curacao - Curacao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware - Dover, Wilmington, DE/MD Beaches</masterLabel>
+            <translation><!-- Delaware - Dover, Wilmington, DE/MD Beaches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia - Washington DC, Maryland, Northern Virginia</masterLabel>
+            <translation><!-- District of Columbia - Washington DC, Maryland, Northern Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominican Republic - Dominican Republic</masterLabel>
+            <translation><!-- Dominican Republic - Dominican Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Fort Myers, Naples</masterLabel>
+            <translation><!-- Florida - Fort Myers, Naples --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Jacksonville, Brunswick</masterLabel>
+            <translation><!-- Florida - Jacksonville, Brunswick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Miami, Ft. Lauderdale, West Palm Beach</masterLabel>
+            <translation><!-- Florida - Miami, Ft. Lauderdale, West Palm Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Orlando, Daytona Beach</masterLabel>
+            <translation><!-- Florida - Orlando, Daytona Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Panhandle, Mobile</masterLabel>
+            <translation><!-- Florida - Panhandle, Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Tallahassee, Thomasville</masterLabel>
+            <translation><!-- Florida - Tallahassee, Thomasville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Tampa, St. Petersburg, Sarasota</masterLabel>
+            <translation><!-- Florida - Tampa, St. Petersburg, Sarasota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - The Florida Keys</masterLabel>
+            <translation><!-- Florida - The Florida Keys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France - France</masterLabel>
+            <translation><!-- France - France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Polynesia - French Polynesia</masterLabel>
+            <translation><!-- French Polynesia - French Polynesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Atlanta, Athens, Augusta, Macon</masterLabel>
+            <translation><!-- Georgia - Atlanta, Athens, Augusta, Macon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Columbus, Albany</masterLabel>
+            <translation><!-- Georgia - Columbus, Albany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Savannah</masterLabel>
+            <translation><!-- Georgia - Savannah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greece - Greece</masterLabel>
+            <translation><!-- Greece - Greece --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grenada - Grenada</masterLabel>
+            <translation><!-- Grenada - Grenada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guam - Guam</masterLabel>
+            <translation><!-- Guam - Guam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii - Honolulu</masterLabel>
+            <translation><!-- Hawaii - Honolulu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho - Boise, Idaho Falls, Twin Falls</masterLabel>
+            <translation><!-- Idaho - Boise, Idaho Falls, Twin Falls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Chicago</masterLabel>
+            <translation><!-- Illinois - Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Chicago Suburbs</masterLabel>
+            <translation><!-- Illinois - Chicago Suburbs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Springfield, Champaign, Peoria</masterLabel>
+            <translation><!-- Illinois - Springfield, Champaign, Peoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana - Indianapolis, Lafayette, Terre Haute</masterLabel>
+            <translation><!-- Indiana - Indianapolis, Lafayette, Terre Haute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana - South Bend, Elkhart</masterLabel>
+            <translation><!-- Indiana - South Bend, Elkhart --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa - Cedar Rapids, Davenport, Mason City</masterLabel>
+            <translation><!-- Iowa - Cedar Rapids, Davenport, Mason City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa - Des Moines, Ottumwa, Sioux City</masterLabel>
+            <translation><!-- Iowa - Des Moines, Ottumwa, Sioux City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ireland - Ireland</masterLabel>
+            <translation><!-- Ireland - Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy - Italy</masterLabel>
+            <translation><!-- Italy - Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jamaica - Jamaica</masterLabel>
+            <translation><!-- Jamaica - Jamaica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas - Topeka</masterLabel>
+            <translation><!-- Kansas - Topeka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas - Wichita</masterLabel>
+            <translation><!-- Kansas - Wichita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky - Lexington, Louisville</masterLabel>
+            <translation><!-- Kentucky - Lexington, Louisville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky - Paducah, Bowling Green</masterLabel>
+            <translation><!-- Kentucky - Paducah, Bowling Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana - New Orleans, Baton Rouge, Lafayette</masterLabel>
+            <translation><!-- Louisiana - New Orleans, Baton Rouge, Lafayette --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana - Shreveport, Monroe</masterLabel>
+            <translation><!-- Louisiana - Shreveport, Monroe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine - Portland, Bangor, Presque Isle</masterLabel>
+            <translation><!-- Maine - Portland, Bangor, Presque Isle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marshall Islands - Marshall Islands</masterLabel>
+            <translation><!-- Marshall Islands - Marshall Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland - Baltimore</masterLabel>
+            <translation><!-- Maryland - Baltimore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Boston, Watertown, Waltham</masterLabel>
+            <translation><!-- Massachusetts - Boston, Watertown, Waltham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Cape Cod, Martha&apos;s Vineyard, Nantucket</masterLabel>
+            <translation><!-- Massachusetts - Cape Cod, Martha&apos;s Vineyard, Nantucket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Springfield, Holyoke, Pittsfield</masterLabel>
+            <translation><!-- Massachusetts - Springfield, Holyoke, Pittsfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico - Eastern Mexico</masterLabel>
+            <translation><!-- Mexico - Eastern Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico - Western Mexico</masterLabel>
+            <translation><!-- Mexico - Western Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan - Detroit, Flint, Saginaw Bay</masterLabel>
+            <translation><!-- Michigan - Detroit, Flint, Saginaw Bay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan - Grand Rapids, Kalamazoo, Lansing</masterLabel>
+            <translation><!-- Michigan - Grand Rapids, Kalamazoo, Lansing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota - Minneapolis, St. Paul, Duluth, Rochester</masterLabel>
+            <translation><!-- Minnesota - Minneapolis, St. Paul, Duluth, Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi - Jackson, Biloxi, Columbus</masterLabel>
+            <translation><!-- Mississippi - Jackson, Biloxi, Columbus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - Kansas City, St. Joseph</masterLabel>
+            <translation><!-- Missouri - Kansas City, St. Joseph --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - Springfield, Joplin, Pittsburg</masterLabel>
+            <translation><!-- Missouri - Springfield, Joplin, Pittsburg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - St. Louis, Columbia, Jefferson City, Quincy</masterLabel>
+            <translation><!-- Missouri - St. Louis, Columbia, Jefferson City, Quincy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana - Missoula, Bozeman, Billings</masterLabel>
+            <translation><!-- Montana - Missoula, Bozeman, Billings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska - Lincoln, Omaha, North Platte</masterLabel>
+            <translation><!-- Nebraska - Lincoln, Omaha, North Platte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada - Las Vegas</masterLabel>
+            <translation><!-- Nevada - Las Vegas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada - Reno, Tahoe</masterLabel>
+            <translation><!-- Nevada - Reno, Tahoe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire - Concord, Nashua, Manchester</masterLabel>
+            <translation><!-- New Hampshire - Concord, Nashua, Manchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Central Jersey, Union, Trenton</masterLabel>
+            <translation><!-- New Jersey - Central Jersey, Union, Trenton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Jersey Shore, Atlantic City</masterLabel>
+            <translation><!-- New Jersey - Jersey Shore, Atlantic City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Northern New Jersey, Newark</masterLabel>
+            <translation><!-- New Jersey - Northern New Jersey, Newark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Southern New Jersey</masterLabel>
+            <translation><!-- New Jersey - Southern New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico - Albuquerque, Santa Fe</masterLabel>
+            <translation><!-- New Mexico - Albuquerque, Santa Fe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Albany, Saratoga Springs, Adirondacks</masterLabel>
+            <translation><!-- New York - Albany, Saratoga Springs, Adirondacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Buffalo, Rochester</masterLabel>
+            <translation><!-- New York - Buffalo, Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Long Island</masterLabel>
+            <translation><!-- New York - Long Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Manhattan</masterLabel>
+            <translation><!-- New York - Manhattan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Outer Boroughs</masterLabel>
+            <translation><!-- New York - Outer Boroughs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Syracuse, Binghamton, Elmira, Utica</masterLabel>
+            <translation><!-- New York - Syracuse, Binghamton, Elmira, Utica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Westchester, Western Connecticut</masterLabel>
+            <translation><!-- New York - Westchester, Western Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Charlotte, Asheville</masterLabel>
+            <translation><!-- North Carolina - Charlotte, Asheville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Outer Banks</masterLabel>
+            <translation><!-- North Carolina - Outer Banks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Raleigh - Triangle, Greensboro - Triad</masterLabel>
+            <translation><!-- North Carolina - Raleigh - Triangle, Greensboro - Triad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Wilmington, Eastern Coast</masterLabel>
+            <translation><!-- North Carolina - Wilmington, Eastern Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota - Bismarck, Fargo</masterLabel>
+            <translation><!-- North Dakota - Bismarck, Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Mariana Islands - Northern Mariana Islands</masterLabel>
+            <translation><!-- Northern Mariana Islands - Northern Mariana Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Cincinnati, Dayton</masterLabel>
+            <translation><!-- Ohio - Cincinnati, Dayton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Cleveland, Erie</masterLabel>
+            <translation><!-- Ohio - Cleveland, Erie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Columbus, Zanesville</masterLabel>
+            <translation><!-- Ohio - Columbus, Zanesville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Toledo, Bowling Green, Lima</masterLabel>
+            <translation><!-- Ohio - Toledo, Bowling Green, Lima --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma - Oklahoma City</masterLabel>
+            <translation><!-- Oklahoma - Oklahoma City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma - Tulsa</masterLabel>
+            <translation><!-- Oklahoma - Tulsa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon - Eugene, Bend, Medford</masterLabel>
+            <translation><!-- Oregon - Eugene, Bend, Medford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon - Portland</masterLabel>
+            <translation><!-- Oregon - Portland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palau - Palau</masterLabel>
+            <translation><!-- Palau - Palau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Lancaster, Harrisburg, York</masterLabel>
+            <translation><!-- Pennsylvania - Lancaster, Harrisburg, York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Philadelphia, Lehigh Valley</masterLabel>
+            <translation><!-- Pennsylvania - Philadelphia, Lehigh Valley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Pittsburgh, Wheeling</masterLabel>
+            <translation><!-- Pennsylvania - Pittsburgh, Wheeling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Scranton</masterLabel>
+            <translation><!-- Pennsylvania - Scranton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portugal - Portugal</masterLabel>
+            <translation><!-- Portugal - Portugal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico - Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico - Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island - Providence, New Bedford</masterLabel>
+            <translation><!-- Rhode Island - Providence, New Bedford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Charleston, Florence, Myrtle Beach</masterLabel>
+            <translation><!-- South Carolina - Charleston, Florence, Myrtle Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Columbia, Greenville</masterLabel>
+            <translation><!-- South Carolina - Columbia, Greenville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Hilton Head</masterLabel>
+            <translation><!-- South Carolina - Hilton Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota - Sioux Falls, Rapid City</masterLabel>
+            <translation><!-- South Dakota - Sioux Falls, Rapid City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spain - Spain</masterLabel>
+            <translation><!-- Spain - Spain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Barts - St. Barts</masterLabel>
+            <translation><!-- St. Barts - St. Barts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Lucia - St. Lucia</masterLabel>
+            <translation><!-- St. Lucia - St. Lucia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Martin / St. Maarten - St. Martin / St. Maarten</masterLabel>
+            <translation><!-- St. Martin / St. Maarten - St. Martin / St. Maarten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Knoxville, Chattanooga, Tri-Cities</masterLabel>
+            <translation><!-- Tennessee - Knoxville, Chattanooga, Tri-Cities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Memphis, Jackson, Jonesboro</masterLabel>
+            <translation><!-- Tennessee - Memphis, Jackson, Jonesboro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Nashville</masterLabel>
+            <translation><!-- Tennessee - Nashville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Austin</masterLabel>
+            <translation><!-- Texas - Austin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Dallas, Ft. Worth, Wichita Falls</masterLabel>
+            <translation><!-- Texas - Dallas, Ft. Worth, Wichita Falls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - El Paso, Amarillo, Odessa</masterLabel>
+            <translation><!-- Texas - El Paso, Amarillo, Odessa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Houston, Beaumont</masterLabel>
+            <translation><!-- Texas - Houston, Beaumont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - San Antonio, Corpus Christi</masterLabel>
+            <translation><!-- Texas - San Antonio, Corpus Christi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trinidad and Tobago - Trinidad and Tobago</masterLabel>
+            <translation><!-- Trinidad and Tobago - Trinidad and Tobago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turks and Caicos - Turks + Caicos</masterLabel>
+            <translation><!-- Turks and Caicos - Turks + Caicos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom - United Kingdom</masterLabel>
+            <translation><!-- United Kingdom - United Kingdom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah - Salt Lake City</masterLabel>
+            <translation><!-- Utah - Salt Lake City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont - Burlington, Plattsburgh</masterLabel>
+            <translation><!-- Vermont - Burlington, Plattsburgh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin Islands - Virgin Islands</masterLabel>
+            <translation><!-- Virgin Islands - Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia - Hampton Roads</masterLabel>
+            <translation><!-- Virginia - Hampton Roads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia - Richmond, Charlottesville, Roanoke</masterLabel>
+            <translation><!-- Virginia - Richmond, Charlottesville, Roanoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington - Seattle, Tacoma, Olympia</masterLabel>
+            <translation><!-- Washington - Seattle, Tacoma, Olympia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington - Spokane, Yakima, Cour d&apos;Alene</masterLabel>
+            <translation><!-- Washington - Spokane, Yakima, Cour d&apos;Alene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia - Charleston</masterLabel>
+            <translation><!-- West Virginia - Charleston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin - Green Bay, Appleton, Door County</masterLabel>
+            <translation><!-- Wisconsin - Green Bay, Appleton, Door County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin - Milwaukee, Madison</masterLabel>
+            <translation><!-- Wisconsin - Milwaukee, Madison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming - Cheyenne, Casper, Laramie, Jackson</masterLabel>
+            <translation><!-- Wyoming - Cheyenne, Casper, Laramie, Jackson --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tier --></label>
+        <name>Product_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Featured</masterLabel>
+            <translation><!-- Featured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spotlight</masterLabel>
+            <translation><!-- Spotlight --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reaction --></label>
+        <name>Reaction__c</name>
+        <picklistValues>
+            <masterLabel>16 rxns</masterLabel>
+            <translation><!-- 16 rxns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>48 rxns</masterLabel>
+            <translation><!-- 48 rxns --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reactions --></label>
+        <name>Reactions__c</name>
+        <picklistValues>
+            <masterLabel>16 rxns</masterLabel>
+            <translation><!-- 16 rxns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 rxns</masterLabel>
+            <translation><!-- 4 rxns --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- &apos;Apply Immediately on Select&apos; applies changes immediately on selection of product, whereas &apos;Apply Immediately on Quantity Change&apos; does that on change of quantity. &apos;Always&apos; applies changes both the times, on selection of product and on change of quantity. --></help>
+        <label><!-- Apply Immediately Context --></label>
+        <name>SBQQ__AppliedImmediatelyContext__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation><!-- Always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Quantity Change</masterLabel>
+            <translation><!-- On Quantity Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Selection</masterLabel>
+            <translation><!-- On Selection --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the checkbox to immediately apply changes to this option. Use sparingly to avoid slow user experience. --></help>
+        <label><!-- Apply Immediately --></label>
+        <name>SBQQ__AppliedImmediately__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the checkbox to indicate that the related product is bundled with the main product. Bundled options have fixed quantity and zero price as price is included in the main product. Leave this unchecked if the price should be added to the option. --></help>
+        <label><!-- Bundled --></label>
+        <name>SBQQ__Bundled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Position of this component in the generated product code for the configuration. --></help>
+        <label><!-- Component Code Position --></label>
+        <name>SBQQ__ComponentCodePosition__c</name>
+    </fields>
+    <fields>
+        <help><!-- Code for the component represented by this option. --></help>
+        <label><!-- Component Code --></label>
+        <name>SBQQ__ComponentCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- Position of this component in the generated product description for the configuration. --></help>
+        <label><!-- Component Description Position --></label>
+        <name>SBQQ__ComponentDescriptionPosition__c</name>
+    </fields>
+    <fields>
+        <help><!-- Description for the component represented by this option. This is used in conjunction with the Configured Description Pattern field on the Product object. --></help>
+        <label><!-- Component Description --></label>
+        <name>SBQQ__ComponentDescription__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product SKU of the bundle that is being configured with this option. If you create the option from the product detail page, this should already be populated. --></help>
+        <label><!-- Configured SKU --></label>
+        <name>SBQQ__ConfiguredSKU__c</name>
+        <relationshipLabel><!-- Options --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select the pricing table this product should appear in by default when price dimensions are defined. --></help>
+        <label><!-- Default Pricing Table --></label>
+        <name>SBQQ__DefaultPricingTable__c</name>
+        <picklistValues>
+            <masterLabel>Segmented</masterLabel>
+            <translation><!-- Segmented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Discount (Amt), based on the field, when the product referenced for this option is offered standalone. But, you&apos;ll need to extend a discount if purchased a part of this product bundled. --></help>
+        <label><!-- Discount (Amt) --></label>
+        <name>SBQQ__DiscountAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lookup the discount schedule to be applied to the product selected by this option. This discount schedule overrides the discount schedule selected on the product or feature. --></help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Product Options --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter a Discount (%), based on the field, when the product referenced for this option is offered standalone. But, you&apos;ll need to extend a discount if purchased a part of this product bundled. --></help>
+        <label><!-- Discount (%) --></label>
+        <name>SBQQ__Discount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to automatically apply additional discount from parent package to this component. Only percentage-based discount can be applied. --></help>
+        <label><!-- Discounted By Package --></label>
+        <name>SBQQ__DiscountedByPackage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Existing quantity of this product. Computed by looking at the assets attached to the account. --></help>
+        <label><!-- Existing Quantity --></label>
+        <name>SBQQ__ExistingQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter or lookup the feature that includes this option. This will be dependent on the Configured SKU. --></help>
+        <label><!-- Feature --></label>
+        <name>SBQQ__Feature__c</name>
+        <relationshipLabel><!-- Product Options --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Maximum quantity allowed for this option. --></help>
+        <label><!-- Max Quantity --></label>
+        <name>SBQQ__MaxQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Minimum quantity allowed for this option. --></help>
+        <label><!-- Min Quantity --></label>
+        <name>SBQQ__MinQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Set the display order of this option within the feature it&apos;s assigned to. --></help>
+        <label><!-- Number --></label>
+        <name>SBQQ__Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter or lookup the product SKU that should be added when this product is selected. --></help>
+        <label><!-- Optional SKU --></label>
+        <name>SBQQ__OptionalSKU__c</name>
+        <relationshipLabel><!-- Optional For --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select to mark the price as editable, allowing users to make changes to option prices. --></help>
+        <label><!-- Price Editable --></label>
+        <name>SBQQ__PriceEditable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product Code for the optional product SKU. --></help>
+        <label><!-- Product Code --></label>
+        <name>SBQQ__ProductCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- Pulls in the value of Configuration Type on Product object in order to avoid loading related product record. --></help>
+        <label><!-- Product Configuration Type --></label>
+        <name>SBQQ__ProductConfigurationType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Description for the optional SKU. --></help>
+        <label><!-- Product Description --></label>
+        <name>SBQQ__ProductDescription__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product Family for the optional product SKU. --></help>
+        <label><!-- Product Family --></label>
+        <name>SBQQ__ProductFamily__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name for the optional SKU. --></help>
+        <label><!-- Product Name --></label>
+        <name>SBQQ__ProductName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the number of decimal places used in the Quantity field. --></help>
+        <label><!-- Product Quantity Scale --></label>
+        <name>SBQQ__ProductQuantityScale__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type of pricing to use for this subscription. &quot;None&quot; means this product is not a subscription. --></help>
+        <label><!-- Product Subscription Pricing --></label>
+        <name>SBQQ__ProductSubscriptionPricing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to allow quantity to be edited even though it&apos;s specified on the option. --></help>
+        <label><!-- Quantity Editable --></label>
+        <name>SBQQ__QuantityEditable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Quantity of the related product that should be added to the quote. --></help>
+        <label><!-- Quantity --></label>
+        <name>SBQQ__Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Configure visibility of quote line generated by this option. --></help>
+        <label><!-- Quote Line Visibility --></label>
+        <name>SBQQ__QuoteLineVisibility__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation><!-- Always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Only</masterLabel>
+            <translation><!-- Document Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Editor Only</masterLabel>
+            <translation><!-- Editor Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Product option that replaces this product option on renewal. Use this to quote a different SKU when renewing. --></help>
+        <label><!-- Renewal Product Option --></label>
+        <name>SBQQ__RenewalProductOption__c</name>
+        <relationshipLabel><!-- Product Options --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select the checkbox if this product is required on the bundle. --></help>
+        <label><!-- Required --></label>
+        <name>SBQQ__Required__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the checkbox if this product option should be automatically selected by default. --></help>
+        <label><!-- Selected --></label>
+        <name>SBQQ__Selected__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose how this percent of total product option is calculated. Package is specific to the parent product. Components is specific to sibling components. Entire Hierarchy covers all lines in the configuration. --></help>
+        <label><!-- Percent of Total Scope --></label>
+        <name>SBQQ__SubscriptionScope__c</name>
+        <picklistValues>
+            <masterLabel>Components</masterLabel>
+            <translation><!-- Components --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entire Hierarchy</masterLabel>
+            <translation><!-- Entire Hierarchy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package</masterLabel>
+            <translation><!-- Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package &amp; Components</masterLabel>
+            <translation><!-- Package &amp; Components --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the checkbox to indicate this option is managed by the system which makes it unavailable for user selection. --></help>
+        <label><!-- System --></label>
+        <name>SBQQ__System__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use &quot;Component&quot; if this option, including quantity, is dependent on parent. Use&quot; Accessory&quot; if this option is dependent on parent but quantity is independent. Use &quot;Related Product&quot; for related but fully independent products. --></help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Accessory</masterLabel>
+            <translation><!-- Accessory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Component</masterLabel>
+            <translation><!-- Component --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Related Product</masterLabel>
+            <translation><!-- Related Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Unit price for this option. This will override the value from price book. --></help>
+        <label><!-- Unit Price --></label>
+        <name>SBQQ__UnitPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to automatically apply uplift from parent package to this component. Only applies to components that are multi-segmented products. --></help>
+        <label><!-- Uplifted By Package --></label>
+        <name>SBQQ__UpliftedByPackage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Contacts --></label>
+        <name>Total_Number_of_Contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vertical --></label>
+        <name>Vertical__c</name>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Warranty --></label>
+        <name>Warranty__c</name>
+        <picklistValues>
+            <masterLabel>12 months</masterLabel>
+            <translation><!-- 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24 months</masterLabel>
+            <translation><!-- 24 months --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- The &apos;Apply Immediately&apos; field must be checked before providing an &apos;Apply Immediately Context&apos;. Otherwise, please change the &apos;Apply Immediately Context&apos; field to ‘None&apos;. --></errorMessage>
+        <name>SBQQ__Apply_Immediately_Context_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can’t include evergreen and renewable products in the same bundle. --></errorMessage>
+        <name>SBQQ__Cannot_Bundle_Evergreen_Renewable_SKUs</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can’t include evergreen and renewable products in the same bundle. --></errorMessage>
+        <name>SBQQ__Cannot_Have_RenewableEvergreen_In_Bundle</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Translate --></label>
+        <name>SBQQ__Translate</name>
+    </webLinks>
+</CustomObjectTranslation>

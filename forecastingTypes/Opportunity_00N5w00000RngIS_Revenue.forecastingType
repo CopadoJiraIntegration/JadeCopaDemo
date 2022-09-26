@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <amount>true</amount>
+    <dateType>0</dateType>
+    <developerName>Opportunity_00N5w00000RngIS_Revenue</developerName>
+    <hasProductFamily>false</hasProductFamily>
+    <masterLabel>Rebate</masterLabel>
+    <opportunitySplitType>Opportunity_00N5w00000RngIS_Revenue</opportunitySplitType>
+    <quantity>false</quantity>
+    <roleType>R</roleType>
+</ForecastingType>

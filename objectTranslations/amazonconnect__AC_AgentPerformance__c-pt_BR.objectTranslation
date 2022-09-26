@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Desempenho do agente do AC --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Desempenho do agente do AC --></value>
+    </caseValues>
+    <fields>
+        <label><!-- AC_Object_Name --></label>
+        <name>amazonconnect__AC_Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- AC_Record_Id --></label>
+        <name>amazonconnect__AC_Record_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- API contacts --></label>
+        <name>amazonconnect__API_contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- API contacts handled --></label>
+        <name>amazonconnect__API_contacts_handled__c</name>
+    </fields>
+    <fields>
+        <label><!-- After contact work time --></label>
+        <name>amazonconnect__After_contact_work_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- After_contact_work_time_hms --></label>
+        <name>amazonconnect__After_contact_work_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent First Name --></label>
+        <name>amazonconnect__Agent_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Last Name --></label>
+        <name>amazonconnect__Agent_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Name --></label>
+        <name>amazonconnect__Agent_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>amazonconnect__Agent__c</name>
+        <relationshipLabel><!-- AC Agent Performance --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Agent answer rate --></label>
+        <name>amazonconnect__Agent_answer_rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent api connecting time --></label>
+        <name>amazonconnect__Agent_api_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent callback connecting time --></label>
+        <name>amazonconnect__Agent_callback_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent idle time --></label>
+        <name>amazonconnect__Agent_idle_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent_idle_time_hms --></label>
+        <name>amazonconnect__Agent_idle_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent incoming connecting time --></label>
+        <name>amazonconnect__Agent_incoming_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent interaction and hold time --></label>
+        <name>amazonconnect__Agent_interaction_and_hold_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent_interaction_and_hold_time_hms --></label>
+        <name>amazonconnect__Agent_interaction_and_hold_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent interaction time --></label>
+        <name>amazonconnect__Agent_interaction_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent_interaction_time_hms --></label>
+        <name>amazonconnect__Agent_interaction_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent non-response --></label>
+        <name>amazonconnect__Agent_non_response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent on contact time --></label>
+        <name>amazonconnect__Agent_on_contact_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent_on_contact_time_hms --></label>
+        <name>amazonconnect__Agent_on_contact_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent outbound connecting time --></label>
+        <name>amazonconnect__Agent_outbound_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average after contact work time --></label>
+        <name>amazonconnect__Average_after_contact_work_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average_after_contact_work_time_hms --></label>
+        <name>amazonconnect__Average_after_contact_work_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average agent api connecting time --></label>
+        <name>amazonconnect__Average_agent_api_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average agent callback connecting time --></label>
+        <name>amazonconnect__Average_agent_callback_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average agent incoming connecting time --></label>
+        <name>amazonconnect__Average_agent_incoming_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average agent interaction time --></label>
+        <name>amazonconnect__Average_agent_interaction_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average_agent_interaction_time_hms --></label>
+        <name>amazonconnect__Average_agent_interaction_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average agent outbound connecting time --></label>
+        <name>amazonconnect__Average_agent_outbound_connecting_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average customer hold time --></label>
+        <name>amazonconnect__Average_customer_hold_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average_customer_hold_time_hms --></label>
+        <name>amazonconnect__Average_customer_hold_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average handle time --></label>
+        <name>amazonconnect__Average_handle_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average_handle_time_hms --></label>
+        <name>amazonconnect__Average_handle_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average outbound after contact work time --></label>
+        <name>amazonconnect__Average_outbound_after_contact_work_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average outbound agent interaction time --></label>
+        <name>amazonconnect__Average_outbound_agent_interaction_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average queue abandon time --></label>
+        <name>amazonconnect__Average_queue_abandon_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average queue answer time --></label>
+        <name>amazonconnect__Average_queue_answer_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg agent interaction and cust hold time --></label>
+        <name>amazonconnect__Avg_agent_interaction_and_cust_hold_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg_agent_intn_and_cust_hld_time_hms --></label>
+        <name>amazonconnect__Avg_agent_intn_and_cust_hld_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg_outbound_after_contact_work_time_hms --></label>
+        <name>amazonconnect__Avg_outbound_after_contact_work_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg_outbound_agent_interaction_time_hms --></label>
+        <name>amazonconnect__Avg_outbound_agent_interaction_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback contacts --></label>
+        <name>amazonconnect__Callback_contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback contacts handled --></label>
+        <name>amazonconnect__Callback_contacts_handled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact flow time --></label>
+        <name>amazonconnect__Contact_flow_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact handle time --></label>
+        <name>amazonconnect__Contact_handle_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts Consulted --></label>
+        <name>amazonconnect__Contacts_Consulted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts Incoming --></label>
+        <name>amazonconnect__Contacts_Incoming__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts Missed --></label>
+        <name>amazonconnect__Contacts_Missed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned --></label>
+        <name>amazonconnect__Contacts_abandoned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 120 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_120_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 15 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_15_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 180 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_180_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 20 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_20_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 240 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_240_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 25 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_25_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 300 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_300_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 30 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_30_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 45 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_45_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 600 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_600_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 60 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_60_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts abandoned in 90 seconds --></label>
+        <name>amazonconnect__Contacts_abandoned_in_90_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts agent hung up first --></label>
+        <name>amazonconnect__Contacts_agent_hung_up_first__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered In 240 seconds --></label>
+        <name>amazonconnect__Contacts_answered_In_240_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 120 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_120_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 15 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_15_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 180 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_180_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 20 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_20_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 25 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_25_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 300 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_300_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 30 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_30_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 45 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_45_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 600 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_600_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 60 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_60_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts answered in 90 seconds --></label>
+        <name>amazonconnect__Contacts_answered_in_90_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts handled --></label>
+        <name>amazonconnect__Contacts_handled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts handled incoming --></label>
+        <name>amazonconnect__Contacts_handled_incoming__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts handled outbound --></label>
+        <name>amazonconnect__Contacts_handled_outbound__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts hold agent disconnect --></label>
+        <name>amazonconnect__Contacts_hold_agent_disconnect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts hold customer disconnect --></label>
+        <name>amazonconnect__Contacts_hold_customer_disconnect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts hold disconnect --></label>
+        <name>amazonconnect__Contacts_hold_disconnect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts put on hold --></label>
+        <name>amazonconnect__Contacts_put_on_hold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts queued --></label>
+        <name>amazonconnect__Contacts_queued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts transferred in --></label>
+        <name>amazonconnect__Contacts_transferred_in__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts transferred in from queue --></label>
+        <name>amazonconnect__Contacts_transferred_in_from_queue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts transferred out --></label>
+        <name>amazonconnect__Contacts_transferred_out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts transferred out external --></label>
+        <name>amazonconnect__Contacts_transferred_out_external__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts transferred out from queue --></label>
+        <name>amazonconnect__Contacts_transferred_out_from_queue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts transferred out internal --></label>
+        <name>amazonconnect__Contacts_transferred_out_internal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>amazonconnect__Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer hold time --></label>
+        <name>amazonconnect__Customer_hold_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer_hold_time_hms --></label>
+        <name>amazonconnect__Customer_hold_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Interval --></label>
+        <name>amazonconnect__EndInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error status time --></label>
+        <name>amazonconnect__Error_status_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error_status_time_hms --></label>
+        <name>amazonconnect__Error_status_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsUser --></label>
+        <name>amazonconnect__IsUser__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logout time --></label>
+        <name>amazonconnect__Logout_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum queued time --></label>
+        <name>amazonconnect__Maximum_queued_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nonproductive time --></label>
+        <name>amazonconnect__Nonproductive_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Available time --></label>
+        <name>amazonconnect__Not_Available_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not_Available_time_hms --></label>
+        <name>amazonconnect__Not_Available_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Occupancy --></label>
+        <name>amazonconnect__Occupancy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online time --></label>
+        <name>amazonconnect__Online_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online_time_hms --></label>
+        <name>amazonconnect__Online_time_hms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>amazonconnect__Report_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 120 seconds --></label>
+        <name>amazonconnect__Service_level_120_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 15 seconds --></label>
+        <name>amazonconnect__Service_level_15_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 180 seconds --></label>
+        <name>amazonconnect__Service_level_180_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 20 seconds --></label>
+        <name>amazonconnect__Service_level_20_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 240 seconds --></label>
+        <name>amazonconnect__Service_level_240_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 25 seconds --></label>
+        <name>amazonconnect__Service_level_25_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 300 seconds --></label>
+        <name>amazonconnect__Service_level_300_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 30 seconds --></label>
+        <name>amazonconnect__Service_level_30_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 45 seconds --></label>
+        <name>amazonconnect__Service_level_45_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 600 seconds --></label>
+        <name>amazonconnect__Service_level_600_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 60 seconds --></label>
+        <name>amazonconnect__Service_level_60_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service level 90 seconds --></label>
+        <name>amazonconnect__Service_level_90_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Interval --></label>
+        <name>amazonconnect__StartInterval__c</name>
+    </fields>
+    
+    <nameFieldLabel><!-- AC Agent Performance Name --></nameFieldLabel>
+</CustomObjectTranslation>

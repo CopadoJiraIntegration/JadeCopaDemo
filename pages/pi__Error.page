@@ -1,0 +1,33 @@
+<apex:page sidebar="false" showHeader="false" controller="pi.BaseController">
+  <head>
+      <apex:stylesheet value="{!URLFOR($Resource.pi__Error, 'css/error.css')}" />
+      <apex:stylesheet value="{!URLFOR($Resource.pi__Error, 'assets/font-awesome/css/font-awesome.min.css')}" />
+      <apex:includeScript value="{!URLFOR($Resource.pi__Error, 'lib/jquery/jquery.js')}"/>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <title>Error</title>
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+      <div class="main-content rounded-corners-3">
+          <apex:image styleClass="img-logo" alt="Pardot Logo" url="{!URLFOR($Resource.pi__Error, 'img/logo.png')}" />
+          <div class="login">
+              <div class="user-info">
+                  <img class="img-thumbnail pull-left js-thumbnail js-loggedin js-expired" style="display:none" />
+                  <p class="js-username js-loggedin js-expired"></p>
+                  <button class="btn-pd btn-primary-pd btn-block-pd rounded-corners-3 return-home">Return to home page</button>
+              </div>
+              <p id="leading-paragraph" class="js-loggedout js-loggedin js-expired clear-both"></p>
+              <hr class="shorten"/>
+              <div class="message-body"></div>
+          </div>
+      </div>
+      <script type="text/javascript">
+        window.CurrentType = '{!JSENCODE($CurrentPage.parameters.type)}';
+        window.ErrorDetails = '{!JSENCODE($CurrentPage.parameters.error)}';
+        window.BaseUrl = '{!homeUrl}';
+      </script>
+      <apex:includeScript value="{!URLFOR($Resource.pi__Error, 'js/error_main.js')}"/>
+  </body>
+</apex:page>

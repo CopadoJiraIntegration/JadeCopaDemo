@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CallCenterRoutingMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <callCenter>Contact Center</callCenter>
+    <developerName>User_0055w00000F5OEsAAN_04v5w000000kF5KAAU</developerName>
+    <externalId>arn:aws:connect:us-east-1:896337382812:instance/dfe23f06-5db5-4dde-9784-dd98e08cd886/agent/095d80f9-9fa3-4b8f-ae4a-9ab4507bd42a</externalId>
+    <masterLabel>0055w00000F5OEsAAN</masterLabel>
+    <referenceRecord>zscaler_demo@jadeglobal.com</referenceRecord>
+</CallCenterRoutingMap>

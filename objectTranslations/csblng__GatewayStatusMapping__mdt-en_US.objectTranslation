@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Corresponding Gateway Status --></help>
+        <label><!-- Corresponding Gateway Status --></label>
+        <name>csblng__GatewayStatus__c</name>
+        <picklistValues>
+            <masterLabel>Decline</masterLabel>
+            <translation><!-- Decline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indeterminate</masterLabel>
+            <translation><!-- Indeterminate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permanent Fail</masterLabel>
+            <translation><!-- Permanent Fail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requires Review</masterLabel>
+            <translation><!-- Requires Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Error</masterLabel>
+            <translation><!-- System Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validation Error</masterLabel>
+            <translation><!-- Validation Error --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Response from Gateway --></label>
+        <name>csblng__ResponseCode__c</name>
+    </fields>
+</CustomObjectTranslation>

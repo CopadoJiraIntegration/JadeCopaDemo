@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Started</fullName>
+        <default>false</default>
+        <label>Started</label>
+    </customValue>
+    <customValue>
+        <fullName>Processing</fullName>
+        <default>false</default>
+        <label>Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1/2 Processing</fullName>
+        <default>false</default>
+        <label>Step 1/2 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1/2 Completed</fullName>
+        <default>false</default>
+        <label>Step 1/2 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2/2 Processing</fullName>
+        <default>false</default>
+        <label>Step 2/2 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2/2 Completed</fullName>
+        <default>false</default>
+        <label>Step 2/2 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed with errors</fullName>
+        <default>false</default>
+        <label>Completed with errors</label>
+    </customValue>
+    <description>Billing Batch Job Status</description>
+    <masterLabel>Batch Job Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

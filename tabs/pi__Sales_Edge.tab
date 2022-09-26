@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <icon>pi__Sales_Edge_Documents/pi__Sales_Edge_Icon_with_background.png</icon>
+    <label>Engage</label>
+    <motif>Custom124: TV Widescreen</motif>
+    <page>pi__marketing_actions</page>
+</CustomTab>

@@ -1,0 +1,117 @@
+<apex:page id="AC_MedialessPopout" showHeader="false" sideBar="false" docType="html-5.0">
+  <apex:includeScript value="{!URLFOR($Resource.amazonconnect__Vendor, '/connect-streams.js')}" />
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (() => {
+        let logoutUrl = '';
+        function getConnectProps() {
+          const props = JSON.parse(localStorage.getItem('CONNECT_PROPS'));
+          return props;
+        }
+
+        function getValInProps(val, defaultVal) {
+          return getConnectProps()[val] || defaultVal;
+        }
+
+        window.onload = function () {
+          // Close the window if another one is already open.
+          if (localStorage.getItem('MEDIALESS_OPEN')) window.close();
+
+          const bc = new BroadcastChannel('heartbeat');
+          bc.postMessage({type:'HEARTBEAT'});
+          setInterval(() => {
+            bc.postMessage({type:'HEARTBEAT'});
+          }, 1000);
+
+          let thereIsOngoingCall = false;
+          let streamJsNotInitialized = true;
+          let checkingIfReload = false;
+
+          // Get the ccpConfig
+          const ccpConfig = JSON.parse(getValInProps('CCP_CONFIG', '{}'));
+
+          // Initialize the CCP
+          const container = document.getElementById('ccpPanel');
+          // We want this to always be true because the pop out should control the media
+          ccpConfig['softphone']['allowFramedSoftphone'] = true;
+          connect.core.initCCP(container, ccpConfig);
+          // Set a flag that medialess is opened.
+          localStorage.setItem('MEDIALESS_OPEN', 'true');
+          // Remove the flag when page is closed
+          window.addEventListener('beforeunload', async () => {
+            localStorage.removeItem('MEDIALESS_OPEN');
+            bc.close();
+          });
+
+          connect.core.getEventBus().subscribe(connect.EventType.TERMINATED, () => {
+            window.close();
+          });
+
+          connect.agent(async () => {
+            streamJsNotInitialized = false;
+            logoutUrl = getValInProps('connectLogoutUrl', '');
+
+            connect.contact((contact) => {
+              contact.onIncoming(() => {
+                localStorage.setItem('CONTACT_ONGOING', 'true');
+                window.focus();
+              });
+              contact.onConnecting(() => {
+                localStorage.setItem('CONTACT_ONGOING', 'true');
+                window.focus();
+              });
+              contact.onConnected(() => {
+                thereIsOngoingCall = true;
+              });
+              contact.onEnded(() => {
+                thereIsOngoingCall = false;
+                localStorage.removeItem('CONTACT_ONGOING');
+              });
+            });
+
+            let agent = new connect.Agent();
+            agent.onStateChange((agentStateData) => {
+              if (agentStateData.newState === 'Logout') {
+                window.close();
+              }
+            })
+          });
+
+          // Poll for the main window.
+          setInterval(() => {
+            // We want to wait till streams is initialized
+            if (streamJsNotInitialized) return;
+            // if there is an ongoing call, we do not want to close the medialess ccp
+            // even if there are no medialess tabs open
+            if (thereIsOngoingCall) return;
+
+            // if there are no medialess tabs open, then wait 10 seconds before checking again to see if any medialess tabs are
+            // opened (ex: reload). If not, then close the medialess page.
+            if (window.opener === null && parseInt(localStorage.getItem('MEDIALESS_TABS', '0')) <= 0 && !checkingIfReload) {
+              checkingIfReload = true;
+              setTimeout(async () => {
+                if (parseInt(localStorage.getItem('MEDIALESS_TABS', '0')) <= 0) {
+                  window.close();
+                }
+                checkingIfReload = false;
+              }, 10000);
+            }
+          }, 1000);
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="softphoneContainer" class="slds-hide flex-container" target="_top">
+      <div id="ccpPanel" style="height: 100vh"></div>
+    </div>
+  </body>
+
+  </html>
+</apex:page>

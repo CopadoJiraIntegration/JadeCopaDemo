@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>connectAgentState</fullName>
+        <default>true</default>
+        <label>Connect Agent State</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceAgentState</fullName>
+        <default>false</default>
+        <label>Salesforce Agent State</label>
+    </customValue>
+    <masterLabel>AC_PresenceSyncRuleDestination</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Checked if Rule should be evaluated when submitting for approval --></help>
+        <label><!-- Active --></label>
+        <name>sbaa__Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Can only be entered if the Conditions Met is Custom. Enter a combination of the Approval Condition Index #s, AND, OR, and parenthesis (e.g. (123 AND 124) AND 125). --></help>
+        <label><!-- Advanced Condition --></label>
+        <name>sbaa__AdvancedCondition__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approval chain to which this rule belongs. --></help>
+        <label><!-- Approval Chain --></label>
+        <name>sbaa__ApprovalChain__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Choose one or more recipients for the approval email notification. --></help>
+        <label><!-- Approval Recipients --></label>
+        <name>sbaa__ApprovalRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation><!-- Initial Submitter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation><!-- Record Created By --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation><!-- Record Owner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Step at which this Approval Rule is evaluated --></help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Email Template associated with approval for this Rule --></help>
+        <label><!-- Approval Template --></label>
+        <name>sbaa__ApprovalTemplate__c</name>
+        <relationshipLabel><!-- Approved Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Used with Dynamic Approvals, the field containing the Approver value used for this Rule --></help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation><!-- Created By --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Approver associated with this Approval Rule. --></help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Choose the behavior for your conditions: All is AND; Any is OR. --></help>
+        <label><!-- Conditions Met --></label>
+        <name>sbaa__ConditionsMet__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any</masterLabel>
+            <translation><!-- Any --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Type of date field from the selected Target Object that Effective Start and End Dates reference when applying Approval Rules --></help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation><!-- Created Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation><!-- Submitted Date --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The end date range for when this rule will be in effect (inclusive) --></help>
+        <label><!-- Effective End Date --></label>
+        <name>sbaa__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The start date for when this rule will be in effect (inclusive) --></help>
+        <label><!-- Effective Start Date --></label>
+        <name>sbaa__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Statuses that this Approval Rule should not be applied to --></help>
+        <label><!-- Excluded Statuses --></label>
+        <name>sbaa__ExcludedStatuses__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation><!-- Recalled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If set, the value of this field overrides the Approval Conditions --></help>
+        <label><!-- Override Field --></label>
+        <name>sbaa__OverrideField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation><!-- Name --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If checked, all approvals at the step happen in parallel. This setting only has an effect when using Advanced Approvals with native approvals. --></help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Email Template associated with recalls for this Rule --></help>
+        <label><!-- Recall Template --></label>
+        <name>sbaa__RecallTemplate__c</name>
+        <relationshipLabel><!-- Recalled Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Choose one or more recipients for the rejection email notification. --></help>
+        <label><!-- Rejection Recipients --></label>
+        <name>sbaa__RejectionRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation><!-- Initial Submitter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation><!-- Record Created By --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation><!-- Record Owner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Email Template associated with rejection for this Rule --></help>
+        <label><!-- Rejection Template --></label>
+        <name>sbaa__RejectionTemplate__c</name>
+        <relationshipLabel><!-- Rejected Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Email Template associated with approval requests for this Rule --></help>
+        <label><!-- Request Template --></label>
+        <name>sbaa__RequestTemplate__c</name>
+        <relationshipLabel><!-- Approval Rules (Requested) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- By default, approving any Approval will auto-approve all other Approvals assigned to the same User. If this box is checked, an Approval originated by this Rule will not be auto-approved and must be explicitly approved. --></help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to reevaluate Smart Approval conditions even if Conditions Met is set to All or Custom. If any Smart Approval Condition returns True, the reevaluation stops and Rule Conditions are considered met. --></help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of the object to which this Rule applies --></help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Quote__c</masterLabel>
+            <translation><!-- SBQQ__Quote__c --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Effective Date Field must be set in order to use Effective Start and End Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Not_Null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effective End Date must not come before Effective Start Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Range_Ordered</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>sbaa__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>sbaa__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

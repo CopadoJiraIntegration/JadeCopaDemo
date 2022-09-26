@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Used with Delegated Approvals, lookup to the Approver who is the delegate for this Approver --></help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegating Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- User associated with the Delegated Approver --></help>
+        <label><!-- Delegated User Id --></label>
+        <name>sbaa__DelegatedUserId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approval delegations end at the end of this date --></help>
+        <label><!-- Delegation End --></label>
+        <name>sbaa__DelegationEnd__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approval delegations start on the beginning of this date --></help>
+        <label><!-- Delegation Start --></label>
+        <name>sbaa__DelegationStart__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Approver is a Group instead of a single User, populate with the Group ID --></help>
+        <label><!-- Group ID --></label>
+        <name>sbaa__GroupId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approver that needs to approve after this Approver approves --></help>
+        <label><!-- Next Approver --></label>
+        <name>sbaa__NextApprover__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If Approver is a Group, checked if all members need to Approve in order to consider the Approval approved --></help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Approver is a single User, lookup to that User --></help>
+        <label><!-- User --></label>
+        <name>sbaa__User__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <webLinks>
+        <label><!-- Replace --></label>
+        <name>sbaa__Replace</name>
+    </webLinks>
+</CustomObjectTranslation>

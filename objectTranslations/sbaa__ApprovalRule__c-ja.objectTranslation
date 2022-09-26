@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>承認ルール</value>
+    </caseValues>
+    <fields>
+        <help>承認申請時にルールを評価する必要がある場合はオンにします</help>
+        <label><!-- Active --></label>
+        <name>sbaa__Active__c</name>
+    </fields>
+    <fields>
+        <help>[一致条件] が [カスタム] の場合にのみ入力できます。承認条件インデックス番号、AND、OR、および括弧の組み合わせを入力します ((123 AND 124) AND 125 など)。</help>
+        <label><!-- Advanced Condition --></label>
+        <name>sbaa__AdvancedCondition__c</name>
+    </fields>
+    <fields>
+        <help>このルールが属する承認チェーン。</help>
+        <label><!-- Approval Chain --></label>
+        <name>sbaa__ApprovalChain__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>承認メール通知の受信者を 1 人以上選択します。</help>
+        <label><!-- Approval Recipients --></label>
+        <name>sbaa__ApprovalRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>初回申請者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>レコード作成者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>所有者</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この承認ルールが評価されるステップ</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help>このルールで承認に関連付けられているメールテンプレートをルックアップします</help>
+        <label><!-- Approval Template --></label>
+        <name>sbaa__ApprovalTemplate__c</name>
+        <relationshipLabel><!-- Approved Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>動的承認で使用、このルールで使用する承認者値が含まれる項目</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>作成者</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この承認ルールに関連付けられている承認者。</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>条件の動作を選択します。「すべて」は AND、「いずれか」は OR になります。</help>
+        <label><!-- Conditions Met --></label>
+        <name>sbaa__ConditionsMet__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>すべて</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any</masterLabel>
+            <translation>いずれか</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation>カスタム</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>承認ルールを適用するときに有効開始日および有効終了日で参照される、選択された対象オブジェクトの日付項目の型。</help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation>作成日</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation>申請日</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>このルールが有効な日付範囲の終了日 (両端を含む)。</help>
+        <label><!-- Effective End Date --></label>
+        <name>sbaa__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help>このルールが有効な日付範囲の開始日 (両端を含む)。</help>
+        <label><!-- Effective Start Date --></label>
+        <name>sbaa__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help>この承認ルールが適用されない状況。</help>
+        <label><!-- Excluded Statuses --></label>
+        <name>sbaa__ExcludedStatuses__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>承認済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>待機中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation>取り消し済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>却下済み</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>設定された場合、この項目の値で承認条件が上書きされます</help>
+        <label><!-- Override Field --></label>
+        <name>sbaa__OverrideField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>名前</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>オンの場合、このステップのすべての承認は並行して行われます。この設定は、ネイティブ承認で高度な承認を使用するときにのみ有効になります。</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </fields>
+    <fields>
+        <help>このルールで取り消しに関連付けられているメールテンプレートをルックアップします</help>
+        <label><!-- Recall Template --></label>
+        <name>sbaa__RecallTemplate__c</name>
+        <relationshipLabel><!-- Recalled Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>却下メール通知の受信者を 1 人以上選択します。</help>
+        <label><!-- Rejection Recipients --></label>
+        <name>sbaa__RejectionRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>初回申請者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>レコード作成者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>所有者</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>このルールで却下に関連付けられているメールテンプレートをルックアップします</help>
+        <label><!-- Rejection Template --></label>
+        <name>sbaa__RejectionTemplate__c</name>
+        <relationshipLabel><!-- Rejected Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>このルールで承認申請に関連付けられているメールテンプレートをルックアップします</help>
+        <label><!-- Request Template --></label>
+        <name>sbaa__RequestTemplate__c</name>
+        <relationshipLabel><!-- Approval Rules (Requested) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>デフォルトでは、ある承認申請を承認すると、同じユーザに割り当てられている他のすべての承認申請も自動的に承認されます。このボックスをオンにすると、このルールから発生した承認申請は自動的には承認されなくなるため、明示的に承認する必要があります。</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </fields>
+    <fields>
+        <help>[一致した条件] が [すべて] または [カスタム] に設定されていても、スマート承認の条件を再評価するには、これをオンにします。スマート承認の条件が True を返す場合、再評価は停止し、ルール条件が満たされているとみなされます。</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </fields>
+    <fields>
+        <help>このルールが適用されるオブジェクトの API 参照名</help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>商談</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Quote__c</masterLabel>
+            <translation><!-- SBQQ__Quote__c --></translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>ルール名</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Effective Date Field must be set in order to use Effective Start and End Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Not_Null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effective End Date must not come before Effective Start Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Range_Ordered</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>sbaa__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>sbaa__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

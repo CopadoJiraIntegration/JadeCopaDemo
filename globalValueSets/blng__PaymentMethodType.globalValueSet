@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ACH</fullName>
+        <default>false</default>
+        <label>ACH</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Card</fullName>
+        <default>false</default>
+        <label>Credit Card</label>
+    </customValue>
+    <description>Payment method type</description>
+    <masterLabel>Payment Method Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

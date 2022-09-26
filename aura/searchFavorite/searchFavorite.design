@@ -1,0 +1,4 @@
+<design:component>
+   <design:attribute name="quoteId" label="Record ID" />
+   <design:attribute name="userId" label="User Id" />
+</design:component>

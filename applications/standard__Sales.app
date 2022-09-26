@@ -16,4 +16,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Product2</tabs>
     <tabs>standard-Forecasting3</tabs>
+    <tabs>standard-Quote</tabs>
+    <tabs>standard-WaveHome</tabs>
+    <uiType>Aloha</uiType>
 </CustomApplication>

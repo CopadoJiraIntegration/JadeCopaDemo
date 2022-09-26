@@ -31,4 +31,58 @@
         <label>New problem</label>
         <cssExposed>false</cssExposed>
     </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined</fullName>
+        <default>false</default>
+        <label>Declined</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Response from Initiator</fullName>
+        <default>false</default>
+        <label>No Response from Initiator</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved - Access</fullName>
+        <default>false</default>
+        <label>Resolved - Access</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved - Development, Complete</fullName>
+        <default>false</default>
+        <label>Resolved - Development, Complete</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved - Enhancement, put on Backlog</fullName>
+        <default>false</default>
+        <label>Resolved - Enhancement, put on Backlog</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved - Question/Clarification</fullName>
+        <default>false</default>
+        <label>Resolved - Question/Clarification</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved - System Bug</fullName>
+        <default>false</default>
+        <label>Resolved - System Bug</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved - Training</fullName>
+        <default>false</default>
+        <label>Resolved - Training</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
 </StandardValueSet>

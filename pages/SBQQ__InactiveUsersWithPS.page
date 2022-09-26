@@ -1,0 +1,5 @@
+<apex:page id="InactiveUsersWithPS" controller="SBQQ.SettingsEditorController" action="{!getInactiveUsersWithPSCsv}"
+		   contentType="text/csv#InactiveUsersWithPS_{!TODAY()}.csv">
+	<apex:outputText >Id,UserType</apex:outputText>
+	<apex:outputText >{!userCsvContent}</apex:outputText>
+</apex:page>

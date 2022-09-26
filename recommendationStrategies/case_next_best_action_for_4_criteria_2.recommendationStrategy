@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <label>Case Closure Next Best Action</label>
+    <recommendationLoad>
+        <label>get all cases</label>
+        <name>get_all_cases</name>
+        <condition>
+            <field>Id</field>
+            <operator>NOT_EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value></value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+        <sortField>
+            <name>Ranking__c</name>
+            <nullsFirst>false</nullsFirst>
+            <order>Asc</order>
+        </sortField>
+    </recommendationLoad>
+    <union>
+        <childNode>get_all_cases</childNode>
+        <label>Output</label>
+        <name>Output_d62cd1c1f49a4cd6950d1b72bec13936</name>
+    </union>
+</RecommendationStrategy>

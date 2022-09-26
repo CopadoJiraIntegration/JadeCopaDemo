@@ -2,5 +2,5 @@
 <QuickTextSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <hideQuickTextUiInLtng>false</hideQuickTextUiInLtng>
     <lightningQuickTextEnabled>true</lightningQuickTextEnabled>
-    <quickTextsInFolders>false</quickTextsInFolders>
+    <quickTextsInFolders>true</quickTextsInFolders>
 </QuickTextSettings>

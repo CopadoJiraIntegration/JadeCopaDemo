@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Success</fullName>
+        <default>false</default>
+        <label>Success</label>
+    </customValue>
+    <customValue>
+        <fullName>Decline</fullName>
+        <default>false</default>
+        <label>Decline</label>
+    </customValue>
+    <customValue>
+        <fullName>PermanentFail</fullName>
+        <default>false</default>
+        <label>Permanent Fail</label>
+    </customValue>
+    <customValue>
+        <fullName>ValidationError</fullName>
+        <default>false</default>
+        <label>Validation Error</label>
+    </customValue>
+    <customValue>
+        <fullName>RequiresReview</fullName>
+        <default>false</default>
+        <label>Requires Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Indeterminate</fullName>
+        <default>false</default>
+        <label>Indeterminate</label>
+    </customValue>
+    <customValue>
+        <fullName>SystemError</fullName>
+        <default>false</default>
+        <label>External System Error</label>
+    </customValue>
+    <masterLabel>Payment Gateway Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,6 @@
+Hi {!SFDocumentor__Field_Collection__c.SFDocumentor__Status_Updated_By__c},
+
+The Field  {!SFDocumentor__Field_Collection__c.Name}  is in use now whereas the status of the field is marked as UnUsed . This is reminder email to you to mark status of the field as Used.  
+
+Thanks,
+SFDocumentor.

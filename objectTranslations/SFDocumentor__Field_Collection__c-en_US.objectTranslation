@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Comments --></label>
+        <name>SFDocumentor__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Created By --></label>
+        <name>SFDocumentor__CreatedBy__c</name>
+        <relationshipLabel><!-- Field Collections (Field Created By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Field Created Date --></label>
+        <name>SFDocumentor__CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created by Name --></label>
+        <name>SFDocumentor__Created_by_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customfield ID --></label>
+        <name>SFDocumentor__CustomfieldID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Type --></label>
+        <name>SFDocumentor__Data_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Datatyp --></label>
+        <name>SFDocumentor__Datatyp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SFDocumentor__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer Name --></label>
+        <name>SFDocumentor__DeveloperName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DurableId --></label>
+        <name>SFDocumentor__DurableId__c</name>
+    </fields>
+    <fields>
+        <label><!-- EntityDefinitionId --></label>
+        <name>SFDocumentor__EntityDefinitionId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field API Name --></label>
+        <name>SFDocumentor__Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Id --></label>
+        <name>SFDocumentor__Field_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Length --></label>
+        <name>SFDocumentor__Field_Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Type --></label>
+        <name>SFDocumentor__Field_Type__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IsDeleted? --></label>
+        <name>SFDocumentor__IsDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Last Modified By --></label>
+        <name>SFDocumentor__LastModifiedBy__c</name>
+        <relationshipLabel><!-- Field Collections (Field Last Modified By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Field Last Modified Date --></label>
+        <name>SFDocumentor__LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Link_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link --></label>
+        <name>SFDocumentor__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max --></label>
+        <name>SFDocumentor__Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>SFDocumentor__Object_Name__c</name>
+        <relationshipLabel><!-- Field Collections --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>SFDocumentor__Object_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentage Used --></label>
+        <name>SFDocumentor__Percentage_Used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publisher ID --></label>
+        <name>SFDocumentor__Publisher_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent Record Inserted By --></label>
+        <name>SFDocumentor__Recent_Created_By_User__c</name>
+        <relationshipLabel><!-- Field Collections (Recent Record Inserted By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Recent Record Inserted On --></label>
+        <name>SFDocumentor__Recent_Record_Inserted_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recent Record Updated By --></label>
+        <name>SFDocumentor__Recent_Record_Updated_By__c</name>
+        <relationshipLabel><!-- Field Collections (Recent Record Updated By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Recent Record Updated On --></label>
+        <name>SFDocumentor__Recent_Record_Updated_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Link --></label>
+        <name>SFDocumentor__Record_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDocUniqueId --></label>
+        <name>SFDocumentor__SFDocUniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Updated By --></label>
+        <name>SFDocumentor__Status_Updated_By__c</name>
+        <relationshipLabel><!-- Field Collections (Status Updated By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>SFDocumentor__Status__c</name>
+        <picklistValues>
+            <masterLabel>Can&apos;t determine</masterLabel>
+            <translation><!-- Can&apos;t determine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unused</masterLabel>
+            <translation><!-- Unused --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Used</masterLabel>
+            <translation><!-- Used --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Records --></label>
+        <name>SFDocumentor__Total_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used --></label>
+        <name>SFDocumentor__Used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value Type ID --></label>
+        <name>SFDocumentor__Value_Type_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- XXXX --></label>
+        <name>SFDocumentor__XXXX_del__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

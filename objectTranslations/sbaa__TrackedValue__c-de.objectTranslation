@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Nachverfolgter Wert</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Nachverfolgte Werte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Nachverfolgter Wert --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Nachverfolgte Werte --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Nachverfolgter Wert --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Nachverfolgte Werte --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Nachverfolgter Wert --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Nachverfolgte Werte --></value>
+    </caseValues>
+    <fields>
+        <help>Mit dem nachverfolgten Wert verknüpfte Opportunity</help>
+        <label><!-- Opportunity --></label>
+        <name>sbaa__Opportunity__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachverfolgtes Feld, das diesen nachverfolgten Wert generiert hat</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Gespeicherter Wert, wenn der Datentyp &quot;Datum&quot; lautet</help>
+        <label><!-- Value (Date) --></label>
+        <name>sbaa__ValueDate__c</name>
+    </fields>
+    <fields>
+        <help>Gespeicherter Wert, wenn der Datentyp &quot;Zahl&quot; lautet</help>
+        <label><!-- Value (Number) --></label>
+        <name>sbaa__ValueNumber__c</name>
+    </fields>
+    <fields>
+        <help>Gespeicherter Wert, wenn der Datentyp &quot;Text&quot; lautet</help>
+        <label><!-- Value (Text) --></label>
+        <name>sbaa__ValueText__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nummer des nachverfolgten Werts</nameFieldLabel>
+</CustomObjectTranslation>

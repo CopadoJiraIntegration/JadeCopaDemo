@@ -1,0 +1,35 @@
+<apex:page docType="html-5.0"
+			showHeader="false"
+			sidebar="false"
+			standardStylesheets="false"
+			controller="pi.VisitorController"
+			extensions="pi.MarketingActionsController,pi.VisitController"
+			>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<apex:stylesheet value="{!URLFOR($Resource.pi__Mobile_Design_Templates, 'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__MarketingActions, 'css/app.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}" />
+	</head>
+	<body>
+		<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.pi__jquery_time_ago, 'jquery.timeago.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.js')}"/>
+		<script>
+			window.visitor = {
+				id: '{!JSENCODE(visitorId)}',
+				prospect: {
+					id: '{!JSENCODE(prospectId)}'
+				}
+			};
+
+			window.ActionsByVisitActionLocation = '{!$RemoteAction.VisitController.getActionsByVisitId}';
+			window.RemoteProspectByIdAction = '{!$RemoteAction.VisitorController.getProspect}';
+			window.MarketingActionsByPersonActionLocation = '{!$RemoteAction.MarketingActionsController.getActionsByPersonId}';
+			window.NamespacePrefix = '{!namespace}';
+		</script>
+		<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/visitor_main.js')}"/>
+	</body>
+</apex:page>

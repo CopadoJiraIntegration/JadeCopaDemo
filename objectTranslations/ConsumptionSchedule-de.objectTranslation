@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Compact Layout --></label>
+        <name>SBQQ__CompactLayout</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation>Raten</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zur zugewiesenen Abrechnungsregel</help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Billing Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Verweis auf Umsatzrealisierungsregel zugewiesen</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zur zugewiesenen Steuerregel</help>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Tax Rule --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

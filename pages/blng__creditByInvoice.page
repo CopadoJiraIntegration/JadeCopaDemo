@@ -1,0 +1,101 @@
+<!--
+ - Created by opareshbhai on 30-01-2018.
+ -->
+
+<apex:page id="creditByInvoice" showHeader="false"  sidebar="false" standardController="Account"
+           standardStylesheets="true" docType="html-5.0" extensions="blng.CurrencyUtils"
+           applyBodyTag="False" applyHtmlTag="False">
+
+    <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="/lightning/lightning.out.js"/>
+    <style>
+        html {
+            overflow-y:scroll;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color:rgba(32, 92, 159,0.6) !important;
+        }
+        body:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),-webkit-linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));
+            background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));
+            background-repeat: repeat-x;
+            background-position: top left;
+        }
+        html body {
+            margin: 8px;
+        }
+
+        body .uiDatePicker--default.select, body .uiDatePicker--default .select, body .uiDatePicker--default .dateBar select {
+            font-family: 'Salesforce Sans';
+        }
+
+        .uiDatePicker--default .dateBar h2.monthYear {
+            font-family: 'Salesforce Sans';
+        }
+
+        .uiDatePickerGrid--default .calGrid th.dayOfWeek {
+            font-family: 'Salesforce Sans';
+        }
+
+        span.slds-day {
+            font-family: 'Salesforce Sans';
+            font-size: 1rem;
+        }
+
+        span.today {
+            font-family: 'Salesforce Sans';
+        }
+
+        div.slds-scope div.slds-p-top_medium {
+            padding: 0px;
+        }
+
+        div.slds-scope div.slds-page-header {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var creditCenterName = '{!JSENCODE(BillingRawPrefix)}';
+        var namespace = creditCenterName != '' ? creditCenterName : 'c';
+        var currencyIsoCode = '';
+        currencyIsoCode = '{!JSENCODE(CurrencyIsoCode)}';
+        $Lightning.use(namespace+":creditNoteApp", function () {
+            $Lightning.createComponent(namespace+":creditNoteEditContainerComp",
+                    {
+                        "context"         : 'creditNote',
+                        "recordId"        : "{!$CurrentPage.parameters.Id}",
+                        "accountName"     : "{!JSENCODE(Account.Name)}",
+                        "accountId"       : "{!Account.Id}",
+                        "currencyIsoCode" : currencyIsoCode
+                    },
+                    "lightning",
+                    function (cmp) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+        });
+    </script>
+
+</apex:page>

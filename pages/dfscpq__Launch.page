@@ -1,0 +1,35 @@
+<apex:page id="Launch" controller="dfscpq.LaunchController">
+    <apex:slds />
+    <apex:includeScript value="{!$Resource.dsfs__jquery}"/>
+    <apex:includeScript value="{!$Resource.dsfs__UtilJS}"/>
+    <script>
+      DocuSignUrl = {
+        createEnvelope: "{!URLFOR($Page.dsfs__DocuSign_CreateEnvelope, null, [
+        sId=JSENCODE($CurrentPage.parameters.sId),
+        ecId=JSENCODE($CurrentPage.parameters.ecId),
+        PAY=JSENCODE($CurrentPage.parameters.PAY)])}",
+        deleteQuoteDocuments: "{!$RemoteAction.LaunchController.deleteQuoteDocuments}",
+        quoteDocumentId: "{!JSENCODE($CurrentPage.parameters.sId)}"
+      };
+    </script>
+    <apex:includeScript value="{!$Resource.dfscpq__launch}"/>
+    <div class="slds-scope">
+        <div class="slds-modal slds-fade-in-open" aria-hidden="false" role="dialog" id="modal">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01"
+                        class="slds-text-heading_medium slds-hyphenate">{!$Label.dsfs__SendWithDS}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p>{!$Label.LaunchModalMessage}</p>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" id="docusign_launch_cancel"><p>{!$Label.Cancel}</p>
+                    </button>
+                    <button class="slds-button slds-button_brand" id="docusign_launch"><p>{!$Label.Confirm}</p></button>
+                </footer>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop_open" id="backdrop"></div>
+    </div>
+</apex:page>

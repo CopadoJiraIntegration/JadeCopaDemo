@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Posted</fullName>
+        <default>false</default>
+        <label>Posted</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </customValue>
+    <customValue>
+        <fullName>Error</fullName>
+        <default>false</default>
+        <label>Error</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued</fullName>
+        <default>false</default>
+        <label>Queued</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <description>Tax Status</description>
+    <masterLabel>Tax Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

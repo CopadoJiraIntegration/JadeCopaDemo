@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Days</fullName>
+        <default>false</default>
+        <label>Days</label>
+    </customValue>
+    <customValue>
+        <fullName>Month First Then Days</fullName>
+        <default>false</default>
+        <label>Month First Then Days</label>
+    </customValue>
+    <masterLabel>Proration Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

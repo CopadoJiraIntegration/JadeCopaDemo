@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>sbaa__ApprovalRuleHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This is the Rule associated with an Approval.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>sbaa__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checked if Rule should be evaluated when submitting for approval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if Rule should be evaluated when submitting for approval</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__AdvancedCondition__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Can only be entered if the Conditions Met is Custom. Enter a combination of the Approval Condition Index #s, AND, OR, and parenthesis (e.g. (123 AND 124) AND 125).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Can only be entered if the Conditions Met is Custom. Enter a combination of the Approval Condition Index #s, AND, OR, and parenthesis (e.g. (123 AND 124) AND 125).</inlineHelpText>
+        <label>Advanced Condition</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalChain__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approval chain to which this rule belongs.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approval chain to which this rule belongs.</inlineHelpText>
+        <label>Approval Chain</label>
+        <referenceTo>sbaa__ApprovalChain__c</referenceTo>
+        <relationshipLabel>Approval Rules</relationshipLabel>
+        <relationshipName>ApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalRecipients__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Choose one or more recipients for the approval email notification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose one or more recipients for the approval email notification.</inlineHelpText>
+        <label>Approval Recipients</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Record Owner</fullName>
+                    <default>false</default>
+                    <label>Record Owner</label>
+                </value>
+                <value>
+                    <fullName>Record Created By</fullName>
+                    <default>false</default>
+                    <label>Record Created By</label>
+                </value>
+                <value>
+                    <fullName>Initial Submitter</fullName>
+                    <default>false</default>
+                    <label>Initial Submitter</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalStep__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Step at which this Approval Rule is evaluated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Step at which this Approval Rule is evaluated</inlineHelpText>
+        <label>Approval Step</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Email Template associated with approval for this Rule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Email Template associated with approval for this Rule</inlineHelpText>
+        <label>Approval Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Approved Approval Rules</relationshipLabel>
+        <relationshipName>ApprovedApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApproverField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used with Dynamic Approvals, the field containing the Approver value used for this Rule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used with Dynamic Approvals, the field containing the Approver value used for this Rule</inlineHelpText>
+        <label>Approver Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Created By</fullName>
+                    <default>false</default>
+                    <label>Created By</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approver associated with this Approval Rule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approver associated with this Approval Rule.</inlineHelpText>
+        <label>Approver</label>
+        <referenceTo>sbaa__Approver__c</referenceTo>
+        <relationshipLabel>Approval Rules</relationshipLabel>
+        <relationshipName>ApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ConditionsMet__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Choose the behavior for your conditions: All is AND; Any is OR.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the behavior for your conditions: All is AND; Any is OR.</inlineHelpText>
+        <label>Conditions Met</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All</fullName>
+                    <default>true</default>
+                    <label>All</label>
+                </value>
+                <value>
+                    <fullName>Any</fullName>
+                    <default>false</default>
+                    <label>Any</label>
+                </value>
+                <value>
+                    <fullName>Custom</fullName>
+                    <default>false</default>
+                    <label>Custom</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__EffectiveDateField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of date field from the selected Target Object that Effective Start and End Dates reference when applying Approval Rules</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of date field from the selected Target Object that Effective Start and End Dates reference when applying Approval Rules</inlineHelpText>
+        <label>Effective Date Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Created Date</fullName>
+                    <default>false</default>
+                    <label>Created Date</label>
+                </value>
+                <value>
+                    <fullName>Submitted Date</fullName>
+                    <default>false</default>
+                    <label>Submitted Date</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__EffectiveEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The end date range for when this rule will be in effect (inclusive)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The end date range for when this rule will be in effect (inclusive)</inlineHelpText>
+        <label>Effective End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__EffectiveStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The start date for when this rule will be in effect (inclusive)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The start date for when this rule will be in effect (inclusive)</inlineHelpText>
+        <label>Effective Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ExcludedStatuses__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Statuses that this Approval Rule should not be applied to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Statuses that this Approval Rule should not be applied to</inlineHelpText>
+        <label>Excluded Statuses</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Recalled</fullName>
+                    <default>false</default>
+                    <label>Recalled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sbaa__OverrideField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If set, the value of this field overrides the Approval Conditions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If set, the value of this field overrides the Approval Conditions</inlineHelpText>
+        <label>Override Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Name</fullName>
+                    <default>false</default>
+                    <label>Name</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__Parallel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, all approvals at the step happen in parallel. This setting only has an effect when using Advanced Approvals with native approvals.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, all approvals at the step happen in parallel. This setting only has an effect when using Advanced Approvals with native approvals.</inlineHelpText>
+        <label>Parallel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RecallTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Email Template associated with recalls for this Rule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Email Template associated with recalls for this Rule</inlineHelpText>
+        <label>Recall Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Recalled Approval Rules</relationshipLabel>
+        <relationshipName>RecalledApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RejectionRecipients__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Choose one or more recipients for the rejection email notification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose one or more recipients for the rejection email notification.</inlineHelpText>
+        <label>Rejection Recipients</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Record Owner</fullName>
+                    <default>false</default>
+                    <label>Record Owner</label>
+                </value>
+                <value>
+                    <fullName>Record Created By</fullName>
+                    <default>false</default>
+                    <label>Record Created By</label>
+                </value>
+                <value>
+                    <fullName>Initial Submitter</fullName>
+                    <default>false</default>
+                    <label>Initial Submitter</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sbaa__RejectionTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Email Template associated with rejection for this Rule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Email Template associated with rejection for this Rule</inlineHelpText>
+        <label>Rejection Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Rejected Approval Rules</relationshipLabel>
+        <relationshipName>RejectedApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RequestTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Email Template associated with approval requests for this Rule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Email Template associated with approval requests for this Rule</inlineHelpText>
+        <label>Request Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Approval Rules (Requested)</relationshipLabel>
+        <relationshipName>RequestedApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RequireExplicitApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>By default, approving any Approval will auto-approve all other Approvals assigned to the same User. If this box is checked, an Approval originated by this Rule will not be auto-approved and must be explicitly approved.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By default, approving any Approval will auto-approve all other Approvals assigned to the same User. If this box is checked, an Approval originated by this Rule will not be auto-approved and must be explicitly approved.</inlineHelpText>
+        <label>Require Explicit Approval</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__SmartApprovalIgnoresConditionsMet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checking this box will cause this Approval Rule to reevaluate Smart Approval conditions even if Conditions Met is set to All or Custom. If any Smart Approval Condition returns True upon reevaluation, the reevaluation is stopped and the Rule Conditions are considered met.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to reevaluate Smart Approval conditions even if Conditions Met is set to All or Custom. If any Smart Approval Condition returns True, the reevaluation stops and Rule Conditions are considered met.</inlineHelpText>
+        <label>Reevaluate Smart Approvals Individually</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__TargetObject__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API Name of the object to which this Rule applies</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API Name of the object to which this Rule applies</inlineHelpText>
+        <label>Target Object</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                    <label>Opportunity</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Quote__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Quote__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Approval Rule</label>
+    <listViews>
+        <fullName>sbaa__ActiveRules</fullName>
+        <columns>NAME</columns>
+        <columns>sbaa__Active__c</columns>
+        <columns>sbaa__ConditionsMet__c</columns>
+        <columns>sbaa__ApprovalStep__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>sbaa__Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Rules</label>
+    </listViews>
+    <listViews>
+        <fullName>sbaa__All</fullName>
+        <columns>NAME</columns>
+        <columns>sbaa__Active__c</columns>
+        <columns>sbaa__ConditionsMet__c</columns>
+        <columns>sbaa__ApprovalStep__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Rule Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Approval Rules</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>sbaa__Effective_Date_Not_Null</fullName>
+        <active>true</active>
+        <description>If Start and/or End Effective Dates are set, Effective Date Field must not be blank.</description>
+        <errorConditionFormula>IF(OR(!ISBLANK(sbaa__EffectiveStartDate__c), (!ISBLANK(sbaa__EffectiveEndDate__c))),ISBLANK(TEXT(sbaa__EffectiveDateField__c)),false)</errorConditionFormula>
+        <errorMessage>Effective Date Field must be set in order to use Effective Start and End Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>sbaa__Effective_Date_Range_Ordered</fullName>
+        <active>true</active>
+        <description>Effective End Date must not come before Effective Start Date.</description>
+        <errorConditionFormula>sbaa__EffectiveStartDate__c&gt;sbaa__EffectiveEndDate__c</errorConditionFormula>
+        <errorMessage>Effective End Date must not come before Effective Start Date.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>sbaa__CloneWithRelated</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone with Related</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!$Site.Prefix}/apex/sbaa__CloneRuleRelatedItems?id={!sbaa__ApprovalRule__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__CloneWithRelatedClassic</fullName>
+        <availability>online</availability>
+        <description>Clones this approval rule with related child records.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone with Related</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Action.sbaa__ApprovalRule__c.Clone, sbaa__ApprovalRule__c.Id, [retURL=$Site.Prefix &amp; &apos;/&apos; &amp; sbaa__ApprovalRule__c.Id,saveURL=$Site.Prefix &amp; &apos;/apex/sbaa__CloneRuleRelatedItems?id=&apos; &amp; sbaa__ApprovalRule__c.Id])}</url>
+    </webLinks>
+</CustomObject>

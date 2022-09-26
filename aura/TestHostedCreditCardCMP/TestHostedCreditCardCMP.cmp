@@ -1,0 +1,37 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:handler name="paymentTransactionCompleted"
+              event="force:paymentTransactionCompleted"
+              action="{!c.handleTransactionResponse}"/>
+
+    <aura:attribute name="accountId" type="String" default="0015w00002Giicb"
+        description="Account to which the transaction details are related"/>
+
+    <aura:attribute name="gatewayId" type="String" default="a2P5w000004NT4NEAW"
+        description="Gateway to be used for the transaction"/>
+
+    <aura:attribute name="amount" type="Decimal" default="10"
+        description="amount to be charged for the transaction"/>
+
+    <aura:attribute name="paymentProvider" type="String" default='SalesforceBilling'
+        description="Payments provider for this component"/>
+
+    <aura:attribute name="transactionType" type="String" default='PaymentSale'
+        description="Transaction to be done after submitting the button"/>
+
+    <aura:attribute name="transactionParams" type="Object"
+        description="Contains details about account id and gateway id to use"/> 
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	Hello World..!!
+    <force:cardPayment
+          paymentProvider = "{!v.paymentProvider}"
+          transactionType = "{!v.transactionType}"
+          transactionParams = "{!v.transactionParams}"
+          expiryMonthRequired = "true"
+          expiryYearRequired = "true"     
+          hideEmail = "true"                                           
+          addressLine1Label = "Street"
+          payButtonLabel="Save Card"/>
+    
+</aura:component>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Custom Parameter Map</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Custom Parameter Maps</value>
+    </caseValues>
+    <fields>
+        <help><!-- DocuSign Envelope Configuration --></help>
+        <label><!-- DocuSign Envelope Configuration --></label>
+        <name>dsfs__EnvelopeConfiguration__c</name>
+        <relationshipLabel><!-- Custom Parameter Maps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>dsfs__Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>dsfs__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- SubValue --></label>
+        <name>dsfs__SubValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>dsfs__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>dsfs__Value__c</name>
+    </fields>
+    <nameFieldLabel>Custom Parameter Map Name</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

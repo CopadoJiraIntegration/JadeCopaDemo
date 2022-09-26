@@ -1,0 +1,17 @@
+<apex:page sidebar="false" showheader="false">
+    <apex:detail />
+    <script>
+        window.onload = function removeDetailFrameButtons() {
+            var btnClass = document.getElementsByClassName('btn');
+            var menuButtonClass = document.getElementsByClassName('menuButtonMenu');
+            for (var i=0;i<btnClass.length;i++) {
+                btnClass[i].disabled = true;
+            }
+            for (var i=0;i<menuButtonClass.length;i++) {
+                for (var j=0;j<menuButtonClass[i].children.length;j++) {
+                    menuButtonClass[i].children[j].removeAttribute('href');
+                }
+            }
+        }
+    </script>
+</apex:page>

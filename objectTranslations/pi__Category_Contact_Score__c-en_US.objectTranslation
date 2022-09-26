@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact --></label>
+        <name>pi__Contact__c</name>
+        <relationshipLabel><!-- Pardot Category Scores (Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pardot Account Id --></label>
+        <name>pi__Pardot_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Scoring Category --></label>
+        <name>pi__Pardot_Scoring_Category__c</name>
+        <relationshipLabel><!-- Pardot Category Scores (Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Score --></label>
+        <name>pi__Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scoring Category Name --></label>
+        <name>pi__Scoring_Category_Name__c</name>
+    </fields>
+</CustomObjectTranslation>

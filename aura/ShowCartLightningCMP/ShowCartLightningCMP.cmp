@@ -1,0 +1,7 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,lightning:isUrlAddressable" >
+	
+    <aura:attribute name="recordId" type="String" />
+    
+    <!-- Handler Methods -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>	
+</aura:component>

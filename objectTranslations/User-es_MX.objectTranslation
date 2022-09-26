@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Copado License Manager --></label>
+        <name>copado__License_Manager</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Allow Global Filter --></label>
+        <name>Allow_Global_Filter__c</name>
+    </fields>
+    <fields>
+        <help>Personaliza la ficha predeterminada en la página Búsqueda de productos.</help>
+        <label><!-- Default Product Lookup Tab --></label>
+        <name>SBQQ__DefaultProductLookupTab__c</name>
+        <picklistValues>
+            <masterLabel>Guided Selling</masterLabel>
+            <translation>Venta guiada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search Filters</masterLabel>
+            <translation>Filtros de búsqueda</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Utilice esta opción para activar la herramienta de diagnóstico de CPQ, que solo está disponible se está activado el parámetro de la organización. Haga contacto con el servicio de asistencia para activar esta función.</help>
+        <label><!-- Enable Diagnostic Tool --></label>
+        <name>SBQQ__DiagnosticToolEnabled__c</name>
+    </fields>
+    <fields>
+        <help>Marque esta opción para permitir que este usuario cambie el formato de salida de los documentos de presupuesto.</help>
+        <label><!-- Allow Output Format Change --></label>
+        <name>SBQQ__OutputFormatChangeAllowed__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione &quot;Seguidos&quot; para mostrar productos que sigue en Chatter antes de otros al agregarlos al presupuesto.</help>
+        <label><!-- Product Sort Preference --></label>
+        <name>SBQQ__ProductSortPreference__c</name>
+        <picklistValues>
+            <masterLabel>Followed</masterLabel>
+            <translation>Seguidos</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Marque esta opción para borrar los filtros de búsqueda y los resultados cada vez que agrega productos a sus presupuestos. En caso contrario, se mantienen sus selecciones anteriores.</help>
+        <label><!-- Reset Product Lookup --></label>
+        <name>SBQQ__ResetProductLookup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Theme --></label>
+        <name>SBQQ__Theme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amazon Connect Username --></label>
+        <name>amazonconnect__Amazon_Connect_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- API_URL --></label>
+        <name>copado__API_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- The visibility of the message asking users to rate &amp; feedback Copado on the AppExchange is controlled here. --></help>
+        <label><!-- Hide Copado feedback --></label>
+        <name>copado__Hide_Copado_feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Copado Tips --></label>
+        <name>copado__Show_Copado_Tips__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Manager Panels --></label>
+        <name>copado__Work_Manager_Panels__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFUsername --></label>
+        <name>dsfs__DSProSFUsername__c</name>
+    </fields>
+    <fields>
+        <label><!-- Can View Not Assigned Prospects --></label>
+        <name>pi__Can_View_Not_Assigned_Prospects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Api Key --></label>
+        <name>pi__Pardot_Api_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Api Version --></label>
+        <name>pi__Pardot_Api_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Id --></label>
+        <name>pi__Pardot_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Key --></label>
+        <name>pi__Pardot_User_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot User Role --></label>
+        <name>pi__Pardot_User_Role__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Select_Theme --></label>
+        <name>SBQQ__Select_Theme</name>
+    </webLinks>
+</CustomObjectTranslation>

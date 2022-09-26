@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email alert will send to the user when Metadata of the field will change.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Send Email to User on Field  Metadata Change</name>
+    <style>none</style>
+    <subject>Metadata of {!SFDocumentor__Field_Collection__c.Name} is changed.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChannelObjectLinkingRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionForNoRecordFound>PromptAgent</actionForNoRecordFound>
+    <actionForSingleRecordFound>PromptAgent</actionForSingleRecordFound>
+    <channelType>Phone</channelType>
+    <description>Link phone number of incoming call to record</description>
+    <isLinkedRecordOpenedAsSubTab>true</isLinkedRecordOpenedAsSubTab>
+    <isRuleActive>true</isRuleActive>
+    <masterLabel>Phone_Contact</masterLabel>
+    <objectToLink>Contact</objectToLink>
+    <ruleName>Match phone number to record</ruleName>
+</ChannelObjectLinkingRule>

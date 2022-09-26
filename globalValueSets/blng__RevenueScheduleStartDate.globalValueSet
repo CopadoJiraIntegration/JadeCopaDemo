@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Order Product Start Date</fullName>
+        <default>false</default>
+        <label>Order Product Start Date</label>
+    </customValue>
+    <customValue>
+        <fullName>Manual</fullName>
+        <default>false</default>
+        <label>Manual</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Line Start Date</fullName>
+        <default>false</default>
+        <label>Invoice Line Start Date</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Note Line Start Date</fullName>
+        <default>false</default>
+        <label>Credit Note Line Start Date</label>
+    </customValue>
+    <customValue>
+        <fullName>Debit Note Line Start Date</fullName>
+        <default>false</default>
+        <label>Debit Note Line Start Date</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Revenue Schedule Start Date</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

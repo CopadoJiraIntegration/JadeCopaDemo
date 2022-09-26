@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Process_Input_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Process_Input_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>SBQQ__ProcessInputHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Input into a quote process. Information collected by inputs can be used to drive product selection and configuration.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Automation__c</fullName>
+        <description>Field used for Guided Selling</description>
+        <externalId>false</externalId>
+        <label>Automation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Manual</fullName>
+                    <default>false</default>
+                    <label>Manual</label>
+                </value>
+                <value>
+                    <fullName>Automated</fullName>
+                    <default>false</default>
+                    <label>Automated</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Barcode__c</fullName>
+        <description>Field used for Guided Selling</description>
+        <externalId>false</externalId>
+        <label>Barcode</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Cell Surface Protein</fullName>
+                    <default>false</default>
+                    <label>Cell Surface Protein</label>
+                </value>
+                <value>
+                    <fullName>CRISPR Screening</fullName>
+                    <default>false</default>
+                    <label>CRISPR Screening</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DeliveryType__c</fullName>
+        <description>Question first Guided Selling Delivery OTT services selection</description>
+        <externalId>false</externalId>
+        <label>Delivery Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Platform</fullName>
+                    <default>false</default>
+                    <label>New Platform</label>
+                </value>
+                <value>
+                    <fullName>New Geo</fullName>
+                    <default>false</default>
+                    <label>New Geo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DocuSign_Plan_Term__c</fullName>
+        <description>Term for DocuSign Plan</description>
+        <externalId>false</externalId>
+        <label>DocuSign Plan Term</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annual</fullName>
+                    <default>false</default>
+                    <label>Annual</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DocuSign_Plan_Type__c</fullName>
+        <description>Plans offered by DocuSign</description>
+        <externalId>false</externalId>
+        <label>DocuSign Plan Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>eSignature</fullName>
+                    <default>false</default>
+                    <label>eSignature</label>
+                </value>
+                <value>
+                    <fullName>Real Estate</fullName>
+                    <default>false</default>
+                    <label>Real Estate</label>
+                </value>
+                <value>
+                    <fullName>API</fullName>
+                    <default>false</default>
+                    <label>API</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MonetizeType__c</fullName>
+        <description>Question first Guided Selling Monetize services selection</description>
+        <externalId>false</externalId>
+        <label>Monetize Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TS Setup Fee</fullName>
+                    <default>false</default>
+                    <label>TS Setup Fee</label>
+                </value>
+                <value>
+                    <fullName>OTT Platform</fullName>
+                    <default>false</default>
+                    <label>OTT Platform</label>
+                </value>
+                <value>
+                    <fullName>Content Partner</fullName>
+                    <default>false</default>
+                    <label>Content Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if this process input is active.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the checkbox to activate this process input.</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BinaryChoice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Binary Choice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ConditionsMet__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates which Process Input conditions must be met.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate which Process Input conditions must be met.</inlineHelpText>
+        <label>Conditions Met</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All</fullName>
+                    <default>false</default>
+                    <label>All</label>
+                </value>
+                <value>
+                    <fullName>Any</fullName>
+                    <default>false</default>
+                    <label>Any</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DefaultField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Quote field that sources default value for this input.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quote field that sources default value for this input.</inlineHelpText>
+        <label>Default Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bill To Country</fullName>
+                    <default>false</default>
+                    <label>Bill To Country</label>
+                </value>
+                <value>
+                    <fullName>Ship To Country</fullName>
+                    <default>false</default>
+                    <label>Ship To Country</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DisplayOrder__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The order that the process input is displayed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the order that the process input should be displayed.</inlineHelpText>
+        <label>Display Order</label>
+        <precision>8</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__InputField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name for the field that accepts the user entry.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the API name for the field that accepts the user entry.</inlineHelpText>
+        <label>Input Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BinaryChoice__c</fullName>
+                    <default>false</default>
+                    <label>BinaryChoice__c</label>
+                </value>
+                <value>
+                    <fullName>IntegerInput__c</fullName>
+                    <default>false</default>
+                    <label>IntegerInput__c</label>
+                </value>
+                <value>
+                    <fullName>Screen_Size__c</fullName>
+                    <default>false</default>
+                    <label>Screen_Size__c</label>
+                </value>
+                <value>
+                    <fullName>Screen_Type__c</fullName>
+                    <default>false</default>
+                    <label>Screen_Type__c</label>
+                </value>
+                <value>
+                    <fullName>DocuSign_Plan_Type__c</fullName>
+                    <default>false</default>
+                    <label>DocuSign_Plan_Type__c</label>
+                </value>
+                <value>
+                    <fullName>DocuSign_Plan_Term__c</fullName>
+                    <default>false</default>
+                    <label>DocuSign_Plan_Term__c</label>
+                </value>
+                <value>
+                    <fullName>Version__c</fullName>
+                    <default>false</default>
+                    <label>Version__c</label>
+                </value>
+                <value>
+                    <fullName>Type__c</fullName>
+                    <default>false</default>
+                    <label>Type__c</label>
+                </value>
+                <value>
+                    <fullName>Barcode__c</fullName>
+                    <default>false</default>
+                    <label>Barcode__c</label>
+                </value>
+                <value>
+                    <fullName>Automation__c</fullName>
+                    <default>false</default>
+                    <label>Automation__c</label>
+                </value>
+                <value>
+                    <fullName>DeliveryType__c</fullName>
+                    <default>false</default>
+                    <label>DeliveryType__c</label>
+                </value>
+                <value>
+                    <fullName>MonetizeType__c</fullName>
+                    <default>false</default>
+                    <label>MonetizeType__c</label>
+                </value>
+                <value>
+                    <fullName>SaaSServiceType__c</fullName>
+                    <default>false</default>
+                    <label>SaaSServiceType__c</label>
+                </value>
+                <value>
+                    <fullName>ServiceType__c</fullName>
+                    <default>false</default>
+                    <label>ServiceType__c</label>
+                </value>
+                <value>
+                    <fullName>SetupType__c</fullName>
+                    <default>false</default>
+                    <label>SetupType__c</label>
+                </value>
+                <value>
+                    <fullName>SolutionCoreType__c</fullName>
+                    <default>false</default>
+                    <label>SolutionCoreType__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__IntegerInput__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a numerical value.</inlineHelpText>
+        <label>Integer Input</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Label__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Label for this filter.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The text that you want displayed to the user in the prompt.</inlineHelpText>
+        <label>Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Operator__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The operator used when comparing the Input Field entry with the Product Field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the operator to use when comparing the Input Field entry with the Product Field.</inlineHelpText>
+        <label>Operator</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>equals</fullName>
+                    <default>false</default>
+                    <label>equals</label>
+                </value>
+                <value>
+                    <fullName>not equals</fullName>
+                    <default>false</default>
+                    <label>not equals</label>
+                </value>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>less or equals</fullName>
+                    <default>false</default>
+                    <label>less or equals</label>
+                </value>
+                <value>
+                    <fullName>greater than</fullName>
+                    <default>false</default>
+                    <label>greater than</label>
+                </value>
+                <value>
+                    <fullName>greater or equals</fullName>
+                    <default>false</default>
+                    <label>greater or equals</label>
+                </value>
+                <value>
+                    <fullName>starts with</fullName>
+                    <default>false</default>
+                    <label>starts with</label>
+                </value>
+                <value>
+                    <fullName>ends with</fullName>
+                    <default>false</default>
+                    <label>ends with</label>
+                </value>
+                <value>
+                    <fullName>contains</fullName>
+                    <default>false</default>
+                    <label>contains</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProcessInputCondition__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Process Input Condition</label>
+        <referenceTo>SBQQ__ProcessInputCondition__c</referenceTo>
+        <relationshipLabel>Process Inputs</relationshipLabel>
+        <relationshipName>ProcessInputCondition</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProductField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field on Product object used in filtering products that match this input.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field on Product object used in filtering products that match this input.</inlineHelpText>
+        <label>Product Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product Name</fullName>
+                    <default>false</default>
+                    <label>Product Name</label>
+                </value>
+                <value>
+                    <fullName>Product Code</fullName>
+                    <default>false</default>
+                    <label>Product Code</label>
+                </value>
+                <value>
+                    <fullName>Product Family</fullName>
+                    <default>false</default>
+                    <label>Product Family</label>
+                </value>
+                <value>
+                    <fullName>Screen_Size__c</fullName>
+                    <default>false</default>
+                    <label>Screen_Size__c</label>
+                </value>
+                <value>
+                    <fullName>Screen_Type__c</fullName>
+                    <default>false</default>
+                    <label>Screen_Type__c</label>
+                </value>
+                <value>
+                    <fullName>DocuSign_Plan_Type__c</fullName>
+                    <default>false</default>
+                    <label>DocuSign_Plan_Type__c</label>
+                </value>
+                <value>
+                    <fullName>DocuSign_Plan_Term__c</fullName>
+                    <default>false</default>
+                    <label>DocuSign_Plan_Term__c</label>
+                </value>
+                <value>
+                    <fullName>Version__c</fullName>
+                    <default>false</default>
+                    <label>Version__c</label>
+                </value>
+                <value>
+                    <fullName>Type__c</fullName>
+                    <default>false</default>
+                    <label>Type__c</label>
+                </value>
+                <value>
+                    <fullName>Barcode__c</fullName>
+                    <default>false</default>
+                    <label>Barcode__c</label>
+                </value>
+                <value>
+                    <fullName>Automation__c</fullName>
+                    <default>false</default>
+                    <label>Automation__c</label>
+                </value>
+                <value>
+                    <fullName>DeliveryType__c</fullName>
+                    <default>false</default>
+                    <label>DeliveryType__c</label>
+                </value>
+                <value>
+                    <fullName>MonetizeType__c</fullName>
+                    <default>false</default>
+                    <label>MonetizeType__c</label>
+                </value>
+                <value>
+                    <fullName>SaaSServiceType__c</fullName>
+                    <default>false</default>
+                    <label>SaaSServiceType__c</label>
+                </value>
+                <value>
+                    <fullName>ServiceType__c</fullName>
+                    <default>false</default>
+                    <label>ServiceType__c</label>
+                </value>
+                <value>
+                    <fullName>SetupType__c</fullName>
+                    <default>false</default>
+                    <label>SetupType__c</label>
+                </value>
+                <value>
+                    <fullName>SolutionCoreType__c</fullName>
+                    <default>false</default>
+                    <label>SolutionCoreType__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuoteProcess__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Quote process that owns the input.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quote process that owns the input.</inlineHelpText>
+        <label>Quote Process</label>
+        <referenceTo>SBQQ__QuoteProcess__c</referenceTo>
+        <relationshipLabel>Process Inputs</relationshipLabel>
+        <relationshipName>Inputs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>SaaSServiceType__c</fullName>
+        <description>Question first Guided Selling Channel Creation &amp; Playout services selection</description>
+        <externalId>false</externalId>
+        <label>SaaS Service Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Setup</fullName>
+                    <default>false</default>
+                    <label>Setup</label>
+                </value>
+                <value>
+                    <fullName>Solution Core</fullName>
+                    <default>false</default>
+                    <label>Solution Core</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Screen_Size__c</fullName>
+        <description>Screen size for Monitor Product.</description>
+        <externalId>false</externalId>
+        <label>Screen Size</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>18 &quot;</fullName>
+                    <default>false</default>
+                    <label>18 &quot;</label>
+                </value>
+                <value>
+                    <fullName>21 &quot;</fullName>
+                    <default>false</default>
+                    <label>21 &quot;</label>
+                </value>
+                <value>
+                    <fullName>24 &quot;</fullName>
+                    <default>false</default>
+                    <label>24 &quot;</label>
+                </value>
+                <value>
+                    <fullName>27 &quot;</fullName>
+                    <default>false</default>
+                    <label>27 &quot;</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Screen_Type__c</fullName>
+        <description>Screen type for Monitor Product.</description>
+        <externalId>false</externalId>
+        <label>Screen Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HD</fullName>
+                    <default>false</default>
+                    <label>HD</label>
+                </value>
+                <value>
+                    <fullName>FHD</fullName>
+                    <default>false</default>
+                    <label>FHD</label>
+                </value>
+                <value>
+                    <fullName>4K</fullName>
+                    <default>false</default>
+                    <label>4K</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ServiceType__c</fullName>
+        <description>First question Guided Selling field for Amagi</description>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Channel Creation &amp; Playout (SaaS)</fullName>
+                    <default>false</default>
+                    <label>Channel Creation &amp; Playout (SaaS)</label>
+                </value>
+                <value>
+                    <fullName>Delivery OTT</fullName>
+                    <default>false</default>
+                    <label>Delivery OTT</label>
+                </value>
+                <value>
+                    <fullName>Monetize</fullName>
+                    <default>false</default>
+                    <label>Monetize</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SetupType__c</fullName>
+        <description>Question first Guided Selling Channel Creation &amp; Playout services Setup selection</description>
+        <externalId>false</externalId>
+        <label>Setup Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Non Standard</fullName>
+                    <default>false</default>
+                    <label>Non Standard</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SolutionCoreType__c</fullName>
+        <description>Question first Guided Selling Channel Creation &amp; Playout services Solution Core selection</description>
+        <externalId>false</externalId>
+        <label>Solution Core Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Playout Format</fullName>
+                    <default>false</default>
+                    <label>Playout Format</label>
+                </value>
+                <value>
+                    <fullName>Playout Addons</fullName>
+                    <default>false</default>
+                    <label>Playout Addons</label>
+                </value>
+                <value>
+                    <fullName>Playout Services</fullName>
+                    <default>false</default>
+                    <label>Playout Services</label>
+                </value>
+                <value>
+                    <fullName>Scheduling Services</fullName>
+                    <default>false</default>
+                    <label>Scheduling Services</label>
+                </value>
+                <value>
+                    <fullName>Creative Services</fullName>
+                    <default>false</default>
+                    <label>Creative Services</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Field used for guided selling</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Whole Transcriptome</fullName>
+                    <default>false</default>
+                    <label>Whole Transcriptome</label>
+                </value>
+                <value>
+                    <fullName>Targeted</fullName>
+                    <default>false</default>
+                    <label>Targeted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Version__c</fullName>
+        <description>Field used for Guided Selling</description>
+        <externalId>false</externalId>
+        <label>Version</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>v3.1 – Dual Index</fullName>
+                    <default>false</default>
+                    <label>v3.1 – Dual Index</label>
+                </value>
+                <value>
+                    <fullName>v3.1 – Single Index</fullName>
+                    <default>false</default>
+                    <label>v3.1 – Single Index</label>
+                </value>
+                <value>
+                    <fullName>v3</fullName>
+                    <default>false</default>
+                    <label>v3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Process Input</label>
+    <listViews>
+        <fullName>SBQQ__All</fullName>
+        <columns>SBQQ__DisplayOrder__c</columns>
+        <columns>SBQQ__Active__c</columns>
+        <columns>NAME</columns>
+        <columns>SBQQ__InputField__c</columns>
+        <columns>SBQQ__ProductField__c</columns>
+        <columns>SBQQ__Operator__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Input Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Process Inputs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>SBQQ__ProductFieldAndOperatorSet</fullName>
+        <active>true</active>
+        <description>If a Product Field is defined, an Operator must also be defined.</description>
+        <errorConditionFormula>OR(AND(!ISBLANK(TEXT(SBQQ__ProductField__c)),(ISBLANK(TEXT(SBQQ__Operator__c)))),AND(ISBLANK(TEXT(SBQQ__ProductField__c)),(!ISBLANK(TEXT(SBQQ__Operator__c)))))</errorConditionFormula>
+        <errorMessage>Both Product Field and Operator must be set if either are set.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

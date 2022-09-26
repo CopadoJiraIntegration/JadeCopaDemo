@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Object Created By --></label>
+        <name>SFDocumentor__CreatedBy__c</name>
+        <relationshipLabel><!-- Object Collections (Object Created By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Object Created Date --></label>
+        <name>SFDocumentor__CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Implementation --></label>
+        <name>SFDocumentor__DefaultImplementation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deployment Status --></label>
+        <name>SFDocumentor__Deployment_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SFDocumentor__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer Name --></label>
+        <name>SFDocumentor__DeveloperName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DurableId --></label>
+        <name>SFDocumentor__DurableId__c</name>
+    </fields>
+    <fields>
+        <label><!-- HelpSetting Page Name --></label>
+        <name>SFDocumentor__HelpSettingPageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implemented By --></label>
+        <name>SFDocumentor__ImplementedBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key Prefix --></label>
+        <name>SFDocumentor__KeyPrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Last Modified By --></label>
+        <name>SFDocumentor__LastModifiedBy__c</name>
+        <relationshipLabel><!-- Object Collections (Object Last Modified By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Object Last Modified Date --></label>
+        <name>SFDocumentor__LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Link1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link --></label>
+        <name>SFDocumentor__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Label --></label>
+        <name>SFDocumentor__MasterLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Namespace Prefix --></label>
+        <name>SFDocumentor__NamespacePrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Api Name --></label>
+        <name>SFDocumentor__Object_Api_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Id --></label>
+        <name>SFDocumentor__Object_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>SFDocumentor__Object_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publisher ID --></label>
+        <name>SFDocumentor__Publisher_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>SFDocumentor__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Buttons --></label>
+        <name>SFDocumentor__Total_Buttons__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Fields --></label>
+        <name>SFDocumentor__Total_Fields__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Layouts --></label>
+        <name>SFDocumentor__Total_Layouts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Record Types --></label>
+        <name>SFDocumentor__Total_RecordTypes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Records --></label>
+        <name>SFDocumentor__Total_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Triggers --></label>
+        <name>SFDocumentor__Total_Triggers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Validation Rules --></label>
+        <name>SFDocumentor__Total_ValidationRules__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used In Apex --></label>
+        <name>SFDocumentor__Used_In_Apex__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

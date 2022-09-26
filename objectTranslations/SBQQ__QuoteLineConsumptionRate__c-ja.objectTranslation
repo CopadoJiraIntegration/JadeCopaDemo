@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積品目の消費レート</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Rates --></label>
+        <name>SBQQ__Rates</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>この消費レートの使用量の最小数量。</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Price --></label>
+        <name>SBQQ__OriginalPrice__c</name>
+    </fields>
+    <fields>
+        <help>この消費レートの境界内にある使用量の価格。</help>
+        <label><!-- Price --></label>
+        <name>SBQQ__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Fee</masterLabel>
+            <translation>定額</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation>単位ごと</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>複数のレートでの利用レートの処理順序。消費レートは処理順序の低い順に評価されます。</help>
+        <label><!-- Processing Order --></label>
+        <name>SBQQ__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help>このレートは、このスケジュールの一部です。</help>
+        <label><!-- Quote Line Consumption Schedule --></label>
+        <name>SBQQ__QuoteLineConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この消費レートの使用量の最大数量。</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <nameFieldLabel>見積品目の消費レート名</nameFieldLabel>
+</CustomObjectTranslation>

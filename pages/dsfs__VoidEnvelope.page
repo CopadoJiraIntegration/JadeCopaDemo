@@ -1,0 +1,95 @@
+<apex:page id="VoidEnvelope"
+           standardController="dsfs__DocuSign_Status__c"
+           extensions="dsfs.StatusController"
+           action="{!beforeVoidEnvelope}"
+           title="{!$Label.dsfs__docusign}"
+           tabStyle="dsfs__DocuSign_Status__c">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <script>
+        function textCounter(field, cntfield, maxlimit) {
+            if (field.value.length > maxlimit) {
+                field.value = field.value.substring(0, maxlimit);
+            }
+            if (cntfield) {
+                if (cntfield.value) cntfield.value = maxlimit - field.value.length; else cntfield.innerHTML = "characters remaining " + (maxlimit - field.value.length);
+            }
+        }
+
+        function allowVoidSubmit(r) {
+            var reason = r.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+
+            if (reason.length === 0) {
+                alert("{!$Label.dsfs__pleaseprovideareason}");
+                return false;
+            } else if (reason.length > 200) {
+                alert("{!$Label.dsfs__pleaselimityourreason}");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <apex:form >
+        <c:StatusHeader sourceId="{!source.id}" pathPrefix="{!pathPrefix}"/>
+
+        <apex:sectionHeader title="{!$Label.dsfs__voidenvelope}" id="PageTitleHeader"/>
+        <div style="width: 550px">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="{!$Label.dsfs__areyousurevoidenvelope + '?'}"
+                                       collapsible="False" id="pnlEnvelopeInfo">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$Label.dsfs__envelopeidcolon}"/>
+                        <apex:outputLabel value="{!docuSignEnvelopeId}"/>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+
+            <apex:outputPanel rendered="{!!voidComplete}">
+                <div style="padding-left: 10px">
+                    <p style="width: 500px">{!$Label.dsfs__voidingenvelopewillremoveaccess}</p>
+                    <p style="width: 500px">{!$Label.dsfs__tovoidthisenvelopeprovidereason}</p>
+                    <apex:inputTextarea style="width:500px;height:100px"
+                                        id="VoidEnvelopeReason"
+                                        value="{!voidReason}"
+                                        onkeydown="textCounter(this, document.getElementById('txtCommentChars'), 200);"
+                                        onkeyup="textCounter(this, document.getElementById('txtCommentChars'), 200);"/>
+                    <br/>
+                    <div id="txtCommentChars">{!$Label.dsfs__charactersremaining200}</div>
+                </div>
+
+                <div style="text-align: center">
+                    <apex:commandLink id="btnVoidEnvCancel"
+                                      action="{!returnToSource}"
+                                      value="{!$Label.dsfs__cancel}"
+                                      styleClass="btn"
+                                      style="padding:2px 5px 2px 5px; text-decoration:none;">
+                    </apex:commandLink>
+                    &nbsp;&nbsp;&nbsp;
+                    <apex:commandLink id="btnVoidEnv"
+                                      value="{!$Label.dsfs__voidenvelope}"
+                                      action="{!voidEnvelope}"
+                                      onclick="return allowVoidSubmit(document.getElementById('{!$Component.VoidEnvelopeReason}').value);"
+                                      styleClass="btn"
+                                      style="padding:2px 5px 2px 5px; text-decoration:none;">
+                    </apex:commandLink>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!voidComplete}">
+                <ul>
+                    <li>{!$Label.dsfs__recipientswillnolongeraccess}</li>
+                    <li>{!$Label.dsfs__recipientswhohavenotsigned}</li>
+                    <li>{!$Label.dsfs__recipientshaveneennotifiedemail}</li>
+                </ul>
+                <div style="text-align: center">
+                    <apex:commandLink id="btnVoidEnvReturn"
+                                      value="{!$Label.dsfs__return}"
+                                      action="{!returnToSource}"
+                                      styleClass="btn"
+                                      style="padding:2px 5px 2px 5px; text-decoration:none;">
+                    </apex:commandLink>
+                </div>
+            </apex:outputPanel>
+        </div>
+    </apex:form>
+</apex:page>

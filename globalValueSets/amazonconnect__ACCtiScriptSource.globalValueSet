@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>connectAgent</fullName>
+        <default>false</default>
+        <label>Amazon Connect Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>connectVoiceContact</fullName>
+        <default>false</default>
+        <label>Amazon Connect Voice Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>connectQueueCallbackContact</fullName>
+        <default>false</default>
+        <label>Amazon Connect Queue Callback Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>connectChatContact</fullName>
+        <default>false</default>
+        <label>Amazon Connect Chat Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>connectTaskContact</fullName>
+        <default>false</default>
+        <label>Amazon Connect Task Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceAgent</fullName>
+        <default>false</default>
+        <label>Salesforce Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceUI</fullName>
+        <default>false</default>
+        <label>Salesforce UI</label>
+    </customValue>
+    <customValue>
+        <fullName>ctiAction</fullName>
+        <default>false</default>
+        <label>CTI Action</label>
+    </customValue>
+    <customValue>
+        <fullName>init</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>init</label>
+    </customValue>
+    <customValue>
+        <fullName>ccpOverlay</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ccpOverlay</label>
+    </customValue>
+    <customValue>
+        <fullName>browser</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>browser</label>
+    </customValue>
+    <masterLabel>AC_CtiScriptSource</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

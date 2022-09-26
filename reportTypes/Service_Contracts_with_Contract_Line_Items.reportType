@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>cases</category>
+    <deployed>true</deployed>
+    <description>Which service contracts include products?</description>
+    <label>Service Contracts with Contract Line Items</label>
+    <sections>
+        <masterLabel>Service Contracts</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>Contract Line Items</masterLabel>
+    </sections>
+</ReportType>

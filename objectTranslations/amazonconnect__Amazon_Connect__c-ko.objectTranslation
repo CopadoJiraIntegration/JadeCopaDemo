@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Toolkit for Amazon Connect --></value>
+    </caseValues>
+    <fields>
+        <help>사례를 Contact Channel Analytics 레코드와 연결하는 AC_AssociateCCACase 트리거를 활성화하거나 비활성화하도록 선택합니다.</help>
+        <label><!-- Disable the CCA Case Trigger --></label>
+        <name>amazonconnect__disableCCACase__c</name>
+    </fields>
+    <fields>
+        <help>연락처를 연락처 채널 분석 레코드와 연결하는 AC_AssociateCCAContact 트리거를 활성화하거나 비활성화하도록 선택합니다.</help>
+        <label><!-- Disable the CCA Contact Trigger --></label>
+        <name>amazonconnect__disableCCAContact__c</name>
+    </fields>
+    <fields>
+        <help>사례 및 연락처를 연락처 채널 분석 레코드와 연결하는 AC_AssociateCaseContactCCA 트리거를 활성화하거나 비활성화하도록 선택합니다.</help>
+        <label><!-- Disable the Case Contact CCA Trigger --></label>
+        <name>amazonconnect__disableCaseContactCCA__c</name>
+    </fields>
+    <fields>
+        <help>AC_TaskTrigger 활성화 또는 비활성화 선택</help>
+        <label><!-- Disable the Task Trigger --></label>
+        <name>amazonconnect__disableTaskTrigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose to enable or disable the AC_VoiceIdChannel trigger, which associates Cases and Contacts with a Voice Id Channel Record --></help>
+        <label><!-- Disable the Voice Id Channel Trigger --></label>
+        <name>amazonconnect__disableVoiceIdTrigger__c</name>
+    </fields>
+    <fields>
+        <help>Amazon Connect 인스턴스의 도메인 URL을 입력하십시오(예: https://yourinstancename.awsapps.com).</help>
+        <label><!-- Url --></label>
+        <name>amazonconnect__url__c</name>
+    </fields>
+</CustomObjectTranslation>

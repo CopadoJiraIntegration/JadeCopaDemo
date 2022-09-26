@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Nível de orientação de precificação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Níveis de orientação de precificação</value>
+    </caseValues>
+    <fields>
+        <help>Desconto alto para preços de exceção com base em vendas anteriores. Caso um representante de vendas queira usar esse preço, eles devem descontar a linha de cotação manualmente. Esse desconto pode exigir aprovações baseadas nas configurações de aprovação de sua organização.</help>
+        <label><!-- Floor Discount (%) --></label>
+        <name>SBQQ__FloorDiscount__c</name>
+    </fields>
+    <fields>
+        <help>A quantidade mais baixa de linha de cotação que se aplica a este grupo. O número deve corresponder ao limite superior do grupo anterior.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help>Desconto intermediário com base em vendas anteriores. Caso um representante de vendas queira usar esse preço, eles devem descontar a linha de cotação manualmente. Esse desconto pode exigir aprovações baseadas nas configurações de aprovação de sua organização.</help>
+        <label><!-- Norm Discount (%) --></label>
+        <name>SBQQ__NormDiscount__c</name>
+    </fields>
+    <fields>
+        <help>O guia de preços que contém este grupo.</help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Desconto baixo ideal com base em vendas anteriores. Caso os representantes de vendas aceitem este guia de preços, o Salesforce CPQ aplica um desconto para atingir esse preço.</help>
+        <label><!-- Target Discount (%) --></label>
+        <name>SBQQ__TargetDiscount__c</name>
+    </fields>
+    <fields>
+        <help>A quantidade mais alta de linha de cotação que se aplica a este grupo. Este número deve ser um número acima da quantidade mais alta que você queira que este grupo inclua.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome</nameFieldLabel>
+</CustomObjectTranslation>

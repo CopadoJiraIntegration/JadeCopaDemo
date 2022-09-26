@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>test</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Lightning Console App 2</label>
+    <navType>Console</navType>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Event</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>amazonconnect__AC_QueueMetrics</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>amazonconnect__Lightning_Console_App_2_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>amazonconnect__AC_QueueMetrics</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Account</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Campaign</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Case</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Contact</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Event</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

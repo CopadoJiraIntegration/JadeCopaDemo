@@ -1,0 +1,24 @@
+<apex:page id="AC_ChatWidget" showHeader="false" sideBar="false" docType="html-5.0"  controller="amazonconnect.AC_ChatWidgetController">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+  <head>
+    <apex:slds />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript">
+       let configuration = JSON.parse("{!JSENCODE(chatWidgetConfiguration)}");
+      (function(w, d, x, id){
+        s=d.createElement('script');
+        s.src='https://'+configuration.cloudfrontId+'.cloudfront.net/amazon-connect-chat-interface-client.js';
+        s.async=1;
+        s.id=id;
+        d.getElementsByTagName('head')[0].appendChild(s);
+        w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+      })(window, document, 'amazon_connect', configuration.widgetId);
+      amazon_connect('styles', { openChat: { color: configuration.openChatColor, backgroundColor: configuration.openChatBackgroundColor}, closeChat: { color: configuration.closeChatColor, backgroundColor: configuration.closeChatBackgroundColor} });
+      amazon_connect('snippetId', configuration.snippetId);
+    </script>
+  </head>
+  </html>
+</apex:page>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <description>Recommends to update Case priority</description>
+    <label>Update Case Priority</label>
+    <recommendationLoad>
+        <label>Load Case Data</label>
+        <name>Load_Case_Data</name>
+        <condition>
+            <field>Id</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>0pr5w000000gTtYAAU</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Load_Case_Data</childNode>
+        <label>Output</label>
+        <name>Output_3f781853b17b492fa12020ab4048685f</name>
+    </union>
+</RecommendationStrategy>

@@ -1,0 +1,12 @@
+<apex:page id="ViewEnvelope"
+           standardController="dsfs__DocuSign_Status__c"
+           extensions="dsfs.StatusController"
+           action="{!viewEnvelope}"
+           title="{!$Label.dsfs__docusign}"
+           tabStyle="dsfs__DocuSign_Status__c">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:form >
+        <c:StatusHeader sourceId="{!sourceId}" pathPrefix="{!pathPrefix}"/>
+        <c:DocuSignIFrame iFrameSrc="{!iFrameSrc}" isNewWindow="{!isNewWindow}" isClassic="{!isClassic}"/>
+    </apex:form>
+</apex:page>

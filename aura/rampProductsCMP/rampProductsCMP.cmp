@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
+    <aura:attribute name="id" type="String"/>
+    <aura:attribute name="quoteId" type="String"/> 
+    <aura:attribute name="boolean" type="boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.boolean}">
+        <c:rampProducts recordId="{!v.quoteId}"/>
+  	</aura:if>
+    
+</aura:component>

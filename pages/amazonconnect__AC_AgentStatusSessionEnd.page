@@ -1,0 +1,61 @@
+<apex:page id="AC_AgentStatusSessionEnd" showHeader="false" sideBar="false" docType="html-5.0">
+  <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      ((ac) => {
+        // we load the channels in here rather than in Utils because we want them to
+        // be opened asap. Loading them from Utils caused a slight delay in testing.
+
+        // listen for a heartbeat from the CTI adapter to make sure it is still open.
+        const heartbeatChannel = new BroadcastChannel('heartbeat');
+        heartbeatChannel.addEventListener('message', async (e) => {
+            console.log(JSON.stringify(e.data));
+            if(e.data.type === 'HEARTBEAT') {
+                await ac.Utils.Common.setSessionEndTimer();
+            } else if (e.data.type === 'SETTING') {
+                await ac.Utils.Common.setData(e.data.payload);
+                heartbeatChannel.postMessage({message:'receivedData'});
+            } else if (e.data.type === 'CLOSE') {
+                window.close();
+            }
+        });
+
+        // use broadcast channel to make sure that new instances don't open.
+        const alreadyOpen = new BroadcastChannel('configureagentonsessionend');
+        alreadyOpen.addEventListener('message', (e) => {
+            if (e.data && e.data.message === 'PAGE_OPEN') {
+                window.close();
+            }
+        })
+        setTimeout(() => {
+            setInterval(() => {
+                alreadyOpen.postMessage({message:'PAGE_OPEN'});
+            }, 1000)
+        }, 5000);
+
+        window.onload = async function() {
+            await ac.Utils.Common.setSessionEndTimer();
+            await ac.Utils.Common.sendBroadcastChannels(heartbeatChannel, alreadyOpen);
+        }
+
+        window.addEventListener('beforeunload', ()=> {
+            heartbeatChannel.close();
+            alreadyOpen.close();
+        })
+      })(this);
+    </script>
+  </head>
+
+  <body>
+      <p>{!$Label.AC_SessionEndDescription}</p>
+    <div id="softphoneContainer" class="slds-hide flex-container" display="none" target="_top">
+    </div>
+  </body>
+
+  </html>
+</apex:page>

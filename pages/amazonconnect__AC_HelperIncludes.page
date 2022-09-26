@@ -1,0 +1,25 @@
+<apex:page id="AC_HelperIncludes" showChat="false" showHeader="false" applyBodyTag="false" applyHtmlTag="false" sideBar="false">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+  <apex:slds />
+
+  <style>
+    .slds-scope .slds-table td,
+    .slds-scope .slds-table th {
+      padding: 0px;
+    }
+  </style>
+
+  <div id="messageDialog" class="modal">
+    <div class="modal-dialog" style="top: 25%;">
+      <div class="modal-content" style="text-align: left;">
+        <div class="modal-body">
+          <div id="messageBody"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <cti-overlay></cti-overlay>
+
+  </html>
+</apex:page>

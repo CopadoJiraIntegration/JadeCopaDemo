@@ -1,0 +1,95 @@
+<!--  You must have an AWS account to use the Amazon Connect CTI Adapter.
+Downloading and/or using the Amazon Connect CTI Adapter is subject to the terms of the AWS Customer Agreement,
+AWS Service Terms, and AWS Privacy Notice.
+
+© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+Copyright (c) Aria Solutions 2018
+
+NOTE:  Other license terms may apply to certain, identified software components
+contained within or distributed with the Amazon Connect CTI Adapter if such terms are
+included in the LibPhoneNumber-js and Salesforce Open CTI. For such identified components,
+such other license terms will then apply in lieu of the terms above.
+
+** libphonenumber-js; version 0.4.2 / 30.03.2017 -- https://github.com/catamphetamine/libphonenumber-js
+Copyright (c) 2016 @catamphetamine
+
+(The MIT License)
+
+Copyright (c) 2016 @catamphetamine
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<apex:page id="ACSFCCP_ObjectType" lightningStylesheets="true" controller="amazonconnect.ACSFCCP_ObjectTypeController" title="Create New Lead or Contact">
+    <apex:includeScript value="/support/api/47.0/interaction.js"/>
+    <apex:includeScript value="/support/console/47.0/integration.js"/>
+
+    <apex:slds />
+
+    <div class="slds-scope">
+        <apex:form >
+            <apex:pageBlock mode="maindetail" title="Create New Lead or Contact">
+                <apex:pageBlockSection columns="1">
+                    <apex:outputText >
+                        An object matching the inbound telephone number was not found.  What type of object would you like to create?
+                    </apex:outputText>
+                </apex:pageBlockSection>
+                <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton onClick="openNewContactTab(); return false;" value="Create Contact" id="contactBtn" />
+                    <span>    </span>
+                    <apex:commandButton onClick="openNewLeadTab(); return false;" value="Create Lead" id="leadBtn" />
+                </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:form>
+    </div>
+
+    <script type="application/javascript">
+        function openNewContactTab() {
+            closeTab();
+            var newContactUrl = '{!URLFOR($Action.Contact.NewContact)}';
+
+            openTab('New Contact', newContactUrl);
+        }
+
+        function openNewLeadTab() {
+            closeTab();
+            var newLeadUrl = '{!URLFOR($Action.Lead.New)}';
+
+            openTab('New Lead', newLeadUrl);
+        }
+
+        function openTab(title, url) {
+            if (sforce.console && sforce.console.isInConsole()) {
+                sforce.console.openPrimaryTab(null, url, true, title, function (r2) {
+                  closeTab();
+                });
+            }
+            else {
+              sforce.interaction.screenPop(url, true, function(r2) {
+                console.log(JSON.stringify(r2));
+              });
+            }
+        }
+
+        function closeTab() {
+          sforce.console.getEnclosingTabId(function(result) {
+            sforce.console.closeTab(result.id);
+          });
+        }
+    </script>
+</apex:page>

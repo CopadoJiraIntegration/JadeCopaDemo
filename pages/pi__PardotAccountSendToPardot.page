@@ -1,0 +1,7 @@
+<apex:page id="PardotAccountSendToPardot"
+    standardcontroller="Account"
+    extensions="pi.PersonAccountSendToPardotController">
+	<script>
+        window.history.back();
+    </script>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page standardController="sbaa__Approver__c" extensions="sbaa.ApproverExtController">
+	<apex:form >
+	<apex:pageBlock >
+		<apex:pageBlockButtons >
+			<apex:commandButton action="{!onReplace}" value="Replace"/>
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection columns="1">
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Replace With"/>
+				<apex:inputField value="{!approver.sbaa__DelegatedApprover__c}"/>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+	</apex:form>
+</apex:page>

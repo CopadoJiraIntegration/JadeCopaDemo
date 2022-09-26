@@ -1,0 +1,99 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:isUrlAddressable,lightning:hasPageReference" access="global" controller="QuickCreateFavoriteCtrl" >
+
+    <!--QuoteId-->
+    <aura:attribute name="recordId" type="ID" />
+    
+    <!-- Current login user Id -->
+    <aura:attribute name="userId" type="ID" />
+    
+    <!--QuickCreateFavorites__c Id. This attribute is used to set the unique combination of Quote__c & User__c of QuickCreateFavorites__c -->
+    <aura:attribute name="QuickCreateFavoritesId" type="String" />
+    
+    <!--To track duplicate name exist or not in QuickCreateFavorite record-->
+    <aura:attribute name="QCFDuplicateNameId" type="String" />
+    
+    <aura:attribute name="GlobalFavOrNot" type="boolean" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="wrapperstyle" id="hiddendiv" style="display:none;">
+        <div class="textStyle slds-text-align_center"><b>Favourite Saved successfully. Please close the pop-up.</b></div><br/>                            
+    </div>
+    
+    <!--QuickCreateFavoritesId: {!v.QuickCreateFavoritesId}-->
+    <div class="wrapperstyle" id="wrapper">
+        
+        <aura:if isTrue="{!empty(v.QuickCreateFavoritesId)}">
+        	
+            <!-- Create New Record-->
+            <lightning:recordEditForm aura:id="QuickCreateFavoritesFormInsert"
+                               objectApiName="Favorites__c"
+                               onsubmit="{!c.onSubmitForm}"    
+                               onsuccess="{!c.onRecordSave}"  > 
+                    <lightning:messages />
+            
+                    <div class="slds-grid slds-wrap" id="PersonalFav">
+                        <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                            <lightning:inputField fieldName="Name"/>
+                        </div>
+                        <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                            <lightning:inputField fieldName="Original_Quote__c" value="{!v.recordId}" disabled="true"/>
+                        </div>
+                        <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                            <lightning:inputField fieldName="User__c" value="{!v.userId}" disabled="true"/>
+                        </div>
+                        <aura:if isTrue="{!v.GlobalFavOrNot}">
+                            <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                                <lightning:inputField fieldName="Global_Favorite__c" />
+                            </div>
+                        </aura:if>    
+                        <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                            <lightning:inputField fieldName="Description__c" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                        <lightning:button class="slds-m-top_small" variant="brand" type="submit" label="Save as Favorite Quote" />
+                    </div>
+        	</lightning:recordEditForm>
+
+
+            <aura:set attribute="else">
+            	<!-- Update existing Record-->
+                <lightning:recordEditForm aura:id="QuickCreateFavoritesFormUpdate"
+                               			  objectApiName="Favorites__c"
+                                          recordId="{!v.QuickCreateFavoritesId}"
+                                          onsubmit="{!c.onSubmitForm}"    
+                                          onsuccess="{!c.onRecordSave}"  > 
+                        <lightning:messages />
+                
+                        <div class="slds-grid slds-wrap" id="PersonalFav">
+                            <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                                <lightning:inputField fieldName="Name"/>
+                            </div>
+                            <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                                <lightning:inputField fieldName="Original_Quote__c" value="{!v.recordId}" disabled="true"/>
+                            </div>
+                            <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                                <lightning:inputField fieldName="User__c" value="{!v.userId}" disabled="true"/>
+                            </div>
+                            <aura:if isTrue="{!v.GlobalFavOrNot}">
+                                <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                                    <lightning:inputField fieldName="Global_Favorite__c" />
+                                </div>
+                            </aura:if>
+                            <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                            	<lightning:inputField fieldName="Description__c" />
+                        	</div>
+                        </div>
+                        <div class="slds-col slds-p-left_xx-large slds-p-right_xx-large slds-p-top_large slds-size_1-of-2">
+                            <lightning:button class="slds-m-top_small" variant="brand" type="submit" label="Save as Favorite Quote" />
+                        </div>
+        		</lightning:recordEditForm>
+
+                
+            </aura:set>
+            
+        </aura:if>        
+                
+     </div>
+</aura:component>

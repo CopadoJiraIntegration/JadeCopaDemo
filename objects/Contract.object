@@ -156,20 +156,66 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contract_Record_Page</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contract_Record_Page</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>SBQQ__ActiveContractLookup</fullName>
+        <availableFields>
+            <field>StatusCode</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used by Select Contract page to render active contracts.</description>
+        <displayedFields>
+            <field>OriginalOpportunity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ContractNumber</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>StartDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>EndDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ContractTerm</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Active Contract Lookup</label>
+    </fieldSets>
     <fields>
         <fullName>AccountId</fullName>
         <trackHistory>true</trackHistory>
@@ -185,8 +231,41 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>AnnualContractValue__c</fullName>
+        <description>This stores the sum of all Annual Contract Value (ACV) on the opportunity</description>
+        <externalId>false</externalId>
+        <label>Annual Contract Value (ACV)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AnnualRecurringRevenue__c</fullName>
+        <description>This stores the sum of all Annual Recurring Revenue (ARR) on the Opportunity</description>
+        <externalId>false</externalId>
+        <label>Annual Recurring Revenue (ARR)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>BillingAddress</fullName>
         <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ChurnRate__c</fullName>
+        <description>This stores the sum of all Churn Rates on the Line products</description>
+        <externalId>false</externalId>
+        <label>Churn Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>CompanySignedDate</fullName>
@@ -199,6 +278,10 @@
     </fields>
     <fields>
         <fullName>ContractTerm</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -223,8 +306,40 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>MonthlyRecurringRevenue__c</fullName>
+        <description>This stores the sum of all Monthly Recurring Revenue (MRR) on the Opportunity</description>
+        <externalId>false</externalId>
+        <label>Monthly Recurring Revenue (MRR)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OriginalOpportunity__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__Opportunity__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Original Opportunity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Order</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>OwnerExpirationNotice</fullName>
@@ -239,6 +354,397 @@
         <fullName>Pricebook2Id</fullName>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ActiveContract__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines if this contract is in effect.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(ISPICKVAL(StatusCode,&apos;Activated&apos;), OR(AND(Not(SBQQ__Evergreen__c), EndDate &gt;= TODAY()), SBQQ__Evergreen__c)),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Determines if this contract is in effect.</inlineHelpText>
+        <label>Active Contract</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendmentOpportunityRecordTypeId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Record Type of the Amendment Opportunity, unless otherwise specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Record Type of the Amendment Opportunity, unless otherwise specified.</inlineHelpText>
+        <label>Amendment Opportunity Record Type Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendmentOpportunityStage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The current stage of the Amendment Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The current stage of the Amendment Opportunity.</inlineHelpText>
+        <label>Amendment Opportunity Stage</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendmentOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Owner of the original opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner of the original opportunity.</inlineHelpText>
+        <label>Amendment Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AmendmentContracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendmentPricebookId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Price Book Id of your Amendment.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price Book Id of your Amendment.</inlineHelpText>
+        <label>Amendment Pricebook Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendmentRenewalBehavior__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The basis for which a Renewal Start Date and Amendment End Date are calculated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The basis for which a Renewal Start Date and Amendment End Date are calculated.</inlineHelpText>
+        <label>Amendment &amp; Renewal Behavior</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Latest End Date</fullName>
+                    <default>true</default>
+                    <label>Latest End Date</label>
+                </value>
+                <value>
+                    <fullName>Earliest End Date</fullName>
+                    <default>false</default>
+                    <label>Earliest End Date</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendmentStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Start Date of your Amendment. If blank, Amendment will start on today&apos;s date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start Date of your Amendment. If blank, Amendment will start on today&apos;s date.</inlineHelpText>
+        <label>Amendment Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DefaultRenewalContactRoles__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select to include contact roles from the original opportunity in the renewal opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to include contact roles from the original opportunity in the renewal opportunity.</inlineHelpText>
+        <label>Default Renewal Contact Roles</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DefaultRenewalPartners__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select to include the original opportunity partners in renewal opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to include the original opportunity partners in renewal opportunity.</inlineHelpText>
+        <label>Default Renewal Partners</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DisableAmendmentCoTerm__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If unchecked, the Amendment Quote End Date will be set according to the Amendment &amp; Renewal Behavior setting. If checked, then no End Date will be set.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If unchecked, the Amendment Quote End Date will be set according to the Amendment &amp; Renewal Behavior setting. If checked, then no End Date will be set.</inlineHelpText>
+        <label>Disable Amendment Co-Term</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Evergreen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the contract is evergreen.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether the contract is evergreen.</inlineHelpText>
+        <label>Evergreen</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ExpirationDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contract end date for use in time-based workflows.</description>
+        <externalId>false</externalId>
+        <formula>EndDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Contract end date for use in time-based workflows.</inlineHelpText>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__MDQRenewalBehavior__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines how segmented subscription products will appear on renewal quotes. De-Segmented will renew as a standard quote line with the last segment’s data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines how segmented subscription products will appear on renewal quotes. De-Segmented will renew as a standard quote line with the last segment&apos;s data.</inlineHelpText>
+        <label>MDQ Renewal Behavior</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>De-segmented</fullName>
+                    <default>false</default>
+                    <label>De-segmented</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__MasterContract__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select to designate this contract as the master contract for this account. Upon renewal, all contracts will be rolled into this one.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to designate this contract as the master contract for this account. Upon renewal, all contracts will be rolled into this one.</inlineHelpText>
+        <label>Master Contract</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OpportunityPricebookId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Price Book ID of the related opportunity or quote.</description>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(SBQQ__Opportunity__c)), SBQQ__Opportunity__r.Pricebook2Id, SBQQ__Quote__r.SBQQ__PricebookId__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>ID of the Price Book used from the original Opportunity.</inlineHelpText>
+        <label>Opportunity or Quote Price Book ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Opportunity from which this Contract was created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Opportunity from which this Contract was created.</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <referenceTo>Order</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PreserveBundleStructureUponRenewals__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select to maintain bundle hierarchy on renewal quotes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select checkbox to maintain bundle hierarchy on renewal quotes.</inlineHelpText>
+        <label>Preserve Bundle Structure</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Quote from which this Contract was created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quote from which this Contract was created.</inlineHelpText>
+        <label>Quote</label>
+        <referenceTo>SBQQ__Quote__c</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalForecast__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select to trigger the generation of a renewal opportunity for forecasting purposes. Does not automatically generate a renewal quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to trigger the generation of a renewal opportunity for forecasting purposes. Does not automatically generate a renewal quote.</inlineHelpText>
+        <label>Renewal Forecast</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalOpportunityRecordTypeId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Record type of renewal opportunity if different from the default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Record type of renewal opportunity if different from the default.</inlineHelpText>
+        <label>Renewal Opportunity Record Type Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalOpportunityStage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Override the default opportunity stage for this renewal. This must be done prior to selecting Renewal Forecast to take effect on the renewal opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Override the default opportunity stage for this renewal. This must be done prior to selecting Renewal Forecast to take effect on the renewal opportunity.</inlineHelpText>
+        <label>Renewal Opportunity Stage</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalOpportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Renewal opportunity generated to track the renewal of this contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Renewal opportunity generated to track the renewal of this contract.</inlineHelpText>
+        <label>Renewal Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Renewal Contracts</relationshipLabel>
+        <relationshipName>RenewedContracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Owner of the original opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner of the original opportunity.</inlineHelpText>
+        <label>Renewal Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RenewalContracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalPricebookId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specify a price book ID to be used on Renewal Opportunities if you do not want to use the price book ID of the original opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify a price book ID to be used on Renewal Opportunities if you do not want to use the price book ID of the original opportunity.</inlineHelpText>
+        <label>Renewal Pricebook Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalQuoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select this option to automatically generate a renewal quote on renewal opportunities.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this option to automatically generate a renewal quote on renewal opportunities.</inlineHelpText>
+        <label>Renewal Quoted</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specify the term of the renewal. By default, it matches the original contract term.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify the term of the renewal. By default, it matches the original contract term.</inlineHelpText>
+        <label>Renewal Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewalUpliftRate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Rate of renewal price increases.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate of renewal price increases.</inlineHelpText>
+        <label>Renewal Uplift (%)</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionQuantitiesCombined__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Amendments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Amendments.</inlineHelpText>
+        <label>Combine Subscription Quantities</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>ShippingAddress</fullName>
@@ -257,8 +763,29 @@
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
+    <fields>
+        <fullName>TotalContractValue__c</fullName>
+        <description>This stores the sum of all Total Contract Value (TCV) on the Opportunity.</description>
+        <externalId>false</externalId>
+        <label>Total Contract Value (TCV)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
     <listViews>
         <fullName>AllActivatedContracts</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT_TERM</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>TotalContractValue__c</columns>
+        <columns>AnnualContractValue__c</columns>
+        <columns>AnnualRecurringRevenue__c</columns>
+        <columns>MonthlyRecurringRevenue__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CONTRACT.STATUS_CODE</field>
@@ -269,6 +796,13 @@
     </listViews>
     <listViews>
         <fullName>AllContracts</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CONTRACT.CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Contracts</label>
     </listViews>
@@ -291,6 +825,14 @@
             <value>P</value>
         </filters>
         <label>All In Approval Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>Community_Contract_View</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Community Contract View</label>
     </listViews>
     <listViews>
         <fullName>MyActivatedContracts</fullName>
@@ -342,4 +884,40 @@
         <searchResultsAdditionalFields>CONTRACT_TERM</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>SBQQ__Amend</fullName>
+        <availability>online</availability>
+        <description>Amend Contract directs to Amend Contract Page</description>
+        <displayType>button</displayType>
+        <height>0</height>
+        <linkType>page</linkType>
+        <masterLabel>Amend</masterLabel>
+        <openType>sidebar</openType>
+        <page>SBQQ__AmendContract</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__RenewContracts</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>0</height>
+        <linkType>page</linkType>
+        <masterLabel>Renew Contracts</masterLabel>
+        <openType>sidebar</openType>
+        <page>SBQQ__RenewContracts</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Contract</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>noSidebar</openType>
+        <page>dsfs__CreateEnvelopeFromContract</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

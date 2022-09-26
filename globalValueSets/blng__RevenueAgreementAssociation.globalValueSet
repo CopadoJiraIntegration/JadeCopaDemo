@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Not Applicable</fullName>
+        <default>true</default>
+        <label>Not Applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>New Agreement</fullName>
+        <default>false</default>
+        <label>New Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Manual</fullName>
+        <default>false</default>
+        <label>Manual</label>
+    </customValue>
+    <customValue>
+        <fullName>Revised Order Product</fullName>
+        <default>false</default>
+        <label>Revised Order Product</label>
+    </customValue>
+    <masterLabel>Revenue Agreement Association</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

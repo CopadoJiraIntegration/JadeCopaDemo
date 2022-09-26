@@ -1,0 +1,5 @@
+<aura:component implements="lightning:availableForFlowActions,force:hasRecordId" access="global">
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>-->
+	<aura:attribute name="recordId" type="String" />    
+    <!-- no markup needed -->
+</aura:component>

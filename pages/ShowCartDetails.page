@@ -1,0 +1,7 @@
+<apex:page controller="ShowCartDetailsController" tabStyle="SBQQ__Quote__c" showHeader="false" sidebar="false" applyBodyTag="false">
+    
+    <!-- Calling VF Componrnt for Show Cart -->
+    <c:ShowCartDetailsComponent InputProposal="{!quoteRecordId}" InputInstanceURL="{!url}" InputApprovalRequest="{!quoteRecordId}" 
+    InputApproverId="{!$User.Id}" InputIsAssignment="False" InputIsApproved="False" InputIsApproveOrReject="True" 
+    ShowApprovalSection="False" ShowCartView="True" EmailTemplateView="True" />
+</apex:page>

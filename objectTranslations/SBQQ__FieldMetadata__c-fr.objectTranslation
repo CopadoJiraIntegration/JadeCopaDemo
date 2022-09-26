@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Métadonnée de champ --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Métadonnées de champ --></value>
+    </caseValues>
+    <fields>
+        <help>Saisissez le nom d&apos;API du champ.</help>
+        <label><!-- Field Name --></label>
+        <name>SBQQ__FieldName__c</name>
+    </fields>
+    <fields>
+        <help>Saisissez le nom d&apos;API de l&apos;objet qui contient le champ.</help>
+        <label><!-- Object Name --></label>
+        <name>SBQQ__ObjectName__c</name>
+    </fields>
+    
+    
+</CustomObjectTranslation>

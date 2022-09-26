@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Valor rastreado</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Valores rastreados</value>
+    </caseValues>
+    <fields>
+        <help>Oportunidade associada ao Valor rastreado</help>
+        <label><!-- Opportunity --></label>
+        <name>sbaa__Opportunity__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Campo rastreado que gera esse Valor rastreado</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Valor armazenado se o tipo de dado for uma data</help>
+        <label><!-- Value (Date) --></label>
+        <name>sbaa__ValueDate__c</name>
+    </fields>
+    <fields>
+        <help>Valor armazenado se o tipo de dado for um número</help>
+        <label><!-- Value (Number) --></label>
+        <name>sbaa__ValueNumber__c</name>
+    </fields>
+    <fields>
+        <help>Valor armazenado se o tipo de dado for um texto</help>
+        <label><!-- Value (Text) --></label>
+        <name>sbaa__ValueText__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nº do valor rastreado</nameFieldLabel>
+</CustomObjectTranslation>

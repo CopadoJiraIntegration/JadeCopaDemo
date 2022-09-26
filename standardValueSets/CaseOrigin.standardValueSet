@@ -16,4 +16,19 @@
         <default>false</default>
         <label>Web</label>
     </standardValue>
+    <standardValue>
+        <fullName>Support Portal</fullName>
+        <default>false</default>
+        <label>Support Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NetSuite</fullName>
+        <default>false</default>
+        <label>NetSuite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </standardValue>
 </StandardValueSet>

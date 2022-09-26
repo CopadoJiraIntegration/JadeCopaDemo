@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Arabic</fullName>
+        <default>false</default>
+        <label>Arabic</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Mandarin)</fullName>
+        <default>false</default>
+        <label>Chinese (Mandarin)</label>
+    </customValue>
+    <customValue>
+        <fullName>Danish</fullName>
+        <default>false</default>
+        <label>Danish</label>
+    </customValue>
+    <customValue>
+        <fullName>Dutch</fullName>
+        <default>false</default>
+        <label>Dutch</label>
+    </customValue>
+    <customValue>
+        <fullName>English (Australian)</fullName>
+        <default>false</default>
+        <label>English (Australian)</label>
+    </customValue>
+    <customValue>
+        <fullName>English (British)</fullName>
+        <default>false</default>
+        <label>English (British)</label>
+    </customValue>
+    <customValue>
+        <fullName>English (Indian)</fullName>
+        <default>false</default>
+        <label>English (Indian)</label>
+    </customValue>
+    <customValue>
+        <fullName>English (US)</fullName>
+        <default>false</default>
+        <label>English (US)</label>
+    </customValue>
+    <customValue>
+        <fullName>English (Welsh)</fullName>
+        <default>false</default>
+        <label>English (Welsh)</label>
+    </customValue>
+    <customValue>
+        <fullName>French</fullName>
+        <default>false</default>
+        <label>French</label>
+    </customValue>
+    <customValue>
+        <fullName>French (Canadian)</fullName>
+        <default>false</default>
+        <label>French (Canadian)</label>
+    </customValue>
+    <customValue>
+        <fullName>German</fullName>
+        <default>false</default>
+        <label>German</label>
+    </customValue>
+    <customValue>
+        <fullName>Icelandic</fullName>
+        <default>false</default>
+        <label>Icelandic</label>
+    </customValue>
+    <customValue>
+        <fullName>Italian</fullName>
+        <default>false</default>
+        <label>Italian</label>
+    </customValue>
+    <customValue>
+        <fullName>Japanese</fullName>
+        <default>false</default>
+        <label>Japanese</label>
+    </customValue>
+    <customValue>
+        <fullName>Korean</fullName>
+        <default>false</default>
+        <label>Korean</label>
+    </customValue>
+    <customValue>
+        <fullName>Norwegian</fullName>
+        <default>false</default>
+        <label>Norwegian</label>
+    </customValue>
+    <customValue>
+        <fullName>Polish</fullName>
+        <default>false</default>
+        <label>Polish</label>
+    </customValue>
+    <customValue>
+        <fullName>Portuguese</fullName>
+        <default>false</default>
+        <label>Portuguese</label>
+    </customValue>
+    <customValue>
+        <fullName>Portuguese (Brazilian)</fullName>
+        <default>false</default>
+        <label>Portuguese (Brazilian)</label>
+    </customValue>
+    <customValue>
+        <fullName>Romanian</fullName>
+        <default>false</default>
+        <label>Romanian</label>
+    </customValue>
+    <customValue>
+        <fullName>Russian</fullName>
+        <default>false</default>
+        <label>Russian</label>
+    </customValue>
+    <customValue>
+        <fullName>Spanish (Castialian)</fullName>
+        <default>false</default>
+        <label>Spanish (Castialian)</label>
+    </customValue>
+    <customValue>
+        <fullName>Spanish (Mexican)</fullName>
+        <default>false</default>
+        <label>Spanish (Mexican)</label>
+    </customValue>
+    <customValue>
+        <fullName>Spanish (US)</fullName>
+        <default>false</default>
+        <label>Spanish (US)</label>
+    </customValue>
+    <customValue>
+        <fullName>Swedish</fullName>
+        <default>false</default>
+        <label>Swedish</label>
+    </customValue>
+    <customValue>
+        <fullName>Turkish</fullName>
+        <default>false</default>
+        <label>Turkish</label>
+    </customValue>
+    <customValue>
+        <fullName>Welsh</fullName>
+        <default>false</default>
+        <label>Welsh</label>
+    </customValue>
+    <masterLabel>AC_VoicemailDropLanguage</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

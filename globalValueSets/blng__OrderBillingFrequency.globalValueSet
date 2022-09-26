@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Quarterly</fullName>
+        <default>false</default>
+        <label>Quarterly</label>
+    </customValue>
+    <customValue>
+        <fullName>Half Yearly</fullName>
+        <default>false</default>
+        <label>Half Yearly</label>
+    </customValue>
+    <customValue>
+        <fullName>Annual</fullName>
+        <default>false</default>
+        <label>Annual</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Term</fullName>
+        <default>false</default>
+        <label>Full Term</label>
+    </customValue>
+    <masterLabel>Order Billing Frequency</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

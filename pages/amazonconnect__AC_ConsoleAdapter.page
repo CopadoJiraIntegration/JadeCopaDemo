@@ -1,0 +1,29 @@
+<apex:page showChat="false" showHeader="false" applyHtmlTag="false" applyBodyTag="false" sideBar="false" controller="amazonconnect.AC_Utils"
+  extensions="amazonconnect.AC_X_AmazonConnectAPI">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+  <apex:includeLightning />
+  <apex:slds />
+
+  <apex:stylesheet value="{!$Resource.amazonconnect__AC_CommonStylesheet}" />
+
+  <body style="overflow:hidden">
+    <div id="outerWrapper" class="slds-scope">
+      <div id="loginContainer">
+        <div id="loginPanel">
+          <button id="loginButton" class="slds-button slds-button_brand">{!$Label.AC_CtiAdapter_CCP_Sign_In}</button>
+        </div>
+      </div>
+
+      <div id="softphoneContainer" class="slds-hide flex-container">
+        <apex:include pageName="amazonconnect__AC_HelperIncludes" />
+        <div id="ccpPanel" style="height: 100vh"></div>
+      </div>
+      <button id="hideCCP" class="slds-hide slds-button slds-button_brand" style="margin-top:50vh">{!$Label.AC_CtiAdapter_Toggle_Embedded_CCP}</button>
+    </div>
+  </body>
+
+  <apex:include pageName="amazonconnect__AC_ConsoleScriptIncludes" />
+  <c:AC_CCPSidebarOverlay mode="Lightning" />
+
+  </html>
+</apex:page>

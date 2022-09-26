@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set to access Partner Telephony Connected Apps and Service Presence</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Partner Telephony Permission Set</label>
+    <license>ServiceCloudVoiceExternalTelephonyPsl</license>
+</PermissionSet>

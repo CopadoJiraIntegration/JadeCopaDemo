@@ -1,0 +1,24 @@
+<apex:page controller="sbaa.PreviewApprovalsController" sidebar="false" standardStylesheets="false" title="{!$Label.sbaa__lbl_preview}">
+    <apex:stylesheet value="{!$Resource['sb']}"/>
+    <style>
+        body .pbBody {
+            background-color: #F8F8F8 !important;
+        }
+    </style>
+    <apex:pageMessages id="err"/>
+    <apex:form id="form" rendered="{!recordId != null}">
+        <div id="sbPreviewApprovals" class="sb">
+            <c:pageHeader title="{!$Label.sbaa__lbl_preview}" subtitle="{!recordName}" formFactor="desktop" iconName="sf-icon-approval">
+                <div class="sbButtons">
+                    <apex:commandButton styleClass="sbBtn" value="{!$Label.sbaa__lbl_submit_for_approval}" action="{!onSubmit}" rendered="{!showSubmitBtn && $CurrentPage.parameters.hideSubmit != '1'}" rerender="form, err" onClick="this.disabled=true;"/>
+                    <apex:commandButton styleClass="sbBtn" value="{!cancelBtnText}" action="{!onCancel}"/>
+                </div>
+            </c:pageHeader>
+        </div>
+        <apex:pageBlock mode="maindetail">
+            <apex:pageBlockSection columns="1" showHeader="false">
+                <c:approvalPreview approvals="{!approvals}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

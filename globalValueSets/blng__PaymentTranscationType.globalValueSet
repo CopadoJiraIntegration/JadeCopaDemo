@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Authorization</fullName>
+        <default>false</default>
+        <label>Authorization</label>
+    </customValue>
+    <customValue>
+        <fullName>Charge</fullName>
+        <default>false</default>
+        <label>Charge</label>
+    </customValue>
+    <customValue>
+        <fullName>Void</fullName>
+        <default>false</default>
+        <label>Void</label>
+    </customValue>
+    <customValue>
+        <fullName>Refund</fullName>
+        <default>false</default>
+        <label>Refund</label>
+    </customValue>
+    <masterLabel>Payment Transcation Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

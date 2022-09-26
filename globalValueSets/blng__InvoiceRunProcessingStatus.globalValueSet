@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Pending Billing</fullName>
+        <default>false</default>
+        <label>Pending Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>Will Not Invoice</fullName>
+        <default>false</default>
+        <label>Will Not Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Error</fullName>
+        <default>false</default>
+        <label>Error</label>
+    </customValue>
+    <customValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <masterLabel>Invoice Run Processing Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

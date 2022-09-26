@@ -1,0 +1,13 @@
+<apex:page docType="html-5.0" showHeader="false" showChat="false" sidebar="false" standardStylesheets="false" controller="amazonconnect.AC_CCPElementEditorController">
+  <apex:includeScript value="{!URLFOR($Resource.amazonconnect__CCPElementEditor, '/ccp-editor.1.0.0.min.js')}" />
+  <style type="text/css">
+    html {
+      font-size: 12px !important;
+    }
+
+    body {
+      font-size: 1rem !important;
+    }
+  </style>
+  <ccp-editor controller="{!className}" style="position:absolute;left:0;right:0;top:0;bottom:0"></ccp-editor>
+</apex:page>

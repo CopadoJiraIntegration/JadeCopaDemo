@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IndustriesManufacturingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableIndManufacturing>false</enableIndManufacturing>
+    <enableIndustriesMfgAccountForecast>true</enableIndustriesMfgAccountForecast>
+    <enableIndustriesMfgIAS>false</enableIndustriesMfgIAS>
+</IndustriesManufacturingSettings>

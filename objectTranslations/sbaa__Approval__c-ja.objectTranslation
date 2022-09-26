@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>承認</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RequestFields --></label>
+        <name>sbaa__RequestFields</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Approved/Rejected/Revoked Date --></label>
+        <name>Approved_Rejected_Revoked_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Time Taken (Days) --></label>
+        <name>Time_Taken_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actions --></label>
+        <name>sbaa__Actions__c</name>
+    </fields>
+    <fields>
+        <help>この承認が属する承認チェーン</help>
+        <label><!-- Approval Chain --></label>
+        <name>sbaa__ApprovalChain__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この承認が必要となるステップ (レベル)。</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help>承認に関連付けられているメールテンプレートの ID</help>
+        <label><!-- Approval Template Id --></label>
+        <name>sbaa__ApprovalTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>この承認を承認したユーザ</help>
+        <label><!-- Approved By --></label>
+        <name>sbaa__ApprovedBy__c</name>
+        <relationshipLabel><!-- Approvals (Approved By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>動的承認者で使用し、承認者値が含まれる項目名を取得します</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>作成者</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この承認に関連付けられている承認者をルックアップします。</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>アーカイブ済み承認が有効な場合、この承認がアーカイブされていることを示します</help>
+        <label><!-- Archived --></label>
+        <name>sbaa__Archived__c</name>
+    </fields>
+    <fields>
+        <help>承認が割り当てられているグループの ID (該当する場合)</help>
+        <label><!-- Assigned Group Id --></label>
+        <name>sbaa__AssignedGroupId__c</name>
+    </fields>
+    <fields>
+        <help>現在のユーザが割り当て先ユーザでもある場合は true</help>
+        <label><!-- Assigned To Me --></label>
+        <name>sbaa__AssignedToMe__c</name>
+    </fields>
+    <fields>
+        <help>この承認が割り当てられているユーザをルックアップします</help>
+        <label><!-- Assigned To --></label>
+        <name>sbaa__AssignedTo__c</name>
+        <relationshipLabel><!-- Approvals (Assigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>承認者のコメント</help>
+        <label><!-- Comments --></label>
+        <name>sbaa__CommentsLong__c</name>
+    </fields>
+    <fields>
+        <help>代理承認者が有効な場合、代理承認者をルックアップします</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegated Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>承認中の商談</help>
+        <label><!-- Opportunity --></label>
+        <name>sbaa__Opportunity__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>取り消しに関連付けられているメールテンプレートの ID</help>
+        <label><!-- Recall Template Id --></label>
+        <name>sbaa__RecallTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>承認中のレコードをルックアップする承認項目の API 参照名</help>
+        <label><!-- Record Field --></label>
+        <name>sbaa__RecordField__c</name>
+    </fields>
+    <fields>
+        <help>この承認を却下したユーザ</help>
+        <label><!-- Rejected By --></label>
+        <name>sbaa__RejectedBy__c</name>
+        <relationshipLabel><!-- Approvals (Rejected By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>却下に関連付けられているメールテンプレートの ID</help>
+        <label><!-- Rejection Template Id --></label>
+        <name>sbaa__RejectionTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>承認申請に関連付けられているメールテンプレートの ID</help>
+        <label><!-- Request Template Id --></label>
+        <name>sbaa__RequestTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>デフォルトでは、ある承認申請を承認すると、同じユーザに割り当てられている他のすべての承認申請も自動的に承認されます。このボックスをオンにすると、このルールから発生した承認申請は自動的には承認されなくなるため、明示的に承認する必要があります。</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </fields>
+    <fields>
+        <help>この承認を生成した承認ルール。</help>
+        <label><!-- Rule --></label>
+        <name>sbaa__Rule__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この承認の状況。</help>
+        <label><!-- Status --></label>
+        <name>sbaa__Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>承認済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation>割り当て済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>却下済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested</masterLabel>
+            <translation>申請済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revoked</masterLabel>
+            <translation>取り消し済み</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>承認者がグループの場合、承認済みとみなすためにメンバー全員の承認が必要ならオンにします。</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </fields>
+    <nameFieldLabel>承認番号</nameFieldLabel>
+    <webLinks>
+        <label><!-- Approve --></label>
+        <name>sbaa__Approve</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reassign --></label>
+        <name>sbaa__Reassign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reject --></label>
+        <name>sbaa__Reject</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResendRequestEmail --></label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+</CustomObjectTranslation>

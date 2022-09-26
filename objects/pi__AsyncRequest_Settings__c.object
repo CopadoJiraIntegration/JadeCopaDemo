@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Settings for AsyncRequest Scheduling</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>pi__Is_Enabled__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Is Enabled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is Enabled</inlineHelpText>
+        <label>Is Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pi__Last_Run_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The last time a given request was run.</description>
+        <externalId>false</externalId>
+        <label>Last run time.</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>pi__Next_Run_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The next time a given request is scheduled to run.</description>
+        <externalId>false</externalId>
+        <label>Next run time.</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>pi__Result_Summary__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>JSON summary of any results</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Public Setting for AsyncRequests</label>
+    <visibility>Public</visibility>
+</CustomObject>

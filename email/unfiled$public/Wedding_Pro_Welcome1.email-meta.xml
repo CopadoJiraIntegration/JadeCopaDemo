@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Welcome Email for Wedding Pro</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Wedding Pro Welcome1</name>
+    <style>none</style>
+    <subject>Welcome to Wedding Pro Community!</subject>
+    <textOnly>Hi {!User.Name} ,
+
+
+
+Welcome to Wedding Pro Community! To get started, go to {!Community_Url}
+
+
+
+Username: {!Receiving_User.FirstName}.{!Receiving_User.LastName}@weddingportal.com.
+
+System will prompt you to setup a password.
+
+
+
+
+
+Thanks,
+
+The Knot World Wide</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

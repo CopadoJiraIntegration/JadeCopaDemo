@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>connectAgentNewState</fullName>
+        <default>true</default>
+        <label>Connect Agent New State</label>
+    </customValue>
+    <customValue>
+        <fullName>connectAgentOldState</fullName>
+        <default>false</default>
+        <label>Connect Agent Old State</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceAgentNewState</fullName>
+        <default>false</default>
+        <label>Salesforce Agent New State</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceServiceChannel</fullName>
+        <default>false</default>
+        <label>Salesforce Service Channel</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforcePreviousWorkload</fullName>
+        <default>false</default>
+        <label>Salesforce Previous Workload</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforcePreviousWorkloadPercent</fullName>
+        <default>false</default>
+        <label>Salesforce Previous Workload Percent</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceNewWorkload</fullName>
+        <default>false</default>
+        <label>Salesforce New Workload</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceNewWorkloadPercent</fullName>
+        <default>false</default>
+        <label>Salesforce New Workload Percent</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceConfiguredCapacity</fullName>
+        <default>false</default>
+        <label>Salesforce Configured Capacity</label>
+    </customValue>
+    <customValue>
+        <fullName>staticValue</fullName>
+        <default>false</default>
+        <label>Static Value</label>
+    </customValue>
+    <masterLabel>AC_PresenceSyncRuleOperand</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

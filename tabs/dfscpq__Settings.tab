@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <icon>dsfs__DocuSign_Images/dsfs__AppIcon.png</icon>
+    <label>DocuSign CPQ Settings</label>
+    <motif>Custom107: TV Widescreen</motif>
+    <page>dfscpq__Configuration</page>
+</CustomTab>

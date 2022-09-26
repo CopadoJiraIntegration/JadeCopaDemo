@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Used</fullName>
+        <default>false</default>
+        <label>Used</label>
+    </customValue>
+    <customValue>
+        <fullName>Unused</fullName>
+        <default>false</default>
+        <label>Unused</label>
+    </customValue>
+    <description>global status picklist for sfdoc</description>
+    <masterLabel>Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

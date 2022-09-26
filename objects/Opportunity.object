@@ -128,22 +128,98 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page1</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page1</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <businessProcesses>
+        <fullName>Standard</fullName>
+        <description>This is a process for Standard Opportunity</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Id%2E Decision Makers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation%2FReview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perception Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal%2FPrice Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value Proposition</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>sbaa__DealDesk</fullName>
+        <description>Fields displayed on Deal Desk page.</description>
+        <displayedFields>
+            <field>AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Amount</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CloseDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>StageName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deal Desk</label>
+    </fieldSets>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
@@ -156,10 +232,46 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>AnnualContractValue__c</fullName>
+        <description>This stores the sum of all Annual Contract Value (ACV) on the Line products</description>
+        <externalId>false</externalId>
+        <label>Annual Contract Value (ACV)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AnnualRecurringRevenue__c</fullName>
+        <description>This stores the sum of all Annual Recurring Revenue (ARR) on the Line products</description>
+        <externalId>false</externalId>
+        <label>Annual Recurring Revenue (ARR)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>CampaignId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ChurnRate__c</fullName>
+        <description>This stores the sum of all Churn Rates on the Line products</description>
+        <externalId>false</externalId>
+        <label>Churn Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>CloseDate</fullName>
@@ -171,6 +283,11 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -186,6 +303,10 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>IsExcludedFromTerritory2Filter</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>IsPrivate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -195,6 +316,18 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MonthlyRecurringRevenue__c</fullName>
+        <description>This stores the sum of all Monthly Recurring Revenue (MRR) on the Line products</description>
+        <externalId>false</externalId>
+        <label>Monthly Recurring Revenue (MRR)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>Name</fullName>
@@ -213,6 +346,12 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>PartnerAccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Pricebook2Id</fullName>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -223,10 +362,190 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Rebate_Amount__c</fullName>
+        <description>to be used in Forecasting. Rollup value of total Rebate Amount from OLIs, calculating via flow</description>
+        <externalId>false</externalId>
+        <label>Rebate Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rebate_Forecast__c</fullName>
+        <description>to be used in Forecasting</description>
+        <externalId>false</externalId>
+        <formula>Amount - Rebate_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rebate Forecast</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AmendedContract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Indicates the relationship to your Amended Contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to your Amended Contract.</inlineHelpText>
+        <label>Amended Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Amendment Opportunities</relationshipLabel>
+        <relationshipName>AmendmentOpportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Contracted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Internal flag used to kick off automatic asset and subscription conversion.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Salesforce CPQ uses this field to automatically convert assets and subscriptions.</inlineHelpText>
+        <label>Contracted</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__CreateContractedPrices__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select this checkbox to create Contracted Prices without creating a Contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to create Contracted Prices without creating a Contract.</inlineHelpText>
+        <label>Create Contracted Prices</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OrderGroupID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The unique identifier for the Amend:Re-Quote transaction, which is the original primary quote&apos;s ID. This is not a reference.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The unique identifier for the Amend:Re-Quote transaction, which is the original primary quote&apos;s ID.</inlineHelpText>
+        <label>Order Group ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Ordered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Internal flag that drives automatic order creation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to automatically create an order from the primary quote.</inlineHelpText>
+        <label>Ordered</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PrimaryQuote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Points to primary quote on this opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Salesforce CPQ uses this to point to the primary quote on this opportunity.</inlineHelpText>
+        <label>Primary Quote</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.Id</field>
+                <operation>equals</operation>
+                <valueField>SBQQ__Quote__c.SBQQ__Opportunity2__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>SBQQ__Quote__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>PrimaryOpportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuotePricebookId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom pricebook ID field that updates the standard Pricebook2Id field. Use to automatically drive pricebook selection from workflow rules.</description>
+        <externalId>false</externalId>
+        <label>Quote Pricebook Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates this opportunity is a renewal opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates this opportunity is a renewal opportunity.</inlineHelpText>
+        <label>Renewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RenewedContract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Contract being renewed by this renewal opportunity. In case opportunity rolls up several contracts this points at the master contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract being renewed by this renewal opportunity. If the several contracts roll up to this opportunity, this points at the master contract.</inlineHelpText>
+        <label>Renewed Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Renewal Opportunities</relationshipLabel>
+        <relationshipName>RenewalOpportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>StageName</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SyncedQuoteId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Territory2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TotalContractValue__c</fullName>
+        <description>This stores the sum of all Total Contract Value (TCV) on the Line products</description>
+        <externalId>false</externalId>
+        <label>Total Contract Value (TCV)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>TotalOpportunityQuantity</fullName>
@@ -239,8 +558,122 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
+    <fields>
+        <fullName>sbaa__ApprovalStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Overall Approval Status for this Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overall Approval Status for this Opportunity</inlineHelpText>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Recalled</fullName>
+                    <default>false</default>
+                    <label>Recalled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalStep__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used with Native Approvals to indicate the step in the approval process this Opportunity is in</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used with Native Approvals to indicate the step in the approval process this Opportunity is in</inlineHelpText>
+        <label>Approval Step</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Used with Native Approvers; indicates which Approver is responsible for approving the Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used with Native Approvers; indicates which Approver is responsible for approving the Opportunity.</inlineHelpText>
+        <label>Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__StepApproved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Used with Native Approvals; to indicate whether the step has been approved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used with Native Approvals; to indicate whether the step has been approved</inlineHelpText>
+        <label>Step Approved</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__SubmittedDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date when record was submitted for approval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when record was submitted for approval</inlineHelpText>
+        <label>Submitted Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__SubmittedUser__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User requesting approval for the Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User requesting approval for the Opportunity.</inlineHelpText>
+        <label>Submitted User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>SubmittedUserOpportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
     <listViews>
         <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.RECORDTYPE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Opportunities</label>
     </listViews>
@@ -286,7 +719,24 @@
     </listViews>
     <listViews>
         <fullName>MyOpportunities</fullName>
-        <filterScope>Mine</filterScope>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>Rebate_Amount__c</columns>
+        <columns>Rebate_Forecast__c</columns>
+        <columns>TotalContractValue__c</columns>
+        <columns>AnnualContractValue__c</columns>
+        <columns>AnnualRecurringRevenue__c</columns>
+        <columns>MonthlyRecurringRevenue__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.NAME</field>
+            <operation>startsWith</operation>
+            <value>test opp</value>
+        </filters>
         <label>My Opportunities</label>
     </listViews>
     <listViews>
@@ -314,6 +764,237 @@
         </filters>
         <label>Won</label>
     </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Direct</fullName>
+        <active>true</active>
+        <businessProcess>Standard</businessProcess>
+        <description>This is a opportunity type for Direct Customers</description>
+        <label>Direct</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business %2F Add-on</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sbaa__ApprovalStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Indirect</fullName>
+        <active>true</active>
+        <businessProcess>Standard</businessProcess>
+        <description>This is a opportunity for Indirect Customers</description>
+        <label>Indirect</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business %2F Add-on</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sbaa__ApprovalStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
@@ -332,4 +1013,129 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
+    <webLinks>
+        <fullName>SBQQ__Amend_Assets</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Amend Assets</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/SBQQ__AssetSelector?accountId={!Opportunity.AccountId}&amp;oppId={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__Amend_Contract</fullName>
+        <availability>online</availability>
+        <description>Redirects to a contract selector page to select contracts to amend.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Amend Contract</masterLabel>
+        <openType>sidebar</openType>
+        <page>SBQQ__SelectContractOpp</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__CreateOrder</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create Order</masterLabel>
+        <openType>noSidebar</openType>
+        <page>SBQQ__GenerateOrder</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__Include_Document</fullName>
+        <availability>online</availability>
+        <description>Allow users to attach the PDF to the opportunity</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Include Document</masterLabel>
+        <openType>sidebar</openType>
+        <page>SBQQ__NewOpportunityRelatedContent</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>noSidebar</openType>
+        <page>dsfs__CreateEnvelopeFromOpportunity</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Pardot_Emails</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignOpportunity</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>pi__Send_Single_Pardot_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Engage Email</masterLabel>
+        <openType>sidebar</openType>
+        <page>pi__MicroCampaignSingleOpportunity</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__PreviewApprovals</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Preview Approvals</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>../apex/SBAA__PreviewApprovals?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__RecallApprovals</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Recall Approvals</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>../apex/SBAA__RecallOpportunity?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__ResendRequestEmail</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Resend Request</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/SBAA__ListRequests?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__SubmitForApproval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Submit for Approval</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>../apex/SBAA__SubmitOpportunity?id={!Opportunity.Id}</url>
+    </webLinks>
 </CustomObject>

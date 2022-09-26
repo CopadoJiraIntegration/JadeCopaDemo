@@ -16,4 +16,44 @@
         <default>false</default>
         <label>Question</label>
     </standardValue>
+    <standardValue>
+        <fullName>Return</fullName>
+        <default>false</default>
+        <label>Return</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Replacement</fullName>
+        <default>false</default>
+        <label>Replacement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Claim</fullName>
+        <default>false</default>
+        <label>Claim</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Transformation</fullName>
+        <default>false</default>
+        <label>Data Transformation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalation</fullName>
+        <default>false</default>
+        <label>Escalated Case</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Omnichannel</fullName>
+        <default>false</default>
+        <label>Omnichannel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Red Flags</fullName>
+        <default>false</default>
+        <label>Red Flags</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SaaS</fullName>
+        <default>false</default>
+        <label>SaaS</label>
+    </standardValue>
 </StandardValueSet>

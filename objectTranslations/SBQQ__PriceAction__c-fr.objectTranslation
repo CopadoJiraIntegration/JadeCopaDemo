@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Action de prix</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Actions de prix</value>
+    </caseValues>
+    <fields>
+        <help>Sélectionnez le champ que vous souhaitez mettre à jour lorsque les conditions sont remplies.</help>
+        <label><!-- Target Field --></label>
+        <name>SBQQ__Field__c</name>
+        <picklistValues>
+            <masterLabel>Discount (%)</masterLabel>
+            <translation>Remise (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount (Amt)</masterLabel>
+            <translation>Remise (montant)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duration_in_Months__c</masterLabel>
+            <translation><!-- Duration_in_Months__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explanation</masterLabel>
+            <translation>Explication</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Floor (%)</masterLabel>
+            <translation>Plancher (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Markup (%)</masterLabel>
+            <translation>Marge (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Markup (Amt)</masterLabel>
+            <translation>Marge (montant)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max_Impressions__c</masterLabel>
+            <translation><!-- Max_Impressions__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norm (%)</masterLabel>
+            <translation>Norme (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price_For_Max_Impressions__c</masterLabel>
+            <translation><!-- Price_For_Max_Impressions__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__DistributorDiscount__c</masterLabel>
+            <translation><!-- SBQQ__DistributorDiscount__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__EndDate__c</masterLabel>
+            <translation><!-- SBQQ__EndDate__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__ListPrice__c</masterLabel>
+            <translation><!-- SBQQ__ListPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__PartnerDiscount__c</masterLabel>
+            <translation><!-- SBQQ__PartnerDiscount__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__StartDate__c</masterLabel>
+            <translation><!-- SBQQ__StartDate__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Target (%)</masterLabel>
+            <translation>Cible (%)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Price</masterLabel>
+            <translation>Prix unitaire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Saisissez une formule avec des opérateurs, des fonctions et les champs disponibles dans le devis et l&apos;objet cibles. Non prise en charge dans le calculateur hérité.</help>
+        <label><!-- Formula --></label>
+        <name>SBQQ__Formula__c</name>
+    </fields>
+    <fields>
+        <help>Numéro qui détermine l&apos;ordre d&apos;exécution des actions multiples d&apos;une règle.</help>
+        <label><!-- Order --></label>
+        <name>SBQQ__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentRuleIsActive --></label>
+        <name>SBQQ__ParentRuleIsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rule Lookup Object --></label>
+        <name>SBQQ__RuleLookupObject__c</name>
+    </fields>
+    <fields>
+        <label><!-- RuleTargetsCalculator --></label>
+        <name>SBQQ__RuleTargetsCalculator__c</name>
+    </fields>
+    <fields>
+        <help>Règle de prix qui exécute cette action.</help>
+        <label><!-- Rule --></label>
+        <name>SBQQ__Rule__c</name>
+        <relationshipLabel><!-- Price Actions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Le nom d&apos;API du champ à renvoyer depuis la ligne correspondant à la condition.</help>
+        <label><!-- Source Lookup Field --></label>
+        <name>SBQQ__SourceLookupField__c</name>
+        <picklistValues>
+            <masterLabel>Impressions__c</masterLabel>
+            <translation><!-- Impressions__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListPrice__c</masterLabel>
+            <translation><!-- ListPrice__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate__c</masterLabel>
+            <translation><!-- Rate__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reaction__c</masterLabel>
+            <translation><!-- Reaction__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reactions__c</masterLabel>
+            <translation><!-- Reactions__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Value__c</masterLabel>
+            <translation>SBQQ__Value__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty__c</masterLabel>
+            <translation><!-- Warranty__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly_Rate__c</masterLabel>
+            <translation><!-- Yearly_Rate__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Variable de synthèse source de la valeur de cette action.</help>
+        <label><!-- Source Variable --></label>
+        <name>SBQQ__SourceVariable__c</name>
+        <relationshipLabel><!-- Price Actions (Source) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Utilisez le devis, la ligne de devis ou le prix indicatif de ligne de devis lorsque l&apos;étendue d&apos;évaluation de la règle de prix est le calcul. Utilisez l&apos;option produit lorsque l&apos;étendue d&apos;évaluation de règle de prix est la configuration.</help>
+        <label><!-- Target Object --></label>
+        <name>SBQQ__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Product Option</masterLabel>
+            <translation>Option produit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation>Devis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line</masterLabel>
+            <translation>Ligne de devis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Line Pricing Guidance</masterLabel>
+            <translation>Prix indicatif de ligne de devis</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Si la valeur que vous souhaitez insérer est calculée dans un autre champ Ligne de devis, sélectionnez le champ ici.</help>
+        <label><!-- Source Field --></label>
+        <name>SBQQ__ValueField__c</name>
+    </fields>
+    <fields>
+        <help>Saisissez la valeur que vous souhaitez insérer dans le champ cible lorsque les conditions sont remplies.</help>
+        <label><!-- Value --></label>
+        <name>SBQQ__Value__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>N° d&apos;action</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- To use Quote Line Pricing Guidance as the Target Object, select After Calculate from the Calculator Evaluation Event dropdown list. --></errorMessage>
+        <name>SBQQ__Event_Evaluation_Pricing_Guidance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Price Action Target Object does not match Evaluation Scope --></errorMessage>
+        <name>SBQQ__Target_Object_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

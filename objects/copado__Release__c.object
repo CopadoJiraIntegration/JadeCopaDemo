@@ -235,17 +235,6 @@
         <label>Copado Header Fields</label>
     </fieldSets>
     <fields>
-        <fullName>External_Id__c</fullName>
-        <caseSensitive>true</caseSensitive>
-        <externalId>true</externalId>
-        <label>External Id</label>
-        <length>18</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>true</unique>
-    </fields>
-    <fields>
         <fullName>copado__Base_Branch__c</fullName>
         <deprecated>false</deprecated>
         <description>All user story feature branches are created out of the main branch of the Deployment Flow. If a Release base branch is specified, all feature branches of user stories linked to the Release will be created out of the base branch.</description>

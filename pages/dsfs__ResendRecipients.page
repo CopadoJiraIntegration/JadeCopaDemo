@@ -1,0 +1,33 @@
+<apex:page id="ResendRecipients"
+           standardController="dsfs__DocuSign_Recipient_Status__c"
+           recordSetVar="recipientStatuses"
+           extensions="dsfs.ResendController"
+           action="{!resendEnvelope}"
+           tabStyle="dsfs__DocuSign_Status__c"
+           title="{!$Label.dsfs__docusign}">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:sectionHeader title="{!$Label.dsfs__resendemails}"/>
+    <apex:form >
+        <apex:pageBlock title="{!$Label.dsfs__resendemailscomplete}" mode="Edit" tabStyle="DocuSign_Status__c">
+            <apex:pageMessage severity="info" strength="3" summary="{!$Label.dsfs__resendemailscomplete}"
+                              rendered="{!!hasRecipientResults}"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="{!$Label.dsfs__return}" action="{!returnToSource}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!recipientResults}" var="recipient" rendered="{!hasRecipientResults}">
+                <apex:column value="{!recipient.docuSignEnvelopeId}">
+                    <apex:facet name="header">{!$Label.dsfs__dsenvelope}</apex:facet>
+                </apex:column>
+                <apex:column value="{!recipient.username}">
+                    <apex:facet name="header">{!$Label.dsfs__dsrecipientname}</apex:facet>
+                </apex:column>
+                <apex:column value="{!recipient.email}">
+                    <apex:facet name="header">{!$Label.dsfs__dsrecipientemail}</apex:facet>
+                </apex:column>
+                <apex:column value="{!recipient.status}">
+                    <apex:facet name="header">{!$Label.dsfs__dsresendresult}</apex:facet>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>blng__revenueScheduleHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>blng__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>AccountRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__Adjustments__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of all adjustments made to the Revenue Schedule.</inlineHelpText>
+        <label>Adjustments</label>
+        <summarizedField>blng__RevenueAdjustmentLine__c.blng__AdjustmentAmount__c</summarizedField>
+        <summaryFilterItems>
+            <field>blng__RevenueAdjustmentLine__c.blng__Status__c</field>
+            <operation>equals</operation>
+            <value>Posted</value>
+        </summaryFilterItems>
+        <summaryForeignKey>blng__RevenueAdjustmentLine__c.blng__TargetRevenueSchedule__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>blng__AllocatedRevenueAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total allocated revenue</inlineHelpText>
+        <label>Revenue Allocation Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__Available__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>blng__TotalRevenueAmount__c -  (blng__RecognizedRevenueLastClosedPeriod__c +  blng__Unrecognized__c) + blng__Adjustments__c</formula>
+        <inlineHelpText>All revenue for a revenue schedule that is available to be adjusted or distributed.</inlineHelpText>
+        <label>Available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__BaseCurrencyAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Base Currency Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__BaseCurrencyFXDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Base Currency FX Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__BaseCurrencyFXRate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Base Currency FX Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__BaseCurrency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Base Currency</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__BillingFinanceBook__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the finance book where this revenue is recorded</inlineHelpText>
+        <label>Billing Finance Book</label>
+        <referenceTo>blng__FinanceBook__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>FinanceBookRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingFinancePeriod__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing Finance Period</label>
+        <referenceTo>blng__FinancePeriod__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>FinancePeriodRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>ContractRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__CreditNoteLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the credit note line associated with this revenue schedule.</inlineHelpText>
+        <label>Credit Note Line</label>
+        <referenceTo>blng__CreditNoteLine__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__DebitNoteLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the debit note line associated with this revenue schedule.</inlineHelpText>
+        <label>Debit Note Line</label>
+        <referenceTo>blng__DebitNoteLine__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__DeferredBalance__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total unrecognized revenue through the current period</inlineHelpText>
+        <label>Deferred Balance (deprecated)</label>
+        <summarizedField>blng__RevenueTransaction__c.blng__DeferredBalance__c</summarizedField>
+        <summaryFilterItems>
+            <field>blng__RevenueTransaction__c.blng__Status__c</field>
+            <operation>equals</operation>
+            <value>Recognized</value>
+        </summaryFilterItems>
+        <summaryForeignKey>blng__RevenueTransaction__c.blng__RevenueSchedule__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>blng__Deferred__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>blng__Unrecognized__c + blng__Available__c</formula>
+        <inlineHelpText>Revenue that has not yet been recognized in the Revenue Schedule.</inlineHelpText>
+        <label>Deferred</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__EstimatedRevenueTransactionCount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated count of revenue transactions</inlineHelpText>
+        <label>Estimated Revenue Transaction Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__FullRecognitionDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Full Recognition Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the invoice line associated with this revenue schedule.</inlineHelpText>
+        <label>Invoice Line</label>
+        <referenceTo>blng__InvoiceLine__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>InvoiceRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__LegalEntity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the legal entity where this revenue is recorded</inlineHelpText>
+        <label>Revenue Legal Entity</label>
+        <referenceTo>blng__LegalEntity__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>blng__OrderProduct__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the order product associated with this revenue schedule</inlineHelpText>
+        <label>Order Product</label>
+        <referenceTo>OrderItem</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>OrderProductsRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RecognizedRevenueLastClosedPeriod__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of all revenue that has been recognized through the current period</inlineHelpText>
+        <label>Recognized</label>
+        <summarizedField>blng__RevenueTransaction__c.blng__RevenueAmount__c</summarizedField>
+        <summaryFilterItems>
+            <field>blng__RevenueTransaction__c.blng__Status__c</field>
+            <operation>equals</operation>
+            <value>Recognized</value>
+        </summaryFilterItems>
+        <summaryForeignKey>blng__RevenueTransaction__c.blng__RevenueSchedule__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueAgreementAllocationStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Agreement Allocation Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueAgreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Agreement</label>
+        <referenceTo>blng__RevenueAgreement__c</referenceTo>
+        <relationshipLabel>Revenue Schedule</relationshipLabel>
+        <relationshipName>RevenueScheduleRevenueAdjustments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueDistributionMethod__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>As defined in the revenue recognition rule, the method for calculating how revenue will be spread
+        across time periods.</inlineHelpText>
+        <label>Revenue Distribution Method</label>
+        <referenceTo>blng__RevenueDistributionMethod__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueDistributionMethodRevenueSchedule</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the revenue term end date defined in the revenue rule.</inlineHelpText>
+        <label>Revenue End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueExpectedAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total revenue expected in this revenue schedule.</inlineHelpText>
+        <label>Revenue Expected Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueFinanceBook__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Finance Book where this Revenue will be recorded.</inlineHelpText>
+        <label>Revenue Finance Book</label>
+        <referenceTo>blng__FinanceBook__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueFinanceBookRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueLiabilityAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total revenue liability</inlineHelpText>
+        <label>Revenue Liability Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueMostLikelyAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Most Likely Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionGLRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total revenue to recognize with this revenue schedule</inlineHelpText>
+        <label>Revenue Recognition GL Rule</label>
+        <referenceTo>blng__GLRule__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueRecognitioGLRuleRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionGLTreatment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the general ledger treatment.</inlineHelpText>
+        <label>Revenue Recognition GL Treatment</label>
+        <referenceTo>blng__GLTreatment__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>GLTreatmentRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the revenue recognition rule used for this revenue schedule</inlineHelpText>
+        <label>Revenue Recognition Rule</label>
+        <referenceTo>blng__RevenueRecognitionRule__c</referenceTo>
+        <relationshipLabel>Revenue Schedules (Revenue Recognition Rule)</relationshipLabel>
+        <relationshipName>RevenueRecRuleRevenueSchedules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionTreatment__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the revenue recognition treatment used for this revenue schedule</inlineHelpText>
+        <label>Revenue Recognition Treatment</label>
+        <referenceTo>blng__RevenueRecognitionTreatment__c</referenceTo>
+        <relationshipLabel>Revenue Schedules</relationshipLabel>
+        <relationshipName>RevenueRecognitionTreaRevenueSchedules</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the revenue term start date defined in the revenue rule.</inlineHelpText>
+        <label>Revenue Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueTransactionStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of this revenue transaction.</inlineHelpText>
+        <label>Revenue Transaction Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueScheduleStatus</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__TotalRevenueAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the general ledger rule associated with this revenue schedule.</inlineHelpText>
+        <label>Total Revenue Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__Unrecognized__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of all revenue that is distributed to a Revenue Schedule but not yet recognized.</inlineHelpText>
+        <label>Unrecognized</label>
+        <summarizedField>blng__RevenueTransaction__c.blng__RevenueAmount__c</summarizedField>
+        <summaryFilterItems>
+            <field>blng__RevenueTransaction__c.blng__Status__c</field>
+            <operation>notEqual</operation>
+            <value>Recognized,Canceled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>blng__RevenueTransaction__c.blng__RevenueSchedule__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Revenue Schedule</label>
+    <listViews>
+        <fullName>blng__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RS-{0000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Revenue Schedules</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>blng__RevenueAdjustment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Revenue Adjustment</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR( $Action.blng__RevenueAdjustment__c.New, $ObjectType.blng__RevenueAdjustment__c )}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>自訂聯絡人</value>
+    </caseValues>
+    <fields>
+        <label><!-- Access Code --></label>
+        <name>dsfs__AccessCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>dsfs__Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authentication --></label>
+        <name>dsfs__Authentication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>dsfs__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Envelope Configuration --></label>
+        <name>dsfs__EnvelopeConfiguration__c</name>
+        <relationshipLabel><!-- Recipients --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>dsfs__FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>dsfs__LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Private Message --></label>
+        <name>dsfs__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>dsfs__Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Routing Order --></label>
+        <name>dsfs__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Phone Number --></label>
+        <name>dsfs__Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Private Message --></label>
+        <name>dsfs__PrivateMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>dsfs__Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signing Group ID --></label>
+        <name>dsfs__SigningGroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signing Group Name --></label>
+        <name>dsfs__SigningGroupName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>dsfs__Type__c</name>
+        <picklistValues>
+            <masterLabel>CRCL</masterLabel>
+            <translation><!-- CRCL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRCL Signing Group</masterLabel>
+            <translation><!-- CRCL Signing Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRL</masterLabel>
+            <translation><!-- CRL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRL Signing Group</masterLabel>
+            <translation><!-- CRL Signing Group --></translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>收件人名稱</nameFieldLabel>
+</CustomObjectTranslation>

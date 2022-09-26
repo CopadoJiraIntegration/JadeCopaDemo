@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Allocation</fullName>
+        <default>false</default>
+        <label>Allocation</label>
+    </customValue>
+    <customValue>
+        <fullName>Unallocation</fullName>
+        <default>false</default>
+        <label>Unallocation</label>
+    </customValue>
+    <masterLabel>Type - Allocation / Unallocation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

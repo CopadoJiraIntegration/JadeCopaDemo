@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>WEST COAST RULE</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingStateCode</field>
+        <operation>contains</operation>
+        <value>CA,NV,NM,OR,TX,UT,WA</value>
+    </ruleItems>
+</Territory2Rule>

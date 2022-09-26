@@ -1,0 +1,14 @@
+.THIS.wrapperstyle {
+    padding: 50px;
+    background-color: white ;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 20px;
+   
+}
+
+.THIS .textStyle{
+    font-size:15px;
+    font-weight:bold;
+    
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Opportunity</contextRecordType>
+    <filter>
+        <childNode>Update_Opportunity_Close_Date</childNode>
+        <label>Only Overdue Close Dates</label>
+        <name>Only_Overdue_Close_Dates</name>
+        <expression>$Record.CloseDate &lt; Today()</expression>
+    </filter>
+    <label>Update Close Date</label>
+    <recommendationLoad>
+        <label>Update Opportunity Close Date</label>
+        <name>Update_Opportunity_Close_Date</name>
+        <condition>
+            <field>Id</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>0pr5w000000gTtTAAU</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Only_Overdue_Close_Dates</childNode>
+        <label>Output</label>
+        <name>Output_66b14f46336745dc8a7bb3d3fd70d39d</name>
+    </union>
+</RecommendationStrategy>

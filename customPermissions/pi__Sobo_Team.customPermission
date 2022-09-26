@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Users with this permission can set the from address on an Engage Campaign as the contact or account owner if they are a member of the owner&apos;s account team.</description>
+    <isLicensed>false</isLicensed>
+    <label>Send on behalf of another user in Engage Campaigns using Account Teams</label>
+</CustomPermission>

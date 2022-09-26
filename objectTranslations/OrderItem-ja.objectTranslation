@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Audience --></label>
+        <name>Audience__c</name>
+        <picklistValues>
+            <masterLabel>26 - 50</masterLabel>
+            <translation><!-- 26 - 50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - 25</masterLabel>
+            <translation><!-- 3 - 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51 - 99</masterLabel>
+            <translation><!-- 51 - 99 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Content Name --></label>
+        <name>Content_Name__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content__c</name>
+        <picklistValues>
+            <masterLabel>Digital</masterLabel>
+            <translation><!-- Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hard Copy</masterLabel>
+            <translation><!-- Hard Copy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>DefaultPaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount(Per Unit) --></label>
+        <name>Discount_Amount_Per_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration in Months --></label>
+        <name>Duration_in_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- ERP System --></label>
+        <name>ERPSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impressions --></label>
+        <name>Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item fulfillment Line ID --></label>
+        <name>Item_fulfillment_Line_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Date --></label>
+        <name>LastSyncDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Total --></label>
+        <name>List_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Order Line ID --></label>
+        <name>NetSuiteOrderLineID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oracle Order Line ID --></label>
+        <name>OracleOrderLineID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family --></label>
+        <name>ProductFamily__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready to be Synced --></label>
+        <name>ReadytobeSynced__c</name>
+    </fields>
+    <fields>
+        <help>注文商品が有効かどうかを示します。</help>
+        <label><!-- Activated --></label>
+        <name>SBQQ__Activated__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品から作成された納入商品</help>
+        <label><!-- Asset --></label>
+        <name>SBQQ__Asset__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>請求サイクルを定義します。</help>
+        <label><!-- Billing Frequency --></label>
+        <name>SBQQ__BillingFrequency__c</name>
+    </fields>
+    <fields>
+        <help>請求のタイミングを定義する請求種別。</help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品に注文作成時に適用するブロック価格。</help>
+        <label><!-- Block Price --></label>
+        <name>SBQQ__BlockPrice__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>予約が含まれるかどうかを示します。</help>
+        <label><!-- Bookings Indicator --></label>
+        <name>SBQQ__BookingsIndicator__c</name>
+    </fields>
+    <fields>
+        <help>バンドルの親のルートを参照する内部使用項目。</help>
+        <label><!-- Bundle Root --></label>
+        <name>SBQQ__BundleRoot__c</name>
+        <relationshipLabel><!-- Order Products (Bundle Root) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>商品の課金の種別。</help>
+        <label><!-- Charge Type --></label>
+        <name>SBQQ__ChargeType__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品の発生元である契約アクション。</help>
+        <label><!-- Contract Action --></label>
+        <name>SBQQ__ContractAction__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品から作成されるサブスクリプションの契約。</help>
+        <label><!-- Contract --></label>
+        <name>SBQQ__Contract__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>注文商品が契約済みかどうかを示します。</help>
+        <label><!-- Contracted --></label>
+        <name>SBQQ__Contracted__c</name>
+    </fields>
+    <fields>
+        <help>注文商品の契約処理を制御します。</help>
+        <label><!-- Contracting Method --></label>
+        <name>SBQQ__ContractingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Contract Separately</masterLabel>
+            <translation>個別に契約</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Contract</masterLabel>
+            <translation>契約しない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inherit</masterLabel>
+            <translation>継承</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>サブスクリプションの期間。商品がサブスクリプションの場合にのみ適用されます。これは、品目が最初に生成されるときに関連商品のサブスクリプション期間からコピーされます。</help>
+        <label><!-- Default Subscription Term --></label>
+        <name>SBQQ__DefaultSubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help>複数セグメント商品の場合は、注文品目の価格ディメンション (「年」、「月」、「四半期」など) の種別です。</help>
+        <label><!-- Segment Type --></label>
+        <name>SBQQ__DimensionType__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品に適用される割引率表</help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>注文商品の合計金額。</help>
+        <label><!-- Order Product Bookings --></label>
+        <name>SBQQ__OrderProductBookings__c</name>
+    </fields>
+    <fields>
+        <help>注文された商品の実際の数量。</help>
+        <label><!-- Ordered Quantity --></label>
+        <name>SBQQ__OrderedQuantity__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品に適用される価格ディメンションを参照します。</help>
+        <label><!-- Price Dimension --></label>
+        <name>SBQQ__PriceDimension__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この注文商品に適用される価格表。</help>
+        <label><!-- Price Schedule --></label>
+        <name>SBQQ__PriceSchedule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この品目の価格の計算方法を示します。リスト: リスト価格から割引を引きます。コスト: コストにマークアップを加えます。</help>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Block</masterLabel>
+            <translation>ブロック</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost</masterLabel>
+            <translation>コスト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation>カスタム</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List</masterLabel>
+            <translation>リスト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Percent Of Total</masterLabel>
+            <translation>全体に対する割合</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>注文品目の商品サブスクリプション種別を設定します。</help>
+        <label><!-- Product Subscription Type --></label>
+        <name>SBQQ__ProductSubscriptionType__c</name>
+    </fields>
+    <fields>
+        <help>按分価格の計算に使用する計算された比率。</help>
+        <label><!-- Prorate Multiplier --></label>
+        <name>SBQQ__ProrateMultiplier__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品の作成元である見積品目。</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この品目によって見積を作成する商品のリスト単価。リスト単価は価格表から取得されます。</help>
+        <label><!-- Quoted List Price --></label>
+        <name>SBQQ__QuotedListPrice__c</name>
+    </fields>
+    <fields>
+        <help>見積もった数量。</help>
+        <label><!-- Quoted Quantity --></label>
+        <name>SBQQ__QuotedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Required By --></label>
+        <name>SBQQ__RequiredBy__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この注文商品で改訂された注文商品を参照します。</help>
+        <label><!-- Revised Order Product --></label>
+        <name>SBQQ__RevisedOrderProduct__c</name>
+        <relationshipLabel><!-- Order Products (Revised Order Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>複数セグメント商品で、インデックスはセグメント表内でのこの注文商品の位置を表します。</help>
+        <label><!-- Segment Index --></label>
+        <name>SBQQ__SegmentIndex__c</name>
+    </fields>
+    <fields>
+        <help>複数セグメント商品で、複数ディメンションの見積品目をグループ化するために使用する共有キーです。</help>
+        <label><!-- Segment Key --></label>
+        <name>SBQQ__SegmentKey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Account --></label>
+        <name>SBQQ__ShippingAccount__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>注文商品の現在の状態を示します。注文作成時のデフォルトはドラフトです。</help>
+        <label><!-- Activation Status --></label>
+        <name>SBQQ__Status__c</name>
+    </fields>
+    <fields>
+        <help>サブスクリプション価格の計算方法を示します。これが空白の場合、品目はサブスクリプション商品ではありません。</help>
+        <label><!-- Subscription Pricing --></label>
+        <name>SBQQ__SubscriptionPricing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription Term --></label>
+        <name>SBQQ__SubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help>契約の価格設定を決定するサブスクリプション種別を示します。</help>
+        <label><!-- Subscription Type --></label>
+        <name>SBQQ__SubscriptionType__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品から作成されたサブスクリプション</help>
+        <label><!-- Subscription --></label>
+        <name>SBQQ__Subscription__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>予想される税額</help>
+        <label><!-- Estimated Tax --></label>
+        <name>SBQQ__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <help>課税規則の税コードを指定します。</help>
+        <label><!-- Tax code --></label>
+        <name>SBQQ__TaxCode__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品に適用される期間割引率表</help>
+        <label><!-- Term Discount Schedule --></label>
+        <name>SBQQ__TermDiscountSchedule__c</name>
+        <relationshipLabel><!-- Order Products (Term Discount Schedule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この注文商品の関連サブスクリプションが終了した日付</help>
+        <label><!-- Terminated Date --></label>
+        <name>SBQQ__TerminatedDate__c</name>
+    </fields>
+    <fields>
+        <help>個別品目の全期間正価。</help>
+        <label><!-- Full-Term Net Unit Price --></label>
+        <name>SBQQ__UnproratedNetPrice__c</name>
+    </fields>
+    <fields>
+        <help>この見積品目によってアップグレードされるサブスクリプション。見積が契約されると、このサブスクリプションの [解除日] 項目が入力されます。</help>
+        <label><!-- Upgraded Subscription --></label>
+        <name>SBQQ__UpgradedSubscription__c</name>
+        <relationshipLabel><!-- Upgraded Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Subsidiary --></label>
+        <name>Subsidiary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync Message --></label>
+        <name>SyncMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Discount Amount --></label>
+        <name>Total_Discount_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Contacts --></label>
+        <name>Total_Number_of_Contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vertical --></label>
+        <name>Vertical__c</name>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lifecycle-Managed Asset --></label>
+        <name>blng__Asset__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill Through Date Override --></label>
+        <name>blng__BillThroughDateOverride__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billable Unit Price --></label>
+        <name>blng__BillableUnitPrice__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品のすべての請求書の合計 (税抜)</help>
+        <label><!-- Billed Amount (without tax) --></label>
+        <name>blng__BilledAmountwithouttax__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品の請求書で課せられる、すべての税金の合計。</help>
+        <label><!-- Billed Tax --></label>
+        <name>blng__BilledTax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account --></label>
+        <name>blng__BillingAccount__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この注文商品に割り当てられた請求ルールのルックアップ</help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この注文商品に割り当てられた請求処理のルックアップ</help>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>キャンセルや切り替えのために注文商品から差し引かれた合計。</help>
+        <label><!-- Canceled Billing Amount (without tax) --></label>
+        <name>blng__CanceledBillings__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品の会計の記録に使用する財務帳簿オブジェクトのルックアップ。</help>
+        <label><!-- Finance Book (Accounting) --></label>
+        <name>blng__FinanceBookAccounting__c</name>
+        <relationshipLabel><!-- Order Products (Finance Book (Accounting)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Group Id --></label>
+        <name>blng__GroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Quantity (System Field) --></label>
+        <name>blng__GroupQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Unit Price (System Field) --></label>
+        <name>blng__GroupUnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hold Billing --></label>
+        <name>blng__HoldBilling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Usage --></label>
+        <name>blng__IncludedUsage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Group ID --></label>
+        <name>blng__InvoiceGroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Group --></label>
+        <name>blng__InvoiceGrouping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Processing Status --></label>
+        <name>blng__InvoiceRunProcessingStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Start Date --></label>
+        <name>blng__InvoiceRunStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Status (Index) --></label>
+        <name>blng__InvoiceRunStatusIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run --></label>
+        <name>blng__InvoiceRun__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Charge To Date --></label>
+        <name>blng__LastChargeToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Invoice Target Date --></label>
+        <name>blng__LastInvoiceTargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- LegalEntityReference --></label>
+        <name>blng__LegalEntityReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>システムによって生成されます。この注文商品の次の請求書品目の請求期間の開始。</help>
+        <label><!-- Next Billing Date --></label>
+        <name>blng__NextBillingDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Charge Date --></label>
+        <name>blng__NextChargeDate__c</name>
+    </fields>
+    <fields>
+        <help>この項目を使用して、計算済み請求可能単価を手動で上書きます。</help>
+        <label><!-- Override Billable Unit Price --></label>
+        <name>blng__OverrideBillableUnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue End Date --></label>
+        <name>blng__OverrideInitialRevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue Start Date --></label>
+        <name>blng__OverrideInitialRevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Next Billing Date --></label>
+        <name>blng__OverrideNextBillingDate__c</name>
+    </fields>
+    <fields>
+        <help>残りの請求合計</help>
+        <label><!-- Pending Billing Amount (without tax) --></label>
+        <name>blng__PendingBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Schedule Status --></label>
+        <name>blng__RevenueScheduleStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax City (Override) --></label>
+        <name>blng__TaxCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Country (Override) --></label>
+        <name>blng__TaxCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax County (Override) --></label>
+        <name>blng__TaxCounty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Order Products (Tax GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Order Products (Tax GL Treatment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Percentage Applied --></label>
+        <name>blng__TaxPercentageApplied__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品に割り当てられた税金ルールのルックアップ</help>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax State (Override) --></label>
+        <name>blng__TaxState__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品の税金計算の状況。</help>
+        <label><!-- Tax Calculation Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 2 (Override) --></label>
+        <name>blng__TaxStreet2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 1 (Override) --></label>
+        <name>blng__TaxStreet__c</name>
+    </fields>
+    <fields>
+        <help>この注文商品に割り当てられた税金処理のルックアップ</help>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Postal Code (Override) --></label>
+        <name>blng__TaxZipCode__c</name>
+    </fields>
+    <fields>
+        <help>解除日に基づいて注文商品からキャンセルできた金額。保留請求金額より多額にすることはできません。</help>
+        <label><!-- Terminated Billing Amount (without tax) --></label>
+        <name>blng__TerminatedBillings__c</name>
+    </fields>
+    <fields>
+        <help>この注文の請求書品目および税金すべての合計。</help>
+        <label><!-- Total Billings --></label>
+        <name>blng__TotalBilling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usage Floor Quantity --></label>
+        <name>blng__UsageFloorQuantity__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Can’t edit the bookings status on an activated order product. --></errorMessage>
+        <name>SBQQ__CannotChangeBookingIndicatorOnActivation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is Recurring, a Billing Type must be selected. --></errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time or Usage, a Billing Type value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Rule must be selected --></errorMessage>
+        <name>blng__BIllingRuleMustBeSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Recognition Rule must be selected --></errorMessage>
+        <name>blng__RevenueRecognitionRuleMustBeSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tax Rule must be selected --></errorMessage>
+        <name>blng__TaxRuleMustBeSelected</name>
+    </validationRules>
+</CustomObjectTranslation>

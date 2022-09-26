@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Electronic</fullName>
+        <default>false</default>
+        <label>Electronic</label>
+    </customValue>
+    <customValue>
+        <fullName>External</fullName>
+        <default>true</default>
+        <label>External</label>
+    </customValue>
+    <masterLabel>Refund Mode</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

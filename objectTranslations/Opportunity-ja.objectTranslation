@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Deal Desk --></label>
+        <name>sbaa__DealDesk</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Annual Contract Value (ACV) --></label>
+        <name>AnnualContractValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Recurring Revenue (ARR) --></label>
+        <name>AnnualRecurringRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Churn Rate --></label>
+        <name>ChurnRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Recurring Revenue (MRR) --></label>
+        <name>MonthlyRecurringRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rebate Amount --></label>
+        <name>Rebate_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rebate Forecast --></label>
+        <name>Rebate_Forecast__c</name>
+    </fields>
+    <fields>
+        <help>修正対象契約へのルックアップ。</help>
+        <label><!-- Amended Contract --></label>
+        <name>SBQQ__AmendedContract__c</name>
+        <relationshipLabel><!-- Amendment Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Salesforce CPQ では、この項目を使用して納入商品とサブスクリプションを自動的に変換します。</help>
+        <label><!-- Contracted --></label>
+        <name>SBQQ__Contracted__c</name>
+    </fields>
+    <fields>
+        <help>契約を作成せずに契約価格を作成する場合は、このチェックボックスをオンにします。</help>
+        <label><!-- Create Contracted Prices --></label>
+        <name>SBQQ__CreateContractedPrices__c</name>
+    </fields>
+    <fields>
+        <help>修正: 再見積トランザクションの一意の ID であり、元の主見積の ID です。</help>
+        <label><!-- Order Group ID --></label>
+        <name>SBQQ__OrderGroupID__c</name>
+    </fields>
+    <fields>
+        <help>主見積から注文を自動的に作成するには、このチェックボックスをオンにします。</help>
+        <label><!-- Ordered --></label>
+        <name>SBQQ__Ordered__c</name>
+    </fields>
+    <fields>
+        <help>Salesforce CPQ では、これを使用してこの商談の主見積を指し示します。</help>
+        <label><!-- Primary Quote --></label>
+        <name>SBQQ__PrimaryQuote__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quote Pricebook Id --></label>
+        <name>SBQQ__QuotePricebookId__c</name>
+    </fields>
+    <fields>
+        <help>この商談が更新商談であることを示します。</help>
+        <label><!-- Renewal --></label>
+        <name>SBQQ__Renewal__c</name>
+    </fields>
+    <fields>
+        <help>この更新商談によって更新される契約。複数の契約がこの商談に積み上げ集計されている場合、これは主契約を指し示します。</help>
+        <label><!-- Renewed Contract --></label>
+        <name>SBQQ__RenewedContract__c</name>
+        <relationshipLabel><!-- Renewal Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Contract Value (TCV) --></label>
+        <name>TotalContractValue__c</name>
+    </fields>
+    <fields>
+        <help>この商談の全体的な承認状況</help>
+        <label><!-- Approval Status --></label>
+        <name>sbaa__ApprovalStatus__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>承認済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>待機中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation>取り消し済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>却下済み</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>ネイティブ承認で使用し、この商談が含まれる承認プロセスのステップを示します。</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help>ネイティブ承認者で使用し、商談の承認を担当する承認者を示します。</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Opportunities (Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>ネイティブ承認で使用し、そのステップが承認されたかどうかを示します</help>
+        <label><!-- Step Approved --></label>
+        <name>sbaa__StepApproved__c</name>
+    </fields>
+    <fields>
+        <help>レコードが承認申請された日。</help>
+        <label><!-- Submitted Date --></label>
+        <name>sbaa__SubmittedDate__c</name>
+    </fields>
+    <fields>
+        <help>商談の承認を申請したユーザ</help>
+        <label><!-- Submitted User --></label>
+        <name>sbaa__SubmittedUser__c</name>
+        <relationshipLabel><!-- Opportunities (Submitted User) --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <description><!-- This is a opportunity type for Direct Customers --></description>
+        <label><!-- Direct --></label>
+        <name>Direct</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This is a opportunity for Indirect Customers --></description>
+        <label><!-- Indirect --></label>
+        <name>Indirect</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Contract --></label>
+        <name>SBQQ__Amend_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOrder --></label>
+        <name>SBQQ__CreateOrder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Include_Document --></label>
+        <name>SBQQ__Include_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PreviewApprovals --></label>
+        <name>sbaa__PreviewApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RecallApprovals --></label>
+        <name>sbaa__RecallApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResendRequestEmail --></label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SubmitForApproval --></label>
+        <name>sbaa__SubmitForApproval</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,19 @@
+<apex:page sidebar="true"
+           standardController="Lead"
+           extensions="pi.PardotResourceBaseByUserExtension">
+    <c:FilteredFrame height="600"
+            id="sendPardotEmailIframe"
+            className="sendPardotEmailIframe"
+            filteredFrameName="sendPardotEmailIframe"
+            src="{!pardotBaseUrl}/email/create/prospect_email/{!URLENCODE(Lead.Email)}{!authenticatedQueryStringWithContext}&serverurl={!$Api.Partner_Server_URL_90}&lead_id={!Lead.Id}" width="100%"/>
+    <style type="text/css">
+        td.noSidebarCell {
+            padding: 0px;
+        }
+
+        .sendPardotEmailIframe {
+            border: none;
+        }
+    </style>
+    <apex:includeScript value="{!URLFOR($Resource.pi__LegacyPardot, 'js/send_pardot_email_main.js')}"/>
+</apex:page>

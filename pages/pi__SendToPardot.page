@@ -1,0 +1,5 @@
+<apex:page controller="pi.SendToPardotController">
+  <script>
+      window.history.back();
+  </script>
+</apex:page>

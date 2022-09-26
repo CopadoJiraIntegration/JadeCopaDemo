@@ -2,34 +2,24 @@
 <SecuritySettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <canUsersGrantLoginAccess>true</canUsersGrantLoginAccess>
     <enableAdminLoginAsAnyUser>true</enableAdminLoginAsAnyUser>
-    <enableAuditFieldsInactiveOwner>false</enableAuditFieldsInactiveOwner>
+    <enableAuditFieldsInactiveOwner>true</enableAuditFieldsInactiveOwner>
     <enableAuraSecureEvalPref>true</enableAuraSecureEvalPref>
     <enableCoepHeader>false</enableCoepHeader>
     <enableCoopHeader>false</enableCoopHeader>
     <enableRequireHttpsConnection>true</enableRequireHttpsConnection>
     <networkAccess>
         <ipRanges>
-            <description>Primary</description>
-            <end>104.196.211.229</end>
-            <start>104.196.211.229</start>
+            <description>AndrewDRenewtrak</description>
+            <end>61.68.55.188</end>
+            <start>61.68.55.188</start>
         </ipRanges>
         <ipRanges>
-            <description>Primary</description>
-            <end>35.243.255.155</end>
-            <start>35.243.255.155</start>
-        </ipRanges>
-        <ipRanges>
-            <description>Disaster Recovery</description>
-            <end>35.236.3.65</end>
-            <start>35.236.3.65</start>
-        </ipRanges>
-        <ipRanges>
-            <description>Disaster Recovery</description>
+            <description>Recovery</description>
             <end>35.235.92.254</end>
             <start>35.235.92.254</start>
         </ipRanges>
         <ipRanges>
-            <description>Disaster Recovery</description>
+            <description>Recovery</description>
             <end>34.94.128.245</end>
             <start>34.94.128.245</start>
         </ipRanges>
@@ -78,7 +68,7 @@
         <enforceIpRangesEveryRequest>false</enforceIpRangesEveryRequest>
         <enforceUserDeviceRevoked>false</enforceUserDeviceRevoked>
         <forceLogoutOnSessionTimeout>true</forceLogoutOnSessionTimeout>
-        <forceRelogin>true</forceRelogin>
+        <forceRelogin>false</forceRelogin>
         <hasRetainedLoginHints>false</hasRetainedLoginHints>
         <hasUserSwitching>true</hasUserSwitching>
         <identityConfirmationOnEmailChange>false</identityConfirmationOnEmailChange>

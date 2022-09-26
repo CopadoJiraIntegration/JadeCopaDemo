@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Api Version --></label>
+        <name>SFDocumentor__ApiVersion__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field represent total count of apex class has been updated or altered which will help you to analyze on which class most of the work have happened. --></help>
+        <label><!-- BodyCrc --></label>
+        <name>SFDocumentor__BodyCrc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Id --></label>
+        <name>SFDocumentor__Class_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>SFDocumentor__CreatedBy__c</name>
+        <relationshipLabel><!-- Apex Class Collections (Created By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>SFDocumentor__CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created by Name --></label>
+        <name>SFDocumentor__Created_by_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SFDocumentor__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsActive? --></label>
+        <name>SFDocumentor__IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Valid --></label>
+        <name>SFDocumentor__IsValid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Without Comments --></label>
+        <name>SFDocumentor__Is_Without_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By --></label>
+        <name>SFDocumentor__LastModifiedBy__c</name>
+        <relationshipLabel><!-- Apex Class Collections (Last Modified By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>SFDocumentor__LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SFDoc Sync Date --></label>
+        <name>SFDocumentor__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length Without Comments --></label>
+        <name>SFDocumentor__LengthWithoutComments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setup Link/URL --></label>
+        <name>SFDocumentor__Link_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link --></label>
+        <name>SFDocumentor__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Namespace Prefix --></label>
+        <name>SFDocumentor__NamespacePrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDoc Description --></label>
+        <name>SFDocumentor__SFDocumentorDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>SFDocumentor__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- SystemModstamp --></label>
+        <name>SFDocumentor__SystemModstamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Class Length --></label>
+        <name>SFDocumentor__Total_Class_Length__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Export --></label>
+        <name>SFDocumentor__Export</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Metadatos de columna</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metadatos de columnas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Column Validation --></label>
+        <name>SBQQ__ColumnValidation__c</name>
+    </fields>
+    <fields>
+        <help>El tamaño de la columna para el campo correspondiente. El valor predeterminado es 150 px.</help>
+        <label><!-- Field Column Size --></label>
+        <name>SBQQ__FieldColumnSize__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>SBQQ__FieldName__c</name>
+    </fields>
+    <fields>
+        <help>Relación de metadatos de conjunto de campos.</help>
+        <label><!-- FieldSet Metadata --></label>
+        <name>SBQQ__FieldSetMetadata__c</name>
+        <relationshipLabel><!-- Columns Metadata --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Número de metadatos de columna</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Field Column Size cannot be less than 67. --></errorMessage>
+        <name>SBQQ__ValidateMinimumPixelSize</name>
+    </validationRules>
+</CustomObjectTranslation>

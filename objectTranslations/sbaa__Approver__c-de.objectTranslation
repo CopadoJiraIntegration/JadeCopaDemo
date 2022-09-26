@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Genehmiger</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Genehmiger</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmiger --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmiger --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmiger --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmiger --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmiger --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmiger --></value>
+    </caseValues>
+    <fields>
+        <help>Wird mit &quot;Dynamische Genehmigungen&quot; verwendet; Nachschlagefeld für den Genehmiger, der der Delegierte für diesen Genehmiger ist</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegating Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Mit dem delegierten Genehmiger verknüpfter Benutzer</help>
+        <label><!-- Delegated User Id --></label>
+        <name>sbaa__DelegatedUserId__c</name>
+    </fields>
+    <fields>
+        <help>Datum, an dem die Genehmigungsdelegierung endet</help>
+        <label><!-- Delegation End --></label>
+        <name>sbaa__DelegationEnd__c</name>
+    </fields>
+    <fields>
+        <help>Datum, an dem die Genehmigungsdelegierung beginnt</help>
+        <label><!-- Delegation Start --></label>
+        <name>sbaa__DelegationStart__c</name>
+    </fields>
+    <fields>
+        <help>Wenn &quot;Genehmiger&quot; eine Gruppe und kein Einzelbenutzer ist, geben Sie hier die Gruppen-ID an</help>
+        <label><!-- Group ID --></label>
+        <name>sbaa__GroupId__c</name>
+    </fields>
+    <fields>
+        <help>Genehmiger, dessen Genehmigung benötigt wird, nachdem dieser Genehmiger zugestimmt hat.</help>
+        <label><!-- Next Approver --></label>
+        <name>sbaa__NextApprover__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Wenn &quot;Genehmiger&quot; eine Gruppe ist, wird diese Option aktiviert, wenn alle Gruppenmitglieder zustimmen müssen, damit die Genehmigung den Status &quot;Genehmigt&quot; erhält</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagefeld für den Benutzer, sofern &quot;Genehmiger&quot; ein Einzelbenutzer ist</help>
+        <label><!-- User --></label>
+        <name>sbaa__User__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Genehmigername</nameFieldLabel>
+    <webLinks>
+        <label><!-- Replace --></label>
+        <name>sbaa__Replace</name>
+    </webLinks>
+</CustomObjectTranslation>

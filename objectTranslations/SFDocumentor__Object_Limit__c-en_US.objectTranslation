@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- EntityDefinitionId --></label>
+        <name>SFDocumentor__EntityDefinitionId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit Id --></label>
+        <name>SFDocumentor__Limit_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max --></label>
+        <name>SFDocumentor__Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>SFDocumentor__Object_Name__c</name>
+        <relationshipLabel><!-- Object Limits --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Remaining --></label>
+        <name>SFDocumentor__Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>SFDocumentor__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- USAGE --></label>
+        <name>SFDocumentor__USAGE__c</name>
+    </fields>
+    <fields>
+        <label><!-- % USED --></label>
+        <name>SFDocumentor__USED__c</name>
+    </fields>
+    <fields>
+        <label><!-- testNo --></label>
+        <name>SFDocumentor__testNo__c</name>
+    </fields>
+</CustomObjectTranslation>

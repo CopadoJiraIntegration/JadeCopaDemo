@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued For Group Calculation</fullName>
+        <default>false</default>
+        <label>Queued For Group Calculation</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued For Subtotal Calculation</fullName>
+        <default>false</default>
+        <label>Queued For Subtotal Calculation</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued For Invoice</fullName>
+        <default>false</default>
+        <label>Queued For Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Processed</fullName>
+        <default>false</default>
+        <label>Processed</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </customValue>
+    <customValue>
+        <fullName>Processed - No Invoice Generated</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Processed - No Invoice Generated</label>
+    </customValue>
+    <customValue>
+        <fullName>Processing For Invoice</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Processing For Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoices Generated</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Invoices Generated</label>
+    </customValue>
+    <customValue>
+        <fullName>Processed - Invoice Generated</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Processed - Invoice Generated</label>
+    </customValue>
+    <masterLabel>Usage Summary Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

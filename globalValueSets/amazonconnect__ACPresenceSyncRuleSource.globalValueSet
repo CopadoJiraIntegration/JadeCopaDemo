@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>connectAgentStateChange</fullName>
+        <default>true</default>
+        <label>Connect Agent State Change</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceAgentStateChange</fullName>
+        <default>false</default>
+        <label>Salesforce Agent State Change</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceAgentLogout</fullName>
+        <default>false</default>
+        <label>Salesforce Agent Logout</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceWorkAccepted</fullName>
+        <default>false</default>
+        <label>Salesforce Work Accepted</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceWorkClosed</fullName>
+        <default>false</default>
+        <label>Salesforce Work Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>salesforceWorkloadChanged</fullName>
+        <default>false</default>
+        <label>Salesforce Workload Changed</label>
+    </customValue>
+    <masterLabel>AC_PresenceSyncRuleSource</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

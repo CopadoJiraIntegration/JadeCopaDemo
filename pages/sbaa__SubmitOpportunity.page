@@ -1,0 +1,24 @@
+<apex:page standardController="Opportunity" extensions="sbaa.OpportunityExtController" sidebar="false" standardStylesheets="false" title="{!$Label.sbaa__lbl_submit_for_approval}">
+	<apex:stylesheet value="{!$Resource['sb']}"/>
+	<style>
+		body .pbBody {
+			background-color: #F8F8F8 !important;
+		}
+	</style>
+	<apex:pageMessages id="err"/>
+	<apex:form id="form">
+		<div id="sbSubmitOpportunity" class="sb">
+			<c:pageHeader title="{!$Label.sbaa__lbl_submit_for_approval}" subtitle="{!opportunityName}" formFactor="desktop" iconName="sf-icon-approval">
+				<div class="sbButtons">
+					<apex:commandButton styleClass="sbBtn" value="{!$Label.sbaa__lbl_submit_for_approval}" action="{!onSubmit}" rerender="form, err" onClick="this.disabled=true;"/>
+					<apex:commandButton styleClass="sbBtn" value="{!$Label.sbaa__lbl_cancel}" action="{!onCancel}"/>
+				</div>
+			</c:pageHeader>
+		</div>
+		<apex:pageBlock mode="maindetail">
+			<apex:pageBlockSection columns="1" showHeader="false">
+				<apex:outputText value="{!SubmitApprovalBodyText}"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>
