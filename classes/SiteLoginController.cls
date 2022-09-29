@@ -7,6 +7,7 @@ global with sharing class SiteLoginController {
 
     global PageReference login() {
         String startUrl = System.currentPageReference().getParameters().get('startURL');
+        System.debug('--test---');
         return Site.login(username, password, startUrl);
     }
     
