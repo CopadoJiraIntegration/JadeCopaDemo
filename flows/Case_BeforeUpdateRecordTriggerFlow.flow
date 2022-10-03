@@ -76,7 +76,8 @@
         <expression>{!$Flow.CurrentDateTime}</expression>
     </formulas>
     <formulas>
-        <name>FirstResolutionTimeCategory</name>
+        <description>To calculate the first response category based on the difference of the time between the first response and the opened case date.</description>
+        <name>FirstResponseTimeCategory</name>
         <dataType>String</dataType>
         <expression>IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &lt; 60, &apos;3&apos;,  IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &gt;= 60 &amp;&amp; FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &lt;= 240, &apos;2&apos;, IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*1440) &gt; 240, &apos;1&apos;, NULL)))</expression>
     </formulas>
@@ -119,6 +120,12 @@
                 <elementReference>currentTime</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>First_Response_time_Categories__c</field>
+            <value>
+                <elementReference>FirstResponseTimeCategory</elementReference>
+            </value>
+        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -128,15 +135,15 @@
         <locationX>314</locationX>
         <locationY>551</locationY>
         <inputAssignments>
-            <field>First_Resolution_time_Categories__c</field>
-            <value>
-                <elementReference>FirstResolutionTimeCategory</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>First_Response_Time__c</field>
             <value>
                 <elementReference>currentTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>First_Response_time_Categories__c</field>
+            <value>
+                <elementReference>FirstResponseTimeCategory</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>

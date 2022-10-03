@@ -288,6 +288,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Customer_Satisfaction__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Satisfaction</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ManagerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>

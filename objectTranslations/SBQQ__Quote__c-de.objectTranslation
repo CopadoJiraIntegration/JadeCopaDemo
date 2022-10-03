@@ -950,6 +950,10 @@
         <label><!-- Save Payment Method --></label>
         <name>dfscpq__SavePaymentMethod__c</name>
     </fields>
+    <fields>
+        <label><!-- is Approved --></label>
+        <name>is_Approved__c</name>
+    </fields>
     <gender>Neuter</gender>
     <nameFieldLabel>Angebotsnummer</nameFieldLabel>
     <validationRules>

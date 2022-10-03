@@ -7,5 +7,6 @@
     <label>LightningInstrumentation</label>
     <navType>Standard</navType>
     <tabs>standard-LightningInstrumentation</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

@@ -314,6 +314,11 @@
             <field>Has_Prime_Support__c</field>
             <table>Account</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IsActive__c</field>
+            <table>Account</table>
+        </columns>
         <masterLabel>Accounts</masterLabel>
     </sections>
     <sections>
@@ -651,6 +656,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Rebate_Amount__c</field>
+            <table>Account.Opportunities.OpportunityLineItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Recommendation__c</field>
             <table>Account.Opportunities.OpportunityLineItems</table>
         </columns>
         <masterLabel>Opportunity Product</masterLabel>

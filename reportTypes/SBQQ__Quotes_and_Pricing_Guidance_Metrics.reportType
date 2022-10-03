@@ -1202,6 +1202,11 @@
             <field>Business_Profile__c</field>
             <table>SBQQ__Quote__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>is_Approved__c</field>
+            <table>SBQQ__Quote__c</table>
+        </columns>
         <masterLabel>Quotes</masterLabel>
     </sections>
 </ReportType>

@@ -10,8 +10,12 @@
     <tabs>standard-CmsChannel</tabs>
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>Job_Requisition__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>
         </mappings>

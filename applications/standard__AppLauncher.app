@@ -7,4 +7,5 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <tabs>standard-AppLauncher</tabs>
     <tabs>standard-Quote</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

@@ -23,4 +23,5 @@
     <tabs>blng__RevenueRecognitionTreatment__c</tabs>
     <tabs>blng__RevenueDistributionMethod__c</tabs>
     <tabs>blng__PaymentGateway__c</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

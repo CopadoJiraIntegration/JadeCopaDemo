@@ -310,6 +310,15 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Invoice_Posted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will be checked if there is any posted invoice present for the order.</description>
+        <externalId>false</externalId>
+        <label>Invoice Posted</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IsReductionOrder</fullName>
     </fields>
     <fields>

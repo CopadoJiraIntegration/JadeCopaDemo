@@ -548,5 +548,6 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Forecasting3</tabs>
     <tabs>standard-Quote</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

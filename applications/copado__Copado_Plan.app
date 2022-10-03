@@ -19,4 +19,5 @@
     <tabs>copado__Team__c</tabs>
     <tabs>copado__Sprint__c</tabs>
     <tabs>copado__Kanban_Board__c</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

@@ -10,5 +10,6 @@
     <tabs>standard-OtherUserProfile</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Aloha</uiType>
 </CustomApplication>

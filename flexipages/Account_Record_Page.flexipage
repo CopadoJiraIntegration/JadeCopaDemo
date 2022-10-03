@@ -282,6 +282,12 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <componentName>runtime_sales_insights:accountInsightsContainer</componentName>
+                <identifier>runtime_sales_insights_accountInsightsContainer3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>sidebartabs</value>

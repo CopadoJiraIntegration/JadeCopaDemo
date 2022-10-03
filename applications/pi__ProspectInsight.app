@@ -20,4 +20,5 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Document</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

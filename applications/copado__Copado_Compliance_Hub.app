@@ -18,4 +18,5 @@
     <tabs>copado__Git_Backup__c</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

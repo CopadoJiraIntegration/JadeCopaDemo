@@ -15325,6 +15325,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.IsActive__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.IsExcludedFromRealign</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -15386,6 +15391,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.ReadytobeSynced__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Renewal_Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16750,11 +16760,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Case.First_Resolution_time_Categories__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Case.First_Respond_Time__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -16765,7 +16770,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.First_Response_Time_Min__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.First_Response_Time__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.First_Response_time_Categories__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17569,6 +17584,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contract.Contract_Expired__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contract.Contract_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Contract.CustomerSignedDate</field>
         <readable>true</readable>
@@ -18290,6 +18315,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Lead_Age__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.MobilePhone</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -18754,6 +18784,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>OpportunityLineItem.Customer_Recommendation__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>OpportunityLineItem.Description</field>
         <readable>true</readable>
@@ -18891,6 +18926,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Order.ERPSystem__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order.Invoice_Posted__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -24935,6 +24975,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SBQQ__Quote__c.is_Approved__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SBQQ__RecordJob__c.SBQQ__IsRead__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -30420,6 +30465,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>User.Customer_Satisfaction__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>User.SBQQ__DefaultProductLookupTab__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -35239,6 +35289,9 @@
         <layout>CampaignMember-Campaign Member Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Candidate__c-Candidate Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Case-Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -35348,6 +35401,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Individual-Individual Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Job_Application__c-Job Application Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Job_Requisition__c-Job Requisition Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Lead-Lead Layout</layout>
@@ -37734,6 +37793,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>JCONV__Conversion_Summary_Details</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Job_Requisition__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

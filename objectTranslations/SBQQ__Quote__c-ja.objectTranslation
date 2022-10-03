@@ -914,6 +914,10 @@
         <label><!-- Save Payment Method --></label>
         <name>dfscpq__SavePaymentMethod__c</name>
     </fields>
+    <fields>
+        <label><!-- is Approved --></label>
+        <name>is_Approved__c</name>
+    </fields>
     <nameFieldLabel>見積番号</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- The End Date must come after the Start Date. --></errorMessage>

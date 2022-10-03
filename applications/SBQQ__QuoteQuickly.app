@@ -28,4 +28,5 @@
     <tabs>sbaa__ApprovalRule__c</tabs>
     <tabs>sbaa__ApprovalVariable__c</tabs>
     <tabs>sbaa__Approver__c</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

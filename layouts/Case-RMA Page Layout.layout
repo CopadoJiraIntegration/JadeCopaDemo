@@ -97,7 +97,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>First_Resolution_time_Categories__c</field>
+                <field>First_Response_time_Categories__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -275,11 +275,6 @@
             <sortOrder>13</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Case.Create_Dispute_Case</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>28</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Clone</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>26</sortOrder>
@@ -288,6 +283,11 @@
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>27</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.Create_Dispute_Case</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>28</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>

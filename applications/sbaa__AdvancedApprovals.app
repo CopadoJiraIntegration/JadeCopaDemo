@@ -15,4 +15,5 @@
     <tabs>sbaa__ApprovalVariable__c</tabs>
     <tabs>sbaa__EmailTemplate__c</tabs>
     <tabs>standard-report</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

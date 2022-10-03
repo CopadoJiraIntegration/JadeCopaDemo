@@ -83,6 +83,10 @@
                 <behavior>Edit</behavior>
                 <field>Has_Prime_Support__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>IsActive__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

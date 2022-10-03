@@ -420,9 +420,61 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>First_Resolution_time_Categories__c</fullName>
+        <fullName>First_Respond_Time__c</fullName>
         <externalId>false</externalId>
-        <label>First Resolution time Categories</label>
+        <label>First Responded Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Response_Time_In_Min__c</fullName>
+        <externalId>false</externalId>
+        <formula>FLOOR((First_Response_Time__c - CreatedDate)*1440)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>First Response Time (In Min)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Response_Time_Min__c</fullName>
+        <externalId>false</externalId>
+        <formula>FLOOR((First_Response_Time__c - CreatedDate)*1440)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>First Response Time (Min)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Response_Time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field displays when was the first response added by the agent on case</inlineHelpText>
+        <label>First Response Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>First_Response_time_Categories__c</fullName>
+        <externalId>false</externalId>
+        <label>First Response time Categories</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -449,42 +501,6 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>First_Respond_Time__c</fullName>
-        <externalId>false</externalId>
-        <label>First Responded Time</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>First_Response_Time_In_Min__c</fullName>
-        <externalId>false</externalId>
-        <formula>TEXT(FLOOR((First_Response_Time__c - CreatedDate)*1440))</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>First Response Time (In Min)</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>First_Response_Time__c</fullName>
-        <externalId>false</externalId>
-        <inlineHelpText>This field displays when was the first response added by the agent on case</inlineHelpText>
-        <label>First Response Time</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>DateTime</type>
     </fields>
     <fields>
         <fullName>IsClosedOnCreate</fullName>
@@ -758,7 +774,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>First_Resolution_time_Categories__c</picklist>
+            <picklist>First_Response_time_Categories__c</picklist>
             <values>
                 <fullName>1</fullName>
                 <default>false</default>
@@ -918,7 +934,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>First_Resolution_time_Categories__c</picklist>
+            <picklist>First_Response_time_Categories__c</picklist>
             <values>
                 <fullName>1</fullName>
                 <default>false</default>
@@ -1038,7 +1054,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>First_Resolution_time_Categories__c</picklist>
+            <picklist>First_Response_time_Categories__c</picklist>
             <values>
                 <fullName>1</fullName>
                 <default>false</default>

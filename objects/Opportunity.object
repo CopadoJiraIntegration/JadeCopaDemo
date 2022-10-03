@@ -671,6 +671,7 @@
         <columns>OPPORTUNITY.AMOUNT</columns>
         <columns>OPPORTUNITY.CLOSE_DATE</columns>
         <columns>OPPORTUNITY.RECORDTYPE</columns>
+        <columns>OPPORTUNITY_SCORE</columns>
         <columns>OPPORTUNITY.STAGE_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>OPPORTUNITY.CREATED_DATE</columns>

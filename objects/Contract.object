@@ -281,6 +281,44 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>Contract_Expired__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( SBQQ__ExpirationDate__c &gt; Today(),FALSE, TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Expired</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Renewed</fullName>
+                    <default>false</default>
+                    <label>Renewed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>CurrencyIsoCode</fullName>
         <trackHistory>true</trackHistory>
     </fields>

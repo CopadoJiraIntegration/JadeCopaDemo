@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MLDataDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>mldd_FirstModel_1664521425014_v0</developerName>
+    <entityDeveloperName>Opportunity</entityDeveloperName>
+    <parentDefinitionDevName>mlpd_FirstModel_1664521394659_v0</parentDefinitionDevName>
+    <type>Prediction</type>
+</MLDataDefinition>

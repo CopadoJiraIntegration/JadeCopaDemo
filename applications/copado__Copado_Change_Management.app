@@ -32,4 +32,5 @@
     <tabs>copado__Burndown_Item__c</tabs>
     <tabs>copado__Application__c</tabs>
     <tabs>copado__Application_Feature__c</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

@@ -14,4 +14,5 @@
     <tabs>SBQQ__Quote__c</tabs>
     <tabs>SBQQ__QuoteTemplate__c</tabs>
     <tabs>SBQQ__TemplateContent__c</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

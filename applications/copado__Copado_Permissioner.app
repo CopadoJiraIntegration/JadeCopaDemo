@@ -9,4 +9,5 @@
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__Persona__c</tabs>
     <tabs>copado__Permission_Set_Explorer</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

@@ -42,6 +42,10 @@
         <name>Has_Prime_Support__c</name>
     </fields>
     <fields>
+        <label><!-- Active --></label>
+        <name>IsActive__c</name>
+    </fields>
+    <fields>
         <label><!-- Last Sync Date --></label>
         <name>LastSyncDate__c</name>
     </fields>
@@ -77,6 +81,18 @@
         <help><!-- This is field which will determine if the Account is ready to be synced with NS or Oracle Cloud --></help>
         <label><!-- Ready to be Synced --></label>
         <name>ReadytobeSynced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Status --></label>
+        <name>Renewal_Status__c</name>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewed</masterLabel>
+            <translation><!-- Renewed --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help>Opção para combinar as quantidades de vários ativos para o mesmo produto em uma linha quando a cotação de renovação é gerada.</help>

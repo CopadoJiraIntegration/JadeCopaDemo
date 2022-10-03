@@ -116,7 +116,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>First_Resolution_time_Categories__c</field>
+                <field>First_Response_time_Categories__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

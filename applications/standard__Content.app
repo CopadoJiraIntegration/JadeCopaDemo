@@ -9,4 +9,5 @@
     <tabs>standard-Workspace</tabs>
     <tabs>standard-ContentSearch</tabs>
     <tabs>standard-ContentSubscriptions</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

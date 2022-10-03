@@ -18,5 +18,6 @@
     <tabs>standard-Forecasting3</tabs>
     <tabs>standard-Quote</tabs>
     <tabs>standard-WaveHome</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Aloha</uiType>
 </CustomApplication>

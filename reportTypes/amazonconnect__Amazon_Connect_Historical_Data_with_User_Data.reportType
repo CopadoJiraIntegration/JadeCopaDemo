@@ -355,6 +355,11 @@
             <field>Allow_Global_Filter__c</field>
             <table>User</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Satisfaction__c</field>
+            <table>User</table>
+        </columns>
         <masterLabel>Users</masterLabel>
     </sections>
     <sections>

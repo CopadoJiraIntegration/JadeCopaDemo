@@ -64,6 +64,10 @@
                 <behavior>Edit</behavior>
                 <field>Original_Order__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Contract_Expired__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

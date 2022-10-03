@@ -17,6 +17,26 @@
         <name>ChurnRate__c</name>
     </fields>
     <fields>
+        <label><!-- Contract Expired --></label>
+        <name>Contract_Expired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Status --></label>
+        <name>Contract_Status__c</name>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewed</masterLabel>
+            <translation><!-- Renewed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Monthly Recurring Revenue (MRR) --></label>
         <name>MonthlyRecurringRevenue__c</name>
     </fields>

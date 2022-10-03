@@ -1844,21 +1844,21 @@
     </validationRules>
     <validationRules>
         <fullName>blng__BIllingRuleMustBeSelected</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Billing Rule must be selected</description>
         <errorConditionFormula>AND(OR(ISNEW(), AND (ISCHANGED(SBQQ__Activated__c), SBQQ__Activated__c)), ISBLANK(blng__BillingRule__c))</errorConditionFormula>
         <errorMessage>Billing Rule must be selected</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>blng__RevenueRecognitionRuleMustBeSelected</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Revenue Recognition Rule must be selected</description>
         <errorConditionFormula>AND(OR(ISNEW(), AND (ISCHANGED(SBQQ__Activated__c), SBQQ__Activated__c)), ISBLANK(blng__RevenueRecognitionRule__c))</errorConditionFormula>
         <errorMessage>Revenue Recognition Rule must be selected</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>blng__TaxRuleMustBeSelected</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Tax Rule must be selected</description>
         <errorConditionFormula>AND(OR(ISNEW(), AND (ISCHANGED(SBQQ__Activated__c), SBQQ__Activated__c)), ISBLANK(blng__TaxRule__c))</errorConditionFormula>
         <errorMessage>Tax Rule must be selected</errorMessage>

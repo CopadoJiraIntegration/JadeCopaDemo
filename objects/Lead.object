@@ -454,6 +454,20 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Lead_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*IF(IsConverted,ConvertedDate - DATEVALUE(CreatedDate), TODAY() - DATEVALUE(CreatedDate))*/
+
+TODAY() - DATEVALUE( CreatedDate )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>MobilePhone</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>

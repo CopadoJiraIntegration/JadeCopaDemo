@@ -175,6 +175,17 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Customer_Recommendation__c</fullName>
+        <defaultValue>5</defaultValue>
+        <externalId>false</externalId>
+        <label>Customer Recommendation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
     </fields>
     <fields>

@@ -16,5 +16,6 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-WaveHome</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Aloha</uiType>
 </CustomApplication>

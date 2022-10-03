@@ -371,6 +371,15 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This indicates lost Account with Record type as Customer</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IsCustomerPortal</fullName>
     </fields>
     <fields>
@@ -497,6 +506,29 @@
         <label>Ready to be Synced</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Renewed</fullName>
+                    <default>false</default>
+                    <label>Renewed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SBQQ__AssetQuantitiesCombined__c</fullName>
@@ -1042,6 +1074,16 @@
         </filters>
         <label>New This Week</label>
     </listViews>
+    <listViews>
+        <fullName>Reseller_accounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <label>Reseller accounts</label>
+    </listViews>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
         <fullName>Customer</fullName>
@@ -1298,6 +1340,17 @@
             </values>
             <values>
                 <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Status__c</picklist>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewed</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1758,6 +1811,17 @@
             </values>
             <values>
                 <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Status__c</picklist>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewed</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -2226,6 +2290,17 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Renewal_Status__c</picklist>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>SBQQ__CoTerminationEvent__c</picklist>
             <values>
                 <fullName>Add-on</fullName>
@@ -2690,6 +2765,17 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Renewal_Status__c</picklist>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>SBQQ__CoTerminationEvent__c</picklist>
             <values>
                 <fullName>Add-on</fullName>
@@ -3150,6 +3236,17 @@
             </values>
             <values>
                 <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Status__c</picklist>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewed</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

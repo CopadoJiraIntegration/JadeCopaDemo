@@ -49,9 +49,13 @@
     <tabs>standard-LightningQuickText</tabs>
     <tabs>standard-Survey</tabs>
     <tabs>standard-OmniSupervisorLightning</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>PreconfiguredLightningServiceConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Job_Requisition__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

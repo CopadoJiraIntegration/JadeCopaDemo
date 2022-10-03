@@ -9,6 +9,10 @@
         <name>Allow_Global_Filter__c</name>
     </fields>
     <fields>
+        <label><!-- Customer Satisfaction --></label>
+        <name>Customer_Satisfaction__c</name>
+    </fields>
+    <fields>
         <help>[商品ルックアップ] ページのデフォルトのタブをカスタマイズします。</help>
         <label><!-- Default Product Lookup Tab --></label>
         <name>SBQQ__DefaultProductLookupTab__c</name>

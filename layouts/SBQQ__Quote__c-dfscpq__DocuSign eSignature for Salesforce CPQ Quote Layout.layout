@@ -8,7 +8,6 @@
     <customButtons>SBQQ__RefreshPrices</customButtons>
     <customButtons>SBQQ__ImportLines</customButtons>
     <customButtons>SBQQ__ModifyQuoteTerms</customButtons>
-    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>false</detailHeading>
@@ -109,6 +108,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Business_Profile__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>is_Approved__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -528,6 +531,14 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Favorites__c.Original_Quote__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CreatedDate</fields>
+        <fields>StepStatus</fields>
+        <fields>OriginalActor</fields>
+        <fields>Actor</fields>
+        <fields>Comments</fields>
+        <relatedList>RelatedProcessHistoryList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

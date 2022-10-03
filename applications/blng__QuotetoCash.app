@@ -35,4 +35,5 @@
     <tabs>standard-ConsumptionSchedule</tabs>
     <tabs>blng__PaymentGateway__c</tabs>
     <tabs>blng__PaymentMethod__c</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

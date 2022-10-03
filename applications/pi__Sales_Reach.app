@@ -11,4 +11,5 @@
     <tabs>standard-Contact</tabs>
     <tabs>pi__Lead_Deck</tabs>
     <tabs>pi__Sales_Edge_Reports</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

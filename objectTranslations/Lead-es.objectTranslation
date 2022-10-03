@@ -5,6 +5,10 @@
         <name>ERPSystem__c</name>
     </fields>
     <fields>
+        <label><!-- Lead Age --></label>
+        <name>Lead_Age__c</name>
+    </fields>
+    <fields>
         <label><!-- Needs Score Synced --></label>
         <name>pi__Needs_Score_Synced__c</name>
     </fields>

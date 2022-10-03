@@ -910,6 +910,10 @@
         <label><!-- Save Payment Method --></label>
         <name>dfscpq__SavePaymentMethod__c</name>
     </fields>
+    <fields>
+        <label><!-- is Approved --></label>
+        <name>is_Approved__c</name>
+    </fields>
     <validationRules>
         <errorMessage><!-- The End Date must come after the Start Date. --></errorMessage>
         <name>SBQQ__End_Date_Before_Start_Date</name>

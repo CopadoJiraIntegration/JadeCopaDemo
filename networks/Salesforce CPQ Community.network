@@ -28,37 +28,37 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
-        <permissionSet>SBQQ__SteelBrickCPQPartnerUser</permissionSet>
         <permissionSet>SBQQ__SteelBrickCPQUser</permissionSet>
-        <permissionSet>SBQQ__SteelBrickCPQCustomerUser</permissionSet>
         <permissionSet>SBQQ__SteelBrickCPQAdmin</permissionSet>
+        <permissionSet>SBQQ__SteelBrickCPQCustomerUser</permissionSet>
         <permissionSet>blng__SalesforceBillingAdmin</permissionSet>
-        <permissionSet>sbaa__AdvancedApprovalsUser</permissionSet>
+        <permissionSet>SBQQ__SteelBrickCPQPartnerUser</permissionSet>
         <permissionSet>sbaa__AdvancedApprovalsAdmin</permissionSet>
+        <permissionSet>sbaa__AdvancedApprovalsUser</permissionSet>
         <permissionSet>acslider__Image_Slider_User</permissionSet>
         <permissionSet>blng__HostedPaymentUser</permissionSet>
         <permissionSet>csblng__CyberSourceAdmin</permissionSet>
+        <permissionSet>SBQQ__SalesforceCPQCustomerUserAccess</permissionSet>
         <permissionSet>CustomerPrices</permissionSet>
         <permissionSet>dsfs__DocuSign_Administrator</permissionSet>
         <permissionSet>dsfs__DocuSign_Sender</permissionSet>
         <permissionSet>dsfs__DocuSign_User</permissionSet>
         <permissionSet>dfscpq__DocuSign_CPQ_Administrator</permissionSet>
         <permissionSet>dfscpq__DocuSign_CPQ_Sender</permissionSet>
-        <permissionSet>SBQQ__SalesforceCPQCustomerUserAccess</permissionSet>
         <permissionSet>SBQQ__SalesforceCPQUserAccess</permissionSet>
         <profile>admin</profile>
-        <profile>partner community login user</profile>
         <profile>partner community user</profile>
-        <profile>demo partner community user</profile>
+        <profile>partner community login user</profile>
         <profile>demo partner community login user</profile>
-        <profile>custom - partner community user</profile>
+        <profile>demo partner community user</profile>
         <profile>custom - partner channel representative</profile>
-        <profile>customer community plus login user</profile>
-        <profile>external identity user</profile>
-        <profile>customer community user</profile>
+        <profile>custom - partner community user</profile>
         <profile>customer community login user</profile>
-        <profile>high volume customer portal user</profile>
+        <profile>customer community plus login user</profile>
         <profile>customer community plus user</profile>
+        <profile>customer community user</profile>
+        <profile>high volume customer portal user</profile>
+        <profile>external identity user</profile>
         <profile>company communities user</profile>
         <profile>customer portal profile</profile>
     </networkMemberGroups>

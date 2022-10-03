@@ -15,4 +15,5 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contract</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

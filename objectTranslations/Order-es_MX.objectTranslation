@@ -13,6 +13,10 @@
         <name>ERPSystem__c</name>
     </fields>
     <fields>
+        <label><!-- Invoice Posted --></label>
+        <name>Invoice_Posted__c</name>
+    </fields>
+    <fields>
         <label><!-- Last Sync Date --></label>
         <name>LastSyncDate__c</name>
     </fields>

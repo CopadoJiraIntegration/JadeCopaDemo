@@ -17,5 +17,6 @@
     <tabs>standard-Task</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-CollaborationGroup</tabs>
+    <tabs>Job_Requisition__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

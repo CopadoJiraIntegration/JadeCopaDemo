@@ -17,6 +17,10 @@
         <name>ChurnRate__c</name>
     </fields>
     <fields>
+        <label><!-- Customer Recommendation --></label>
+        <name>Customer_Recommendation__c</name>
+    </fields>
+    <fields>
         <label><!-- Monthly Recurring Revenue (MRR) --></label>
         <name>MonthlyRecurringRevenue__c</name>
     </fields>

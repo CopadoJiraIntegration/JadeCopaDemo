@@ -46,8 +46,25 @@
         <name>First_Call_Closure__c</name>
     </fields>
     <fields>
-        <label><!-- First Resolution time Categories --></label>
-        <name>First_Resolution_time_Categories__c</name>
+        <label><!-- First Responded Time --></label>
+        <name>First_Respond_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Response Time (In Min) --></label>
+        <name>First_Response_Time_In_Min__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Response Time (Min) --></label>
+        <name>First_Response_Time_Min__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field displays when was the first response added by the agent on case --></help>
+        <label><!-- First Response Time --></label>
+        <name>First_Response_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Response time Categories --></label>
+        <name>First_Response_time_Categories__c</name>
         <picklistValues>
             <masterLabel>1-4 Hours</masterLabel>
             <translation><!-- 1-4 Hours --></translation>
@@ -60,19 +77,6 @@
             <masterLabel>More than 4 Hours</masterLabel>
             <translation><!-- More than 4 Hours --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- First Responded Time --></label>
-        <name>First_Respond_Time__c</name>
-    </fields>
-    <fields>
-        <label><!-- First Response Time (In Min) --></label>
-        <name>First_Response_Time_In_Min__c</name>
-    </fields>
-    <fields>
-        <help><!-- This field displays when was the first response added by the agent on case --></help>
-        <label><!-- First Response Time --></label>
-        <name>First_Response_Time__c</name>
     </fields>
     <fields>
         <label><!-- Order --></label>

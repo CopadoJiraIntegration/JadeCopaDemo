@@ -6,4 +6,5 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <tabs>standard-Chatter</tabs>
+    <tabs>Job_Requisition__c</tabs>
 </CustomApplication>

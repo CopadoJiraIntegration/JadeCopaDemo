@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AutomatedContactsSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableAddContactAutomatically>false</enableAddContactAutomatically>
-    <enableAddContactRoleWithSuggestion>false</enableAddContactRoleWithSuggestion>
+    <enableAddContactRoleAutomatically>false</enableAddContactRoleAutomatically>
+    <enableAddContactRoleWithSuggestion>true</enableAddContactRoleWithSuggestion>
     <enableAddContactWithSuggestion>true</enableAddContactWithSuggestion>
 </AutomatedContactsSettings>

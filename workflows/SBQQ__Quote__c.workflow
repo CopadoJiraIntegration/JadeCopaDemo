@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldUpdates>
+        <fullName>Approval_Status</fullName>
+        <field>ApprovalStatus__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Time_Capture</fullName>
+        <field>CompletedDate__c</field>
+        <formula>NOW()</formula>
+        <name>Approval Time Capture</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Capture_Approval_Submitted_time</fullName>
+        <field>SubmittedDate__c</field>
+        <formula>NOW()</formula>
+        <name>Capture Approval Submitted time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Capture_Recall_Status</fullName>
+        <field>ApprovalStatus__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Capture Recall Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quote_approval_time_capture</fullName>
+        <field>CompletedDate__c</field>
+        <formula>NOW()</formula>
+        <name>Quote approval time capture</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Set_Quote_Process_Id</fullName>
         <description>Set Quote Process id on Quote</description>
         <field>SBQQ__QuoteProcessId__c</field>
@@ -8,6 +58,16 @@
         <name>Set Quote Process Id</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status</fullName>
+        <field>ApprovalStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
@@ -36,6 +96,16 @@
         <field>SBQQ__Status__c</field>
         <literalValue>Rejected</literalValue>
         <name>Update Quote Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Rejection_Status</fullName>
+        <field>ApprovalStatus__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Rejection Status</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
