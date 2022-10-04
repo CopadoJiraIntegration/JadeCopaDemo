@@ -8,6 +8,8 @@ global with sharing class SiteLoginController {
     global PageReference login() {
         String startUrl = System.currentPageReference().getParameters().get('startURL');
         System.debug('--test---');
+        System.debug('--test again---');
+        System.debug('--end to end testing---');
         return Site.login(username, password, startUrl);
     }
     
