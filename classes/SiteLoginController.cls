@@ -10,6 +10,7 @@ global with sharing class SiteLoginController {
         System.debug('--test---');
         System.debug('--test again---');
         System.debug('--end to end testing---');
+        System.debug('--Demo for Commit Changes---');
         return Site.login(username, password, startUrl);
     }
     
