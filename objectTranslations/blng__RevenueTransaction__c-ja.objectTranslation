@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>収益トランザクション</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられたクレジットノートのルックアップ。</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられたデビットノートのルックアップ。</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この期間の収益を認識した後の繰延収益残高。</help>
+        <label><!-- Deferred Balance --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられた請求書品目のルックアップ。</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益トランザクションに関連付けられた法人の名前。</help>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられた注文商品のルックアップ。</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益スケジュールで定義された元の財務期間を参照します。</help>
+        <label><!-- Original Finance Period --></label>
+        <name>blng__OriginalFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions (Original Finance Period) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールを使用する以前のすべてのトランザクションの合計。</help>
+        <label><!-- Previously Recognized Revenue --></label>
+        <name>blng__PreviouslyRecognizedRevenue__c</name>
+    </fields>
+    <fields>
+        <help>この期間で認識する収益の金額。</help>
+        <label><!-- Revenue Amount --></label>
+        <name>blng__RevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールで選択された分配方法を参照します。収益を分散 (設定された期間全体に分散、
+        すべて一度に分散、または手動で入力された期間全体に分散) する方法を説明します。</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールで選択された財務帳簿を参照します。</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+    </fields>
+    <fields>
+        <label><!-- RevenueFinancePeriodUniqueId --></label>
+        <name>blng__RevenueFinancePeriodUniqueId__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールで選択された財務期間を参照します。</help>
+        <label><!-- Revenue Finance Period --></label>
+        <name>blng__RevenueFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益スケジュールで選択された収益認識総勘定元帳ルール</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益認識総勘定元帳処理</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益スケジュールで選択され、このトランザクションの計算で使用される収益認識ポリシー。</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>このトランザクションの計算で使用される収益スケジュールで選択された収益認識処理を参照します。</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </fields>
+    <fields>
+        <help>このトランザクションで使用される収益スケジュール</help>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益が現在認識されているか、後に繰り延べられるかを選択します。</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Period Start Date --></label>
+        <name>blng__SystemPeriodStartDate__c</name>
+    </fields>
+    <layouts>
+        <layout>Revenue Transaction Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>収益情報</label>
+            <section>Revenue Information</section>
+        </sections>
+        <sections>
+            <label>ソースレコード</label>
+            <section>Source Records</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>名前</nameFieldLabel>
+</CustomObjectTranslation>

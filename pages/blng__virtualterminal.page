@@ -1,0 +1,120 @@
+<apex:page showHeader="false"  sidebar="false" standardController="blng__Invoice__c" standardStylesheets="false" docType="html-5.0" extensions="blng.CurrencyUtils" applyBodyTag="False" applyHtmlTag="False">
+
+        <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <script src="../../soap/ajax/38.0/connection.js" type="text/javascript"/>
+    <apex:slds />
+
+    <style>
+        html {
+            overflow-y:scroll;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color:rgba(32, 92, 159,0.6);
+        }
+        body:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),-webkit-linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));
+            background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));
+            background-repeat: repeat-x;
+            background-position: top left;
+        }
+
+    </style>
+
+    <article class="slds-card"  id="MessagingWindow" style="display:none;min-height:14rem;">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media--center slds-has-flexi-truncate">
+
+                <div class="slds-media__body slds-truncate">
+                    <div style="margin-left:40%; margin-top:5rem;font-size:1.3rem;">
+                        <span id="spanId"></span>
+                    </div>
+                </div>
+            </header>
+            <div>
+                <button class="slds-button slds-button--neutral" onclick="goBack()">Back</button>
+            </div>
+
+        </div>
+    </article>
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show" >
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        sforce.connection.sessionId='{!GETSESSIONID()}';
+        var invoice = '{!JSENCODE(BillingRawPrefix)}';
+        var invoice1 = '{!JSENCODE(BillingBarPrefix)}';
+        var namespace = invoice != '' ? invoice : 'c';
+        var prefix = invoice1 != '' ? invoice1 : '';
+
+        var status = '';
+        var Balance = '';
+        var currencyIsoCode = '';
+        var accountId = '';
+        var accountName = '';
+        currencyIsoCode = '{!JSENCODE(currencyISOCode)}';
+        var IdValue = '{!$CurrentPage.parameters.Id}';
+        var queryValue = "SELECT "+prefix+"Account__c,"+prefix+"Account__r.Name,"+prefix+"InvoiceStatus__c,"+prefix+"Balance__c from "+prefix+"Invoice__c WHERE Id='"+IdValue+"'";
+        var result = sforce.connection.query(queryValue);
+        var records = result.getArray("records");
+
+        status = records[0][prefix+'InvoiceStatus__c'];
+        Balance = records[0][prefix+'Balance__c'];
+        accountId = records[0][prefix+'Account__c'];
+        accountName = records[0][prefix+'Account__r']['Name'];
+        if(status === 'Posted' && Balance > 0)
+        {
+            // $Lightning.use(namespace+":virtualterminalApp", function() {
+            // $Lightning.createComponent(namespace+":virtualterminal",
+
+            $Lightning.use(namespace + ":paymentApp", function () {
+                $Lightning.createComponent(namespace + ":paymentContainerComp",
+                    {
+                        "recordId"        : "{!$CurrentPage.parameters.Id}",
+                        "currencyIsoCode" : currencyIsoCode,
+                        "prefix"          : prefix,
+                        "context"         : "invoice",
+                        "accountId"       : accountId,
+                        "accountName"     : accountName
+                    },
+                    "lightning",
+                    function(cmp) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+            });
+        }
+        else if((status === 'Draft' || status === 'Cancelled') && Balance > 0)
+        {
+            document.getElementById('spinnerId').style.display = 'none';
+            document.getElementById('MessagingWindow').style.display = 'block';
+            document.getElementById('spanId').textContent = '{!JSENCODE($Label.NoPostedRecordstoDisplay)}';
+        }
+        else if(Balance <= 0)
+        {
+            document.getElementById('spinnerId').style.display = 'none';
+            document.getElementById('MessagingWindow').style.display = 'block';
+            document.getElementById('spanId').textContent = '{!JSENCODE($Label.INVOICE_IS_PAID)}';
+        }
+
+
+        function goBack() { window.history.back(); }
+    </script>
+</apex:page>

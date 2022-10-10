@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Condición de aprobación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Condiciones de aprobación</value>
+    </caseValues>
+    <fields>
+        <help>Regla a la que se aplica esta condición.</help>
+        <label><!-- Approval Rule --></label>
+        <name>sbaa__ApprovalRule__c</name>
+        <relationshipLabel><!-- Approval Conditions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Activa las aprobaciones inteligentes para esta condición de aprobación. Si la instantánea de la aprobación no cambia, la condición no se desencadenará.</help>
+        <label><!-- Enable Smart Approval --></label>
+        <name>sbaa__EnableSmartApproval__c</name>
+    </fields>
+    <fields>
+        <help>Campo con el que evaluar el campo o la variable probados</help>
+        <label><!-- Filter Field --></label>
+        <name>sbaa__FilterField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Nombre</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Tipo de filtro empleado durante la evaluación del campo o la variable probados</help>
+        <label><!-- Filter Type --></label>
+        <name>sbaa__FilterType__c</name>
+        <picklistValues>
+            <masterLabel>Field</masterLabel>
+            <translation>Campo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value</masterLabel>
+            <translation>Valor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Variable</masterLabel>
+            <translation>Variable</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Valor estático con el que evaluar el campo o la variable probados</help>
+        <label><!-- Filter Value --></label>
+        <name>sbaa__FilterValue__c</name>
+    </fields>
+    <fields>
+        <help>Variable de aprobación con la que evaluar el campo o la variable probados</help>
+        <label><!-- Filter Variable --></label>
+        <name>sbaa__FilterVariable__c</name>
+        <relationshipLabel><!-- Approval Condition (Filter Variable) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Asigne un número exclusivo a esta condición para hacer referencia a ella en la condición avanzada de la regla de aprobación.</help>
+        <label><!-- Index --></label>
+        <name>sbaa__Index__c</name>
+    </fields>
+    <fields>
+        <help>Operador empleado para la evaluación</help>
+        <label><!-- Operator --></label>
+        <name>sbaa__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>contiene</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>does not contain</masterLabel>
+            <translation>no contiene</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>termina por</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equals</masterLabel>
+            <translation>mayor o igual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>mayor que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equals</masterLabel>
+            <translation>menor o igual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>menor que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equals</masterLabel>
+            <translation>no igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>comienza por</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Campo probado cuando se evalúa la condición</help>
+        <label><!-- Tested Field --></label>
+        <name>sbaa__TestedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation>Importe</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Nombre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Probability</masterLabel>
+            <translation>Probabilidad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__AverageCustomerDiscount__c</masterLabel>
+            <translation><!-- SBQQ__AverageCustomerDiscount__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__CustomerDiscount__c</masterLabel>
+            <translation><!-- SBQQ__CustomerDiscount__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__NetAmount__c</masterLabel>
+            <translation><!-- SBQQ__NetAmount__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SpecialFinanceTerms__c</masterLabel>
+            <translation><!-- SpecialFinanceTerms__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SpecialLegalTerms__c</masterLabel>
+            <translation><!-- SpecialLegalTerms__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Variable de aprobación probada cuando se evalúa la condición</help>
+        <label><!-- Tested Variable --></label>
+        <name>sbaa__TestedVariable__c</name>
+        <relationshipLabel><!-- Approval Condition (Tested Variable) --></relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Approval Condition Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Información filtrada</label>
+            <section>Filtered Information</section>
+        </sections>
+        <sections>
+            <label>Información probada</label>
+            <section>Tested Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de condición</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- You may specify only one type of filter and it must match Filter Type. --></errorMessage>
+        <name>sbaa__Filter_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must provide a value for either Tested Field or Tested Variable. --></errorMessage>
+        <name>sbaa__Tested_Target_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -10,8 +10,48 @@
     <tabs>standard-CmsChannel</tabs>
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
+    <tabs>sbaa__Approval__c</tabs>
+    <tabs>CustomLookupData__c</tabs>
+    <tabs>CustomerPrices__c</tabs>
+    <tabs>Addresses__c</tabs>
+    <tabs>Leave_Tracker__c</tabs>
+    <tabs>ProductRecommendation__c</tabs>
+    <tabs>Rate_Card__c</tabs>
+    <tabs>Favorites__c</tabs>
+    <tabs>Renewal_Scenario__c</tabs>
+    <tabs>Business_Profile__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>Addresses__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Business_Profile__c</tab>
+        </mappings>
+        <mappings>
+            <tab>CustomLookupData__c</tab>
+        </mappings>
+        <mappings>
+            <tab>CustomerPrices__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Favorites__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Leave_Tracker__c</tab>
+        </mappings>
+        <mappings>
+            <tab>ProductRecommendation__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Rate_Card__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Renewal_Scenario__c</tab>
+        </mappings>
+        <mappings>
+            <tab>sbaa__Approval__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>
         </mappings>

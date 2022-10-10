@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Manual</fullName>
+        <default>true</default>
+        <label>Manual</label>
+    </customValue>
+    <customValue>
+        <fullName>Gateway</fullName>
+        <default>false</default>
+        <label>Gateway</label>
+    </customValue>
+    <description>Payment Authorization Source</description>
+    <masterLabel>Payment Authorization Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

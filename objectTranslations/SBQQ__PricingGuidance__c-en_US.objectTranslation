@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Description for this pricing guidance. --></help>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide sales reps with an explanation of this pricing guidance and recommendations for discounts to provide. They can view this explanation with the pricing guidance in the quote line editor. --></help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help><!-- When setting the pricing guidance tier for a quote line, include product quantities that were sold earlier --></help>
+        <label><!-- Include Prior Purchases --></label>
+        <name>SBQQ__IncludePriorPurchases__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this pricing guidance for use on associated product. --></help>
+        <label><!-- Active --></label>
+        <name>SBQQ__IsActive__c</name>
+    </fields>
+    <fields>
+        <help><!-- The parameters provided to create this pricing guidance. --></help>
+        <label><!-- Summary --></label>
+        <name>SBQQ__Summary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Range: The guidance discounts using only the pricing guidance tier that applies to the quote line quantity. --></help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation><!-- Range --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Choose the type of discount that this pricing guidance applies to the quote line. --></help>
+        <label><!-- Unit --></label>
+        <name>SBQQ__Unit__c</name>
+        <picklistValues>
+            <masterLabel>Percent</masterLabel>
+            <translation><!-- Percent --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Pricing Guidance Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

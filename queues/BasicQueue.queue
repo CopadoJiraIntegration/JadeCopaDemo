@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>rajaraman.anandhakrishnan@jadeglobal.com</email>
+    <name>BasicQueue</name>
+    <queueMembers>
+        <users>
+            <user>rajaraman.anandhakrishnan@cpqdemo.com</user>
+            <user>zscaler_demo@jadeglobal.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>BasicRouting</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>VoiceCall</sobjectType>
+    </queueSobject>
+</Queue>

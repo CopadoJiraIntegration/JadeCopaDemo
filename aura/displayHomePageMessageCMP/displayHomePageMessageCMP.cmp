@@ -1,0 +1,24 @@
+<aura:component controller="FetchHomePageMessagesController" implements="forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="showMessage" type="Boolean" default="false" access="global" />
+    <aura:attribute name="isArrear" type="Boolean" default="false" access="global" />
+    <aura:attribute name="isAdvancement" type="Boolean" default="false" access="global" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.showMessage}">
+        
+        <aura:if isTrue="{!v.isArrear}">
+            <div style="font-size: larger;">
+                Setup your Payment Method for automatic monthly payments by navigating to the tab - <b>Setup Payment Method</b>.
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.isAdvancement}">	
+            <div style="font-size: larger;">
+                Make your upfront payment by navigating to the tab - <b>Pay Now</b>.
+            </div>
+        </aura:if>
+        
+    </aura:if>  
+    
+</aura:component>

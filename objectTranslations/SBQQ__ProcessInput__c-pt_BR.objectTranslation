@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entrada do processo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entradas dos processos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Automation --></label>
+        <name>Automation__c</name>
+        <picklistValues>
+            <masterLabel>Automated</masterLabel>
+            <translation><!-- Automated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation><!-- Manual --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Barcode --></label>
+        <name>Barcode__c</name>
+        <picklistValues>
+            <masterLabel>CRISPR Screening</masterLabel>
+            <translation><!-- CRISPR Screening --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cell Surface Protein</masterLabel>
+            <translation><!-- Cell Surface Protein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delivery Type --></label>
+        <name>DeliveryType__c</name>
+        <picklistValues>
+            <masterLabel>New Geo</masterLabel>
+            <translation><!-- New Geo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Platform</masterLabel>
+            <translation><!-- New Platform --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Plan Term --></label>
+        <name>DocuSign_Plan_Term__c</name>
+        <picklistValues>
+            <masterLabel>Annual</masterLabel>
+            <translation><!-- Annual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Plan Type --></label>
+        <name>DocuSign_Plan_Type__c</name>
+        <picklistValues>
+            <masterLabel>API</masterLabel>
+            <translation><!-- API --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate</masterLabel>
+            <translation><!-- Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eSignature</masterLabel>
+            <translation><!-- eSignature --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Monetize Type --></label>
+        <name>MonetizeType__c</name>
+        <picklistValues>
+            <masterLabel>Content Partner</masterLabel>
+            <translation><!-- Content Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTT Platform</masterLabel>
+            <translation><!-- OTT Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TS Setup Fee</masterLabel>
+            <translation><!-- TS Setup Fee --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Selecione a caixa de seleção para ativar essa entrada do processo.</help>
+        <label><!-- Active --></label>
+        <name>SBQQ__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Binary Choice --></label>
+        <name>SBQQ__BinaryChoice__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>Não</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Sim</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Indique que condições de Entrada do processo devem ser atendidas.</help>
+        <label><!-- Conditions Met --></label>
+        <name>SBQQ__ConditionsMet__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>Todos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any</masterLabel>
+            <translation>Qualquer</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Campo de cotação que adquire o valor padrão para essa entrada.</help>
+        <label><!-- Default Field --></label>
+        <name>SBQQ__DefaultField__c</name>
+        <picklistValues>
+            <masterLabel>Bill To Country</masterLabel>
+            <translation>País ao qual faturar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ship To Country</masterLabel>
+            <translation>País ao qual enviar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Insira a ordem em que a entrada do processo deve ser exibida.</help>
+        <label><!-- Display Order --></label>
+        <name>SBQQ__DisplayOrder__c</name>
+    </fields>
+    <fields>
+        <help>Selecione o nome da API para o campo que aceita a entrada do usuário.</help>
+        <label><!-- Input Field --></label>
+        <name>SBQQ__InputField__c</name>
+        <picklistValues>
+            <masterLabel>Automation__c</masterLabel>
+            <translation><!-- Automation__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barcode__c</masterLabel>
+            <translation><!-- Barcode__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BinaryChoice__c</masterLabel>
+            <translation>BinaryChoice__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DeliveryType__c</masterLabel>
+            <translation><!-- DeliveryType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocuSign_Plan_Term__c</masterLabel>
+            <translation><!-- DocuSign_Plan_Term__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocuSign_Plan_Type__c</masterLabel>
+            <translation><!-- DocuSign_Plan_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IntegerInput__c</masterLabel>
+            <translation>IntegerInput__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MonetizeType__c</masterLabel>
+            <translation><!-- MonetizeType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SaaSServiceType__c</masterLabel>
+            <translation><!-- SaaSServiceType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screen_Size__c</masterLabel>
+            <translation><!-- Screen_Size__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screen_Type__c</masterLabel>
+            <translation><!-- Screen_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ServiceType__c</masterLabel>
+            <translation><!-- ServiceType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SetupType__c</masterLabel>
+            <translation><!-- SetupType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolutionCoreType__c</masterLabel>
+            <translation><!-- SolutionCoreType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type__c</masterLabel>
+            <translation><!-- Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Version__c</masterLabel>
+            <translation><!-- Version__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Insira um valor numérico.</help>
+        <label><!-- Integer Input --></label>
+        <name>SBQQ__IntegerInput__c</name>
+    </fields>
+    <fields>
+        <help>O texto que você deseja que seja exibido ao usuário no aviso.</help>
+        <label><!-- Label --></label>
+        <name>SBQQ__Label__c</name>
+    </fields>
+    <fields>
+        <help>Selecione o operador a ser usado ao comparar o Campo de entrada ao Campo de produto.</help>
+        <label><!-- Operator --></label>
+        <name>SBQQ__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>contém</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>termina com</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equals</masterLabel>
+            <translation>maior ou igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>maior que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equals</masterLabel>
+            <translation>menor ou igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>menor que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equals</masterLabel>
+            <translation>não igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>começa com</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Process Input Condition --></label>
+        <name>SBQQ__ProcessInputCondition__c</name>
+        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Campo no objeto de Produto usado na filtragem de produtos que correspondem a essa entrada.</help>
+        <label><!-- Product Field --></label>
+        <name>SBQQ__ProductField__c</name>
+        <picklistValues>
+            <masterLabel>Automation__c</masterLabel>
+            <translation><!-- Automation__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barcode__c</masterLabel>
+            <translation><!-- Barcode__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DeliveryType__c</masterLabel>
+            <translation><!-- DeliveryType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocuSign_Plan_Term__c</masterLabel>
+            <translation><!-- DocuSign_Plan_Term__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocuSign_Plan_Type__c</masterLabel>
+            <translation><!-- DocuSign_Plan_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MonetizeType__c</masterLabel>
+            <translation><!-- MonetizeType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Code</masterLabel>
+            <translation>Código do produto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Family</masterLabel>
+            <translation>Família de produtos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Name</masterLabel>
+            <translation>Nome do produto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SaaSServiceType__c</masterLabel>
+            <translation><!-- SaaSServiceType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screen_Size__c</masterLabel>
+            <translation><!-- Screen_Size__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screen_Type__c</masterLabel>
+            <translation><!-- Screen_Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ServiceType__c</masterLabel>
+            <translation><!-- ServiceType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SetupType__c</masterLabel>
+            <translation><!-- SetupType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolutionCoreType__c</masterLabel>
+            <translation><!-- SolutionCoreType__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type__c</masterLabel>
+            <translation><!-- Type__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Version__c</masterLabel>
+            <translation><!-- Version__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Processo de cotação que detém a entrada.</help>
+        <label><!-- Quote Process --></label>
+        <name>SBQQ__QuoteProcess__c</name>
+        <relationshipLabel><!-- Process Inputs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SaaS Service Type --></label>
+        <name>SaaSServiceType__c</name>
+        <picklistValues>
+            <masterLabel>Setup</masterLabel>
+            <translation><!-- Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Core</masterLabel>
+            <translation><!-- Solution Core --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Screen Size --></label>
+        <name>Screen_Size__c</name>
+        <picklistValues>
+            <masterLabel>18 &quot;</masterLabel>
+            <translation><!-- 18 &quot; --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21 &quot;</masterLabel>
+            <translation><!-- 21 &quot; --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24 &quot;</masterLabel>
+            <translation><!-- 24 &quot; --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27 &quot;</masterLabel>
+            <translation><!-- 27 &quot; --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Screen Type --></label>
+        <name>Screen_Type__c</name>
+        <picklistValues>
+            <masterLabel>4K</masterLabel>
+            <translation><!-- 4K --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FHD</masterLabel>
+            <translation><!-- FHD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HD</masterLabel>
+            <translation><!-- HD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>ServiceType__c</name>
+        <picklistValues>
+            <masterLabel>Channel Creation &amp; Playout (SaaS)</masterLabel>
+            <translation><!-- Channel Creation &amp; Playout (SaaS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delivery OTT</masterLabel>
+            <translation><!-- Delivery OTT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monetize</masterLabel>
+            <translation><!-- Monetize --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Setup Type --></label>
+        <name>SetupType__c</name>
+        <picklistValues>
+            <masterLabel>Non Standard</masterLabel>
+            <translation><!-- Non Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Solution Core Type --></label>
+        <name>SolutionCoreType__c</name>
+        <picklistValues>
+            <masterLabel>Creative Services</masterLabel>
+            <translation><!-- Creative Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Playout Addons</masterLabel>
+            <translation><!-- Playout Addons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Playout Format</masterLabel>
+            <translation><!-- Playout Format --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Playout Services</masterLabel>
+            <translation><!-- Playout Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduling Services</masterLabel>
+            <translation><!-- Scheduling Services --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Targeted</masterLabel>
+            <translation><!-- Targeted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Whole Transcriptome</masterLabel>
+            <translation><!-- Whole Transcriptome --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+        <picklistValues>
+            <masterLabel>v3</masterLabel>
+            <translation><!-- v3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>v3.1 – Dual Index</masterLabel>
+            <translation><!-- v3.1 – Dual Index --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>v3.1 – Single Index</masterLabel>
+            <translation><!-- v3.1 – Single Index --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Process Input Layout</layout>
+        <sections>
+            <label><!-- 10X Guided Selling --></label>
+            <section>10X Guided Selling</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Filtro de produto</label>
+            <section>Product Filter</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da entrada</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Both Product Field and Operator must be set if either are set. --></errorMessage>
+        <name>SBQQ__ProductFieldAndOperatorSet</name>
+    </validationRules>
+</CustomObjectTranslation>

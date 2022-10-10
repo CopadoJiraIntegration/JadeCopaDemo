@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>sbaa__ApprovedKeywords__c</fullName>
+        <defaultValue>&quot;Approved,Approve,Yes&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Comma-delimited list of keywords used for approving via email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comma-delimited list of keywords used for approving via email</inlineHelpText>
+        <label>Approved Keywords</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ConsolidateApprovalEmails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When checked, each approver will receive a single approval request email in situations where they need to approve the same record for multiple reasons.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked, each approver will receive a single approval request email in situations where they need to approve the same record for multiple reasons.</inlineHelpText>
+        <label>Consolidate Approval Emails</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__DealDeskActiveApproveIconURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>URL for active approve icon on Deal Desk page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>URL for active approve icon on Deal Desk page.</inlineHelpText>
+        <label>Active Approve Icon URL</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__DealDeskActiveRejectIconURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>URL for active reject icon on Deal Desk page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>URL for active reject icon on Deal Desk page.</inlineHelpText>
+        <label>Active Reject Icon URL</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__DealDeskInactiveApproveIconURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>URL for inactive approve icon on Deal Desk page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>URL for inactive approve icon on Deal Desk page.</inlineHelpText>
+        <label>Inactive Approve Icon URL</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__DealDeskInactiveRejectIconURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>URL for inactive reject icon on Deal Desk page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>URL for inactive reject icon on Deal Desk page.</inlineHelpText>
+        <label>Inactive Reject Icon URL</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__DealDeskOwnershipRequired__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines whether ownership of parent record is required to disposition child records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to require parent record ownership to disposition child records.</inlineHelpText>
+        <label>Requires Ownership</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__DealDeskStylesheetURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>URL to custom CSS on Deal Desk page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>URL to custom CSS on Deal Desk page.</inlineHelpText>
+        <label>Stylesheet URL</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__DisablePSLLicenseEnforcement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disable PSL License Enforcement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disable PSL License Enforcement</inlineHelpText>
+        <label>Disable PSL License Enforcement</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__HideSubmitOnPreview__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide the Submit button on the Preview page if the record is Pending or Approved.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide the Submit button on the Preview page if the record is Pending or Approved.</inlineHelpText>
+        <label>Hide Submit Button on Preview Page</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__InboundApprovalEmailLong__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email address for the Email Service used for processing inbound approval emails (Long)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address for the Email Service used for processing inbound approval emails (Long)</inlineHelpText>
+        <label>Inbound Approval Email (Long)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__InboundApprovalEmailParsing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Line Break = Captures everything in between the first and second line breaks as comments. Blank Line = Captures everything in betweeen the first line break and the first blank line as comments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Line Break = Captures everything in between the first and second line breaks as comments. Blank Line = Captures everything in betweeen the first line break and the first blank line as comments.</inlineHelpText>
+        <label>Approval Email Comments End Indicator</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__InboundApprovalEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email address for the Email Service used for processing inbound approval emails</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address for the Email Service used for processing inbound approval emails</inlineHelpText>
+        <label>Inbound Approval Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__IsLegacyCustomer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Set to True when the customer upgrades from a build before 3.7 to a build 3.7 or later.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set to True when the customer upgrades from a build before 3.7 to a build 3.7 or later.</inlineHelpText>
+        <label>Is Legacy Licensed Customer</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RejectedKeywords__c</fullName>
+        <defaultValue>&quot;Rejected,Reject,Decline,No&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Comma-delimited list of keywords used for rejecting via email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comma-delimited list of keywords used for rejecting via email</inlineHelpText>
+        <label>Rejected Keywords</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Approval Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

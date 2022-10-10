@@ -1,0 +1,71 @@
+<apex:page showHeader="true" sidebar="true" standardController="blng__FinanceBook__c" standardStylesheets="true" extensions="blng.CurrencyUtils">
+    <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <script src="../../soap/ajax/38.0/connection.js" type="text/javascript"/>
+    <style>
+        /* This prevents page shifting when scrollbar appears/disappears */
+        html {
+            overflow-y:scroll;
+        }
+    </style>
+    <article class="slds-card"  id="MessagingWindow" style="display:none;min-height:14rem;">
+          <div class="slds-card__header slds-grid">
+             <header class="slds-media slds-media--center slds-has-flexi-truncate">
+
+                    <div class="slds-media__body slds-truncate">
+                        <div style="margin-left:40%; margin-top:5rem;font-size:1.3rem;">
+                         <span>This action is valid only for active finance books</span>
+                        </div>
+                    </div>
+                </header>
+                <div>
+                     <button class="slds-button slds-button--neutral" onclick="goBack()">Back</button>
+                 </div>
+
+            </div>
+        </article>
+
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show" >
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        //var namespace = (financeName.toLowerCase().startsWith('blng')) ? 'blng' : 'c';
+        //var prefix = (financeName.toLowerCase().startsWith('blng')) ? 'blng__' : '';
+        //W-4463035 Prefix to support on IE11
+        sforce.connection.sessionId='{!GETSESSIONID()}';
+        var financeName = '{!JSENCODE(BillingRawPrefix)}';
+        var financeName1 = '{!JSENCODE(BillingBarPrefix)}';
+        var namespace = financeName != '' ? financeName : 'c';
+        var prefix = financeName1 != '' ? financeName1 : '';
+
+        var finaceBookRecordID = '{!$CurrentPage.parameters.Id}';
+        var queryValue = "SELECT "+prefix+"Active__c FROM "+prefix+"FinanceBook__c WHERE Id='"+finaceBookRecordID+"'";
+        var result = sforce.connection.query(queryValue);
+        var records = result.getArray("records");
+        var isActivefinanceBook = records[0][prefix+'Active__c'];
+        if(isActivefinanceBook == 'true'){
+            $Lightning.use(namespace+":financePeriodApp", function() {
+                        $Lightning.createComponent(namespace+":financePeriod",{
+                                    "recordId" : "{!$CurrentPage.parameters.Id}",
+                                    //"prefix" : prefix
+                                },
+                                "lightning",
+                                function(component) {
+                                    document.getElementById('spinnerId').style.display = 'none';
+                                });
+                    });
+        }else{
+            document.getElementById('spinnerId').style.display = 'none';
+            document.getElementById('MessagingWindow').style.display = 'block';
+        }
+        function goBack() { window.history.back(); }
+
+    </script>
+</apex:page>

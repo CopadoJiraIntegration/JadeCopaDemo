@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Niveau de prix indicatif</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Niveaux de prix indicatifs</value>
+    </caseValues>
+    <fields>
+        <help>Remise élevée pour les prix d&apos;exception basés sur les ventes passées. Si un commercial souhaite utiliser ce prix, il doit appliquer la remise de la ligne de devis manuellement. Cette remise peut nécessiter des approbations en fonction des paramètres d&apos;approbation de votre organisation.</help>
+        <label><!-- Floor Discount (%) --></label>
+        <name>SBQQ__FloorDiscount__c</name>
+    </fields>
+    <fields>
+        <help>La quantité de ligne de devis la plus basse qui s&apos;applique à ce niveau. Ce nombre doit correspondre à la limite supérieure du niveau précédent.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help>Remise moyenne basée sur les ventes passées. Si un commercial souhaite utiliser ce prix, il doit appliquer la remise de la ligne de devis manuellement. Cette remise peut nécessiter des approbations en fonction des paramètres d&apos;approbation de votre organisation.</help>
+        <label><!-- Norm Discount (%) --></label>
+        <name>SBQQ__NormDiscount__c</name>
+    </fields>
+    <fields>
+        <help>Le prix indicatif qui contient ce niveau.</help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Faible remise idéale basée sur les ventes passées. Si un commercial accepte ce prix indicatif, Salesforce CPQ accorde une remise pour atteindre ce prix.</help>
+        <label><!-- Target Discount (%) --></label>
+        <name>SBQQ__TargetDiscount__c</name>
+    </fields>
+    <fields>
+        <help>La quantité de ligne de devis la plus élevée qui s&apos;applique à ce niveau. Ce nombre doit être supérieur à la quantité la plus élevée que vous souhaitez inclure dans ce niveau.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Pricing Guidance Tier Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<apex:page controller="pi.AccessPardotController"
+    sidebar="false"
+    showHeader="false"
+    showChat="false" >
+    <c:FilteredFrame src="{!pardotBaseUrl}/prospect/activity/email/" scrolling="true" id="theIframe"/>
+</apex:page>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Configuration settings of the Toolkit for Amazon Connect.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>amazonconnect__disableCCACase__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Choose to enable or disable the AC_AssociateCCACase trigger, which associates a Case with a Contact Channel Analytics record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose to enable or disable the AC_AssociateCCACase trigger, which associates a Case with a Contact Channel Analytics record.</inlineHelpText>
+        <label>Disable the CCA Case Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>amazonconnect__disableCCAContact__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Choose to enable or disable the AC_AssociateCCAContact trigger, which associates a Contact with a Contact Channel Analytics record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose to enable or disable the AC_AssociateCCAContact trigger, which associates a Contact with a Contact Channel Analytics record.</inlineHelpText>
+        <label>Disable the CCA Contact Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>amazonconnect__disableCaseContactCCA__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Choose to enable or disable the AC_AssociateCaseContactCCA trigger, which associates Cases and Contacts with a Contact Channel Analytics Record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose to enable or disable the AC_AssociateCaseContactCCA trigger, which associates Cases and Contacts with a Contact Channel Analytics Record.</inlineHelpText>
+        <label>Disable the Case Contact CCA Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>amazonconnect__disableTaskTrigger__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Choose to enable or disable the AC_TaskTrigger</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This trigger creates a ContactChannel record for any inserted/updated task that with a `CallObject` field that does not currently have a ContactChannel record created before.</inlineHelpText>
+        <label>Disable the Task Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>amazonconnect__disableVoiceIdTrigger__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Choose to enable or disable the AC_VoiceIdChannel trigger, which associates Cases and Contacts with a Voice Id Channel Record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose to enable or disable the AC_VoiceIdChannel trigger, which associates Cases and Contacts with a Voice Id Channel Record</inlineHelpText>
+        <label>Disable the Voice Id Channel Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>amazonconnect__url__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Top level URL of your Amazon Connect instance.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please provide the URL for the domain of your Amazon Connect instance, for example https://yourinstancename.awsapps.com</inlineHelpText>
+        <label>Url</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Toolkit for Amazon Connect</label>
+    <visibility>Public</visibility>
+</CustomObject>

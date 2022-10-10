@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ProductRecommendation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ProductRecommendations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Product2Id --></label>
+        <name>Product2Id__c</name>
+        <relationshipLabel><!-- ProductRecommendations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RecommendedProduct2Id --></label>
+        <name>RecommendedProduct2Id__c</name>
+        <relationshipLabel><!-- ProductRecommendations (RecommendedProduct2Id) --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

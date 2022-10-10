@@ -1,0 +1,165 @@
+<apex:page id="DealDesk" showHeader="true" sidebar="false" controller="sbaa.DealDeskController">
+	<apex:outputPanel layout="none" rendered="{!NOT(ISBLANK(customStylesheetURL))}">
+		<apex:stylesheet value="{!customStylesheetURL}"/>
+	</apex:outputPanel>
+	<apex:form id="form">
+	<apex:outputPanel layout="block" styleClass="topButtons">
+		<apex:commandButton styleClass="btn" action="{!onAssign}" value="{!$Label.sbaa__lbl_assign}" rendered="{!assignButtonDisplayed}"/>
+		<apex:commandButton styleClass="btn" action="{!onSave}" value="{!$Label.sbaa__lbl_save}"/>
+		<apex:commandButton styleClass="btn" action="{!onSaveAndClose}" value="{!$Label.sbaa__lbl_save_close}"/>
+		<apex:commandButton styleClass="btn" action="{!onCancel}" value="{!$Label.sbaa__lbl_cancel}"/>
+	</apex:outputPanel>
+	<apex:tabPanel switchType="client">
+		<apex:tab label="Lines">
+			<apex:panelGrid columns="2" width="100%" id="lineContainer" columnClasses="lineSummary,lineDetail">
+				<apex:outputPanel layout="none">
+					<apex:pageBlock rendered="{!headerFieldsDisplayed}">
+						<table id="headerFields" class="detailList" border="0" cellspacing="0" cellpadding="0">
+							<tbody>
+								<apex:repeat var="row" value="{!headerFieldRows}">
+								<tr>
+									<apex:repeat var="field" value="{!row.fields}">
+									<td class="labelCol">
+										<apex:outputText value="{!field.label}"/>
+									</td>
+									<td class="dataCol">
+										<apex:inputField value="{!record[field.name]}"/>
+									</td>
+									</apex:repeat>
+								</tr>
+								</apex:repeat>
+							</tbody>
+						</table>
+					</apex:pageBlock>
+					<apex:repeat var="recordGroup" value="{!childRecordGroups}">
+						<apex:pageBlock title="{!recordGroup.name}">
+						<table width="100%" class="list" border="0" cellspacing="0" cellpadding="0">
+							<thead class="dr-table-thead">
+								<tr class="headerRow">
+								<apex:repeat var="field" value="{!displayedLineFields}">
+									<th class="headerRow"><apex:outputText value="{!field.label}"/></th>
+								</apex:repeat>
+								<apex:outputPanel layout="none" rendered="{!actionsDisplayed}">
+								<th class="headerRow">&nbsp;</th>
+								</apex:outputPanel>
+								</tr>
+							</thead>
+							<tbody>
+								<apex:repeat var="item" value="{!recordGroup.childRecords}">
+									<tr class="dataRow" onclick="hiRow(this);var iframe = document.getElementById('detailPanel');if (iframe != null) iframe.src='{!item[detailURLField.describe.name]}';">
+										<apex:repeat var="field" value="{!displayedLineFields}">
+											<td class="dataCell"><apex:inputField style="{!field.style}" value="{!item[field.name]}"/></td>
+										</apex:repeat>
+										<apex:outputPanel layout="none" rendered="{!actionsDisplayed}">
+										<td class="dataCell" width="80">
+											<apex:commandLink action="{!onApprove}" rerender="lineContainer" status="updating" rendered="{!recordGroup.Value = 'Rejected' || recordGroup.Value = 'Pending'}">
+												<apex:image styleClass="actionIcon approveIconActive" value="{!IF(activeApproveCustomIconURL != null, activeApproveCustomIconURL, URLFOR($Resource.sbaa__DealDeskResources, 'ApproveActiveIcon.png'))}"/>
+												<apex:param name="selectedRecordId" assignTo="{!selectedRecordId}" value="{!item.Id}" />
+											</apex:commandLink>
+											<apex:image styleClass="actionIcon rejectIconInactive" value="{!IF(inactiveRejectCustomIconURL != null, inactiveRejectCustomIconURL, URLFOR($Resource.sbaa__DealDeskResources, 'RejectInactiveIcon.png'))}" rendered="{!recordGroup.Value = 'Rejected' || recordGroup.Value = 'Recalled'}"/>
+											<apex:image styleClass="actionIcon approveIconInactive" value="{!IF(inactiveApproveCustomIconURL != null, inactiveApproveCustomIconURL, URLFOR($Resource.sbaa__DealDeskResources, 'ApproveInactiveIcon.png'))}" rendered="{!recordGroup.Value = 'Approved' || recordGroup.Value = 'Recalled'}"/>
+											<apex:commandLink action="{!onReject}" rerender="lineContainer" status="updating" rendered="{!recordGroup.Value = 'Approved' || recordGroup.Value = 'Pending'}">
+												<apex:image styleClass="actionIcon rejectIconActive" value="{!IF(activeRejectCustomIconURL != null, activeRejectCustomIconURL, URLFOR($Resource.sbaa__DealDeskResources, 'RejectActiveIcon.png'))}"/>
+												<apex:param name="selectedRecordId" assignTo="{!selectedRecordId}" value="{!item.Id}" />
+											</apex:commandLink>
+										</td>
+										</apex:outputPanel>
+									</tr>
+								</apex:repeat>
+							</tbody>
+						</table>
+						</apex:pageBlock>
+					</apex:repeat>
+				</apex:outputPanel>
+				<apex:outputPanel layout="block">
+					<apex:outputPanel layout="none" rendered="{!NOT(ISNULL(detailURLField))}">
+						<iframe id="detailPanel" frameborder="no"></iframe>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:panelGrid>
+		</apex:tab>
+		<apex:tab label="Details">
+			<apex:pageBlock id="detailTab">
+				<apex:detail subject="{!recordId}" showChatter="false" relatedList="true" inlineEdit="true"/>
+			</apex:pageBlock>
+		</apex:tab>
+	</apex:tabPanel>
+	<apex:actionStatus id="updating" onstart="showStatus()" onstop="hideStatus()"/>
+	</apex:form>
+
+	<apex:outputPanel layout="none" rendered="{!ISBLANK(customStylesheetURL)}">
+	<style type="text/css">
+		.lineSummary {
+			vertical-align: top;
+		}
+
+		.lineDetail {
+			vertical-align: top;
+		}
+
+		.lineDetail iframe {
+			width: 100%;
+			height: 400px;
+		}
+
+		.topButtons {
+			width: 100%;
+			text-align: center;
+		}
+
+		.actionIcon {
+			width: 25px;
+			margin-right: 5px;
+		}
+	</style>
+	</apex:outputPanel>
+
+	<script type="text/javascript">
+		var searching = null;
+
+		function showStatus() {
+			if (searching == null) {
+				var parentElement = document.getElementById('{!$Component.DealDesk.form.lineContainer}');
+				searching = new LoadingScreen(parentElement, 'Updating', 'status_updating');
+				searching.show();
+			}
+		}
+
+		function hideStatus() {
+			if (searching != null) {
+				searching.hide();
+				searching = null;
+			}
+		}
+
+		function hiRow(row) {
+			var allRows = document.getElementsByTagName('tr');
+			for (var i=0;i<allRows.length;i++) {
+				hiOff(allRows[i]);
+			}
+			hiOn(row);
+		}
+
+		window.onload = function() {
+			var allRows = document.getElementsByClassName('dataRow');
+			if (allRows != null) {
+				allRows[0].click();
+			}
+		}
+    </script>
+
+    <apex:outputPanel layout="none" rendered="{!NOT(ISBLANK($CurrentPage.parameters.consoleTabTitle))}">
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+		var existingLoad = window.onload;
+		window.onload = function() {
+			if (existingLoad) {
+				existingLoad();
+			}
+			if (sforce.console != null) {
+            	sforce.console.setTabTitle('{!HTMLENCODE($CurrentPage.parameters.consoleTabTitle)}');
+            }
+		}
+    </script>
+    </apex:outputPanel>
+</apex:page>

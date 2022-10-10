@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Approval_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Approval_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>sbaa__ApprovalHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Approval by individual for specific record.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fieldSets>
+        <fullName>sbaa__RequestFields</fullName>
+        <description>Fields displayed in approval request email.</description>
+        <displayedFields>
+            <field>sbaa__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>sbaa__AssignedTo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>RequestFields</label>
+    </fieldSets>
+    <fields>
+        <fullName>Approved_Rejected_Revoked_Date__c</fullName>
+        <description>This is stamped when either the quote is approved, rejected or revoked</description>
+        <externalId>false</externalId>
+        <label>Approved/Rejected/Revoked Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup Relationship</description>
+        <externalId>false</externalId>
+        <label>Quote</label>
+        <referenceTo>SBQQ__Quote__c</referenceTo>
+        <relationshipLabel>Approvals</relationshipLabel>
+        <relationshipName>Approvals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Time_Taken_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approved_Rejected_Revoked_Date__c - CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Time Taken (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__Actions__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &quot;/apex/sbaa__Approve?id=&quot; &amp; Id, $Label.sbaa__lbl_approve, &quot;_self&quot;) + &quot; | &quot; + HYPERLINK( &quot;/apex/sbaa__Reject?id=&quot; &amp; Id, $Label.sbaa__lbl_reject, &quot;_self&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Actions</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalChain__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approval Chain to which this Approval belongs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approval Chain to which this Approval belongs</inlineHelpText>
+        <label>Approval Chain</label>
+        <referenceTo>sbaa__ApprovalChain__c</referenceTo>
+        <relationshipLabel>Approvals</relationshipLabel>
+        <relationshipName>Approvals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalStep__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Step (level) at which this approval is required.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Step (level) at which this approval is required.</inlineHelpText>
+        <label>Approval Step</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalTemplateId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the Email Template associated with Approval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the Email Template associated with Approval</inlineHelpText>
+        <label>Approval Template Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User who approved this Approval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User who approved this Approval</inlineHelpText>
+        <label>Approved By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ApprovedApprovals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApproverField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used with Dynamic Approvers, to capture the field name containing the Approver value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used with Dynamic Approvers, to capture the field name containing the Approver value</inlineHelpText>
+        <label>Approver Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Created By</fullName>
+                    <default>false</default>
+                    <label>Created By</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__Approver__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Approver associated with this Approval.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Approver associated with this Approval.</inlineHelpText>
+        <label>Approver</label>
+        <referenceTo>sbaa__Approver__c</referenceTo>
+        <relationshipLabel>Approvals</relationshipLabel>
+        <relationshipName>Approvals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Archived__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When Archived Approvals is enabled, indicates that this Approval is archived</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When Archived Approvals is enabled, indicates that this Approval is archived</inlineHelpText>
+        <label>Archived</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__AssignedGroupId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the Group the Approval is assigned to, if applicable</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the Group the Approval is assigned to, if applicable</inlineHelpText>
+        <label>Assigned Group Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__AssignedToMe__c</fullName>
+        <deprecated>false</deprecated>
+        <description>True if the current User is also the Assigned To User</description>
+        <externalId>false</externalId>
+        <formula>sbaa__AssignedTo__r.Id = $User.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>True if the current User is also the Assigned To User</inlineHelpText>
+        <label>Assigned To Me</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__AssignedTo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the User to which the Approval is assigned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the User to which the Approval is assigned</inlineHelpText>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Approvals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__CommentsLong__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Approver&apos;s Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approver&apos;s Comments</inlineHelpText>
+        <label>Comments</label>
+        <length>4000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sbaa__DelegatedApprover__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>If Delegated Approvals is enabled, lookup to the delegated Approver</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If Delegated Approvals is enabled, lookup to the delegated Approver</inlineHelpText>
+        <label>Delegated Approver</label>
+        <referenceTo>sbaa__Approver__c</referenceTo>
+        <relationshipLabel>Delegated Approvals</relationshipLabel>
+        <relationshipName>DelegatedApprovals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Opportunity being approved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity being approved</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Approvals</relationshipLabel>
+        <relationshipName>Approvals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RecallTemplateId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the Email Template associated with Recalls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the Email Template associated with Recalls</inlineHelpText>
+        <label>Recall Template Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__RecordField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API Name of the Approval field looking up to the record being approved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API Name of the Approval field looking up to the record being approved</inlineHelpText>
+        <label>Record Field</label>
+        <length>80</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__RejectedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User who rejected this Approval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User who rejected this Approval</inlineHelpText>
+        <label>Rejected By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RejectedApprovals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RejectionTemplateId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the Email Template associated with Rejection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the Email Template associated with Rejection</inlineHelpText>
+        <label>Rejection Template Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__RequestTemplateId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the Email Template associated with Approval Requests</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the Email Template associated with Approval Requests</inlineHelpText>
+        <label>Request Template Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__RequireExplicitApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>By default, approving any Approval will auto-approve all other Approvals assigned to the same User. If this box is checked, an Approval originated by this Rule will not be auto-approved and must be explicitly approved.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By default, approving any Approval will auto-approve all other Approvals assigned to the same User. If this box is checked, an Approval originated by this Rule will not be auto-approved and must be explicitly approved.</inlineHelpText>
+        <label>Require Explicit Approval</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approval rule that generated this approval.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approval rule that generated this approval.</inlineHelpText>
+        <label>Rule</label>
+        <referenceTo>sbaa__ApprovalRule__c</referenceTo>
+        <relationshipLabel>Approvals</relationshipLabel>
+        <relationshipName>Approvals</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Status of this approval.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of this approval.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Assigned</fullName>
+                    <default>true</default>
+                    <label>Assigned</label>
+                </value>
+                <value>
+                    <fullName>Requested</fullName>
+                    <default>false</default>
+                    <label>Requested</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Revoked</fullName>
+                    <default>false</default>
+                    <label>Revoked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__Unanimous__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If Approver is a Group, checked if all members need to Approve in order to consider the Approval approved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If Approver is a Group, checked if all members need to Approve in order to consider the Approval approved</inlineHelpText>
+        <label>Unanimous</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Approval</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>sbaa__Status__c</columns>
+        <columns>sbaa__ApprovalStep__c</columns>
+        <columns>sbaa__AssignedTo__c</columns>
+        <columns>sbaa__ApprovedBy__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Approved_Rejected_Revoked_Date__c</columns>
+        <columns>Time_Taken_Days__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>A-{00000}</displayFormat>
+        <label>Approval #</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Approvals</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>sbaa__Approve</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Approve</masterLabel>
+        <openType>replace</openType>
+        <page>sbaa__Approve</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__Reassign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Reassign</masterLabel>
+        <openType>replace</openType>
+        <page>sbaa__Reassign</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__Reject</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Reject</masterLabel>
+        <openType>replace</openType>
+        <page>sbaa__Reject</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>sbaa__ResendRequestEmail</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Resend Request</masterLabel>
+        <openType>replace</openType>
+        <page>sbaa__ResendRequestEmail</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

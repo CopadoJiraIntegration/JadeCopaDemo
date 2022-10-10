@@ -1,0 +1,48 @@
+<apex:page sideBar="false" controller="dfscpq.SettingsController" showHeader="true"
+           label="{!$Label.dfscpq__dfscpqconfig}" title="{!$Label.dfscpq__dfscpqconfig}">
+
+    <!-- Include includeLightning for enabling lighting out-->
+    <apex:includeLightning />
+
+    <!-- Include Salesforce Lightning design system -->
+    <apex:slds />
+
+    <!-- styling for the div which will hold the setup lighting component -->
+    <style type="text/css">
+        #setup-assistant {
+            min-height: 100vh;
+            background-color: #f7f9fb;
+            position: relative;
+        }
+
+        .noSidebarCell #setup-assistant {
+            min-height: calc(100vh - 120px);
+        }
+
+        .bodyDiv .outerNoSidebar,
+        .noSidebarCell,
+        .sidebarCell .fixed {
+            padding: 0;
+        }
+
+        .noSidebarCell #setup-assistant .slds-scope .strike-wizard__footer {
+            position: absolute;
+        }
+    </style>
+
+    <div id="setup-assistant"></div>
+
+    <script type="text/javascript">
+      var namespace = '{!JSENCODE(lightningNamespace)}';
+      $Lightning.use(namespace + ':LightningOutApp', function () {
+        $Lightning.createComponent(namespace + ':SetupWizard', {}, 'setup-assistant', function (cmp) {
+          $A.eventService.addHandler({'event': 'force:navigateToURL', 'handler': navigateToURL});
+        });
+      });
+
+      var navigateToURL = function (event) {
+        var url = event.getParam('url');
+        window.open(url, '_blank');
+      }
+    </script>
+</apex:page>

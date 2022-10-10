@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Verbrauchswert für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Verbrauchswerte für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Verbrauchswert für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Verbrauchswerte für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Verbrauchswerts für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Verbrauchswerte für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Verbrauchswert für Auftragsprodukt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Verbrauchswerten für Auftragsprodukt</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>Die niedrigste Nutzungsmenge für diesen Verbrauchswert.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help>Dieser Wert ist Teil dieses Plans.</help>
+        <label><!-- Order Product Consumption Schedule --></label>
+        <name>SBQQ__OrderItemConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Order Product Consumption Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Der Preis für die Nutzung, die in den Bereich dieses Verbrauchswerts fällt.</help>
+        <label><!-- Price --></label>
+        <name>SBQQ__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Fee</masterLabel>
+            <translation>Pauschalpreis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation>Pro Einheit</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Die Reihenfolge für die Verarbeitung der Nutzungswerte über mehrere Werte hinweg. Verbrauchswerte werden in aufsteigender Reihenfolge ausgewertet.</help>
+        <label><!-- Processing Order --></label>
+        <name>SBQQ__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help>Die höchste Nutzungsmenge für diesen Verbrauchswert.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Order Item Consumption Rate Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name des Verbrauchswerts für Auftragspro</nameFieldLabel>
+</CustomObjectTranslation>

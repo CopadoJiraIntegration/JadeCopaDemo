@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Action Form Schema --></label>
+        <name>amazonconnect__ActionFormSchema__c</name>
+    </fields>
+    <fields>
+        <label><!-- CTI Flow --></label>
+        <name>amazonconnect__CTIFlow__c</name>
+        <relationshipLabel><!-- AC CCP Overlay Elements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>amazonconnect__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payload --></label>
+        <name>amazonconnect__Payload__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>amazonconnect__Type__c</name>
+        <picklistValues>
+            <masterLabel>Action</masterLabel>
+            <translation><!-- Action --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tab</masterLabel>
+            <translation><!-- Tab --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

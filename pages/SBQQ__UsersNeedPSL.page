@@ -1,0 +1,5 @@
+<apex:page id="UsersNeedPSL" controller="SBQQ.SettingsEditorController" action="{!getUsersInNeedOfPslCsv}"
+		   contentType="text/csv#UsersInNeedOfPsl_{!TODAY()}.csv">
+	<apex:outputText >AssigneeId,PermissionSetLicenseId,UserType</apex:outputText>
+	<apex:outputText >{!userCsvContent}</apex:outputText>
+</apex:page>

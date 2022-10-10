@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Belastungsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Belastungsanzeigen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Belastungsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Belastungsanzeigen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Belastungsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Belastungsanzeigen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Belastungsanzeige</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Belastungsanzeigen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Debit Notes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Betrag, der Rechnungen zugeordnet ist</help>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available for Payment --></label>
+        <name>blng__AvailableForPayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill To Account --></label>
+        <name>blng__BillToAccount__c</name>
+        <relationshipLabel><!-- Debit Notes (Bill To Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill To Contact --></label>
+        <name>blng__BillToContact__c</name>
+        <relationshipLabel><!-- Debit Notes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Debit Note --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Debit Note --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Line Allocations --></label>
+        <name>blng__CreditNoteLineAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Line Unallocations --></label>
+        <name>blng__CreditNoteLineUnallocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit Note Date --></label>
+        <name>blng__DebitNoteDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit Note Source Action --></label>
+        <name>blng__DebitNoteSourceAction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Tax Date --></label>
+        <name>blng__EffectiveTaxDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line Allocations --></label>
+        <name>blng__InvoiceLineAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line Unallocations --></label>
+        <name>blng__InvoiceLineUnallocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Credit Note Allocations --></label>
+        <name>blng__NetCreditNoteAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Invoice Allocations --></label>
+        <name>blng__NetInvoiceAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Payment Allocations --></label>
+        <name>blng__NetPaymentAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Balance --></label>
+        <name>blng__PaymentBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payments --></label>
+        <name>blng__Payments1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Allocations --></label>
+        <name>blng__Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Unallocations --></label>
+        <name>blng__Refunds__c</name>
+    </fields>
+    <fields>
+        <help>Aktueller Status der Gutschrift. Möglich sind: &quot;Entwurf&quot;, &quot;Gebucht&quot; oder &quot;Storniert&quot;</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax --></label>
+        <name>blng__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax City --></label>
+        <name>blng__TaxCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Country --></label>
+        <name>blng__TaxCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax State --></label>
+        <name>blng__TaxState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 2 --></label>
+        <name>blng__TaxStreet2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 1 --></label>
+        <name>blng__TaxStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Postal Code --></label>
+        <name>blng__TaxZipCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available for Allocation (Total) --></label>
+        <name>blng__TotalAvailableForAllocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Allocations (Total) --></label>
+        <name>blng__TotalNetAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocations --></label>
+        <name>blng__Unallocations__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Debit Note Layout</layout>
+        <sections>
+            <label>Saldodetails</label>
+            <section>Balance Details</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Steueranschrift</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nummer der Belastungsanzeige</nameFieldLabel>
+    <quickActions>
+        <label><!-- Apply Tax --></label>
+        <name>blng__ApplyTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cancel Tax --></label>
+        <name>blng__CancelTax</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Estimate Tax --></label>
+        <name>blng__EstimateTax</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ApplyTax --></label>
+        <name>blng__ApplyTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CancelTax --></label>
+        <name>blng__CancelTax</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- EstimateTax --></label>
+        <name>blng__EstimateTax</name>
+    </webLinks>
+</CustomObjectTranslation>

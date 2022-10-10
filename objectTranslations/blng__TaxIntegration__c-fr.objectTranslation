@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Intégration fiscale</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Intégrations fiscales</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default --></label>
+        <name>blng__Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Engine --></label>
+        <name>blng__TaxEngine__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Tax Integration Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom d&apos;intégration fiscale</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

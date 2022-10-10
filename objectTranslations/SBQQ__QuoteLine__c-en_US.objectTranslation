@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- ConsumptionSchedule --></label>
+        <name>SBQQ__ConsumptionSchedule</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor --></label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Non-Current Quote Line Locked Fields --></label>
+        <name>SBQQ__NonCurrentQuoteLineLockedFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Segmented Line Editor --></label>
+        <name>SBQQ__SegmentedLineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Segmented Line Editor Summary --></label>
+        <name>SBQQ__SegmentedLineEditorSummary</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Standard Line Item Drawer --></label>
+        <name>SBQQ__StandardLineItemDrawer</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Summary Fields --></label>
+        <name>SBQQ__SummaryFields</name>
+    </fieldSets>
+    <fields>
+        <label><!-- AdditionalDiscountUnit --></label>
+        <name>AdditionalDiscountUnit__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation><!-- Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Percent</masterLabel>
+            <translation><!-- Percent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total Override</masterLabel>
+            <translation><!-- Total Override --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Override</masterLabel>
+            <translation><!-- Unit Override --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Audience --></label>
+        <name>Audience__c</name>
+        <picklistValues>
+            <masterLabel>26 - 50</masterLabel>
+            <translation><!-- 26 - 50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - 25</masterLabel>
+            <translation><!-- 3 - 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51 - 99</masterLabel>
+            <translation><!-- 51 - 99 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>All Venues</masterLabel>
+            <translation><!-- All Venues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banquet Halls</masterLabel>
+            <translation><!-- Banquet Halls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar Services &amp; Beverages</masterLabel>
+            <translation><!-- Bar Services &amp; Beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barn &amp; Farm Weddings</masterLabel>
+            <translation><!-- Barn &amp; Farm Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beach Weddings</masterLabel>
+            <translation><!-- Beach Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boat Weddings</masterLabel>
+            <translation><!-- Boat Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church &amp; Temple Weddings</masterLabel>
+            <translation><!-- Church &amp; Temple Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Country Club Weddings</masterLabel>
+            <translation><!-- Country Club Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dance Lessons</masterLabel>
+            <translation><!-- Dance Lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Weddings</masterLabel>
+            <translation><!-- Garden Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Historic Weddings</masterLabel>
+            <translation><!-- Historic Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel Weddings</masterLabel>
+            <translation><!-- Hotel Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mansion Weddings</masterLabel>
+            <translation><!-- Mansion Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Museum Weddings</masterLabel>
+            <translation><!-- Museum Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Park &amp; Outdoor Weddings</masterLabel>
+            <translation><!-- Park &amp; Outdoor Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photo Booths</masterLabel>
+            <translation><!-- Photo Booths --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rehearsal Dinner</masterLabel>
+            <translation><!-- Rehearsal Dinner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant Weddings</masterLabel>
+            <translation><!-- Restaurant Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rooftop Weddings</masterLabel>
+            <translation><!-- Rooftop Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Agents</masterLabel>
+            <translation><!-- Travel Agents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waterfront Weddings</masterLabel>
+            <translation><!-- Waterfront Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Bands</masterLabel>
+            <translation><!-- Wedding Bands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Cakes</masterLabel>
+            <translation><!-- Wedding Cakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Caterers</masterLabel>
+            <translation><!-- Wedding Caterers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding DJs</masterLabel>
+            <translation><!-- Wedding DJs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Decor &amp; Lighting</masterLabel>
+            <translation><!-- Wedding Decor &amp; Lighting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Dresses</masterLabel>
+            <translation><!-- Wedding Dresses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Favors</masterLabel>
+            <translation><!-- Wedding Favors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Florists</masterLabel>
+            <translation><!-- Wedding Florists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Hair &amp; Makeup</masterLabel>
+            <translation><!-- Wedding Hair &amp; Makeup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Invitations</masterLabel>
+            <translation><!-- Wedding Invitations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Jewelers</masterLabel>
+            <translation><!-- Wedding Jewelers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Limos</masterLabel>
+            <translation><!-- Wedding Limos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Musicians</masterLabel>
+            <translation><!-- Wedding Musicians --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Officiants</masterLabel>
+            <translation><!-- Wedding Officiants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Photographers</masterLabel>
+            <translation><!-- Wedding Photographers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Planners</masterLabel>
+            <translation><!-- Wedding Planners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Rentals</masterLabel>
+            <translation><!-- Wedding Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Videographers</masterLabel>
+            <translation><!-- Wedding Videographers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winery Weddings</masterLabel>
+            <translation><!-- Winery Weddings --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Platform SKU Number --></label>
+        <name>Child_Platform_SKU_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Content Name --></label>
+        <name>Content_Name__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content__c</name>
+        <picklistValues>
+            <masterLabel>Digital</masterLabel>
+            <translation><!-- Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hard Copy</masterLabel>
+            <translation><!-- Hard Copy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Duration in Months --></label>
+        <name>Duration_in_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platform Quantity --></label>
+        <name>Edition_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image --></label>
+        <name>Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impressions --></label>
+        <name>Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Platform SKU --></label>
+        <name>Is_Platform_SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Ramped --></label>
+        <name>Is_Ramped__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Status --></label>
+        <name>Line_Status__c</name>
+        <picklistValues>
+            <masterLabel>Amended</masterLabel>
+            <translation><!-- Amended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing</masterLabel>
+            <translation><!-- Existing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incremented</masterLabel>
+            <translation><!-- Incremented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modified</masterLabel>
+            <translation><!-- Modified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewed</masterLabel>
+            <translation><!-- Renewed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgraded</masterLabel>
+            <translation><!-- Upgraded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Linked Product --></label>
+        <name>LinkedProduct__c</name>
+        <relationshipLabel><!-- Quote Lines (Linked Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>Market__c</name>
+        <picklistValues>
+            <masterLabel>Alabama - Birmingham, Huntsville, Tuscaloosa</masterLabel>
+            <translation><!-- Alabama - Birmingham, Huntsville, Tuscaloosa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alabama - Montgomery, Dothan</masterLabel>
+            <translation><!-- Alabama - Montgomery, Dothan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska - Anchorage, Fairbanks</masterLabel>
+            <translation><!-- Alaska - Anchorage, Fairbanks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Samoa - American Samoa</masterLabel>
+            <translation><!-- American Samoa - American Samoa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anguilla - Anguilla</masterLabel>
+            <translation><!-- Anguilla - Anguilla --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antigua and Barbuda - Antigua and Barbuda</masterLabel>
+            <translation><!-- Antigua and Barbuda - Antigua and Barbuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona - Phoenix</masterLabel>
+            <translation><!-- Arizona - Phoenix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona - Tucson</masterLabel>
+            <translation><!-- Arizona - Tucson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas - Little Rock</masterLabel>
+            <translation><!-- Arkansas - Little Rock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aruba - Aruba</masterLabel>
+            <translation><!-- Aruba - Aruba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bahamas - Bahamas</masterLabel>
+            <translation><!-- Bahamas - Bahamas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbados - Barbados</masterLabel>
+            <translation><!-- Barbados - Barbados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belize - Belize</masterLabel>
+            <translation><!-- Belize - Belize --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bermuda - Bermuda</masterLabel>
+            <translation><!-- Bermuda - Bermuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Virgin Islands - British Virgin Islands</masterLabel>
+            <translation><!-- British Virgin Islands - British Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Central Valley, Fresno, Bakersfield</masterLabel>
+            <translation><!-- California - Central Valley, Fresno, Bakersfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Inland Empire</masterLabel>
+            <translation><!-- California - Inland Empire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Los Angeles County</masterLabel>
+            <translation><!-- California - Los Angeles County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Monterey</masterLabel>
+            <translation><!-- California - Monterey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Napa Valley, Sonoma County</masterLabel>
+            <translation><!-- California - Napa Valley, Sonoma County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Orange County</masterLabel>
+            <translation><!-- California - Orange County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Sacramento, Modesto</masterLabel>
+            <translation><!-- California - Sacramento, Modesto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - San Diego, La Jolla, Coronado, Carlsbad</masterLabel>
+            <translation><!-- California - San Diego, La Jolla, Coronado, Carlsbad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - San Francisco, San Jose, Oakland</masterLabel>
+            <translation><!-- California - San Francisco, San Jose, Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Santa Barbara, Ventura, San Luis Obispo</masterLabel>
+            <translation><!-- California - Santa Barbara, Ventura, San Luis Obispo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cayman Islands - Cayman Islands</masterLabel>
+            <translation><!-- Cayman Islands - Cayman Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado - Denver, Colorado Springs, Boulder, Vail</masterLabel>
+            <translation><!-- Colorado - Denver, Colorado Springs, Boulder, Vail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut - Hartford, New Haven</masterLabel>
+            <translation><!-- Connecticut - Hartford, New Haven --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Costa Rica - Costa Rica</masterLabel>
+            <translation><!-- Costa Rica - Costa Rica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curacao - Curacao</masterLabel>
+            <translation><!-- Curacao - Curacao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware - Dover, Wilmington, DE/MD Beaches</masterLabel>
+            <translation><!-- Delaware - Dover, Wilmington, DE/MD Beaches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia - Washington DC, Maryland, Northern Virginia</masterLabel>
+            <translation><!-- District of Columbia - Washington DC, Maryland, Northern Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominican Republic - Dominican Republic</masterLabel>
+            <translation><!-- Dominican Republic - Dominican Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Fort Myers, Naples</masterLabel>
+            <translation><!-- Florida - Fort Myers, Naples --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Jacksonville, Brunswick</masterLabel>
+            <translation><!-- Florida - Jacksonville, Brunswick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Miami, Ft. Lauderdale, West Palm Beach</masterLabel>
+            <translation><!-- Florida - Miami, Ft. Lauderdale, West Palm Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Orlando, Daytona Beach</masterLabel>
+            <translation><!-- Florida - Orlando, Daytona Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Panhandle, Mobile</masterLabel>
+            <translation><!-- Florida - Panhandle, Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Tallahassee, Thomasville</masterLabel>
+            <translation><!-- Florida - Tallahassee, Thomasville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Tampa, St. Petersburg, Sarasota</masterLabel>
+            <translation><!-- Florida - Tampa, St. Petersburg, Sarasota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - The Florida Keys</masterLabel>
+            <translation><!-- Florida - The Florida Keys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France - France</masterLabel>
+            <translation><!-- France - France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Polynesia - French Polynesia</masterLabel>
+            <translation><!-- French Polynesia - French Polynesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Atlanta, Athens, Augusta, Macon</masterLabel>
+            <translation><!-- Georgia - Atlanta, Athens, Augusta, Macon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Columbus, Albany</masterLabel>
+            <translation><!-- Georgia - Columbus, Albany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Savannah</masterLabel>
+            <translation><!-- Georgia - Savannah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greece - Greece</masterLabel>
+            <translation><!-- Greece - Greece --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grenada - Grenada</masterLabel>
+            <translation><!-- Grenada - Grenada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guam - Guam</masterLabel>
+            <translation><!-- Guam - Guam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii - Honolulu</masterLabel>
+            <translation><!-- Hawaii - Honolulu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho - Boise, Idaho Falls, Twin Falls</masterLabel>
+            <translation><!-- Idaho - Boise, Idaho Falls, Twin Falls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Chicago</masterLabel>
+            <translation><!-- Illinois - Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Chicago Suburbs</masterLabel>
+            <translation><!-- Illinois - Chicago Suburbs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Springfield, Champaign, Peoria</masterLabel>
+            <translation><!-- Illinois - Springfield, Champaign, Peoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana - Indianapolis, Lafayette, Terre Haute</masterLabel>
+            <translation><!-- Indiana - Indianapolis, Lafayette, Terre Haute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana - South Bend, Elkhart</masterLabel>
+            <translation><!-- Indiana - South Bend, Elkhart --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa - Cedar Rapids, Davenport, Mason City</masterLabel>
+            <translation><!-- Iowa - Cedar Rapids, Davenport, Mason City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa - Des Moines, Ottumwa, Sioux City</masterLabel>
+            <translation><!-- Iowa - Des Moines, Ottumwa, Sioux City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ireland - Ireland</masterLabel>
+            <translation><!-- Ireland - Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy - Italy</masterLabel>
+            <translation><!-- Italy - Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jamaica - Jamaica</masterLabel>
+            <translation><!-- Jamaica - Jamaica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas - Topeka</masterLabel>
+            <translation><!-- Kansas - Topeka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas - Wichita</masterLabel>
+            <translation><!-- Kansas - Wichita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky - Lexington, Louisville</masterLabel>
+            <translation><!-- Kentucky - Lexington, Louisville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky - Paducah, Bowling Green</masterLabel>
+            <translation><!-- Kentucky - Paducah, Bowling Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana - New Orleans, Baton Rouge, Lafayette</masterLabel>
+            <translation><!-- Louisiana - New Orleans, Baton Rouge, Lafayette --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana - Shreveport, Monroe</masterLabel>
+            <translation><!-- Louisiana - Shreveport, Monroe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine - Portland, Bangor, Presque Isle</masterLabel>
+            <translation><!-- Maine - Portland, Bangor, Presque Isle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marshall Islands - Marshall Islands</masterLabel>
+            <translation><!-- Marshall Islands - Marshall Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland - Baltimore</masterLabel>
+            <translation><!-- Maryland - Baltimore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Boston, Watertown, Waltham</masterLabel>
+            <translation><!-- Massachusetts - Boston, Watertown, Waltham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Cape Cod, Martha&apos;s Vineyard, Nantucket</masterLabel>
+            <translation><!-- Massachusetts - Cape Cod, Martha&apos;s Vineyard, Nantucket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Springfield, Holyoke, Pittsfield</masterLabel>
+            <translation><!-- Massachusetts - Springfield, Holyoke, Pittsfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico - Eastern Mexico</masterLabel>
+            <translation><!-- Mexico - Eastern Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico - Western Mexico</masterLabel>
+            <translation><!-- Mexico - Western Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan - Detroit, Flint, Saginaw Bay</masterLabel>
+            <translation><!-- Michigan - Detroit, Flint, Saginaw Bay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan - Grand Rapids, Kalamazoo, Lansing</masterLabel>
+            <translation><!-- Michigan - Grand Rapids, Kalamazoo, Lansing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota - Minneapolis, St. Paul, Duluth, Rochester</masterLabel>
+            <translation><!-- Minnesota - Minneapolis, St. Paul, Duluth, Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi - Jackson, Biloxi, Columbus</masterLabel>
+            <translation><!-- Mississippi - Jackson, Biloxi, Columbus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - Kansas City, St. Joseph</masterLabel>
+            <translation><!-- Missouri - Kansas City, St. Joseph --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - Springfield, Joplin, Pittsburg</masterLabel>
+            <translation><!-- Missouri - Springfield, Joplin, Pittsburg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - St. Louis, Columbia, Jefferson City, Quincy</masterLabel>
+            <translation><!-- Missouri - St. Louis, Columbia, Jefferson City, Quincy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana - Missoula, Bozeman, Billings</masterLabel>
+            <translation><!-- Montana - Missoula, Bozeman, Billings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska - Lincoln, Omaha, North Platte</masterLabel>
+            <translation><!-- Nebraska - Lincoln, Omaha, North Platte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada - Las Vegas</masterLabel>
+            <translation><!-- Nevada - Las Vegas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada - Reno, Tahoe</masterLabel>
+            <translation><!-- Nevada - Reno, Tahoe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire - Concord, Nashua, Manchester</masterLabel>
+            <translation><!-- New Hampshire - Concord, Nashua, Manchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Central Jersey, Union, Trenton</masterLabel>
+            <translation><!-- New Jersey - Central Jersey, Union, Trenton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Jersey Shore, Atlantic City</masterLabel>
+            <translation><!-- New Jersey - Jersey Shore, Atlantic City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Northern New Jersey, Newark</masterLabel>
+            <translation><!-- New Jersey - Northern New Jersey, Newark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Southern New Jersey</masterLabel>
+            <translation><!-- New Jersey - Southern New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico - Albuquerque, Santa Fe</masterLabel>
+            <translation><!-- New Mexico - Albuquerque, Santa Fe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Albany, Saratoga Springs, Adirondacks</masterLabel>
+            <translation><!-- New York - Albany, Saratoga Springs, Adirondacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Buffalo, Rochester</masterLabel>
+            <translation><!-- New York - Buffalo, Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Long Island</masterLabel>
+            <translation><!-- New York - Long Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Manhattan</masterLabel>
+            <translation><!-- New York - Manhattan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Outer Boroughs</masterLabel>
+            <translation><!-- New York - Outer Boroughs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Syracuse, Binghamton, Elmira, Utica</masterLabel>
+            <translation><!-- New York - Syracuse, Binghamton, Elmira, Utica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Westchester, Western Connecticut</masterLabel>
+            <translation><!-- New York - Westchester, Western Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Charlotte, Asheville</masterLabel>
+            <translation><!-- North Carolina - Charlotte, Asheville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Outer Banks</masterLabel>
+            <translation><!-- North Carolina - Outer Banks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Raleigh - Triangle, Greensboro - Triad</masterLabel>
+            <translation><!-- North Carolina - Raleigh - Triangle, Greensboro - Triad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Wilmington, Eastern Coast</masterLabel>
+            <translation><!-- North Carolina - Wilmington, Eastern Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota - Bismarck, Fargo</masterLabel>
+            <translation><!-- North Dakota - Bismarck, Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Mariana Islands - Northern Mariana Islands</masterLabel>
+            <translation><!-- Northern Mariana Islands - Northern Mariana Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Cincinnati, Dayton</masterLabel>
+            <translation><!-- Ohio - Cincinnati, Dayton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Cleveland, Erie</masterLabel>
+            <translation><!-- Ohio - Cleveland, Erie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Columbus, Zanesville</masterLabel>
+            <translation><!-- Ohio - Columbus, Zanesville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Toledo, Bowling Green, Lima</masterLabel>
+            <translation><!-- Ohio - Toledo, Bowling Green, Lima --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma - Oklahoma City</masterLabel>
+            <translation><!-- Oklahoma - Oklahoma City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma - Tulsa</masterLabel>
+            <translation><!-- Oklahoma - Tulsa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon - Eugene, Bend, Medford</masterLabel>
+            <translation><!-- Oregon - Eugene, Bend, Medford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon - Portland</masterLabel>
+            <translation><!-- Oregon - Portland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palau - Palau</masterLabel>
+            <translation><!-- Palau - Palau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Lancaster, Harrisburg, York</masterLabel>
+            <translation><!-- Pennsylvania - Lancaster, Harrisburg, York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Philadelphia, Lehigh Valley</masterLabel>
+            <translation><!-- Pennsylvania - Philadelphia, Lehigh Valley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Pittsburgh, Wheeling</masterLabel>
+            <translation><!-- Pennsylvania - Pittsburgh, Wheeling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Scranton</masterLabel>
+            <translation><!-- Pennsylvania - Scranton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portugal - Portugal</masterLabel>
+            <translation><!-- Portugal - Portugal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico - Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico - Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island - Providence, New Bedford</masterLabel>
+            <translation><!-- Rhode Island - Providence, New Bedford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Charleston, Florence, Myrtle Beach</masterLabel>
+            <translation><!-- South Carolina - Charleston, Florence, Myrtle Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Columbia, Greenville</masterLabel>
+            <translation><!-- South Carolina - Columbia, Greenville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Hilton Head</masterLabel>
+            <translation><!-- South Carolina - Hilton Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota - Sioux Falls, Rapid City</masterLabel>
+            <translation><!-- South Dakota - Sioux Falls, Rapid City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spain - Spain</masterLabel>
+            <translation><!-- Spain - Spain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Barts - St. Barts</masterLabel>
+            <translation><!-- St. Barts - St. Barts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Lucia - St. Lucia</masterLabel>
+            <translation><!-- St. Lucia - St. Lucia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Martin / St. Maarten - St. Martin / St. Maarten</masterLabel>
+            <translation><!-- St. Martin / St. Maarten - St. Martin / St. Maarten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Knoxville, Chattanooga, Tri-Cities</masterLabel>
+            <translation><!-- Tennessee - Knoxville, Chattanooga, Tri-Cities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Memphis, Jackson, Jonesboro</masterLabel>
+            <translation><!-- Tennessee - Memphis, Jackson, Jonesboro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Nashville</masterLabel>
+            <translation><!-- Tennessee - Nashville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Austin</masterLabel>
+            <translation><!-- Texas - Austin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Dallas, Ft. Worth, Wichita Falls</masterLabel>
+            <translation><!-- Texas - Dallas, Ft. Worth, Wichita Falls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - El Paso, Amarillo, Odessa</masterLabel>
+            <translation><!-- Texas - El Paso, Amarillo, Odessa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Houston, Beaumont</masterLabel>
+            <translation><!-- Texas - Houston, Beaumont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - San Antonio, Corpus Christi</masterLabel>
+            <translation><!-- Texas - San Antonio, Corpus Christi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trinidad and Tobago - Trinidad and Tobago</masterLabel>
+            <translation><!-- Trinidad and Tobago - Trinidad and Tobago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turks and Caicos - Turks + Caicos</masterLabel>
+            <translation><!-- Turks and Caicos - Turks + Caicos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom - United Kingdom</masterLabel>
+            <translation><!-- United Kingdom - United Kingdom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah - Salt Lake City</masterLabel>
+            <translation><!-- Utah - Salt Lake City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont - Burlington, Plattsburgh</masterLabel>
+            <translation><!-- Vermont - Burlington, Plattsburgh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin Islands - Virgin Islands</masterLabel>
+            <translation><!-- Virgin Islands - Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia - Hampton Roads</masterLabel>
+            <translation><!-- Virginia - Hampton Roads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia - Richmond, Charlottesville, Roanoke</masterLabel>
+            <translation><!-- Virginia - Richmond, Charlottesville, Roanoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington - Seattle, Tacoma, Olympia</masterLabel>
+            <translation><!-- Washington - Seattle, Tacoma, Olympia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington - Spokane, Yakima, Cour d&apos;Alene</masterLabel>
+            <translation><!-- Washington - Spokane, Yakima, Cour d&apos;Alene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia - Charleston</masterLabel>
+            <translation><!-- West Virginia - Charleston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin - Green Bay, Appleton, Door County</masterLabel>
+            <translation><!-- Wisconsin - Green Bay, Appleton, Door County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin - Milwaukee, Madison</masterLabel>
+            <translation><!-- Wisconsin - Milwaukee, Madison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming - Cheyenne, Casper, Laramie, Jackson</masterLabel>
+            <translation><!-- Wyoming - Cheyenne, Casper, Laramie, Jackson --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max Impressions --></label>
+        <name>Max_Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Platform Subscription --></label>
+        <name>Platform_Subscription__c</name>
+        <relationshipLabel><!-- Quote Lines (Original Platform Subscription) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price For Max Impressions --></label>
+        <name>Price_For_Max_Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Image --></label>
+        <name>ProductImage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Tier --></label>
+        <name>Product_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Featured</masterLabel>
+            <translation><!-- Featured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spotlight</masterLabel>
+            <translation><!-- Spotlight --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ramp Enabled --></label>
+        <name>Ramp_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramp Label --></label>
+        <name>Ramp_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramp Origin --></label>
+        <name>Ramp_Origin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramp UniqueKey --></label>
+        <name>Ramp_UniqueKey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramped Line --></label>
+        <name>Ramped_Line__c</name>
+    </fields>
+    <fields>
+        <label><!-- Re Ramped --></label>
+        <name>Re_Ramped__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reaction --></label>
+        <name>Reaction__c</name>
+        <picklistValues>
+            <masterLabel>16 rxns</masterLabel>
+            <translation><!-- 16 rxns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>48 rxns</masterLabel>
+            <translation><!-- 48 rxns --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reactions --></label>
+        <name>Reactions__c</name>
+        <picklistValues>
+            <masterLabel>16 rxns</masterLabel>
+            <translation><!-- 16 rxns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 rxns</masterLabel>
+            <translation><!-- 4 rxns --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewal Upgrade Type --></label>
+        <name>Renewal_Upgrade_Type__c</name>
+        <picklistValues>
+            <masterLabel>Like to Like</masterLabel>
+            <translation><!-- Like to Like --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suites Like to Like</masterLabel>
+            <translation><!-- Suites Like to Like --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suites Upgrade</masterLabel>
+            <translation><!-- Suites Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade</masterLabel>
+            <translation><!-- Upgrade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewed From Bundle --></label>
+        <name>Renewed_From_Bundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewed From Subscription --></label>
+        <name>Renewed_From_Subscription__c</name>
+        <relationshipLabel><!-- Quote Lines (Renewed From Subscription) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Additional customer discount extended on this line item in the form of an absolute amount. --></help>
+        <label><!-- Additional Disc. (Amt) --></label>
+        <name>SBQQ__AdditionalDiscountAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total additional discounts extended to this line item. Additional discount is defined as discount extended on top of volume discount or negotiated prices. --></help>
+        <label><!-- Additional Disc. --></label>
+        <name>SBQQ__AdditionalDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Additional quantity for this product that contributes to volume discount calculations --></help>
+        <label><!-- Additional Quantity --></label>
+        <name>SBQQ__AdditionalQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the asset represented by this line may be refunded. --></help>
+        <label><!-- Allow Asset Refunds --></label>
+        <name>SBQQ__AllowAssetRefund__c</name>
+    </fields>
+    <fields>
+        <help><!-- If products are sold in batches, this stores the quantity in each batch, defaulted from the product. --></help>
+        <label><!-- Batch Quantity --></label>
+        <name>SBQQ__BatchQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Defines the billing frequency. --></help>
+        <label><!-- Billing Frequency --></label>
+        <name>SBQQ__BillingFrequency__c</name>
+    </fields>
+    <fields>
+        <help><!-- The billing type that defines when the billing occurs. Billing in advance lets you bill your customers for products or services before you provide them; Billing in arrears lets you bill your customers after the products or services are provided. --></help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Assign a fixed price to a product based on quantity and quantity range. This overrides the automatic calculation of quantity * unit price. --></help>
+        <label><!-- Block Price --></label>
+        <name>SBQQ__BlockPrice__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether this line item represents a package; meaning, it includes other line items in this quote. --></help>
+        <label><!-- Package --></label>
+        <name>SBQQ__Bundle__c</name>
+    </fields>
+    <fields>
+        <help><!-- For items with calculated quantities this field holds the original quantity entered by the user. --></help>
+        <label><!-- Original Quantity --></label>
+        <name>SBQQ__BundledQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the product on this line item is bundled (included) by another product in this quote. Bundled lines items have a zero price and do not allow price or quantity to be edited. --></help>
+        <label><!-- Bundled --></label>
+        <name>SBQQ__Bundled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Denotes this line as an auto-selected option of an upgrade bundle. --></help>
+        <label><!-- Carry-Over Line --></label>
+        <name>SBQQ__CarryoverLine__c</name>
+    </fields>
+    <fields>
+        <help><!-- The type of the product charge.  This is a system field that is derived from the associated product. --></help>
+        <label><!-- Charge Type --></label>
+        <name>SBQQ__ChargeType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total cost of components in this package. --></help>
+        <label><!-- Component Cost --></label>
+        <name>SBQQ__ComponentCost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fixes additional discount for this component to the parent package discount. --></help>
+        <label><!-- Component Discounted By Package --></label>
+        <name>SBQQ__ComponentDiscountedByPackage__c</name>
+    </fields>
+    <fields>
+        <help><!-- List total of components in this configuration. This field is only populated if this line item references a configurable product. --></help>
+        <label><!-- Component List Total --></label>
+        <name>SBQQ__ComponentListTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Percent of Total scope set at the component level. This field overrides the Percent of Total scope copied from the Product Option. --></help>
+        <label><!-- Component Percent of Total Scope --></label>
+        <name>SBQQ__ComponentSubscriptionScope__c</name>
+        <picklistValues>
+            <masterLabel>Components</masterLabel>
+            <translation><!-- Components --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entire Hierarchy</masterLabel>
+            <translation><!-- Entire Hierarchy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package</masterLabel>
+            <translation><!-- Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package &amp; Components</masterLabel>
+            <translation><!-- Package &amp; Components --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Sum total of components in this configuration. This field is only populated if this line item references a configurable product. --></help>
+        <label><!-- Component Net Total --></label>
+        <name>SBQQ__ComponentTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fixes uplift for this component to the parent package uplift. Uplift only applies to multi-segmented products. --></help>
+        <label><!-- Component Uplifted By Package --></label>
+        <name>SBQQ__ComponentUpliftedByPackage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the visibility of the component line item. --></help>
+        <label><!-- Component Visibility --></label>
+        <name>SBQQ__ComponentVisibility__c</name>
+    </fields>
+    <fields>
+        <help><!-- Discount rate compounded by quantity (historic). --></help>
+        <label><!-- Compound Discount (%) --></label>
+        <name>SBQQ__CompoundDiscountRate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Flag that marks this quote line as requiring configuration. Can be used by custom code to request this product be re-configured. --></help>
+        <label><!-- Configuration Required --></label>
+        <name>SBQQ__ConfigurationRequired__c</name>
+    </fields>
+    <fields>
+        <help><!-- Contracted price if the product has negotiated pricing for the opportunity&apos;s account. Contracted Prices are available on the Account and can be applied to any product in any price book. --></help>
+        <label><!-- Contracted Price --></label>
+        <name>SBQQ__ContractedPrice__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Specifies whether cost can be edited on this line item. --></help>
+        <label><!-- Cost Editable --></label>
+        <name>SBQQ__CostEditable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Cost record for this line item. --></help>
+        <label><!-- Cost --></label>
+        <name>SBQQ__Cost__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Customer unit price for the product quoted by this line item. This is the Net Unit Price excluding any partner discounts. --></help>
+        <label><!-- Customer Unit Price --></label>
+        <name>SBQQ__CustomerPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Customer total price for this quote line item. This is the Net Total excluding any partner discounts. --></help>
+        <label><!-- Customer Total --></label>
+        <name>SBQQ__CustomerTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first generated. --></help>
+        <label><!-- Default Subscription Term --></label>
+        <name>SBQQ__DefaultSubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help><!-- Description for this line item. --></help>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Dimensions within an MDQ Product that all each segment to be priced independently. Each Product may contain several Price Dimensions. Yearly Price Dimensions are treated as Subscriptions. --></help>
+        <label><!-- Price Dimension --></label>
+        <name>SBQQ__Dimension__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Discount schedule type. Copied from Type field in associated discount schedule. --></help>
+        <label><!-- Discount Schedule Type --></label>
+        <name>SBQQ__DiscountScheduleType__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation><!-- Range --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation><!-- Slab --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specify discounts in terms of % or Amt to be discounted off the product&apos;s price using quantity purchased or term. Set quantity/term ranges in tiers of different discount %. Discount is applied to List Price &amp; resulting total is stored in the Regular Price --></help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Discount tier used by this line item. This field is only populated if a volume discount was applied and the discount schedule is of type &quot;Range&quot;. --></help>
+        <label><!-- Discount Tier --></label>
+        <name>SBQQ__DiscountTier__c</name>
+        <relationshipLabel><!-- Quote Lines (Volume Discounted) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Additional customer discount extended to this line item expressed in form of a percentage. --></help>
+        <label><!-- Additional Disc. (%) --></label>
+        <name>SBQQ__Discount__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a discount that is applied to partner price and reflected in the net price. --></help>
+        <label><!-- Distributor Discount --></label>
+        <name>SBQQ__DistributorDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies feature and dynamic option for this line. --></help>
+        <label><!-- Dynamic Option ID --></label>
+        <name>SBQQ__DynamicOptionId__c</name>
+    </fields>
+    <fields>
+        <help><!-- The earliest valid start date for this amendment quote line. --></help>
+        <label><!-- Earliest Valid Amendment Start Date --></label>
+        <name>SBQQ__EarliestValidAmendmentStartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Effective end date for this subscription. --></help>
+        <label><!-- Effective End Date --></label>
+        <name>SBQQ__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Effective quantity used in computing totals. Same as quantity unless the product is block priced, covered by &quot;Slab&quot; discount schedule, or an existing subscription. --></help>
+        <label><!-- Effective Quantity --></label>
+        <name>SBQQ__EffectiveQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Effective start date for this subscription. --></help>
+        <label><!-- Effective Start Date --></label>
+        <name>SBQQ__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Effective term for this subscription. --></help>
+        <label><!-- Effective Subscription Term --></label>
+        <name>SBQQ__EffectiveSubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the service represented by this line item will end (only applies if product is a subscription). --></help>
+        <label><!-- End Date --></label>
+        <name>SBQQ__EndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the customer already owns this product. This is typically used for products with options during add-on quoting. The product is on the quote solely to drive the Configurator. --></help>
+        <label><!-- Existing --></label>
+        <name>SBQQ__Existing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Favorite to which this Quote Line belongs. --></help>
+        <label><!-- Favorite --></label>
+        <name>SBQQ__Favorite__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Will generate a contracted price based on the adjusted quote line if flagged. --></help>
+        <label><!-- Generate Contracted Price --></label>
+        <name>SBQQ__GenerateContractedPrice__c</name>
+        <picklistValues>
+            <masterLabel>Discount Schedule</masterLabel>
+            <translation><!-- Discount Schedule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Generate</masterLabel>
+            <translation><!-- Do Not Generate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Gross profit amount on this line item. --></help>
+        <label><!-- Gross Profit --></label>
+        <name>SBQQ__GrossProfit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Group to which this line belongs, if any. --></help>
+        <label><!-- Group --></label>
+        <name>SBQQ__Group__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price. --></help>
+        <label><!-- Guidance --></label>
+        <name>SBQQ__Guidance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if this line has at least one consumption schedule --></help>
+        <label><!-- Has Consumption Schedules --></label>
+        <name>SBQQ__HasConsumptionSchedule__c</name>
+    </fields>
+    <fields>
+        <help><!-- Denotes whether this line item is hidden in generated PDF documents. --></help>
+        <label><!-- Hidden --></label>
+        <name>SBQQ__Hidden__c</name>
+    </fields>
+    <fields>
+        <help><!-- Flag set internally by application logic when a line is saved to an incomplete database. This may happen when price rules are evaluated. Test this field in validation rules to avoid them firing prematurely. Do NOT add to page layout or otherwise update. --></help>
+        <label><!-- Incomplete --></label>
+        <name>SBQQ__Incomplete__c</name>
+    </fields>
+    <fields>
+        <help><!-- List unit price for the product quoted by this line item. List Price originates from the price book. --></help>
+        <label><!-- List Unit Price --></label>
+        <name>SBQQ__ListPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- List total price for this quote line item. --></help>
+        <label><!-- List Total --></label>
+        <name>SBQQ__ListTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Markup amount for this line item. --></help>
+        <label><!-- Markup (Amt) --></label>
+        <name>SBQQ__MarkupAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Markup on this line item expressed as a percentage. --></help>
+        <label><!-- Markup (%) --></label>
+        <name>SBQQ__MarkupRate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Markup amount on this item. This value is automatically calculated by applying markup rate or absolute amount to the product cost. --></help>
+        <label><!-- Markup --></label>
+        <name>SBQQ__Markup__c</name>
+    </fields>
+    <fields>
+        <help><!-- Maximum list unit price for this product. Used to enforce list price ceiling for products with dynamically calculated list prices. --></help>
+        <label><!-- Maximum List Unit Price --></label>
+        <name>SBQQ__MaximumPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Minimum list unit price for this product. Used to enforce list price floor for products with dynamically calculated list prices. --></help>
+        <label><!-- Minimum List Unit Price --></label>
+        <name>SBQQ__MinimumPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Net unit price for the product quoted by this line item. --></help>
+        <label><!-- Net Unit Price --></label>
+        <name>SBQQ__NetPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Net total price for this quote line item. --></help>
+        <label><!-- Net Total --></label>
+        <name>SBQQ__NetTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Marks this line item as non-discountable. --></help>
+        <label><!-- Non Discountable --></label>
+        <name>SBQQ__NonDiscountable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the checkbox to make this line item non discountable for partners. --></help>
+        <label><!-- Non Partner Discountable --></label>
+        <name>SBQQ__NonPartnerDiscountable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number indicating this line&apos;s position within its group or quote. --></help>
+        <label><!-- Number --></label>
+        <name>SBQQ__Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Discount extended on this product because it&apos;s part of a package. --></help>
+        <label><!-- Option Discount (Amt) --></label>
+        <name>SBQQ__OptionDiscountAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this line is for an optional SKU, this field captures any discount given to the package and extended to the option. --></help>
+        <label><!-- Option Discount (%) --></label>
+        <name>SBQQ__OptionDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates nest level of this option (only applies to lines that are generated from options). --></help>
+        <label><!-- Option Level --></label>
+        <name>SBQQ__OptionLevel__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the Option Type, which is copied from related Product Option. Determines how quantity is calculated. --></help>
+        <label><!-- Option Type --></label>
+        <name>SBQQ__OptionType__c</name>
+        <picklistValues>
+            <masterLabel>Accessory</masterLabel>
+            <translation><!-- Accessory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Component</masterLabel>
+            <translation><!-- Component --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Related Product</masterLabel>
+            <translation><!-- Related Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Marks this line as optional. Optional line items don&apos;t contribute to quote totals and are not transferred to the Opportunity. --></help>
+        <label><!-- Optional --></label>
+        <name>SBQQ__Optional__c</name>
+    </fields>
+    <fields>
+        <help><!-- The original unit price for the product quoted by this line item.  Original Price originates from the price book. --></help>
+        <label><!-- Original Price --></label>
+        <name>SBQQ__OriginalPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- The id of the original quote line which this line was derived from. --></help>
+        <label><!-- Original Quote Line Id --></label>
+        <name>SBQQ__OriginalQuoteLineId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Cost for one unit of product quoted on this line item if Cost Schedules were not applied. --></help>
+        <label><!-- Original Unit Cost --></label>
+        <name>SBQQ__OriginalUnitCost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total cost for this package including the cost of its components. --></help>
+        <label><!-- Package Cost --></label>
+        <name>SBQQ__PackageCost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total list price of this package including its components. --></help>
+        <label><!-- Package List Total --></label>
+        <name>SBQQ__PackageListTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- A code listing each of this package&apos;s components based on their component codes. --></help>
+        <label><!-- Package Product Code --></label>
+        <name>SBQQ__PackageProductCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- A description of each component in this package. --></help>
+        <label><!-- Package Product Description --></label>
+        <name>SBQQ__PackageProductDescription__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total price of this package including its components. --></help>
+        <label><!-- Package Total --></label>
+        <name>SBQQ__PackageTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- If your organization sells through a channel/VARI, a Partner Discount on a quote or individual product line item can be given. Partner discounts are applied after all automatic and discretionary discounts. --></help>
+        <label><!-- Partner Discount --></label>
+        <name>SBQQ__PartnerDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Partner unit price. Price after partner discount but before distributor discount. --></help>
+        <label><!-- Partner Unit Price --></label>
+        <name>SBQQ__PartnerPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total of the Partner Discount. --></help>
+        <label><!-- Partner Total --></label>
+        <name>SBQQ__PartnerTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- When set, this value takes the place of the previous segment&apos;s regular price when calculating Uplift for this segment. --></help>
+        <label><!-- Previous Segment Regular Price --></label>
+        <name>SBQQ__PreviousSegmentPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- When set, this value takes the place of the previous segment&apos;s uplift amount when calculating Uplift for this segment. --></help>
+        <label><!-- Previous Segment Uplift --></label>
+        <name>SBQQ__PreviousSegmentUplift__c</name>
+    </fields>
+    <fields>
+        <help><!-- Flag that indicates if price is editable for this line item. --></help>
+        <label><!-- Price Editable --></label>
+        <name>SBQQ__PriceEditable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricebook Entry Id --></label>
+        <name>SBQQ__PricebookEntryId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Flag indicating if this line item&apos;s price is editable. --></help>
+        <label><!-- Pricing Method Editable --></label>
+        <name>SBQQ__PricingMethodEditable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates how the price for this line item is calculated. &quot;List&quot; = subtracting discount from list price. &quot;Cost&quot; = adding markup to cost. --></help>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Block</masterLabel>
+            <translation><!-- Block --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost</masterLabel>
+            <translation><!-- Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List</masterLabel>
+            <translation><!-- List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Percent Of Total</masterLabel>
+            <translation><!-- Percent Of Total --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Combined quantity of this product from prior purchases. --></help>
+        <label><!-- Prior Quantity --></label>
+        <name>SBQQ__PriorQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Code for the product referenced by this line. --></help>
+        <label><!-- Product Code --></label>
+        <name>SBQQ__ProductCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- How you would categorize/group/organize this within Salesforce (whether it&apos;s a new or existing Product Family). Additionally, this field can be used during product selection to filter to the correct product or product SKU. --></help>
+        <label><!-- Product Family --></label>
+        <name>SBQQ__ProductFamily__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name for the product referenced by this line item. --></help>
+        <label><!-- Product Name --></label>
+        <name>SBQQ__ProductName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product option that generated this line (if any). --></help>
+        <label><!-- Product Option --></label>
+        <name>SBQQ__ProductOption__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Set the quote line&apos;s product subscription type. --></help>
+        <label><!-- Product Subscription Type --></label>
+        <name>SBQQ__ProductSubscriptionType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product quoted by this line item. --></help>
+        <label><!-- Product --></label>
+        <name>SBQQ__Product__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Calculated ratio used to compute Prorated Price. --></help>
+        <label><!-- Prorate Multiplier --></label>
+        <name>SBQQ__ProrateMultiplier__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prorated list unit price. --></help>
+        <label><!-- Prorated List Price --></label>
+        <name>SBQQ__ProratedListPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prorated price for the product quoted by this line item. This price will only differ from Special Price if the product is a subscription and the line item is being prorated. --></help>
+        <label><!-- Prorated Unit Price --></label>
+        <name>SBQQ__ProratedPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Quantity being quoted. --></help>
+        <label><!-- Quantity --></label>
+        <name>SBQQ__Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Quote to which this line item belongs. --></help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Unit price before additional discount. --></help>
+        <label><!-- Regular Unit Price --></label>
+        <name>SBQQ__RegularPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unit price before additional discount multiplied by quantity. --></help>
+        <label><!-- Regular Total --></label>
+        <name>SBQQ__RegularTotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates this line item represents a product being renewed. This field should not be modified. --></help>
+        <label><!-- Renewal --></label>
+        <name>SBQQ__Renewal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Asset being renewed if this line item represents product renewal. --></help>
+        <label><!-- Renewed Asset --></label>
+        <name>SBQQ__RenewedAsset__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Subscription being renewed by this quote line. --></help>
+        <label><!-- Renewed Subscription --></label>
+        <name>SBQQ__RenewedSubscription__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates which other product on this quote requires it. --></help>
+        <label><!-- Required By --></label>
+        <name>SBQQ__RequiredBy__c</name>
+        <relationshipLabel><!-- Quote Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- For multi-segmented Products, Index representing this Quote Line&apos;s position in the segment table. --></help>
+        <label><!-- Segment Index --></label>
+        <name>SBQQ__SegmentIndex__c</name>
+    </fields>
+    <fields>
+        <help><!-- For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together. --></help>
+        <label><!-- Segment Key --></label>
+        <name>SBQQ__SegmentKey__c</name>
+    </fields>
+    <fields>
+        <help><!-- For multi-segmented Products, this is the Column header label (e.g. &quot;Year 1&quot;) associated with this line. --></help>
+        <label><!-- Segment Label --></label>
+        <name>SBQQ__SegmentLabel__c</name>
+    </fields>
+    <fields>
+        <help><!-- Source of cloned quote line. --></help>
+        <label><!-- Source --></label>
+        <name>SBQQ__Source__c</name>
+        <relationshipLabel><!-- Quote Lines (Source) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Name of the Discount Tier or Contacted Price applied to achieve the special price for this line item. --></help>
+        <label><!-- Special Price Description --></label>
+        <name>SBQQ__SpecialPriceDescription__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the type of special price offered on this line item. Null value indicates there is no special pricing. --></help>
+        <label><!-- Special Price Type --></label>
+        <name>SBQQ__SpecialPriceType__c</name>
+        <picklistValues>
+            <masterLabel>Contracted Price</masterLabel>
+            <translation><!-- Contracted Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Special unit price for this line item, such as volume discount or contracted price. --></help>
+        <label><!-- Special Price --></label>
+        <name>SBQQ__SpecialPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date the subscription for this product begins. --></help>
+        <label><!-- Start Date --></label>
+        <name>SBQQ__StartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- List of assets covered by this subscription line item. Do not update unless instructed. --></help>
+        <label><!-- Subscribed Asset IDs --></label>
+        <name>SBQQ__SubscribedAssetIds__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines whether Percent of Total is calculated off List or Net product prices. --></help>
+        <label><!-- Percent of Total Base --></label>
+        <name>SBQQ__SubscriptionBase__c</name>
+    </fields>
+    <fields>
+        <help><!-- Category defined on the product to limit percent-of-total calculations to certain products. Copied from the product record. --></help>
+        <label><!-- Percent of Total Category --></label>
+        <name>SBQQ__SubscriptionCategory__c</name>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation><!-- Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software</masterLabel>
+            <translation><!-- Software --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Percent of Total to be used when calculating this line item price. --></help>
+        <label><!-- Percent of Total (%) --></label>
+        <name>SBQQ__SubscriptionPercent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product. --></help>
+        <label><!-- Subscription Pricing --></label>
+        <name>SBQQ__SubscriptionPricing__c</name>
+        <picklistValues>
+            <masterLabel>Fixed Price</masterLabel>
+            <translation><!-- Fixed Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Percent Of Total</masterLabel>
+            <translation><!-- Percent Of Total --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates how percent of total prices are calculated: Quote uses all the non-subscription and include in percent of total products in the quote while Group uses only non-subscription products and include in percent of total products in the same group. --></help>
+        <label><!-- Percent of Total Scope --></label>
+        <name>SBQQ__SubscriptionScope__c</name>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Price of the target product on which percent of total should calculate. --></help>
+        <label><!-- Percent of Total Target Price --></label>
+        <name>SBQQ__SubscriptionTargetPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Term for this subscription. If this product is not a subscription this value has no effect. --></help>
+        <label><!-- Subscription Term --></label>
+        <name>SBQQ__SubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the subscription type to determine contract&apos;s pricing. --></help>
+        <label><!-- Subscription Type --></label>
+        <name>SBQQ__SubscriptionType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the tax code for taxation rules. --></help>
+        <label><!-- Tax code --></label>
+        <name>SBQQ__TaxCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if the line item is taxable --></help>
+        <label><!-- Taxable --></label>
+        <name>SBQQ__Taxable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Schedule for discounts based on subscription term. Setting this to &quot;Group&quot; applies the discount rate for the group term, while setting it to &quot;Quote&quot; applies the discount rate for the entire quote term, regardless of the different terms in your groups. --></help>
+        <label><!-- Term Discount Schedule --></label>
+        <name>SBQQ__TermDiscountSchedule__c</name>
+        <relationshipLabel><!-- Quote Lines (Term Discouned) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Tier within the term discount schedule used to discount this line item. --></help>
+        <label><!-- Term Discount Tier --></label>
+        <name>SBQQ__TermDiscountTier__c</name>
+        <relationshipLabel><!-- Quote Lines (Term Discounted) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Discount calculated by applying subscription term against term discount schedule. --></help>
+        <label><!-- Term Discount --></label>
+        <name>SBQQ__TermDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total discount amount for this line item including volume discount, contracted discount, and additional discount. --></help>
+        <label><!-- Total Discount (Amt) --></label>
+        <name>SBQQ__TotalDiscountAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total discount for this line item including volume discount, contracted discount, and additional discount. --></help>
+        <label><!-- Total Discount (%) --></label>
+        <name>SBQQ__TotalDiscountRate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Cost for one unit of product quoted on this line item. --></help>
+        <label><!-- Unit Cost --></label>
+        <name>SBQQ__UnitCost__c</name>
+    </fields>
+    <fields>
+        <help><!-- The full term net price for individual line. --></help>
+        <label><!-- Unprorated Net Price --></label>
+        <name>SBQQ__UnproratedNetPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Asset being upgraded by this quote line. When the quote is contracted this asset will have its Usage End Date populated to indicate it&apos;s retired. --></help>
+        <label><!-- Upgraded Asset --></label>
+        <name>SBQQ__UpgradedAsset__c</name>
+        <relationshipLabel><!-- Quote Lines (Upgrade) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Portion of this line&apos;s Prior Quantity being upgraded to another product. --></help>
+        <label><!-- Upgraded Quantity --></label>
+        <name>SBQQ__UpgradedQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Subscription being upgraded by this quote line. When the quote is contracted this subscription will have its Terminated Date field populated. --></help>
+        <label><!-- Upgraded Subscription --></label>
+        <name>SBQQ__UpgradedSubscription__c</name>
+        <relationshipLabel><!-- Quote Lines (Upgrade) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Uplift (Amt) is measured as a currency amount. This is a system-calculated field, as Uplift can only be applied to MDQ segments in percent. --></help>
+        <label><!-- Uplift (Amt) --></label>
+        <name>SBQQ__UpliftAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Uplift is applied as a % against the previous year&apos;s price; the resulting price is entered into the Regular Price field on top of Special or Contracted Prices. Uplifts compound year after year. Uplift cannot be applied to the 1st Year of any Subscription. --></help>
+        <label><!-- Uplift --></label>
+        <name>SBQQ__Uplift__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify volume discounts based on a % of the product&apos;s price to be discounted using the quantity purchased or term. You can set the quantity or term ranges in tiers of different discount %. You can also apply discount schedules to Subscription Term. --></help>
+        <label><!-- Volume Discount --></label>
+        <name>SBQQ__VolumeDiscount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Ramp --></label>
+        <name>Show_Ramp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Favorite Line --></label>
+        <name>Source_Favorite_Line__c</name>
+        <relationshipLabel><!-- Quote Lines (Source Favorite Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source for Custom Renewal --></label>
+        <name>Source_for_Custom_Renewal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sum of Child Original MRR --></label>
+        <name>Sum_of_Child_Original_MRR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sum of Child Original PUPY --></label>
+        <name>Sum_of_Child_Original_PUPY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Contacts --></label>
+        <name>Total_Number_of_Contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upgraded From Subscription --></label>
+        <name>Upgraded_From_Subscription__c</name>
+        <relationshipLabel><!-- Quote Lines (Upgraded From Subscription) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Vertical --></label>
+        <name>Vertical__c</name>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Warranty --></label>
+        <name>Warranty__c</name>
+        <picklistValues>
+            <masterLabel>12 months</masterLabel>
+            <translation><!-- 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24 months</masterLabel>
+            <translation><!-- 24 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The unprorated amount that will bill each billing period. Equals ((TotalPrice * BillingFrequency) / (ProrateMultiplier * DefaultSubscriptionTerm)). --></help>
+        <label><!-- Billable Unit Price --></label>
+        <name>blng__BillableUnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- is Extended --></label>
+        <name>is_Extended__c</name>
+    </fields>
+    <layouts>
+        <layout>Quote Line Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Discount Information --></label>
+            <section>Discount Information</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Recalculating --></label>
+            <section>Recalculating</section>
+        </sections>
+        <sections>
+            <label><!-- Subscription Information --></label>
+            <section>Subscription Information</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- You may not specify additional discount as both percentage and absolute amount. --></errorMessage>
+        <name>SBQQ__Additional_discount_percent_or_amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The subscription term must be a positive number. --></errorMessage>
+        <name>SBQQ__Invalid_Subscription_Term</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may not specify markup as both percentage and absolute amount. --></errorMessage>
+        <name>SBQQ__Markup_percent_or_amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is Recurring, a Billing Type must be selected. --></errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time, a Billing Frequency value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time or Usage, a Billing Type value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can’t update the quantity. Dynamic Invoicing only supports cancellation amendments. --></errorMessage>
+        <name>blng__Dynamic_Invoicing_Amendment</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CalculateQuoteFromQuoteLine --></label>
+        <name>SBQQ__CalculateQuoteFromQuoteLine</name>
+    </webLinks>
+</CustomObjectTranslation>

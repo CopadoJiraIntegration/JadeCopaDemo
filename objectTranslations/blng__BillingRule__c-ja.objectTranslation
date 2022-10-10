@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>請求ルール</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amendment Bill Cycle Date Alignment --></label>
+        <name>blng__AmendmentBillCycleDateAlignment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate Invoice --></label>
+        <name>blng__GenerateInvoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Billing Trigger --></label>
+        <name>blng__InitialBillingTrigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Period Treatment --></label>
+        <name>blng__PartialPeriodTreatment__c</name>
+    </fields>
+    <fields>
+        <help>請求サイクル中に注文商品に [請求有効期限の上書き] (BTDO) 値がある場合にのみ適用されます。請求書品目の作成時に部分的な請求期間を以前の完全な期間と組み合わせるか、部分的な期間を個別の請求書品目として残します。</help>
+        <label><!-- Period Treatment for BTDO --></label>
+        <name>blng__PeriodTreatmentForBTDO__c</name>
+    </fields>
+    <layouts>
+        <layout>Billing Rule Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>名前</nameFieldLabel>
+</CustomObjectTranslation>

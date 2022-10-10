@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Revenue Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- Revenue Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Revenue Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Revenue Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Allocation Amt(Billings) --></label>
+        <name>blng__TotalAllocatedRevenueAmtBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Allocation Amt(Bookings) --></label>
+        <name>blng__TotalAllocatedRevenueAmtBookings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Transaction Amt(Billings) --></label>
+        <name>blng__TotalRevenueBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Transaction Amt(Bookings) --></label>
+        <name>blng__TotalRevenueBookings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Expected Amt(Billings) --></label>
+        <name>blng__TotalRevenueExpectedAmtBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Expected Amt(Bookings) --></label>
+        <name>blng__TotalRevenueExpectedAmtBookings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Liability Amt(Billings) --></label>
+        <name>blng__TotalRevenueLiabilityAmtBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Liability Amt(Bookings) --></label>
+        <name>blng__TotalRevenueLiabilityAmtBookings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Most Likely Amt(Billings) --></label>
+        <name>blng__TotalRevenueMostLikelyAmtBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue Most Likely Amt(Bookings) --></label>
+        <name>blng__TotalRevenueMostLikelyAmtBookings__c</name>
+    </fields>
+    <layouts>
+        <layout>RevenueAgreement Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue Amount Information --></label>
+            <section>Revenue Amount Information</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

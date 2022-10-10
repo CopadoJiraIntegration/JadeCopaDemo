@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Amount --></label>
+        <name>blng__BilledAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Plan --></label>
+        <name>blng__InvoicePlan__c</name>
+        <relationshipLabel><!-- Billing Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of Billed Billing Transactions --></label>
+        <name>blng__NumberOfBilledBillingTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Billing Transactions --></label>
+        <name>blng__NumberOfBillingTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Canceled Billing Transactions --></label>
+        <name>blng__NumberOfCanceledBillingTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Billing Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>blng__Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax City (Override) --></label>
+        <name>blng__TaxCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Country (Override) --></label>
+        <name>blng__TaxCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax State (Override) --></label>
+        <name>blng__TaxState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 1 (Override) --></label>
+        <name>blng__TaxStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Postal Code (Override) --></label>
+        <name>blng__TaxZipCode__c</name>
+    </fields>
+    <layouts>
+        <layout>Billing Schedule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

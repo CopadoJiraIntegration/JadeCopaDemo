@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Valor con seguimiento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Valores con seguimiento</value>
+    </caseValues>
+    <fields>
+        <help>Oportunidad asociada con el valor con seguimiento</help>
+        <label><!-- Opportunity --></label>
+        <name>sbaa__Opportunity__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Campo con seguimiento que generó este valor con seguimiento</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <relationshipLabel><!-- Tracked Values --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Valor almacenado si el tipo de datos es de fecha</help>
+        <label><!-- Value (Date) --></label>
+        <name>sbaa__ValueDate__c</name>
+    </fields>
+    <fields>
+        <help>Valor almacenado si el tipo de datos es numérico</help>
+        <label><!-- Value (Number) --></label>
+        <name>sbaa__ValueNumber__c</name>
+    </fields>
+    <fields>
+        <help>Valor almacenado si el tipo de datos es de texto</help>
+        <label><!-- Value (Text) --></label>
+        <name>sbaa__ValueText__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Tracked Value Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº de valor con seguimiento</nameFieldLabel>
+</CustomObjectTranslation>

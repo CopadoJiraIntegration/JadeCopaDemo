@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlungsklasse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungsklassen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlungsklasse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungsklassen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlungsklasse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungsklassen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlungsklasse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungsklassen</value>
+    </caseValues>
+    <fields>
+        <help>Hoher Rabatt für Ausnahmepreise auf Grundlage bisheriger Umsätze. Wenn ein Vertriebsmitarbeiter diesen Preis verwenden möchte, muss er den Angebotsbelegposten manuell rabattieren. Dieser Rabatt kann Genehmigungen gemäß den Genehmigungsrichtlinien Ihres Unternehmens erfordern.</help>
+        <label><!-- Floor Discount (%) --></label>
+        <name>SBQQ__FloorDiscount__c</name>
+    </fields>
+    <fields>
+        <help>Die kleinste Menge des Angebotsbelegpostens, die für diese Klasse gilt. Dieser Wert muss der oberen Grenze der vorherigen Klasse entsprechen.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help>Mittelhoher Rabatt auf Grundlage bisheriger Umsätze. Wenn ein Vertriebsmitarbeiter diesen Rabatt verwenden möchte, muss er den Angebotsbelegposten manuell rabattieren. Dieser Rabatt kann Genehmigungen gemäß den Genehmigungsrichtlinien Ihres Unternehmens erfordern.</help>
+        <label><!-- Norm Discount (%) --></label>
+        <name>SBQQ__NormDiscount__c</name>
+    </fields>
+    <fields>
+        <help>Die Preisempfehlung, die diese Klasse enthält.</help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Idealer Rabatt im niedrigen Bereich auf Grundlage bisheriger Umsätze. Wenn Vertriebsmitarbeiter diese Preisempfehlung annehmen, wendet Salesforce CPQ zum Erreichen dieses Preises einen Rabatt an.</help>
+        <label><!-- Target Discount (%) --></label>
+        <name>SBQQ__TargetDiscount__c</name>
+    </fields>
+    <fields>
+        <help>Die Höchstmenge des Angebotsbelegpostens, die für diese Klasse gilt. Dieser Wert muss über der Höchstmenge liegen, die diese Klasse einschließen soll.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Pricing Guidance Tier Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name</nameFieldLabel>
+</CustomObjectTranslation>

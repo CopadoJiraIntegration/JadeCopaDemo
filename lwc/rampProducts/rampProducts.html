@@ -1,0 +1,77 @@
+<template>
+    <template if:true={showTable}>
+        <article class="slds-card">
+            <!-- Header - Start -->
+            <div class="slds-page-header slds-card__header" style="padding-bottom:1.25rem">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container">
+                            <lightning-icon icon-name="standard:settings" title="Segment"></lightning-icon>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span>Ramp Products</span>
+                                    <span class="slds-page-header__title slds-truncate"
+                                        title="Segment">
+                                        {quoteName}
+                                    </span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <lightning-input disabled="true" label="Start Date" type="Date" value={quoteStartDate}
+                            class="slds-p-right_large"></lightning-input>
+                    </div>
+                    <div>
+                        <lightning-input disabled="true" label="End Date" type="Date" value={quoteEndDate}
+                            class="slds-p-right_xx-large"></lightning-input>
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <template if:false={isMixedQuote}>
+                            <lightning-button label={buttonLabel} onclick={segmentMultipleQLI} variant="brand" class="divMargin" disabled={disableRampAll}></lightning-button>
+                        </template>
+                        <lightning-button label="Go to Cart" onclick={onBack}></lightning-button>
+                    </div>
+                </header>
+            </div>
+            <!-- Header - End -->
+
+            <!-- Body - Start -->
+            <div class="slds-card__body slds-card__body_inner">
+                <div class="slds-notify slds-notify_alert slds-alert_warning" style="margin-bottom: .75rem" role="alert">
+                    <span class="slds-icon_container" style="padding-right:0.5rem;">
+                        <lightning-icon icon-name="utility:warning" size="x-small" ></lightning-icon>
+                    </span>
+                    <h2>Did you remember to quick save your cart? If you did not, please hit the "Go to Cart" and quick save before building a ramp schedule.</h2>
+                </div>
+                <template if:true={showDataTable}>
+                    <div class="slds-table_striped">
+                        <lightning-tree-grid columns={columns} data={dataTable} onrowaction={callRowAction} key-field="Id"
+                            resize-column-disabled="true" hide-checkbox-column="true" >
+                        </lightning-tree-grid>
+                    </div>
+                </template>
+                <!--<template if:false={showDataTable}>
+                    <div>
+                        <span class="slds-icon_container" style="padding-right:0.5rem;">
+                            <lightning-icon icon-name="utility:error" size="x-small"></lightning-icon>
+                        </span>
+                        <h2>No Quote Lines available.</h2>
+                    </div>
+                </template>-->
+            </div>
+            <!-- Body - End -->
+            <!-- Footer - Start -->
+            <footer class="slds-card__footer">
+
+            </footer>
+            <!-- Footer - End -->
+        </article>
+        <c-ramp-modal-popup modal-heading="Custom Segments" cmp-name={segmentData.cmpName} cmp-id={segmentData.cmpId}
+            existing-ramps-available={existingRampsAvailable} onpassphantombln={onPhantomRamp}></c-ramp-modal-popup>
+    </template>
+</template>

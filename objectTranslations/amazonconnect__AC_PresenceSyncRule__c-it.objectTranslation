@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Regole di sincronizzazione della presenza --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Regole di sincronizzazione della presenza --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>amazonconnect__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comparator --></label>
+        <name>amazonconnect__Comparator__c</name>
+        <picklistValues>
+            <masterLabel>Equal to</masterLabel>
+            <translation><!-- Equal to --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater than</masterLabel>
+            <translation><!-- Greater than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater than or equal to</masterLabel>
+            <translation><!-- Greater than or equal to --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than</masterLabel>
+            <translation><!-- Less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than or equal to</masterLabel>
+            <translation><!-- Less than or equal to --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not equal to</masterLabel>
+            <translation><!-- Not equal to --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CTI Adapter --></label>
+        <name>amazonconnect__CtiAdapter__c</name>
+        <relationshipLabel><!-- Presence Sync Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Destination --></label>
+        <name>amazonconnect__Destination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operand A Value --></label>
+        <name>amazonconnect__OperandACustom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operand A --></label>
+        <name>amazonconnect__OperandA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operand B Value --></label>
+        <name>amazonconnect__OperandBCustom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operand B --></label>
+        <name>amazonconnect__OperandB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>amazonconnect__Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>amazonconnect__Value__c</name>
+    </fields>
+    
+    <nameFieldLabel><!-- Presence Sync Rule Name --></nameFieldLabel>
+    
+</CustomObjectTranslation>

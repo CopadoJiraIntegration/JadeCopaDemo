@@ -1,0 +1,92 @@
+<apex:page standardController="sbaa__Approval__c" extensions="sbaa.ApprovalExtController" showQuickActionVfHeader="false" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <apex:stylesheet value="{!URLFOR($Resource.sbaa__SLDS214, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+
+            <style>
+                #aa {
+                    margin: 0;
+                }
+                .resendRequestApp {
+                    padding: 8px;
+                }
+                .msgIcon {
+                    display: none!important
+                }
+                .customMessage * {
+                    color: #fff!important
+                }
+                .customMessage {
+                    margin: 5px 0!important;
+                    opacity: 1!important;
+                    width: 100%;
+                    font-size: 12px;
+                    border: 0px;
+                    padding-left: 10px;
+                }
+                .message {
+                    opacity: .1
+                }
+                .buttonToRight {
+                    text-align: right;
+                }
+            </style>
+
+            <script type="text/javascript" src="{!$Resource.jQuery}"></script>
+            <script type="text/javascript" src="{!$Resource.jQueryUI}"></script>
+            <script>
+                $(document).ready(function(){
+                    overridePageMessages();
+                });
+
+                function overridePageMessages(){
+                    $('.errorM3').addClass('slds-notify slds-notify slds-notify--toast slds-notify--alert slds-theme--error customMessage');
+                    $('.errorM3').removeClass('errorM3');
+                }
+
+                function disableOnSubmit(input) {
+                    var btn = input;
+                    setTimeout(function(){
+                        btn.disabled = 'disabled';
+                        btn.className = 'slds-button slds-button--neutral';
+                    }, 50);
+                }
+            </script>
+        </head>
+
+        <body id="aa">
+            <!-- REQUIRED SLDS WRAPPER -->
+            <div class="sbaa">
+                <!-- MASTHEAD -->
+                <div class="slds-page-header">
+                    <p class="slds-text-heading--medium slds-text-align--center">
+                        {!$Label.sbaa__lbl_resend_request}
+                    </p>
+                </div>
+                <!-- / MASTHEAD -->
+                <!-- PRIMARY CONTENT WRAPPER -->
+                <div class="resendRequestApp">
+                    <apex:form >
+                        <apex:pageMessages />
+                        <apex:pageBlock rendered="{!isApprovalRequested == false}">
+                            <div class="buttonToRight">
+                                <apex:commandButton styleClass="slds-button slds-button--neutral" action="{!onReturn}" value="{!$Label.sbaa__lbl_cancel}" onclick="disableOnSubmit(this);"/>
+                            </div>
+                        </apex:pageBlock>
+                        <apex:pageBlock rendered="{!isApprovalRequested}">
+                            <apex:outputLabel styleClass="slds-form-element__label" for="textarea-input-01" value="{!$Label.sbaa__lbl_comments}"/>
+                            <apex:inputTextarea id="textarea-input-01" styleClass="slds-textarea" value="{!comments}" rows="5"/>
+                            <div class="buttonToRight">
+                                <apex:commandButton styleClass="slds-button slds-button--neutral" action="{!onReturn}" value="{!$Label.sbaa__lbl_cancel}" onclick="disableOnSubmit(this);"/>
+                                <apex:commandButton styleClass="slds-button slds-button--brand" action="{!onResend}" value="{!$Label.sbaa__lbl_resend_request}" onclick="disableOnSubmit(this);"/>
+                            </div>
+                        </apex:pageBlock>
+                    </apex:form>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>

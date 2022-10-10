@@ -1,0 +1,8 @@
+.THIS .slds-form-element__label{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(81, 79, 77);
+}
+.THIS .slds-tree__item {
+    display: revert !important;
+}

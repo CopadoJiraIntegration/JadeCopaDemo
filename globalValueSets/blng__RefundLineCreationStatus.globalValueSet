@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Fail</fullName>
+        <default>false</default>
+        <label>Fail</label>
+    </customValue>
+    <description>If the refund line creation fails, this is set to fail, otherwise it is null.</description>
+    <masterLabel>Refund Line Creation Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

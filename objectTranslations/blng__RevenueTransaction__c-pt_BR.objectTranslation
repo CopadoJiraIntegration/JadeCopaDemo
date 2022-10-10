@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transação de receita</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transações de receita</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Pesquisa da nota de crédito associada a essa agenda de receita.</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Pesquisa da nota de débito associada a essa agenda de receita.</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Saldo de receita diferida após reconhecimento de receita para este período.</help>
+        <label><!-- Deferred Balance --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>Pesquisa da linha de fatura associada a essa agenda de receita.</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nome da entidade legal associada a essa transação de receita.</help>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Pesquisa do produto do pedido associado a essa agenda de receita.</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Refere-se ao período de finanças original definido na agenda de receita.</help>
+        <label><!-- Original Finance Period --></label>
+        <name>blng__OriginalFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions (Original Finance Period) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Soma de todas as transações anteriores usando essa agenda de receita.</help>
+        <label><!-- Previously Recognized Revenue --></label>
+        <name>blng__PreviouslyRecognizedRevenue__c</name>
+    </fields>
+    <fields>
+        <help>Valor da receita a ser reconhecido neste período.</help>
+        <label><!-- Revenue Amount --></label>
+        <name>blng__RevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Refere-se ao método de distribuição selecionado na agenda de receita. Descreve como a receita é distribuída por um período de tempo definido, de uma só vez ou por um período de tempo inserido manualmente.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </fields>
+    <fields>
+        <help>Refere-se ao catálogo de finanças selecionado na agenda de receita.</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+    </fields>
+    <fields>
+        <label><!-- RevenueFinancePeriodUniqueId --></label>
+        <name>blng__RevenueFinancePeriodUniqueId__c</name>
+    </fields>
+    <fields>
+        <help>Refere-se ao período de finanças selecionado na agenda de receita.</help>
+        <label><!-- Revenue Finance Period --></label>
+        <name>blng__RevenueFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>A regra de razão geral de reconhecimento de receita selecionada na agenda de receita.</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Tratamento de livro-razão geral de reconhecimento de receita</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>A política de reconhecimento de receita selecionada na agenda de receita e usada para calcular essa transação.</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Refere-se ao tratamento de reconhecimento de receita selecionada na agenda de receita e usada para calcular essa transação.</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </fields>
+    <fields>
+        <help>Agenda de receita usada para essa transação</help>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Selecionar se essa receita é reconhecida agora ou deferida para mais tarde.</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Period Start Date --></label>
+        <name>blng__SystemPeriodStartDate__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Revenue Transaction Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informações da receita</label>
+            <section>Revenue Information</section>
+        </sections>
+        <sections>
+            <label>Registros de origem</label>
+            <section>Source Records</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome</nameFieldLabel>
+</CustomObjectTranslation>

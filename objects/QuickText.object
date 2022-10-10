@@ -168,6 +168,11 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>FolderId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>IsInsertable</fullName>
         <trackHistory>false</trackHistory>
     </fields>

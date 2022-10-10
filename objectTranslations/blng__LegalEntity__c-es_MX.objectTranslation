@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entidad legal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entidades legales</value>
+    </caseValues>
+    <fields>
+        <help>Para desactivar esta entidad legal, deje en blanco la casilla de verificación. Esto no afectará a las transacciones o asignaciones pasadas o vigentes.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de ciudad</help>
+        <label><!-- City --></label>
+        <name>blng__City__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de país</help>
+        <label><!-- Country --></label>
+        <name>blng__Country__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de distrito</help>
+        <label><!-- County --></label>
+        <name>blng__County__c</name>
+    </fields>
+    <fields>
+        <help>Generado por el sistema. Un nombre único para este registro Entidad legal.</help>
+        <label><!-- Legal Entity Number --></label>
+        <name>blng__LegalEntityNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de estado</help>
+        <label><!-- State --></label>
+        <name>blng__State__c</name>
+    </fields>
+    <fields>
+        <help>Dirección postal principal</help>
+        <label><!-- Street 1 --></label>
+        <name>blng__Street1__c</name>
+    </fields>
+    <fields>
+        <help>Dirección postal, continuación.</help>
+        <label><!-- Street 2 --></label>
+        <name>blng__Street2__c</name>
+    </fields>
+    <fields>
+        <help>Código postal o ZIP</help>
+        <label><!-- Zip / Postal Code --></label>
+        <name>blng__ZipPostalCode__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Legal Entity Layout</layout>
+        <sections>
+            <label>Información de dirección</label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de entidad legal</nameFieldLabel>
+</CustomObjectTranslation>

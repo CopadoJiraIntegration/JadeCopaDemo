@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- To deactivate the revenue recognition treatment, clear the checkbox. This won’t affect
+        existing transactions that reference the book. --></help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a flat amount --></help>
+        <label><!-- Flat Amount --></label>
+        <name>blng__FlatAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a percent value --></help>
+        <label><!-- Percentage --></label>
+        <name>blng__Percentage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter 1 if this revenue treatment should be processed before all other treatments, 2 if it should be second, etc. --></help>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select an option for associating the revenue schedule to the revenue agreement. --></help>
+        <label><!-- Revenue Agreement Association --></label>
+        <name>blng__RevenueAgreementAssociation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Revenue distribution method used for assigning review across periods --></help>
+        <label><!-- Revenue Distribution Method --></label>
+        <lookupFilter>
+            <errorMessage><!-- Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Activation&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot; --></errorMessage>
+            <informationalMessage><!-- Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Posting&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot; --></informationalMessage>
+        </lookupFilter>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Distribution Method) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the finance book --></help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Finance Book) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the general ledger rule --></help>
+        <label><!-- Revenue GL Rule --></label>
+        <name>blng__RevenueGLRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the legal entity for this revenue --></help>
+        <label><!-- Revenue Legal Entity --></label>
+        <name>blng__RevenueLegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Legal Entity) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select the type of revenue to recognize in this revenue schedule --></help>
+        <label><!-- Revenue Schedule Amount --></label>
+        <name>blng__RevenueScheduleAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type of event that triggers creation of the revenue schedule. --></help>
+        <label><!-- Revenue Schedule Creation Action --></label>
+        <name>blng__RevenueScheduleCreationAction__c</name>
+    </fields>
+    <fields>
+        <help><!-- How the amount will be calculated - percent of total, flat amount, or remainder after other treatments are processed. --></help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validate Result --></label>
+        <name>blng__ValidateResult__c</name>
+    </fields>
+    <layouts>
+        <layout>Revenue Recognition Treatment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- If Revenue Schedule Creation is not Order Product Activation, Revenue Agreement Association must be “Not Applicable” or “Manual” --></errorMessage>
+        <name>blng__AGREEMENT_ASSOC_VALIDONLYFOROPACTIVATION</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To set the revenue schedule amount to Booking Amount, first set the revenue schedule creation action to Order Product Activation. --></errorMessage>
+        <name>blng__Bookings_Amount_Only_If_Order_Activation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If type is &quot;Flat Amount&quot;, Flat Amount is mandatory to populate. --></errorMessage>
+        <name>blng__Flat_Amount_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Flat Amount Cannot be less than Zero --></errorMessage>
+        <name>blng__Flat_Amount_Value_more_than_zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Percentage Cannot be greater than 100 --></errorMessage>
+        <name>blng__PERCENTAGE_MUST_BE_LESS_THAN_HUNDRED</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If type is &quot;Percentage&quot;, Percentage is mandatory to populate. --></errorMessage>
+        <name>blng__Percentage_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Percentage must be greater than zero --></errorMessage>
+        <name>blng__Percentage_Value_more_than_zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Processing Order cannot be Negative --></errorMessage>
+        <name>blng__Processing_Order_Cannot_be_negative</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>Quote_Path</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Quote Path</masterLabel>
+    <recordTypeContext>Master</recordTypeContext>
+    <recordTypeName>__MASTER__</recordTypeName>
+    <sobjectType>SBQQ__Quote__c</sobjectType>
+    <targetField>SBQQ__Status__c</targetField>
+    <targetFieldChangeToValues>Approved,Accepted</targetFieldChangeToValues>
+</AnimationRule>

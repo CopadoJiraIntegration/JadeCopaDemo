@@ -1,0 +1,8 @@
+<apex:page id="EnvelopeIFrame" controller="dsfs.EnvelopeIFrameController" showHeader="true" sideBar="false"
+           action="{!onLoad}" title="{!$Label.dsfs__docusign}">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:form >
+        <c:EnvelopeHeader sourceDisplay="{!sourceDisplay}" envelopeName="{!envelopeName}" />
+        <c:DocuSignIFrame iFrameSrc="{!iFrameSrc}" isNewWindow="{!isNewWindow}" isClassic="{!isClassic}" />
+    </apex:form>
+</apex:page>

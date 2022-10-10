@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountForecastSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accountFilterId>000000000000000</accountFilterId>
+    <acctPrdctPrdFrcstVolCnt>0</acctPrdctPrdFrcstVolCnt>
+    <calculationFrequency>Monthly</calculationFrequency>
+    <displayDuration>12</displayDuration>
+    <displayedForecastMetrics>OpportunityQuantity,PastOrdersQuantity,CurrentOrdersQuantity,SalesAgreementPlannedQuantity</displayedForecastMetrics>
+    <displayedRevenueMetrics>OpportunityRevenue,PastOrdersRevenue,CurrentOrdersRevenue,SalesAgreementPlannedRevenue</displayedRevenueMetrics>
+    <editableAtStartOfPeriod>true</editableAtStartOfPeriod>
+    <editsAllowedFor>31</editsAllowedFor>
+    <forecastFrequency>Monthly</forecastFrequency>
+    <opportunityItemScheduleEnabled>false</opportunityItemScheduleEnabled>
+    <opportunityProbabilityEnabled>false</opportunityProbabilityEnabled>
+    <productFilterId>000000000000000</productFilterId>
+    <recalculateAllFrcstCnt>0</recalculateAllFrcstCnt>
+    <regenerateForecastCnt>0</regenerateForecastCnt>
+    <salesAgreementFilterId>000000000000000</salesAgreementFilterId>
+    <startingPeriod>6</startingPeriod>
+</AccountForecastSettings>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>联系渠道分析</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case --></label>
+        <name>amazonconnect__Case__c</name>
+        <relationshipLabel><!-- Transcripts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>amazonconnect__Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>amazonconnect__ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Interruptions --></label>
+        <name>amazonconnect__ContactLensAgentInterruptions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Sentiment --></label>
+        <name>amazonconnect__ContactLensAgentSentiment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Interruptions --></label>
+        <name>amazonconnect__ContactLensCustomerInterruptions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Sentiment Curve --></label>
+        <name>amazonconnect__ContactLensCustomerSentimentCurve__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Z</masterLabel>
+            <translation><!-- Z --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Sentiment --></label>
+        <name>amazonconnect__ContactLensCustomerSentiment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interruptions --></label>
+        <name>amazonconnect__ContactLensInterruptions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matched Categories --></label>
+        <name>amazonconnect__ContactLensMatchedCategories__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matched Details --></label>
+        <name>amazonconnect__ContactLensMatchedDetails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Talk Time --></label>
+        <name>amazonconnect__ContactLensNonTalkTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Talk Speed --></label>
+        <name>amazonconnect__ContactLensTalkSpeedAgent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Talk Speed --></label>
+        <name>amazonconnect__ContactLensTalkSpeedCustomer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Talk Time --></label>
+        <name>amazonconnect__ContactLensTalkTimeAgent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Talk Time --></label>
+        <name>amazonconnect__ContactLensTalkTimeCustomer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Talk Time --></label>
+        <name>amazonconnect__ContactLensTalkTimeTotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transcripts Full Text --></label>
+        <name>amazonconnect__ContactLensTranscriptsFullText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>amazonconnect__Contact__c</name>
+        <relationshipLabel><!-- Transcripts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Endpoint Address --></label>
+        <name>amazonconnect__CustomerEndpointAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Source --></label>
+        <name>amazonconnect__DataSource__c</name>
+        <picklistValues>
+            <masterLabel>Contact Lens</masterLabel>
+            <translation><!-- Contact Lens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transcribe and Comprehend</masterLabel>
+            <translation><!-- Transcribe and Comprehend --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dominant Language --></label>
+        <name>amazonconnect__DominantLanguage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Keywords --></label>
+        <name>amazonconnect__Keywords__c</name>
+    </fields>
+    <fields>
+        <label><!-- Named Entities --></label>
+        <name>amazonconnect__NamedEntities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording Path --></label>
+        <name>amazonconnect__RecordingPath__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sentiment --></label>
+        <name>amazonconnect__Sentiment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Contact --></label>
+        <name>amazonconnect__SfContact__c</name>
+        <relationshipLabel><!-- Contact --></relationshipLabel>
+    </fields>
+    <nameFieldLabel>联系频道分析</nameFieldLabel>
+</CustomObjectTranslation>

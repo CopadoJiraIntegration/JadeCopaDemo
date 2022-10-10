@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Unique ID for the Salesforce job. --></help>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select if invoices should be posted by default. Otherwise, invoices are generated as drafts. --></help>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select if your order product’s charge type is Usage. --></help>
+        <label><!-- Bill Usage Charges --></label>
+        <name>blng__BillUsageCharges__c</name>
+    </fields>
+    <fields>
+        <help><!-- Monthly invoice runs launch on the last day of the month. The scheduler’s start date must also be the last day of the month. --></help>
+        <label><!-- Run at End of Month --></label>
+        <name>blng__EndOfMonth__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select yes to process all currencies for this invoice. --></help>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the batches for processing invoices. --></help>
+        <label><!-- Invoice Batch --></label>
+        <name>blng__InvoiceBatches__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date invoice will be created. Used to determine Invoice’s due date. --></help>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- For monthly invoice runs, select a number for the day of the month. --></help>
+        <label><!-- Invoice Day Of Month --></label>
+        <name>blng__InvoiceDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <help><!-- If invoice type is weekly, select a number for the day of the week. Sunday=1 --></help>
+        <label><!-- Invoice Day Of Week --></label>
+        <name>blng__InvoiceDayOfWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date and time the invoice scheduler process begins. --></help>
+        <label><!-- Start Date Time --></label>
+        <name>blng__StartDateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines what gets billed.
+        Active order products, usage summaries, or billing transactions with a Next Billing Date/Override Next Billing Date before or equal to the Target Date will be invoiced. --></help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines what gets billed based on the next billing date&apos;s day of the month. --></help>
+        <label><!-- Target Day Of Month --></label>
+        <name>blng__TargetDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines what gets billed based on the next billing date&apos;s day of the week. --></help>
+        <label><!-- Target Day Of Week --></label>
+        <name>blng__TargetDayOfWeek__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select how often to run invoices. --></help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <layouts>
+        <layout>Invoice Scheduler Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Date Information --></label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label><!-- Month Configuration --></label>
+            <section>Month Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Weekly Configuration --></label>
+            <section>Weekly Configuration</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>1</booleanFilter>
+    <name>East Coast Rule</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingStateCode</field>
+        <operation>contains</operation>
+        <value>FL,MD,MA,NY,PA</value>
+    </ruleItems>
+</Territory2Rule>

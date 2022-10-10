@@ -1,0 +1,117 @@
+<!--
+You must have an AWS account to use the Amazon Connect CTI Adapter.
+Downloading and/or using the Amazon Connect CTI Adapter is subject to the terms of the AWS Customer Agreement,
+AWS Service Terms, and AWS Privacy Notice.
+
+© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+
+NOTE:  Other license terms may apply to certain, identified software components
+contained within or distributed with the Amazon Connect CTI Adapter if such terms are
+included in the LibPhoneNumber-js and Salesforce Open CTI. For such identified components,
+such other license terms will then apply in lieu of the terms above.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<apex:page id="AC_HelperIncludesCcpV2"
+           showChat="false"
+           showHeader="false"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           sideBar="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <apex:slds />
+
+        <style>
+            .slds-scope .slds-table td,
+            .slds-scope .slds-table th {
+                padding: 0px;
+            }
+
+            #helperPanel {
+                top: 48px;
+                right: 30px;
+                position: absolute;
+                display: flex;
+            }
+
+            .helperItem {
+                flex: none;
+                margin: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            #voicemailDropsPopover {
+                top: 72px;
+                left: 6px;
+                position: absolute;
+                width: 95%;
+                min-width: initial;
+                max-height: 170px;
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+
+        <div id="messageDialog" class="modal">
+            <div class="modal-dialog" style="top: 25%;">
+                <div class="modal-content" style="text-align: left;">
+                    <div class="modal-body">
+                        <div id="messageBody"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="helperPanel">
+            <div id="voicemailDropsIndicator" class="helperItem slds-hide">
+                <span class="slds-icon_container">
+                    <svg aria-hidden="true"
+                         class="slds-icon slds-icon_x-small"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#voicemail_drop"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Voicemail Drops</span>
+                </span>
+            </div>
+        </div>
+
+        <div id="voicemailDropsContainer">
+            <section id="voicemailDropsPopover" class="helperPopover slds-popover slds-popover_medium slds-hide" role="dialog" aria-label="Voicemail Drops"
+                     aria-describedby="voicemaildrops-body-id-1">
+                <div class="slds-popover__body popover-content" id="voicemaildrops-body-id-1">
+                    <h3 id="voicemaildrops-heading-id-3" class="slds-text-heading_small">Voicemail Drops</h3>
+                    <table id="voicemailDropsTable" class="slds-table slds-table_striped">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="helperMenu">
+            <div id="attributesContainer" class="slds-box slds-var-m-around_x-small slds-var-p-around_x-small slds-hide">
+                <h3 id="attributes-heading-id-3" class="slds-text-heading_small">Attributes</h3>
+                <table id="attributesTable" class="slds-table slds-table_striped">
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="customContainer" class="slds-box slds-var-m-around_x-small slds-var-p-around_x-small slds-hide">
+            </div>
+        </div>
+    </html>
+</apex:page>

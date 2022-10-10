@@ -1,0 +1,36 @@
+<apex:page controller="pi.SalesEdgeReportingController" extensions="pi.PardotResourceBaseByUserExtension" sidebar="false" action="{!init}">
+    <c:FilteredFrame id="pardotReportingIframe" className="pardotReportingIframe" filteredFrameName="pardotReportingIframe" src="{!pardotBaseUrl}/microcampaign/report{!authenticatedQueryString}&serverurl={!$Api.Partner_Server_URL_90}" height="800" width="100%"/>
+    <style type="text/css">
+        body, td.noSidebarCell {
+            padding: 0 !important;
+        }
+
+        .pardotReportingIframe {
+            border: none;
+        }
+    </style>
+
+    <script>
+        if (document.getElementsByClassName('noSidebarCell').length > 0) {
+
+            // Use a crude method to ensure there aren't double scrollbars on load or resize
+            if (window.addEventListener) {
+              // If IE9+ or other
+              window.addEventListener('load', pardotAdaptIframeHeight);
+              window.addEventListener('resize', pardotAdaptIframeHeight);
+            } else if (window.attachEvent)  {
+              // If IE8 or under
+              window.attachEvent('onload', pardotAdaptIframeHeight);
+              window.attachEvent('onresize', pardotAdaptIframeHeight);
+            }
+        } else {
+            document.getElementsByTagName('html')[0].style.height = '100%';
+            document.getElementsByTagName('body')[0].style.height = '100%';
+            document.getElementsByClassName('pardotReportingIframe').height = '100%';
+        }
+
+        function pardotAdaptIframeHeight() {
+            document.getElementsByClassName('pardotReportingIframe').height = window.innerHeight - 240;
+        }
+    </script>
+</apex:page>

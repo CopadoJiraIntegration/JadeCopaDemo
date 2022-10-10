@@ -1,0 +1,63 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false" controller="pi.LeadDeckController" action="{!init}">
+  <head>
+    <script src="https://{!pardotUrl}/js/PushApi.dev.js?version=3.2"></script>
+    <apex:includeScript value="{!URLFOR($Resource.pi__LeadDeck, 'js/lib.min.js')}"></apex:includeScript>
+    <apex:includeScript value="{!URLFOR($Resource.pi__LeadDeck, 'js/main.min.js')}" loadOnReady="true"></apex:includeScript>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__LeadDeck, 'css/lib.min.css')}"></apex:stylesheet>
+    <apex:includeLightning ></apex:includeLightning>
+    <apex:slds ></apex:slds>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__LeadDeck, 'css/index.min.css')}"></apex:stylesheet>
+    <!-- apex constants-->
+    <script type="text/javascript">
+      window.apex = {
+       remotes: {
+        createFilter: '{!$RemoteAction.LeadDeckController.createFilter1}',
+        updateFilter: '{!$RemoteAction.LeadDeckController.updateFilter}',
+        deleteFilter: '{!$RemoteAction.LeadDeckController.deleteFilter}',
+        getFilters: '{!$RemoteAction.LeadDeckController.getFilters}',
+        getFiltersV2: '{!$RemoteAction.LeadDeckController.getFiltersV2}',
+        getActiveUser: '{!$RemoteAction.LeadDeckController.getActiveUser}',
+        getActionsByFilterId: '{!$RemoteAction.LeadDeckController.getActionsByFilterId}',
+        getActionsByCriteria: '{!$RemoteAction.LeadDeckController.getActionsByCriteria}',
+        getActionsByPersonId: '{!$RemoteAction.LeadDeckController.getActionsByPersonId}',
+        checkFLS: '{!$RemoteAction.LeadDeckController.getViewAccessDetailsOnAllFields}',
+        getObjectFilterSearchResults: '{!$RemoteAction.LeadDeckController.findTextInObject}',
+        sendAlertsStats: '{!$RemoteAction.LeadDeckController.sendAlertsStats}',
+        recordToggleStateChange: '{!$RemoteAction.LeadDeckController.recordToggleStateChange}',
+        recordUsage: '{!$RemoteAction.LeadDeckController.recordUsage}'
+       },
+       resources: {
+        icon: "{!URLFOR($Asset.SLDS, 'assets/icons/standard/feed_60.png')}",
+        download: "{!$Site.Domain}{!URLFOR($Page.EngageSalesTools)}",
+        spinner: "{!URLFOR($Asset.SLDS, 'assets/images/spinners/slds_spinner.gif')}",
+        accountIcon: "{!URLFOR($Asset.SLDS, 'assets/icons/standard/account_60.png')}",
+        leadIcon: "{!URLFOR($Asset.SLDS, 'assets/icons/standard/lead_60.png')}",
+        opportunityIcon: "{!URLFOR($Asset.SLDS, 'assets/icons/standard/opportunity_60.png')}",
+        removeIcon: "{!URLFOR($Asset.SLDS, 'assets/icons/utility/close_60.png')}",
+        searchIcon: "{!URLFOR($Asset.SLDS, 'assets/icons/utility/search_60.png')}",
+        notificationLogo: "{!URLFOR($Resource.LeadDeck, 'img/alerts_icon_80x80.png')}",
+        cloudLogo: "{!URLFOR($Resource.LeadDeck, 'img/cloud_blue.svg')}",
+        notifier: "{!URLFOR($Resource.LeadDeck, 'notifier.html')}",
+        folder: "{!URLFOR($Resource.LeadDeck, 'img/sfx-uxc-empty-folder-1024.png')}",
+        lock: "{!URLFOR($Resource.LeadDeck, 'img/sfx-uxc-lock-1024.png')}"
+       },
+       pushUrl: "{!pushUrl}",
+       pardotUrl: "{!pardotUrl}"
+      }
+      // set global environment
+      window.env = 'prod';
+      
+      // get isLeadDeckTab param from URL and set in window
+      var isLeadDeckTab = "{!JSENCODE($CurrentPage.parameters.isLeadDeckTab)}";
+      
+      if (isLeadDeckTab) {
+       googleAnalytics('send', 'event', 'Sales Edge', 'Sales Alerts Tab');
+      } else {
+       googleAnalytics('send', 'event', 'Sales Edge', 'Sales Alerts Desktop');
+      }
+    </script>
+  </head>
+  <body class="slds-scope">
+    <div id="app-container"></div>
+  </body>
+</apex:page>

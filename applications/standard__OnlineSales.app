@@ -7,5 +7,9 @@
     <label>Online Sales</label>
     <navType>Standard</navType>
     <tabs>standard-OnlineSalesHome</tabs>
+    <tabs>Rate_Card__c</tabs>
+    <tabs>Favorites__c</tabs>
+    <tabs>Renewal_Scenario__c</tabs>
+    <tabs>Business_Profile__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

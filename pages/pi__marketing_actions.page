@@ -1,0 +1,41 @@
+<apex:page docType="html-5.0"
+      showHeader="false"
+      sidebar="false"
+      standardStylesheets="false"
+      controller="pi.MarketingActionsController"
+      extensions="pi.FilterController"
+      action="{!init}"
+      >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <apex:stylesheet value="{!URLFOR($Resource.pi__Mobile_Design_Templates, 'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__MarketingActions, 'css/app.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}" />
+  </head>
+  <body>
+    
+<div class="app-wrapper full-height">
+  <div id="filter_selection" class="filter-selection"></div>
+  <section id="marketing_actions" class="marketing-actions"></section>
+  <div id="new-filter-message-section">
+    <div id="empty-filter-message-container"><i class="empty-filter-exclamation fa fa-info-circle fa-4x"></i><span class="empty-filter-message">
+        We're still waiting for actions to  <br />
+        trigger for this filter</span></div>
+  </div>
+</div>
+    <apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.js')}"/>
+
+    <script type="text/javascript">
+      window.CurrentFilterId = '{!JSENCODE($CurrentPage.parameters.Id)}';
+      window.MarketingActionsByFilterIdActionLocation = '{!$RemoteAction.MarketingActionsController.getActionsByFilterId}';
+      window.RemoteDeleteFilterAction = '{!$RemoteAction.FilterController.deleteFilter}';
+      window.RemoteGetFiltersAction = '{!$RemoteAction.FilterController.getFilters}';
+      window.MarketingActionsByPersonActionLocation = '{!$RemoteAction.MarketingActionsController.getActionsByPersonId}';
+      window.NamespacePrefix = '{!namespace}';
+    </script>
+    <apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/marketing_actions_main.js')}"/>
+  </body>
+</apex:page>

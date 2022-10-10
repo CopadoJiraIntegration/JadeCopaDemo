@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Modelo de email</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Modelos de email</value>
+    </caseValues>
+    <fields>
+        <help>ID do modelo de email do Salesforce</help>
+        <label><!-- Template Id --></label>
+        <name>sbaa__TemplateId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome do modelo de email</nameFieldLabel>
+</CustomObjectTranslation>

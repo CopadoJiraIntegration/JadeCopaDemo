@@ -1,0 +1,72 @@
+<apex:page showChat="false" showHeader="false" applyHtmlTag="false" applyBodyTag="false" sideBar="false" id="AC_WisdomUI" controller="amazonconnect.AC_Utils">
+    <html style="height:100%;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <body style="height:100%;">
+            <apex:includeLightning />
+            <apex:slds />
+
+            <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+            <apex:stylesheet value="{!$Resource.amazonconnect__AC_CommonStylesheet}" />
+            <apex:includeScript value="{!URLFOR($Resource.amazonconnect__Vendor + '/connect-streams.js')}" />
+
+            <div id="ccp-container" style="display:none;"></div>
+            <div id="wisdom-container" style="height:100%; width:100%; background-color:white;"></div>
+            <script>
+                const ac = window;
+                let instanceUrl = ac.Utils.Common.getProperty({ key: 'connectBaseUrl' });
+                const _ctiAdapter = ac.Utils.Common.getProperty({ key: 'ctiAdapter' });
+                const enableAudioDeviceSettings = ac.Utils.Salesforce.getValueWithNamespace(
+                    _ctiAdapter,
+                    'AudioDeviceSettings__c',
+                    false,
+                );
+                const enablePhoneTypeSettings = ac.Utils.Salesforce.getValueWithNamespace(
+                    _ctiAdapter,
+                    'PhoneTypeSettings__c',
+                    true,
+                );
+                if (instanceUrl.endsWith('/')) instanceUrl = instanceUrl.substring(0, instanceUrl.length-1);
+                const CCP_DIV_ID = 'ccp-container';
+                const WISDOM_DIV_ID = 'wisdom-container';
+                connect.agentApp.initApp(
+                    'ccp',
+                    CCP_DIV_ID,
+                    instanceUrl + '/ccp-v2',
+                    {
+                        ccpParams: {
+                            loginPopup: false,
+                            pageOptions: {
+                                enableAudioDeviceSettings,
+                                enablePhoneTypeSettings
+                            }
+                        } 
+                    }
+                );
+
+                connect.agentApp.initApp(
+                    'shamrock',
+                    WISDOM_DIV_ID,
+                    `${instanceUrl}/wisdom-v2?mode=embedded${window.screenPopKnowledgeArticle ? '&theme=ctiadapter' : ''}`
+                );
+
+                ac.Utils.Common.subscribeToHudsonEvent(
+                    'wisdom.internal.article.popout',    
+                    (event) =>  {
+                        window.screenPopKnowledgeArticle && window.screenPopKnowledgeArticle(event.message.articleNumber);
+                    }
+                );
+
+                ac.Utils.Common.subscribeToHudsonEvent(
+                    'wisdom.internal.automaticrecommendation.receive', 
+                    (event) => 
+                        window.updateNotificationsCount && window.updateNotificationsCount(event.message.numRecommendations)
+                );
+
+                ac.Utils.Common.subscribeToHudsonEvent(
+                    'wisdom.internal.automaticrecommendation.click', 
+                    (event) => 
+                        window.updateNotificationsCount && window.updateNotificationsCount(0)
+                );
+            </script>
+        </body>
+    </html>
+</apex:page>

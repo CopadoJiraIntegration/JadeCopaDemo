@@ -1,0 +1,4 @@
+<apex:page id="AC_RecordingViewer" standardController="amazonconnect__AC_ContactChannelAnalytics__c" docType="html-5.0" showHeader="false" showChat="false">
+    <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+    <c:ACSFCCP_CallRecordingLink contactId="{!amazonconnect__AC_ContactChannelAnalytics__c.amazonconnect__ContactId__c}" />
+</apex:page>

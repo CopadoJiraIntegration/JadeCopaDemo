@@ -1,0 +1,11 @@
+<apex:page sidebar="false" showHeader="false" controller="pi.BaseController">
+  <head>
+      <title>S-Control Redirect</title>
+  </head>
+  <body>
+      <center><b>This page is configured using S-controls which have recently been deprecated. Please see our
+          <a target="_blank" href="http://help.pardot.com/customer/en/portal/articles/2127330-showing-pardot-data-in-salesforce?b_id=11139#edit-your-leads-and-contacts-page-layouts-to-contain-a-new-section-for-pardot-activities-and-list-memberships">Knowledge Base</a>
+          for instructions on how to replace this page using Visualforce.
+      </b></center>
+  </body>
+</apex:page>

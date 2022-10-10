@@ -1,0 +1,43 @@
+<apex:page id="AC_LightningScriptIncludes" showChat="false" showHeader="false" applyBodyTag="false" applyHtmlTag="false"
+  sideBar="false" controller="amazonconnect.AC_Utils">
+  <apex:includeScript value="/support/console/48.0/integration.js" />
+  <apex:includeScript value="/support/api/48.0/interaction.js" />
+  <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+
+  <script type="application/javascript">
+    (function (ac) {
+      sforce.connection.sessionId = '{!$Api.Session_ID}';
+      (async () => {
+        await ac.Utils.Common.init({
+          mode: ac.Utils.Common.SalesforceModes.CONSOLE,
+          namespaceClassPrefix: "{!namespaceClassPrefix}",
+          namespacePagePrefix: "{!namespacePagePrefix}",
+          userId: "{!$User.Id}",
+          userName: "{!JSENCODE($User.Username)}",
+          userEmail: "{!JSENCODE($User.Email)}",
+          userProfile: "{!JSENCODE($User.ProfileId)}",
+          contacts: {},
+        });
+
+        await ac.Utils.Log.init();
+        await ac.Utils.Salesforce.init();
+        await ac.Utils.Salesforce.setSoftphonePopoutEnabled({ enabled: false });
+
+        let medialessLink = '{!URLFOR($Page.amazonconnect__AC_MedialessPopout)}';
+        let agentStatusSesionEndLink = '{!URLFOR($Page.amazonconnect__AC_AgentStatusSessionEnd)}';
+        await ac.Utils.Initializer.init(medialessLink, () => {
+          ac.Utils.Agent.init(agentStatusSesionEndLink);
+          ac.Utils.Contact.init();
+          ac.Utils.Cti.init();
+          ac.Utils.PresenceSync.init();
+        });
+
+        const bc = new BroadcastChannel('heartbeat');
+        bc.postMessage({type:'HEARTBEAT'});
+        setInterval(() => {
+          bc.postMessage({type:'HEARTBEAT'});
+        }, 1000);
+      })();
+    })(this);
+  </script>
+</apex:page>

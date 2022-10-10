@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Rechnungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rechnungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rechnungslaufs</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rechnungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsläufen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- CleanUp Status --></label>
+        <name>blng__CleanUpStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Time --></label>
+        <name>blng__CompletedTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Scheduler --></label>
+        <name>blng__InvoiceScheduler__c</name>
+        <relationshipLabel><!-- Invoice Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentage Complete --></label>
+        <name>blng__PercentageComplete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress Bar --></label>
+        <name>blng__ProgressBar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>blng__StartTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Indicator --></label>
+        <name>blng__StatusIndicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Invoice Run Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Datumsinformationen</label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label>Statusinformationen</label>
+            <section>Status Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name des Rechnungslaufs</nameFieldLabel>
+    <webLinks>
+        <label><!-- CleanUpInvoiceRun --></label>
+        <name>blng__CleanUpInvoiceRun</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Post_All_Invoices --></label>
+        <name>blng__Post_All_Invoices</name>
+    </webLinks>
+</CustomObjectTranslation>

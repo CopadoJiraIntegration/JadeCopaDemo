@@ -1,0 +1,54 @@
+<apex:page docType="html-5.0"
+    sidebar="true"
+    controller="pi.EngageSalesToolsController">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <apex:stylesheet value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.css')}"/>
+      <apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"/>
+      <apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}" />
+      <apex:stylesheet value="{!URLFOR($Resource.pi__EngageSalesTools, 'css/engage_sales_tools_page.css')}"/>
+    </head>
+    <body>
+      <div class="main-content">
+        <h1>Engage Sales Tools</h1>
+
+        <div class="download-links-section">
+          <h2>Engage Alerts Downloads</h2>
+          <p>
+            <a class="button" href="//pi.pardot.com/leaddeck/download/EngageAlerts_Mac.app.zip">Engage Alerts for Mac <i class="button-icon fa fa-apple"></i></a>
+          </p>
+          <p>
+            <a class="button" href="//pi.pardot.com/leaddeck/download/EngageAlerts_Windows.exe">Engage Alerts for Windows <i class="button-icon fa fa-windows"></i></a>
+          </p>
+        </div>
+
+        <div class="mail-plugins-section">
+          <h2>Engage for Gmail</h2>
+          <p>
+            <a class="button" href="https://chrome.google.com/webstore/detail/engage-for-gmail-by-pardo/gkohnhkfcjakajmcdcndpgjnghfjlkec">Engage for Gmail <i class="button-icon fa fa-envelope"></i></a>
+          </p>
+        </div>
+
+        <div class="mail-plugins-section">
+          <apex:form rendered="{!isSalesforceSDOPDODevOrg}">
+            <h2>Engage Demo Token Generation</h2>
+            <apex:commandButton styleClass="button" rendered="{!!hasValidToken}" value="Engage Demo Token Generation" action="{!setEngageToken}"/>
+            <apex:outputText styleClass="demo-token-section" rendered="{!hasValidToken}" value="Your Engage Demo Token is valid">
+            </apex:outputText>
+          </apex:form>
+        </div>
+
+        <div class="support-section">
+          <h2>Have questions about the app? Need assistance?</h2>
+
+          <p>
+            <a class="button" href="http://help.pardot.com/customer/en/portal/articles/2127210-salesforce-engage-overview?b_id=11139" target="_blank">Salesforce Engage Documentation <i class="button-icon fa fa-info-circle"></i></a>
+          </p>
+          <a class="button training-resources-button" href="http://www.pardot.com/training/?fwp_training_categories=salesforce-engage" target="_blank">Salesforce Engage Training Resources <i class="button-icon fa fa-info-circle"></i></a>
+
+          <p>If you're having trouble, reach out to your Salesforce Engage Administrator.</p>
+          <p>Still having trouble? Contact <a href="http://help.pardot.com/customer/en/portal/articles/2133457-how-do-i-contact-pardot-support" target="_blank">Pardot Support</a></p>
+        </div>
+      </div>
+    </body>
+</apex:page>

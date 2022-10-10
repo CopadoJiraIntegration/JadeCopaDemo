@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払割り当て (請求書)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Payment Allocation Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Payment Allocation Invoice --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>blng__Invoice__c</name>
+        <relationshipLabel><!-- Payment Allocations (Invoice) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment --></label>
+        <name>blng__Payment__c</name>
+        <relationshipLabel><!-- Payment Allocations (Invoice) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocated? --></label>
+        <name>blng__Unallocated__c</name>
+    </fields>
+    <layouts>
+        <layout>Payment Allocation (Invoice) Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>割り当て番号</nameFieldLabel>
+</CustomObjectTranslation>

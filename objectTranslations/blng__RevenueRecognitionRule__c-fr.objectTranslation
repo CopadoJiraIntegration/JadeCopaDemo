@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Règle de comptabilisation du revenu</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Règles de comptabilisation du revenu</value>
+    </caseValues>
+    <fields>
+        <help>Pour désactiver la règle de comptabilisation du revenu, désélectionnez la case. Les transactions passées
+        ou existantes qui référencent la règle ne sont pas affectées.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Revenue Schedule? --></label>
+        <name>blng__CreateRevenueSchedule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Revenue Recognition Rule Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <quickActions>
+        <label><!-- Validate Revenue Recognition Treatments --></label>
+        <name>blng__ValidateRevenueRecogitionTreatments</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- ValidateRevenueRecognitionTreatments --></label>
+        <name>blng__ValidateRevenueRecognitionTreatments</name>
+    </webLinks>
+</CustomObjectTranslation>

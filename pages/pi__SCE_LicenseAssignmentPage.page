@@ -1,0 +1,79 @@
+<apex:page controller="pi.AssignSELicenseController">
+	<apex:pageMessages />
+	<apex:pageBlock title="Salesforce Engage License Assignment" rendered="{!IF(!insufficientPermissions, true, false)}">
+		<apex:outputPanel rendered="{!IF(salesCloudEngageLicense == null || salesCloudEngageLicense.TotalLicenses - salesCloudEngageLicense.UsedLicenses == 0, true, false)}">
+			<apex:pageMessage summary="This org does not have any Salesforce Engage licenses - you will not be able to assign licenses" severity="warning" strength="3"/>
+		</apex:outputPanel>
+		<apex:form >
+			<h1>Action Type </h1>
+			<apex:selectList size="1" value="{!selectedAction}" >
+				<apex:selectOptions value="{!actionList}" />
+				<apex:actionSupport event="onchange" action="{!optionChanged}" />
+			</apex:selectList>
+
+			<h1>Profile Type </h1>
+			<apex:selectList size="1" value="{!selectedProfile}">
+				<apex:selectOptions value="{!selectableProfiles}"/>
+				<apex:actionSupport event="onchange" action="{!optionChanged}" />
+			</apex:selectList>
+
+			<br/>
+
+			<div id="remainingLicenses"><h1>Remaining Licenses: &nbsp;&nbsp;</h1></div>
+
+			<apex:pageBlockTable value="{!users}" var="user">
+				<apex:column >
+					<apex:facet name="header">
+						<input type="checkbox" id="headerCheckboxSelectAll" onclick="checkAll(this,'select_all');updateRemainingLicenses(this, 'select_all')"/>
+					</apex:facet>
+					<apex:inputCheckbox value="{!user.selected}" id="select_all" onclick="updateRemainingLicenses(this, 'select_all')"/>
+				</apex:column>
+				<apex:column value="{!user.user.name}" headerValue="Name"/>
+				<apex:column value="{!user.user.profile.name}" headerValue="Profile Name"/>
+				<apex:column value="{!user.user.username}" headerValue="Username"/>
+				<apex:column value="{!user.user.email}" headerValue="E-mail"/>
+			</apex:pageBlockTable>
+			<div id="loadingSpinner" style="display:none">
+				<br/>
+				<apex:image value="{!$Resource.pi__loadingSpinner}" />
+				Loading...
+			</div>
+			<br/>
+			<apex:commandButton action="{!processSelected}" status="pageStatus" value="{!IF(selectedAction == 'unassign', 'Remove', 'Add')} License(s)" onclick="invokeLoadingSpinner()"/>
+
+			<apex:panelGrid columns="4">
+				<apex:commandLink action="{!first}">First</apex:commandlink>
+				<apex:commandLink action="{!previous}" rendered="{!hasPrevious}">Previous</apex:commandlink>
+				<apex:commandLink action="{!next}" rendered="{!hasNext}">Next</apex:commandlink>
+				<apex:commandLink action="{!last}">Last</apex:commandlink>
+			</apex:panelGrid>
+		</apex:form>
+
+		<br/>
+
+		<apex:outputPanel rendered="{!IF(unassignableUsers.size == 0, false, true)}">
+			<apex:pageMessage severity="warning" strength="1">
+				<div>
+					<span>User(s), </span>
+					<apex:repeat value="{!unassignableUsers}" var="user">
+						<span>{!user.Name} ({!user.Username}), </span>
+					</apex:repeat>
+					<span>could not have license(s) assigned.</span>
+				</div>
+			</apex:pageMessage>
+		</apex:outputPanel>
+		<br/>
+		<div id="selectedUsers"><h1>Selected Users: </h1>0</div>
+	</apex:pageBlock>
+
+	<apex:includeScript value="{!$Resource.pi__SCE_LicenseAssignmentPage}" />
+
+	<script type="text/javascript">
+		window.selectedActionType = '{!JSENCODE(selectedAction)}';
+		window.remotingEndpointProccessUsers = '{!$RemoteAction.AssignSELicenseController.retrieveLicenseNum}';
+		window.onload = retrieveRemainingLicenses;
+	</script>
+	<style type="text/css">
+		#remainingLicenses{float:right;}
+	</style>
+</apex:page>

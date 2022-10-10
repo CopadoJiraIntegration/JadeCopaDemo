@@ -16,4 +16,17 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Product2</tabs>
     <tabs>standard-Forecasting3</tabs>
+    <tabs>sbaa__Approval__c</tabs>
+    <tabs>CustomLookupData__c</tabs>
+    <tabs>CustomerPrices__c</tabs>
+    <tabs>Addresses__c</tabs>
+    <tabs>Leave_Tracker__c</tabs>
+    <tabs>ProductRecommendation__c</tabs>
+    <tabs>Rate_Card__c</tabs>
+    <tabs>standard-Quote</tabs>
+    <tabs>Favorites__c</tabs>
+    <tabs>Renewal_Scenario__c</tabs>
+    <tabs>standard-WaveHome</tabs>
+    <tabs>Business_Profile__c</tabs>
+    <uiType>Aloha</uiType>
 </CustomApplication>

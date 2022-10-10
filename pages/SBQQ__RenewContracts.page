@@ -1,0 +1,139 @@
+<apex:page standardController="Contract" extensions="SBQQ.RenewContractsController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" recordSetVar="contracts" action="{!onInit}" title="{!$Label.SBQQ__lbl_renew_contracts}">
+	<apex:stylesheet value="{!$Resource['sb']}"/>
+	<apex:includeScript value="{!$Resource.SBQQ__QueueableJobChecker}"/>
+	<!-- Gorniak was here  -->
+	<apex:sectionHeader title="{!$Label.SBQQ__lbl_renew_contracts}"/>
+	<apex:pageMessages id="pageMessages"/>
+	<apex:form >
+		<apex:actionFunction name="displayIndividualMessages" rerender="pageMessages" action="{!displayIndividualFailureMessages}">
+			<apex:param name="statusById" value=""/>
+		</apex:actionFunction>
+		<apex:actionFunction name="displayCheckerErrorMessage" rerender="pageMessages" action="{!displayCheckerErrorMessage}">
+			<apex:param name="errMsg" value=""/>
+		</apex:actionFunction>
+	<apex:pageBlock title="{!$Label.SBQQ__lbl_select_master_contract}">
+		<apex:pageBlockButtons >
+			<apex:commandButton value="{!$Label.SBQQ__lbl_renew}" action="{!onRenew}"/>
+			<apex:commandButton value="{!$Label.SBQQ__lbl_cancel_renew}" action="{!onCancel}"/>
+		</apex:pageBlockButtons>
+
+		<apex:inputHidden id="masterContractId" value="{!masterContractId}" />
+		<apex:pageBlockTable var="contract" value="{!selectedContracts}">
+			<apex:column headerValue="Master">
+				<input type="radio" name="masterSelector" onclick="selectMaster('{!contract.Id}')"/>
+			</apex:column>
+			<apex:column headerValue="{!$ObjectType.Contract.fields.ContractNumber.label}" value="{!contract.ContractNumber}"/>
+			<apex:column headerValue="{!$ObjectType.Contract.fields.StartDate.label}" value="{!contract.StartDate}"/>
+			<apex:column headerValue="{!$ObjectType.Contract.fields.EndDate.label}" value="{!contract.EndDate}"/>
+		</apex:pageBlockTable>
+		
+		<script type="text/javascript">
+			function selectMaster(contractId) {
+				var field = document.getElementById('{!JSENCODE($Component.masterContractId)}');
+				if (field != null) {
+					field.value = contractId;
+				}
+			}
+		</script>
+	</apex:pageBlock>
+	</apex:form>
+
+	<div class="sbLoadingMask" style="visibility: hidden">
+		<div class="sbLoading sb-icon-loading">
+			<div class="sb-icon-bounce1"></div>
+			<div class="sb-icon-bounce2"></div>
+			<div class="sb-icon-bounce3"></div>
+		</div>
+	</div>
+	<script type="application/javascript">
+		function toggleLoadingMask(show) {
+			document.getElementsByClassName('sbLoadingMask')[0].style.visibility = (show ? "visible" : "hidden");
+		}
+	</script>
+	<apex:outputPanel layout="none" rendered="{!jobId != null}">
+		<script type="application/javascript">
+			let originalStartTime = Date.now();
+			let classPrefix = '{!JSENCODE(classPrefix)}';
+			// Developer's Note: This looks weird, and it definitely is. However, every other way I tried to write a getter
+			// that could give me the IDs didn't work because of weird merge field syntax errors. So I'm using this.
+			let recordIds = JSON.parse('{!renewedContractIdsJson}');
+			let jobId = '{!JSENCODE(jobId)}';
+
+			// Our start handler needs to activate the spinner.
+			function start() {
+				toggleLoadingMask(true);
+			}
+
+			// Our change handler needs to output logs to keep the user appraised of the situation.
+			function changed(previousResults, newResults) {
+				let totalTimeElapsed = Date.now() - originalStartTime;
+				for (let i = 0; i < previousResults.jobs.length; i++) {
+					let prevStatus = previousResults.jobs[i].Status;
+					let newStatus = newResults.jobs[i].Status;
+					// If the pair of statuses are different, then the job's status has changed and that should be logged.
+					if (prevStatus !== newStatus) {
+						console.log(`Renewal of Contract ${recordIds[i]} - Changed from ${prevStatus} to ${newStatus} after ${totalTimeElapsed} ms.`);
+					} else if (newStatus !== 'Completed' && newStatus !== 'Aborted' && newStatus !== 'Failed') {
+						// Even if the status didn't change, unless it's already finished we should log something saying
+						// that it's still going.
+						console.log(`Renewal of Contract ${recordIds[i]} - Status is ${newStatus} after ${totalTimeElapsed} ms.`);
+					}
+				}
+			}
+
+			// Our finish handler needs to deactivate the spinner, and either redirect the user to the right detail page
+			// on a success, or display a toast on a failure.
+			function finish(failureIndexes, results) {
+				// First, deactivate the spinner.
+				toggleLoadingMask(false);
+
+				// At this point, we know for a fact that one of three things happened:
+				if (failureIndexes == null && typeof results === 'string') {
+					// 1: The job checker errored out while it was trying to track the statuses of the jobs. In that case,
+					//    we'll receive a null failureIndexes parameter and a results parameter that's just a string.
+					// We respond to this outcome by invoking a remote action to display a message. Ideally we'd be creating
+					// an slds-styled toast, but the rest of the page is aloha-styled, so we're using ApexPages.Message
+					// instances to preserve continuity of styling.
+					displayCheckerErrorMessage(results);
+				} else if (failureIndexes.length > 0) {
+					// 2. The jobs all finished, but one or more jobs failed. In that case, we'll receive the indexes
+					//    of every recordId whose renewal failed, and an array of all of the results.
+					// We respond to that by invoking a remote action to display each status as an ApexPages.Message instance.
+					// Ideally, we'd instead be using an slds-styled toast, but the rest of the page is aloha-styled, so
+					// we're using ApexPages.Message to preserve continuity of styling.
+					let statusById = {};
+					failureIndexes.forEach((index) => {
+						let recordId = recordIds[index];
+						let detailedStatus = results.jobs[index].ExtendedStatus;
+						statusById[recordId] = detailedStatus;
+					});
+					displayIndividualMessages(JSON.stringify(statusById));
+				} else {
+					// 3. The jobs all finished successfully. In that case, we'll receive an empty failureIndexes array.
+					// We respond to that by redirecting the user to the Account's detail page.
+					if (typeof sforce != 'undefined' && sforce && sforce.one) {
+						// The id URL-parameter is the account's ID.
+						sforce.one.navigateToSObject('{!JSENCODE(id)}');
+					} else {
+						document.location.pathname = '{!JSENCODE(id)}';
+					}
+				}
+			}
+
+			let endpoint = classPrefix + 'QueueableJobCheckerExt.getJobsStatuses';
+			let jobType = 'RenewContract';
+			Visualforce.remoting.Manager.invokeAction(endpoint, recordIds, jobType, jobId, function(results, event) {
+				// A falsey event.status means that the callout failed. If our very first callout to get the statuses
+				// doesn't work, we're dead in the water. So just immediately call the finish() callback with an informative
+				// error message.
+				if (!event.status) {
+					finish(null, 'Unable to retrieve status of job ' + jobId + '. Error: ' + event.message);
+				} else {
+					// A truthy value for event.status means the callout was a success, and we can use those results
+					// as the initial results for the job checker.
+					QueueableJobsChecker(endpoint, recordIds, jobType, jobId, start, finish, changed, results);
+				}
+			}, {escape: false});
+		</script>
+	</apex:outputPanel>
+</apex:page>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Email Queue</name>
+    <queueMembers>
+        <users>
+            <user>zscaler_demo@jadeglobal.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Email_Queue</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Revenue Allocation Amount</fullName>
+        <default>false</default>
+        <label>Revenue Allocation Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Transaction Amount</fullName>
+        <default>true</default>
+        <label>Transaction Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Expected Amount</fullName>
+        <default>false</default>
+        <label>Revenue Expected Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Liability Amount</fullName>
+        <default>false</default>
+        <label>Revenue Liability Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Bookings Amount</fullName>
+        <default>false</default>
+        <label>Bookings Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Allocated Revenue Amount</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Allocated Revenue Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Most Likely Amount</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Revenue Most Likely Amount</label>
+    </customValue>
+    <masterLabel>Revenue Schedule Amount</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

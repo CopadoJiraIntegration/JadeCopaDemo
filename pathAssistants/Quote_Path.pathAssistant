@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>SBQQ__Quote__c</entityName>
+    <fieldName>SBQQ__Status__c</fieldName>
+    <masterLabel>Quote Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__Opportunity2__c</fieldNames>
+        <fieldNames>SBQQ__Ordered__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <fieldNames>SBQQ__Primary__c</fieldNames>
+        <info>&lt;p&gt;The quote has been accepted by the customer&lt;/p&gt;</info>
+        <picklistValueName>Accepted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__NetAmount__c</fieldNames>
+        <fieldNames>ApprovalStatus__c</fieldNames>
+        <info>&lt;p&gt;The quote has been approved &lt;/p&gt;</info>
+        <picklistValueName>Approved</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__DaysQuoteOpen__c</fieldNames>
+        <fieldNames>SBQQ__DocumentStatus__c</fieldNames>
+        <info>&lt;p&gt;The quoted has been denied and need to be changed.&lt;/p&gt;</info>
+        <picklistValueName>Denied</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__Account__c</fieldNames>
+        <fieldNames>SBQQ__CustomerAmount__c</fieldNames>
+        <info>&lt;p&gt;The quote is under development and not been finalized yet.&lt;/p&gt;</info>
+        <picklistValueName>Draft</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__Introduction__c</fieldNames>
+        <fieldNames>SBQQ__LastCalculatedOn__c</fieldNames>
+        <fieldNames>SBQQ__LastSavedOn__c</fieldNames>
+        <info>&lt;p&gt;The quote been reviewed and will be available soon.&lt;/p&gt;</info>
+        <picklistValueName>In Review</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__ExpirationDate__c</fieldNames>
+        <fieldNames>LastModifiedById</fieldNames>
+        <fieldNames>SBQQ__NetAmount__c</fieldNames>
+        <info>&lt;p&gt;The quote has been presented to the customer&lt;/p&gt;</info>
+        <picklistValueName>Presented</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SBQQ__Notes__c</fieldNames>
+        <fieldNames>SBQQ__Account__c</fieldNames>
+        <info>&lt;p&gt;The quote has been rejected by the customer&lt;/p&gt;</info>
+        <picklistValueName>Rejected</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

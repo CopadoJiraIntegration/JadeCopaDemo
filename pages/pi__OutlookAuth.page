@@ -1,0 +1,7 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false" controller="pi.OutlookAuthController">
+	<apex:includeScript value="{!URLFOR($Resource.pi__Outlook, 'js/outlook_auth_main.js')}"/>
+
+	<script type="text/javascript">
+		window.packageNamespace = '{!packageNamespace}'
+	</script>
+</apex:page>

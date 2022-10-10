@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Índice de consumo de partida de presupuesto</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Índices de consumo de partidas de presupuesto</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Rates --></label>
+        <name>SBQQ__Rates</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>La cantidad más baja de utilización para este índice de consumo.</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Price --></label>
+        <name>SBQQ__OriginalPrice__c</name>
+    </fields>
+    <fields>
+        <help>El precio por la utilización que entra en los límites de este índice de consumo.</help>
+        <label><!-- Price --></label>
+        <name>SBQQ__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Fee</masterLabel>
+            <translation>Tarifa plana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation>Por unidad</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El orden para procesar el índice de uso entre índices múltiples. Los Índices de consumo se evalúan empezando por el orden de procesamiento más bajo.</help>
+        <label><!-- Processing Order --></label>
+        <name>SBQQ__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help>Este índice forma parte de esta programación.</help>
+        <label><!-- Quote Line Consumption Schedule --></label>
+        <name>SBQQ__QuoteLineConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La cantidad más alta de utilización para este índice de consumo.</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Quote Line Consumption Rate Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de índice de consumo de partida d</nameFieldLabel>
+</CustomObjectTranslation>

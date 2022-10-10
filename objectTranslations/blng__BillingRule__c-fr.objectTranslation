@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Règle de facturation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Règles de facturation</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amendment Bill Cycle Date Alignment --></label>
+        <name>blng__AmendmentBillCycleDateAlignment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate Invoice --></label>
+        <name>blng__GenerateInvoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Billing Trigger --></label>
+        <name>blng__InitialBillingTrigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Period Treatment --></label>
+        <name>blng__PartialPeriodTreatment__c</name>
+    </fields>
+    <fields>
+        <help>Uniquement lorsqu’un prod. commandé a une valeur Date fin fact. rempl. pendant un cycle de factu. Combinez une pér. de factu. part. avec la pér. compl. précé. lors de la création d&apos;une ligne de fact. ou laissez la pér. part. comme ligne de fact. distincte</help>
+        <label><!-- Period Treatment for BTDO --></label>
+        <name>blng__PeriodTreatmentForBTDO__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Billing Rule Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,83 @@
+<apex:page contentType="application/javascript"
+           controller="dsfs.DocuSignJavascriptController"
+           showHeader="false"
+           standardStylesheets="false">
+    <apex:outputPanel layout="none" rendered="{!NOT(showContent)}">
+            {!$Label.dsfs__notsupposedtobeshown}
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!showContent}">
+            /**
+             * @return {string}
+             */
+            function GetRelContentIDs(curObjID) {
+                var relContElem = curObjID + "_ContentDocumentRelatedList_body";
+                var rc = "";
+                var relatedContentElem = document.getElementById(relContElem);
+
+                if (relatedContentElem !== null) {
+                    var aList = relatedContentElem.getElementsByTagName("a");
+                    for (var i = 0; i &lt; aList.length; i++) {
+                        var alink = aList[i].getAttribute("href");
+                        if ((alink !== null) &amp;&amp; (alink !== undefined) &amp;&amp; ( (alink.indexOf("/068") === 0) || (alink.indexOf("javascript:srcUp(%27%2F068")) === 0)) {
+                            rc = rc + alink.substr(alink.indexOf("068"), 15) + ",";
+                        }
+                    }
+                    if (rc.indexOf("068") > -1) {
+                        rc = rc.substring(0, rc.lastIndexOf(","));
+                    }
+                }
+                return rc;
+            }
+
+            /**
+             * @return {string}
+             */
+            function DSGetPageIDFromHref() {
+                var r = window.location.href;
+                var qm = r.indexOf("?");
+                if (qm > -1) {
+                    r = r.substr(0, qm);
+                }
+                r = r.substr(r.lastIndexOf("/") + 1);
+                return r;
+            }
+
+            /**
+             * @return {string}
+             */
+            function DSNS() {
+                var dsns_ = "dsfs__";
+                if (typeof(DSDevEnv) !== "undefined") {
+                    if (DSDevEnv === "true") {
+                        dsns_ = "";
+                    }
+                }
+                return dsns_
+            }
+
+            function inIframe() {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+
+            function DocuSign_CreateEnvelope() {
+                var sourceId = DSGetPageIDFromHref();
+                var rc = GetRelContentIDs(sourceId);
+                var pageUrl = '{!URLFOR($Page.DocuSign_CreateEnvelope)}';
+                if (pageUrl.indexOf('?') !== -1) {
+                    pageUrl += '&amp;';
+                } else {
+                    pageUrl += '?';
+                }
+                pageUrl += 'sId=' + encodeURIComponent(sourceId) + '&amp;rc=' + encodeURIComponent(rc);
+                if (inIframe()) {
+                    window.open(pageUrl, 'Popup', 'location=1, status=1, scrollbars=1, resizable=1, directories=1, toolbar=1, titlebar=1, width=1200');
+                } else {
+                    window.location.href = pageUrl;
+                }
+            }
+    </apex:outputPanel>
+</apex:page>

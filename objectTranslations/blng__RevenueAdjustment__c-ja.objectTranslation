@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>収益調整 (将来のために予約)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Revenue Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Amount --></label>
+        <name>blng__AdjustmentAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Group --></label>
+        <name>blng__AdjustmentGroup__c</name>
+    </fields>
+    <fields>
+        <help>調整または分配に利用可能な収益スケジュールのすべての収益。</help>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Book --></label>
+        <name>blng__FinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>blng__FinancePeriod__c</name>
+        <relationshipLabel><!-- Revenue Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Revenue Adjustment --></label>
+        <name>blng__RelatedRevenueAdjustment__c</name>
+        <relationshipLabel><!-- Revenue Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Adjustment Date --></label>
+        <name>blng__RevenueAdjustmentDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <layouts>
+        <layout>Revenue Adjustment Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>収益調整名</nameFieldLabel>
+</CustomObjectTranslation>

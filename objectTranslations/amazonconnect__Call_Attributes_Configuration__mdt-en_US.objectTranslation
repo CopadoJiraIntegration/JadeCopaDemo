@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Please provide the name of the attribute as it is configured in Amazon Connect&apos;s Call Flow. --></help>
+        <label><!-- Amazon Connect Attribute Name --></label>
+        <name>amazonconnect__Attribute_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Default Value --></label>
+        <name>amazonconnect__CCP_Attribute_Default_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Display Key Value --></label>
+        <name>amazonconnect__CCP_Attribute_Display_KeyValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Display Order --></label>
+        <name>amazonconnect__CCP_Attribute_Display_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Field Type --></label>
+        <name>amazonconnect__CCP_Attribute_FieldType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide the label for this attribute as it will be shown in the display within CCP. Ideally, the shorter the name the better it is. --></help>
+        <label><!-- Attribute Label --></label>
+        <name>amazonconnect__CCP_Attribute_Label__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide the name of the attribute as it is configured in Amazon Connect&apos;s Call Flow. --></help>
+        <label><!-- Attribute Name --></label>
+        <name>amazonconnect__CCP_Attribute_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Section --></label>
+        <name>amazonconnect__CCP_Attribute_Section__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attribute Style --></label>
+        <name>amazonconnect__CCP_Attribute_Style__c</name>
+    </fields>
+</CustomObjectTranslation>

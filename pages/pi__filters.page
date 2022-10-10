@@ -1,0 +1,456 @@
+<apex:page docType="html-5.0"
+      showHeader="false"
+      sidebar="false"
+      standardStylesheets="false"
+      controller="pi.FilterController"
+      action="{!init}"
+      >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates,
+      'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jquery_ui_1_12_1,
+      'jquery-ui.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__icon_utility, 'oneIcon/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__MarketingActions, 'css/app.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}" />
+  </head>
+  <body>
+    
+<div class="app-wrapper">
+  <form id="edit_filter" onsubmit="return false">
+    <label class="edit-title"><span>Name</span>
+      <input type="text" id="filter_name" name="filter_name" placeholder="Name your filter" required="required"/>
+    </label>
+    <section>
+      <h2>Leads &amp; Contacts Criteria</h2>
+      <div id="prospect_criteria" class="criteria-inputs">
+        <label class="radio hide all-prospects">
+          <input type="radio" name="prospect_criteria" data-criteria="prospect!=null"/><span>All leads and contacts</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="prospect_criteria" data-criteria="prospect!=null"/><span>Only my assigned leads and contacts</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="prospect_criteria" data-criteria="{'a':['whois.company!=null','prospect==null']}"/><span>Identified company website visitors that have not been matched with a lead or contact</span>
+        </label>
+      </div>
+    </section>
+    <section>
+      <h2>Activity Criteria</h2>
+      <div id="activity_criteria" class="criteria-inputs">
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="{'o':['type==Web Visit','type==Visit','type==Landing Page','type==Page View']}"/>
+          <div class="checkbox-mask"></div><span>Page Views</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="type==File"/>
+          <div class="checkbox-mask"></div><span>File Downloads</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="type==Paid Search Ad"/>
+          <div class="checkbox-mask"></div><span>Paid Search Clicks</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="{'o':['type==Form Success','type==Form Error','type==Form Handler Success','type==Form Handler Error','type==Landing Page Success','type==Landing Page Error']}"/>
+          <div class="checkbox-mask"></div><span>Forms</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="{'o':['type==Webinar','type==Event']}"/>
+          <div class="checkbox-mask"></div><span>Webinars &amp; Events</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="type==Site Search Query"/>
+          <div class="checkbox-mask"></div><span>Site Search</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="type==Email Click"/>
+          <div class="checkbox-mask"></div><span>Email Clicks</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="{'a':['type==Email Open','email.isOneToOne==true']}"/>
+          <div class="checkbox-mask"></div><span>One-One Email Opens</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" data-criteria="type==Email Open"/>
+          <div class="checkbox-mask"></div><span>All Email Opens</span>
+        </label>
+      </div>
+    </section>
+    <section>
+      <h2>Geographic Criteria</h2>
+      <h6>*All locations will be included by default, unless there are explicit geographic criteria selections added</h6>
+      <div id="geographic_criteria" class="criteria-inputs geo">
+        <label>Add a group of countries:</label>
+        <div class="geo-select-wrap">
+          <select name="countryGroup">
+            <option class="placeholder">Select a country group</option>
+            <option>European Union</option>
+            <option>African Union</option>
+            <option>Caribbean Community</option>
+            <option>Union of South American Nations</option>
+          </select><a href="#" class="add-geo-btn">add »</a>
+        </div>
+        <label>Add an individual country:</label>
+        <div class="geo-select-wrap">
+          <select name="country">
+            <option class="placeholder">Select a country</option>
+            <option>United States</option>
+            <option>Afghanistan</option>
+            <option>Åland Islands</option>
+            <option>Albania</option>
+            <option>Algeria</option>
+            <option>American Samoa</option>
+            <option>Andorra</option>
+            <option>Angola</option>
+            <option>Anguilla</option>
+            <option>Antarctica</option>
+            <option>Antigua and Barbuda</option>
+            <option>Argentina</option>
+            <option>Armenia</option>
+            <option>Aruba</option>
+            <option>Australia</option>
+            <option>Austria</option>
+            <option>Azerbaijan</option>
+            <option>Bahamas</option>
+            <option>Bahrain</option>
+            <option>Bangladesh</option>
+            <option>Barbados</option>
+            <option>Belarus</option>
+            <option>Belgium</option>
+            <option>Belize</option>
+            <option>Benin</option>
+            <option>Bermuda</option>
+            <option>Bhutan</option>
+            <option>Bolivia</option>
+            <option>Bonaire, Sint Eustatius and Saba</option>
+            <option>Bosnia and Herzegovina</option>
+            <option>Botswana</option>
+            <option>Bouvet Island</option>
+            <option>Brazil</option>
+            <option>British Indian Ocean Territory</option>
+            <option>Brunei Darussalam</option>
+            <option>Bulgaria</option>
+            <option>Burkina Faso</option>
+            <option>Burundi</option>
+            <option>Cambodia</option>
+            <option>Cameroon</option>
+            <option>Canada</option>
+            <option>Cape Verde</option>
+            <option>Cayman Islands</option>
+            <option>Central African Republic</option>
+            <option>Chad</option>
+            <option>Chile</option>
+            <option>China</option>
+            <option>Christmas Island</option>
+            <option>Cocos Islands</option>
+            <option>Colombia</option>
+            <option>Comoros</option>
+            <option>Congo</option>
+            <option>Congo, the Democrac Republic of the</option>
+            <option>Cook Islands</option>
+            <option>Costa Rica</option>
+            <option>Côte d'Ivoire</option>
+            <option>Croatia</option>
+            <option>Cuba</option>
+            <option>Curaçao</option>
+            <option>Cyprus</option>
+            <option>Czech Republic</option>
+            <option>Denmark</option>
+            <option>Djibouti</option>
+            <option>Dominica</option>
+            <option>Dominican Republic</option>
+            <option>Ecuador</option>
+            <option>Egypt</option>
+            <option>El Salvador</option>
+            <option>Equatorial Guinea</option>
+            <option>Eritrea</option>
+            <option>Estonia</option>
+            <option>Ethiopia</option>
+            <option>Falkland Islands (Malvinas)</option>
+            <option>Faroe Islands</option>
+            <option>Fiji</option>
+            <option>France</option>
+            <option>French Guiana</option>
+            <option>French Polynesia</option>
+            <option>French Southern Territories</option>
+            <option>Gabon</option>
+            <option>Gambia</option>
+            <option>Georgia</option>
+            <option>Germany</option>
+            <option>Ghana</option>
+            <option>Gibraltar</option>
+            <option>Greece</option>
+            <option>Greenland</option>
+            <option>Grenada</option>
+            <option>Guadeloupe</option>
+            <option>Guam</option>
+            <option>Guatemala</option>
+            <option>Guernsey</option>
+            <option>Guinea</option>
+            <option>GuineaBissau</option>
+            <option>Guyana</option>
+            <option>Haiti</option>
+            <option>Heard Island and McDonald Islands</option>
+            <option>Honduras</option>
+            <option>Hong Kong</option>
+            <option>Hungary</option>
+            <option>Iceland</option>
+            <option>India</option>
+            <option>Indonesia</option>
+            <option>Iran</option>
+            <option>Iraq</option>
+            <option>Ireland</option>
+            <option>Isle of Man</option>
+            <option>Israel</option>
+            <option>Italy</option>
+            <option>Jamaica</option>
+            <option>Japan</option>
+            <option>Jersey</option>
+            <option>Jordan</option>
+            <option>Kazakhstan</option>
+            <option>Kenya</option>
+            <option>Kiribati</option>
+            <option>Kuwait</option>
+            <option>Kyrgyzstan</option>
+            <option>Lao People's Democratic Republic</option>
+            <option>Latvia</option>
+            <option>Lebanon</option>
+            <option>Lesotho</option>
+            <option>Liberia</option>
+            <option>Libya</option>
+            <option>Liechtenstein</option>
+            <option>Lithuania</option>
+            <option>Luxembourg</option>
+            <option>Macao</option>
+            <option>Macedonia</option>
+            <option>Madagascar</option>
+            <option>Malawi</option>
+            <option>Malaysia</option>
+            <option>Maldives</option>
+            <option>Mali</option>
+            <option>Malta</option>
+            <option>Marshall Islands</option>
+            <option>Martinique</option>
+            <option>Mauritania</option>
+            <option>Mauritius</option>
+            <option>Mayotte</option>
+            <option>Mexico</option>
+            <option>Micronesia, Federated States of</option>
+            <option>Moldova, Republic of</option>
+            <option>Monaco</option>
+            <option>Mongolia</option>
+            <option>Montenegro</option>
+            <option>Montserrat</option>
+            <option>Morocco</option>
+            <option>Mozambique</option>
+            <option>Myanmar</option>
+            <option>Namibia</option>
+            <option>Nauru</option>
+            <option>Nepal</option>
+            <option>Netherlands</option>
+            <option>New Caledonia</option>
+            <option>New Zealand</option>
+            <option>Nicaragua</option>
+            <option>Niger</option>
+            <option>Nigeria</option>
+            <option>Niue</option>
+            <option>Norfolk Island</option>
+            <option>North Korea</option>
+            <option>Northern Mariana Islands</option>
+            <option>Norway</option>
+            <option>Oman</option>
+            <option>Pakistan</option>
+            <option>Palau</option>
+            <option>Palestinian territories</option>
+            <option>Panama</option>
+            <option>Papua New Guinea</option>
+            <option>Paraguay</option>
+            <option>Peru</option>
+            <option>Philippines</option>
+            <option>Pitcairn</option>
+            <option>Poland</option>
+            <option>Portugal</option>
+            <option>Puerto Rico</option>
+            <option>Qatar</option>
+            <option>Réunion</option>
+            <option>Romania</option>
+            <option>Russian Federation</option>
+            <option>Rwanda</option>
+            <option>Saint Barthélemy</option>
+            <option>Saint Helena, Ascension and Tristan da</option>
+            <option>Saint Kitts and Nevis</option>
+            <option>Saint Lucia</option>
+            <option>Saint Martin (French)</option>
+            <option>Saint Pierre and Miquelon</option>
+            <option>Saint Vincent and the Grenadines</option>
+            <option>Samoa</option>
+            <option>San Marino</option>
+            <option>Sao Tome and Principe</option>
+            <option>Saudi Arabia</option>
+            <option>Senegal</option>
+            <option>Serbia</option>
+            <option>Seychelles</option>
+            <option>Sierra Leone</option>
+            <option>Singapore</option>
+            <option>Sint Maarten (Dutch part)</option>
+            <option>Slovakia</option>
+            <option>Slovenia</option>
+            <option>Solomon Islands</option>
+            <option>Somalia</option>
+            <option>South Africa</option>
+            <option>South Georgia and the South Sandwich Is</option>
+            <option>South Korea</option>
+            <option>South Sudan</option>
+            <option>Spain</option>
+            <option>Sri Lanka</option>
+            <option>Sudan</option>
+            <option>Suriname</option>
+            <option>Svalbard and Jan Mayen</option>
+            <option>Swaziland</option>
+            <option>Sweden</option>
+            <option>Switzerland</option>
+            <option>Syrian Arab Republic</option>
+            <option>Taiwan</option>
+            <option>Tajikistan</option>
+            <option>Tanzania</option>
+            <option>Thailand</option>
+            <option>TimorLeste</option>
+            <option>Togo</option>
+            <option>Tokelau</option>
+            <option>Tonga</option>
+            <option>Trinidad and Tobago</option>
+            <option>Tunisia</option>
+            <option>Turkey</option>
+            <option>Turkmenistan</option>
+            <option>Turks and Caicos Islands</option>
+            <option>Tuvalu</option>
+            <option>Uganda</option>
+            <option>Ukraine</option>
+            <option>United Arab Emirates</option>
+            <option>United Kingdom</option>
+            <option>United States Minor Outlying Islands</option>
+            <option>Uruguay</option>
+            <option>Uzbekistan</option>
+            <option>Vanuatu</option>
+            <option>Vatican City</option>
+            <option>Venezuela, Bolivarian Republic of</option>
+            <option>Viet Nam</option>
+            <option>Virgin Islands, British</option>
+            <option>Virgin Islands, U.S.</option>
+            <option>Wallis and Futuna</option>
+            <option>Western Sahara</option>
+            <option>Yemen</option>
+            <option>Zambia</option>
+            <option>Zimbabwe</option>
+          </select><a href="#" class="add-geo-btn">add »</a>
+        </div>
+        <label>Add a State or Province:</label>
+        <div class="geo-select-wrap">
+          <select name="state">
+            <optgroup label="US States">
+              <option class="placeholder">Select a state</option>
+              <option>Alabama</option>
+              <option>Alaska</option>
+              <option>Arizona</option>
+              <option>Arkansas</option>
+              <option>California</option>
+              <option>Colorado</option>
+              <option>Connecticut</option>
+              <option>Delaware</option>
+              <option>District of Columbia</option>
+              <option>Florida</option>
+              <option>Georgia</option>
+              <option>Hawaii</option>
+              <option>Idaho</option>
+              <option>Illinois</option>
+              <option>Indiana</option>
+              <option>Iowa</option>
+              <option>Kansas</option>
+              <option>Kentucky</option>
+              <option>Louisiana</option>
+              <option>Maine</option>
+              <option>Maryland</option>
+              <option>Massachusetts</option>
+              <option>Michigan</option>
+              <option>Minnesota</option>
+              <option>Mississippi</option>
+              <option>Missouri</option>
+              <option>Montana</option>
+              <option>Nebraska</option>
+              <option>Nevada</option>
+              <option>New Hampshire</option>
+              <option>New Jersey</option>
+              <option>New Mexico</option>
+              <option>New York</option>
+              <option>North Carolina</option>
+              <option>North Dakota</option>
+              <option>Ohio</option>
+              <option>Oklahoma</option>
+              <option>Oregon</option>
+              <option>Pennsylvania</option>
+              <option>Rhode Island</option>
+              <option>South Carolina</option>
+              <option>South Dakota</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Utah</option>
+              <option>Vermont</option>
+              <option>Virginia</option>
+              <option>Washington</option>
+              <option>West Virginia</option>
+              <option>Wisconsin</option>
+              <option>Wyoming</option>
+              <option>American Samoa</option>
+              <option>Guam</option>
+              <option>Northern Mariana Islands</option>
+              <option>Virgin Islands</option>
+              <option>Federated States of Micronesia</option>
+              <option>Palau</option>
+              <option>Armed Forces America</option>
+              <option>Armed Forces</option>
+              <option>Armed Forces Pacific</option>
+            </optgroup>
+            <optgroup label="Canadian Provinces">
+              <option>Yukon</option>
+              <option>Saskatchewan</option>
+              <option>Quebec</option>
+              <option>Prince edward island</option>
+              <option>Ontario</option>
+              <option>Nunavut</option>
+              <option>Northwest Territories</option>
+              <option>Nova Scotia</option>
+              <option>Newfoundland and Labrador</option>
+              <option>New Brunswick</option>
+              <option>Manitoba</option>
+              <option>British Columbia</option>
+              <option>Alberta</option>
+            </optgroup>
+          </select><a href="#" class="add-geo-btn">add »</a>
+        </div>
+        <div class="tag-container"><a class="tag template"><span class="text"></span><span class="x fa fa-times"></span></a></div>
+      </div>
+    </section>
+    <footer id="exit_buttons" class="button-bar"><a href="http://www.pardot.com/faqs/salesforce-engage/engage-for-salesforce1/" class="help-link btn"><i class="fa fa-question-circle"></i>&nbsp;Help</a><a id="save_filter" href="#" class="save btn">Save</a><a href="#" class="cancel btn">Cancel</a></footer>
+  </form>
+</div>
+    <apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.js')}"/>
+
+      <script type="text/javascript">
+        window.CreateFilterControllerLocation = '{!$RemoteAction.FilterController.createFilter1}';
+        window.EditFilterControllerLocation = '{!$RemoteAction.FilterController.updateFilter}';
+        window.RemoteGetFiltersAction = '{!$RemoteAction.FilterController.getFilters}';
+        window.CurrentFilter = {
+            id: '{!currentFilter.Id}' == '' ? null : '{!currentFilter.Id}',
+            title: '{!JSENCODE(currentFilter.title)}',
+            criteria: '{!JSENCODE(currentFilter.criteria)}',
+            assignedToAllUsers: {!IF(currentFilter.assignedToAllUsers == null, 'false', currentFilter.assignedToAllUsers)}
+        };
+        window.CanSeeAllProspects = {!CurrentUserCanViewNotAssignedProspects};
+        window.NamespacePrefix = '{!namespace}';
+      </script>
+    <apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/filters_main.js')}"/>
+  </body>
+</apex:page>

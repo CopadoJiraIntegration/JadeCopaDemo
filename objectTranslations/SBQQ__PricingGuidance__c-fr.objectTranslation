@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prix indicatif</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Prix indicatifs</value>
+    </caseValues>
+    <fields>
+        <help>Description de ce prix indicatif</help>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>Donne aux commerciaux une explication de ce prix indicatif et des recommandations sur les remises à fournir. Ils peuvent afficher cette explication avec les prix indicatifs dans l&apos;éditeur de ligne de devis.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Lors de la définition du niveau de prix indicatif pour une ligne de devis, incluez les quantités de produits vendues précédemment</help>
+        <label><!-- Include Prior Purchases --></label>
+        <name>SBQQ__IncludePriorPurchases__c</name>
+    </fields>
+    <fields>
+        <help>Activer ce prix indicatif à utiliser sur un produit associé.</help>
+        <label><!-- Active --></label>
+        <name>SBQQ__IsActive__c</name>
+    </fields>
+    <fields>
+        <help>Les paramètres fournis pour créer ce prix indicatif.</help>
+        <label><!-- Summary --></label>
+        <name>SBQQ__Summary__c</name>
+    </fields>
+    <fields>
+        <help>Plage : Les remises de prix indicatif qui utilisent uniquement le niveau de prix indicatif qui s’applique à la quantité de la ligne de devis.</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>Plage</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Choisissez le type de remise que ce prix indicatif applique à la ligne de devis.</help>
+        <label><!-- Unit --></label>
+        <name>SBQQ__Unit__c</name>
+        <picklistValues>
+            <masterLabel>Percent</masterLabel>
+            <translation>Pourcentage</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Pricing Guidance Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

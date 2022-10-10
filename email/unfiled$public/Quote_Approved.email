@@ -1,0 +1,25 @@
+<messaging:emailTemplate subject="APPROVED: {!relatedTo.Quote__r.Name}, {!relatedTo.Quote__r.SBQQ__Opportunity2__r.Owner.Name}"  relatedToType="sbaa__Approval__c">
+<messaging:HtmlEmailBody >
+<html>
+<body>
+Hello, Your request has been approved for the following:
+
+
+<p>
+<p><b>Quote Name:</b>&nbsp;<apex:outputLink value="https://na34.salesforce.com/{!relatedTo.Quote__r.Id}" >{!relatedTo.Quote__r.Name}</apex:outputLink></p>
+<p><b>Opportunity Name:</b>&nbsp;<apex:outputLink value="https://na34.salesforce.com/{!relatedTo.Quote__r.SBQQ__Opportunity2__r.Id}" >{!relatedTo.Quote__r.SBQQ__Opportunity2__r.Name}</apex:outputLink></p>
+<p><b>Opportunity Owner:</b>{!relatedTo.Quote__r.SBQQ__Opportunity2__r.Owner.Name}</p>
+<p><b>Quote Total:</b>&nbsp;<apex:outputField value=" {!relatedTo.Quote__r.SBQQ__NetAmount__c}"/></p>
+<p><b>Average Customer Discount:</b>&nbsp;<apex:outputField value=" {!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c}"/></p>
+<p><b>Subscription Term:</b>&nbsp;<apex:outputField value=" {!relatedTo.Quote__r.SBQQ__SubscriptionTerm__c}"/></p>
+
+
+
+
+
+<p style="color:white"><apex:outputText value="{!relatedTo.Id}"/></p>
+</p>
+</body>
+</html>
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>

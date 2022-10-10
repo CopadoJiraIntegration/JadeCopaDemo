@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Order Activation</fullName>
+        <default>false</default>
+        <label>Order Activation</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Posting</fullName>
+        <default>false</default>
+        <label>Invoice Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Note Posting</fullName>
+        <default>false</default>
+        <label>Credit Note Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>Debit Note Posting</fullName>
+        <default>false</default>
+        <label>Debit Note Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Revenue Schedule Creation Action</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

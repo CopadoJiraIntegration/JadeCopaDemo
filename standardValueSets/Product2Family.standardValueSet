@@ -6,4 +6,84 @@
         <default>false</default>
         <label>None</label>
     </standardValue>
+    <standardValue>
+        <fullName>Hardware</fullName>
+        <default>false</default>
+        <label>Hardware</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Software</fullName>
+        <default>false</default>
+        <label>Software</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accessories</fullName>
+        <default>false</default>
+        <label>Accessories</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Services</fullName>
+        <default>false</default>
+        <label>Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Support</fullName>
+        <default>false</default>
+        <label>Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eSignature</fullName>
+        <default>false</default>
+        <label>eSignature</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>API</fullName>
+        <default>false</default>
+        <label>API</label>
+    </standardValue>
+    <standardValue>
+        <fullName>License</fullName>
+        <default>false</default>
+        <label>License</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Core Digital</fullName>
+        <default>false</default>
+        <label>Core Digital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digital Add-On</fullName>
+        <default>false</default>
+        <label>Digital Add-On</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BOW</fullName>
+        <default>false</default>
+        <label>BOW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Digital</fullName>
+        <default>false</default>
+        <label>Other Digital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Core Digital Bundled</fullName>
+        <default>false</default>
+        <label>Core Digital Bundled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Packages</fullName>
+        <default>false</default>
+        <label>Packages</label>
+    </standardValue>
 </StandardValueSet>

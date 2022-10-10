@@ -1,0 +1,3 @@
+<aura:component controller="CommunityRedirectController" implements="forceCommunity:availableForAllPageTypes" access="global">
+	 <aura:handler name="init" value="{!this}" action="{!c.redirectPage}"/>
+</aura:component>

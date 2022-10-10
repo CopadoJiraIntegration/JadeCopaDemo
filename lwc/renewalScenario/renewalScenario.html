@@ -1,0 +1,217 @@
+<template>
+    <lightning-tabset class='slds-tabs_default' active-tab-value='Like to Like' style="background:white;">
+        <lightning-tab name="Like to Like" value ="Like to Like" label="Like to Like" title="Like to Like" id="likeId" onactive={tabselect}>
+            <div  style="background-color: white;">
+                <h1 style="margin-left: 8px;padding-bottom: 0.3rem;font-weight: bold;font-size: 14px;color: rgb(81, 79, 77);">Quote: {proposalName} ({quoteName})</h1>
+                <template if:true={msgForNoProducts}>
+                    <h1 style="margin-left: 8px;padding-bottom: 0.3rem;font-weight: bold;font-size: 14px;color: rgb(255, 0, 0);">You have no products to upgrade</h1>
+                </template>
+                <lightning-layout>
+                    <template if:true={isShowSpinner}>
+                        <lightning-spinner style="position: fixed;" variant="brand" size="medium" alternative-text="Loading..."></lightning-spinner>
+                    </template>
+                    <lightning-layout-item size="2"></lightning-layout-item>
+                    <lightning-layout-item flexibility="auto" padding="horizontal-medium" size="6">
+                        <div class="slds-p-left_small">
+                            <div class="slds-form-element slds-p-top_medium slds-p-bottom_medium">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-combobox_container">
+                                        <lightning-combobox
+                                            name="bundleValuesLikeToLike"
+                                            value={value}
+                                            label ="Install Base"
+                                            placeholder="Select an Option"
+                                            options={options}
+                                            onchange={handlePicklistChange} ></lightning-combobox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout if:true={showTable}>
+                    <lightning-layout-item style="padding-bottom: 1rem;" size="12">
+                        <h1 style="margin-left: 8px;padding-bottom: 0.3rem;font-weight: bold;font-size: 14px;color: rgb(81, 79, 77);">Like to Like Options Available</h1>
+                        <lightning-tree-grid 
+                        columns={columns} 
+                        data={data} 
+                        onrowaction={handleSelect} 
+                        key-field="description"
+                        selected-rows={selectedRows}
+                        hide-checkbox-column = true>
+                    </lightning-tree-grid>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <div style="background-color: rgb(1, 80, 150);color: white;height: 35px;font-weight: 900;width: -webkit-fill-available;font-size: medium;" class="slds-align_absolute-center slds-p-around_medium">Upgrade Cart</div>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item style="padding-top: 1rem;" size="12">
+                        <table class="slds-table slds-table--bordered slds-no-row-hover">
+                            <thead>
+                                <th style="color: rgb(81, 79, 77);">Renewal Upgrade Type</th>
+                                <th style="color: rgb(81, 79, 77);">Installed Base</th>
+                                <th style="color: rgb(81, 79, 77);">Upgrade to</th>
+                                <th style="color: rgb(81, 79, 77);">Upgrade Path</th>
+                                <th style="color: rgb(81, 79, 77);">Effective Date</th>
+                                <th> </th>
+                            </thead>
+                            <tbody>
+                                <template for:each={renewalData} for:item="data">
+                                    <tr key={data.Id}>
+                                        <td>
+                                            <div>{data.selectedTab}</div>
+                                        </td>
+                                        <td>
+                                            <div>{data.installBase}</div>
+                                        </td>
+                                        <td class="slds-cell-wrap" style="width: 30%;">
+                                            <div>{data.description}</div>
+                                        </td>
+                                        <td class="slds-cell-wrap" style="width: 30%;">
+                                            <div>{data.nameRenewedTo}</div>
+                                        </td>
+                                        <td style="padding-right: 10px;">
+                                            <div>
+                                                <lightning-input type="date"
+                                                    onchange={handleEffectiveDate} name={data.Id} class='endDateCmp' style="width: 100%;padding-bottom: 12px;">
+                                                </lightning-input>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <lightning-button-icon name={data.Id}
+                                                icon-name="utility:delete" slot="actions" onclick={deleterows}>
+                                            </lightning-button-icon>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </lightning-tab>
+		<lightning-tab name="Upgrade" value ="Upgrade" label="Upgrade" title="Upgrade" id="upgradeId" onactive={tabselect}>
+            <div  style="background-color: white;">
+                <h1 style="margin-left: 8px;padding-bottom: 0.3rem;font-weight: bold;font-size: 14px;color: rgb(81, 79, 77);">Quote: {proposalName} ({quoteName})</h1>
+                <template if:true={msgForNoProducts}>
+                    <h1 style="margin-left: 8px;padding-bottom: 0.3rem;font-weight: bold;font-size: 14px;color: rgb(255, 0, 0);">You have no products to upgrade</h1>
+                </template>
+                <lightning-layout>
+                    <template if:true={isShowSpinner}>
+                        <lightning-spinner style="position: fixed;" variant="brand" size="medium" alternative-text="Loading..."></lightning-spinner>
+                    </template>
+                    <lightning-layout-item size="2"></lightning-layout-item>
+                    <lightning-layout-item flexibility="auto" padding="horizontal-medium" size="6">
+                        <div class="slds-p-left_small">
+                            <div class="slds-form-element slds-p-top_medium slds-p-bottom_medium">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-combobox_container">
+                                        <lightning-combobox
+                                            name="bundleValuesUpgrade"
+                                            value={value}
+                                            label ="Install Base"
+                                            placeholder="Select an Option"
+                                            options={options}
+                                            onchange={handlePicklistChange} ></lightning-combobox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout if:true={showTable}>
+                    <lightning-layout-item style="padding-bottom: 1rem;" size="12">
+                        <h1 style="margin-left: 8px;padding-bottom: 0.3rem;font-weight: bold;font-size: 14px;color: rgb(81, 79, 77);">Upgrade Options Available</h1>
+                        <lightning-tree-grid 
+                        columns={columns} 
+                        data={data} 
+                        onrowaction={handleSelect} 
+                        key-field="description"
+                        selected-rows={selectedRows}
+                        hide-checkbox-column = true>
+                    </lightning-tree-grid>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <div style="background-color: rgb(1, 80, 150);color: white;height: 35px;font-weight: 900;width: -webkit-fill-available;font-size: medium;" class="slds-align_absolute-center slds-p-around_medium">Upgrade Cart</div>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item style="padding-top: 1rem;" size="12">
+                        <table class="slds-table slds-table--bordered slds-no-row-hover">
+                            <thead>
+                                <th style="color: rgb(81, 79, 77);">Renewal Upgrade Type</th>
+                                <th style="color: rgb(81, 79, 77);">Installed Base</th>
+                                <th style="color: rgb(81, 79, 77);width:30%">Upgrade to</th> <!--Description column-->
+                                <th style="color: rgb(81, 79, 77);">Upgrade Path</th> <!--Renewed To column-->
+                                <th style="color: rgb(81, 79, 77);">Effective Date</th>
+                                <th> </th>
+                            </thead>
+                            <tbody>
+                                <template for:each={renewalData} for:item="data">
+                                    <tr key={data.Id}>
+                                        <td>
+                                            <div>{data.selectedTab}</div>
+                                        </td>
+                                        <td>
+                                            <div>{data.installBase}</div>
+                                        </td>
+                                        <td class="slds-cell-wrap" style="width: 30%;">
+                                            <div>{data.description}</div>
+                                        </td>
+                                        <td class="slds-cell-wrap" style="width: 30%;">
+                                            <div>{data.nameRenewedTo}</div>
+                                        </td>
+                                        <td style="padding-right: 10px;">
+                                            <div>
+                                                <lightning-input type="date"
+                                                    onchange={handleEffectiveDate} name={data.Id} class='endDateCmp' style="width: 100%;padding-bottom: 12px;">
+                                                </lightning-input>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <lightning-button-icon name={data.Id}
+                                                icon-name="utility:delete" slot="actions" onclick={deleterows}>
+                                            </lightning-button-icon>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+		</lightning-tab>
+    </lightning-tabset>
+    <template if:true={openModal}>  
+        <div class="slds-modal slds-fade-in-open slds-backdrop">  
+            <div class="slds-modal__container">  
+            <!--HEADER Section-->  
+                <div class="slds-modal__header">  
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"  variant="bare-inverse" onclick={closeModal} class="slds-modal__close">  
+                    </lightning-button-icon>  
+                </div>  
+            <!--Body Section-->  
+                <div class="slds-modal__content slds-p-around_medium">  
+                    <center>  
+                        <p style="font-size: 1rem;font-weight: 500;">Do you want to proceed?
+                        </p>  
+                    </center>  
+                </div>  
+            <!--Footer Section-->  
+                <div class="slds-modal__footer">  
+                    <lightning-button variant="brand" label="Continue" title="Continue" class="slds-p-right_x-small" onclick={saveQuoteLines}></lightning-button>
+                    <lightning-button variant="brand" label="Cancel" title="Cancel" onclick={handleModalCancel}></lightning-button>
+                </div>  
+            </div>  
+        </div>  
+    </template>  
+    <div class="slds-docked-form-footer" style="position:sticky;z-index: 0;">
+        <lightning-button variant="brand" label="Select" title="Select" onclick={handleFooterSelect} class="slds-p-right_x-small selectBtn" disabled={msgForNoProducts}></lightning-button>
+        <lightning-button variant="brand" label="Cancel" title="Cancel" onclick={handleCancel}></lightning-button>
+    </div>
+</template>

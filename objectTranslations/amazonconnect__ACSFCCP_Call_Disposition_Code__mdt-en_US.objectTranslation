@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>amazonconnect__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disposition Code --></label>
+        <name>amazonconnect__Disposition_Code__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Angebotsbelegposten-Verbrauchsregelungen</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Compact Layout --></label>
+        <name>SBQQ__CompactLayout</name>
+    </fieldSets>
+    <fields>
+        <help>Die mit dem Abrechnungsintervall verwendete Einheit zur Festlegung der Abrechnungshäufigkeit.</help>
+        <label><!-- Billing Term Unit --></label>
+        <name>SBQQ__BillingTermUnit__c</name>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation>Monat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation>Quartal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation>Jahr</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Die mit der Abrechnungsintervalleinheit verwendete Zahl zur Festlegung der Abrechnungshäufigkeit.</help>
+        <label><!-- Billing Term --></label>
+        <name>SBQQ__BillingTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation>Raten</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumption Schedule --></label>
+        <name>SBQQ__ConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>Die Nutzung wird mit einer Verbrauchsregelung abgeglichen, um herauszufinden, ob die Datensätze denselben Wert für das Abgleichsattribut aufweisen.</help>
+        <label><!-- Matching Attribute --></label>
+        <name>SBQQ__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Wählen Sie einen spezifischen Anwendungsfall aus, um die Nutzung auf der Grundlage dieses Plans zu bewerten. Dies ist eine steuernde Auswahlliste für das Feld &quot;Typ&quot;.</help>
+        <label><!-- Rating Method --></label>
+        <name>SBQQ__RatingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Tier</masterLabel>
+            <translation>Klasse</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Bereich: Die Preisberechnung erfolgt ausschließlich auf Grundlage der Stufe, die der Nutzungsmenge entspricht. Spanne: Die Nutzung innerhalb eines vorgegebenen Rahmens wird entsprechend dem Wert der Stufe berechnet.</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>Bereich</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation>Durchschnitt</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Für diese Maßeinheit gelten Nutzungsmengen und -werte.</help>
+        <label><!-- Unit of Measure --></label>
+        <name>SBQQ__UnitOfMeasure__c</name>
+        <picklistValues>
+            <masterLabel>GigaBytes</masterLabel>
+            <translation><!-- GigaBytes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation>Keine</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Quote Line Consumption Schedule Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name der Angebotsbelegposten-Verbrauchsr</nameFieldLabel>
+</CustomObjectTranslation>

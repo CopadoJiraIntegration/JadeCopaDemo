@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Choose to enable or disable the AC_AssociateCCACase trigger, which associates a Case with a Contact Channel Analytics record. --></help>
+        <label><!-- Disable the CCA Case Trigger --></label>
+        <name>amazonconnect__disableCCACase__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose to enable or disable the AC_AssociateCCAContact trigger, which associates a Contact with a Contact Channel Analytics record. --></help>
+        <label><!-- Disable the CCA Contact Trigger --></label>
+        <name>amazonconnect__disableCCAContact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose to enable or disable the AC_AssociateCaseContactCCA trigger, which associates Cases and Contacts with a Contact Channel Analytics Record. --></help>
+        <label><!-- Disable the Case Contact CCA Trigger --></label>
+        <name>amazonconnect__disableCaseContactCCA__c</name>
+    </fields>
+    <fields>
+        <help><!-- This trigger creates a ContactChannel record for any inserted/updated task that with a `CallObject` field that does not currently have a ContactChannel record created before. --></help>
+        <label><!-- Disable the Task Trigger --></label>
+        <name>amazonconnect__disableTaskTrigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose to enable or disable the AC_VoiceIdChannel trigger, which associates Cases and Contacts with a Voice Id Channel Record --></help>
+        <label><!-- Disable the Voice Id Channel Trigger --></label>
+        <name>amazonconnect__disableVoiceIdTrigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide the URL for the domain of your Amazon Connect instance, for example https://yourinstancename.awsapps.com --></help>
+        <label><!-- Url --></label>
+        <name>amazonconnect__url__c</name>
+    </fields>
+</CustomObjectTranslation>

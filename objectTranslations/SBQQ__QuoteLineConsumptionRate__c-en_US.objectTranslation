@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Rates --></label>
+        <name>SBQQ__Rates</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- The lowest quantity of usage for this consumption rate. --></help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Price --></label>
+        <name>SBQQ__OriginalPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- The price for usage that falls within this consumption rate&apos;s bounds. --></help>
+        <label><!-- Price --></label>
+        <name>SBQQ__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Fee</masterLabel>
+            <translation><!-- Flat Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation><!-- Per Unit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The order for processing the usage rate across multiple rates. Consumption Rates are evaluated beginning with the lowest processing order. --></help>
+        <label><!-- Processing Order --></label>
+        <name>SBQQ__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- This rate is a part of of this schedule. --></help>
+        <label><!-- Quote Line Consumption Schedule --></label>
+        <name>SBQQ__QuoteLineConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Quote Line Consumption Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The highest quantity of usage for this consumption rate. --></help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <layouts>
+        <layout>Quote Line Consumption Rate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

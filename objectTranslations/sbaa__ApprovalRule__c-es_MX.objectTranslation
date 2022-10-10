@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Regla de aprobación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reglas de aprobación</value>
+    </caseValues>
+    <fields>
+        <help>Está marcada si la regla debe evaluarse cuando se envía para aprobación</help>
+        <label><!-- Active --></label>
+        <name>sbaa__Active__c</name>
+    </fields>
+    <fields>
+        <help>Solo se puede ingresar si Condiciones cumplidas es Personalizado. Ingrese una combinación de los números de índice de condición de aprobación, AND, OR y paréntesis (por ej. (123 AND 124) AND 125).</help>
+        <label><!-- Advanced Condition --></label>
+        <name>sbaa__AdvancedCondition__c</name>
+    </fields>
+    <fields>
+        <help>Cadena de aprobación a la que pertenece esta regla.</help>
+        <label><!-- Approval Chain --></label>
+        <name>sbaa__ApprovalChain__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Seleccione uno o más destinatarios para la notificación por email de la aprobación.</help>
+        <label><!-- Approval Recipients --></label>
+        <name>sbaa__ApprovalRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>Emisor inicial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>Registro creado por</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>Propietario de registro</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Paso en el que se evalúa esta regla de aprobación</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help>Búsqueda de consulta de la plantilla de email asociada con la aprobación de esta regla</help>
+        <label><!-- Approval Template --></label>
+        <name>sbaa__ApprovalTemplate__c</name>
+        <relationshipLabel><!-- Approved Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El campo que contiene el valor de Aprobador empleado para esta regla en aprobaciones dinámicas</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>Creado por</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Aprobador asociado con esta regla de aprobación.</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Seleccione el comportamiento para sus condiciones: todo es AND, cualquiera es OR.</help>
+        <label><!-- Conditions Met --></label>
+        <name>sbaa__ConditionsMet__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>Todas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any</masterLabel>
+            <translation>Cualquiera</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation>Personalizado</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Tipo del campo de fecha desde el Objeto de destino a los que Fecha de entrada en vigor y Fecha de finalización hacen referencia al aplicar reglas de aprobación</help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation>Fecha de creación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation>Fecha de envío</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El intervalo de fechas de finalización en los que estará en vigencia esta regla (inclusive)</help>
+        <label><!-- Effective End Date --></label>
+        <name>sbaa__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help>La fecha de inicio desde la que estará en vigencia esta regla (inclusive)</help>
+        <label><!-- Effective Start Date --></label>
+        <name>sbaa__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Estados a los que esta regla de aprobación no debe aplicarse</help>
+        <label><!-- Excluded Statuses --></label>
+        <name>sbaa__ExcludedStatuses__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>Aprobada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>Pendiente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation>Recuperada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>Rechazada</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Si está establecido, el valor de este campo invalida las condiciones de aprobación</help>
+        <label><!-- Override Field --></label>
+        <name>sbaa__OverrideField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Nombre</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Si está marcado, todas las aprobaciones de este paso se producen en paralelo. Este parámetro solo tiene efecto cuando se utilizan aprobaciones avanzadas con aprobaciones nativas.</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </fields>
+    <fields>
+        <help>Búsqueda de consulta de la plantilla de recuperación asociada con la aprobación de esta regla</help>
+        <label><!-- Recall Template --></label>
+        <name>sbaa__RecallTemplate__c</name>
+        <relationshipLabel><!-- Recalled Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Seleccione uno o más destinatarios para la notificación por email del rechazo.</help>
+        <label><!-- Rejection Recipients --></label>
+        <name>sbaa__RejectionRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>Emisor inicial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>Registro creado por</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>Propietario de registro</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Búsqueda de consulta de la plantilla de recuperación asociada con el rechazo de esta regla</help>
+        <label><!-- Rejection Template --></label>
+        <name>sbaa__RejectionTemplate__c</name>
+        <relationshipLabel><!-- Rejected Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Búsqueda de consulta de la plantilla de email asociada con las solicitudes de aprobación de esta regla</help>
+        <label><!-- Request Template --></label>
+        <name>sbaa__RequestTemplate__c</name>
+        <relationshipLabel><!-- Approval Rules (Requested) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Al aprobar cualquier aprobación se aprobará automáticamente de forma predeterminada cualquier otra aprobación asignada al mismo usuario. Si esta casilla está sin marcar, una aprobación originada por esta regla no se aprobará automáticamente y deberá ser aprobada explícitamente.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </fields>
+    <fields>
+        <help>Marque la casilla para volver a evaluar las condiciones de Aprobación inteligente incluso si Condiciones cumplidas está establecido en Todas o Personalizado. Si cualquier condición de Aprobación inteligente devuelve Verdadero, la reevaluación se detiene y las condiciones de la regla se consideran cumplidas.</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de API del objeto al que se aplica esta regla</help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Oportunidad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Quote__c</masterLabel>
+            <translation><!-- SBQQ__Quote__c --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Approval Rule Layout</layout>
+        <sections>
+            <label>Configuración básica</label>
+            <section>Basic Settings</section>
+        </sections>
+        <sections>
+            <label>Condiciones</label>
+            <section>Conditions</section>
+        </sections>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Notificaciones por email</label>
+            <section>Email Notifications</section>
+        </sections>
+        <sections>
+            <label>Exclusiones</label>
+            <section>Exclusions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de regla</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Effective Date Field must be set in order to use Effective Start and End Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Not_Null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effective End Date must not come before Effective Start Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Range_Ordered</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>sbaa__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>sbaa__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

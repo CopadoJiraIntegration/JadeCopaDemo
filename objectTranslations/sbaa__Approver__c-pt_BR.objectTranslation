@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Aprovador</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Aprovadores</value>
+    </caseValues>
+    <fields>
+        <help>Usado com Aprovações delegadas, pesquise o Aprovador que é o delegado para esse Aprovador</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegating Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Usuário associado ao Aprovador delegado</help>
+        <label><!-- Delegated User Id --></label>
+        <name>sbaa__DelegatedUserId__c</name>
+    </fields>
+    <fields>
+        <help>Data em que a delegação da aprovação termina</help>
+        <label><!-- Delegation End --></label>
+        <name>sbaa__DelegationEnd__c</name>
+    </fields>
+    <fields>
+        <help>Data em que a delegação da aprovação começa</help>
+        <label><!-- Delegation Start --></label>
+        <name>sbaa__DelegationStart__c</name>
+    </fields>
+    <fields>
+        <help>Se o Aprovador for um Grupo, em vez de um único Usuário, preencha com o ID do grupo</help>
+        <label><!-- Group ID --></label>
+        <name>sbaa__GroupId__c</name>
+    </fields>
+    <fields>
+        <help>Aprovador que precisa aprovar depois que este Aprovador tiver aprovado</help>
+        <label><!-- Next Approver --></label>
+        <name>sbaa__NextApprover__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Se o Aprovador for um Grupo, verificado se todos os membros precisam Aprovar para considerar a Aprovação aprovada</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </fields>
+    <fields>
+        <help>Se o Aprovador for um único usuário, pesquise esse Usuário</help>
+        <label><!-- User --></label>
+        <name>sbaa__User__c</name>
+        <relationshipLabel><!-- Approvers --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Approver Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informações do delegado</label>
+            <section>Delegate Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do aprovador</nameFieldLabel>
+    <webLinks>
+        <label><!-- Replace --></label>
+        <name>sbaa__Replace</name>
+    </webLinks>
+</CustomObjectTranslation>

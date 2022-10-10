@@ -1,0 +1,17 @@
+<apex:page standardController="blng__Invoice__c" extensions="blng.ControllerCancelInvoice" sideBar="false">
+    <apex:form >
+        <apex:actionFunction name="doInit" action="{!creditInvoice}" rerender="allPanel"/>
+        <apex:outputPanel id="allPanel">
+            <apex:outputPanel rendered="{!NOT(initialised)}">
+                <script>
+                    window.onload=function()
+                    {
+                        doInit();
+                    };
+                </script>
+            </apex:outputPanel>
+            <apex:pageMessages />
+            <apex:commandButton value="Back To Invoice" action="{!Cancel}" />
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

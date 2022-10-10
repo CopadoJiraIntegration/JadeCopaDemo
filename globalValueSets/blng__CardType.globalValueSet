@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Visa</fullName>
+        <default>false</default>
+        <label>Visa</label>
+    </customValue>
+    <customValue>
+        <fullName>Mastercard</fullName>
+        <default>false</default>
+        <label>Mastercard</label>
+    </customValue>
+    <customValue>
+        <fullName>American Express</fullName>
+        <default>false</default>
+        <label>American Express</label>
+    </customValue>
+    <customValue>
+        <fullName>Discover</fullName>
+        <default>false</default>
+        <label>Discover</label>
+    </customValue>
+    <description>Card Type</description>
+    <masterLabel>Card Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Uso</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Usos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Usages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- End DateTime --></label>
+        <name>blng__EndDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>blng__ErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching Attribute --></label>
+        <name>blng__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching ID --></label>
+        <name>blng__MatchingId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Usages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Usages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prerated Amount --></label>
+        <name>blng__PreratedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prerated Quantity --></label>
+        <name>blng__PreratedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processing Date --></label>
+        <name>blng__ProcessingDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>blng__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Id --></label>
+        <name>blng__ReferenceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Id --></label>
+        <name>blng__SourceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start DateTime --></label>
+        <name>blng__StartDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Code --></label>
+        <name>blng__StatusCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Of Measure --></label>
+        <name>blng__UnitOfMeasure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>blng__UnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usage Summary --></label>
+        <name>blng__UsageSummary__c</name>
+        <relationshipLabel><!-- Usages --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Usage Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Usage Information --></label>
+            <section>Usage Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº do uso</nameFieldLabel>
+</CustomObjectTranslation>

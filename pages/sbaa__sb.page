@@ -1,0 +1,95 @@
+<apex:page docType="html-5.0" standardStylesheets="false" controller="sbaa.ServiceRouter" sideBar="false">
+	<script>if( document.head.createShadowRoot ) Polymer = {dom: 'shadow'};</script>
+	<script type="text/javascript" src="{!$Resource.sb_app_3rd_js}"></script>
+	<apex:includeScript value="/support/console/20.0/integration.js"/>
+
+	<sb-page-container id="sbPageContainer" style="position:static;"></sb-page-container>
+	<div id="sb-app"></div>
+
+	<style>
+	#bodyCell {
+		position: relative;
+		overflow: hidden;
+		padding: 0px;
+		display: inline-block;
+		width: 100%;
+		min-height: 500px;
+	}
+
+	#sidebarCell.sidebarCollapsed {
+		padding-left: 0;
+	}
+
+    .noSidebarCell.noSidebarCell {
+        padding: 0;
+    }
+
+	#MoreTabs_Tab > #MoreTabs_List {
+		z-index: 10;  // must be larger than fixed page header (tab overflow dropdown)
+	}
+	</style>
+
+	<script>
+	(function( window ) {
+		window.sb = window.sb || {};
+		window.sb.vfSessionId = '{!$API.Session_Id}';
+
+		var wcReady = new Promise( function( res, rej ) {
+			var ok = false;
+			window.addEventListener( 'WebComponentsReady', function(e) { ok = true; res(''); } );
+			setTimeout( function() { if( !ok ) rej(); }, 10000 );
+		});
+
+		function get( u ) {
+			return new Promise( function( resolve, reject ) {
+				var req = new XMLHttpRequest();
+				req.open( 'GET', u );
+
+				req.onload = function() {
+					if( [200,304].indexOf( req.status ) >= 0 )
+						resolve( req.responseText );
+					else
+						reject( new Error( req.statusText ) );
+				};
+				req.onerror = function() {
+					reject( new Error( req.statusText ) );
+				};
+				req.send();
+			});
+		}
+
+		function evalJs( js ) {
+			var s = document.createElement( 'script' );
+			s.text = js;
+			document.head.appendChild( s ); //.parentNode.removeChild( s );
+		}
+
+		Promise.all( [get( '{!$Resource.sb_app_html}' ), get( '{!$Resource.sb_app_js}' ), wcReady] ).then( function( results ) {
+			var e = document.querySelector( '#sb-app' );
+			if( !results[0] || e.nodeType !== 1 )
+				return;
+
+			e.innerHTML = results[0];
+			var scripts = e.querySelectorAll( 'script' ), len = scripts ? scripts.length : 0;
+
+			for( var i=0; i < len; i++ )
+				evalJs( scripts[i].textContent.replace( /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g, '' ) );
+
+			evalJs( results[1] );
+
+			System.import( 'app.js' ).then( function( mod ) {
+                // Inserting escape characters before unsafe Javascript characters for prefix string.
+				mod.App.init( document.querySelector( '#sbPageContainer' ), null, '{!JSENCODE(prefix)}' );
+
+				// the default page to land the user on
+				var HOME = '/dealdesk/home';
+				document.querySelector('body').removeAttribute( 'unresolved' );
+				document.querySelector( '#sbPageContainer' ).route =  window.location.hash.length > 1 ? window.location.hash.slice(1) : HOME;
+			})
+			.catch( function(err) { console.error(err); console.log( err.originalErr ) } );
+
+		});
+	})( window );
+	</script>
+
+</apex:page>

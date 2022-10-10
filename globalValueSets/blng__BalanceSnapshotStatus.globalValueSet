@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Started</fullName>
+        <default>false</default>
+        <label>Started</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Processing</fullName>
+        <default>false</default>
+        <label>Invoice Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Completed</fullName>
+        <default>false</default>
+        <label>Invoice Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Note Processing</fullName>
+        <default>false</default>
+        <label>Credit Note Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Note Completed</fullName>
+        <default>false</default>
+        <label>Credit Note Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Debit Note Processing</fullName>
+        <default>false</default>
+        <label>Debit Note Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Debit Note Completed</fullName>
+        <default>false</default>
+        <label>Debit Note Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Processing</fullName>
+        <default>false</default>
+        <label>Payment Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Completed</fullName>
+        <default>false</default>
+        <label>Payment Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Error</fullName>
+        <default>false</default>
+        <label>Error</label>
+    </customValue>
+    <masterLabel>Balance Snapshot Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

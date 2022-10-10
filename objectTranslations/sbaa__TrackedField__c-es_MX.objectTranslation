@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campo con seguimiento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campos con seguimiento</value>
+    </caseValues>
+    <fields>
+        <help>Regla de aprobación que generará el valor con seguimiento para este campo con seguimiento</help>
+        <label><!-- Approval Rule --></label>
+        <name>sbaa__ApprovalRule__c</name>
+        <relationshipLabel><!-- Tracked Fields --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Campo (en el objeto Valor con seguimiento) que representa una búsqueda de consulta de su objeto principal.</help>
+        <label><!-- Record Field --></label>
+        <name>sbaa__RecordField__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Oportunidad</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Un campo (en un objeto con seguimiento) sobre el que se está realizando un seguimiento.</help>
+        <label><!-- Tracked Field --></label>
+        <name>sbaa__TrackedField__c</name>
+        <picklistValues>
+            <masterLabel>Amount</masterLabel>
+            <translation>Importe</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type</masterLabel>
+            <translation>Tipo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Objeto en el que está el campo con seguimiento.</help>
+        <label><!-- Tracked Object --></label>
+        <name>sbaa__TrackedObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Oportunidad</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Seleccione si se realiza un seguimiento de todos los valores o únicamente los campos del valor con seguimiento anterior.</help>
+        <label><!-- Tracking Type --></label>
+        <name>sbaa__TrackingType__c</name>
+        <picklistValues>
+            <masterLabel>All Values</masterLabel>
+            <translation>Todos los valores</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any Change</masterLabel>
+            <translation>Cualquier cambio</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Tracked Field Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº de campo con seguimiento</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Metadatos de conjunto de campos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metadatos de conjuntos de campos</value>
+    </caseValues>
+    <fields>
+        <help>Si el usuario no tiene una configuración.</help>
+        <label><!-- Default --></label>
+        <name>SBQQ__Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- FieldSet Validation --></label>
+        <name>SBQQ__FieldSetValidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- FieldSet Name --></label>
+        <name>SBQQ__FieldSet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>SBQQ__ObjectType__c</name>
+        <picklistValues>
+            <masterLabel>Quote Line</masterLabel>
+            <translation>Partida de presupuesto</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Número de metadatos de conjunto de campo</nameFieldLabel>
+</CustomObjectTranslation>

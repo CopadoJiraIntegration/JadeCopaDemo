@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>blng__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>To deactivate the revenue recognition treatment, clear the checkbox. This won’t affect
+        existing transactions that reference the book.</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>blng__FlatAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a flat amount</inlineHelpText>
+        <label>Flat Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>blng__Percentage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a percent value</inlineHelpText>
+        <label>Percentage</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>blng__ProcessingOrder__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter 1 if this revenue treatment should be processed before all other treatments, 2 if it should be second, etc.</inlineHelpText>
+        <label>Processing Order</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueAgreementAssociation__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select an option for associating the revenue schedule to the revenue agreement.</inlineHelpText>
+        <label>Revenue Agreement Association</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueAgreementAssociation</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueDistributionMethod__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Revenue distribution method used for assigning review across periods</inlineHelpText>
+        <label>Revenue Distribution Method</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(1 AND 2) OR (3 AND 4) OR (5 AND 6) OR (7 AND 8) OR (9 AND 10)</booleanFilter>
+            <errorMessage>Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Activation&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot;</errorMessage>
+            <filterItems>
+                <field>$Source.blng__RevenueScheduleCreationAction__c</field>
+                <operation>equals</operation>
+                <value>Order Activation</value>
+            </filterItems>
+            <filterItems>
+                <field>blng__RevenueDistributionMethod__c.blng__Type__c</field>
+                <operation>equals</operation>
+                <value>Order</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.blng__RevenueScheduleCreationAction__c</field>
+                <operation>equals</operation>
+                <value>Invoice Posting</value>
+            </filterItems>
+            <filterItems>
+                <field>blng__RevenueDistributionMethod__c.blng__Type__c</field>
+                <operation>equals</operation>
+                <value>Invoice</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.blng__RevenueScheduleCreationAction__c</field>
+                <operation>equals</operation>
+                <value>Credit Note Posting</value>
+            </filterItems>
+            <filterItems>
+                <field>blng__RevenueDistributionMethod__c.blng__Type__c</field>
+                <operation>equals</operation>
+                <value>Credit Note</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.blng__RevenueScheduleCreationAction__c</field>
+                <operation>equals</operation>
+                <value>Debit Note Posting</value>
+            </filterItems>
+            <filterItems>
+                <field>blng__RevenueDistributionMethod__c.blng__Type__c</field>
+                <operation>equals</operation>
+                <value>Debit Note</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.blng__RevenueScheduleCreationAction__c</field>
+                <operation>equals</operation>
+                <value>Other</value>
+            </filterItems>
+            <filterItems>
+                <field>blng__RevenueDistributionMethod__c.blng__Type__c</field>
+                <operation>equals</operation>
+                <value>Other</value>
+            </filterItems>
+            <infoMessage>Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Posting&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot;</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>blng__RevenueDistributionMethod__c</referenceTo>
+        <relationshipLabel>Revenue Recognition Treatments (Revenue Distribution Method)</relationshipLabel>
+        <relationshipName>RevenueDistributionMethodRRTreatments</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueFinanceBook__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the finance book</inlineHelpText>
+        <label>Revenue Finance Book</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>blng__FinanceBook__c.blng__PeriodType__c</field>
+                <operation>equals</operation>
+                <value>Revenue</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>blng__FinanceBook__c</referenceTo>
+        <relationshipLabel>Revenue Recognition Treatments (Revenue Finance Book)</relationshipLabel>
+        <relationshipName>FinanceBookRevenueRecognitionTreatments</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueGLRule__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the general ledger rule</inlineHelpText>
+        <label>Revenue GL Rule</label>
+        <referenceTo>blng__GLRule__c</referenceTo>
+        <relationshipLabel>Revenue Recognition Treatments (Revenue GL Rule)</relationshipLabel>
+        <relationshipName>GLRuleRevenueRecognitionTreatments</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueLegalEntity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the legal entity for this revenue</inlineHelpText>
+        <label>Revenue Legal Entity</label>
+        <referenceTo>blng__LegalEntity__c</referenceTo>
+        <relationshipLabel>Revenue Recognition Treatments (Revenue Legal Entity)</relationshipLabel>
+        <relationshipName>LegalEntityRevenueRecognitionTreatments</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionRule__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Recognition Rule</label>
+        <referenceTo>blng__RevenueRecognitionRule__c</referenceTo>
+        <relationshipLabel>Revenue Recognition Treatments</relationshipLabel>
+        <relationshipName>RevenueRecognitionTreatments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueScheduleAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the type of revenue to recognize in this revenue schedule</inlineHelpText>
+        <label>Revenue Schedule Amount</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueScheduleAmount</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueScheduleCreationAction__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of event that triggers creation of the revenue schedule.</inlineHelpText>
+        <label>Revenue Schedule Creation Action</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueScheduleCreationAction</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>How the amount will be calculated - percent of total, flat amount, or remainder after other treatments are processed.</inlineHelpText>
+        <label>Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueRecognitionTreatmenType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__UniqueId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Unique Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__ValidateResult__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validate Result</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Revenue Recognition Treatment</label>
+    <listViews>
+        <fullName>blng__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Revenue Recognition Treatments</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>blng__AGREEMENT_ASSOC_VALIDONLYFOROPACTIVATION</fullName>
+        <active>true</active>
+        <description>Revenue Agreement Association setting is only valid if Revenue Schedules are created on Order Product Activation.</description>
+        <errorConditionFormula>OR(
+            AND(
+            (!ISPICKVAL(blng__RevenueScheduleCreationAction__c, &apos;Order Activation&apos;)),
+            (ISPICKVAL(blng__RevenueAgreementAssociation__c, &apos;New Agreement&apos;))
+            ),
+            AND(
+            (!ISPICKVAL(blng__RevenueScheduleCreationAction__c, &apos;Order Activation&apos;)),
+            (ISPICKVAL(blng__RevenueAgreementAssociation__c, &apos;Revised Order Product&apos;))
+            )
+            )</errorConditionFormula>
+        <errorMessage>If Revenue Schedule Creation is not Order Product Activation, Revenue Agreement Association must be “Not Applicable” or “Manual”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__Bookings_Amount_Only_If_Order_Activation</fullName>
+        <active>true</active>
+        <description>Revenue Schedule Amount can be Bookings Amount only if Revenue Schedule Creation Action = Order Activation.</description>
+        <errorConditionFormula>AND(
+        (!ISPICKVAL(blng__RevenueScheduleCreationAction__c, &apos;Order Activation&apos;)),
+        (ISPICKVAL(blng__RevenueScheduleAmount__c, &apos;Bookings Amount&apos;))
+        )</errorConditionFormula>
+        <errorMessage>To set the revenue schedule amount to Booking Amount, first set the revenue schedule creation action to Order Product Activation.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__Flat_Amount_Mandatory</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(blng__FlatAmount__c) &amp;&amp; ISPICKVAL( blng__Type__c, &apos;Flat Amount&apos;)</errorConditionFormula>
+        <errorDisplayField>blng__FlatAmount__c</errorDisplayField>
+        <errorMessage>If type is &quot;Flat Amount&quot;, Flat Amount is mandatory to populate.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__Flat_Amount_Value_more_than_zero</fullName>
+        <active>true</active>
+        <description>Amount must be equal to or greater than zero</description>
+        <errorConditionFormula>IF((!ISBLANK(blng__FlatAmount__c)) &amp;&amp; blng__FlatAmount__c &lt; 0, True, False)</errorConditionFormula>
+        <errorMessage>Flat Amount Cannot be less than Zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__PERCENTAGE_MUST_BE_LESS_THAN_HUNDRED</fullName>
+        <active>true</active>
+        <description>PERCENTAGE MUST BE LESS THAN HUNDRED</description>
+        <errorConditionFormula>blng__Percentage__c  &gt; 1.0</errorConditionFormula>
+        <errorMessage>Percentage Cannot be greater than 100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__Percentage_Mandatory</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(blng__Percentage__c) &amp;&amp; ISPICKVAL( blng__Type__c, &apos;Percentage&apos;)</errorConditionFormula>
+        <errorDisplayField>blng__Percentage__c</errorDisplayField>
+        <errorMessage>If type is &quot;Percentage&quot;, Percentage is mandatory to populate.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__Percentage_Value_more_than_zero</fullName>
+        <active>true</active>
+        <description>Percentage must be equal to or greater than zero</description>
+        <errorConditionFormula>IF((!ISBLANK(blng__Percentage__c))  &amp;&amp;  blng__Percentage__c &lt;= 0, True, False)</errorConditionFormula>
+        <errorMessage>Percentage must be greater than zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__Processing_Order_Cannot_be_negative</fullName>
+        <active>true</active>
+        <description>Processing Order Cannot be Negative</description>
+        <errorConditionFormula>blng__ProcessingOrder__c  &lt; 0</errorConditionFormula>
+        <errorMessage>Processing Order cannot be Negative</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

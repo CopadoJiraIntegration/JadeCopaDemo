@@ -1,0 +1,185 @@
+<apex:page id="Troubleshooting" controller="dsfs.AdminController" tabstyle="DocuSign_Admin__tab" showHeader="true"
+           sideBar="false">
+    <style type="text/css">
+        :root {
+            --search-icon: url({!$Resource.dsfs__SearchIcon});
+            --arrow-drop-down: url({!$Resource.dsfs__ArrowDropDown});
+            --delete: url({!$Resource.dsfs__Delete});
+        }
+    </style>
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:includeScript value="{!$Resource.dsfs__jquery}"/>
+    <script type="text/javascript">
+      jQuery.noConflict();
+      jQuery(document).ready(function ($) {
+
+        var $dsAlert = $('#ds-alert');
+        var $alertMessages = $('.alert-messages');
+        var $fullScreenLoad = $('.fullscreenload');
+        $fullScreenLoad.hide();
+
+        function showMessage(errorDescription) {
+          $dsAlert.find('ul').append('<li><p>' + errorDescription + '</p></li>');
+          $dsAlert.show();
+        }
+
+        function showMessages(messages) {
+          $dsAlert.hide();
+          $dsAlert.find('ul').empty();
+          $alertMessages.removeClass('info');
+          $alertMessages.removeClass('successful');
+          for (var m = 0; m < messages.length; m++) {
+            $dsAlert.show();
+            if (messages[m].severity === 'Success') {
+              $alertMessages.addClass('successful');
+            } else if (messages[m].severity === 'Info') {
+              $alertMessages.addClass('info');
+            }
+            showMessage(messages[m].description);
+          }
+          if (messages.length > 0) {
+            $('html, body').animate({
+              scrollTop: 0
+            }, 'fast');
+          }
+        }
+
+        $('#execute-post-install-scripts').click(function () {
+          try {
+            $fullScreenLoad.show();
+            Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.AdminController.executePostInstallScripts}', function (result, event) {
+              showMessages(result.messages);
+              $fullScreenLoad.hide();
+            });
+          } catch (err) {
+            console.log(err);
+            showMessages([{
+              severity: 'Error', description: err.message
+            }]);
+            $fullScreenLoad.hide();
+          }
+        });
+
+        var $syncUsersModal = $('#sync-users-modal');
+        $('#sync-users').click(function () {
+          $syncUsersModal.show();
+        });
+
+        $('#sync-users-confirm').click(function() {
+          $syncUsersModal.hide();
+          try {
+            $fullScreenLoad.show();
+            Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.AdminController.synchronizeUsers}', true, function (result, event) {
+              showMessages(result.messages);
+              $fullScreenLoad.hide();
+            });
+          } catch (err) {
+            console.log(err);
+            showMessages([{
+              severity: 'Error', description: err.message
+            }]);
+            $fullScreenLoad.hide();
+          }
+        });
+
+        $('#sync-users-cancel, #sync-users-close').click(function () {
+          $dsAlert.hide();
+          $syncUsersModal.hide();
+        });
+
+        var $resetCredentialsModal = $('#reset-account-credentials-modal');
+        $('#reset-account-credentials').click(function () {
+          $resetCredentialsModal.show();
+        });
+
+        $('#reset-account-credentials-confirm').click(function () {
+          $resetCredentialsModal.hide();
+          try {
+            $fullScreenLoad.show();
+            var resetUsers = $('#reset-user-credentials').is(':checked');
+            Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.AdminController.resetAccountConfiguration}', resetUsers, function (result, event) {
+              showMessages(result.messages);
+              $fullScreenLoad.hide();
+            });
+          } catch (err) {
+            console.log(err);
+            showMessages([{
+              severity: 'Error', description: err.message
+            }]);
+            $fullScreenLoad.hide();
+          }
+        });
+
+        $('#reset-account-credentials-cancel, #reset-account-credentials-close').click(function () {
+          $dsAlert.hide();
+          $resetCredentialsModal.hide();
+        });
+      });
+    </script>
+    <div class="docusign-container">
+        <c:FullScreenLoad />
+
+        <div id="ds-alert" style="display: none">
+            <ul class="alert-messages"></ul>
+        </div>
+
+        <div class="title">
+            <img class="logo" src="{!$Resource.DocuSign}"/>
+            <h1>{!$Label.DocuSignAdmin}</h1>
+        </div>
+
+        <div class="row">
+            <section>
+                <div id="advanced-options" class="leftalign-button">
+                    <ul>
+                        <li><a href="#" id="reset-account-credentials"
+                               class="next">{!$Label.ResetAccountCredentials}</a>
+                        </li>
+                        <li><a href="#" id="execute-post-install-scripts"
+                               class="next">{!$Label.MigrateAccountSettings}</a>
+                        </li>
+                        <li><a href="#" id="sync-users"
+                               class="next">{!$Label.SyncUsers}</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="modal-background" id="reset-account-credentials-modal" style="display:none">
+            <div class="modal">
+                <img id="reset-account-credentials-close" class="close-modal" src="{!$Resource.Delete}"/>
+                <div>
+                    <h3>{!$Label.ResetCredentialsConfirmation}</h3>
+                </div>
+                <div>
+                    <input type="checkbox" id="reset-user-credentials"/>{!$Label.ResetUserCredentials}
+                </div>
+                <div class="leftalign-button">
+                    <ul>
+                        <li><a href="#" class="next"
+                               id="reset-account-credentials-confirm">{!$Label.DeleteUppercase}</a>
+                        </li>
+                        <li><a href="#" id="reset-account-credentials-cancel">{!$Label.Cancel}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-background" id="sync-users-modal" style="display:none">
+            <div class="modal">
+                <div>
+                    <h3>{!$Label.SyncUsersConfirm}</h3>
+                </div>
+                <div class="leftalign-button">
+                    <ul>
+                        <li><a href="#" class="next"
+                               id="sync-users-confirm">{!$Label.Yes}</a>
+                        </li>
+                        <li><a href="#" id="sync-users-cancel">{!$Label.No}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</apex:page>

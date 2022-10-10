@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingTypeSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <forecastingSourceDefinition>FSD_Product2022107474697688</forecastingSourceDefinition>
+    <forecastingType>Opportunity_Line_level_Revenue</forecastingType>
+    <isProtected>false</isProtected>
+    <masterLabel>FTS_Opportunity_Line_level_Revenue7sy5w000000PAtbAAG316476405628078</masterLabel>
+    <parentSourceDefinition>FSD_OpportunityLineItem472802675804258</parentSourceDefinition>
+    <relationField>OpportunityLineItem.Product2Id</relationField>
+    <sourceGroup>1</sourceGroup>
+</ForecastingTypeSource>

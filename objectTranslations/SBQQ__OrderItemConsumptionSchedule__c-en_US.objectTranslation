@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The unit used with the billing term to determine the billing frequency. --></help>
+        <label><!-- Billing Term Unit --></label>
+        <name>SBQQ__BillingTermUnit__c</name>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation><!-- Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation><!-- Quarter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation><!-- Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The number used with the billing term unit to determine the billing frequency. --></help>
+        <label><!-- Billing Term --></label>
+        <name>SBQQ__BillingTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation><!-- Rates --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumption Schedule --></label>
+        <name>SBQQ__ConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Order Product Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Usage is matched with a consumption schedule if the records share the same Matching Attribute value. --></help>
+        <label><!-- Matching Attribute --></label>
+        <name>SBQQ__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Item --></label>
+        <name>SBQQ__OrderItem__c</name>
+        <relationshipLabel><!-- Order Product Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Choose a specific use case to rate usage against this schedule. This is a controlling picklist for the Type field. --></help>
+        <label><!-- Rating Method --></label>
+        <name>SBQQ__RatingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Tier</masterLabel>
+            <translation><!-- Tier --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Range: The schedule prices only using the tier that applies to the usage quantity. Slab: Usage within a given bound receives pricing equal to its tier&apos;s value --></help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation><!-- Range --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation><!-- Slab --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Usage quantities and rates apply to this unit of measurement. --></help>
+        <label><!-- Unit of Measure --></label>
+        <name>SBQQ__UnitOfMeasure__c</name>
+        <picklistValues>
+            <masterLabel>GigaBytes</masterLabel>
+            <translation><!-- GigaBytes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leads</masterLabel>
+            <translation><!-- Leads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Billing GL Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Billing GL Treatment --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Billing Rule assigned --></help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Billing Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Billing Treatment --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Finance Book object used to record the Accounting for this Order Product Consumption Schedule. --></help>
+        <label><!-- Finance Book (Accounting) --></label>
+        <name>blng__FinanceBookAccounting__c</name>
+        <relationshipLabel><!-- Finance Book (Accounting) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Legal Entity --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Tax GL Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Tax GL Treatment --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Tax Rule assigned --></help>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Tax Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Tax Treatment --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Billing Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label><!-- Billing Rule Information --></label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GL Rule Information --></label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue Recognition Information --></label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label><!-- Tax Information --></label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Demo Billing Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label><!-- Billing Rule Information --></label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GL Rule Information --></label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue Recognition Information --></label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label><!-- Tax Information --></label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

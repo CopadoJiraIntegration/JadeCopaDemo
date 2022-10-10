@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ligne de note de crédit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lignes de note de crédit</value>
+    </caseValues>
+    <fields>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Montant de cette ligne allouée aux factures. N’inclut pas les taxes.</help>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations__c</name>
+    </fields>
+    <fields>
+        <help>Montant pas encore alloué</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill To Account --></label>
+        <name>blng__BillToAccount__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill To Contact --></label>
+        <name>blng__BillToContact__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Calculate Tax? --></label>
+        <name>blng__CalculateTax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Line Date --></label>
+        <name>blng__CreditNoteLineDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Note --></label>
+        <name>blng__CreditNote__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debits --></label>
+        <name>blng__Debits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Tax Date --></label>
+        <name>blng__EffectiveTaxDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>blng__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>blng__FinancePeriod__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line --></label>
+        <lookupFilter>
+            <errorMessage><!-- Draft Invoice Lines would not be available --></errorMessage>
+            <informationalMessage><!-- Draft Invoice Lines would not be available --></informationalMessage>
+        </lookupFilter>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LegalEntityReference --></label>
+        <name>blng__LegalEntityReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Net Allocations --></label>
+        <name>blng__NetAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue End Date --></label>
+        <name>blng__OverrideInitialRevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue Start Date --></label>
+        <name>blng__OverrideInitialRevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>blng__ProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>blng__Product__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Montant de cette ligne alloué aux remboursements</help>
+        <label><!-- Refunds (Allocations) --></label>
+        <name>blng__RefundsAllocations__c</name>
+    </fields>
+    <fields>
+        <help>Montant de ceci qui a été alloué des remboursements</help>
+        <label><!-- Refunds (Unallocations) --></label>
+        <name>blng__RefundsUnallocations__c</name>
+    </fields>
+    <fields>
+        <help>Montant qui a été alloué de cette ligne</help>
+        <label><!-- Refunds --></label>
+        <name>blng__Refunds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Schedule Status --></label>
+        <name>blng__RevenueScheduleStatus__c</name>
+    </fields>
+    <fields>
+        <help>Date de début de la durée de la ligne de crédit</help>
+        <label><!-- Start Date --></label>
+        <name>blng__StartDate__c</name>
+    </fields>
+    <fields>
+        <help>Statut de la note de crédit. Cela peut être : Brouillon Publié Annulé</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <help>Montant non remboursé de la note de crédit. Ne comprend pas les taxes. Égal au montant - montant du remboursement</help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <help>Montant fiscal sur cette ligne</help>
+        <label><!-- Tax --></label>
+        <name>blng__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <help>À utiliser dans les calculs des taxes. Ville de destination pour ce produit.</help>
+        <label><!-- Tax City --></label>
+        <name>blng__TaxCity__c</name>
+    </fields>
+    <fields>
+        <help>Code fiscal assigné à cette ligne.</help>
+        <label><!-- Tax Code --></label>
+        <name>blng__TaxCode__c</name>
+    </fields>
+    <fields>
+        <help>À utiliser dans les calculs de taxes. Ville de destination pour ce produit.</help>
+        <label><!-- Tax Country --></label>
+        <name>blng__TaxCountry__c</name>
+    </fields>
+    <fields>
+        <help>Moteur fiscal utilisé pour calculer les taxes</help>
+        <label><!-- Tax Engine --></label>
+        <name>blng__TaxEngine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Credit Note Lines (Tax GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Credit Note Lines (Tax GL Treatment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Percentage Applied --></label>
+        <name>blng__TaxPercentageApplied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>À utiliser dans les calculs de taxes. Ville de destination pour ce produit.</help>
+        <label><!-- Tax State --></label>
+        <name>blng__TaxState__c</name>
+    </fields>
+    <fields>
+        <help>Statut du calcul de taxe. Cela peut être : En attente En cours Terminé Erreur</help>
+        <label><!-- Tax Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 2 --></label>
+        <name>blng__TaxStreet2__c</name>
+    </fields>
+    <fields>
+        <help>À utiliser dans les calculs de taxes. Ville de destination pour ce produit.</help>
+        <label><!-- Tax Street --></label>
+        <name>blng__TaxStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>À utiliser dans les calculs de taxes. Ville de destination pour ce produit.</help>
+        <label><!-- Tax Zip Code --></label>
+        <name>blng__TaxZipCode__c</name>
+    </fields>
+    <fields>
+        <help>Le montant total doit être le même que le montant de la ligne de facture</help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <help>Le montant de cette ligne qui a été alloué des factures.</help>
+        <label><!-- Unallocations --></label>
+        <name>blng__Unallocations__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Credit Note Line Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Détails</label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label>Métriques des revenus</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Règles et traitements</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Adresse fiscale</label>
+            <section>Tax Address</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Numéro de la ligne</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Catálogo de finanças</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Catálogos de finanças</value>
+    </caseValues>
+    <fields>
+        <help>Para desativar o catálogo de finanças, desmarque a caixa de seleção. Isso não afetará as transações existentes referentes a este livro.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>A duração do intervalo de datas do período financeiro.</help>
+        <label><!-- Finance Period Duration --></label>
+        <name>blng__FinancePeriodDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Selecione se deve basear o catálogo de finanças em transações de receita ou em transações de contabilidade.</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Finance Book Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do livro financeiro</nameFieldLabel>
+    <webLinks>
+        <label><!-- Create_Finance_Periods --></label>
+        <name>blng__Create_Finance_Periods</name>
+    </webLinks>
+</CustomObjectTranslation>

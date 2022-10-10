@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Aprobación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Aprobaciones</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RequestFields --></label>
+        <name>sbaa__RequestFields</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Approved/Rejected/Revoked Date --></label>
+        <name>Approved_Rejected_Revoked_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Time Taken (Days) --></label>
+        <name>Time_Taken_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actions --></label>
+        <name>sbaa__Actions__c</name>
+    </fields>
+    <fields>
+        <help>Cadena de aprobación a la que pertenece esta aprobación</help>
+        <label><!-- Approval Chain --></label>
+        <name>sbaa__ApprovalChain__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Paso (nivel) en el que se requiere esta aprobación.</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help>Id. de la plantilla de email asociada con la aprobación</help>
+        <label><!-- Approval Template Id --></label>
+        <name>sbaa__ApprovalTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>Usuario que aprobó esta aprobación</help>
+        <label><!-- Approved By --></label>
+        <name>sbaa__ApprovedBy__c</name>
+        <relationshipLabel><!-- Approvals (Approved By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Empleado con Aprobadores dinámicos para capturar el nombre de campo que contiene el valor Aprobador</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>Creado por</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Búsqueda de consulta del aprobador asociado con esta aprobación.</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Cuando Aprobaciones archivadas está activada, indica que esta aprobación está archivada</help>
+        <label><!-- Archived --></label>
+        <name>sbaa__Archived__c</name>
+    </fields>
+    <fields>
+        <help>Id. del grupo al que está asignada la aprobación, si la hubiera</help>
+        <label><!-- Assigned Group Id --></label>
+        <name>sbaa__AssignedGroupId__c</name>
+    </fields>
+    <fields>
+        <help>Verdadero si el usuario actual es también el usuario Asignado a</help>
+        <label><!-- Assigned To Me --></label>
+        <name>sbaa__AssignedToMe__c</name>
+    </fields>
+    <fields>
+        <help>Búsqueda de consulta del usuario al que está asignada la aprobación</help>
+        <label><!-- Assigned To --></label>
+        <name>sbaa__AssignedTo__c</name>
+        <relationshipLabel><!-- Approvals (Assigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Comentarios del aprobador</help>
+        <label><!-- Comments --></label>
+        <name>sbaa__CommentsLong__c</name>
+    </fields>
+    <fields>
+        <help>Si Aprobaciones delegadas está activada, búsqueda de consulta del aprobador delegado</help>
+        <label><!-- Delegated Approver --></label>
+        <name>sbaa__DelegatedApprover__c</name>
+        <relationshipLabel><!-- Delegated Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Oportunidad que se está aprobando</help>
+        <label><!-- Opportunity --></label>
+        <name>sbaa__Opportunity__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Id. de la plantilla de email asociada Recuperaciones</help>
+        <label><!-- Recall Template Id --></label>
+        <name>sbaa__RecallTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de API del campo Aprobación que dirige al registro que se está aprobando</help>
+        <label><!-- Record Field --></label>
+        <name>sbaa__RecordField__c</name>
+    </fields>
+    <fields>
+        <help>Usuario que rechazó esta aprobación</help>
+        <label><!-- Rejected By --></label>
+        <name>sbaa__RejectedBy__c</name>
+        <relationshipLabel><!-- Approvals (Rejected By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Id. de la plantilla de email asociada con el rechazo</help>
+        <label><!-- Rejection Template Id --></label>
+        <name>sbaa__RejectionTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>Id. de la plantilla de email asociada con la solicitudes de aprobación</help>
+        <label><!-- Request Template Id --></label>
+        <name>sbaa__RequestTemplateId__c</name>
+    </fields>
+    <fields>
+        <help>Al aprobar cualquier aprobación se aprobará automáticamente de forma predeterminada cualquier otra aprobación asignada al mismo usuario. Si esta casilla está sin marcar, una aprobación originada por esta regla no se aprobará automáticamente y deberá ser aprobada explícitamente.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </fields>
+    <fields>
+        <help>Regla de aprobación que generó esta aprobación.</help>
+        <label><!-- Rule --></label>
+        <name>sbaa__Rule__c</name>
+        <relationshipLabel><!-- Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Estado de esta aprobación.</help>
+        <label><!-- Status --></label>
+        <name>sbaa__Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>Aprobado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation>Asignada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>Rechazado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested</masterLabel>
+            <translation>Solicitada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revoked</masterLabel>
+            <translation>Revocada</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Si el aprobador es un grupo, debe marcarse si todos los miembros tienen que aprobar para considerar aprobada la aprobación</help>
+        <label><!-- Unanimous --></label>
+        <name>sbaa__Unanimous__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Approval Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº de aprobación</nameFieldLabel>
+    <quickActions>
+        <label><!-- Approve --></label>
+        <name>sbaa__ApproveMobile</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reassign --></label>
+        <name>sbaa__ReassignMobile</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reject --></label>
+        <name>sbaa__RejectMobile</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Resend Request --></label>
+        <name>sbaa__ResendRequestMobile</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Approve --></label>
+        <name>sbaa__Approve</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reassign --></label>
+        <name>sbaa__Reassign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reject --></label>
+        <name>sbaa__Reject</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResendRequestEmail --></label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+</CustomObjectTranslation>

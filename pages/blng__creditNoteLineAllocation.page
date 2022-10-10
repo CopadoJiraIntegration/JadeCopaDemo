@@ -1,0 +1,77 @@
+<apex:page showHeader="true" sidebar="true" standardController="blng__CreditNote__c" standardStylesheets="true" extensions="blng.CurrencyUtils">
+    <!-- Include a JavaScript file in your Visualforce page -->
+     <apex:includeScript value="/lightning/lightning.out.js" />
+     <script src="../../soap/ajax/38.0/connection.js" type="text/javascript"/>
+    <style>
+        /* This prevents page shifting when scrollbar appears/disappears */
+        html {
+            overflow-y:scroll;
+        }
+    </style>
+    
+    <article class="slds-card"  id="MessagingWindow" style="display:none;min-height:14rem;">
+      <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media--center slds-has-flexi-truncate">
+              <apex:form >
+                  <apex:pageMessage summary="{!JSENCODE($Label.blng__NoPostedRecordstoDisplay)}" severity="info" strength="3" />
+                  <apex:pageMessages />
+                  <apex:commandButton value="Back" action="{!Cancel}" />
+              </apex:form>
+          </header>
+      </div>
+    </article>
+
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        sforce.connection.sessionId='{!GETSESSIONID()}';
+        
+        var invoice = '{!JSENCODE(BillingRawPrefix)}'; 
+        var invoice1 = '{!JSENCODE(BillingBarPrefix)}'; 
+        var namespace = invoice != '' ? invoice : 'c'; 
+        var status = '';
+        var prefix = invoice1 != '' ? invoice1 : '';
+        var currencyIsoCode = '';
+        currencyIsoCode = '{!JSENCODE(currencyISOCode)}';
+        var IdValue = '{!$CurrentPage.parameters.Id}';
+        var queryValue = "SELECT "+prefix+"Status__c from "+prefix+"CreditNote__c WHERE Id='"+IdValue+"'";
+        var result = sforce.connection.query(queryValue);
+        var records = result.getArray("records");
+        status = records[0][prefix+'Status__c'];
+        
+        if(status === 'Posted')
+        { 
+            $Lightning.use(
+                namespace+":creditNoteAllocationApp", function() 
+                {
+                    $Lightning.createComponent(
+                        namespace+":creditNoteAllocation",
+                        { 
+                            "recordId" : "{!$CurrentPage.parameters.Id}",
+                            "currencyIsoCode" : currencyIsoCode,
+                            "prefix" : prefix
+                        },
+                        "lightning",
+                        function(cmp) 
+                        {
+                            document.getElementById('spinnerId').style.display = 'none';
+                        }
+                    );
+                }
+            );
+        }
+        else 
+        {               
+                document.getElementById('spinnerId').style.display = 'none';
+                document.getElementById('MessagingWindow').style.display = 'block';      
+        } 
+
+    </script>
+</apex:page>

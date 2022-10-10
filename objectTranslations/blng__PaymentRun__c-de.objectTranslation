@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Zahlungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Zahlungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Zahlungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Zahlungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Zahlungslaufs</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Zahlungsläufe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Zahlungslauf</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Zahlungsläufen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id (Clean Up) --></label>
+        <name>blng__ApexJobIdForCleanUp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Payment Run Status --></label>
+        <name>blng__CleanUpStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Time --></label>
+        <name>blng__CompletedTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Failed Transactions --></label>
+        <name>blng__FailedTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoices Processed --></label>
+        <name>blng__InvoicesProcessed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Run --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Scheduler --></label>
+        <name>blng__PaymentScheduler__c</name>
+        <relationshipLabel><!-- Payment Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>blng__StartTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Successful Transactions --></label>
+        <name>blng__SuccessfulTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Payment Processed --></label>
+        <name>blng__TotalPaymentProcessed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transactions Generated --></label>
+        <name>blng__TransactionsGenerated__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Run Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Datumsinformationen</label>
+            <section>Date Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name des Zahlungslaufs</nameFieldLabel>
+    <webLinks>
+        <label><!-- CleanUpPaymentRun --></label>
+        <name>blng__CleanUpPaymentRun</name>
+    </webLinks>
+</CustomObjectTranslation>

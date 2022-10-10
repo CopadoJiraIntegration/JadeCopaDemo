@@ -1,0 +1,8 @@
+Hi {!Receiving_User.FirstName} {!Receiving_User.LastName},
+
+Welcome to Wedding Portal Community! To get started, go to {!Community_Url}
+
+Username: {!Receiving_User.FirstName}.{!Receiving_User.LastName}@weddingportal.com
+
+Thanks,
+The Knot World Wide

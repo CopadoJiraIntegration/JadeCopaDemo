@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Text</fullName>
+        <default>true</default>
+        <label>Text</label>
+    </customValue>
+    <customValue>
+        <fullName>Hyperlink</fullName>
+        <default>false</default>
+        <label>Hyperlink</label>
+    </customValue>
+    <masterLabel>AC_CtiAttributeType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- RMA Internal Id --></label>
+        <name>RMA_Internal_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution Time --></label>
+        <name>Resolution_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amazon Connect Contact Id --></label>
+        <name>amazonconnect__AC_Contact_Id__c</name>
+    </fields>
+    <layouts>
+        <layout>RMA Page Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create Dispute Case --></label>
+        <name>Create_Dispute_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- DocuSign --></label>
+        <name>dsfs__CaseDocuSignAction</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- This is to create a dispute case with TKWW --></description>
+        <label><!-- Dispute --></label>
+        <name>Dispute</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RMA --></label>
+        <name>RMA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- TAC --></label>
+        <name>TAC</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

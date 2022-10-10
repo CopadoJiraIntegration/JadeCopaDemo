@@ -1,0 +1,5 @@
+<apex:page id="ACSFCCP_CallRecording" standardController="Case" showHeader="false" sideBar="false" docType="html-5.0">
+  <apex:includeScript value="/support/api/48.0/interaction.js" />
+  <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+  <c:ACSFCCP_CallRecordingLink contactId="{!Case.amazonconnect__AC_Contact_Id__c}" />
+</apex:page>

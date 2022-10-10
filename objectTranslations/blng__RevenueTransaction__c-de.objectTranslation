@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Umsatztransaktion</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Umsatztransaktionen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Umsatztransaktion</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Umsatztransaktionen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Umsatztransaktion</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Umsatztransaktionen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Umsatztransaktion</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Umsatztransaktionen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zur Gutschriftsanzeige, die mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zur Belastungsanzeige, die mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Zurückgestellter Umsatzsaldo nach Erfassen des Umsatzes für diesen Zeitraum.</help>
+        <label><!-- Deferred Balance --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Rechnungsposten, der mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Name der juristischen Person, die mit dieser Umsatztransaktion verknüpft ist.</help>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Auftragsprodukt, das mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf den ursprünglichen Finanzzeitraum, der im Umsatzplan definiert ist.</help>
+        <label><!-- Original Finance Period --></label>
+        <name>blng__OriginalFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions (Original Finance Period) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Summe aller vorherigen Transaktionen unter Verwendung dieses Umsatzplans.</help>
+        <label><!-- Previously Recognized Revenue --></label>
+        <name>blng__PreviouslyRecognizedRevenue__c</name>
+    </fields>
+    <fields>
+        <help>Der in diesem Zeitraum zu erfassende Umsatzbetrag.</help>
+        <label><!-- Revenue Amount --></label>
+        <name>blng__RevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf die im Umsatzplan ausgewählte Verteilungsmethode. Beschreibt, wie Umsatz
+        über einen festgelegten Zeitraum, auf einmal oder einen manuell eingegebenen Zeitraum verteilt wird.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf das im Umsatzplan ausgewählte Finanzbuch.</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+    </fields>
+    <fields>
+        <label><!-- RevenueFinancePeriodUniqueId --></label>
+        <name>blng__RevenueFinancePeriodUniqueId__c</name>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf den im Umsatzplan ausgewählten Finanzzeitraum.</help>
+        <label><!-- Revenue Finance Period --></label>
+        <name>blng__RevenueFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Die im Umsatzplan ausgewählte Hauptbuchregel zur Umsatzrealisierung.</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Das Hauptbuchverfahren zur Umsatzrealisierung.</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Die Umsatzrealisierungsrichtlinie, die im Umsatzplan ausgewählt ist und zur Berechnung dieser Transaktion verwendet wird.</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf das Umsatzrealisierungsverfahren, das in dem Umsatzplan ausgewählt ist, der zur Berechnung dieser Transaktion verwendet wird.</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </fields>
+    <fields>
+        <help>Der für diese Transaktion verwendete Umsatzplan.</help>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Legen Sie fest, ob dieser Umsatz jetzt erfasst wird oder auf einen späteren Zeitpunkt zurückgestellt wird.</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Period Start Date --></label>
+        <name>blng__SystemPeriodStartDate__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Revenue Transaction Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Umsatzinformationen</label>
+            <section>Revenue Information</section>
+        </sections>
+        <sections>
+            <label>Quelldatensätze</label>
+            <section>Source Records</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name</nameFieldLabel>
+</CustomObjectTranslation>

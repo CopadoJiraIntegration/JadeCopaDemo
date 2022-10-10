@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung für Angebotsbelegposten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen für Angebotsbelegposten</value>
+    </caseValues>
+    <fields>
+        <help>Eine Erläuterung dieser Preisempfehlung und Empfehlungen für zu gewährende Rabatte. Vertriebsmitarbeiter können diese Erläuterung im Angebotsbelegposten-Editor zusammen mit der Preisempfehlung einsehen.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Hoher Rabatt für Ausnahmepreise auf Grundlage bisheriger Umsätze. Wenn ein Vertriebsmitarbeiter diesen Preis verwenden möchte, muss er den Angebotsbelegposten manuell rabattieren. Dieser Rabatt kann Genehmigungen gemäß den Genehmigungsrichtlinien Ihres Unternehmens erfordern.</help>
+        <label><!-- Floor --></label>
+        <name>SBQQ__Floor__c</name>
+    </fields>
+    <fields>
+        <help>Ein Vertriebsmitarbeiter hat den Zielrabatt aus dieser Preisempfehlung. Im Angebotsbelegposten-Editor akzeptiert.</help>
+        <label><!-- Guidance Used --></label>
+        <name>SBQQ__GuidanceUsed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>SBQQ__IsViewed__c</name>
+    </fields>
+    <fields>
+        <help>Mittelhoher Rabatt auf Grundlage bisheriger Umsätze. Wenn ein Vertriebsmitarbeiter diesen Rabatt verwenden möchte, muss er den Angebotsbelegposten manuell rabattieren. Dieser Rabatt kann Genehmigungen gemäß den Genehmigungsrichtlinien Ihres Unternehmens erfordern.</help>
+        <label><!-- Norm --></label>
+        <name>SBQQ__Norm__c</name>
+    </fields>
+    <fields>
+        <help>Der zu dieser Preisempfehlung gehörige Angebotsbelegposten.</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Das Angebot mit dem zu dieser Preisempfehlung gehörigen Angebotsbelegposten.</help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Idealer Rabatt im niedrigen Bereich auf Grundlage bisheriger Umsätze. Wenn Vertriebsmitarbeiter diese Preisempfehlung annehmen, wendet Salesforce CPQ zum Erreichen dieses Preises einen Rabatt an.</help>
+        <label><!-- Target --></label>
+        <name>SBQQ__Target__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Name</nameFieldLabel>
+</CustomObjectTranslation>

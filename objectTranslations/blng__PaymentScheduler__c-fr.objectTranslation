@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Planificateur de paiement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planificateurs de paiement</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>blng__PaymentBatches__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Scheduler --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>blng__PaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date and Time --></label>
+        <name>blng__Startdateandtime__c</name>
+    </fields>
+    <fields>
+        <help>Détermine les factures à payer en fonction de la date cible définie dans les paramètres de configuration de facturation. La date cible peut être à ou après la date de la facture ou la date d&apos;échéance de la facture.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day Of Month --></label>
+        <name>blng__TargetDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day of Week --></label>
+        <name>blng__TargetDayofWeek__c</name>
+    </fields>
+    <fields>
+        <help>Type de calendrier.
+Une fois - Le planificateur de paiement sera effectué une seule fois.
+Quotidien - Le planificateur de paiement sera répété tous les jours et ainsi de suite</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Scheduler Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations sur la date</label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label>Configuration du mois</label>
+            <section>Month Configuration</section>
+        </sections>
+        <sections>
+            <label>Configuration hebdomadaire</label>
+            <section>Weekly Configuration</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du planificateur de paiement</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

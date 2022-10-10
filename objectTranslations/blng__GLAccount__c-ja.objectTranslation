@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>GL 勘定</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Account Description --></label>
+        <name>blng__GLAccountDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Account Number --></label>
+        <name>blng__GLAccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <layouts>
+        <layout>GL Account Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>GL 勘定名</nameFieldLabel>
+</CustomObjectTranslation>

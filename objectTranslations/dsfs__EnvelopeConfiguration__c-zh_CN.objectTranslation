@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DocuSign 信封配置</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>dsfs__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Email Message --></label>
+        <name>dsfs__CEM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Email Subject --></label>
+        <name>dsfs__CES__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expire After --></label>
+        <name>dsfs__ExpireAfter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expire Enabled --></label>
+        <name>dsfs__ExpireEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expire Warn --></label>
+        <name>dsfs__ExpireWarn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expire Envelope --></label>
+        <name>dsfs__Expires__c</name>
+    </fields>
+    <fields>
+        <label><!-- Load Attachments --></label>
+        <name>dsfs__LA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Load Files --></label>
+        <name>dsfs__LF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Load Default Contacts --></label>
+        <name>dsfs__LoadDefaultContacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- One Click Options --></label>
+        <name>dsfs__OCO__c</name>
+        <picklistValues>
+            <masterLabel>Send</masterLabel>
+            <translation><!-- Send --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tag</masterLabel>
+            <translation><!-- Tag --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>dsfs__Object_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reminder Days --></label>
+        <name>dsfs__ReminderDelay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reminder Enabled --></label>
+        <name>dsfs__ReminderEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reminder Frequency --></label>
+        <name>dsfs__ReminderFrequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Add Attachment --></label>
+        <name>dsfs__SAA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Chatter Settings --></label>
+        <name>dsfs__SCS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Email Message --></label>
+        <name>dsfs__SEM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Email Subject --></label>
+        <name>dsfs__SES__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Remind Expire --></label>
+        <name>dsfs__SRS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Send Button --></label>
+        <name>dsfs__SSB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Tag Button --></label>
+        <name>dsfs__STB__c</name>
+    </fields>
+    <layouts>
+        <layout>DocuSign Envelope Configuration Layout</layout>
+        <sections>
+            <label>自定义链接</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>DocuSign 信封配置名称</nameFieldLabel>
+    <quickActions>
+        <label><!-- Save --></label>
+        <name>dsfs__Save</name>
+    </quickActions>
+</CustomObjectTranslation>

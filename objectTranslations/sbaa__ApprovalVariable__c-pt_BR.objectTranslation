@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Variável de aprovação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Variáveis de aprovação</value>
+    </caseValues>
+    <fields>
+        <help>Campo com relação ao qual a função agregada atua.</help>
+        <label><!-- Aggregate Field --></label>
+        <name>sbaa__AggregateField__c</name>
+        <picklistValues>
+            <masterLabel>List_Total__c</masterLabel>
+            <translation>List_Total__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantity</masterLabel>
+            <translation>Quantidade</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subtotal</masterLabel>
+            <translation>Subtotal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total Price</masterLabel>
+            <translation>Preço total</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Função agregada usada para calcular essa variável.</help>
+        <label><!-- Aggregate Function --></label>
+        <name>sbaa__AggregateFunction__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation>Média</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Count</masterLabel>
+            <translation>Contagem</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max</masterLabel>
+            <translation>Máx.</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Min</masterLabel>
+            <translation>Mín.</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sum</masterLabel>
+            <translation>Soma</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Outra variável de aprovação para compor com essa variável de aprovação se sua condição for baseada em ambos os resultados.</help>
+        <label><!-- Combine With --></label>
+        <name>sbaa__CombineWith__c</name>
+        <relationshipLabel><!-- Approval Variables (Combine With) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Selecione o campo a ser usado ao filtrar itens para inclusão nessa variável de aprovação.</help>
+        <label><!-- Filter Field --></label>
+        <name>sbaa__FilterField__c</name>
+        <picklistValues>
+            <masterLabel>Product Family</masterLabel>
+            <translation>Família de produtos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product_Code__c</masterLabel>
+            <translation>Product_Code__c</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Insira o valor a combinar nesse filtro.</help>
+        <label><!-- Filter Value --></label>
+        <name>sbaa__FilterValue__c</name>
+    </fields>
+    <fields>
+        <help>Responsável pela Variável de aprovação para calcular a Lista total</help>
+        <label><!-- List Variable --></label>
+        <name>sbaa__ListVariable__c</name>
+        <relationshipLabel><!-- Approval Variables (List Variable) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Responsável pela Variável de aprovação para calcular o Valor líquido total</help>
+        <label><!-- Net Variable --></label>
+        <name>sbaa__NetVariable__c</name>
+        <relationshipLabel><!-- Approval Variables (Net Variable) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Escolha o operador a ser usado em seu filtro.</help>
+        <label><!-- Operator --></label>
+        <name>sbaa__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>contém</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>termina com</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equals</masterLabel>
+            <translation>maior ou igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>maior que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equals</masterLabel>
+            <translation>menor ou igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>menor que</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equals</masterLabel>
+            <translation>não igual a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>começa com</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Selecione o objeto que você deseja agregar.</help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity Product</masterLabel>
+            <translation>Produto da oportunidade</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Quote__c</masterLabel>
+            <translation><!-- SBQQ__Quote__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Quando o Desconto é escolhido, a Variável de lista e a Variável líquida devem ser preenchidas. Quando o Resumo é escolhido, as opções Agregar campo e Agregar função devem ser preenchidas.</help>
+        <label><!-- Type --></label>
+        <name>sbaa__Type__c</name>
+        <picklistValues>
+            <masterLabel>Discount</masterLabel>
+            <translation>Desconto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary</masterLabel>
+            <translation>Resumo</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome da variável</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Values for List Variable and Net Variable are required for Discount Variables --></errorMessage>
+        <name>sbaa__Discount_Variable_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Values for Aggregate Field and Aggregate Function are required for Summary Variables --></errorMessage>
+        <name>sbaa__Summary_Variable_Required_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

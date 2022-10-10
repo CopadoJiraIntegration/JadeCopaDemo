@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Método de pagamento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Métodos de pagamento</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Pay --></label>
+        <name>blng__AutoPay__c</name>
+    </fields>
+    <fields>
+        <help>O nome associado à Conta bancária</help>
+        <label><!-- Bank Account Name --></label>
+        <name>blng__BankAccountName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Number --></label>
+        <name>blng__BankAccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Type --></label>
+        <name>blng__BankAccountType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Name --></label>
+        <name>blng__BankName__c</name>
+    </fields>
+    <fields>
+        <help>O número de Roteamento válido do Banco, também chamado de código ABA</help>
+        <label><!-- Bank Routing Code --></label>
+        <name>blng__BankRoutingCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- Should tie to the Payment Method&apos;s file with the provider --></help>
+        <label><!-- Billing Address --></label>
+        <name>blng__BillingAddress__c</name>
+    </fields>
+    <fields>
+        <help>Cidade do endereço de faturamento do cartão</help>
+        <label><!-- City --></label>
+        <name>blng__BillingCity__c</name>
+    </fields>
+    <fields>
+        <help>Empresa do endereço de faturamento do cartão</help>
+        <label><!-- Company --></label>
+        <name>blng__BillingCompany__c</name>
+    </fields>
+    <fields>
+        <help>País do endereço de faturamento do cartão</help>
+        <label><!-- Country --></label>
+        <name>blng__BillingCountry__c</name>
+    </fields>
+    <fields>
+        <help>Email do endereço de faturamento do cartão</help>
+        <label><!-- Email --></label>
+        <name>blng__BillingEmail__c</name>
+    </fields>
+    <fields>
+        <help>Fax do endereço de faturamento do cartão</help>
+        <label><!-- Fax --></label>
+        <name>blng__BillingFax__c</name>
+    </fields>
+    <fields>
+        <help>Primeiro nome do endereço de faturamento do cartão</help>
+        <label><!-- First Name --></label>
+        <name>blng__BillingFirstName__c</name>
+    </fields>
+    <fields>
+        <help>Sobrenome do endereço de faturamento do cartão</help>
+        <label><!-- Last Name --></label>
+        <name>blng__BillingLastName__c</name>
+    </fields>
+    <fields>
+        <help>Número de telefone do endereço de faturamento do cartão</help>
+        <label><!-- Phone Number --></label>
+        <name>blng__BillingPhone__c</name>
+    </fields>
+    <fields>
+        <help>Estado do endereço de faturamento do cartão</help>
+        <label><!-- State --></label>
+        <name>blng__BillingStateProvince__c</name>
+    </fields>
+    <fields>
+        <help>Endereço de rua 1 do endereço de faturamento do cartão</help>
+        <label><!-- Street Address 1 --></label>
+        <name>blng__BillingStreet__c</name>
+    </fields>
+    <fields>
+        <help>Código postal do endereço de faturamento do cartão</help>
+        <label><!-- Postal Code --></label>
+        <name>blng__BillingZipPostal__c</name>
+    </fields>
+    <fields>
+        <help>CVV do cartão do endereço de faturamento do cartão</help>
+        <label><!-- Card CVV --></label>
+        <name>blng__CVV__c</name>
+    </fields>
+    <fields>
+        <help>O BIN do cartão. Primeiros 6 dígitos do cartão</help>
+        <label><!-- Card BIN --></label>
+        <name>blng__CardBIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Expiration Month --></label>
+        <name>blng__CardExpirationMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Expiration Year --></label>
+        <name>blng__CardExpirationYear__c</name>
+    </fields>
+    <fields>
+        <help>Armazena apenas 4 dígitos</help>
+        <label><!-- Card Last 4 --></label>
+        <name>blng__CardLastFour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Number --></label>
+        <name>blng__CardNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Type --></label>
+        <name>blng__CardType__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Gateway Response --></label>
+        <name>blng__GatewayResponse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Name on Card --></label>
+        <name>blng__Nameoncard__c</name>
+    </fields>
+    <fields>
+        <help>Apelido do endereço de faturamento do cartão</help>
+        <label><!-- Nick Name --></label>
+        <name>blng__NickName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway Token --></label>
+        <name>blng__PaymentGatewayToken__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>blng__PaymentType__c</name>
+    </fields>
+    <fields>
+        <help>Endereço de rua 2 do endereço de faturamento do cartão</help>
+        <label><!-- Street Address 2 --></label>
+        <name>blng__StreetAddress2__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Method Layout</layout>
+        <sections>
+            <label>Detalhes de ACH</label>
+            <section>ACH Details</section>
+        </sections>
+        <sections>
+            <label>Detalhes de endereço</label>
+            <section>Address Details</section>
+        </sections>
+        <sections>
+            <label>Detalhes de cartões de crédito</label>
+            <section>Credit Card Details</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Detalhes pessoais</label>
+            <section>Personal Details</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do método de pagamento</nameFieldLabel>
+    <webLinks>
+        <label><!-- NewPaymentMethodCreditCard --></label>
+        <name>blng__NewPaymentMethodCreditCard</name>
+    </webLinks>
+</CustomObjectTranslation>

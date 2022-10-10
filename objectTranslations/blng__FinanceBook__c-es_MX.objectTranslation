@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Libro de finanzas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Libros de finanzas</value>
+    </caseValues>
+    <fields>
+        <help>Para desactivar el libro de finanzas, deje en blanco esta casilla de verificación. Esto no afectará a transacciones existentes que hagan referencia al libro.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>La duración del intervalo de fechas del periodo de finanzas.</help>
+        <label><!-- Finance Period Duration --></label>
+        <name>blng__FinancePeriodDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione si basar el libro de finanzas en las transacciones de ingresos o en las transacciones de contabilidad.</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Finance Book Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de libro de finanzas</nameFieldLabel>
+    <webLinks>
+        <label><!-- Create_Finance_Periods --></label>
+        <name>blng__Create_Finance_Periods</name>
+    </webLinks>
+</CustomObjectTranslation>

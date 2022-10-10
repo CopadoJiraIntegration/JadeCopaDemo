@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cancel and Rebill</fullName>
+        <default>false</default>
+        <label>Cancel and Rebill</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit</fullName>
+        <default>false</default>
+        <label>Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancel and Re-bill</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cancel and Re-bill</label>
+    </customValue>
+    <masterLabel>Invoice Action</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

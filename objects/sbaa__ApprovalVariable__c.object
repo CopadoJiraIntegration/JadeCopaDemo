@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>sbaa__ApprovalVariableHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This is the Approval Variable associated with your Approval.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>sbaa__AggregateField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field that&apos;s acted upon by the aggregate function.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field that&apos;s acted upon by the aggregate function.</inlineHelpText>
+        <label>Aggregate Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Quantity</fullName>
+                    <default>false</default>
+                    <label>Quantity</label>
+                </value>
+                <value>
+                    <fullName>List_Total__c</fullName>
+                    <default>false</default>
+                    <label>List_Total__c</label>
+                </value>
+                <value>
+                    <fullName>Total Price</fullName>
+                    <default>false</default>
+                    <label>Total Price</label>
+                </value>
+                <value>
+                    <fullName>Subtotal</fullName>
+                    <default>false</default>
+                    <label>Subtotal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__AggregateFunction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Aggregate function used to calculate this variable.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Aggregate function used to calculate this variable.</inlineHelpText>
+        <label>Aggregate Function</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Count</fullName>
+                    <default>false</default>
+                    <label>Count</label>
+                </value>
+                <value>
+                    <fullName>Sum</fullName>
+                    <default>false</default>
+                    <label>Sum</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Min</fullName>
+                    <default>false</default>
+                    <label>Min</label>
+                </value>
+                <value>
+                    <fullName>Max</fullName>
+                    <default>false</default>
+                    <label>Max</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__CombineWith__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Another approval variable to compose with this approval variable if your condition is based on both results.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Another approval variable to compose with this approval variable if your condition is based on both results.</inlineHelpText>
+        <label>Combine With</label>
+        <referenceTo>sbaa__ApprovalVariable__c</referenceTo>
+        <relationshipLabel>Approval Variables (Combine With)</relationshipLabel>
+        <relationshipName>CombinedSummaryVariables</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__FilterField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Select the field to use when filtering items for inclusion in this approval variable.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the field to use when filtering items for inclusion in this approval variable.</inlineHelpText>
+        <label>Filter Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>sbaa__TargetObject__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product Family</fullName>
+                    <default>false</default>
+                    <label>Product Family</label>
+                </value>
+                <value>
+                    <fullName>Product_Code__c</fullName>
+                    <default>false</default>
+                    <label>Product_Code__c</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Opportunity Product</controllingFieldValue>
+                <valueName>Product Family</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Opportunity Product</controllingFieldValue>
+                <valueName>Product_Code__c</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__FilterValue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter the value to match in this filter.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the value to match in this filter.</inlineHelpText>
+        <label>Filter Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__ListVariable__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approval Variable responsible for calculating Total List</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approval Variable responsible for calculating Total List</inlineHelpText>
+        <label>List Variable</label>
+        <referenceTo>sbaa__ApprovalVariable__c</referenceTo>
+        <relationshipLabel>Approval Variables (List Variable)</relationshipLabel>
+        <relationshipName>ListSummaryVariables</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__NetVariable__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approval Variable responsible for calculating Total Net</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approval Variable responsible for calculating Total Net</inlineHelpText>
+        <label>Net Variable</label>
+        <referenceTo>sbaa__ApprovalVariable__c</referenceTo>
+        <relationshipLabel>Approval Variables (Net Variable)</relationshipLabel>
+        <relationshipName>NetSummaryVariables</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Operator__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Choose the operator to use in your filter.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the operator to use in your filter.</inlineHelpText>
+        <label>Operator</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>equals</fullName>
+                    <default>false</default>
+                    <label>equals</label>
+                </value>
+                <value>
+                    <fullName>not equals</fullName>
+                    <default>false</default>
+                    <label>not equals</label>
+                </value>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>less or equals</fullName>
+                    <default>false</default>
+                    <label>less or equals</label>
+                </value>
+                <value>
+                    <fullName>greater than</fullName>
+                    <default>false</default>
+                    <label>greater than</label>
+                </value>
+                <value>
+                    <fullName>greater or equals</fullName>
+                    <default>false</default>
+                    <label>greater or equals</label>
+                </value>
+                <value>
+                    <fullName>starts with</fullName>
+                    <default>false</default>
+                    <label>starts with</label>
+                </value>
+                <value>
+                    <fullName>ends with</fullName>
+                    <default>false</default>
+                    <label>ends with</label>
+                </value>
+                <value>
+                    <fullName>contains</fullName>
+                    <default>false</default>
+                    <label>contains</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__TargetObject__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Select the object you want to aggregate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the object you want to aggregate.</inlineHelpText>
+        <label>Target Object</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opportunity Product</fullName>
+                    <default>false</default>
+                    <label>Opportunity Product</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Quote__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Quote__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sbaa__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>When Discount is chosen, List Variable and Net Variable must be populated. When Summary is chosen, Aggregate Field and Aggregate Function must be populated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When Discount is chosen, List Variable and Net Variable must be populated. When Summary is chosen, Aggregate Field and Aggregate Function must be populated.</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Summary</fullName>
+                    <default>false</default>
+                    <label>Summary</label>
+                </value>
+                <value>
+                    <fullName>Discount</fullName>
+                    <default>false</default>
+                    <label>Discount</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Approval Variable</label>
+    <listViews>
+        <fullName>sbaa__All</fullName>
+        <columns>NAME</columns>
+        <columns>sbaa__Type__c</columns>
+        <columns>sbaa__TargetObject__c</columns>
+        <columns>sbaa__FilterField__c</columns>
+        <columns>sbaa__Operator__c</columns>
+        <columns>sbaa__FilterValue__c</columns>
+        <columns>sbaa__AggregateField__c</columns>
+        <columns>sbaa__AggregateFunction__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Variable Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Approval Variables</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>sbaa__Discount_Variable_Required_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(sbaa__Type__c, &apos;Discount&apos;) &amp;&amp; (ISBLANK(sbaa__ListVariable__c) || ISBLANK(sbaa__NetVariable__c ))</errorConditionFormula>
+        <errorMessage>Values for List Variable and Net Variable are required for Discount Variables</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>sbaa__Summary_Variable_Required_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(sbaa__Type__c, &apos;Summary&apos;) &amp;&amp; (ISPICKVAL( sbaa__AggregateField__c, &apos;&apos;) || ISPICKVAL(sbaa__AggregateFunction__c, &apos;&apos;))</errorConditionFormula>
+        <errorMessage>Values for Aggregate Field and Aggregate Function are required for Summary Variables</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

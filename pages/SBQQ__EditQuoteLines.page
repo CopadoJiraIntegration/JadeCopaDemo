@@ -1,0 +1,3 @@
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteLineEditorController,SBQQ.QueueableJobCheckerExt,SBQQ.ServiceRouter" docType="html-5.0" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader) && formFactor == 'desktop'}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_edit_quote_lines}">
+	<div>This page is no longer supported. To edit quote lines, use the "Edit Lines" action from the Quote record's home page.</div>
+</apex:page>

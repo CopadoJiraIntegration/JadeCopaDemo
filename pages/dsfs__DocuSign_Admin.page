@@ -1,0 +1,1283 @@
+<apex:page controller="dsfs.AdminController" tabstyle="DocuSign_Admin__tab" showHeader="true" sidebar="false"
+           action="{!resolveSettings}">
+    <style type="text/css">
+        :root {
+            --search-icon: url({!$Resource.dsfs__SearchIcon});
+            --arrow-drop-down: url({!$Resource.dsfs__ArrowDropDown});
+            --delete: url({!$Resource.dsfs__Delete});
+        }
+    </style>
+    <apex:slds />
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:includeScript value="{!$Resource.dsfs__jquery}"/>
+    <apex:includeScript value="{!$Resource.dsfs__jquery_ui}"/>
+    <apex:includeScript value="{!$Resource.dsfs__modernizrjs}"/>
+    <apex:includeScript value="{!$Resource.dsfs__UtilJS}"/>
+    <apex:includeScript value="{!$Resource.dsfs__DocuSignAdminJs}"/>
+    <script type="text/javascript">
+      Visualforce.remoting.timeout = 120000;
+      dsGlobal = {
+        settings: {!settings},
+        updateLayouts: '{!$RemoteAction.AdminController.updateLayouts}',
+        login: '{!$RemoteAction.AdminController.login}',
+        prepareTrialAccount: '{!$RemoteAction.AdminController.prepareTrialAccount}',
+        getAllSalesforceObjects: '{!$RemoteAction.AdminController.getAllSalesforceObjects}',
+        getLevelFieldSet: '{!$RemoteAction.AdminController.getLevelFieldSet}',
+        saveEmailSettings: '{!$RemoteAction.AdminController.saveEmailSettings}',
+        createTrialAccount: '{!$RemoteAction.AdminController.createTrialAccount}',
+        connect: '{!$RemoteAction.AdminController.connect}',
+        updateSettings: '{!$RemoteAction.AdminController.updateSettings}',
+        deleteEmailSettings: '{!$RemoteAction.AdminController.deleteEmailSettings}',
+        saveCustomTag: '{!$RemoteAction.AdminController.saveCustomTag}',
+        deleteCustomTag: '{!$RemoteAction.AdminController.deleteCustomTag}',
+        findDocuSignUrl: '{!$RemoteAction.AdminController.findDocuSignUrl}',
+        getAccountFeatures: '{!$RemoteAction.AdminController.getAccountFeatures}',
+        resetAccountConfiguration: '{!$RemoteAction.AdminController.resetAccountConfiguration}',
+        executePostInstallScripts: '{!$RemoteAction.AdminController.executePostInstallScripts}',
+        responseJson: JSON.parse('{!JSENCODE(responseJson)}'),
+        sessionId: '{!$Api.Session_ID}',
+        editLabel: '{!$Label.Edit}',
+        deleteLabel: "{!$Label.DeleteUppercase}",
+        docusignPNG: '{!$Resource.DocuSignPNG}',
+        DocuSignLoadingLogoPNG: '{!$Resource.DocuSignLoadingLogoPNG}',
+        deleteIconPNG: '{!$Resource.DeletePNG}',
+        layoutsText: "{!$Label.Layouts}",
+        usersText: "{!$Label.Users}",
+        clickHereText: "{!$Label.ClickHere2}",
+        chatterLanguageCodeText: "{!chatterCurrentLanguageCode}",
+        windowBlockedByBrowserText: "{!$Label.WindowBlockedByBrowser}",
+        selectDashedLabel: '{!$Label.SelectDashed}'
+      };
+      Tab = {
+        home: '{!URLFOR($Page.DocuSign_Admin, null, [t = 'h'])}',
+        settings: '{!URLFOR($Page.DocuSign_Admin, null, [t = 's'])}',
+        account: '{!URLFOR($Page.DocuSign_Admin, null, [t = 'a'])}',
+        layouts: '{!URLFOR($Page.DocuSign_Admin, null, [t = 'l'])}',
+        customTags: '{!URLFOR($Page.DocuSign_Admin, null, [t = 'c'])}',
+        users: '{!URLFOR($Page.DocuSign_Admin, null, [t = 'u'])}'
+      };
+
+      function selectAllByLayoutId(uniqueId) {
+        var desktopCheckbox = document.getElementById('desktopCheckbox' + uniqueId);
+        var checked = !desktopCheckbox.checked;
+        desktopCheckbox.checked = checked;
+        document.getElementById('mobileCheckbox' + uniqueId).checked = checked;
+        document.getElementById('statusCheckbox' + uniqueId).checked = checked;
+        document.getElementById('recipientStatusCheckbox' + uniqueId).checked = checked;
+      }
+
+      function onClickSetCustom() {
+        document.getElementById('layoutDropdown').value = 'Custom';
+      }
+    </script>
+
+    <div class="docusign-container">
+        <div id="dsAlert" style="display: none">
+            <ul class="alert-messages"></ul>
+        </div>
+
+        <div class="title">
+            <img class="logo" src="{!$Resource.DocuSign}"/>
+            <h1>{!$Label.DocuSignAdmin}</h1>
+        </div>
+
+        <div id="navigation" style="display:none">
+            <div class="grid-row">
+                <div class="seven col">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="{!URLFOR($Page.DocuSign_Admin, null, [t = 'h'])}"
+                                   id="homeTab">{!$Label.Home}</a></li>
+                            <li id="settingsTabListItem"><a href="{!URLFOR($Page.DocuSign_Admin, null, [t = 's'])}"
+                                                            id="settingsTab">{!$Label.Settings}</a></li>
+                            <li id="accountTabListItem"><a href="{!URLFOR($Page.DocuSign_Admin, null, [t = 'a'])}"
+                                                           id="accountTab">{!$Label.Account}</a></li>
+                            <li id="layoutsTabListItem"><a href="{!URLFOR($Page.DocuSign_Admin, null, [t = 'l'])}"
+                                                           id="layoutsTab">{!$Label.Layouts}</a></li>
+                            <li id="customTagsTabListItem"><a href="{!URLFOR($Page.DocuSign_Admin, null, [t = 'c'])}"
+                                                              id="customTagsTab">{!$Label.CustomTags}</a>
+                            </li>
+                            <li id="usersTabListItem"><a href="{!URLFOR($Page.DocuSign_Admin, null, [t = 'u'])}"
+                                                         id="usersTab">{!$Label.Users}</a></li>
+                            <li>
+                                <a href="#" id="docusignTab">{!$Label.DocuSign}
+                                    <svg aria-hidden="true" class="slds-icon slds-icon_xx-small slds-icon-text-default">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="homeTabContent" style="display:none">
+            <div class="row">
+                <div class="admin-container">
+                    <section>
+                        <div class="slds-grid slds-wrap slds-gutters_medium">
+                            <div class="slds-col slds-size_1-of-1 slds-p-bottom_medium">
+                                <h2>{!$Label.AdminHomeHeading}</h2>
+                            </div>
+                            <div class="slds-col slds-size_2-of-9">
+                                <img src="{!$Resource.admin_home}" alt="{!$Label.AdminHomeHeading}"/>
+                            </div>
+                            <p></p>
+                            <div class="slds-col slds-size_7-of-9">
+                                <p class="slds-text-title_bold">{!$Label.Documentation}</p>
+                                <ul class="slds-list_dotted slds-p-bottom_x-large slds-text-title_bold">
+                                    <li>
+                                        <a href="{!$Label.UserGuideUrl}" target="_blank">
+                                            {!$Label.UserGuide}
+                                            <svg aria-hidden="true" class="slds-icon slds-icon_xx-small slds-icon-text-light">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{!$Label.dsfs__adminguideurl}" target="_blank">
+                                            {!$Label.dsfs__adminguide}
+                                            <svg aria-hidden="true" class="slds-icon slds-icon_xx-small slds-icon-text-light">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <span class="slds-text-title_bold">
+                                        <a href="{!$Label.dsfs__supportcenterurl}" target="_blank">
+                                            {!$Label.dsfs__supportcenter}
+                                            <svg aria-hidden="true" class="slds-icon slds-icon_xx-small slds-icon-text-light">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+                                            </svg>
+                                        </a>
+                                    </span>
+                                    - {!$Label.dsfs__supportcenterdescription}
+                                </p>
+                                <p>
+                                    <span class="slds-text-title_bold">
+                                        <a href="{!$Label.dsfs__docusignuniversityurl}" target="_blank">
+                                            {!$Label.dsfs__docusignuniversity}
+                                            <svg aria-hidden="true" class="slds-icon slds-icon_xx-small slds-icon-text-light">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+                                            </svg>
+                                        </a>
+                                    </span>
+                                    - {!$Label.dsfs__docusignuniversitydescription}
+                                </p>
+                                <p>
+                                    <span class="slds-text-title_bold">
+                                        <a href="{!$Label.dsfs__communityurl}" target="_blank">
+                                            {!$Label.dsfs__community}
+                                            <svg aria-hidden="true" class="slds-icon slds-icon_xx-small slds-icon-text-light">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#new_window')}"></use>
+                                            </svg>
+                                        </a>
+                                    </span>
+                                    - {!$Label.CommunityDescription}
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layouts Content Begins -->
+        <div id="layoutsTabContent" style="display:none">
+            <div class="row" style="display:none" id="add-buttons-to-layouts">
+                <div class="admin-container">
+                    <section>
+                        <h2>{!$Label.AddDSButtonsToSF}</h2>
+                        <p>{!$Label.LayoutsQuickLinks}</p>
+                        <ul class="button-group steps">
+                            <li><p>{!$Label.Opportunity}</p>
+                                <div class="button"><a target="_blank"
+                                                       href="/ui/setup/layout/PageLayouts?type=Opportunity">{!$Label.AddActionOrButton}</a>
+                                </div>
+                            </li>
+                            <li><p>{!$Label.Account}</p>
+                                <div class="button"><a target="_blank"
+                                                       href="/ui/setup/layout/PageLayouts?type=Account">{!$Label.AddActionOrButton}</a>
+                                </div>
+                            </li>
+                            <li><p>{!$Label.Contact}</p>
+                                <div class="button"><a target="_blank"
+                                                       href="/ui/setup/layout/PageLayouts?type=Contact">{!$Label.AddActionOrButton}</a>
+                                </div>
+                            </li>
+                            <li><p>{!$Label.Lead}</p>
+                                <div class="button"><a target="_blank"
+                                                       href="/ui/setup/layout/PageLayouts?type=Lead">{!$Label.AddActionOrButton}</a>
+                                </div>
+                            </li>
+                            <li><p>{!$Label.Contract}</p>
+                                <div class="button"><a target="_blank"
+                                                       href="/ui/setup/layout/PageLayouts?type=Contract">{!$Label.AddButton}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="layoutsDropdownContent" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <h2>{!$Label.AddDocuSignButtonsToSalesforceLayout}</h2>
+                        <p>{!$Label.SelectWhereDocuSignButtonsAdded}</p>
+                        <select class="adminsmall" id="layoutDropdown">
+                            <option value="Custom">{!$Label.Custom}</option>
+                            <option value="All">{!$Label.All}</option>
+                            <option value="Desktop">{!$Label.Desktop}</option>
+                            <option value="Mobile">{!$Label.Mobile}</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="layoutsChecklistContent" style="display:none">
+                <div class="expanded admin-container">
+                    <section>
+                        <div class="content">
+                            <div class="divided">
+                                <div class="grid-row">
+                                    <div class="three col">
+                                        &nbsp;
+                                    </div>
+                                    <div class="two col">
+                                        <p id="desktopHeader" class="clickable"
+                                           onclick="javascript:onClickSetCustom();">{!$Label.Desktop}</p>
+                                    </div>
+                                    <div class="two col">
+                                        <p id="mobileHeader" class="clickable"
+                                           onclick="javascript:onClickSetCustom();">{!$Label.Mobile}</p>
+                                    </div>
+                                    <div class="two col">
+                                        <p id="statusListHeader" class="clickable"
+                                           onclick="javascript:onClickSetCustom();">{!$Label.DocuSignStatusRelatedList}</p>
+                                    </div>
+                                    <div class="three col">
+                                        <p id="recipientStatusListHeader" class="clickable"
+                                           onclick="javascript:onClickSetCustom();">{!$Label.DocuSignRecipientStatusRelatedList}</p>
+                                    </div>
+                                </div>
+
+                                <apex:repeat value="{!response.admin.layouts}" var="layout">
+                                    <div class="{!IF(layout.newType, 'divided', '')}">
+                                        <div class="grid-row">
+                                            <div class="three col"><p
+                                                        onclick="javascript:selectAllByLayoutId({!layout.uniqueId});onClickSetCustom();">{!layout.fullName}</p>
+                                            </div>
+                                            <div class="two col">
+                                                <input type="checkbox" id="desktopCheckbox{!layout.uniqueId}"
+                                                       onclick="javascript:onClickSetCustom();"/>
+                                            </div>
+                                            <div class="two col">
+                                                <input type="checkbox" id="mobileCheckbox{!layout.uniqueId}"
+                                                       onclick="javascript:onClickSetCustom();"
+                                                       style="{!IF(layout.showMobileCheckbox, '', 'display:none;')}"/>&nbsp;
+                                            </div>
+                                            <div class="two col">
+                                                <input type="checkbox" id="statusCheckbox{!layout.uniqueId}"
+                                                       onclick="javascript:onClickSetCustom();"/>
+                                            </div>
+                                            <div class="two col">
+                                                <input type="checkbox" id="recipientStatusCheckbox{!layout.uniqueId}"
+                                                       onclick="javascript:onClickSetCustom();"
+                                                       style="{!IF(layout.showRecipientStatusCheckbox, '', 'display:none;')}"/>&nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </apex:repeat>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="inline-button send" id="layoutsButtons" style="display:none">
+                <ul>
+                    <li><a href="javascript:void(0);" id="updateLayoutsButton" class="next">{!$Label.UpdateLayouts}</a>
+                    </li>
+                    <li><a href="?t=h" id="cancelLayoutsButton">{!$Label.Cancel}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Custom Tags Content Begins -->
+        <div id="customTagTabContent" style="display:none">
+            <div class="row">
+                <div class="admin-container">
+                    <section>
+                        <div class="header divided">
+                            <div class="row">
+                                <div class="six col large">
+                                    <h2>{!$Label.CustomTags}</h2>
+                                </div>
+                                <div class="six col large">
+                                    <div class="button">
+                                        <a id="newCustomTag">{!$Label.New}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided">
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <label class="bold">{!$Label.Name}</label>
+                                </div>
+                                <div class="two col">
+                                    <label class="bold">{!$Label.TagType}</label>
+                                </div>
+                                <div class="two col">
+                                    <label class="bold">{!$Label.Anchor}</label>
+                                </div>
+                                <div class="two col">
+                                    <label class="bold">{!$Label.Shared}</label>
+                                </div>
+                                <div class="two col">
+                                    <label class="bold">{!$Label.LastModified}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <apex:repeat value="{!response.admin.customTags}" var="customTag">
+                            <div class="divided clickable" id="customtag_{!customTag.id}">
+                                <div class="grid-row">
+                                    <div class="four col wrap">
+                                        <p>{!customTag.label}</p>
+                                    </div>
+                                    <div class="two col">
+                                        <p>{!customTag.typeName}</p>
+                                    </div>
+                                    <div class="two col">
+                                        <p>{!customTag.autoPlaceText}</p>
+                                    </div>
+                                    <div class="two col">
+                                        <p>{!IF(!customTag.options.shared, $Label.dsfs__no, $Label.dsfs__yes)}</p>
+                                    </div>
+                                    <div class="two col">
+                                        <p>{!customTag.lastModifiedFormatted}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:repeat>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add remote site settings dialog -->
+        <div id="addRemoteSiteModal" class="modal" style="display: none">
+            <div id="addRemoteSiteContent" class="row">
+                <div class="admin-container">
+                    <section>
+                        <div class="content">
+                            <h2>{!$Label.AddRemoteSite}</h2>
+                            <p id="addRemoteSiteContext" label-layouts="{!$Label.LayoutsTabAllowsAdmin}"
+                               label-custom-tags="{!$Label.CustomTagsTabAllowsAdmin}"></p>
+                            <p>{!$Label.RemoteSite} https://{!response.admin.salesforceConfiguration.host}</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="inline-button" id="addRemoteSiteButtons">
+                <ul>
+                    <li><a href="#" id="cancelAddRemoteSiteButton">{!$Label.Cancel}</a></li>
+                    <li><a href="#" id="addRemoteSiteButton" class="next">{!$Label.AddRemoteSite}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Create new Custom Tag Content Begins-->
+        <!--  <div class="modal-background" id="CustomTagCreationModal" >-->
+        <div id="newCustomTagCreationContent" class="modal">
+            <div id="newCustomTagInfo" class="row" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <h2 id="createCustomTag">{!$Label.CreateCustomTag}</h2>
+                        <h2 id="editCustomTag">{!$Label.EditCustomTag}</h2>
+                        <div class="grid-row">
+                            <div class="four col">
+                                <label>{!$Label.CustomTagName}</label>
+                                <input type="text" id="customTagNameText"/>
+                                <input type="hidden" id="customTagIdText" value=""/>
+                            </div>
+                        </div>
+                        <div class="grid-row" id="relatedToSalesforce">
+                            <div class="four col">
+                                <label class="checkbox"><input id="relateFieldToSalesforceCheckbox"
+                                                               type="checkbox">{!$Label.RelateFieldToSalesforce}</input></label>
+                            </div>
+                        </div>
+                        <div id="relateFieldToSalesforce" style="display:none">
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <select class="fancy-select" id="salesforceObjectDropDown">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <select class="fancy-select" id="firstLevelFieldSetDropDown" style="display:none">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <select class="fancy-select" id="secondLevelFieldSetDropDown" style="display:none">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <select class="fancy-select" id="thirdLevelFieldSetDropDown" style="display:none">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <label class="checkbox"><input id="AllowWritebackToSalesforceChkBox"
+                                                                   type="checkbox">{!$Label.AllowWritebackToSalesforce}</input></label>
+                                    <label class="checkbox"><input id="AllowSenderToEditCustomFieldsChkBox"
+                                                                   type="checkbox">{!$Label.AllowSenderToEditCustomFields}</input></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row">
+                            <div class="four col">
+                                <label>{!$Label.TagType}</label>
+                                <select id="tagTypeDropdown">
+                                </select>
+                            </div>
+                        </div>
+                        <div id="Options" style="display:none">
+                            <div class="grid-row">
+                                <div class="seven col">
+                                    <label>{!$Label.Options}</label>
+                                    <textarea rows="8" cols="66" maxlength="500"
+                                              id="dropDownOptionsTextArea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="initialValue">
+                            <div class="grid-row">
+                                <div class="four col">
+                                    <label>{!$Label.InitialValue}</label>
+                                    <input id="initialValueText" type="text"></input>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row">
+                            <div class="four col">
+                                <div id="requiredField"><label class="checkbox"><input type="checkbox"
+                                                                                       id="requiredFieldChkBox">{!$Label.RequiredField}</input></label>
+                                </div>
+                                <div id="readOnly"><label class="checkbox"><input type="checkbox"
+                                                                                  id="readOnlyChkBox">{!$Label.ReadOnly}</input></label>
+                                </div>
+                                <div id="shared"><label class="checkbox"><input type="checkbox"
+                                                                                id="sharedChkBox">{!$Label.Shared}</input></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+            <div id="newCustomTagFormat" class="row" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <div class="section-title">
+                            <h2>{!$Label.Formatting}</h2>
+                        </div>
+                        <div class="content">
+                            <div id="fontDiv">
+                                <div class="grid-row">
+                                    <div class="five col">
+                                        <select id="fontDropDown">
+                                            <option value="arial" class="arial">Arial</option>
+                                            <option value="arialnarrow" class="arialnarrow">Arial Narrow</option>
+                                            <option value="calibri" class="calibri">Calibri</option>
+                                            <option value="couriernew" class="couriernew">Courier New</option>
+                                            <option value="garamond" class="garamond">Garamond</option>
+                                            <option value="georgia" class="georgia">Georgia</option>
+                                            <option value="helvetica" class="helvetica">Helvetica</option>
+                                            <option value="lucidaconsole" class="lucidaconsole" selected="selected">
+                                                Lucida Console
+                                            </option>
+                                            <option value="tahoma" class="tahoma">Tahoma</option>
+                                            <option value="timesnewroman" class="timesnewroman">Times New Roman</option>
+                                            <option value="trebuchet" class="trebuchet">Trebuchet</option>
+                                            <option value="verdana" class="verdana">Verdana</option>
+                                            <option value="msgothic" class="msgothic">MS Gothic</option>
+                                            <option value="msmincho" class="msmincho">MS Mincho</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="grid-row">
+                                    <div class="one col">
+                                        <select id="fontSizeDropDown">
+                                            <option value="size7">7</option>
+                                            <option value="size8">8</option>
+                                            <option value="size9" selected="selected">9</option>
+                                            <option value="size10">10</option>
+                                            <option value="size11">11</option>
+                                            <option value="size12">12</option>
+                                            <option value="size14">14</option>
+                                            <option value="size16">16</option>
+                                            <option value="size18">18</option>
+                                            <option value="size20">20</option>
+                                            <option value="size22">22</option>
+                                            <option value="size24">24</option>
+                                            <option value="size26">26</option>
+                                            <option value="size28">28</option>
+                                            <option value="size36">36</option>
+                                            <option value="size48">48</option>
+                                            <option value="size72">72</option>
+                                        </select>
+                                    </div>
+                                    <div class="two col">
+                                        <select id="fontColorDropDown">
+                                            <option value="black" selected="selected">{!$Label.Black}</option>
+                                            <option value="brightblue">{!$Label.BrightBlue}</option>
+                                            <option value="brightred">{!$Label.BrightRed}</option>
+                                            <option value="darkred">{!$Label.DarkRed}</option>
+                                            <option value="darkgreen">{!$Label.DarkGreen}</option>
+                                            <option value="gold">{!$Label.Gold}</option>
+                                            <option value="green">{!$Label.Green}</option>
+                                            <option value="navyblue">{!$Label.NavyBlue}</option>
+                                            <option value="purple">{!$Label.Purple}</option>
+                                            <option value="white">{!$Label.White}</option>
+                                        </select>
+                                    </div>
+                                    <div class="two col">
+                                        <ul class="format-buttons" id="formatButtonsList">
+                                            <li class="bold" id="bold"><a href="#" class="fontSelectionButton">b</a>
+                                            </li>
+                                            <li class="italicize" id="italic"><a href="#"
+                                                                                 class="fontSelectionButton">i</a></li>
+                                            <li class="underline" id="underline"><a href="#"
+                                                                                    class="fontSelectionButton">u</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="grid-row" id="hideWithAstericksDiv">
+                                    <div class="four col">
+                                        <label class="checkbox"><input type="checkbox"
+                                                                       id="hideTextWithAsterisksTxtBox">{!$Label.HideTextWithAsterisks}</input></label>
+                                        <div id="fixedSizeDiv"><label class="checkbox"><input type="checkbox"
+                                                                                              id="fixedSizeChkBox">{!$Label.FixedSize}</input></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="newCustomTagInputLimit" class="row" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <div class="section-title">
+                            <h2>{!$Label.InputLimit}</h2>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col">
+                                <div id="maxCharacters"><label>{!$Label.MaxCharacters} <input type="text"
+                                                                                              id="maxCharactersText"></input></label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="newCustomTagValidation" class="row" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <div class="section-title">
+                            <h2>{!$Label.CustomTagsValidation}</h2>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col" id="validationTypeDiv">
+                                <select id="validationTypeDropdown">
+                                    <option value="NoValidation">{!$Label.NoValidation}</option>
+                                    <option value="email">{!$Label.Email}</option>
+                                    <option value="number">{!$Label.Number}</option>
+                                    <option value="date">{!$Label.Date}</option>
+                                    <option value="ssn">{!$Label.SSN}</option>
+                                    <option value="zip5">{!$Label.Zip}</option>
+                                    <option value="zip5Dash4">{!$Label.zip5dash4}</option>
+                                    <option value="regExp">{!$Label.regex}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col" id="RegExPatternDiv" style="display:none">
+                                <label>{!$Label.RegExPattern}</label>
+                                <input type="text" id="regExPatternText"></input>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col" id="ValidationErrorMessageDiv">
+                                <label>{!$Label.ValidationErrorMessage}</label>
+                                <input type="text" id="validationErrorMessageText"></input>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="newCustomTagAdvanced" class="row" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <div class="section-title">
+                            <h2>{!$Label.Advanced}</h2>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col">
+                                <div id="newCustomTagToolTipDiv"><label>{!$Label.CustomTagToolTip}<input type="text"
+                                                                                                         id="customTagToolTipText"></input></label>
+                                </div>
+                                <div id="includeNoteInEmailDiv" style="display:none"><label class="checkbox"><input
+                                                type="checkbox"
+                                                id="includeNoteInEmailChkBox">{!$Label.IncludeNoteInEmail}</input>
+
+                                    </label></div>
+                                <div id="anchorTextDiv"><label>{!$Label.AnchorText}</label><input id="anchorText"
+                                                                                                  type="text"></input>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="newCustomTagSaveCancel" class="inline-button" style="display:none">
+                <ul>
+                    <li><a href="#" id="deleteCustomTagBtn">{!$Label.DeleteUppercase}</a></li>
+                    <li><a href="#" id="cancelCustomTagBtn">{!$Label.Cancel}</a></li>
+                    <li><a href="" id="saveCustomTagBtn" class="next">{!$Label.Save}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Create new Custom Tag Content Ends-->
+
+
+        <!-- Delete Custom Tag Confirmation Modal Begins -->
+        <div class="modal-background" id="deleteCustomTagConfirmationModal" style="display:none">
+            <div class="modal">
+                <img class="close-modal" id="deleteCustomTagCloseIcon" src="{!$Resource.Delete}"></img>
+                <div>
+                    <h3> {!$Label.DeleteConfirmationMessage} </h3>
+                </div>
+                <div class="leftalign-button">
+                    <ul>
+                        <li><a href="#" class="next" id="deleteCustomTagConfirmationBtn">{!$Label.DeleteUppercase}</a>
+                        </li>
+                        <li><a href="#" id="cancelDeleteCustomTagConfirmationBtn">{!$Label.Cancel}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Custom Tag Confirmation Modal Ends -->
+
+        <!-- Custom Tags Content Ends -->
+
+
+        <!-- Settings Content Begins -->
+        <div id="settingsTabContent" style="display:none">
+            <div class="row">
+                <div class="admin-container">
+                    <section class="email-settings">
+                        <div class="grid-row">
+                            <div class="six col">
+                                <h2>{!$Label.EmailSettings}</h2>
+                            </div>
+                            <div class="six col">
+                                <a href="#" class="secondary button" id="newLanguageSettingBtn">{!$Label.New}</a>
+                            </div>
+                        </div>
+                        <div class="grid-row options">
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="disableUserEmailSubjectCheckBox"/>
+                                    <label>{!$Label.DisableUserEmailSubjectEditing}</label>
+                                </div>
+                            </div>
+                            <div class="eight col">
+                                <div class="option">
+                                    <input type="checkbox" id="disableUserEmailMessageCheckBox"/>
+                                    <label>{!$Label.DisableUserEmailMessageEditing}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided">
+                            <div class="grid-row">
+                                <div class="three col">
+                                    <label>{!$Label.Language}</label>
+                                </div>
+                                <div class="three col">
+                                    <label>{!$Label.DefaultEmailSubject}</label>
+                                </div>
+                                <div class="two col wrap">
+                                    <label>{!$Label.DefaultEmailMessage}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="admin-container">
+                    <section>
+                        <h2>{!$Label.RecipientRoleSettings}</h2>
+                        <p>{!$Label.Rolesareusedto} <a
+                                    href="https://support.docusign.com/en/guides/dfs-user-guide-automatic-anchor-text-and-tags-users-v7"
+                                    target="_new">{!$Label.AutomaticAnchorTextandTags}</a></p>
+                        <label>{!$Label.RoleNames}</label>
+                        <textarea class="roles-form" rows="8" cols="30" maxlength="500"
+                                  id="recipientRoleSettingsTextarea"></textarea>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="admin-container">
+                    <section>
+                        <h2>{!$Label.SendSettings}</h2>
+                        <div class="grid-row">
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="hideSendNowButton"/>
+                                    <label>{!$Label.HideTheSendNowButton}</label>
+                                </div>
+                            </div>
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="hideNextButton"/>
+                                    <label>{!$Label.HideTheNextButton}</label>
+                                </div>
+                            </div>
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="enableMobileTaggingUI"/>
+                                    <label>{!$Label.EnableNewMobileTaggingUI}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="enableSFCalloutLimit"/>
+                                    <label>{!$Label.EnableSalesforceCalloutLimit}</label>
+                                </div>
+                            </div>
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="displayTaggerPageInNewWindow"/>
+                                    <label>{!$Label.DisplayTheDocuSignTaggerPage}</label>
+                                </div>
+                            </div>
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="displayInPersonSigningPageInNewWindow"/>
+                                    <label>{!$Label.DisplayTheDocuSignInPerson}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="reminderSettingsCheckbox"/>
+                                    <label>{!$Label.EnableReminderExpiration}</label>
+                                    <div id="reminderSettings">
+                                        <p class="sub">{!$Label.RemindSignersviaEmail}
+                                            <input type="text" maxlength="3"
+                                                   id="remindSignersTextInput"/>
+                                        </p>
+                                        <p class="sub">{!$Label.ContinueToSendRemindersEvery}
+                                            <input type="text" maxlength="3"
+                                                   id="continueToSendRemindersTextInput"/>
+                                        </p>
+                                        <p class="sub">{!$Label.ExpireRequestIn}
+                                            <input type="text" maxlength="3"
+                                                   id="expireRequestInTextInput"/>
+                                        </p>
+                                        <p class="sub">{!$Label.WarnSigners}
+                                            <input type="text" maxlength="3"
+                                                   id="warnSignersTextInput"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="hideRemindAndExpireSettings"/>
+                                    <label>{!$Label.HideTheRemindAndExpireSettings}</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="loadFiles"/>
+                                    <label>{!$Label.LoadFiles}</label>
+                                </div>
+                                <div class="option">
+                                    <label>{!$Label.Apex_callout_limit}
+                                        <input type="text" maxlength="3" id="apexTimeOutInput" style="width: 40px;"/>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="four col">
+                                <div class="option">
+                                    <input type="checkbox" id="enableSMSAuthenticationCheckbox"/>
+                                    <label for="enableSMSAuthenticationCheckbox">{!$Label.EnableSMSAuthentication}</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="allowSequentialSignNow"/>
+                                    <label for="allowSequentialSignNow">{!$Label.AllowSequentialSignNow}</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="useContactRoles"/>
+                                    <label for="useContactRoles">{!$Label.UseContactRoles}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="admin-container">
+                    <section>
+                        <h2>{!$Label.ChatterSettings}</h2>
+                        <label>
+                            <select class="small" id="dsChatterDropdown">
+                                <option value="EnabledAlwaysOn">{!$Label.EnabledAlwaysOn}</option>
+                                <option value="EnabledDefaultOff">{!$Label.EnabledOffByDefault}</option>
+                                <option value="EnabledDefaultOn">{!$Label.EnabledOnByDefault}</option>
+                                <option value="Disabled">{!$Label.Disabled}</option>
+                            </select>
+                        </label>
+                        <label id="dsChatterLanguageDropdown" style="display:none">
+                        </label>
+                        <div id="chatter-settings">
+                            <label>{!$Label.ChatterOnTheseEnvelopeEvents}</label>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterEnvelopeSentCheckbox"/> {!$Label.Sent}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterEnvelopeSentText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterEnvelopeDeliveredCheckbox"/> {!$Label.Delivered}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterEnvelopeDeliveredText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterEnvelopeCompletedCheckbox"/> {!$Label.SignedCompleted}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterEnvelopeCompletedText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterEnvelopeDeclinedCheckbox"/> {!$Label.Declined}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterEnvelopeDeclinedText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterEnvelopeVoidedCheckbox"/> {!$Label.Voided}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterEnvelopeVoidedText"/>
+                            </div>
+                            <label>{!$Label.ChatterOnTheseRecipientEvents}</label>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterRecipientSentCheckbox"/> {!$Label.Sent}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterRecipientSentText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterRecipientDeliveryFailedCheckbox"/> {!$Label.DeliveryFailed}
+                                </label>
+                                <input class="medium" type="text" maxlength="255"
+                                       id="chatterRecipientDeliveryFailedText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterRecipientDeliveredCheckbox"/> {!$Label.Delivered}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterRecipientDeliveredText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterRecipientCompletedCheckbox"/> {!$Label.SignedCompleted}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterRecipientCompletedText"/>
+                            </div>
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterRecipientDeclinedCheckbox"/> {!$Label.Declined}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterRecipientDeclinedText"/>
+                            </div>
+                            <!-- DFS-5666: hide recipient auth failure option until we can support this event type via Connect.
+                            <div class="option">
+                                <label class="chatter-event"><input type="checkbox"
+                                                                    id="chatterRecipientAuthenticationFailureCheckbox"/> {!$Label.AuthenticationFailure}
+                                </label>
+                                <input class="medium" type="text" maxlength="255" id="chatterRecipientAuthenticationFailureText"/>
+                            </div> -->
+                            <!--label>{!$Label.Actions}</label-->
+                            <div class="grid-row hidden">
+                                <div class="four col">
+                                    <div class="option">
+                                        <input type="checkbox" id="chatterActionsUndoAndSend"/>
+                                        <label>{!$Label.UndoAndSend}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-row hidden">
+                                <div class="four col">
+                                    <div class="option">
+                                        <input type="checkbox" id="chatterActionsEnvelopeSigning"/>
+                                        <label> {!$Label.EnvelopeSigning}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+            <div class="inline-button">
+                <ul>
+                    <li><a href="#" class="next" id="saveSettingsBtn">{!$Label.Save}</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Settings Content Ends -->
+
+        <div id="accountTabContent" style="display:none">
+            <div id="account-installed-content" style="display:none">
+                <div class="row" id="docusign-account-info">
+                    <section>
+                        <h2>{!$Label.DocuSignAccountInformation}</h2>
+                        <div class="divided">
+                            <div class="row">
+                                <div class="column1">
+                                    <label>{!$Label.AccountInfoAccountName}</label>
+                                    <p>{!response.admin.account.name}</p>
+                                </div>
+                                <div class="column1">
+                                    <label>{!$Label.AccountID}</label>
+                                    <p>{!response.admin.account.id}</p>
+                                </div>
+                                <div class="column1">
+                                    <label>{!$Label.CurrentBillingPeriodStartDate}</label>
+                                    <p>{!response.admin.account.billing.startDateFormatted}</p>
+                                </div>
+                                <div class="column1">
+                                    <label>{!$Label.CurrentBillingPeriodEndDate}</label>
+                                    <p>{!response.admin.account.billing.endDateFormatted}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column1">
+                                <label>{!$Label.PlanName}</label>
+                                <p>{!response.admin.account.plan.name}</p>
+                            </div>
+                            <div class="column1">
+                                <label>{!$Label.PlanID}</label>
+                                <p>{!response.admin.account.plan.id}</p>
+                            </div>
+                            <div class="column1">
+                                <label>{!$Label.PlanStartDate}</label>
+                                <p>{!response.admin.account.plan.startDateFormatted}</p>
+                            </div>
+                            <div class="column1">
+                                <label>{!$Label.PlanEndDate}</label>
+                                <p>{!response.admin.account.plan.endDateFormatted}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="row" id="docusign-account-info">
+                    <section>
+                        <h2>{!$Label.DocuSignSystemSenderUserInformation}</h2>
+                        <div class="row">
+                            <div class="column1">
+                                <label>{!$Label.DocuSignSystemSenderUserId}</label>
+                                <p>{!response.admin.userId}</p>
+                            </div>
+                            <div class="column1">
+                                <label>{!$Label.Password}</label>
+                                <p>*******</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="row" id="docusign-account-info">
+                    <section>
+                        <h2>{!$Label.ConnectDSToSF}</h2>
+                        <div class="row">
+                            <div class="column1">
+                                <label>{!$Label.CurrentSalesforceUser}</label>
+                                <p>{!response.admin.connectUsername}</p>
+                            </div>
+                            <div class="column1">
+                                <label>{!$Label.Password}</label>
+                                <p>{!IF(response.admin.connectUsername != null, '*******', '')}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="inline-button">
+                    <ul>
+                        <li><a href="#" id="modifyAccountConfigButton" class="next">{!$Label.ModifyAccountConfig}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" id="login-or-create-trial" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <div class="grid-row">
+                            <div class="five col">
+                                <h2>{!$Label.LogInToYourDocuSignAccount}</h2>
+                                <label>{!$Label.EmailAddress}</label>
+                                <input type="text" maxlength="100" id="docusignLoginEmail" value="{!$User.Email}"/>
+                                <label>{!$Label.Password}</label>
+                                <input type="password" maxlength="100" id="docusignPassword"/>
+                                <a class="forgot-password" href="#" target="_blank">{!$Label.ForgotPassword}</a>
+                                <label>{!$Label.Environment}</label>
+                                <select class="medium" id="docusignEnvironment">
+                                    <option value="production">{!$Label.Production}</option>
+                                    <option value="demo">{!$Label.Demo}</option>
+                                    <option value="other">{!$Label.Other}</option>
+                                </select>
+                                <div id="otherEnvironmentField" style="display:none">
+                                    <label>{!$Label.OtherEnvironment}</label>
+                                    <input type="text" maxlength="50" id="otherDocusignEnvironment"/>
+                                </div>
+                                <div id="accountDropdownField" style="display:none">
+                                    <label>{!$Label.Account}</label>
+                                    <select class="medium" id="selectedAccountId"></select>
+                                </div>
+                                <div class="button"><a href="#" id="loginButton">{!$Label.LogIn}</a></div>
+                            </div>
+                            <div class="two col">
+                                &nbsp;
+                            </div>
+                            <div class="five col">
+                                <h2>{!$Label.SignUpFreeDSTrial}</h2>
+                                <label>{!$Label.EmailAddress}</label>
+                                <input type="text" maxlength="100" id="docusignTrialEmail" value="{!$User.Email}"/>
+                                <div class="button" id="createAccountButtonDiv"><a href="#"
+                                                                                   id="createAccountButton">{!$Label.CreateAccount}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="advanced-options-header" class="collapsible-toggle">
+                            <input type="checkbox" id="show-advanced-options"
+                                   class="collapsible-toggle"/>&nbsp;{!$Label.ShowAdvancedOptions}
+                        </div>
+                        <div id="advanced-options" class="leftalign-button collapsible-content">
+                            <ul>
+                                <li><a href="#" id="reset-account-credentials"
+                                       class="next">{!$Label.ResetAccountCredentials}</a></li>
+                                <li><a href="#" id="execute-post-install-scripts"
+                                       class="next">{!$Label.MigrateAccountSettings}</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="modal-background" id="reset-account-credentials-modal" style="display:none">
+                <div class="modal">
+                    <img id="reset-account-credentials-close" class="close-modal" src="{!$Resource.Delete}"/>
+                    <div>
+                        <h3>{!$Label.ResetCredentialsConfirmation}</h3>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="reset-user-credentials"/>{!$Label.ResetUserCredentials}
+                    </div>
+                    <div class="leftalign-button">
+                        <ul>
+                            <li><a href="#" class="next"
+                                   id="reset-account-credentials-confirm">{!$Label.DeleteUppercase}</a>
+                            </li>
+                            <li><a href="#" id="reset-account-credentials-cancel">{!$Label.Cancel}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="login-to-connect" style="display:none">
+                <div class="row" id="connect-docusign">
+                    <section>
+                        <div class="grid-row">
+                            <div class="six col">
+                                <h2>{!$Label.ConnectDSToSF}</h2>
+                                <label>{!$Label.SalesforceUsername}</label>
+                                <input type="text" maxlength="100" id="salesforceUsername" value="{!$User.Username}"/>
+                                <label>{!$Label.SalesforcePassword}</label>
+                                <input type="password" maxlength="100" id="salesforcePassword"/>
+                                <label>{!$Label.Environment}</label>
+                                <select class="medium" id="salesforceEnvironment">
+                                    <option value="production">{!$Label.Production}</option>
+                                    <option value="test">{!$Label.Sandbox}</option>
+                                </select>
+                                <label>
+                                    <input type="checkbox" id="connectAgreeCheckbox"/>{!$Label.IAgreeAddRemoteSite}
+                                    &nbsp;
+                                    <a style="text-decoration:none;color:#1C80BF;" target="_new"
+                                       href="https://www.docusign.com/support/salesforce/documentation/dfs-admin-guide/admin-guide/add-ip-ranges"
+                                       title="{!$Label.Selectthecheckbox}">{!$Label.Whatisthis}</a>
+                                </label>
+                                <div class="inline-button send">
+                                    <ul>
+                                        <li><a href="#" id="connectButton" class="inactive next">{!$Label.Connect}</a>
+                                        </li>
+                                        <li><a href="#" id="cancelButton">{!$Label.Back}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="one col">&nbsp;</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="trial-step-two" style="display:none">
+                <div class="admin-container">
+                    <section>
+                        <div class="grid-row">
+                            <div class="five col">
+                                <h2>{!$Label.SignUpFreeDSTrial}</h2>
+                                <div class="grid-row">
+                                    <div class="six col">
+                                        <label>{!$Label.FirstName}</label>
+                                        <input type="text" id="firstName" maxlength="50" placeholder=""/>
+                                        <label id="firstName-error-label" class="error">{!$Label.FieldRequired}</label>
+                                    </div>
+                                    <div class="six col">
+                                        <label>{!$Label.LastName}</label>
+                                        <input type="text" id="lastName" maxlength="50" placeholder=""/>
+                                        <label id="lastName-error-label" class="error">{!$Label.FieldRequired}</label>
+                                    </div>
+                                </div>
+                                <label>{!$Label.CompanyName}</label>
+                                <input type="text" id="companyName" maxlength="100" placeholder=""/>
+                                <label id="companyName-error-label" class="error">{!$Label.FieldRequired}</label>
+                                <label>{!$Label.PhoneNumber}</label>
+                                <input type="text" id="phoneNumber" maxlength="50" placeholder=""/>
+                                <label id="phoneNumber-error-label" class="error">{!$Label.FieldRequired}</label>
+                                <label>{!$Label.Country}</label>
+                                <select id="country" class="medium"></select>
+                                <label id="country-error-label" class="error">{!$Label.FieldRequired}</label>
+                                <div class="grid-row">
+                                    <div class="six col">
+                                        <label>{!$Label.StreetAddress}</label>
+                                        <input type="text" id="streetAddress" maxlength="100" placeholder=""/>
+                                    </div>
+                                    <div class="six col">
+                                        <label>{!$Label.City}</label>
+                                        <input type="text" id="city" maxlength="100" placeholder=""/>
+                                    </div>
+                                </div>
+                                <div class="grid-row">
+                                    <div class="seven col">
+                                        <label>{!$Label.StateOrProvince}</label>
+                                        <input type="text" id="stateProvince" maxlength="100" placeholder=""
+                                               style="display:none"/>
+                                        <select id="usState" class="medium" style="display:none"></select>
+                                    </div>
+                                    <div class="five col">
+                                        <label>{!$Label.PostCode}</label>
+                                        <input type="text" id="postalCode" maxlength="50" placeholder=""/>
+                                    </div>
+                                </div>
+                                <input type="checkbox" id="marketOptIn"/>
+                                <span id="gdprConsentMessage">
+                                </span>
+                                <div class="inline-button">
+                                    <ul>
+                                        <li><a href="#" id="trialFormNextButton" class="next">{!$Label.Next}</a></li>
+                                        <li><a href="#" id="trialFormBackButton">{!$Label.Back}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Language Settings Modal Begins -->
+        <div class="modal-background" id="languageSettingsModal" style="display:none">
+            <div class="modal">
+                <img class="close-modal" id="languageSettingsCloseIcon" src="{!$Resource.Delete}"></img>
+                <h2>{!$Label.EmailSettings}</h2>
+                <label>{!$Label.Language}</label>
+                <select class="medium" id="languageSettingsDropdown"></select>
+                <label>{!$Label.DefaultEmailSubject}</label>
+                <input type="text" placeholder="" maxlength="255" id="defaultEmailSubject"/>
+                <label class="error email-subject-error-label">{!$Label.FieldRequired}</label>
+                <div class="note-background">
+                    <label>{!$Label.DefaultEmailMessage}</label>
+                    <textarea maxlength="2000" id="defaultEmailMessage"></textarea>
+                </div>
+                <div class="inline-button">
+                    <ul>
+                        <li><a href="#" class="next" id="saveLanguageSettingBtn">{!$Label.Add}</a></li>
+                        <li><a href="#" id="cancelLanguageSettingBtn">{!$Label.Cancel}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Language Settings Modal Ends -->
+
+        <div class="fullscreenload" style="display: none">
+            <img class="docusignlogo" src="{!$Resource.DocuSignLoadingLogo}"/>
+            <div id="circleG">
+                <div id="circleG_1" class="circleG">
+                </div>
+                <div id="circleG_2" class="circleG">
+                </div>
+                <div id="circleG_3" class="circleG">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Users Content Begins -->
+    <div id="usersTabContent" style="display:none">
+        <div class="admin-container">
+            <section>
+                <apex:form >
+                    <c:DocuSignActivateMembers userFilterAttribute="DocuSign Inactive Users"/>
+                </apex:form>
+            </section>
+        </div>
+    </div>
+    <!-- Users Content Ends -->
+</apex:page>

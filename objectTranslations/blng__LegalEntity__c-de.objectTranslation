@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Juristische Person</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Juristische Personen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Juristische Person</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Juristische Personen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Juristischen Person</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Juristischen Personen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Juristischer Person</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Juristischen Personen</value>
+    </caseValues>
+    <fields>
+        <help>Zum Deaktivieren dieser juristischen Person deaktivieren Sie das Kontrollkästchen. Dies hat keine Auswirkung auf vergangene oder bestehende Transaktionen oder Zuweisungen.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>Name der Stadt</help>
+        <label><!-- City --></label>
+        <name>blng__City__c</name>
+    </fields>
+    <fields>
+        <help>Name des Lands</help>
+        <label><!-- Country --></label>
+        <name>blng__Country__c</name>
+    </fields>
+    <fields>
+        <help>Name des Bezirks</help>
+        <label><!-- County --></label>
+        <name>blng__County__c</name>
+    </fields>
+    <fields>
+        <help>Vom System generiert. Eine eindeutige Nummer für den Datensatz dieser juristischen Person.</help>
+        <label><!-- Legal Entity Number --></label>
+        <name>blng__LegalEntityNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Name des Bundesstaats</help>
+        <label><!-- State --></label>
+        <name>blng__State__c</name>
+    </fields>
+    <fields>
+        <help>Straße der primären Anschrift</help>
+        <label><!-- Street 1 --></label>
+        <name>blng__Street1__c</name>
+    </fields>
+    <fields>
+        <help>Straße (Fortsetzung)</help>
+        <label><!-- Street 2 --></label>
+        <name>blng__Street2__c</name>
+    </fields>
+    <fields>
+        <help>PLZ oder Postleitzahl</help>
+        <label><!-- Zip / Postal Code --></label>
+        <name>blng__ZipPostalCode__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Legal Entity Layout</layout>
+        <sections>
+            <label>Adressinformationen</label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name der juristischen Person</nameFieldLabel>
+</CustomObjectTranslation>

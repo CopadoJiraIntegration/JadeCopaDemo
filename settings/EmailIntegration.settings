@@ -3,9 +3,13 @@
     <doesEmailLogAsEmailMessageInOutlook>true</doesEmailLogAsEmailMessageInOutlook>
     <doesGmailStayConnectedToSalesforce>true</doesGmailStayConnectedToSalesforce>
     <enableContactAndEventSync>false</enableContactAndEventSync>
+    <enableEmailTrackingInMobile>false</enableEmailTrackingInMobile>
     <enableEngageForOutlook>false</enableEngageForOutlook>
     <enableGmailIntegration>true</enableGmailIntegration>
+    <enableInboxMobileIntune>false</enableInboxMobileIntune>
     <enableOutlookIntegration>false</enableOutlookIntegration>
+    <enableProductivityFeatures>false</enableProductivityFeatures>
+    <enableSupplementalContactInfoInMobile>false</enableSupplementalContactInfoInMobile>
     <isLayoutCustomizationAllowed>false</isLayoutCustomizationAllowed>
     <orgIsSyncingEventsOutbound>false</orgIsSyncingEventsOutbound>
     <shouldUseTrustedDomainsList>true</shouldUseTrustedDomainsList>

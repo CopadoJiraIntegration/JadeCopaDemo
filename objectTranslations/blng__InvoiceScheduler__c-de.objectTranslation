@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Rechnungsplanung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsplanungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rechnungsplanung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsplanungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rechnungsplanung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Rechnungsplanungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rechnungsplanung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Rechnungsplanungen</value>
+    </caseValues>
+    <fields>
+        <help>Eindeutige ID für den Salesforce-Auftrag.</help>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie diese Option, wenn Rechnungen standardmäßig gebucht werden sollen. Andernfalls werden Rechnungen als Entwürfe generiert.</help>
+        <label><!-- Automatically Post Invoices --></label>
+        <name>blng__AutomaticallyPostInvoices__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie diese Option, wenn die Kostenart des Auftragsprodukts &quot;Nutzung&quot; lautet.</help>
+        <label><!-- Bill Usage Charges --></label>
+        <name>blng__BillUsageCharges__c</name>
+    </fields>
+    <fields>
+        <help>Monatliche Rechnungsläufe werden am letzten Tag des Monats gestartet. Das Startdatum in der Planung muss der letzte Tag des Monats sein.</help>
+        <label><!-- Run at End of Month --></label>
+        <name>blng__EndOfMonth__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie &quot;Ja&quot; aus, um alle Währungen für diese Rechnung zu verarbeiten.</help>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie die Batches zum Verarbeiten von Rechnungen aus.</help>
+        <label><!-- Invoice Batch --></label>
+        <name>blng__InvoiceBatches__c</name>
+    </fields>
+    <fields>
+        <help>Das Rechnungsdatum wird erstellt. Damit wird das Fälligkeitsdatum der Rechnung bestimmt.</help>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie für monatliche Rechnungsläufe eine Zahl für den Tag des Monats aus.</help>
+        <label><!-- Invoice Day Of Month --></label>
+        <name>blng__InvoiceDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <help>Wenn der Rechnungstyp &quot;Wöchentlich&quot; lautet, wählen Sie eine Zahl für den Tag der Woche aus. Sonntag=1</help>
+        <label><!-- Invoice Day Of Week --></label>
+        <name>blng__InvoiceDayOfWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Datum und Uhrzeit für den Beginn des Rechnungsplanungsprozesses.</help>
+        <label><!-- Start Date Time --></label>
+        <name>blng__StartDateTime__c</name>
+    </fields>
+    <fields>
+        <help>Bestimmt, was abgerechnet wird.
+        Aktive Auftragsprodukte, Nutzungszusammenfassungen oder Abrechnungstransaktionen mit &quot;Nächstes Abrechnungsdatum&quot;/&quot;Nächstes Abrechnungsdatum überschreiben&quot; vor oder am Zieldatum werden in Rechnung gestellt.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <help>Bestimmt auf Grundlage des Tags im Monat für das nächste Abrechnungsdatum was abgerechnet wird.</help>
+        <label><!-- Target Day Of Month --></label>
+        <name>blng__TargetDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <help>Bestimmt auf Grundlage des Tags der Woche für das nächste Abrechnungsdatum was abgerechnet wird.</help>
+        <label><!-- Target Day Of Week --></label>
+        <name>blng__TargetDayOfWeek__c</name>
+    </fields>
+    <fields>
+        <help>Legen Sie fest, wie oft Rechnungsläufe ausgeführt werden sollen.</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Invoice Scheduler Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Datumsinformationen</label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label>Monatliche Konfiguration</label>
+            <section>Month Configuration</section>
+        </sections>
+        <sections>
+            <label>Wöchentliche Konfiguration</label>
+            <section>Weekly Configuration</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name der Rechnungsplanung</nameFieldLabel>
+</CustomObjectTranslation>

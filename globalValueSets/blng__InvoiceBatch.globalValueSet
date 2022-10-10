@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Batch 1</fullName>
+        <default>false</default>
+        <label>Batch 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Batch 2</fullName>
+        <default>false</default>
+        <label>Batch 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Batch 3</fullName>
+        <default>false</default>
+        <label>Batch 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Batch 4</fullName>
+        <default>false</default>
+        <label>Batch 4</label>
+    </customValue>
+    <customValue>
+        <fullName>Batch 5</fullName>
+        <default>false</default>
+        <label>Batch 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Batch 6</fullName>
+        <default>false</default>
+        <label>Batch 6</label>
+    </customValue>
+    <customValue>
+        <fullName>TKWW</fullName>
+        <default>false</default>
+        <label>TKWW</label>
+    </customValue>
+    <masterLabel>Invoice Batch</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

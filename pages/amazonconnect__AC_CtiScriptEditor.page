@@ -1,0 +1,123 @@
+<apex:page showHeader="false" sideBar="false" showChat="false" applyHtmlTag="true" applyBodyTag="true" standardController="amazonconnect__AC_CtiScript__c"
+  extensions="amazonconnect.AC_CTIFlowController">
+  <!-- Define iframe -->
+  <apex:iframe id="scriptFrame" src="{! URLFOR($Resource.AC_CtiScriptEditor, '/index.html') }" title="CtiScriptEditor" width="100%"
+    height="100%" frameborder="1" scrolling="true"></apex:iframe>
+
+  <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+
+  <!-- Remote Object Definition -->
+  <apex:remoteObjects >
+    <apex:remoteObjectModel name="amazonconnect__AC_CtiScript__c" jsShorthand="CtiScript">
+      <apex:remoteObjectField name="amazonconnect__Script__c" jsShorthand="Script" />
+      <apex:remoteObjectField name="amazonconnect__Event__c" jsShorthand="Event" />
+      <apex:remoteObjectField name="Name" />
+    </apex:remoteObjectModel>
+  </apex:remoteObjects>
+
+  <script type="text/javascript">
+    (function (ac) {
+      const uiTheme = "{! $User.UIThemeDisplayed }";
+      const uiMode = uiTheme === 'Theme4d' || uiTheme === 'Theme4u' ? 'Lightning' : 'Classic';
+
+      // Adjust size of iframe when browser size changes.
+      let windowOnresize = ac.onresize;
+      ac.onresize = function () {
+        //don't trample the handler; intercept it
+        if (windowOnresize) windowOnresize();
+        document.getElementById('scriptFrame').height = ac.innerHeight - 60;
+      };
+      ac.onresize()
+
+      const id = "{!amazonconnect__AC_CtiScript__c.Id}";
+      const obj = new SObjectModel.CtiScript();
+
+      function htmlDecode(input) {
+        var doc = new DOMParser().parseFromString(input, "text/html");
+        return doc.documentElement.textContent;
+      }
+
+      function parse(v) {
+        try {
+          return JSON.parse(v)
+        } catch (_) {
+          return v
+        }
+      }
+
+      function retrieveObject() {
+        return new Promise((res, rej) => {
+          // Retrieve the value of script from sObject.
+          obj.retrieve({ where: { Id: { eq: id } } }, (error, results, e) => {
+            if (error) {
+              rej(error)
+            } else if (results.length > 0) {
+              const item = results[0]
+              const v = item.get('Script');
+              const scriptValue = v ? parse(htmlDecode(v)) : { "actions": [] };
+
+              if (typeof scriptValue === 'string') {
+                res(scriptValue)
+              } else {
+                scriptValue["uiMode"] = uiMode;
+                scriptValue["name"] = item.get('Name');
+
+                console.log("Name: ", item.get('Name'));
+                console.log("Event: ", item.get('Event'));
+                console.log("uiMode: ", uiMode);
+
+                const v = JSON.stringify(scriptValue)
+                console.log("[CTI ADAPTER]: [FLOW] Configuration: ", v);
+
+                res(v)
+              }
+            }
+          })
+        })
+      }
+
+      // Update sObject using new script value
+      function update(value) {
+        if (!id) return
+        const fields = { Script: value }
+
+        const callback = (err, ids) => {
+          if (err) {
+            console.error(err)
+            // TODO: display error
+          } else {
+            console.log('success!')
+          }
+        }
+        obj.update([id], fields, callback)
+      }
+
+      function openBridge(scriptValue) {
+        // Open a postMessageBridge and wait for iframe to exist
+        ac.Utils.postMessageBridge.waitForChild('#scriptFrame').then(() => {
+          // Listen for messages from the iframe.
+          ac.Utils.postMessageBridge.addMessageHandler((msg) => {
+            const { name, value } = msg
+            // Save the sent script to the database
+            name === 'SAVE_VALUE' && update(value)
+          });
+
+          const language = '{!userLanguage}'
+          ac.Utils.postMessageBridge.sendMessage({
+            name: 'USER_LANGUAGE',
+            value: language
+          })
+
+          // Send the initial script value to the app.
+          ac.Utils.postMessageBridge.sendMessage({
+            name: 'LOAD_VALUE',
+            value: scriptValue,
+          });
+
+        })
+      }
+
+      retrieveObject().then(openBridge)
+    })(this)
+  </script>
+</apex:page>

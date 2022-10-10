@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Salesforce Billing</label>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>SBQQ__Quote__c</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>blng__Invoice__c</tabs>
+    <tabs>blng__Payment__c</tabs>
+    <tabs>blng__CreditNote__c</tabs>
+    <tabs>blng__DebitNote__c</tabs>
+    <tabs>blng__Refund__c</tabs>
+    <tabs>blng__InvoicePlan__c</tabs>
+    <tabs>blng__InvoiceScheduler__c</tabs>
+    <tabs>blng__InvoiceRun__c</tabs>
+    <tabs>blng__PaymentScheduler__c</tabs>
+    <tabs>blng__PaymentTransaction__c</tabs>
+    <tabs>blng__RevenueSchedule__c</tabs>
+    <tabs>blng__RevenueTransaction__c</tabs>
+    <tabs>blng__BillingRule__c</tabs>
+    <tabs>blng__TaxRule__c</tabs>
+    <tabs>blng__RevenueRecognitionRule__c</tabs>
+    <tabs>blng__GLRule__c</tabs>
+    <tabs>blng__Usage__c</tabs>
+    <tabs>blng__UsageSummary__c</tabs>
+    <tabs>SBQQ__DiscountSchedule__c</tabs>
+    <tabs>standard-ConsumptionSchedule</tabs>
+    <tabs>blng__PaymentGateway__c</tabs>
+    <tabs>blng__PaymentMethod__c</tabs>
+    <tabs>CustomLookupData__c</tabs>
+    <tabs>CustomerPrices__c</tabs>
+    <tabs>Addresses__c</tabs>
+    <tabs>Leave_Tracker__c</tabs>
+    <tabs>ProductRecommendation__c</tabs>
+    <tabs>Rate_Card__c</tabs>
+    <tabs>Favorites__c</tabs>
+    <tabs>Renewal_Scenario__c</tabs>
+    <tabs>Business_Profile__c</tabs>
+</CustomApplication>

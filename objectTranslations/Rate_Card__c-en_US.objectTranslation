@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rate Card</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rate Cards</value>
+    </caseValues>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>All Venues</masterLabel>
+            <translation><!-- All Venues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banquet Halls</masterLabel>
+            <translation><!-- Banquet Halls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar Services &amp; Beverages</masterLabel>
+            <translation><!-- Bar Services &amp; Beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barn &amp; Farm Weddings</masterLabel>
+            <translation><!-- Barn &amp; Farm Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beach Weddings</masterLabel>
+            <translation><!-- Beach Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boat Weddings</masterLabel>
+            <translation><!-- Boat Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church &amp; Temple Weddings</masterLabel>
+            <translation><!-- Church &amp; Temple Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Country Club Weddings</masterLabel>
+            <translation><!-- Country Club Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dance Lessons</masterLabel>
+            <translation><!-- Dance Lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Weddings</masterLabel>
+            <translation><!-- Garden Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Historic Weddings</masterLabel>
+            <translation><!-- Historic Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel Weddings</masterLabel>
+            <translation><!-- Hotel Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mansion Weddings</masterLabel>
+            <translation><!-- Mansion Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Museum Weddings</masterLabel>
+            <translation><!-- Museum Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Park &amp; Outdoor Weddings</masterLabel>
+            <translation><!-- Park &amp; Outdoor Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photo Booths</masterLabel>
+            <translation><!-- Photo Booths --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rehearsal Dinner</masterLabel>
+            <translation><!-- Rehearsal Dinner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant Weddings</masterLabel>
+            <translation><!-- Restaurant Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rooftop Weddings</masterLabel>
+            <translation><!-- Rooftop Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Agents</masterLabel>
+            <translation><!-- Travel Agents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waterfront Weddings</masterLabel>
+            <translation><!-- Waterfront Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Bands</masterLabel>
+            <translation><!-- Wedding Bands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Cakes</masterLabel>
+            <translation><!-- Wedding Cakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Caterers</masterLabel>
+            <translation><!-- Wedding Caterers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding DJs</masterLabel>
+            <translation><!-- Wedding DJs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Decor &amp; Lighting</masterLabel>
+            <translation><!-- Wedding Decor &amp; Lighting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Dresses</masterLabel>
+            <translation><!-- Wedding Dresses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Favors</masterLabel>
+            <translation><!-- Wedding Favors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Florists</masterLabel>
+            <translation><!-- Wedding Florists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Hair &amp; Makeup</masterLabel>
+            <translation><!-- Wedding Hair &amp; Makeup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Invitations</masterLabel>
+            <translation><!-- Wedding Invitations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Jewelers</masterLabel>
+            <translation><!-- Wedding Jewelers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Limos</masterLabel>
+            <translation><!-- Wedding Limos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Musicians</masterLabel>
+            <translation><!-- Wedding Musicians --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Officiants</masterLabel>
+            <translation><!-- Wedding Officiants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Photographers</masterLabel>
+            <translation><!-- Wedding Photographers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Planners</masterLabel>
+            <translation><!-- Wedding Planners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Rentals</masterLabel>
+            <translation><!-- Wedding Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wedding Videographers</masterLabel>
+            <translation><!-- Wedding Videographers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winery Weddings</masterLabel>
+            <translation><!-- Winery Weddings --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>Market__c</name>
+        <picklistValues>
+            <masterLabel>Alabama - Birmingham, Huntsville, Tuscaloosa</masterLabel>
+            <translation><!-- Alabama - Birmingham, Huntsville, Tuscaloosa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alabama - Montgomery, Dothan</masterLabel>
+            <translation><!-- Alabama - Montgomery, Dothan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska - Anchorage, Fairbanks</masterLabel>
+            <translation><!-- Alaska - Anchorage, Fairbanks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Samoa - American Samoa</masterLabel>
+            <translation><!-- American Samoa - American Samoa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anguilla - Anguilla</masterLabel>
+            <translation><!-- Anguilla - Anguilla --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antigua and Barbuda - Antigua and Barbuda</masterLabel>
+            <translation><!-- Antigua and Barbuda - Antigua and Barbuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona - Phoenix</masterLabel>
+            <translation><!-- Arizona - Phoenix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona - Tucson</masterLabel>
+            <translation><!-- Arizona - Tucson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas - Little Rock</masterLabel>
+            <translation><!-- Arkansas - Little Rock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aruba - Aruba</masterLabel>
+            <translation><!-- Aruba - Aruba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bahamas - Bahamas</masterLabel>
+            <translation><!-- Bahamas - Bahamas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbados - Barbados</masterLabel>
+            <translation><!-- Barbados - Barbados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belize - Belize</masterLabel>
+            <translation><!-- Belize - Belize --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bermuda - Bermuda</masterLabel>
+            <translation><!-- Bermuda - Bermuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Virgin Islands - British Virgin Islands</masterLabel>
+            <translation><!-- British Virgin Islands - British Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Central Valley, Fresno, Bakersfield</masterLabel>
+            <translation><!-- California - Central Valley, Fresno, Bakersfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Inland Empire</masterLabel>
+            <translation><!-- California - Inland Empire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Los Angeles County</masterLabel>
+            <translation><!-- California - Los Angeles County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Monterey</masterLabel>
+            <translation><!-- California - Monterey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Napa Valley, Sonoma County</masterLabel>
+            <translation><!-- California - Napa Valley, Sonoma County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Orange County</masterLabel>
+            <translation><!-- California - Orange County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Sacramento, Modesto</masterLabel>
+            <translation><!-- California - Sacramento, Modesto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - San Diego, La Jolla, Coronado, Carlsbad</masterLabel>
+            <translation><!-- California - San Diego, La Jolla, Coronado, Carlsbad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - San Francisco, San Jose, Oakland</masterLabel>
+            <translation><!-- California - San Francisco, San Jose, Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California - Santa Barbara, Ventura, San Luis Obispo</masterLabel>
+            <translation><!-- California - Santa Barbara, Ventura, San Luis Obispo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cayman Islands - Cayman Islands</masterLabel>
+            <translation><!-- Cayman Islands - Cayman Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado - Denver, Colorado Springs, Boulder, Vail</masterLabel>
+            <translation><!-- Colorado - Denver, Colorado Springs, Boulder, Vail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut - Hartford, New Haven</masterLabel>
+            <translation><!-- Connecticut - Hartford, New Haven --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Costa Rica - Costa Rica</masterLabel>
+            <translation><!-- Costa Rica - Costa Rica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curacao - Curacao</masterLabel>
+            <translation><!-- Curacao - Curacao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware - Dover, Wilmington, DE/MD Beaches</masterLabel>
+            <translation><!-- Delaware - Dover, Wilmington, DE/MD Beaches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia - Washington DC, Maryland, Northern Virginia</masterLabel>
+            <translation><!-- District of Columbia - Washington DC, Maryland, Northern Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominican Republic - Dominican Republic</masterLabel>
+            <translation><!-- Dominican Republic - Dominican Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Fort Myers, Naples</masterLabel>
+            <translation><!-- Florida - Fort Myers, Naples --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Jacksonville, Brunswick</masterLabel>
+            <translation><!-- Florida - Jacksonville, Brunswick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Miami, Ft. Lauderdale, West Palm Beach</masterLabel>
+            <translation><!-- Florida - Miami, Ft. Lauderdale, West Palm Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Orlando, Daytona Beach</masterLabel>
+            <translation><!-- Florida - Orlando, Daytona Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Panhandle, Mobile</masterLabel>
+            <translation><!-- Florida - Panhandle, Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Tallahassee, Thomasville</masterLabel>
+            <translation><!-- Florida - Tallahassee, Thomasville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - Tampa, St. Petersburg, Sarasota</masterLabel>
+            <translation><!-- Florida - Tampa, St. Petersburg, Sarasota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida - The Florida Keys</masterLabel>
+            <translation><!-- Florida - The Florida Keys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France - France</masterLabel>
+            <translation><!-- France - France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Polynesia - French Polynesia</masterLabel>
+            <translation><!-- French Polynesia - French Polynesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Atlanta, Athens, Augusta, Macon</masterLabel>
+            <translation><!-- Georgia - Atlanta, Athens, Augusta, Macon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Columbus, Albany</masterLabel>
+            <translation><!-- Georgia - Columbus, Albany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia - Savannah</masterLabel>
+            <translation><!-- Georgia - Savannah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greece - Greece</masterLabel>
+            <translation><!-- Greece - Greece --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grenada - Grenada</masterLabel>
+            <translation><!-- Grenada - Grenada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guam - Guam</masterLabel>
+            <translation><!-- Guam - Guam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii - Honolulu</masterLabel>
+            <translation><!-- Hawaii - Honolulu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho - Boise, Idaho Falls, Twin Falls</masterLabel>
+            <translation><!-- Idaho - Boise, Idaho Falls, Twin Falls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Chicago</masterLabel>
+            <translation><!-- Illinois - Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Chicago Suburbs</masterLabel>
+            <translation><!-- Illinois - Chicago Suburbs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois - Springfield, Champaign, Peoria</masterLabel>
+            <translation><!-- Illinois - Springfield, Champaign, Peoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana - Indianapolis, Lafayette, Terre Haute</masterLabel>
+            <translation><!-- Indiana - Indianapolis, Lafayette, Terre Haute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana - South Bend, Elkhart</masterLabel>
+            <translation><!-- Indiana - South Bend, Elkhart --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa - Cedar Rapids, Davenport, Mason City</masterLabel>
+            <translation><!-- Iowa - Cedar Rapids, Davenport, Mason City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa - Des Moines, Ottumwa, Sioux City</masterLabel>
+            <translation><!-- Iowa - Des Moines, Ottumwa, Sioux City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ireland - Ireland</masterLabel>
+            <translation><!-- Ireland - Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy - Italy</masterLabel>
+            <translation><!-- Italy - Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jamaica - Jamaica</masterLabel>
+            <translation><!-- Jamaica - Jamaica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas - Topeka</masterLabel>
+            <translation><!-- Kansas - Topeka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas - Wichita</masterLabel>
+            <translation><!-- Kansas - Wichita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky - Lexington, Louisville</masterLabel>
+            <translation><!-- Kentucky - Lexington, Louisville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky - Paducah, Bowling Green</masterLabel>
+            <translation><!-- Kentucky - Paducah, Bowling Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana - New Orleans, Baton Rouge, Lafayette</masterLabel>
+            <translation><!-- Louisiana - New Orleans, Baton Rouge, Lafayette --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana - Shreveport, Monroe</masterLabel>
+            <translation><!-- Louisiana - Shreveport, Monroe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine - Portland, Bangor, Presque Isle</masterLabel>
+            <translation><!-- Maine - Portland, Bangor, Presque Isle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marshall Islands - Marshall Islands</masterLabel>
+            <translation><!-- Marshall Islands - Marshall Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland - Baltimore</masterLabel>
+            <translation><!-- Maryland - Baltimore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Boston, Watertown, Waltham</masterLabel>
+            <translation><!-- Massachusetts - Boston, Watertown, Waltham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Cape Cod, Martha&apos;s Vineyard, Nantucket</masterLabel>
+            <translation><!-- Massachusetts - Cape Cod, Martha&apos;s Vineyard, Nantucket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts - Springfield, Holyoke, Pittsfield</masterLabel>
+            <translation><!-- Massachusetts - Springfield, Holyoke, Pittsfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico - Eastern Mexico</masterLabel>
+            <translation><!-- Mexico - Eastern Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico - Western Mexico</masterLabel>
+            <translation><!-- Mexico - Western Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan - Detroit, Flint, Saginaw Bay</masterLabel>
+            <translation><!-- Michigan - Detroit, Flint, Saginaw Bay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan - Grand Rapids, Kalamazoo, Lansing</masterLabel>
+            <translation><!-- Michigan - Grand Rapids, Kalamazoo, Lansing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota - Minneapolis, St. Paul, Duluth, Rochester</masterLabel>
+            <translation><!-- Minnesota - Minneapolis, St. Paul, Duluth, Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi - Jackson, Biloxi, Columbus</masterLabel>
+            <translation><!-- Mississippi - Jackson, Biloxi, Columbus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - Kansas City, St. Joseph</masterLabel>
+            <translation><!-- Missouri - Kansas City, St. Joseph --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - Springfield, Joplin, Pittsburg</masterLabel>
+            <translation><!-- Missouri - Springfield, Joplin, Pittsburg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri - St. Louis, Columbia, Jefferson City, Quincy</masterLabel>
+            <translation><!-- Missouri - St. Louis, Columbia, Jefferson City, Quincy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana - Missoula, Bozeman, Billings</masterLabel>
+            <translation><!-- Montana - Missoula, Bozeman, Billings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska - Lincoln, Omaha, North Platte</masterLabel>
+            <translation><!-- Nebraska - Lincoln, Omaha, North Platte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada - Las Vegas</masterLabel>
+            <translation><!-- Nevada - Las Vegas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada - Reno, Tahoe</masterLabel>
+            <translation><!-- Nevada - Reno, Tahoe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire - Concord, Nashua, Manchester</masterLabel>
+            <translation><!-- New Hampshire - Concord, Nashua, Manchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Central Jersey, Union, Trenton</masterLabel>
+            <translation><!-- New Jersey - Central Jersey, Union, Trenton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Jersey Shore, Atlantic City</masterLabel>
+            <translation><!-- New Jersey - Jersey Shore, Atlantic City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Northern New Jersey, Newark</masterLabel>
+            <translation><!-- New Jersey - Northern New Jersey, Newark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey - Southern New Jersey</masterLabel>
+            <translation><!-- New Jersey - Southern New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico - Albuquerque, Santa Fe</masterLabel>
+            <translation><!-- New Mexico - Albuquerque, Santa Fe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Albany, Saratoga Springs, Adirondacks</masterLabel>
+            <translation><!-- New York - Albany, Saratoga Springs, Adirondacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Buffalo, Rochester</masterLabel>
+            <translation><!-- New York - Buffalo, Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Long Island</masterLabel>
+            <translation><!-- New York - Long Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Manhattan</masterLabel>
+            <translation><!-- New York - Manhattan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Outer Boroughs</masterLabel>
+            <translation><!-- New York - Outer Boroughs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Syracuse, Binghamton, Elmira, Utica</masterLabel>
+            <translation><!-- New York - Syracuse, Binghamton, Elmira, Utica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York - Westchester, Western Connecticut</masterLabel>
+            <translation><!-- New York - Westchester, Western Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Charlotte, Asheville</masterLabel>
+            <translation><!-- North Carolina - Charlotte, Asheville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Outer Banks</masterLabel>
+            <translation><!-- North Carolina - Outer Banks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Raleigh - Triangle, Greensboro - Triad</masterLabel>
+            <translation><!-- North Carolina - Raleigh - Triangle, Greensboro - Triad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina - Wilmington, Eastern Coast</masterLabel>
+            <translation><!-- North Carolina - Wilmington, Eastern Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota - Bismarck, Fargo</masterLabel>
+            <translation><!-- North Dakota - Bismarck, Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Mariana Islands - Northern Mariana Islands</masterLabel>
+            <translation><!-- Northern Mariana Islands - Northern Mariana Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Cincinnati, Dayton</masterLabel>
+            <translation><!-- Ohio - Cincinnati, Dayton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Cleveland, Erie</masterLabel>
+            <translation><!-- Ohio - Cleveland, Erie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Columbus, Zanesville</masterLabel>
+            <translation><!-- Ohio - Columbus, Zanesville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio - Toledo, Bowling Green, Lima</masterLabel>
+            <translation><!-- Ohio - Toledo, Bowling Green, Lima --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma - Oklahoma City</masterLabel>
+            <translation><!-- Oklahoma - Oklahoma City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma - Tulsa</masterLabel>
+            <translation><!-- Oklahoma - Tulsa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon - Eugene, Bend, Medford</masterLabel>
+            <translation><!-- Oregon - Eugene, Bend, Medford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon - Portland</masterLabel>
+            <translation><!-- Oregon - Portland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palau - Palau</masterLabel>
+            <translation><!-- Palau - Palau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Lancaster, Harrisburg, York</masterLabel>
+            <translation><!-- Pennsylvania - Lancaster, Harrisburg, York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Philadelphia, Lehigh Valley</masterLabel>
+            <translation><!-- Pennsylvania - Philadelphia, Lehigh Valley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Pittsburgh, Wheeling</masterLabel>
+            <translation><!-- Pennsylvania - Pittsburgh, Wheeling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania - Scranton</masterLabel>
+            <translation><!-- Pennsylvania - Scranton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portugal - Portugal</masterLabel>
+            <translation><!-- Portugal - Portugal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico - Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico - Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island - Providence, New Bedford</masterLabel>
+            <translation><!-- Rhode Island - Providence, New Bedford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Charleston, Florence, Myrtle Beach</masterLabel>
+            <translation><!-- South Carolina - Charleston, Florence, Myrtle Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Columbia, Greenville</masterLabel>
+            <translation><!-- South Carolina - Columbia, Greenville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina - Hilton Head</masterLabel>
+            <translation><!-- South Carolina - Hilton Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota - Sioux Falls, Rapid City</masterLabel>
+            <translation><!-- South Dakota - Sioux Falls, Rapid City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spain - Spain</masterLabel>
+            <translation><!-- Spain - Spain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Barts - St. Barts</masterLabel>
+            <translation><!-- St. Barts - St. Barts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Lucia - St. Lucia</masterLabel>
+            <translation><!-- St. Lucia - St. Lucia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Martin / St. Maarten - St. Martin / St. Maarten</masterLabel>
+            <translation><!-- St. Martin / St. Maarten - St. Martin / St. Maarten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Knoxville, Chattanooga, Tri-Cities</masterLabel>
+            <translation><!-- Tennessee - Knoxville, Chattanooga, Tri-Cities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Memphis, Jackson, Jonesboro</masterLabel>
+            <translation><!-- Tennessee - Memphis, Jackson, Jonesboro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee - Nashville</masterLabel>
+            <translation><!-- Tennessee - Nashville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Austin</masterLabel>
+            <translation><!-- Texas - Austin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Dallas, Ft. Worth, Wichita Falls</masterLabel>
+            <translation><!-- Texas - Dallas, Ft. Worth, Wichita Falls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - El Paso, Amarillo, Odessa</masterLabel>
+            <translation><!-- Texas - El Paso, Amarillo, Odessa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - Houston, Beaumont</masterLabel>
+            <translation><!-- Texas - Houston, Beaumont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas - San Antonio, Corpus Christi</masterLabel>
+            <translation><!-- Texas - San Antonio, Corpus Christi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trinidad and Tobago - Trinidad and Tobago</masterLabel>
+            <translation><!-- Trinidad and Tobago - Trinidad and Tobago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turks and Caicos - Turks + Caicos</masterLabel>
+            <translation><!-- Turks and Caicos - Turks + Caicos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom - United Kingdom</masterLabel>
+            <translation><!-- United Kingdom - United Kingdom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah - Salt Lake City</masterLabel>
+            <translation><!-- Utah - Salt Lake City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont - Burlington, Plattsburgh</masterLabel>
+            <translation><!-- Vermont - Burlington, Plattsburgh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin Islands - Virgin Islands</masterLabel>
+            <translation><!-- Virgin Islands - Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia - Hampton Roads</masterLabel>
+            <translation><!-- Virginia - Hampton Roads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia - Richmond, Charlottesville, Roanoke</masterLabel>
+            <translation><!-- Virginia - Richmond, Charlottesville, Roanoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington - Seattle, Tacoma, Olympia</masterLabel>
+            <translation><!-- Washington - Seattle, Tacoma, Olympia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington - Spokane, Yakima, Cour d&apos;Alene</masterLabel>
+            <translation><!-- Washington - Spokane, Yakima, Cour d&apos;Alene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia - Charleston</masterLabel>
+            <translation><!-- West Virginia - Charleston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin - Green Bay, Appleton, Door County</masterLabel>
+            <translation><!-- Wisconsin - Green Bay, Appleton, Door County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin - Milwaukee, Madison</masterLabel>
+            <translation><!-- Wisconsin - Milwaukee, Madison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming - Cheyenne, Casper, Laramie, Jackson</masterLabel>
+            <translation><!-- Wyoming - Cheyenne, Casper, Laramie, Jackson --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Tier --></label>
+        <name>Product_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Featured</masterLabel>
+            <translation><!-- Featured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spotlight</masterLabel>
+            <translation><!-- Spotlight --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Rate Cards --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Yearly Rate --></label>
+        <name>Yearly_Rate__c</name>
+    </fields>
+    <layouts>
+        <layout>Rate Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

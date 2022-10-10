@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Planification de consommation de produit de commande</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planifications de consommation de produit de commande</value>
+    </caseValues>
+    <fields>
+        <help>L&apos;unité utilisée dans les durées de facturation pour déterminer la fréquence de facturation.</help>
+        <label><!-- Billing Term Unit --></label>
+        <name>SBQQ__BillingTermUnit__c</name>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation>Mois</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation>Trimestre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation>Année</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Le chiffre utilisé dans l&apos;unité de durée de facturation pour déterminer la fréquence de facturation.</help>
+        <label><!-- Billing Term --></label>
+        <name>SBQQ__BillingTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>SBQQ__Category__c</name>
+        <picklistValues>
+            <masterLabel>Rates</masterLabel>
+            <translation>Taux</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumption Schedule --></label>
+        <name>SBQQ__ConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Order Product Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>L&apos;utilisation est comparée à une planification de consommation si les enregistrements partagent la même valeur Attribut de correspondance.</help>
+        <label><!-- Matching Attribute --></label>
+        <name>SBQQ__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Item --></label>
+        <name>SBQQ__OrderItem__c</name>
+        <relationshipLabel><!-- Order Product Consumption Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Choisissez un cas d&apos;utilisation spécifique pour évaluer l&apos;utilisation par rapport à cette planification. Cette liste de sélection contrôle le champ Type.</help>
+        <label><!-- Rating Method --></label>
+        <name>SBQQ__RatingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Tier</masterLabel>
+            <translation>Niveau</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Par plage : la planification calcule les prix uniquement en utilisant le niveau applicable à la quantité d&apos;utilisation. Par palier : l&apos;utilisation comprise dans les limites du palier reçoit une tarification égale à la valeur de son niveau</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>Par plage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slab</masterLabel>
+            <translation>Par palier</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Les quantités et les taux d&apos;utilisation appliquent cette unité de mesure.</help>
+        <label><!-- Unit of Measure --></label>
+        <name>SBQQ__UnitOfMeasure__c</name>
+        <picklistValues>
+            <masterLabel>GigaBytes</masterLabel>
+            <translation><!-- GigaBytes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leads</masterLabel>
+            <translation><!-- Leads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation>Aucun</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Billing GL Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Billing GL Treatment --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à la règle de facturation attribuée</help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Billing Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Billing Treatment --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à l’objet Livre comptable utilisé pour enregistrer l&apos;écriture comptable de ce Planning de consommation de produit de commande.</help>
+        <label><!-- Finance Book (Accounting) --></label>
+        <name>blng__FinanceBookAccounting__c</name>
+        <relationshipLabel><!-- Finance Book (Accounting) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Legal Entity --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Tax GL Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Tax GL Treatment --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à la règle fiscale attribuée</help>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Tax Rule --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Tax Treatment --></relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Billing Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label>Informations sur la règle de facturation</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations sur la règle du Grand livre</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Information sur la comptabilisation du revenu</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Informations fiscales</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Demo Billing Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label>Informations sur la règle de facturation</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations sur la règle du Grand livre</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Information sur la comptabilisation du revenu</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Informations fiscales</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Product Consumption Schedule Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de planification de consommation de </nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

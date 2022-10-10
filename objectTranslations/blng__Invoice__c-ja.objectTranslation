@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>請求書</value>
+    </caseValues>
+    <fields>
+        <label><!-- Invoice Status --></label>
+        <name>Invoice_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, this Invoice will be excluded from being attached to a Collections Plan. --></help>
+        <label><!-- Hold Collections --></label>
+        <name>SFBD__HoldCollections__c</name>
+    </fields>
+    <fields>
+        <label><!-- AR Status --></label>
+        <name>blng__ARStatus__c</name>
+    </fields>
+    <fields>
+        <help>この請求書の請求先勘定のルックアップ</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>blng__Action__c</name>
+    </fields>
+    <fields>
+        <help>残高 = 総額 - 合計正価支払 - 適用クレジットノート + 適用デビットノート + マイナス品目変換</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <help>この請求書の取引先責任者(請求先) のルックアップ</help>
+        <label><!-- Bill To Contact --></label>
+        <name>blng__BillToContact__c</name>
+        <relationshipLabel><!-- Invoices (BillToContact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Corrective Action (Payment Run) --></label>
+        <name>blng__CorrectiveAction__c</name>
+        <picklistValues>
+            <masterLabel>Action Required</masterLabel>
+            <translation>アクションが必要</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この請求書に適用される、すべてのクレジットノート金額の合計</help>
+        <label><!-- Credits --></label>
+        <name>blng__Credits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Outstanding --></label>
+        <name>blng__DaysOutstanding__c</name>
+    </fields>
+    <fields>
+        <help>この請求書に割り当てられたデビットノートに対する、すべての支払割り当ておよび支払割り当て解除の合計</help>
+        <label><!-- Debit Payments --></label>
+        <name>blng__DebitPayments__c</name>
+    </fields>
+    <fields>
+        <help>この請求書に適用される、すべてのデビットノート金額の合計</help>
+        <label><!-- Debits --></label>
+        <name>blng__Debits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Declined Payment Count (Payment Run) --></label>
+        <name>blng__DeclinedPaymentRunCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>blng__DefaultPaymentType__c</name>
+    </fields>
+    <fields>
+        <help>請求書の支払期限の日付。</help>
+        <label><!-- Due Date --></label>
+        <name>blng__DueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <help>期日および財務報告期間に影響します。</help>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <help>支払処理が進んでおり、請求書はロックされています。ロック解除する前に、この請求書に対して支払がすでに作成されているかどうかを確認してください。</help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </fields>
+    <fields>
+        <help>請求書が転記された日付</help>
+        <label><!-- Invoice Posted Date --></label>
+        <name>blng__InvoicePostedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run (Created By) --></label>
+        <name>blng__InvoiceRunCreatedBy__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__InvoiceStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Run --></label>
+        <name>blng__LastPaymentRunId__c</name>
+        <relationshipLabel><!-- Invoices (Last Payment Run) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Run Processing Message --></label>
+        <name>blng__LastPaymentRunProcessingMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Negative Line Conversion --></label>
+        <name>blng__NegativeLineConversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Invoice Lines --></label>
+        <name>blng__NumberOfInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>blng__PaymentBatch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Autopay Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この項目は、今後のリリースで廃止される予定です</help>
+        <label><!-- Payment Process Status (deprecated) --></label>
+        <name>blng__PaymentProcessStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Run --></label>
+        <name>blng__PaymentRunId__c</name>
+        <relationshipLabel><!-- Invoices (Payment Run) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Run Processing Message --></label>
+        <name>blng__PaymentRunProcessingMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Status --></label>
+        <name>blng__PaymentStatus__c</name>
+    </fields>
+    <fields>
+        <help>請求書の請求書品目に割り当てられた支払金額の合計。</help>
+        <label><!-- Allocations Against Invoice Lines --></label>
+        <name>blng__PaymentsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help>請求書ヘッダーに割り当てられた支払金額の合計。品目レベルの割り当てを使用しないときに限って使用されます。</help>
+        <label><!-- Allocations Against Invoice --></label>
+        <name>blng__PaymentsAgainstInvoice__c</name>
+    </fields>
+    <fields>
+        <help>この請求書に対する正価支払</help>
+        <label><!-- Payments --></label>
+        <name>blng__Payments__c</name>
+    </fields>
+    <fields>
+        <help>請求書品目への以前の割り当てのキャンセル</help>
+        <label><!-- Unallocations Against Invoice Lines --></label>
+        <name>blng__RefundsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help>請求書への以前の割り当てのキャンセル</help>
+        <label><!-- Unallocations Against Invoice --></label>
+        <name>blng__RefundsAgainstInvoice__c</name>
+    </fields>
+    <fields>
+        <help>オレンジ = 残高がある有効請求書。緑 = 差引請求額なし。赤 = 期日超過。白 = キャンセル済み</help>
+        <label><!-- Status Flag --></label>
+        <name>blng__StatusFlag__c</name>
+    </fields>
+    <fields>
+        <help>請求書合計 (税抜)</help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target  Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <help>この請求書の税金総額</help>
+        <label><!-- Tax --></label>
+        <name>blng__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Errors --></label>
+        <name>blng__TaxErrors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <help>請求書合計 (税込)。小計 + 税金に等しくなります。</help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <help>この請求書の一意の ID</help>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label>残高情報</label>
+            <section>Balance Information</section>
+        </sections>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dunning and Collection --></label>
+            <section>Dunning and Collection</section>
+        </sections>
+        <sections>
+            <label>請求書発行日情報</label>
+            <section>Invoice Date Information</section>
+        </sections>
+        <sections>
+            <label>支払の実行の情報</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>支払の実行のオプション</label>
+            <section>Payment Run Options</section>
+        </sections>
+        <sections>
+            <label>価格情報</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>税金情報</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>請求書番号</nameFieldLabel>
+    <quickActions>
+        <label><!-- Update Invoice --></label>
+        <name>blng__Cancel_Rebill</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Cancel_Rebill --></label>
+        <name>blng__Cancel_Rebill</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ConvertNegativeLines --></label>
+        <name>blng__ConvertNegativeLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit --></label>
+        <name>blng__Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Payment_Virtual_Terminal --></label>
+        <name>blng__Payment_Virtual_Terminal</name>
+    </webLinks>
+</CustomObjectTranslation>

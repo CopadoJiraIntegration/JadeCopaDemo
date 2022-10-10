@@ -4301,7 +4301,7 @@
             <integrationValue>United States</integrationValue>
             <isoCode>US</isoCode>
             <label>United States</label>
-            <orgDefault>false</orgDefault>
+            <orgDefault>true</orgDefault>
             <standard>true</standard>
             <states>
                 <active>false</active>

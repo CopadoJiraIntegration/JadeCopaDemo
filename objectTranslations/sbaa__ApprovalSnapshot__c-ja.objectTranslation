@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>承認スナップショット</value>
+    </caseValues>
+    <fields>
+        <help>値の取得元である承認条件</help>
+        <label><!-- Approval Condition --></label>
+        <name>sbaa__ApprovalCondition__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>保存されるスナップショットの関連承認</help>
+        <label><!-- Approval --></label>
+        <name>sbaa__Approval__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>取得された日付</help>
+        <label><!-- Approved Value (Date) --></label>
+        <name>sbaa__ApprovedValueDate__c</name>
+    </fields>
+    <fields>
+        <help>取得されたロングテキスト</help>
+        <label><!-- Approved Value (Long Text) --></label>
+        <name>sbaa__ApprovedValueLongText__c</name>
+    </fields>
+    <fields>
+        <help>取得された数値</help>
+        <label><!-- Approved Value (Numeric) --></label>
+        <name>sbaa__ApprovedValueNumeric__c</name>
+    </fields>
+    <fields>
+        <help>取得されたテキスト値</help>
+        <label><!-- Approved Value (Text) --></label>
+        <name>sbaa__ApprovedValueText__c</name>
+    </fields>
+    <layouts>
+        <layout>Approval Snapshot Layout</layout>
+        <sections>
+            <label>承認された値の情報</label>
+            <section>Approved Value Information</section>
+        </sections>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>承認スナップショット番号</nameFieldLabel>
+</CustomObjectTranslation>

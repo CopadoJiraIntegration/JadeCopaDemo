@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Umsatzrealisierungsregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Umsatzrealisierungsregeln</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Umsatzrealisierungsregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Umsatzrealisierungsregeln</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Umsatzrealisierungsregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Umsatzrealisierungsregeln</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Umsatzrealisierungsregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Umsatzrealisierungsregeln</value>
+    </caseValues>
+    <fields>
+        <help>Zum Deaktivieren der Umsatzrealisierungsregel deaktivieren Sie das Kontrollkästchen. Dies hat keine Auswirkung auf ausstehende oder vergangene
+        Transaktionen, die die Regel referenzieren.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Revenue Schedule? --></label>
+        <name>blng__CreateRevenueSchedule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Revenue Recognition Rule Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name</nameFieldLabel>
+    <quickActions>
+        <label><!-- Validate Revenue Recognition Treatments --></label>
+        <name>blng__ValidateRevenueRecogitionTreatments</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- ValidateRevenueRecognitionTreatments --></label>
+        <name>blng__ValidateRevenueRecognitionTreatments</name>
+    </webLinks>
+</CustomObjectTranslation>

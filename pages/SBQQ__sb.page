@@ -1,0 +1,107 @@
+<apex:page tabStyle="SBQQ__Quote__c" doctype="html-5.0" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader) && formFactor == 'desktop'}" cache="true" standardStylesheets="false" controller="SBQQ.SettingsExtension">
+	<apex:includeScript value="/support/console/42.0/integration.js"/>
+	<apex:stylesheet value="{!URLFOR($Resource.SBQQ__dialog,'dialog.css')}" />
+	<script type="text/javascript" src="{!URLFOR($Resource.dialog, 'dialog.js')}"></script>
+	<style>
+		body {
+			overflow: hidden !important;
+		}
+		html body.sfdcBody {
+			overflow-y: hidden !important;
+		}
+
+		.showTemplatePreviewMode::before {
+			content: 'Previewing most recently used quote';
+			display: inline-block;
+			width: 100%;
+			padding: 0.5rem 0 ;
+			text-align: center;
+			font-size: 1.6em;
+			color: #16325c;
+			background-color: #ffb75d;
+			background-image: linear-gradient(45deg,rgba(0,0,0,.025) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.025) 50%,rgba(0,0,0,.025) 75%,transparent 75%,transparent);
+			background-size: 100px 100px;
+			white-space: pre;
+		}
+
+		#bodyCell {
+			position: relative;
+			overflow: hidden;
+			padding: 0px;
+			display: inline-block;
+			width: 100%;
+			min-height: 500px;
+		}
+
+		#sidebarCell.sidebarCollapsed {
+			padding-left: 0;
+			width:1px;
+		}
+		.noSidebarCell.noSidebarCell {
+			padding: 0;
+		}
+		#MoreTabs_Tab > #MoreTabs_List {
+			z-index: 10;  // must be larger than fixed page header (tab overflow dropdown)
+		}
+
+		.sbPleaseWait{
+			font-family: 'Salesforce Sans', 'Open Sans', Arial, sans-serif;
+			font-size: 1.3rem;
+			font-weight: 300;
+			left: 0;
+			line-height: 200px;
+			margin-top: -100px;
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			width: 100%;
+		}
+
+		iron-dropdown > #contentWrapper {
+			min-width: 0;
+		}
+	</style>
+
+	<!--Render Polymer1 or Polymer3, depending on package setting-->
+	<c:polymer1Page rendered="{!$Setup.SBQQ__GeneralSettings__c.SBQQ__EnablePolymer3UI__c == false}"/>
+	<c:polymer3Page rendered="{!$Setup.SBQQ__GeneralSettings__c.SBQQ__EnablePolymer3UI__c == true}"/>
+
+	<style>
+		/* TODO: [Temporary pattern] This should be refactored when the bundling system is updated */
+		@font-face {
+			font-family: 'Salesforce Sans';
+			src: url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Regular.woff2')}") format('woff2'),
+			url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Regular.woff')}") format('woff');
+			font-style: normal;
+			font-weight: 400;
+		}
+		@font-face {
+			font-family: 'Salesforce Sans';
+			src: url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Light.woff2')}") format('woff2'),
+			url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Light.woff')}") format('woff');
+			font-style: normal;
+			font-weight: 300;
+		}
+		@font-face {
+			font-family: 'Salesforce Sans';
+			src: url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Italic.woff2')}") format('woff2'),
+			url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Italic.woff')}") format('woff');
+			font-style: italic;
+			font-weight: 300;
+		}
+		@font-face {
+			font-family: 'Salesforce Sans';
+			src: url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Bold.woff2')}") format('woff2'),
+			url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-Bold.woff')}") format('woff');
+			font-style: normal;
+			font-weight: 700;
+		}
+		@font-face {
+			font-family: 'Salesforce Sans';
+			src: url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-BoldItalic.woff2')}") format('woff2'),
+			url("{!URLFOR($Resource.SBQQ__salesforce_sans, 'SalesforceSans-BoldItalic.woff')}") format('woff');
+			font-style: italic;
+			font-weight: 700;
+		}
+	</style>
+</apex:page>

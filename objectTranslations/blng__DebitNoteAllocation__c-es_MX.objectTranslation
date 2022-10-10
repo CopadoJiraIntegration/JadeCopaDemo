@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Asignación de nota de débito (Partida de factura)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Asignaciones de nota de débito (Partida de factura)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debit Note --></label>
+        <name>blng__DebitNote__c</name>
+        <relationshipLabel><!-- Debit Note Allocations (Invoice Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Amount --></label>
+        <name>blng__PaymentAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payments --></label>
+        <name>blng__Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Amount --></label>
+        <name>blng__RefundAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunds --></label>
+        <name>blng__Refunds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Debit Note Allocations (Tax GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Debit Note Allocations (Tax GL Treatment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Debit Note Allocations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocated? --></label>
+        <name>blng__Unallocated__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Debit Note Allocation Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Reglas y Tratamientos</label>
+            <section>Rules and Treatments</section>
+        </sections>
+        <sections>
+            <label>Reglas y Tratamientos de impuestos</label>
+            <section>Tax Rules and Treatments</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número de asignación</nameFieldLabel>
+</CustomObjectTranslation>

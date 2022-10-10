@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Audience --></label>
+        <name>Audience__c</name>
+        <picklistValues>
+            <masterLabel>26 - 50</masterLabel>
+            <translation><!-- 26 - 50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - 25</masterLabel>
+            <translation><!-- 3 - 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51 - 99</masterLabel>
+            <translation><!-- 51 - 99 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Content Name --></label>
+        <name>Content_Name__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content__c</name>
+        <picklistValues>
+            <masterLabel>Digital</masterLabel>
+            <translation><!-- Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hard Copy</masterLabel>
+            <translation><!-- Hard Copy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>DefaultPaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount(Per Unit) --></label>
+        <name>Discount_Amount_Per_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration in Months --></label>
+        <name>Duration_in_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- ERP System --></label>
+        <name>ERPSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impressions --></label>
+        <name>Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item fulfillment Line ID --></label>
+        <name>Item_fulfillment_Line_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Date --></label>
+        <name>LastSyncDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Total --></label>
+        <name>List_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Order Line ID --></label>
+        <name>NetSuiteOrderLineID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oracle Order Line ID --></label>
+        <name>OracleOrderLineID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family --></label>
+        <name>ProductFamily__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready to be Synced --></label>
+        <name>ReadytobeSynced__c</name>
+    </fields>
+    <fields>
+        <help>Indica se o produto do pedido está ativado.</help>
+        <label><!-- Activated --></label>
+        <name>SBQQ__Activated__c</name>
+    </fields>
+    <fields>
+        <help>Ativo criado a partir desse produto do pedido</help>
+        <label><!-- Asset --></label>
+        <name>SBQQ__Asset__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Define a frequência de faturamento.</help>
+        <label><!-- Billing Frequency --></label>
+        <name>SBQQ__BillingFrequency__c</name>
+    </fields>
+    <fields>
+        <help>O tipo de faturamento que define quando o faturamento ocorre.</help>
+        <label><!-- Billing Type --></label>
+        <name>SBQQ__BillingType__c</name>
+    </fields>
+    <fields>
+        <help>O preço de bloco aplicado a esse produto do pedido no momento da criação do pedido.</help>
+        <label><!-- Block Price --></label>
+        <name>SBQQ__BlockPrice__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Indica se os lançamentos são incluídos.</help>
+        <label><!-- Bookings Indicator --></label>
+        <name>SBQQ__BookingsIndicator__c</name>
+    </fields>
+    <fields>
+        <help>Um campo de uso interno que aponta para a raiz de seu pacote pai.</help>
+        <label><!-- Bundle Root --></label>
+        <name>SBQQ__BundleRoot__c</name>
+        <relationshipLabel><!-- Order Products (Bundle Root) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>O tipo de encargo do produto.</help>
+        <label><!-- Charge Type --></label>
+        <name>SBQQ__ChargeType__c</name>
+    </fields>
+    <fields>
+        <help>A ação do contrato do qual esse produto de pedido resulta.</help>
+        <label><!-- Contract Action --></label>
+        <name>SBQQ__ContractAction__c</name>
+    </fields>
+    <fields>
+        <help>O contrato da assinatura que é criado a partir desse produto do pedido.</help>
+        <label><!-- Contract --></label>
+        <name>SBQQ__Contract__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Indica se o produto do pedido está contratado.</help>
+        <label><!-- Contracted --></label>
+        <name>SBQQ__Contracted__c</name>
+    </fields>
+    <fields>
+        <help>Controla o comportamento de contratação de um Produto do pedido.</help>
+        <label><!-- Contracting Method --></label>
+        <name>SBQQ__ContractingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Contract Separately</masterLabel>
+            <translation>Contratar separadamente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Contract</masterLabel>
+            <translation>Não contratar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inherit</masterLabel>
+            <translation>Herdar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>A duração da assinatura, que se aplica apenas se o produto for uma assinatura. É copiado do Termo da assinatura do produto relacionado quando o item de linha é
+gerado pela primeira vez.</help>
+        <label><!-- Default Subscription Term --></label>
+        <name>SBQQ__DefaultSubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help>Para Produtos multissegmentados, esse é o tipo de dimensão de preço (por exemplo, &quot;ANO&quot;, &quot;MÊS&quot;, &quot;TRIMESTRE&quot;) do item do pedido.</help>
+        <label><!-- Segment Type --></label>
+        <name>SBQQ__DimensionType__c</name>
+    </fields>
+    <fields>
+        <help>Cronograma de descontos aplicado a esse produto do pedido.</help>
+        <label><!-- Discount Schedule --></label>
+        <name>SBQQ__DiscountSchedule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Valor do preço total do produto do pedido.</help>
+        <label><!-- Order Product Bookings --></label>
+        <name>SBQQ__OrderProductBookings__c</name>
+    </fields>
+    <fields>
+        <help>A quantidade real do produto colocada no pedido.</help>
+        <label><!-- Ordered Quantity --></label>
+        <name>SBQQ__OrderedQuantity__c</name>
+    </fields>
+    <fields>
+        <help>Referências à dimensão de preço aplicada esse produto do pedido.</help>
+        <label><!-- Price Dimension --></label>
+        <name>SBQQ__PriceDimension__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Cronograma de preço aplicado a esse produto do pedido.</help>
+        <label><!-- Price Schedule --></label>
+        <name>SBQQ__PriceSchedule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Indica como o preço para esse item de linha é calculado. &quot;Lista&quot; = subtração do desconto do preço de lista. &quot;Custo&quot; = adição do aumento ao custo.</help>
+        <label><!-- Pricing Method --></label>
+        <name>SBQQ__PricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>Block</masterLabel>
+            <translation>Bloco</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost</masterLabel>
+            <translation>Custo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation>Personalizado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List</masterLabel>
+            <translation>Lista</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Percent Of Total</masterLabel>
+            <translation>Percentual do total</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Define o tipo de assinatura do produto do pedido.</help>
+        <label><!-- Product Subscription Type --></label>
+        <name>SBQQ__ProductSubscriptionType__c</name>
+    </fields>
+    <fields>
+        <help>Proporção calculada usada para calcular o Preço proporcional.</help>
+        <label><!-- Prorate Multiplier --></label>
+        <name>SBQQ__ProrateMultiplier__c</name>
+    </fields>
+    <fields>
+        <help>A linha de cotação a partir da qual o produto do pedido é criado.</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Preço unitário de lista para o produto cotado por esse item de linha. O Preço de lista origina-se do catálogo de preços.</help>
+        <label><!-- Quoted List Price --></label>
+        <name>SBQQ__QuotedListPrice__c</name>
+    </fields>
+    <fields>
+        <help>A quantidade cotada.</help>
+        <label><!-- Quoted Quantity --></label>
+        <name>SBQQ__QuotedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Required By --></label>
+        <name>SBQQ__RequiredBy__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Referências ao produto do pedido que esse produto do pedido revisa.</help>
+        <label><!-- Revised Order Product --></label>
+        <name>SBQQ__RevisedOrderProduct__c</name>
+        <relationshipLabel><!-- Order Products (Revised Order Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Para produtos multissegmentados, o Índice que representa a posição desse produto do pedido na tabela do segmento.</help>
+        <label><!-- Segment Index --></label>
+        <name>SBQQ__SegmentIndex__c</name>
+    </fields>
+    <fields>
+        <help>Para produtos multissegmentados, essa é uma chave compartilhada para agrupar Linhas de cotação multidimensionais.</help>
+        <label><!-- Segment Key --></label>
+        <name>SBQQ__SegmentKey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Account --></label>
+        <name>SBQQ__ShippingAccount__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Indica o estado atual do produto do pedido. É padronizado para Rascunho quando um pedido é criado.</help>
+        <label><!-- Activation Status --></label>
+        <name>SBQQ__Status__c</name>
+    </fields>
+    <fields>
+        <help>Indica como o preço da assinatura é calculado. Se for deixado em branco, os itens de linha não serão um produto de assinatura.</help>
+        <label><!-- Subscription Pricing --></label>
+        <name>SBQQ__SubscriptionPricing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription Term --></label>
+        <name>SBQQ__SubscriptionTerm__c</name>
+    </fields>
+    <fields>
+        <help>Indica o tipo de assinatura para determinar a precificação do contrato.</help>
+        <label><!-- Subscription Type --></label>
+        <name>SBQQ__SubscriptionType__c</name>
+    </fields>
+    <fields>
+        <help>Assinatura criada a partir desse produto do pedido</help>
+        <label><!-- Subscription --></label>
+        <name>SBQQ__Subscription__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Valor do imposto estimado</help>
+        <label><!-- Estimated Tax --></label>
+        <name>SBQQ__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <help>Especifica o código tributário para as regras de tributação.</help>
+        <label><!-- Tax code --></label>
+        <name>SBQQ__TaxCode__c</name>
+    </fields>
+    <fields>
+        <help>Cronograma de descontos do termo aplicado a esse produto do pedido.</help>
+        <label><!-- Term Discount Schedule --></label>
+        <name>SBQQ__TermDiscountSchedule__c</name>
+        <relationshipLabel><!-- Order Products (Term Discount Schedule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Data em que a assinatura relacionada desse produto do pedido foi encerrada</help>
+        <label><!-- Terminated Date --></label>
+        <name>SBQQ__TerminatedDate__c</name>
+    </fields>
+    <fields>
+        <help>O preço líquido do termo total para a linha individual.</help>
+        <label><!-- Full-Term Net Unit Price --></label>
+        <name>SBQQ__UnproratedNetPrice__c</name>
+    </fields>
+    <fields>
+        <help>Assinatura recebendo uma atualização por essa linha de cotação. Quando a cotação for contratada, essa assinatura terá o campo Data de encerramento preenchido.</help>
+        <label><!-- Upgraded Subscription --></label>
+        <name>SBQQ__UpgradedSubscription__c</name>
+        <relationshipLabel><!-- Upgraded Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Subsidiary --></label>
+        <name>Subsidiary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync Message --></label>
+        <name>SyncMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Discount Amount --></label>
+        <name>Total_Discount_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Contacts --></label>
+        <name>Total_Number_of_Contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vertical --></label>
+        <name>Vertical__c</name>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lifecycle-Managed Asset --></label>
+        <name>blng__Asset__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill Through Date Override --></label>
+        <name>blng__BillThroughDateOverride__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billable Unit Price --></label>
+        <name>blng__BillableUnitPrice__c</name>
+    </fields>
+    <fields>
+        <help>A soma de todas as faturas deste produto do pedido (excluindo imposto).</help>
+        <label><!-- Billed Amount (without tax) --></label>
+        <name>blng__BilledAmountwithouttax__c</name>
+    </fields>
+    <fields>
+        <help>A soma de todos os impostos sobre faturas deste produto do pedido.</help>
+        <label><!-- Billed Tax --></label>
+        <name>blng__BilledTax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account --></label>
+        <name>blng__BillingAccount__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Pesquisa da Regra de faturamento atribuída a este produto do pedido.</help>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Pesquisa no Tratamento de faturamento atribuído a este produto do pedido.</help>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Total subtraído do produto do pedido devido a cancelamento, troca, etc.</help>
+        <label><!-- Canceled Billing Amount (without tax) --></label>
+        <name>blng__CanceledBillings__c</name>
+    </fields>
+    <fields>
+        <help>Pesquisa do objeto Livro financeiro usado para registrar a Contabilidade deste Produto do pedido.</help>
+        <label><!-- Finance Book (Accounting) --></label>
+        <name>blng__FinanceBookAccounting__c</name>
+        <relationshipLabel><!-- Order Products (Finance Book (Accounting)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Group Id --></label>
+        <name>blng__GroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Quantity (System Field) --></label>
+        <name>blng__GroupQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Unit Price (System Field) --></label>
+        <name>blng__GroupUnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hold Billing --></label>
+        <name>blng__HoldBilling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Usage --></label>
+        <name>blng__IncludedUsage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Group ID --></label>
+        <name>blng__InvoiceGroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Group --></label>
+        <name>blng__InvoiceGrouping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Processing Status --></label>
+        <name>blng__InvoiceRunProcessingStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Start Date --></label>
+        <name>blng__InvoiceRunStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Status (Index) --></label>
+        <name>blng__InvoiceRunStatusIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run --></label>
+        <name>blng__InvoiceRun__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Charge To Date --></label>
+        <name>blng__LastChargeToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Invoice Target Date --></label>
+        <name>blng__LastInvoiceTargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- LegalEntityReference --></label>
+        <name>blng__LegalEntityReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Gerado pelo sistema. O início do período de faturamento da próxima linha de fatura deste produto do pedido.</help>
+        <label><!-- Next Billing Date --></label>
+        <name>blng__NextBillingDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Charge Date --></label>
+        <name>blng__NextChargeDate__c</name>
+    </fields>
+    <fields>
+        <help>Use este campo para substituir manualmente o preço unitário faturável.</help>
+        <label><!-- Override Billable Unit Price --></label>
+        <name>blng__OverrideBillableUnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue End Date --></label>
+        <name>blng__OverrideInitialRevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue Start Date --></label>
+        <name>blng__OverrideInitialRevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Next Billing Date --></label>
+        <name>blng__OverrideNextBillingDate__c</name>
+    </fields>
+    <fields>
+        <help>Total restante a ser faturado.</help>
+        <label><!-- Pending Billing Amount (without tax) --></label>
+        <name>blng__PendingBillings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Schedule Status --></label>
+        <name>blng__RevenueScheduleStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax City (Override) --></label>
+        <name>blng__TaxCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Country (Override) --></label>
+        <name>blng__TaxCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax County (Override) --></label>
+        <name>blng__TaxCounty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Order Products (Tax GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Order Products (Tax GL Treatment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Percentage Applied --></label>
+        <name>blng__TaxPercentageApplied__c</name>
+    </fields>
+    <fields>
+        <help>Pesquisa da Regra de imposto atribuída a este produto do pedido.</help>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax State (Override) --></label>
+        <name>blng__TaxState__c</name>
+    </fields>
+    <fields>
+        <help>O status do cálculo do imposto deste produto do pedido.</help>
+        <label><!-- Tax Calculation Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 2 (Override) --></label>
+        <name>blng__TaxStreet2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 1 (Override) --></label>
+        <name>blng__TaxStreet__c</name>
+    </fields>
+    <fields>
+        <help>Pesquisa do Tratamento de imposto atribuído a este produto do pedido.</help>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Order Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Postal Code (Override) --></label>
+        <name>blng__TaxZipCode__c</name>
+    </fields>
+    <fields>
+        <help>Valor que poderia ser cancelado de um produto do pedido com base na data de encerramento. Não pode ser superior ao valor de faturamento pendente.</help>
+        <label><!-- Terminated Billing Amount (without tax) --></label>
+        <name>blng__TerminatedBillings__c</name>
+    </fields>
+    <fields>
+        <help>A soma de todas as linhas de fatura e impostos deste pedido.</help>
+        <label><!-- Total Billings --></label>
+        <name>blng__TotalBilling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usage Floor Quantity --></label>
+        <name>blng__UsageFloorQuantity__c</name>
+    </fields>
+    <layouts>
+        <layout>Billing Order Product Layout</layout>
+        <sections>
+            <label>Informações de frequência de faturamento</label>
+            <section>Billing Frequency Information</section>
+        </sections>
+        <sections>
+            <label>Métrica de faturamento</label>
+            <section>Billing Metrics</section>
+        </sections>
+        <sections>
+            <label>Informações de regra de faturamento</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Informações de agrupamento de cálculo</label>
+            <section>Calculation Grouping Information</section>
+        </sections>
+        <sections>
+            <label>Informações de data</label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label><!-- ERP Mapping Details --></label>
+            <section>ERP Mapping Details</section>
+        </sections>
+        <sections>
+            <label>Informações de regra GL</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Informação da execução da fatura</label>
+            <section>Invoice Run Info</section>
+        </sections>
+        <sections>
+            <label>Informações de preço</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Informações de Cotação e Assinatura</label>
+            <section>Quote and Subscription Information</section>
+        </sections>
+        <sections>
+            <label>Informações de reconhecimento de receita</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Informações de imposto</label>
+            <section>Tax Information</section>
+        </sections>
+        <sections>
+            <label>Informações de faturamento de uso</label>
+            <section>Usage Billing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPQ Order Product Layout</layout>
+        <sections>
+            <label>Informações de faturamento</label>
+            <section>Billing Information</section>
+        </sections>
+        <sections>
+            <label>Informações de contratação</label>
+            <section>Contracting Information</section>
+        </sections>
+        <sections>
+            <label><!-- ERP Mapping Details --></label>
+            <section>ERP Mapping Details</section>
+        </sections>
+        <sections>
+            <label>Informações de preço</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Informações de Cotação e Assinatura</label>
+            <section>Quote and Subscription Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Demo Billing Order Product Layout</layout>
+        <sections>
+            <label>Informações de frequência de faturamento</label>
+            <section>Billing Frequency Information</section>
+        </sections>
+        <sections>
+            <label>Métrica de faturamento</label>
+            <section>Billing Metrics</section>
+        </sections>
+        <sections>
+            <label>Informações de regra de faturamento</label>
+            <section>Billing Rule Information</section>
+        </sections>
+        <sections>
+            <label>Informações de agrupamento de cálculo</label>
+            <section>Calculation Grouping Information</section>
+        </sections>
+        <sections>
+            <label>Informações de data</label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label><!-- ERP Mapping Details --></label>
+            <section>ERP Mapping Details</section>
+        </sections>
+        <sections>
+            <label>Informações de regra GL</label>
+            <section>GL Rule Information</section>
+        </sections>
+        <sections>
+            <label>Informação da execução da fatura</label>
+            <section>Invoice Run Info</section>
+        </sections>
+        <sections>
+            <label>Informações de preço</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Informações de Cotação e Assinatura</label>
+            <section>Quote and Subscription Information</section>
+        </sections>
+        <sections>
+            <label>Informações de reconhecimento de receita</label>
+            <section>Revenue Recognition Information</section>
+        </sections>
+        <sections>
+            <label>Informações de imposto</label>
+            <section>Tax Information</section>
+        </sections>
+        <sections>
+            <label>Informações de faturamento de uso</label>
+            <section>Usage Billing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Order Product Layout</layout>
+        <sections>
+            <label><!-- ERP Mapping Details --></label>
+            <section>ERP Mapping Details</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Can’t edit the bookings status on an activated order product. --></errorMessage>
+        <name>SBQQ__CannotChangeBookingIndicatorOnActivation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is Recurring, a Billing Type must be selected. --></errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Charge Type is One-Time or Usage, a Billing Type value cannot be selected. --></errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Rule must be selected --></errorMessage>
+        <name>blng__BIllingRuleMustBeSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Recognition Rule must be selected --></errorMessage>
+        <name>blng__RevenueRecognitionRuleMustBeSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tax Rule must be selected --></errorMessage>
+        <name>blng__TaxRuleMustBeSelected</name>
+    </validationRules>
+</CustomObjectTranslation>

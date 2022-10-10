@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AsyncType --></label>
+        <name>pi__AsyncType__c</name>
+        <picklistValues>
+            <masterLabel>Default</masterLabel>
+            <translation><!-- Default --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Params --></label>
+        <name>pi__Params__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repeat Type --></label>
+        <name>pi__Repeat_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request ID --></label>
+        <name>pi__RequestId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Time --></label>
+        <name>pi__Scheduled_Time__c</name>
+    </fields>
+</CustomObjectTranslation>

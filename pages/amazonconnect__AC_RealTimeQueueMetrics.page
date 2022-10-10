@@ -1,0 +1,43 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0"
+  controller="amazonconnect.AC_QueueMetricsController">
+
+  <apex:form >
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Queue Metrics</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Importing the Design System style sheet -->
+      <apex:slds />
+      <apex:actionFunction name="NotifyQueueUpdated" rerender="QueueMetricsPanel" />
+
+      <apex:include pageName="amazonconnect__AC_UtilScriptIncludes" />
+
+      <script type="text/javascript">
+        ((ac) => {
+          const token = '{!$Api.Session_ID}';
+          ac.Utils.StreamingApi.init(token, NotifyQueueUpdated);
+        })(this)
+      </script>
+    </head>
+
+    <body>
+      <!-- SLDS WRAPPER -->
+      <div class="slds-scope">
+        <!-- CONTENT WRAPPER -->
+        <c:QueueMetricsHeader />
+        <apex:outputPanel id="QueueMetricsPanel">
+          <div class="queueMetricsWrapper">
+            <c:QueueMetricsComponent QueueMetricsData="{!MetricsData}" />
+          </div>
+        </apex:outputPanel>
+        <!-- / CONTENT WRAPPER -->
+      </div>
+      <!-- / SLDS WRAPPER -->
+    </body>
+
+    </html>
+  </apex:form>
+</apex:page>

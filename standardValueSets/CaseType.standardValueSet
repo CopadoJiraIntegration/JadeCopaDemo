@@ -16,4 +16,14 @@
         <default>false</default>
         <label>Question</label>
     </standardValue>
+    <standardValue>
+        <fullName>Return</fullName>
+        <default>false</default>
+        <label>Return</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Replacement</fullName>
+        <default>false</default>
+        <label>Replacement</label>
+    </standardValue>
 </StandardValueSet>

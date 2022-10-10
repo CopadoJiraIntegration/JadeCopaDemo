@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Registro de erro</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Registros de erro</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Asset --></label>
+        <name>blng__Asset__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Balance Snapshot Run --></label>
+        <name>blng__BalanceSnapshotRun__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Batch Job --></label>
+        <name>blng__BatchJob__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Error Code --></label>
+        <name>blng__ErrorCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Name --></label>
+        <name>blng__ErrorName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Origin --></label>
+        <name>blng__ErrorOrigin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>blng__FinancePeriod__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Full Error Log --></label>
+        <name>blng__FullErrorLog__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run --></label>
+        <name>blng__InvoiceRun__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice Scheduler --></label>
+        <name>blng__InvoiceScheduler__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>blng__Invoice__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Error Logs (Order) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Origin Method --></label>
+        <name>blng__OriginMethod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Allocation (Debit Note Line) --></label>
+        <name>blng__PaymentAllocationDebitNoteLine__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Allocation (Invoice Line) --></label>
+        <name>blng__PaymentAllocationInvoiceLine__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Allocation (Invoice) --></label>
+        <name>blng__PaymentAllocationInvoice__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Run --></label>
+        <name>blng__PaymentRun__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Scheduler --></label>
+        <name>blng__PaymentScheduler__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment --></label>
+        <name>blng__Payment__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ReferenceId --></label>
+        <name>blng__ReferenceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund --></label>
+        <name>blng__Refund__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Transaction --></label>
+        <name>blng__RevenueTransaction__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>blng__Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Transaction --></label>
+        <name>blng__Transaction__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usage --></label>
+        <name>blng__Usage__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Error Log Layout</layout>
+        <sections>
+            <label>.</label>
+            <section>.</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Objetos referenciados</label>
+            <section>Referenced Objects</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome do registro de erro</nameFieldLabel>
+</CustomObjectTranslation>

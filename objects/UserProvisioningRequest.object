@@ -45,14 +45,12 @@
     <searchLayouts>
         <customTabListAdditionalFields>ConnectedApp</customTabListAdditionalFields>
         <customTabListAdditionalFields>Operation</customTabListAdditionalFields>
-        <customTabListAdditionalFields>State</customTabListAdditionalFields>
         <customTabListAdditionalFields>ApprovalStatus</customTabListAdditionalFields>
         <customTabListAdditionalFields>SalesforceUser</customTabListAdditionalFields>
         <customTabListAdditionalFields>UserProvAccount</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <searchResultsAdditionalFields>ConnectedApp</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Operation</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>State</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ApprovalStatus</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SalesforceUser</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>UserProvAccount</searchResultsAdditionalFields>

@@ -1,0 +1,89 @@
+<apex:page controller="dsfs.SendingCompleteController" title="{!$Label.dsfs__docusign}"
+           showHeader="true"
+           sideBar="false">
+
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:includeScript value="{!$Resource.dsfs__jquery}"/>
+    <apex:includeScript value="{!$Resource.dsfs__modernizrjs}"/>
+    <apex:includeScript value="{!$Resource.dsfs__UtilJS}"/>
+    <script type="text/javascript">
+        Visualforce.remoting.timeout = 120000;
+        controller = {
+            completeReview: '{!$RemoteAction.SendingCompleteController.completeReview}',
+            isReviewEnabled: {!isReviewEnabled}
+        };
+        jQuery.noConflict();
+        jQuery(document).ready(function ($) {
+            // Remove any Classic stuff if in iframe.
+            if (DSUtil.isInIFrame()) {
+                $('#ds-header').remove();
+                var appBodyHeader = $('#AppBodyHeader');
+                if (DSUtil.isDefined(appBodyHeader)) {
+                    appBodyHeader.remove();
+                }
+                $(document.body).removeClass('hasMotif homeTab sfdcBody brandQuaternaryBgr');
+            }
+            $('.docusign-container').css('background-color', 'transparent');
+
+            if (!Modernizr.svg) {
+                $('.success-icon').attr('src', '{!$Resource.dsfs__SuccessPNG}');
+            }
+            var signNowError = '{!JSENCODE($CurrentPage.parameters.signNowError)}';
+            var dsAlert = $('#dsAlert');
+            var reviewContent = $('#review-content');
+            if (signNowError !== '') {
+                dsAlert.find('ul').append('<li><p>' + decodeURIComponent(signNowError).replace(/\+/g, ' ') + '</p></li>');
+                $('.alert-messages').addClass('info');
+                dsAlert.show();
+            }
+            if ({!isNewWindow}) {
+                $('#sucess-content').hide();
+                reviewContent.hide();
+                $('#new-window-content').show();
+            } else {
+                $('#content').show();
+            }
+            if (signNowError === '' && controller.isReviewEnabled) {
+                reviewContent.show();
+            }
+            $('#writeReviewButton').click(function () {
+                window.open('https://appexchange.salesforce.com/listingDetail?listingId=a0N30000001taX4EAI&tab=r', '_blank');
+                try {
+                    Visualforce.remoting.Manager.invokeAction(controller.completeReview, function (result, event) {
+                        //console.log(result);
+                    });
+                } catch (err) {
+                    console.log(err);
+                }
+            });
+        });
+    </script>
+    <c:EnvelopeHeader sourceDisplay="{!sourceDisplay}" envelopeName="{!envelopeName}" />
+    <div class="docusign-container">
+        <div id="dsAlert" style="display: none">
+            <ul class="alert-messages"></ul>
+        </div>
+        <div class="success">
+            <img class="success-icon" src="{!$Resource.Success}"/>
+            <div class="success-content" id="content" style="display: none">
+                <h1>{!$Label.DocuSignSendingCompleted}</h1>
+                <p>{!$Label.YourDocEmailedInPdf}</p>
+                <a href="#" onclick="DSUtil.navigateToSObject('{!sourceId}', '{!pathPrefix}');"
+                   class="secondary button">{!$Label.ReturnTo} {!sourceLabel}</a>
+                <div id="review-content" style="display: none">
+                    <hr/>
+                    <h1>{!$Label.RateUs}</h1>
+                    <p>{!$Label.ShareExperienceWithCommunity}</p>
+                    <a href="javascript:void(0);" id="writeReviewButton"
+                       class="secondary button">{!$Label.WriteAReview}</a>
+                </div>
+            </div>
+            <div class="success-content" id="new-window-content" style="display:none">
+                <h1>{!$Label.DocuSignSendingCompleted}!</h1>
+                <p>{!$Label.EnvelopeSent}</p>
+                <a href="#" onclick="DSUtil.closeWindow('{!sourceId}');"
+                   class="secondary button">{!$Label.CloseWindow}</a>
+            </div>
+        </div>
+    </div>
+</apex:page>

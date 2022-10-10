@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>AC Adattatore CTI</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- AC Adattatore CTI --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Audio Device Settings --></label>
+        <name>amazonconnect__AudioDeviceSettings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bottom Panel --></label>
+        <name>amazonconnect__BottomPanel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Center Definition Name --></label>
+        <name>amazonconnect__CallCenter__c</name>
+    </fields>
+    <fields>
+        <label><!-- CCP Version --></label>
+        <name>amazonconnect__CcpVersion__c</name>
+        <picklistValues>
+            <masterLabel>v1</masterLabel>
+            <translation><!-- v1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>v2</masterLabel>
+            <translation><!-- v2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Connect Instance - DO NOT USE --></label>
+        <name>amazonconnect__ConnectInstance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Chat Ringtone --></label>
+        <name>amazonconnect__CustomChatRingtone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Ringtone --></label>
+        <name>amazonconnect__CustomRingtone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debug Level --></label>
+        <name>amazonconnect__DebugLevel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Softphone Popout --></label>
+        <name>amazonconnect__EnableSoftphonePopout__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amazon Connect Instance --></label>
+        <name>amazonconnect__Instance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medialess --></label>
+        <name>amazonconnect__Medialess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Type Settings --></label>
+        <name>amazonconnect__PhoneTypeSettings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presence Sync Enabled --></label>
+        <name>amazonconnect__PresenceSyncEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amazon Connect Instance Region --></label>
+        <name>amazonconnect__Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Softphone Popout Enabled --></label>
+        <name>amazonconnect__SoftphonePopoutEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- SSO Relay State --></label>
+        <name>amazonconnect__SsoRelayState__c</name>
+    </fields>
+    <fields>
+        <label><!-- SSO Url --></label>
+        <name>amazonconnect__SsoUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Defined --></label>
+        <name>amazonconnect__UserDefined__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>AC CTI Adapter Layout - August 2020</layout>
+        <sections>
+            <label><!-- Single SignOn (SSO) --></label>
+            <section>Single SignOn (SSO)</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Adattatore CTI</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued for subtotal calculation</fullName>
+        <default>false</default>
+        <label>Queued for subtotal calculation</label>
+    </customValue>
+    <customValue>
+        <fullName>Processed</fullName>
+        <default>false</default>
+        <label>Processed</label>
+    </customValue>
+    <customValue>
+        <fullName>Warning - Unrated</fullName>
+        <default>false</default>
+        <label>Warning - Unrated</label>
+    </customValue>
+    <customValue>
+        <fullName>Error</fullName>
+        <default>false</default>
+        <label>Error</label>
+    </customValue>
+    <customValue>
+        <fullName>Billed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Billed</label>
+    </customValue>
+    <customValue>
+        <fullName>Processed - No Invoice Generated</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Processed - No Invoice Generated</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued for Invoice</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Queued for Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Processing for Invoice</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Processing for Invoice</label>
+    </customValue>
+    <masterLabel>Usage Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

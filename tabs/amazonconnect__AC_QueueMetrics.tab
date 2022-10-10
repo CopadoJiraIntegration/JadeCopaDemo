@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPage>amazonconnect__Queue_Metrics</flexiPage>
+    <label>AC Queue Metrics</label>
+    <motif>Custom78: Map</motif>
+</CustomTab>

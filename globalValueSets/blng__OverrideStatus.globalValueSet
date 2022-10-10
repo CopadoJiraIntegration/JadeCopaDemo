@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </customValue>
+    <customValue>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Canceled</label>
+    </customValue>
+    <masterLabel>Override Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

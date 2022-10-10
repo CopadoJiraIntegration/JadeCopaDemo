@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CyberSource</fullName>
+        <default>false</default>
+        <label>CyberSource</label>
+    </customValue>
+    <customValue>
+        <fullName>AuthorizeDotNet</fullName>
+        <default>false</default>
+        <label>AuthorizeDotNet</label>
+    </customValue>
+    <customValue>
+        <fullName>Payeezy</fullName>
+        <default>false</default>
+        <label>Payeezy</label>
+    </customValue>
+    <customValue>
+        <fullName>PayFlowPro</fullName>
+        <default>false</default>
+        <label>PayFlowPro</label>
+    </customValue>
+    <masterLabel>Gateway Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

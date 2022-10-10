@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact --></label>
+        <name>pi__ContactId__c</name>
+        <relationshipLabel><!-- Contact --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>pi__LeadId__c</name>
+        <relationshipLabel><!-- Lead --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>pi__Status__c</name>
+        <picklistValues>
+            <masterLabel>composing</masterLabel>
+            <translation><!-- composing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>queued</masterLabel>
+            <translation><!-- queued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sent</masterLabel>
+            <translation><!-- sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>pi__UserId__c</name>
+        <relationshipLabel><!-- User --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

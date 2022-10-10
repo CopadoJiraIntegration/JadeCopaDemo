@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Is Async Processing Enabled --></help>
+        <label><!-- Enable Async --></label>
+        <name>pi__Is_Async_Processing_Enabled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is OCL Trigger and Batch Job Disabled --></help>
+        <label><!-- Disable OCL Trigger and Batch Processing --></label>
+        <name>pi__Is_OCL_Processing_Disabled__c</name>
+    </fields>
+</CustomObjectTranslation>

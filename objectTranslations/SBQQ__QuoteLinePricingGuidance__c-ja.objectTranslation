@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積品目価格設定ガイダンス</value>
+    </caseValues>
+    <fields>
+        <help>提供する割引に関するこの価格設定ガイダンスとおすすめの説明。営業担当は見積品目エディタでこの説明を価格設定ガイダンスと共に参照できます。</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>過去の販売に基づく例外価格用の高い割引率。営業担当はこの価格を使用する必要がある場合、見積品目に割引を手動で適用する必要があります。この割引には、組織の承認設定に基づく承認が必要です。</help>
+        <label><!-- Floor --></label>
+        <name>SBQQ__Floor__c</name>
+    </fields>
+    <fields>
+        <help>営業担当者が見積品目エディタで、この価格設定ガイダンスから割引目標値を承諾しました。</help>
+        <label><!-- Guidance Used --></label>
+        <name>SBQQ__GuidanceUsed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>SBQQ__IsViewed__c</name>
+    </fields>
+    <fields>
+        <help>過去の販売に基づく中間域の割引率。営業担当はこの価格を使用する必要がある場合、見積品目に割引を手動で適用する必要があります。この割引には、組織の承認設定に基づく承認が必要です。</help>
+        <label><!-- Norm --></label>
+        <name>SBQQ__Norm__c</name>
+    </fields>
+    <fields>
+        <help>この価格設定ガイダンスに関連する見積品目。</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この価格設定ガイダンスに関連する見積品目を含む見積。</help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>過去の販売に基づく低域の適切な割引率。営業担当がこの価格設定ガイダンスを受け入れた場合、Salesforce CPQ はこの価格に達する割引を適用します。</help>
+        <label><!-- Target --></label>
+        <name>SBQQ__Target__c</name>
+    </fields>
+    <nameFieldLabel>名前</nameFieldLabel>
+</CustomObjectTranslation>

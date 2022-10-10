@@ -1,0 +1,62 @@
+<!--
+Copyright (c) Aria Solutions 2018
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ -->
+
+ <apex:page id="ACSFCCP_CallLogging_View" showHeader="false" sideBar="false" standardController="Account" extensions="amazonconnect.ACSFCCP_CallLogging_ViewExt">
+  <apex:slds />
+
+  <table width="100%" class="slds-table slds-table_bordered slds-table_cell-buffer">
+    <thead>
+    <tr class="slds-text-title_caps">
+      <th scope="col">
+        <div class="slds-truncate" title="Call Date">{!$Label.ACSFCCP_Call_Date_Header}</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Phone Number">{!$Label.ACSFCCP_Phone_Number_Header}</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Call Type">{!$Label.ACSFCCP_Call_Type_Header}</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Phone Call Duration">{!$Label.ACSFCCP_Call_Duration_Header}</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Call Identifier">{!$Label.ACSFCCP_Call_Identifier_Header}</div>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <apex:repeat value="{!phoneTasks}" var="t">
+      <tr>
+        <td data-label="Call Date">
+          <div class="slds-truncate" title="Created Date">{!t.task.CreatedDate}</div>
+        </td>
+        <th scope="row" data-label="Phone Number">
+          <div class="slds-truncate" title="Phone number">{!t.phoneNumber}</div>
+        </th>
+        <td data-label="Call Type">
+          <div class="slds-truncate" title="Call Type">{!t.task.CallType}</div>
+        </td>
+        <td data-label="Phone Call Duration">
+          <div class="slds-truncate" title="Duration">{!FLOOR(t.task.CallDurationInSeconds/60)} {!$Label.ACSFCCP_Minutes_in_Call_View} {!MOD(t.task.CallDurationInSeconds, 60)} {!$Label.ACSFCCP_Seconds_in_Call_View}</div>
+        </td>
+        <td data-label="Call Identifier">
+          <div class="slds-truncate" title="Call Identifier">{!t.task.CallObject}</div>
+        </td>
+      </tr>
+    </apex:repeat>
+    </tbody>
+  </table>
+</apex:page>

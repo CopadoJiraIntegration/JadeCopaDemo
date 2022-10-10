@@ -1,0 +1,83 @@
+<apex:page controller="dsfs.EnvelopeConfigurationModalController" sidebar="false" showHeader="false">
+    <script>
+      var sourceURL = document.location.origin;
+      var lightningUrl = '{!source}';
+
+      function init() {
+        var InitModalResponse = {};
+        InitModalResponse.Action = 'ListElementInitPost';
+        InitModalResponse.Source = sourceURL;
+        InitModalResponse.SaveEnabled = '{!saveEnabled}';
+        parent.postMessage(JSON.stringify(InitModalResponse), lightningUrl);
+      }
+
+      init();
+      window.addEventListener("message", function (event) {
+        if (event.origin === lightningUrl && event.data && typeof event.data !== 'function') {
+          var request = JSON.parse(event.data);
+          if (request.Action === 'VFRefresh') {
+            var EventResponse = {};
+            EventResponse.Action = 'Refresh';
+            saveDSChanges();
+            setTimeout(function () {
+              parent.postMessage(JSON.stringify(EventResponse), lightningUrl);
+            }, 200);
+          }
+        }
+      }, false);
+    </script>
+    <apex:form >
+        <apex:slds />
+        <apex:actionFunction name="saveDSChanges" action="{!handSave}"/>
+        <!-- Notification to be displayed when salesforce object is not selected -->
+        <div style="{!IF(showSobjectSelectionError, 'display:block', 'display:none')}">
+            <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_light"
+                 role="status">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-utility-info">
+                        <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                             xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#info"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <p>{!errorMessage}</p>
+                </div>
+            </div>
+        </div>
+        <div style="{!IF(action == 'ButtonDelete', 'display:block', 'display:none')}">
+            <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_light"
+                 role="status">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-utility-info">
+                        <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#info"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <p>{!prompt}</p>
+                </div>
+            </div>
+        </div>
+        <div style="{!IF(!showSobjectSelectionError && action != 'ButtonDelete', 'display:block', 'display:none')}"
+             class="slds-scope">
+            <apex:outputPanel rendered="{!listElements.size == 0}">
+                <div class="slds-align_absolute-center">
+                    <span>{!$Label.dsfs__norowstodisplay}</span>
+                </div>
+            </apex:outputPanel>
+            <div class="slds-grid slds-grid_vertical">
+                <apex:outputPanel rendered="{!listElements.size > 0}">
+                    <apex:repeat value="{!listElements}" var="element">
+                        <div class="slds-col slds-truncate">
+                            <apex:inputCheckbox value="{!element.isSelected}"/>&nbsp;{!element.name}
+                        </div>
+                    </apex:repeat>
+                </apex:outputPanel>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

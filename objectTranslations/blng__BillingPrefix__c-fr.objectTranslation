@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- BillingPrefix --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- BillingPrefix --></value>
+    </caseValues>
+    <fields>
+        <label><!-- BarPrefix --></label>
+        <name>blng__BarPrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- DotPrefix --></label>
+        <name>blng__DotPrefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- RawPrefix --></label>
+        <name>blng__RawPrefix__c</name>
+    </fields>
+    
+    
+</CustomObjectTranslation>

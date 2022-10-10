@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Instantâneo da aprovação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Instantâneos da aprovação</value>
+    </caseValues>
+    <fields>
+        <help>Condição de aprovação da qual o valor é capturado</help>
+        <label><!-- Approval Condition --></label>
+        <name>sbaa__ApprovalCondition__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Aprovação relacionada para o Instantâneo armazenado</help>
+        <label><!-- Approval --></label>
+        <name>sbaa__Approval__c</name>
+        <relationshipLabel><!-- Approval Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>A data que é capturada</help>
+        <label><!-- Approved Value (Date) --></label>
+        <name>sbaa__ApprovedValueDate__c</name>
+    </fields>
+    <fields>
+        <help>Texto longo que é capturado</help>
+        <label><!-- Approved Value (Long Text) --></label>
+        <name>sbaa__ApprovedValueLongText__c</name>
+    </fields>
+    <fields>
+        <help>Valor numérico que é capturado</help>
+        <label><!-- Approved Value (Numeric) --></label>
+        <name>sbaa__ApprovedValueNumeric__c</name>
+    </fields>
+    <fields>
+        <help>Valor de texto que é capturado</help>
+        <label><!-- Approved Value (Text) --></label>
+        <name>sbaa__ApprovedValueText__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Approval Snapshot Layout</layout>
+        <sections>
+            <label>Informações do valor aprovado</label>
+            <section>Approved Value Information</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nº do instantâneo de aprovação</nameFieldLabel>
+</CustomObjectTranslation>

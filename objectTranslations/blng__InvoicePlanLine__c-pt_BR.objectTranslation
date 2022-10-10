@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Linha de plano de fatura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Linhas de plano de fatura</value>
+    </caseValues>
+    <fields>
+        <label><!-- Commencement Date Offset Units --></label>
+        <name>blng__CommencementDateOffsetUnits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commencement Date Offset --></label>
+        <name>blng__CommencementDateOffset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commencement Date --></label>
+        <name>blng__CommencementDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flat Amount --></label>
+        <name>blng__FlatAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Plan --></label>
+        <name>blng__InvoicePlan__c</name>
+        <relationshipLabel><!-- Invoice Plan Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Percentage --></label>
+        <name>blng__Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Period End --></label>
+        <name>blng__ServicePeriodEnd__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Period Start --></label>
+        <name>blng__ServicePeriodStart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Invoice Plan Line Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da linha do plano de fatura</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan de factura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planes de facturas</value>
+    </caseValues>
+    <fields>
+        <help>Si está marcada, esta plantilla de plan de facturas está activa.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Schedule Creation --></label>
+        <name>blng__BillingScheduleCreation__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Invoice Plan Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de plan de facturas</nameFieldLabel>
+</CustomObjectTranslation>

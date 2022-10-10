@@ -1,0 +1,75 @@
+<apex:page standardController="blng__CreditNote__c">
+  <apex:includeScript value="/soap/ajax/29.0/connection.js"/>
+  <apex:includeScript value="/soap/ajax/29.0/apex.js"/>
+  <apex:stylesheet value="{!URLFOR($Resource.blng__dialog,'dialog.css')}" /> 
+  <apex:includeScript value="{!URLFOR($Resource.blng__dialog,'dialog.js')}"/>
+
+  <script>
+    //--------------------Standard Loader Start--------------------------
+    var div, img;
+    if (document.getElementById('myDiv') && document.getElementById('myImg')) {
+      div = document.getElementById('myDiv');
+      img = document.getElementById('myImg');
+      div.style.display = 'block';
+      img.style.display = 'block';
+    }
+    else {
+      // Create a background and show the image on top
+      div = document.createElement('div');
+      div.id = 'myDiv';
+      div.style.width = '100%';
+      div.style.height = '100%';
+      div.style.position = 'absolute';
+      div.style.top = '0';
+      div.style.left = '0';
+      div.style.display = 'block';
+      div.style.backgroundColor = 'white';
+      div.style.opacity = '0.5';
+      div.style.zIndex = '100';
+      document.body.appendChild(div);
+
+      img = document.createElement('img');
+      img.id = 'myImg';
+      img.src = '/img/loading32.gif';
+      img.style.position = 'absolute';
+      img.style.top = '50%';
+      img.style.left = '50%';
+      img.style.zIndex = '50';
+      img.style.display = 'block';
+      div.appendChild(img);
+    }
+    //--------------------Standard Loader End--------------------------
+
+    var creditNoteStatus = '{!JSENCODE(blng__CreditNote__c.blng__Status__c)}';
+    // converting into date to text to safely validate.
+    var effectiveTaxDate = '{!JSENCODE(TEXT(blng__CreditNote__c.blng__EffectiveTaxDate__c))}';
+    if('' == effectiveTaxDate || 'undefined' == effectiveTaxDate || 'Invalid Date' == effectiveTaxDate) {
+      sb.dialog.alert('Please fill Effective Tax Date ', { ok: "{!JSENCODE($Label.blng__LIGHTNING_BUTTON_TEXT_CANCEL)}" }, () => {
+          document.location.href = "/{!JSENCODE(blng__CreditNote__c.Id)}";
+        });
+    } else {
+      if(creditNoteStatus == 'Draft') {
+        var result;
+        try {
+          sforce.connection.sessionId = "{!$Api.Session_ID}";
+          result = sforce.apex.execute(
+            "{!JSENCODE($Setup.blng__BillingPrefix__c.blng__DotPrefix__c)}CreditNoteLineAPI",
+            "estimateTaxForCreditNoteLines",
+            {creditNoteId: "{!JSENCODE(blng__CreditNote__c.Id)}"}
+          ).toString();
+        }
+        catch(e) {
+          result = e.faultstring;
+        }
+        sb.dialog.alert(result, { ok: "{!JSENCODE($Label.blng__LIGHTNING_BUTTON_TEXT_CANCEL)}" }, () => {
+          document.location.href = "/{!JSENCODE(blng__CreditNote__c.Id)}";
+        });
+      }
+      else {
+        sb.dialog.alert('Estimate Tax will apply only for draft credit note', { ok: "{!JSENCODE($Label.blng__LIGHTNING_BUTTON_TEXT_CANCEL)}" }, () => {
+          document.location.href = "/{!JSENCODE(blng__CreditNote__c.Id)}";
+        });
+      }
+    }
+  </script>
+</apex:page>

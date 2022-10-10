@@ -1,0 +1,1 @@
+<html><head></head><body>Hello,<br /><br />A member of our customer service team has been assigned to your case #{{{Case.CaseNumber}}}. You’ll hear from them soon.<br /><br />Thank you,<br /><br />{{{Organization.Name}}} Customer Service</body></html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Deferred</fullName>
+        <default>false</default>
+        <label>Deferred</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue</fullName>
+        <default>false</default>
+        <label>Revenue</label>
+    </customValue>
+    <customValue>
+        <fullName>AR</fullName>
+        <default>false</default>
+        <label>AR</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash</fullName>
+        <default>false</default>
+        <label>Cash</label>
+    </customValue>
+    <customValue>
+        <fullName>Expense</fullName>
+        <default>false</default>
+        <label>Expense</label>
+    </customValue>
+    <masterLabel>GL Code Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

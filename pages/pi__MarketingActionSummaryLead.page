@@ -1,0 +1,33 @@
+<apex:page docType="html-5.0"
+      standardController="Lead"
+      extensions="pi.MarketingActionSummaryController,pi.MarketingActionsController,pi.VisitController"
+      >
+    
+<apex:stylesheet value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.css')}"></apex:stylesheet>
+<apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"></apex:stylesheet>
+<apex:stylesheet value="{!URLFOR($Resource.pi__MarketingActions, 'css/app.css')}"></apex:stylesheet>
+<apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}"></apex:stylesheet>
+<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"></apex:includeScript>
+<apex:includeScript value="{!URLFOR($Resource.pi__jquery_time_ago, 'jquery.timeago.js')}"></apex:includeScript>
+<apex:pageMessage severity="warning" rendered="{!isRegularAccountPage}" summary="This action is not supported on this page. This action is only supported on Lead, Contact, and Person Account pages."></apex:pageMessage>
+<div class="marketing-action-summary">
+  <div class="header">
+    <h3>Marketing Actions</h3><span class="count-wrap hide"><span>(</span><span class="count"></span><span>)</span></span><a href="http://www.pardot.com/faqs/salesforce-engage/engage-for-salesforce1/" class="help-link"><i class="fa fa-question-circle"></i>&nbsp;Help</a>
+  </div>
+  <div id="actions" class="actions"></div>
+</div>
+<script type="text/javascript">
+  window.SalesEdge = {
+      record: {
+          id: '{!JSENCODE(recordId)}',
+          type: '{!JSENCODE(recordType)}',
+          isRegularAccountPage: '{!IF(isRegularAccountPage, "true", "false")}'
+      }
+  };
+  
+  window.ActionsByVisitActionLocation = '{!$RemoteAction.VisitController.getActionsByVisitId}';
+  window.MarketingActionsByPersonActionLocation = '{!$RemoteAction.MarketingActionsController.getActionsByPersonId}';
+  window.NamespacePrefix = '{!JSENCODE(namespace)}';
+</script>
+<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/record_marketing_action_summary_main.js')}"></apex:includeScript>
+</apex:page>

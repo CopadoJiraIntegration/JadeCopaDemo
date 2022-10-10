@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Email_Recipients</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Recipients</shortDescription>
+        <value>architha.kunamalla@jadeglobal.com, abhinav.bansal@jadeglobal.com, bhavani.vanaparthy@jadeglobal.com</value>
+    </labels>
+</CustomLabels>

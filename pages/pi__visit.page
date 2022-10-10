@@ -1,0 +1,35 @@
+<apex:page docType="html-5.0"
+			showHeader="false"
+			sidebar="false"
+			standardStylesheets="false"
+			controller="pi.VisitController"
+			>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<apex:stylesheet value="{!URLFOR($Resource.pi__Mobile_Design_Templates, 'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__ProximaNovaSoft, 'proxima-nova-soft-fonts.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__MarketingActions, 'css/app.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.min.css')}" />
+	</head>
+	<body>
+		
+<div class="marketing-action-summary">
+  <div class="header">
+    <h3>Page Views </h3><span class="count-wrap hide"><span>(</span><span class="count"></span><span>)</span></span>
+  </div>
+  <div id="actions" class="actions"></div>
+</div>
+		<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.pi__jquery_time_ago, 'jquery.timeago.js')}"/>
+		<script>
+			window.SalesEdge = {
+				visit: {
+					id: {!JSENCODE(IF(ISNUMBER(visitId), visitId, 'null'))}
+				}
+			};
+
+			window.ActionsByVisitActionLocation = '{!$RemoteAction.VisitController.getActionsByVisitId}';
+		</script>
+		<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/visit_main.js')}"/>
+	</body>
+</apex:page>

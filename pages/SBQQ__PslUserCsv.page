@@ -1,0 +1,5 @@
+<apex:page controller="SBQQ.SettingsEditorController" action="{!getUsersWithPSNoMPLCsv}"
+contentType="text/csv#UsersWithPSNoMPL_{!TODAY()}.csv">
+<apex:outputText >Id,UserType</apex:outputText>
+<apex:outputText > {!userCsvContent}</apex:outputText>
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Checking</fullName>
+        <default>false</default>
+        <label>Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Checking</fullName>
+        <default>false</default>
+        <label>Business Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Savings</fullName>
+        <default>false</default>
+        <label>Savings</label>
+    </customValue>
+    <description>Bank Account Type</description>
+    <masterLabel>Bank Account Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

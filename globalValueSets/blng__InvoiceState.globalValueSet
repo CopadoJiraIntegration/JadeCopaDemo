@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Regular</fullName>
+        <default>true</default>
+        <label>Regular</label>
+    </customValue>
+    <customValue>
+        <fullName>Merged</fullName>
+        <default>false</default>
+        <label>Merged</label>
+    </customValue>
+    <description>this is used to identify the state of invoice whether Regular or Merge</description>
+    <masterLabel>Invoice State</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

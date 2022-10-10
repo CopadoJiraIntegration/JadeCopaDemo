@@ -1,0 +1,108 @@
+<template>
+    <template if:true={showTable}>
+        <article class="slds-card">
+            <!-- Header - Start -->
+            <div class="slds-page-header slds-card__header" style="padding-bottom:1.25rem">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container">
+                            <lightning-icon icon-name="standard:settings" title="Segment"></lightning-icon>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span class="slds-page-header__title slds-truncate" title="Segment">
+                                        {quoteName}
+                                    </span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <lightning-input disabled="true" label="Start Date" type="Date" value={quoteStartDate}
+                            class="slds-p-right_large"></lightning-input>
+                    </div>
+                    <div>
+                        <lightning-input disabled="true" label="End Date" type="Date" value={quoteEndDate}
+                            class="slds-p-right_xx-large"></lightning-input>
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <template if:true={showRenewButton}>
+                            <lightning-button label="Renew Lines" onclick={renewLines} variant="brand"
+                                class="divMargin"></lightning-button>
+                        </template>
+                        <lightning-button label="Go to Quote" onclick={onBack}></lightning-button>
+                    </div>
+                </header>
+            </div>
+            <!-- Header - End -->
+
+            <!-- Body - Start -->
+            <div class="slds-card__body slds-card__body_inner">
+                <lightning-tabset class='slds-tabs_default' active-tab-value='Renew Subscriptions'
+                    style="background:white;">
+                    <lightning-tab name="Renew Subscriptions" value="Renew Subscriptions" label="Renew Subscriptions"
+                        title="Renew Subscriptions" id="renewSubsId" onactive={tabselect}>
+                        <!-- Show Spinner-->
+                        <template if:true={isShowSpinner}>
+                            <div style="padding-top:5rem">
+                                <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                            </div>
+                        </template>
+                        <template if:true={isLoaded}>
+                            <template if:true={showDataTable}>
+                                <div class="slds-table_striped">
+                                    <lightning-tree-grid columns={renewalColumns} data={renewalDataTable}
+                                        onrowaction={callRenewalRowAction} key-field="Id" resize-column-disabled="true"
+                                        expanded-rows={gridExpandedRows} selected-rows={selectedSubsLines}>
+                                    </lightning-tree-grid>
+                                </div>
+                            </template>
+                            <template if:false={showDataTable}>
+                                <div
+                                    style="color:red;display: flex;justify-content: center;padding:0.2rem;font-weight:500;font-size: .9rem;">
+                                    <lightning-formatted-text value="No Active Subscriptions Available for Renewal.">
+                                    </lightning-formatted-text>
+                                </div>
+                            </template>
+                        </template>
+                    </lightning-tab>
+                    <lightning-tab name="Renew Non Co-Term Add Ons" value="Renew Non Co-Term Add Ons" label="Renew Non Co-Term Add Ons" title="Renew Non Co-Term Add Ons" id="extendLineId" onactive={tabselect}>
+                        <!-- Show Spinner-->
+                        <template if:true={isShowSpinner}>
+                            <div style="padding-top:5rem">
+                                <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                            </div>
+                        </template>
+                        <template if:true={isLoaded}>
+                            <template if:true={showDataTable}>
+                                <div class="slds-table_striped">
+                                    <lightning-tree-grid columns={columns} data={dataTable} onrowaction={callRowAction}
+                                         expanded-rows={gridExpandedRows} key-field="Id" resize-column-disabled="true" hide-checkbox-column="true">
+                                    </lightning-tree-grid>
+                                </div>
+                            </template>
+                            <template if:false={showDataTable}>
+                                <div
+                                    style="color:red;display: flex;justify-content: center;padding:0.2rem;font-weight:500;font-size: .9rem;">
+                                    <lightning-formatted-text value="No Add Ons Available for Renewal.">
+                                    </lightning-formatted-text>
+                                </div>
+                            </template>
+                        </template>
+                    </lightning-tab>
+                </lightning-tabset>
+
+            </div>
+            <!-- Body - End -->
+            <!-- Footer - Start -->
+            <footer class="slds-card__footer">
+
+            </footer>
+            <!-- Footer - End -->
+        </article>
+        <c-extend-lines-modal ongotoparent={onParent}></c-extend-lines-modal>
+    </template>
+</template>

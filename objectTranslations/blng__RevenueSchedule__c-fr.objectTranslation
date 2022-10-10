@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Calendrier de chiffre d&apos;affaires</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Calendriers de chiffre d&apos;affaires</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Total de tous les ajustements effectués dans le calendrier de revenu.</help>
+        <label><!-- Adjustments --></label>
+        <name>blng__Adjustments__c</name>
+    </fields>
+    <fields>
+        <help>Total du revenu alloué</help>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Tous les revenus d&apos;un calendrier de revenu qui peut être ajusté ou distribué.</help>
+        <label><!-- Available --></label>
+        <name>blng__Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <help>Référence au livre de finance dans lequel ce revenu est enregistré</help>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à la ligne de note de crédit associée à ce calendrier de revenu.</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à la ligne de note de débit associée à ce calendrier de revenu.</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Total du revenu non comptabilisé durant la période actuelle</help>
+        <label><!-- Deferred Balance (deprecated) --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>Revenu qui n&apos;a pas encore été comptabilisé dans le calendrier de revenu.</help>
+        <label><!-- Deferred --></label>
+        <name>blng__Deferred__c</name>
+    </fields>
+    <fields>
+        <help>Estimation du nombre de transactions de revenu</help>
+        <label><!-- Estimated Revenue Transaction Count --></label>
+        <name>blng__EstimatedRevenueTransactionCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Recognition Date --></label>
+        <name>blng__FullRecognitionDate__c</name>
+    </fields>
+    <fields>
+        <help>Référence à la ligne de facture associée à ce calendrier de revenu.</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à l&apos;entité juridique dans laquelle ce revenu est enregistré</help>
+        <label><!-- Revenue Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Référence au produit de commande associé à ce calendrier de revenu.</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Somme de tous les revenus qui ont été comptabilisés pendant la période en cours</help>
+        <label><!-- Recognized --></label>
+        <name>blng__RecognizedRevenueLastClosedPeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Agreement Allocation Status --></label>
+        <name>blng__RevenueAgreementAllocationStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Agreement --></label>
+        <name>blng__RevenueAgreement__c</name>
+        <relationshipLabel><!-- Revenue Schedule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Selon la définition de la règle de comptabilisation du revenu, la méthode de calcul de distribution du revenu entre les périodes.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence la date de fin de la période de revenu définie dans la règle des revenus.</help>
+        <label><!-- Revenue End Date --></label>
+        <name>blng__RevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Total du revenu attendu dans ce calendrier de revenu.</help>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <help>Recherche dans le livre de finance où ces revenus seront enregistrés.</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Total du passif des revenus</help>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <help>Total du revenu à reconnaître avec ce calendrier de revenu.</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence au traitement du grand livre.</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à la règle de comptabilisation du revenu utilisée pour ce calendrier de revenu.</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Schedules (Revenue Recognition Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence au traitement de comptabilisation du revenu utilisé pour ce calendrier de revenu.</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence la date de début de la période de revenu définie dans la règle des revenus.</help>
+        <label><!-- Revenue Start Date --></label>
+        <name>blng__RevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Le statut de cette transaction de revenu.</help>
+        <label><!-- Revenue Transaction Status --></label>
+        <name>blng__RevenueTransactionStatus__c</name>
+    </fields>
+    <fields>
+        <help>Référence à la règle du grand livre associée à ce calendrier de revenu.</help>
+        <label><!-- Total Revenue Amount --></label>
+        <name>blng__TotalRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Total de tous les revenus distribués à un calendrier de revenu, mais pas encore comptabilisés.</help>
+        <label><!-- Unrecognized --></label>
+        <name>blng__Unrecognized__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Dates des revenus</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>Métriques des revenus</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Enregistrements sources</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>Informations récapitulatives</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

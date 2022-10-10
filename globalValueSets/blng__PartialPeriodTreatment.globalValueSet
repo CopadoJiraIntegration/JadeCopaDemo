@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Separate</fullName>
+        <default>true</default>
+        <label>Separate</label>
+    </customValue>
+    <customValue>
+        <fullName>Combine</fullName>
+        <default>false</default>
+        <label>Combine</label>
+    </customValue>
+    <masterLabel>Partial Period Treatment</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

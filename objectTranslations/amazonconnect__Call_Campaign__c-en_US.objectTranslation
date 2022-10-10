@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>amazonconnect__Account__c</name>
+        <relationshipLabel><!-- Call Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>amazonconnect__Case__c</name>
+        <relationshipLabel><!-- Amazon Connect Call Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>amazonconnect__Contact__c</name>
+        <relationshipLabel><!-- Call Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>amazonconnect__Lead__c</name>
+        <relationshipLabel><!-- Call Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>amazonconnect__Opportunity__c</name>
+        <relationshipLabel><!-- Call Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>amazonconnect__Phone_Number__c</name>
+    </fields>
+</CustomObjectTranslation>

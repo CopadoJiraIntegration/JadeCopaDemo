@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FieldSet メタデータ</value>
+    </caseValues>
+    <fields>
+        <help>ユーザに設定がない場合。</help>
+        <label><!-- Default --></label>
+        <name>SBQQ__Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- FieldSet Validation --></label>
+        <name>SBQQ__FieldSetValidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- FieldSet Name --></label>
+        <name>SBQQ__FieldSet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>SBQQ__ObjectType__c</name>
+        <picklistValues>
+            <masterLabel>Quote Line</masterLabel>
+            <translation>見積品目</translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>項目セットメタデータ番号</nameFieldLabel>
+</CustomObjectTranslation>

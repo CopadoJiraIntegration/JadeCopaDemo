@@ -1,0 +1,795 @@
+<apex:page title="{!$Label.dsfs__docusign}"
+           controller="dsfs.EnvelopeController"
+           action="{!loadEnvelope}"
+           showHeader="true"
+           sidebar="false"
+           tabStyle="dsfs__DocuSign_Status__c">
+    <style type="text/css">
+        :root {
+            --search-icon: url({!$Resource.dsfs__SearchIcon});
+            --arrow-drop-down: url({!$Resource.dsfs__ArrowDropDown});
+            --delete: url({!$Resource.dsfs__Delete});
+        }
+    </style>
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:includeScript value="{!$Resource.dsfs__jquery}"/>
+    <apex:includeScript value="{!$Resource.dsfs__jquery_ui}"/>
+    <apex:includeScript value="{!$Resource.dsfs__modernizrjs}"/>
+    <c:Configuration isCommunitySite="{!isCommunitySite}" pathPrefix="{!pathPrefix}" isNewWindow="{!isNewWindow}"
+                     isdtp="{!isdtp}"/>
+    <apex:includeScript value="{!$Resource.dsfs__UtilJS}"/>
+    <script type="text/javascript">
+        if (!window.console) {
+            console = {
+                log: function () {
+                }
+            };
+        }
+        Visualforce.remoting.timeout = 120000;
+        Account = {
+            settings: {!accountSettings}
+        };
+        DSConfiguration.envelope = JSON.parse('{!JSENCODE(settingsJson)}');
+        DSConfiguration.hasUploadError = {!hasUploadError == true};
+        Document = {
+            documents: [],
+            getAttachments: '{!$RemoteAction.EnvelopeController.getAttachments}',
+            getChatterFeedItems: '{!$RemoteAction.EnvelopeController.getChatterFeedItems}',
+            getTemplates: '{!$RemoteAction.EnvelopeController.getTemplates}',
+            getDocumentFolders: '{!$RemoteAction.EnvelopeController.getDocumentFolders}',
+            getFileFolders: '{!$RemoteAction.EnvelopeController.getFileFolders}',
+            getFolderFiles: '{!$RemoteAction.EnvelopeController.getFolderFiles}',
+            getFolderDocuments: '{!$RemoteAction.EnvelopeController.getFolderDocuments}',
+            addDocuments: '{!$RemoteAction.EnvelopeController.addDocuments}',
+            reorderDocuments: '{!$RemoteAction.EnvelopeController.reorderDocuments}',
+            removeDocuments: '{!$RemoteAction.EnvelopeController.removeDocuments}'
+        };
+        Recipient = {
+            searchContacts: '{!$RemoteAction.EnvelopeController.searchContacts}',
+            searchLeads: '{!$RemoteAction.EnvelopeController.searchLeads}',
+            searchUsers: '{!$RemoteAction.EnvelopeController.searchUsers}',
+            addContacts: '{!$RemoteAction.EnvelopeController.addContacts}',
+            saveRecipients: '{!$RemoteAction.EnvelopeController.saveRecipients}',
+            reorderRecipients: '{!$RemoteAction.EnvelopeController.reorderRecipients}',
+            removeRecipients: '{!$RemoteAction.EnvelopeController.removeRecipients}',
+            searchSigningGroups: '{!$RemoteAction.EnvelopeController.searchSigningGroups}'
+        };
+        Result = {
+            messages: null, action: null, url: null, envelope: JSON.parse('{!JSENCODE(envelopeJson)}')
+        };
+        Envelope = {
+            sourceId: '{!sourceId}',
+            updateEnvelope: '{!$RemoteAction.EnvelopeController.updateEnvelope}',
+            deleteEnvelope: '{!$RemoteAction.EnvelopeController.deleteEnvelope}',
+            sendEnvelope: '{!$RemoteAction.EnvelopeController.sendEnvelope}'
+        };
+        CurrentUser = {
+            id: '{!$User.Id}', name: '{!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)}', email: '{!JSENCODE($User.Email)}'
+        };
+        Label = {
+            edit: '{!$Label.dsfs__edit}',
+            editRecipient: '{!$Label.dsfs__editrecipient}',
+            addRecipient: '{!$Label.dsfs__addrecipient}',
+            addMe: "{!$Label.dsfs__addme}",
+            addContact: '{!$Label.dsfs__addcontact}',
+            addLead: '{!$Label.dsfs__addlead}',
+            addUser: '{!$Label.dsfs__adduser}',
+            selectContact: '{!$Label.dsfs__selectcontact}',
+            selectLead: '{!$Label.dsfs__selectlead}',
+            selectUser: '{!$Label.dsfs__selectuser}',
+            searchContacts: '{!$Label.dsfs__searchcontacts}',
+            searchLeads: '{!$Label.dsfs__searchleads}',
+            searchUsers: '{!$Label.dsfs__searchusers}',
+            invalidEmail: '{!$Label.dsfs__m_invalidemailerror}',
+            fieldRequired: '{!$Label.dsfs__fieldrequired}',
+            phoneNumberError: '{!$Label.dsfs__phonenumbererror}',
+            signer: '{!$Label.dsfs__signer}',
+            inPersonSigner: '{!$Label.dsfs__signinperson}',
+            carbonCopy: '{!$Label.dsfs__carboncopy}',
+            certifiedDelivery: '{!$Label.dsfs__certifieddelivery}',
+            agent: '{!$Label.dsfs__addressrecipients}',
+            editor: '{!$Label.dsfs__manageenvelope}',
+            intermediary: '{!$Label.dsfs__updaterecipients}',
+            attachments: '{!$Label.dsfs__doctypeattachments}',
+            documents: '{!$Label.dsfs__doctypedocuments}',
+            feedItems: '{!$Label.dsfs__doctypefeeditems}',
+            library: '{!$Label.dsfs__doctypelibraryitems}',
+            templates: '{!$Label.dsfs__doctypetemplate}',
+            noMatchFound: '{!$Label.dsfs__nomatchfound}',
+            pleaseEnterSearchKeyword: '{!$Label.dsfs__pleaseentersearchkeyword}',
+            addSigningGroup: '{!$Label.dsfs__addsigninggroup}',
+            signingGroup: '{!$Label.dsfs__signinggrouplabel}',
+            unknownError: '{!$Label.dsfs__unknownerror}',
+            hostInPerson: '{!$Label.dsfs__hostinperson}'
+        };
+        Resource = {
+            grabberIcon: '{!$Resource.dsfs__Grabber}',
+            grabberPNG: '{!$Resource.dsfs__GrabberPNG}',
+            deleteIcon: '{!$Resource.dsfs__Delete}',
+            deleteIconPNG: '{!$Resource.dsfs__DeletePNG}',
+            searchIconPNG: '{!$Resource.dsfs__SearchIconPNG}',
+            docusignPNG: '{!$Resource.dsfs__DocuSignPNG}',
+            recipientIconPNG: '{!$Resource.dsfs__RecipientIconPNG}',
+            documentIconPNG: '{!$Resource.dsfs__DocumentIconPNG}',
+            settingIconPNG: '{!$Resource.dsfs__SettingIconPNG}',
+            messageIconPNG: '{!$Resource.dsfs__MessageIconPNG}',
+            envelopecustomfieldIconPNG: '{!$Resource.dsfs__EnvelopecustomfieldIconPNG}',
+            docuSignLoadingLogoPNG: '{!$Resource.dsfs__DocuSignLoadingLogoPNG}'
+        };
+    </script>
+    <apex:includeScript value="{!$Resource.dsfs__DocuSignJs}"/>
+
+    <div class="docusign-container">
+        <div id="dsAlert" style="display: none">
+            <ul class="alert-messages"></ul>
+            <a href="{!pathPrefix}/{!source.id}" id="backButton" class="secondary button"
+               style="display: none">{!$Label.Back}</a>
+        </div>
+
+        <!-- Edit Envelope Begins -->
+        <div id="ds-edit-envelope">
+            <div class="title">
+                <img class="logo" src="{!$Resource.DocuSign}"/>
+                <h1 id="envelopeTitle">{!source.display}</h1>
+            </div>
+            <div class="row">
+                <div id="documents">
+                    <section>
+                        <div id="dsDocumentsList">
+                            <div class="document-title">
+                                <div class="button has-dropdown" id="ds-add-document-btn">
+                                    <a href="#">{!$Label.AddDoc}</a>
+                                    <ul class="dropdown ds-add-document-dropdown">
+                                        <li><a href="#" id="add-attachment">{!$Label.Attachment}</a></li>
+                                        <li><a href="#" id="add-libraries">{!$Label.Libraries}</a></li>
+                                        <li><a href="#" id="add-document">{!$Label.Document}</a></li>
+                                        <li><a href="#" id="add-docusign-template">{!$Label.DocuSignTemplate}</a></li>
+                                        <li><a href="#" id="add-feed-items">{!$Label.FeedAttachments}</a></li>
+                                    </ul>
+                                </div>
+                                <h2><img class="icon" id="docIcon"
+                                         src="{!$Resource.DocumentIcon}"/> {!$Label.Documents}</h2>
+                            </div>
+                            <div class="categories">
+                                <span>{!$Label.Order}</span>
+                                <span>{!$Label.Name}</span>
+                            </div>
+                            <div id="dsDocumentListContainer">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="recipients">
+                    <section id="dsRecipientsList">
+                        <div class="document-title">
+                            <div class="button has-dropdown" id="ds-add-recipient-btn">
+                                <a href="#">{!$Label.AddRecipient}</a>
+                                <ul class="dropdown ds-add-recipient-dropdown">
+                                    <li><a id="add-contact" href="#">{!$Label.Contacts}</a></li>
+                                    <li><a id="add-lead" href="#">{!$Label.Leads}</a></li>
+                                    <li><a id="add-user" href="#">{!$Label.Users}</a></li>
+                                    <li><a id="add-signingGroup" href="#">{!$Label.AddSigningGroup}</a></li>
+                                    <li><a id="add-me" href="#">{!$Label.AddMe}</a></li>
+                                    <li><a id="add-quick" href="#">{!$Label.QuickAdd}</a></li>
+                                </ul>
+                            </div>
+                            <h2><img class="icon" id="recipientIcon"
+                                     src="{!$Resource.RecipientIcon}"/> {!$Label.Recipients}</h2>
+                        </div>
+                        <div class="categories">
+                            <span>{!$Label.Order}</span>
+                            <span>{!$Label.Recipient}</span>
+                            <span>{!$Label.Action}</span>
+                            <span class="language-label">{!$Label.Language}</span>
+                            <span>{!$Label.Role}</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div id="message" class="expanded" style="display: none">
+                    <section>
+                        <div class="document-title" id="message-document-title">
+                            <h2><img class="icon" id="messageIcon"
+                                     src="{!$Resource.MessageIcon}"/> {!$Label.MessagetoAllRecipients}</h2>
+                        </div>
+                        <div class="content">
+                            <div class="form">
+                                <div id="subjectDiv">
+                                    <label>{!$Label.Subject}</label>
+                                    <input type="text" maxlength="100" id="emailSubject" value="{!envelope.emailSubject}"
+                                       placeholder="{!$Label.MessageSubject}"/>
+                                </div>
+                                <div id="messageDiv">
+                                    <label>{!$Label.Message}</label>
+                                    <textarea maxlength="2000" id="emailMessage"
+                                          placeholder="{!$Label.MessageContent}">{!envelope.emailMessage}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="envelopeCustomFields" class="expanded" style="display: none">
+                    <section>
+                        <div class="document-title" id="envelopeCustomFields-document-title">
+                            <h2><img class="icon" id="envelopecustomfieldIcon"
+                                     src="{!$Resource.EnvelopecustomfieldIconPNG}"/>{!$Label.EnvelopeCustomFields}
+                            </h2>
+                        </div>
+                        <div id="envelopeCustomFieldsContent" class="content">
+                            <div id="envelopeCustomFieldsForm" class="form">
+                                <div id="envelopeCustomFieldsGridRow" class="grid-row">
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="settings" class="expanded" style="display: none">
+                    <section>
+                        <div class="document-title" id="settings-document-title">
+                            <h2><img class="icon" id="settingIcon"
+                                     src="{!$Resource.SettingIcon}"/> {!$Label.Settings}</h2>
+                        </div>
+                        <div class="content">
+                            <div class="option" id="remindSignersFields" style="display: none">
+                                <input type="checkbox" id="remindSigners" value="{!envelope.options.remind}"/>
+								<p><label for="remindSigners">{!$Label.Sendautomaticreminders}</label></p>
+                                <div id="reminders">
+                                    <p class="sub">{!$Label.RemindSignersviaEmail} <input type="text"
+                                                                                          maxlength="3"
+                                                                                          id="sendReminderDays"
+                                                                                          value="{!envelope.options.remindAfterDays}"/>
+                                    </p>
+                                    <p class="sub">{!$Label.ContinueToSendRemindersEvery} <input type="text"
+                                                                                                 maxlength="3"
+                                                                                                 id="sendReminderRepeatDays"
+                                                                                                 value="{!envelope.options.remindFrequencyDays}"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="option" id="expireEnvelopeFields" style="display: none">
+                                <input type="checkbox" id="expireEnvelope" value="{!envelope.options.expires}"/>
+								<p><label for="expireEnvelope">{!$Label.ExpireEnvelope}</label></p>
+                                <div id="expirations">
+                                    <p class="sub">{!$Label.ExpireRequestIn} <input type="text"
+                                                                                    maxlength="3"
+                                                                                    id="expireEnvelopeDays"
+                                                                                    value="{!envelope.options.expireAfterDays}"/>
+                                    </p>
+                                    <p class="sub">{!$Label.WarnSigners} <input type="text"
+                                                                                maxlength="3"
+                                                                                id="warnExpireDays"
+                                                                                value="{!envelope.options.expireWarnDays}"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="option" id="enableChatterFields" style="display: none">
+                                <input type="checkbox" id="enableChatterUpdates"/>
+                                <label for="enableChatterUpdates">{!$Label.EnableChatterUpdates}</label>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="inline-button send">
+                <ul>
+                    <li><a href="javascript:void(0);" id="nextButton" class="next"
+                           style="display: none">{!$Label.Next}</a></li>
+                    <li><a href="javascript:void(0);" id="sendNowButton" style="display: none">{!$Label.SendNow}</a>
+                    </li>
+                    <li><a href="javascript:void(0);" id="cancelButton">{!$Label.Cancel}</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Edit Envelope Ends -->
+
+        <!-- Edit Recipient Modal Begins -->
+        <div class="ds-edit-recipient-modal modal-background">
+            <div class="modal">
+                <div class="ds-edit-recipient-modal-content">
+                    <img class="close-modal ds-recipient-close-icon" src="{!$Resource.Delete}"/>
+                    <h2 id="ds-recipient-modal-title"></h2>
+                    <div>
+                        <label>{!$Label.RecipientName}</label>
+                        <div class="ten col no-padding" id="ds-recipient-name">
+                            <p id="ds-recipient-info"></p>
+                        </div>
+                        <div class="two col no-padding" id="ds-change-recipient">
+                            <div class="button has-dropdown" id="ds-edit-recipient-btn">
+                                <a href="#">{!$Label.ChangeRecipient}</a>
+                                <ul class="dropdown ds-edit-recipient-dropdown">
+                                    <li><a id="edit-contact" href="#">{!$Label.Contacts}</a></li>
+                                    <li><a id="edit-lead" href="#">{!$Label.Leads}</a></li>
+                                    <li><a id="edit-user" href="#">{!$Label.Users}</a></li>
+                                    <li><a id="edit-signingGroup" href="#">{!$Label.AddSigningGroup}</a></li>
+                                    <li><a id="edit-me" href="#">{!$Label.AddMe}</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ds-quickadd-form">
+                        <label>{!$Label.Name}</label>
+                        <input type="text" placeholder="" maxlength="100" id="quick-add-name"/>
+                        <label class="error ds-recipient-name-error-label">{!$Label.FieldRequired}</label>
+                        <label>{!$Label.EmailAddress}</label>
+                        <input type="text" placeholder="" maxlength="100" id="quick-add-email"/>
+                        <label class="error ds-recipient-email-error-label"></label>
+                    </div>
+                    <div id="ds-recipient-signature-dropdown">
+                        <label>{!$Label.Signature}</label>
+                        <select></select>
+                    </div>
+                    <div id="ds-recipient-signertype-dropdown">
+                        <label>{!$Label.RecipientType}</label>
+                        <select id="ds-recipient-signertype-select">
+                            <option value="Signer">{!$Label.Signer}</option>
+                            <option value="CarbonCopy">{!$Label.CarbonCopy}</option>
+                            <option value="CertifiedDelivery">{!$Label.CertifiedDelivery}</option>
+                            <option value="Agent">{!$Label.AddressRecipients}</option>
+                            <option value="Editor">{!$Label.ManageEnvelope}</option>
+                            <option value="Intermediary">{!$Label.UpdateRecipients}</option>
+                        </select>
+                        <label class="error ds-recipient-signature-dropdown-error-label">{!$Label.DocuSignandSalesforce}</label>
+                    </div>
+                    <div id="ds-recipient-signer-name-div" class="grid-row">
+                        <div class="col nine">
+                            <label>{!$Label.SignerName}</label>
+                            <input type="text" id="ds-recipient-signer-name" placeholder="" maxlength="100"/>
+			    <label class="error ds-recipient-signer-name-error-label">{!$Label.FieldRequired}</label>
+                        </div>
+                        <div class="col three">
+                            <label>{!$Label.SignNow}</label>
+                            <input type="checkbox" id="ds-recipient-sign-now"/>
+                        </div>
+                    </div>
+                    <div class="grid-row ds-recipient-signer-role-div">
+                        <label class="role">{!$Label.SignerRole}</label>
+                        <div class="ten col">
+                            <input type="text" id="ds-recipient-signer-role" placeholder="" maxlength="100"/>
+                        </div>
+                        <div class="two col" id="ds-recipient-signer-role-selection">
+                            <div class="button has-dropdown" id="ds-recipient-signer-role-btn">
+                                <a href="#">...</a>
+                                <ul class="dropdown" id="ds-recipient-signer-role-dropdown"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ds-recipient-accessAuthentication">
+                        <input type="checkbox" id="accessCodeCheckbox" value="Access Code"/> {!$Label.AccessCode} <br/>
+                        <div id="ds-recipient-accesscodeAuthentication">
+                            <input type="text" id="ds-recipient-access-code"
+                                   placeholder="{!$Label.AccessCodePlaceholderMessage}" maxlength="50"/>
+                        </div>
+                        <div id="ds-recipient-IdentityCheck-heading">
+                            <input type="checkbox" id="identityCheckCheckbox"
+                                   value="IdentityCheck"/> {!$Label.IdentityCheck}
+                        </div>
+                        <div id="ds-recipient-IdentityCheck">
+                            <select id="identityCheck_select">
+                            </select>
+                            <div id="ds-recipient-SMSAuthentication">
+                         	<span>
+                         	<select id="ds-recipient-SMS-countrycode">
+                                <option data-countryCode="none" value="">{!$Label.None}</option>
+								  <option data-countryCode="AF" value="93">Afghanistan (+93)</option>
+								  <option data-countryCode="AL" value="355">Albania (+355)</option>
+								  <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+								  <option data-countryCode="AS" value="376">American Samoa (+1)</option>
+								  <option data-countryCode="AD" value="376">Andorra (+376)</option>
+								  <option data-countryCode="AO" value="244">Angola (+244)</option>
+								  <option data-countryCode="AI" value="1264">Anguilla (+1)</option>
+								  <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1)</option>
+								  <option data-countryCode="AR" value="54">Argentina (+54)</option>
+								  <option data-countryCode="AM" value="374">Armenia (+374)</option>
+								  <option data-countryCode="AW" value="297">Aruba (+297)</option>
+								  <option data-countryCode="AU" value="61">Australia (+61)</option>
+								  <option data-countryCode="AT" value="43">Austria (+43)</option>
+								  <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+								  <option data-countryCode="BS" value="1242">Bahamas (+1)</option>
+								  <option data-countryCode="BH" value="973">Bahrain (+973)</option>
+								  <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
+								  <option data-countryCode="BB" value="1246">Barbados (+1)</option>
+								  <option data-countryCode="BY" value="375">Belarus (+375)</option>
+								  <option data-countryCode="BE" value="32">Belgium (+32)</option>
+								  <option data-countryCode="BZ" value="501">Belize (+501)</option>
+								  <option data-countryCode="BJ" value="229">Benin (+229)</option>
+								  <option data-countryCode="BM" value="1441">Bermuda (+1)</option>
+								  <option data-countryCode="BT" value="975">Bhutan (+975)</option>
+								  <option data-countryCode="BO" value="591">Bolivia (+591)</option>
+								  <option data-countryCode="BQ"
+                                          value="591">Bonaire,Sint Eustatius and saba (+599)</option>
+								  <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
+								  <option data-countryCode="BW" value="267">Botswana (+267)</option>
+								  <option data-countryCode="BR" value="55">Brazil (+55)</option>
+								  <option data-countryCode="IO"
+                                          value="246"> British Indian Ocean Territory (+246)</option>
+								  <option data-countryCode="BN" value="673">Brunei Darussalam (+673)</option>
+								  <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
+								  <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
+								  <option data-countryCode="BI" value="257">Burundi (+257)</option>
+								  <option data-countryCode="KH" value="855">Cambodia (+855)</option>
+								  <option data-countryCode="CM" value="237">Cameroon (+237)</option>
+								  <option data-countryCode="CA" value="1">Canada (+1)</option>
+								  <option data-countryCode="CV" value="238">Cape Verde (+238)</option>
+								  <option data-countryCode="KY" value="1345">Cayman Islands (+1)</option>
+								  <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+								  <option data-countryCode="TD" value="56">Chad (+235)</option>
+								  <option data-countryCode="CL" value="56">Chile (+56)</option>
+								  <option data-countryCode="CN" value="86">China (+86)</option>
+								  <option data-countryCode="CX" value="61">Christmas Island (+61)</option>
+								  <option data-countryCode="CC" value="61">Cocos Island (+61)</option>
+								  <option data-countryCode="CO" value="57">Colombia (+57)</option>
+								  <option data-countryCode="KM" value="269">Comoros (+269)</option>
+								  <option data-countryCode="CG" value="242">Congo (+242)</option>
+								  <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
+								  <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
+								  <option data-countryCode="CI" value="86">Cote d'Ivoire (+225)</option>
+								  <option data-countryCode="HR" value="385">Croatia (+385)</option>
+								  <option data-countryCode="CU" value="53">Cuba (+53)</option>
+								  <option data-countryCode="CW" value="599">Curacao (+599)</option>
+								  <option data-countryCode="CY" value="357">Cyprus (+357)</option>
+								  <option data-countryCode="CZ" value="420">Czech Republic (+420)</option>
+								  <option data-countryCode="CZ" value="420">DR Congo (+243)</option>
+								  <option data-countryCode="DK" value="45">Denmark (+45)</option>
+								  <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
+								  <option data-countryCode="DM" value="1809">Dominica (+1)</option>
+								  <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
+								  <option data-countryCode="EC" value="593">Ecuador (+593)</option>
+								  <option data-countryCode="EG" value="20">Egypt (+20)</option>
+								  <option data-countryCode="SV" value="503">El Salvador (+503)</option>
+								  <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
+								  <option data-countryCode="ER" value="291">Eritrea (+291)</option>
+								  <option data-countryCode="EE" value="372">Estonia (+372)</option>
+								  <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+								  <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+								  <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
+								  <option data-countryCode="FJ" value="679">Fiji (+679)</option>
+								  <option data-countryCode="FI" value="358">Finland (+358)</option>
+								  <option data-countryCode="FR" value="33">France (+33)</option>
+								  <option data-countryCode="GF" value="594">French Guiana (+594)</option>
+								  <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
+								  <option data-countryCode="GA" value="241">Gabon (+241)</option>
+								  <option data-countryCode="GM" value="220">Gambia (+220)</option>
+								  <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
+								  <option data-countryCode="DE" value="49">Germany (+49)</option>
+								  <option data-countryCode="GH" value="233">Ghana (+233)</option>
+								  <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
+								  <option data-countryCode="GR" value="30">Greece (+30)</option>
+								  <option data-countryCode="GL" value="299">Greenland (+299)</option>
+								  <option data-countryCode="GD" value="1473">Grenada (+1)</option>
+								  <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
+								  <option data-countryCode="GU" value="1671">Guam (+1)</option>
+								  <option data-countryCode="GT" value="502">Guatemala (+502)</option>
+								  <option data-countryCode="GG" value="44">Guernsey (+44)</option>
+								  <option data-countryCode="GN" value="224">Guinea (+224)</option>
+								  <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
+								  <option data-countryCode="GY" value="592">Guyana (+592)</option>
+								  <option data-countryCode="HT" value="509">Haiti (+509)</option>
+								  <option data-countryCode="HN" value="504">Honduras (+504)</option>
+								  <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
+								  <option data-countryCode="HU" value="36">Hungary (+36)</option>
+								  <option data-countryCode="IS" value="354">Iceland (+354)</option>
+								  <option data-countryCode="IN" value="91">India (+91)</option>
+								  <option data-countryCode="ID" value="62">Indonesia (+62)</option>
+								  <option data-countryCode="IR" value="98">Iran (+98)</option>
+								  <option data-countryCode="IQ" value="964">Iraq (+964)</option>
+								  <option data-countryCode="IE" value="353">Ireland (+353)</option>
+								  <option data-countryCode="IM" value="44">Isle of Man (+44)</option>
+								  <option data-countryCode="IL" value="972">Israel (+972)</option>
+								  <option data-countryCode="IT" value="39">Italy (+39)</option>
+								  <option data-countryCode="JM" value="1876">Jamaica (+1)</option>
+								  <option data-countryCode="JP" value="81">Japan (+81)</option>
+								  <option data-countryCode="JE" value="962">Jersy (+44)</option>
+								  <option data-countryCode="JO" value="962">Jordan (+962)</option>
+								  <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
+								  <option data-countryCode="KE" value="254">Kenya (+254)</option>
+								  <option data-countryCode="KI" value="686">Kiribati (+686)</option>
+								  <option data-countryCode="KW" value="965">Kuwait (+965)</option>
+								  <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
+								  <option data-countryCode="LA" value="856">Laos (+856)</option>
+								  <option data-countryCode="LV" value="371">Latvia (+371)</option>
+								  <option data-countryCode="LB" value="961">Lebanon (+961)</option>
+								  <option data-countryCode="LS" value="266">Lesotho (+266)</option>
+								  <option data-countryCode="LR" value="231">Liberia (+231)</option>
+								  <option data-countryCode="LY" value="218">Libya (+218)</option>
+								  <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+								  <option data-countryCode="LT" value="370">Lithuania (+370)</option>
+								  <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
+								  <option data-countryCode="MO" value="853">Macao (+853)</option>
+								  <option data-countryCode="MK" value="389">Macedonia (+389)</option>
+								  <option data-countryCode="MG" value="261">Madagascar (+261)</option>
+								  <option data-countryCode="MW" value="265">Malawi (+265)</option>
+								  <option data-countryCode="MY" value="60">Malaysia (+60)</option>
+								  <option data-countryCode="MV" value="960">Maldives (+960)</option>
+								  <option data-countryCode="ML" value="223">Mali (+223)</option>
+								  <option data-countryCode="MT" value="356">Malta (+356)</option>
+								  <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
+								  <option data-countryCode="MQ" value="596">Martinique (+596)</option>
+								  <option data-countryCode="MR" value="222">Mauritania (+222)</option>
+								  <option data-countryCode="YT" value="230">Mauritius (+230)</option>
+								  <option data-countryCode="YT" value="262">Mayotte (+262)</option>
+								  <option data-countryCode="MX" value="52">Mexico (+52)</option>
+								  <option data-countryCode="FM" value="691">Micronesia (+691)</option>
+								  <option data-countryCode="MD" value="373">Moldova (+373)</option>
+								  <option data-countryCode="MC" value="377">Monaco (+377)</option>
+								  <option data-countryCode="MN" value="976">Mongolia (+976)</option>
+								  <option data-countryCode="ME" value="382">Montenegro (+382)</option>
+								  <option data-countryCode="MS" value="1664">Montserrat (+1)</option>
+								  <option data-countryCode="MA" value="212">Morocco (+212)</option>
+								  <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
+								  <option data-countryCode="MN" value="95">Myanmar (+95)</option>
+								  <option data-countryCode="NA" value="264">Namibia (+264)</option>
+								  <option data-countryCode="NR" value="674">Nauru (+674)</option>
+								  <option data-countryCode="NP" value="977">Nepal (+977)</option>
+								  <option data-countryCode="NL" value="31">Netherlands (+31)</option>
+								  <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
+								  <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
+								  <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
+								  <option data-countryCode="NE" value="227">Niger (+227)</option>
+								  <option data-countryCode="NG" value="234">Nigeria (+234)</option>
+								  <option data-countryCode="NU" value="683">Niue (+683)</option>
+								  <option data-countryCode="KP" value="672">Norfolk Islands (+672)</option>
+								  <option data-countryCode="NF" value="672">North Korea (+850)</option>
+								  <option data-countryCode="NP" value="1670">Northern Mariana Islands (+1)</option>
+								  <option data-countryCode="NO" value="47">Norway (+47)</option>
+								  <option data-countryCode="OM" value="968">Oman (+968)</option>
+								  <option data-countryCode="PK" value="92">Pakistan (+92)</option>
+								  <option data-countryCode="PW" value="680">Palau (+680)</option>
+								  <option data-countryCode="PA" value="970">Palestine (+970)</option>
+								  <option data-countryCode="PA" value="507">Panama (+507)</option>
+								  <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
+								  <option data-countryCode="PY" value="595">Paraguay (+595)</option>
+								  <option data-countryCode="PE" value="51">Peru (+51)</option>
+								  <option data-countryCode="PH" value="63">Philippines (+63)</option>
+								  <option data-countryCode="PL" value="48">Poland (+48)</option>
+								  <option data-countryCode="PT" value="351">Portugal (+351)</option>
+								  <option data-countryCode="PR" value="1787">Puerto Rico (+1)</option>
+								  <option data-countryCode="QA" value="974">Qatar (+974)</option>
+								  <option data-countryCode="RE" value="262">Reunion (+262)</option>
+								  <option data-countryCode="RO" value="40">Romania (+40)</option>
+								  <option data-countryCode="RU" value="7">Russian Federation (+7)</option>
+								  <option data-countryCode="RW" value="250">Rwanda (+250)</option>
+								  <option data-countryCode="BL" value="590">Saint Barthélemy (+590)</option>
+								  <option data-countryCode="SH" value="290">Saint Helena, Ascension and Tristan da Cunha (+290)</option>
+								  <option data-countryCode="KN" value="1869">Saint Kitts and Nevis (+1)</option>
+								  <option data-countryCode="LC" value="1758">Saint Lucia (+1)</option>
+								  <option data-countryCode="MF" value="590">Saint Martin (+590)</option>
+								  <option data-countryCode="PM" value="508">Saint Pierre and Miquelon (+508)</option>
+								  <option data-countryCode="VC"
+                                          value="1784">Saint Vincent and The Grenadines (+1)</option>
+								  <option data-countryCode="VC" value="685">Samoa (+685)</option>
+								  <option data-countryCode="SM" value="378">San Marino (+378)</option>
+								  <option data-countryCode="ST" value="239">Sao Tome and Principe (+239)</option>
+								  <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
+								  <option data-countryCode="SN" value="221">Senegal (+221)</option>
+								  <option data-countryCode="CS" value="381">Serbia (+381)</option>
+								  <option data-countryCode="SC" value="248">Seychelles (+248)</option>
+								  <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
+								  <option data-countryCode="SG" value="65">Singapore (+65)</option>
+								  <option data-countryCode="SG" value="1721">Sint Maarten (+1)</option>
+								  <option data-countryCode="SK" value="421">Slovakia (+421)</option>
+								  <option data-countryCode="SI" value="386">Slovenia (+386)</option>
+								  <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
+								  <option data-countryCode="SO" value="252">Somalia (+252)</option>
+								  <option data-countryCode="ZA" value="27">South Africa (+27)</option>
+								  <option data-countryCode="SS" value="211">South Sudan (+27)</option>
+								  <option data-countryCode="ES" value="34">Spain (+34)</option>
+								  <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
+								  <option data-countryCode="SD" value="249">Sudan (+249)</option>
+								  <option data-countryCode="SR" value="597">Suriname (+597)</option>
+								  <option data-countryCode="SJ" value="47">Svalbard and Jan Mayen (+47)</option>
+								  <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
+								  <option data-countryCode="SE" value="46">Sweden (+46)</option>
+								  <option data-countryCode="CH" value="41">Switzerland (+41)</option>
+								  <option data-countryCode="SY" value="963">Syrian Arab Republic (+963)</option>
+								  <option data-countryCode="TW" value="886">Taiwan (+886)</option>
+								  <option data-countryCode="TJ" value="992">Tajikistan (+992)</option>
+								  <option data-countryCode="TZ" value="255">Tanzania (+255)</option>
+								  <option data-countryCode="TH" value="66">Thailand (+66)</option>
+								  <option data-countryCode="TL" value="670">Timor-leste (+670)</option>
+								  <option data-countryCode="TG" value="228">Togo (+228)</option>
+								  <option data-countryCode="TK" value="690">Tokelau (+690)</option>
+								  <option data-countryCode="TO" value="676">Tonga (+676)</option>
+								  <option data-countryCode="TT" value="1868">Trinidad and Tobago (+1)</option>
+								  <option data-countryCode="TN" value="216">Tunisia (+216)</option>
+								  <option data-countryCode="TR" value="90">Turkey (+90)</option>
+								  <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
+								  <option data-countryCode="TC" value="1649">Turks and Caicos Islands (+1)</option>
+								  <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
+								  <option data-countryCode="UG" value="256">Uganda (+256)</option>
+								  <option data-countryCode="UA" value="380">Ukraine (+380)</option>
+								  <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+								  <option data-countryCode="GB" value="44">United Kingdom (+44)</option>
+								  <option data-countryCode="US" value="1">United States (+1)</option>
+								  <option data-countryCode="UY" value="598">Uruguay (+598)</option>
+								  <option data-countryCode="UZ" value="998">Uzbekistan (+998)</option>
+								  <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
+								  <option data-countryCode="VA" value="379">Vatican City (+379)</option>
+								  <option data-countryCode="VE" value="58">Venezuela (+58)</option>
+								  <option data-countryCode="VN" value="84">Vietnam (+84)</option>
+								  <option data-countryCode="VG" value="1">Virgin Islands - British (+1)</option>
+								  <option data-countryCode="VI" value="1">Virgin Islands - US (+1)</option>
+								  <option data-countryCode="WF" value="681">Wallis and Futuna (+681)</option>
+								  <option data-countryCode="EH" value="212">Western Sahara (+212)</option>
+								  <option data-countryCode="YE" value="967">Yemen (+967)</option>
+								  <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+								  <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+								</select>
+		                        <input type="text" id="ds-recipient-SMS-number"
+                                       placeholder="{!$Label.SMSAuthentication}" maxlength="50"/>
+		                    	</span>
+                            </div>
+                            <label class="error ds-recipient-accessAuthentication-dropdown-error-label"></label>
+                        </div>
+                    </div>
+                    <div id="ds-recipient-language-setting">
+                        <div>
+                            <label>{!$Label.Language}</label>
+                            <select id="ds-recipient-language-select"></select>
+                        </div>
+                        <label>{!$Label.PersonalMessage}</label>
+                        <div class="message-background">
+                            <div class="form">
+                                <input type="text" id="ds-recipient-message-subject"
+                                       placeholder="{!$Label.MessageSubject}" maxlength="100"/>
+                                <textarea id="ds-recipient-message-body" placeholder="{!$Label.MessageContent}"
+                                          maxlength="2000"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="note-background">
+                        <label>{!$Label.NoteForRecipient}</label>
+                        <textarea maxlength="1000" id="ds-recipient-note"></textarea>
+                    </div>
+                    <div class="inline-button">
+                        <ul>
+                            <li><a href="#" id="ds-recipient-save-btn"
+                                   class="next">{!$Label.SaveRecipient2}</a></li>
+                            <li><a href="#" class="ds-recipient-cancel-btn">{!$Label.Cancel}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Recipient Modal Ends -->
+
+        <!-- Add Recipient Modal Begins -->
+        <div class="ds-add-recipient-modal modal-background">
+            <div class="modal">
+                <img class="close-modal ds-recipient-close-icon" src="{!$Resource.Delete}"/>
+                <h2 id='ds-search-recipient-modal-title'></h2>
+                <div class="search">
+                    <input type="text" id="ds-recipient-search-text" placeholder="{!$Label.Search}" maxlength="100"/>
+                    <button type="button" id="ds-recipient-search-btn">{!$Label.Search}</button>
+                    <a href="javascript:void(0);" id="ds-add-new-contact-link">{!$Label.AddRecipient}</a>
+                </div>
+                <div id="ds-recipient-search-form">
+                    <div class="content static" id="ds-recipient-search-result">
+                        <ul id="ds-recipient-search-selection"></ul>
+                    </div>
+                    <div class="inline-button">
+                        <ul>
+                            <li><a href="#" class="inactive next" id="ds-recipient-next-btn">{!$Label.Next}</a></li>
+                            <li><a href="#" class="ds-recipient-cancel-btn">{!$Label.Cancel}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ds-add-new-contact-form">
+                    <div class="grid-row">
+                        <div class="six col">
+                            <label>{!$Label.FirstName}</label>
+                            <input type="text" placeholder="" maxlength="40" id="add-new-contact-fname"/>
+                        </div>
+                        <div class="six col">
+                            <label>{!$Label.LastName}</label>
+                            <input type="text" placeholder="" maxlength="80" id="add-new-contact-lname"/>
+                            <label class="error add-new-contact-lname-error">{!$Label.FieldRequired}</label>
+                        </div>
+                    </div>
+                    <label>{!$Label.EmailAddress}</label>
+                    <input type="text" placeholder="" maxlength="80" id="add-new-contact-email"/>
+                    <label class="error add-new-contact-email-error"></label>
+                    <label>{!$Label.MailingStreet}</label>
+                    <input type="text" placeholder="" maxlength="255" id="add-new-contact-street"/>
+                    <label>{!$Label.MailingCity}</label>
+                    <input type="text" placeholder="" maxlength="40" id="add-new-contact-city"/>
+                    <div class="grid-row">
+                        <div class="six col">
+                            <label>{!$Label.StateProvince}</label>
+                            <input type="text" placeholder="" maxlength="80" id="add-new-contact-state"/>
+                        </div>
+                        <div class="six col">
+                            <label>{!$Label.ZipPostalCode}</label>
+                            <input type="text" placeholder="" maxlength="20" id="add-new-contact-zipcode"/>
+                        </div>
+                    </div>
+                    <label>{!$Label.Country}</label>
+                    <input type="text" placeholder="" maxlength="80" id="add-new-contact-country"/>
+                    <div class="grid-row">
+                        <div class="six col">
+                            <label>{!$Label.Phone}</label>
+                            <input type="text" placeholder="" maxlength="40" id="add-new-contact-phone"/>
+                        </div>
+                        <div class="six col">
+                            <label>{!$Label.Fax}</label>
+                            <input type="text" placeholder="" maxlength="40" id="add-new-contact-fax"/>
+                        </div>
+                    </div>
+                    <div class="inline-button">
+                        <ul>
+                            <li><a href="#" class="next" id="ds-save-new-contact-btn">{!$Label.Save}</a></li>
+                            <li><a href="#" id="ds-cancel-new-contact-btn">{!$Label.Cancel}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Recipient Modal Ends -->
+
+        <!-- Add Document Modal Begins -->
+        <div class="ds-add-document-modal modal-background">
+            <div class="modal">
+                <div class="ds-add-document-modal-content">
+                    <img class="close-modal ds-document-close-icon" src="{!$Resource.Delete}"/>
+                    <h2 id="ds_docmodal_header"></h2>
+                    <!-- Adding search templates functionality -->
+                    <div id="ds-template-search-form">
+                        <div class="search">
+                            <input type="text" id="ds-template-search-text" placeholder="{!$Label.Search}"
+                                   maxlength="100"/>
+                            <button type="button" id="ds-template-search-btn">{!$Label.Search}</button>
+                        </div>
+                    </div>
+
+					<apex:form >
+						<div id="ds_docmodal_file_upload">
+							<label class="button secondary file-container">
+								{!$Label.dsfs__fileupload}
+								<apex:inputFile id="ds_docmodal_input_file" value="{!file}" fileName="{!fileName}"/>
+							</label>
+							<apex:actionFunction action="{!uploadFile}" name="uploadFile"/>
+							<apex:pageMessages />
+						</div>
+					</apex:form>
+
+                    <a id="ds_docmodal_add_attachment" href="#" style="margin-bottom:10px;"
+                       class="secondary button">{!$Label.AddAttachment}</a>
+                    <label id="ds_docmodal_folder">
+                        <select id="ds_docmodal_folder_select">
+
+                        </select>
+                    </label>
+                    <div class="content" style="clear:right;">
+
+                    </div>
+                    <div class="inline-button">
+                        <ul>
+                            <li><a href="javascript:void(0);" class="next" id="ds-document-next-btn">{!$Label.Save}</a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="ds-document-cancel-btn">{!$Label.Cancel}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Document Model Ends -->
+
+        <!-- Loading for Modal Begins -->
+        <div class="modal-loading">
+            <div id="circleG">
+                <div id="circleG_1" class="circleG"></div>
+                <div id="circleG_2" class="circleG"></div>
+                <div id="circleG_3" class="circleG"></div>
+            </div>
+        </div>
+        <!-- Loading for Modal Ends -->
+
+        <c:FullScreenLoad />
+    </div>
+</apex:page>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Orientación sobre precios de partida de presupuesto</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Orientaciones sobre precios de partidas de presupuesto</value>
+    </caseValues>
+    <fields>
+        <help>Una explicación sobre esta orientación sobre precios y recomendaciones sobre los descuentos que se pueden proporcionar. Los representantes de ventas pueden ver esta explicación con la orientación sobre precios en el editor de partidas de presupuesto.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Un alto descuento para precios de excepción basados en ventas anteriores. Si un representante desde utilizar este precio, debe aplicar el descuento a la partida de presupuesto manualmente. Este descuento podría requerir aprobaciones en base a los parámetros de aprobaciones de su organización.</help>
+        <label><!-- Floor --></label>
+        <name>SBQQ__Floor__c</name>
+    </fields>
+    <fields>
+        <help>Un representante de ventas ha aceptado el descuento objetivo desde esta orientación sobre precios en el editor de partidas de presupuesto.</help>
+        <label><!-- Guidance Used --></label>
+        <name>SBQQ__GuidanceUsed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>SBQQ__IsViewed__c</name>
+    </fields>
+    <fields>
+        <help>Un descuento mediano basado en ventas anteriores. Si un representante desde utilizar este precio, debe aplicar el descuento a la partida de presupuesto manualmente. Este descuento podría requerir aprobaciones en base a los parámetros de aprobaciones de su organización.</help>
+        <label><!-- Norm --></label>
+        <name>SBQQ__Norm__c</name>
+    </fields>
+    <fields>
+        <help>La partida de presupuesto relacionada con esta orientación sobre precios</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El presupuesto que contiene la partida de presupuesto relacionada con esta orientación sobre precios</help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Es idóneo para descuentos menores basados en ventas anteriores. Si los representantes de ventas aceptan esta orientación sobre precios, Salesforce CPQ aplica un descuento para alcanzar este precio.</help>
+        <label><!-- Target --></label>
+        <name>SBQQ__Target__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre</nameFieldLabel>
+</CustomObjectTranslation>

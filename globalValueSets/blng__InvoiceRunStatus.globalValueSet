@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Started</fullName>
+        <default>true</default>
+        <label>Started</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed with errors</fullName>
+        <default>false</default>
+        <label>Completed with errors</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1 : OrderProduct Status Update - Processing</fullName>
+        <default>false</default>
+        <label>Step 1 : OrderProduct Status Update - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1 : OrderProduct Status Update - Complete</fullName>
+        <default>false</default>
+        <label>Step 1 : OrderProduct Status Update - Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2 : UsageSummary Status Update - Processing</fullName>
+        <default>false</default>
+        <label>Step 2 : UsageSummary Status Update - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2 : UsageSummary Status Update - Complete</fullName>
+        <default>false</default>
+        <label>Step 2 : UsageSummary Status Update - Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3 : OrderProduct Invoice Generation - Processing</fullName>
+        <default>false</default>
+        <label>Step 3 : OrderProduct Invoice Generation - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3 : OrderProduct Invoice Generation - Complete</fullName>
+        <default>false</default>
+        <label>Step 3 : OrderProduct Invoice Generation - Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 4 : UsageSummary Invoice Generation - Processing</fullName>
+        <default>false</default>
+        <label>Step 4 : UsageSummary Invoice Generation - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 4 : UsageSummary Invoice Generation - Complete</fullName>
+        <default>false</default>
+        <label>Step 4 : UsageSummary Invoice Generation - Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 5 : Validating Invoices - Processing</fullName>
+        <default>false</default>
+        <label>Step 5 : Validating Invoices - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 5 : Validating Invoices - Complete</fullName>
+        <default>false</default>
+        <label>Step 5 : Validating Invoices - Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 6 : Tax Processing - Processing</fullName>
+        <default>false</default>
+        <label>Step 6 : Tax Processing - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 6 : Tax Processing - Complete</fullName>
+        <default>false</default>
+        <label>Step 6 : Tax Processing - Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 7 : Posting Invoices - Processing</fullName>
+        <default>false</default>
+        <label>Step 7 : Posting Invoices - Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 6/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 6/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 5/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 5/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 5/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 5/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 4/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 4/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 4/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 4/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 3/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 3/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 2/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 2/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 1/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 1/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 6/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 6/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 7/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 7/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 7/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 7/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 8/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 8/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 9/9 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 9/9 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 8/9 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 8/9 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 6/6 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 6/6 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 5/6 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 5/6 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 5/6 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 5/6 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 4/6 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 4/6 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 4/6 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 4/6 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3/6 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 3/6 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 3/6 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 3/6 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2/6 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 2/6 Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 2/6 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 2/6 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1/6 Processing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 1/6 Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Step 1/6 Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Step 1/6 Completed</label>
+    </customValue>
+    <masterLabel>Invoice Run Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

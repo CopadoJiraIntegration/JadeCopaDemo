@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Legacy</fullName>
+        <default>true</default>
+        <label>Legacy</label>
+    </customValue>
+    <customValue>
+        <fullName>LIFO by Order Product Creation Date</fullName>
+        <default>false</default>
+        <label>LIFO by Order Product Creation Date</label>
+    </customValue>
+    <customValue>
+        <fullName>LIFO based on Termination Date</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>LIFO based on Termination Date</label>
+    </customValue>
+    <masterLabel>Cancellation Rule</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

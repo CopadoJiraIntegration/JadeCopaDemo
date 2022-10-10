@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Genehmigungsregel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Genehmigungsregeln</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungsregel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungsregeln --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungsregel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungsregeln --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungsregel --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungsregeln --></value>
+    </caseValues>
+    <fields>
+        <help>Aktiviert, wenn die Regel bei der Einreichung zur Genehmigung ausgewertet werden soll</help>
+        <label><!-- Active --></label>
+        <name>sbaa__Active__c</name>
+    </fields>
+    <fields>
+        <help>Kann nur eingegeben werden, wenn &quot;Erfüllte Bedingungen&quot; auf &quot;Benutzerdefiniert&quot; eingestellt ist. Geben Sie eine Kombination aus den Indexnummern der Genehmigungsbedingung, AND, OR, und Klammern ein (z. B. (123 AND 124) AND 125).</help>
+        <label><!-- Advanced Condition --></label>
+        <name>sbaa__AdvancedCondition__c</name>
+    </fields>
+    <fields>
+        <help>Genehmigungskette, zu der diese Genehmigung gehört.</help>
+        <label><!-- Approval Chain --></label>
+        <name>sbaa__ApprovalChain__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Wählen Sie einen oder mehrere Empfänger für die Benachrichtigung per Genehmigungs-E-Mail aus.</help>
+        <label><!-- Approval Recipients --></label>
+        <name>sbaa__ApprovalRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>Erstmalig eingereicht von</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>Datensatz erstellt von</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>Datensatzinhaber</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Schritt, bei dem diese Genehmigungsregel ausgewertet wird.</help>
+        <label><!-- Approval Step --></label>
+        <name>sbaa__ApprovalStep__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagefeld für die E-Mail-Vorlage, die mit Genehmigungen für diese Regel verknüpft ist</help>
+        <label><!-- Approval Template --></label>
+        <name>sbaa__ApprovalTemplate__c</name>
+        <relationshipLabel><!-- Approved Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Feld, das bei &quot;Dynamische Genehmigungen&quot; verwendet wird und den Genehmigerwert für diese Regel enthält</help>
+        <label><!-- Approver Field --></label>
+        <name>sbaa__ApproverField__c</name>
+        <picklistValues>
+            <masterLabel>Created By</masterLabel>
+            <translation>Erstellt von</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Genehmiger, der mit dieser Genehmigungsregel verknüpft ist.</help>
+        <label><!-- Approver --></label>
+        <name>sbaa__Approver__c</name>
+        <relationshipLabel><!-- Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Wählen Sie das Verhalten für Ihre Bedingungen: &quot;Alle&quot; entspricht AND, &quot;Beliebige&quot; entspricht OR.</help>
+        <label><!-- Conditions Met --></label>
+        <name>sbaa__ConditionsMet__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>Alle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Any</masterLabel>
+            <translation>Beliebig</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation>Benutzerdefiniert</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Art des Datumsfelds aus dem ausgewählten Zielobjekt, auf das sich &quot;Gültiges Startdatum&quot; und &quot;Gültiges Enddatum&quot; beim Anwenden von Genehmigungsregeln beziehen</help>
+        <label><!-- Effective Date Field --></label>
+        <name>sbaa__EffectiveDateField__c</name>
+        <picklistValues>
+            <masterLabel>Created Date</masterLabel>
+            <translation>Erstellt am</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted Date</masterLabel>
+            <translation>Gesendet am</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Das Enddatum für die Gültigkeitsdauer der Regel (Termin ist eingeschlossen)</help>
+        <label><!-- Effective End Date --></label>
+        <name>sbaa__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Das Startdatum für die Gültigkeitsdauer der Regel (Termin ist eingeschlossen)</help>
+        <label><!-- Effective Start Date --></label>
+        <name>sbaa__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Status, bei denen diese Genehmigungsregel nicht angewandt werden soll</help>
+        <label><!-- Excluded Statuses --></label>
+        <name>sbaa__ExcludedStatuses__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>Genehmigt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>Ausstehend</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation>Widerrufen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>Abgelehnt</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Ist diese Einstellung festgelegt, überschreibt der Wert dieses Felds die Genehmigungsbedingungen</help>
+        <label><!-- Override Field --></label>
+        <name>sbaa__OverrideField__c</name>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Name</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Ist diese Einstellung festgelegt, erfolgen alle Genehmigungen innerhalb des Schrittes parallel. Sie wirkt sich nur aus, wenn erweiterte Genehmigungen mit nativen Genehmigungen verwendet werden.</help>
+        <label><!-- Parallel --></label>
+        <name>sbaa__Parallel__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagefeld für die E-Mail-Vorlage, die mit Widerrufen für diese Regel verknüpft ist</help>
+        <label><!-- Recall Template --></label>
+        <name>sbaa__RecallTemplate__c</name>
+        <relationshipLabel><!-- Recalled Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Wählen Sie einen oder mehrere Empfänger für die Benachrichtigung per Ablehnungs-E-Mail aus.</help>
+        <label><!-- Rejection Recipients --></label>
+        <name>sbaa__RejectionRecipients__c</name>
+        <picklistValues>
+            <masterLabel>Initial Submitter</masterLabel>
+            <translation>Erstmalig eingereicht von</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Created By</masterLabel>
+            <translation>Datensatz erstellt von</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Owner</masterLabel>
+            <translation>Datensatzinhaber</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Nachschlagefeld für die E-Mail-Vorlage, die mit Ablehnungen für diese Regel verknüpft ist</help>
+        <label><!-- Rejection Template --></label>
+        <name>sbaa__RejectionTemplate__c</name>
+        <relationshipLabel><!-- Rejected Approval Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagefeld für die E-Mail-Vorlage, die mit Genehmigungsanfragen für diese Regel verknüpft ist</help>
+        <label><!-- Request Template --></label>
+        <name>sbaa__RequestTemplate__c</name>
+        <relationshipLabel><!-- Approval Rules (Requested) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Standardmäßig werden durch das Genehmigen einer Genehmigung alle anderen Genehmigungen, die demselben Benutzer zugewiesen sind, automatisch genehmigt. Wenn dieses Kontrollkästchen aktiviert ist, wird eine Genehmigung, die von dieser Regel stammt, nicht automatisch genehmigt und muss explizit genehmigt werden.</help>
+        <label><!-- Require Explicit Approval --></label>
+        <name>sbaa__RequireExplicitApproval__c</name>
+    </fields>
+    <fields>
+        <help>Aktivieren Sie dieses Kontrollkästchen, um Bedingungen für intelligente Genehmigungen neu auszuwerten, selbst wenn &quot;Erfüllte Bedingungen&quot; auf &quot;Alle&quot; oder &quot;Benutzerdefiniert&quot; eingestellt ist. Wenn eine Bedingung für intelligente Genehmigungen &quot;Wahr&quot; zurückgibt, wird die Neuauswertung angehalten und die Regelbedingung als erfüllt betrachtet.</help>
+        <label><!-- Reevaluate Smart Approvals Individually --></label>
+        <name>sbaa__SmartApprovalIgnoresConditionsMet__c</name>
+    </fields>
+    <fields>
+        <help>API-Name des Objekts, für das diese Regel gilt</help>
+        <label><!-- Target Object --></label>
+        <name>sbaa__TargetObject__c</name>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation>Opportunity</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBQQ__Quote__c</masterLabel>
+            <translation><!-- SBQQ__Quote__c --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Approval Rule Layout</layout>
+        <sections>
+            <label>Grundeinstellungen</label>
+            <section>Basic Settings</section>
+        </sections>
+        <sections>
+            <label>Bedingungen</label>
+            <section>Conditions</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>E-Mail-Benachrichtigungen</label>
+            <section>Email Notifications</section>
+        </sections>
+        <sections>
+            <label>Ausschlüsse</label>
+            <section>Exclusions</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Regelname</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Effective Date Field must be set in order to use Effective Start and End Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Not_Null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effective End Date must not come before Effective Start Date. --></errorMessage>
+        <name>sbaa__Effective_Date_Range_Ordered</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CloneWithRelated --></label>
+        <name>sbaa__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneWithRelatedClassic --></label>
+        <name>sbaa__CloneWithRelatedClassic</name>
+    </webLinks>
+</CustomObjectTranslation>

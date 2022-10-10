@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceChannel xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <doesMinimizeWidgetOnAccept>true</doesMinimizeWidgetOnAccept>
+    <hasAutoAcceptEnabled>false</hasAutoAcceptEnabled>
+    <label>Phone</label>
+    <relatedEntityType>VoiceCall</relatedEntityType>
+    <serviceChannelFieldPriorities>
+        <priority>1</priority>
+        <value xsi:nil="true"/>
+    </serviceChannelFieldPriorities>
+    <serviceChannelFieldPriorities>
+        <priority>1</priority>
+        <value xsi:nil="true"/>
+    </serviceChannelFieldPriorities>
+</ServiceChannel>

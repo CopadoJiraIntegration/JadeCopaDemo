@@ -1,0 +1,6 @@
+<apex:page standardcontroller="Lead" extensions="pi.PardotResourceBaseByUserExtension" showHeader="false" sidebar="false" standardStylesheets="false">
+  <style>
+     Body { Background: transparent; }
+  </style>
+  <c:FilteredFrame src="{!pardotBaseUrl}/prospect/activity/email/{!URLENCODE(Lead.Email)}{!authenticatedQueryStringWithContext}&serverurl={!$Api.Partner_Server_URL_90}&source=salesforce&tab=lead&style={!$User.UIThemeDisplayed}&fid={!Lead.ID}" scrolling="true" height="100%" id="prospect_insight"/>
+</apex:page>

@@ -3,7 +3,7 @@
     <sorted>false</sorted>
     <standardValue>
         <fullName>New</fullName>
-        <default>true</default>
+        <default>false</default>
         <label>New</label>
         <converted>false</converted>
     </standardValue>
@@ -29,6 +29,54 @@
         <fullName>Unqualified</fullName>
         <default>false</default>
         <label>Unqualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Draft</fullName>
+        <default>false</default>
+        <label>Draft</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted</fullName>
+        <default>false</default>
+        <label>Submitted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Open - Not Contacted</fullName>
+        <default>true</default>
+        <label>Open - Not Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Working - Contacted</fullName>
+        <default>false</default>
+        <label>Working - Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Converted</fullName>
+        <default>false</default>
+        <label>Closed - Converted</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Not Converted</fullName>
+        <default>false</default>
+        <label>Closed - Not Converted</label>
         <converted>false</converted>
     </standardValue>
 </StandardValueSet>

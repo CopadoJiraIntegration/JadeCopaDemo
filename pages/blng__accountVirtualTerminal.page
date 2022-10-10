@@ -1,0 +1,74 @@
+<apex:page showHeader="false"  sidebar="false" standardController="Account" standardStylesheets="false" docType="html-5.0" extensions="blng.CurrencyUtils" applyBodyTag="False" applyHtmlTag="False">
+
+    <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="{!URLFOR($Resource.blng__metrics, 'metricsHandler.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.blng__metrics, 'bookmarklet.js')}" html-handlerObject="window" html-handlerFunction="sendMetrics"/>
+    <apex:includeScript value="/lightning/lightning.out.js"/>
+    <apex:outputText id="errormessage"/>
+    <style>
+        html {
+            overflow-y:scroll;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color:rgba(32, 92, 159,0.6);
+        }
+        body:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),-webkit-linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));
+            background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));
+            background-repeat: repeat-x;
+            background-position: top left;
+        }
+    </style>
+
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var currencyIsoCode = '';
+        currencyIsoCode = '{!JSENCODE(currencyISOCode)}';
+        var permissionFlagCheck = JSON.parse({!JSENCODE(IF(permissionFlag,"true", "false"))});
+        var paymentCenterAccessFlagCheck = JSON.parse({!JSENCODE(IF(paymentCenterAccessFlag,"true", "false"))});
+        if(paymentCenterAccessFlagCheck && permissionFlagCheck) {
+            $Lightning.use("blng:paymentApp", function () {
+                $Lightning.createComponent("blng:paymentContainerComp",
+                    {
+                        "recordId": "{!$CurrentPage.parameters.Id}",
+                        "accountName": "{!JSENCODE(Account.Name)}",
+                        "context": 'account',
+                        "currencyIsoCode": currencyIsoCode
+                    },
+                    "lightning",
+                    function (cmp) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+            });
+        } else {
+            $Lightning.use("blng:permissionApp", function () {
+                $Lightning.createComponent("blng:permissionComp", {"recordId" : "{!$CurrentPage.parameters.Id}" , "navigateToParent" : "{!JSENCODE($Label.LIGHTNING_BUTTON_TEXT_RETURN_TO_ACCOUNT)}"},
+                    "lightning",
+                    function (cmp) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+            });
+        }
+    </script>
+</apex:page>

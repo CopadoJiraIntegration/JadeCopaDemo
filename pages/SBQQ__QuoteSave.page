@@ -1,0 +1,16 @@
+<apex:page id="QuoteSave" standardController="SBQQ__Quote__c" extensions="SBQQ.QueueableJobCheckerExt,SBQQ.QuoteExtController" showHeader="false" applyHtmlTag="false">
+	<c:standardRecalculating recordId="{!record.Id}"
+		calculatedRecordId="{!record.Id}"
+		jobId="{!queueableJobId}"
+		inProgressMessage="{!HTMLENCODE($Label.SBQQ__msg_background_calculation_in_progress)}"
+		jobStatus="{!jobStatus}"
+		jobStatusChecker="{!$RemoteAction.QueueableJobCheckerExt.getJobStatus}"
+		autoRefresh="{!autoRefresh}"
+		jobDetails="{!jobDetails}"
+		uncalculated="{!uncalculated}"
+		uncalculatedQuoteMessage="{!HTMLENCODE($Label.SBQQ__msg_uncalculated_quote_message)}"
+		recalculatedQuoteMessage="{!HTMLENCODE($Label.SBQQ__msg_recalculated_quote_message)}"
+		uncalculatedQuoteMessageLink="{!HTMLENCODE($Label.SBQQ__msg_uncalculated_quote_link)}"
+		recalculatedQuoteMessageLink="{!HTMLENCODE($Label.SBQQ__msg_recalculated_quote_link)}"
+		calculateAction="{!$RemoteAction.QuoteExtController.calculate}"/>
+</apex:page>

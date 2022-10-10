@@ -1,0 +1,35 @@
+<apex:page showHeader="true" sidebar="true" standardController="Account" standardStylesheets="true" extensions="blng.CurrencyUtils">
+    <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    
+    <div id="lightning" >
+        <div id="spinnerId" class="slds-spinner_container slds-show">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>  
+
+    <script>
+          var invoice = '{!JSENCODE(BillingRawPrefix)}'; 
+          var invoice1 = '{!JSENCODE(BillingBarPrefix)}'; 
+          var namespace = invoice != '' ? invoice : 'c'; 
+          var prefix = invoice1 != '' ? invoice1 : '';
+          
+          var accName = "{!JSENCODE(Account.Name)}";
+            
+          $Lightning.use(namespace+":refundApp", function() {
+          $Lightning.createComponent(namespace+":refund",
+          {
+           "accountId" : "{!$CurrentPage.parameters.Id}", 
+           "namespace":namespace, "accountName":accName,
+           "prefix" : prefix
+          },
+          "lightning",
+          function(cmp) {
+           document.getElementById('spinnerId').style.display = 'none';
+          });
+        });
+    </script>
+</apex:page>

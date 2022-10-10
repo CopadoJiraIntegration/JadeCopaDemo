@@ -86,33 +86,243 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Order_Product_Record_Page</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Order_Product_Record_Page</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Audience__c</fullName>
+        <description>Stores the value for Audience configuration attribute.</description>
+        <externalId>false</externalId>
+        <label>Audience</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>3 - 25</fullName>
+                    <default>false</default>
+                    <label>3 - 25</label>
+                </value>
+                <value>
+                    <fullName>26 - 50</fullName>
+                    <default>false</default>
+                    <label>26 - 50</label>
+                </value>
+                <value>
+                    <fullName>51 - 99</fullName>
+                    <default>false</default>
+                    <label>51 - 99</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>AvailableQuantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Content_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Valur from  Content Name Field on QuoteLine</description>
+        <externalId>false</externalId>
+        <label>Content Name</label>
+        <referenceTo>Content__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>Order_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Content__c</fullName>
+        <description>Value from Content Type Attribute</description>
+        <externalId>false</externalId>
+        <label>Content Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Digital</fullName>
+                    <default>false</default>
+                    <label>Digital</label>
+                </value>
+                <value>
+                    <fullName>Hard Copy</fullName>
+                    <default>false</default>
+                    <label>Hard Copy</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DefaultPaymentType__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Payment Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Discount_Amount_Per_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Discount_Amount__c /  Quantity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount Amount(Per Unit)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Duration_in_Months__c</fullName>
+        <description>Value calculated from Start and end Date of quoteline</description>
+        <externalId>false</externalId>
+        <label>Duration in Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERPSystem__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Order.Account.ERPSystem__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ERP System</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>EndDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Impressions__c</fullName>
+        <description>Stores the value for Impressions configuration attribute.</description>
+        <externalId>false</externalId>
+        <label>Impressions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_fulfillment_Line_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Item fulfillment Line ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastSyncDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Sync Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>List_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(   ISPICKVAL(SBQQ__ChargeType__c, &quot;One-Time&quot;) , SBQQ__QuotedListPrice__c * Quantity, IF(  ISBLANK( SBQQ__SubscriptionTerm__c ) , (SBQQ__QuotedListPrice__c * Quantity) *  SBQQ__DefaultSubscriptionTerm__c , (SBQQ__QuotedListPrice__c * Quantity) *  (SBQQ__SubscriptionTerm__c / SBQQ__DefaultSubscriptionTerm__c )) )</formula>
+        <label>List Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <description>Stores the value for Location configuration attribute.</description>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>California</fullName>
+                    <default>false</default>
+                    <label>California</label>
+                </value>
+                <value>
+                    <fullName>New York</fullName>
+                    <default>false</default>
+                    <label>New York</label>
+                </value>
+                <value>
+                    <fullName>Texas</fullName>
+                    <default>false</default>
+                    <label>Texas</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NetSuiteOrderLineID__c</fullName>
+        <externalId>true</externalId>
+        <label>NetSuite Order Line ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OracleOrderLineID__c</fullName>
+        <externalId>true</externalId>
+        <label>Oracle Order Line ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>OrderId</fullName>
@@ -130,18 +340,1527 @@
         <fullName>ProductCode</fullName>
     </fields>
     <fields>
+        <fullName>ProductFamily__c</fullName>
+        <description>This is family of the product. Used for integration</description>
+        <externalId>false</externalId>
+        <formula>TEXT(  Product2.Family )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Family</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Quantity</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>QuoteLineItemId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ReadytobeSynced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ready to be Synced</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Activated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the order product is activated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the order product is activated.</inlineHelpText>
+        <label>Activated</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Asset created from this order product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset created from this order product</inlineHelpText>
+        <label>Asset</label>
+        <referenceTo>Asset</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingFrequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the billing frequency.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the billing frequency.</inlineHelpText>
+        <label>Billing Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__BillingFrequency</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The billing type that defines when the billing occurs. Billing in advance lets you bill your customers for products or services before you provide them; Billing in arrears lets
+            you bill your customers after the products or services are provided.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The billing type that defines when the billing occurs.</inlineHelpText>
+        <label>Billing Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__BillingType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BlockPrice__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The block price that is applied to this order product at order creation time.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The block price that is applied to this order product at order creation time.</inlineHelpText>
+        <label>Block Price</label>
+        <referenceTo>SBQQ__BlockPrice__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BookingsIndicator__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether bookings are included.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether bookings are included.</inlineHelpText>
+        <label>Bookings Indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__BookingsIndicator</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BundleRoot__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The root bundle parent Order Product of components. This component will be deleted if its bundle root is deleted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An internally used field that points to the root of its bundle parent.</inlineHelpText>
+        <label>Bundle Root</label>
+        <referenceTo>OrderItem</referenceTo>
+        <relationshipLabel>Order Products (Bundle Root)</relationshipLabel>
+        <relationshipName>BundleChildren</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ChargeType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The type of the product charge.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of the product charge.</inlineHelpText>
+        <label>Charge Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__ChargeType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ContractAction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The contract action where this order product is resulted from.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The contract action where this order product is resulted from.</inlineHelpText>
+        <label>Contract Action</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__ContractAction</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The contract of the subscription that is created from this order product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The contract of the subscription that is created from this order product.</inlineHelpText>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Contracted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the order product is contracted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the order product is contracted.</inlineHelpText>
+        <label>Contracted</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ContractingMethod__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Controls the contracting behavior of an Order Product. &quot;Inherit&quot; uses the behavior of the parent Order. &quot;Contract Separately&quot; generates a separate Contract for
+            the Order Product. &quot;No Contract&quot; skips the Order Product altogether during the contracting process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls the contracting behavior of an Order Product.</inlineHelpText>
+        <label>Contracting Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inherit</fullName>
+                    <default>true</default>
+                    <label>Inherit</label>
+                </value>
+                <value>
+                    <fullName>Contract Separately</fullName>
+                    <default>false</default>
+                    <label>Contract Separately</label>
+                </value>
+                <value>
+                    <fullName>Do Not Contract</fullName>
+                    <default>false</default>
+                    <label>Do Not Contract</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DefaultSubscriptionTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first
+            generated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first
+            generated.</inlineHelpText>
+        <label>Default Subscription Term</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DimensionType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For multi-segmented Products, this is the type of price dimeension (e.g. &quot;YEAR&quot;, &quot;MONTH&quot;, &quot;QUARTER&quot;) of the order item.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For multi-segmented Products, this is the type of price dimeension (e.g. &quot;YEAR&quot;, &quot;MONTH&quot;, &quot;QUARTER&quot;) of the order item.</inlineHelpText>
+        <label>Segment Type</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DiscountSchedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Discount schedule applied to this order product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Discount schedule applied to this order product.</inlineHelpText>
+        <label>Discount Schedule</label>
+        <referenceTo>SBQQ__DiscountSchedule__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OrderProductBookings__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of the order product’s total price.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(SBQQ__BookingsIndicator__c  , &apos;Include&apos;) , UnitPrice * Quantity , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount of the order product’s total price.</inlineHelpText>
+        <label>Order Product Bookings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OrderedQuantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The actual quantity of the product placed in the order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The actual quantity of the product placed in the order.</inlineHelpText>
+        <label>Ordered Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PriceDimension__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>References the price dimension applied to this order product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>References the price dimension applied to this order product.</inlineHelpText>
+        <label>Price Dimension</label>
+        <referenceTo>SBQQ__Dimension__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PriceSchedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Price schedule applied to this order product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price schedule applied to this order product.</inlineHelpText>
+        <label>Price Schedule</label>
+        <referenceTo>SBQQ__PriceSchedule__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PricingMethod__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines how the price for this line item is set. &quot;List&quot; = calculated by subtracting discount from list price. &quot;Cost&quot;  = calculated by adding markup to cost.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates how the price for this line item is calculated. &quot;List&quot; = subtracting discount from list price. &quot;Cost&quot; = adding markup to cost.</inlineHelpText>
+        <label>Pricing Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>List</fullName>
+                    <default>true</default>
+                    <label>List</label>
+                </value>
+                <value>
+                    <fullName>Cost</fullName>
+                    <default>false</default>
+                    <label>Cost</label>
+                </value>
+                <value>
+                    <fullName>Block</fullName>
+                    <default>false</default>
+                    <label>Block</label>
+                </value>
+                <value>
+                    <fullName>Percent Of Total</fullName>
+                    <default>false</default>
+                    <label>Percent Of Total</label>
+                </value>
+                <value>
+                    <fullName>Custom</fullName>
+                    <default>false</default>
+                    <label>Custom</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProductSubscriptionType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Set the order item&apos;s product subscription type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the order item&apos;s product subscription type.</inlineHelpText>
+        <label>Product Subscription Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__SubscriptionType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ProrateMultiplier__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated ratio used to compute Prorated Price.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Calculated ratio used to compute Prorated Price.</inlineHelpText>
+        <label>Prorate Multiplier</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuoteLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The quote line where this order product is created from.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The quote line where this order product is created from.</inlineHelpText>
+        <label>Quote Line</label>
+        <referenceTo>SBQQ__QuoteLine__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuotedListPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>List unit price for the product quoted by this line item. List Price originates from the price book.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List unit price for the product quoted by this line item. List Price originates from the price book.</inlineHelpText>
+        <label>Quoted List Price</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuotedQuantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The quoted quantity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The quoted quantity.</inlineHelpText>
+        <label>Quoted Quantity</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RequiredBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Required By</label>
+        <referenceTo>OrderItem</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RevisedOrderProduct__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>References the order product that this order product revises.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>References the order product that this order product revises.</inlineHelpText>
+        <label>Revised Order Product</label>
+        <referenceTo>OrderItem</referenceTo>
+        <relationshipLabel>Order Products (Revised Order Product)</relationshipLabel>
+        <relationshipName>RevisingOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SegmentIndex__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For multi-segmented products, Index representing this order product&apos;s position in the segment table.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For multi-segmented products, Index representing this order product&apos;s position in the segment table.</inlineHelpText>
+        <label>Segment Index</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SegmentKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together.</inlineHelpText>
+        <label>Segment Key</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipping Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>ShippingAccountOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The current state of the order product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the current state of the order product. It is defaulted to Draft when an order is created.</inlineHelpText>
+        <label>Activation Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__OrderProductStatus</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionPricing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product.</inlineHelpText>
+        <label>Subscription Pricing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__SubscriptionPricing</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Subscription Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the subscription type to determine contract&apos;s pricing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the subscription type to determine contract&apos;s pricing.</inlineHelpText>
+        <label>Subscription Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>SBQQ__ProductSubscriptionType__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__SubscriptionType</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Renewable</controllingFieldValue>
+                <controllingFieldValue>Renewable/Evergreen</controllingFieldValue>
+                <valueName>Renewable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>One-time</controllingFieldValue>
+                <valueName>One-time</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Renewable/Evergreen</controllingFieldValue>
+                <controllingFieldValue>Evergreen</controllingFieldValue>
+                <valueName>Evergreen</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Subscription__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Subscription created from this order product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subscription created from this order product</inlineHelpText>
+        <label>Subscription</label>
+        <referenceTo>SBQQ__Subscription__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>SubscriptionOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TaxAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Estimated tax amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated tax amount</inlineHelpText>
+        <label>Estimated Tax</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TaxCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the tax code for taxation rules.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the tax code for taxation rules.</inlineHelpText>
+        <label>Tax code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TermDiscountSchedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Term Discount Schedule applied to this order product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Term Discount Schedule applied to this order product.</inlineHelpText>
+        <label>Term Discount Schedule</label>
+        <referenceTo>SBQQ__DiscountSchedule__c</referenceTo>
+        <relationshipLabel>Order Products (Term Discount Schedule)</relationshipLabel>
+        <relationshipName>TermedOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TerminatedDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date that this order product&apos;s related subscription was terminated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date that this order product&apos;s related subscription was terminated</inlineHelpText>
+        <label>Terminated Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__UnproratedNetPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The full-term Net Unit Price.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The full term net price for individual line.</inlineHelpText>
+        <label>Full-Term Net Unit Price</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__UpgradedSubscription__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Subscription being upgraded by this quote line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subscription being upgraded by this quote line. When the quote is contracted this subscription will have its Terminated Date field populated.</inlineHelpText>
+        <label>Upgraded Subscription</label>
+        <referenceTo>SBQQ__Subscription__c</referenceTo>
+        <relationshipLabel>Upgraded Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ServiceDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Subsidiary__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Order.Account.Subsidiary__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subsidiary</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SyncMessage__c</fullName>
+        <externalId>false</externalId>
+        <label>Sync Message</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Total_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>List_Total__c - (UnitPrice * Quantity)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Discount Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Number_of_Contacts__c</fullName>
+        <description>Value from Total Number of Contacts Attribute.</description>
+        <externalId>false</externalId>
+        <label>Total Number of Contacts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>UnitPrice</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <fields>
+        <fullName>Vertical__c</fullName>
+        <description>Stores the value for Vertical configuration attribute.</description>
+        <externalId>false</externalId>
+        <label>Vertical</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Entertainment</fullName>
+                    <default>false</default>
+                    <label>Entertainment</label>
+                </value>
+                <value>
+                    <fullName>Pharma</fullName>
+                    <default>false</default>
+                    <label>Pharma</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__AllocatedRevenueAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Allocation Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Parent asset for the order product, used with the CALM service</description>
+        <externalId>false</externalId>
+        <label>Lifecycle-Managed Asset</label>
+        <referenceTo>Asset</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>AssetOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillThroughDateOverride__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bill Through Date Override</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillableUnitPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billable Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__BilledAmountwithouttax__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The sum of all invoices for this order product (excluding tax).</inlineHelpText>
+        <label>Billed Amount (without tax)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__BilledTax__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The sum of all taxes on invoices for this order product.</inlineHelpText>
+        <label>Billed Tax</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>BillingAccountOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingGLRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing GL Rule</label>
+        <referenceTo>blng__GLRule__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>BillingGLRuleOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingGLTreatment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing GL Treatment</label>
+        <referenceTo>blng__GLTreatment__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>BillingGLTreatmentOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Billing Rule assigned to this order product.</inlineHelpText>
+        <label>Billing Rule</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>blng__BillingRule__c.blng__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>blng__BillingRule__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingTreatment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Billing Treatment assigned to this order product.</inlineHelpText>
+        <label>Billing Treatment</label>
+        <referenceTo>blng__BillingTreatment__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>BillingTreatmentOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__CanceledBillings__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total subtracted from the order product due to cancellation, swap, etc.</inlineHelpText>
+        <label>Canceled Billing Amount (without tax)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__FinanceBookAccounting__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Finance Book object used to record the Accounting for this Order Product.</inlineHelpText>
+        <label>Finance Book (Accounting)</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>blng__FinanceBook__c.blng__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>blng__FinanceBook__c</referenceTo>
+        <relationshipLabel>Order Products (Finance Book (Accounting))</relationshipLabel>
+        <relationshipName>AccountingOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__GroupId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Group Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__GroupQuantity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Group Quantity (System Field)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__GroupUnitPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Group Unit Price (System Field)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__HoldBilling__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hold Billing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__HoldBilling</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__IncludedUsage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Included Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceGroupId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Group ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceGrouping__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__InvoiceGroup</valueSetName>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceRunProcessingStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Run Processing Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__InvoiceRunProcessingStatus</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceRunStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Run Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceRunStatusIndex__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Invoice Run Status (Index)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__InvoiceRun__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Run</label>
+        <referenceTo>blng__InvoiceRun__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>InvoiceRunOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__LastChargeToDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Charge To Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__LastInvoiceTargetDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Invoice Target Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__LegalEntityReference__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>LegalEntityReference</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__LegalEntity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Legal Entity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>blng__LegalEntity__c.blng__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>blng__LegalEntity__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__NextBillingDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>System generated. The start of the Billing period for the next invoice line for this order product.</inlineHelpText>
+        <label>Next Billing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__NextChargeDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Next Charge Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__OverrideBillableUnitPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to manually override the calculated Billable Unit Price.</inlineHelpText>
+        <label>Override Billable Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__OverrideInitialRevenueEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Override Initial Revenue End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__OverrideInitialRevenueStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Override Initial Revenue Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__OverrideNextBillingDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Override Next Billing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>blng__PendingBillings__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total remaining to be billed.</inlineHelpText>
+        <label>Pending Billing Amount (without tax)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueExpectedAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Expected Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueLiabilityAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Liability Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueMostLikelyAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Most Likely Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Recognition Rule</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>blng__RevenueRecognitionRule__c.blng__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>blng__RevenueRecognitionRule__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>RevenueRecognitionRuleOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueScheduleStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Revenue Schedule Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__RevenueScheduleStatus</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__TaxCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax City (Override)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Country (Override)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxCounty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax County (Override)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxErrorMessage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Error Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxGLRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax GL Rule</label>
+        <referenceTo>blng__GLRule__c</referenceTo>
+        <relationshipLabel>Order Products (Tax GL Rule)</relationshipLabel>
+        <relationshipName>TaxGLRuleOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__TaxGLTreatment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax GL Treatment</label>
+        <referenceTo>blng__GLTreatment__c</referenceTo>
+        <relationshipLabel>Order Products (Tax GL Treatment)</relationshipLabel>
+        <relationshipName>TaxGLTreatmentOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__TaxPercentageApplied__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Percentage Applied</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>blng__TaxRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Tax Rule assigned to this order product.</inlineHelpText>
+        <label>Tax Rule</label>
+        <referenceTo>blng__TaxRule__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>TaxRuleOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__TaxState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax State (Override)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The status of the tax calculation for this order product.</inlineHelpText>
+        <label>Tax Calculation Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>blng__LineTaxStatus</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>blng__TaxStreet2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Street 2 (Override)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Street 1 (Override)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TaxTreatment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Tax Treatment assigned to this order product.</inlineHelpText>
+        <label>Tax Treatment</label>
+        <referenceTo>blng__TaxTreatment__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>TaxTreatmentOrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__TaxZipCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Postal Code (Override)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__TerminatedBillings__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount that could be canceled from an order product based on termination date. Can&apos;t be more than the pending billing amount.</inlineHelpText>
+        <label>Terminated Billing Amount (without tax)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__TotalBilling__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>blng__BilledAmountwithouttax__c  +  blng__BilledTax__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The sum of all invoice lines and taxes for this order.</inlineHelpText>
+        <label>Total Billings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>blng__UniqueId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Unique Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>blng__UsageFloorQuantity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Usage Floor Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <validationRules>
+        <fullName>SBQQ__CannotChangeBookingIndicatorOnActivation</fullName>
+        <active>true</active>
+        <description>Can’t edit the bookings status on an activated order product.</description>
+        <errorConditionFormula>AND(SBQQ__Activated__c, ISCHANGED(SBQQ__BookingsIndicator__c))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BookingsIndicator__c</errorDisplayField>
+        <errorMessage>Can’t edit the bookings status on an activated order product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__RecurringChargeTypeMustHaveBillingType</fullName>
+        <active>true</active>
+        <description>When Charge Type is Recurring, a Billing Type must be selected.</description>
+        <errorConditionFormula>AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Recurring&apos;), ISPICKVAL(SBQQ__BillingType__c, &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
+        <errorMessage>When Charge Type is Recurring, a Billing Type must be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Validate_billing_frequency</fullName>
+        <active>true</active>
+        <description>When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected.</description>
+        <errorConditionFormula>AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;One-Time&apos;), NOT(ISPICKVAL(SBQQ__BillingFrequency__c, &apos;&apos;)))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BillingFrequency__c</errorDisplayField>
+        <errorMessage>When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Validate_billing_type</fullName>
+        <active>true</active>
+        <description>When Charge Type is One-Time or Usage, a Billing Type cannot be selected.</description>
+        <errorConditionFormula>OR(
+            AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;One-Time&apos;), NOT(ISPICKVAL(SBQQ__BillingType__c, &quot;&quot;))),
+            AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Usage&apos;), NOT(ISPICKVAL(SBQQ__BillingType__c, &quot;&quot;))))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
+        <errorMessage>When Charge Type is One-Time or Usage, a Billing Type value cannot be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__BIllingRuleMustBeSelected</fullName>
+        <active>true</active>
+        <description>Billing Rule must be selected</description>
+        <errorConditionFormula>AND(OR(ISNEW(), AND (ISCHANGED(SBQQ__Activated__c), SBQQ__Activated__c)), ISBLANK(blng__BillingRule__c))</errorConditionFormula>
+        <errorMessage>Billing Rule must be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__RevenueRecognitionRuleMustBeSelected</fullName>
+        <active>true</active>
+        <description>Revenue Recognition Rule must be selected</description>
+        <errorConditionFormula>AND(OR(ISNEW(), AND (ISCHANGED(SBQQ__Activated__c), SBQQ__Activated__c)), ISBLANK(blng__RevenueRecognitionRule__c))</errorConditionFormula>
+        <errorMessage>Revenue Recognition Rule must be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>blng__TaxRuleMustBeSelected</fullName>
+        <active>true</active>
+        <description>Tax Rule must be selected</description>
+        <errorConditionFormula>AND(OR(ISNEW(), AND (ISCHANGED(SBQQ__Activated__c), SBQQ__Activated__c)), ISBLANK(blng__TaxRule__c))</errorConditionFormula>
+        <errorMessage>Tax Rule must be selected</errorMessage>
+    </validationRules>
 </CustomObject>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- High discount for exception pricing based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org&apos;s approval settings. --></help>
+        <label><!-- Floor Discount (%) --></label>
+        <name>SBQQ__FloorDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- The lowest quote line quantity that applies to this tier. This number must match the upper bound of the previous tier. --></help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help><!-- Middle-range discount based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org&apos;s approval settings. --></help>
+        <label><!-- Norm Discount (%) --></label>
+        <name>SBQQ__NormDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- The pricing guidance that contains this tier. --></help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price. --></help>
+        <label><!-- Target Discount (%) --></label>
+        <name>SBQQ__TargetDiscount__c</name>
+    </fields>
+    <fields>
+        <help><!-- The highest quote line quantity that applies to this tier. This number must be one above the highest quantity that you want this tier to include. --></help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <layouts>
+        <layout>Pricing Guidance Tier Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

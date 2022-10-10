@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>請求プラン</value>
+    </caseValues>
+    <fields>
+        <help>オンにすると、この請求プランテンプレートは有効になります。</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Schedule Creation --></label>
+        <name>blng__BillingScheduleCreation__c</name>
+    </fields>
+    <layouts>
+        <layout>Invoice Plan Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>請求プラン名</nameFieldLabel>
+</CustomObjectTranslation>

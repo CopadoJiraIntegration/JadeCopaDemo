@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Preisempfehlung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Preisempfehlungen</value>
+    </caseValues>
+    <fields>
+        <help>Beschreibung dieser Preisempfehlung.</help>
+        <label><!-- Description --></label>
+        <name>SBQQ__Description__c</name>
+    </fields>
+    <fields>
+        <help>Geben Sie Vertriebsmitarbeitern eine Erläuterung dieser Preisempfehlung und Empfehlungen für Rabatte. Sie können diese Erläuterung mit der Preisempfehlung im Angebotsbelegposten-Editor einsehen.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Bei der Festlegung der Preisempfehlungsklasse für einen Angebotsbelegposten Produktmengen einschließen, die zuvor verkauft wurden</help>
+        <label><!-- Include Prior Purchases --></label>
+        <name>SBQQ__IncludePriorPurchases__c</name>
+    </fields>
+    <fields>
+        <help>Aktivieren Sie diese Preisempfehlung für die Nutzung mit dem zugeordneten Produkt.</help>
+        <label><!-- Active --></label>
+        <name>SBQQ__IsActive__c</name>
+    </fields>
+    <fields>
+        <help>Die zum Erstellen dieser Preisempfehlung angegebenen Parameter.</help>
+        <label><!-- Summary --></label>
+        <name>SBQQ__Summary__c</name>
+    </fields>
+    <fields>
+        <help>Die Rabatte der Empfehlung bei ausschließlicher Verwendung der Preisempfehlungsklasse, die für die Menge des Angebotsbelegpostens gilt.</help>
+        <label><!-- Type --></label>
+        <name>SBQQ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Range</masterLabel>
+            <translation>Bereich</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Wählen Sie den Typ des Rabatts, den diese Preisempfehlung dem Angebotsbelegposten zuordnet.</help>
+        <label><!-- Unit --></label>
+        <name>SBQQ__Unit__c</name>
+        <picklistValues>
+            <masterLabel>Percent</masterLabel>
+            <translation>Prozent</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Pricing Guidance Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name</nameFieldLabel>
+</CustomObjectTranslation>

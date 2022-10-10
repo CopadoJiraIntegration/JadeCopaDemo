@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programador de pagos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programadores de pagos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>blng__PaymentBatches__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Scheduler --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>blng__PaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date and Time --></label>
+        <name>blng__Startdateandtime__c</name>
+    </fields>
+    <fields>
+        <help>Determina qué facturas pagar en base a la fecha programada definida en los parámetros de configuración de facturación. La fecha programada puede ser el mismo día o después de la fecha de la factura o la fecha de vencimiento de la factura.</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day Of Month --></label>
+        <name>blng__TargetDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day of Week --></label>
+        <name>blng__TargetDayofWeek__c</name>
+    </fields>
+    <fields>
+        <help>Tipo de programación.
+Una vez - El Programador de pagos solo se realizará una vez.
+Diario - El Programador de pagos se repetirá de forma continua diariamente</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Payment Scheduler Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Información de fecha</label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label>Configuración mensual</label>
+            <section>Month Configuration</section>
+        </sections>
+        <sections>
+            <label>Configuración semanal</label>
+            <section>Weekly Configuration</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre del Programador de pagos</nameFieldLabel>
+</CustomObjectTranslation>

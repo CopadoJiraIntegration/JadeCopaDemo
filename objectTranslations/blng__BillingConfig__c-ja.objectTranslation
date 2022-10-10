@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- 請求設定 --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Boolean Value --></label>
+        <name>blng__BooleanValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>blng__Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Value --></label>
+        <name>blng__DateValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>blng__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Type --></label>
+        <name>blng__FieldType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Help Text --></label>
+        <name>blng__HelpText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Value --></label>
+        <name>blng__NumberValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentage Value --></label>
+        <name>blng__PercentageValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist Indicator --></label>
+        <name>blng__PicklistIndicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quick Screen Id --></label>
+        <name>blng__QuickScreenId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence --></label>
+        <name>blng__Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- String Value --></label>
+        <name>blng__StringValue__c</name>
+    </fields>
+</CustomObjectTranslation>

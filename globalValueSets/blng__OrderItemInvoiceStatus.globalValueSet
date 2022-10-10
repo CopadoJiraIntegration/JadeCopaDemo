@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Queued for Invoice</fullName>
+        <default>false</default>
+        <label>Queued for Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Queued for Group Calculation</fullName>
+        <default>false</default>
+        <label>Queued for Group Calculation</label>
+    </customValue>
+    <masterLabel>OrderItem Invoice Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

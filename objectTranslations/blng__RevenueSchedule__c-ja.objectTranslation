@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>収益スケジュール</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益スケジュールへのすべての調整の合計</help>
+        <label><!-- Adjustments --></label>
+        <name>blng__Adjustments__c</name>
+    </fields>
+    <fields>
+        <help>割り当てられた収益の合計</help>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>調整または分配に利用可能な収益スケジュールのすべての収益。</help>
+        <label><!-- Available --></label>
+        <name>blng__Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <help>この収益が記録される財務帳簿のルックアップ</help>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられたクレジットノート品目のルックアップ。</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられたデビットノート品目のルックアップ。</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>現在の期間で認識されない収益の合計</help>
+        <label><!-- Deferred Balance (deprecated) --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールでまだ認識されていない収益</help>
+        <label><!-- Deferred --></label>
+        <name>blng__Deferred__c</name>
+    </fields>
+    <fields>
+        <help>収益トランザクションの予想件数</help>
+        <label><!-- Estimated Revenue Transaction Count --></label>
+        <name>blng__EstimatedRevenueTransactionCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Recognition Date --></label>
+        <name>blng__FullRecognitionDate__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられた請求書品目のルックアップ。</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益が記録される法人への参照</help>
+        <label><!-- Revenue Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられた注文商品のルックアップ</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>現在の期間に認識された、すべての収益の合計</help>
+        <label><!-- Recognized --></label>
+        <name>blng__RecognizedRevenueLastClosedPeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Agreement Allocation Status --></label>
+        <name>blng__RevenueAgreementAllocationStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Agreement --></label>
+        <name>blng__RevenueAgreement__c</name>
+        <relationshipLabel><!-- Revenue Schedule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益認識ルールで定義されている、複数の期間に収益をどのように分散するかを計算するための方法。</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益ルールで定義されている収益期間終了日を参照します。</help>
+        <label><!-- Revenue End Date --></label>
+        <name>blng__RevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールで見込まれる収益の合計。</help>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <help>この収益が記録される財務帳簿のルックアップ</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益責任総額</help>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールで認識する収益の合計</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>総勘定元帳処理のルックアップ</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールで使用する収益認識ルールのルックアップ</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Schedules (Revenue Recognition Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュールで使用する収益認識処理のルックアップ</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>収益ルールで定義されている収益期間開始日を参照します。</help>
+        <label><!-- Revenue Start Date --></label>
+        <name>blng__RevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <help>この収益トランザクションの状況。</help>
+        <label><!-- Revenue Transaction Status --></label>
+        <name>blng__RevenueTransactionStatus__c</name>
+    </fields>
+    <fields>
+        <help>この収益スケジュールに関連付けられた総勘定元帳ルールのルックアップ。</help>
+        <label><!-- Total Revenue Amount --></label>
+        <name>blng__TotalRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールに分配されているが、まだ認識されていないすべての収益の合計。</help>
+        <label><!-- Unrecognized --></label>
+        <name>blng__Unrecognized__c</name>
+    </fields>
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>収益日</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>収益メトリクス</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>ソースレコード</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>サマリー情報</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>名前</nameFieldLabel>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

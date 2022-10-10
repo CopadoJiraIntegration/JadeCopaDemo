@@ -1,0 +1,84 @@
+<apex:page standardController="Account" recordSetVar="contacts" extensions="pi.MicroCampaignSetCtrl,pi.AccessPardotController,pi.FilesController" sidebar="false" action="{!init}">
+
+<apex:slds ></apex:slds>
+<apex:stylesheet value="{!URLFOR($Resource.pi__MicroCampaign, 'css/main.css')}"></apex:stylesheet>
+<div class="slds-scope slds-text-body--regular">
+  <div id="modal_container"></div>
+  <div id="toast_message_container" class="toast-message-container"></div>
+  <div id="engage_email_container"></div>
+</div>
+<apex:includeLightning ></apex:includeLightning>
+<apex:includeScript value="{!URLFOR($Resource.pi__MarketingActions, 'js/jquery-3.3.1.min.js')}"></apex:includeScript>
+<apex:includeScript value="{!URLFOR($Resource.pi__jquery_ui_1_12_1, 'jquery-ui.min.js')}"></apex:includeScript>
+<apex:includeScript value="{!URLFOR($Resource.pi__ckeditorSalesReach, 'ckeditor/ckeditor.js')}"></apex:includeScript>
+<script type="text/javascript">
+  window.SessionId = '{!$Api.Session_ID}';
+  window.SLDS_assetsPath = '{!URLFOR($Asset.SLDS, "assets")}';
+  window.NamespacePrefix = '{!JSENCODE(namespace)}';
+  window.SyncedProspectType = '{!JSENCODE(standardControllerType)}';
+  window.OriginObject = '{!JSENCODE(originObject)}';
+  window.userFullName = '{!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)}';
+  window.userId = '{!JSENCODE($User.Id)}';
+  window.userEmail = '{!JSENCODE($User.Email)}';
+  window.recipients = [];
+  window.returnUrl = '{!JSENCODE(returnUrl)}';
+  window.invalidObjectType = '{!IF(invalidObjectTypeError, "true", "false")}';
+  window.userHasInsufficientAccess = '{!IF(userHasInsufficientAccess, "true", "false")}';
+  window.soboEnabled = {!IF(soboEnabled, "true", "false")};
+  window.EngageAttachmentsEnabled = {!IF(hasEngageAttachmentsEnabled, "true", "false")};
+  window.UiUpdatesPdfUrl = '{!URLFOR($Resource.MicroCampaign, 'pdf/Engage_Editor_Updates.pdf')}';
+  window.ContentDeliveriesAndPubLinkEnabled = {!IF(hasContentDeliveriesAndPubLinkEnabled, "true", "false")};
+  window.ContentDeliveriesAndPubLinkProfileUserPermEnabled = {!IF(userHasContentDeliveriesAndPubLinkProfilePermEnabled, "true", "false")};
+  window.RESTAPIEnabled = {!IF(hasRESTAPIEnabled, "true", "false")};
+  window.efartsNewUserImageUrl = '{!URLFOR($Resource.MicroCampaign, 'images/efarts-new-user.png')}';
+  window.unsubscribeFooterThreshold = '{!JSENCODE(unsubscribeFooterThreshold)}';
+  window.SearchAttachmentFiles = '{!$RemoteAction.FilesController.searchFiles}';
+  window.GetAttachmentFiles = '{!$RemoteAction.FilesController.getFiles}';
+  window.GetMyAttachmentFiles = '{!$RemoteAction.FilesController.getMyFiles}';
+  window.GetFilesSharedWithMe = '{!$RemoteAction.FilesController.getFilesSharedWithMe}';
+  window.RenameUploadedFile = '{!$RemoteAction.FilesController.renameUploadedFile}';
+  window.hasHmlEnabled = {!hasHmlEnabled};
+  window.hasResubscribeEnabled = {!hasResubscribeEnabled};
+  window.templateFolders = JSON.parse("{!JSENCODE(templateFolders)}");
+  window.defaultTemplate = JSON.parse("{!JSENCODE(defaultTemplate)}");
+  window.isClassicEnabled = {!isClassicEnabled};
+  window.sendOnBehalfOf = {
+  	leadOwner: false,
+  	contactOwner: false,
+  	accountOwner: false
+  };
+  window.previewIframeHtmlUrl = 'https://preview.pardot.com/assets/microcampaign/previewIframe.html';
+  
+  <apex:repeat value="{!recipientListBlocks}" var="recipientListBlock">
+  	<apex:repeat value="{!recipientListBlock.recipients}" var="recipient">
+  		recipients.push({
+  			id: "{!JSENCODE(recipient['id'])}",
+  			name: "{!JSENCODE(recipient['name'])}",
+  			email: "{!JSENCODE(recipient['email'])}",
+  			canReceiveEmails: {!IF(recipient['canReceiveEmails'], "true", "false")},
+  			isDuplicateEmail: {!IF(recipient['isDuplicateEmail'], "true", "false")},
+  			accountHasEmailBlocked: {!IF(recipient['accountHasEmailBlocked'], "true", "false")},
+  			isPersonAccount: {!IF(recipient['isPersonAccount'], "true", "false")}
+  		});
+  	</apex:repeat>
+  </apex:repeat>
+</script>
+<apex:includeScript value="{!URLFOR($Resource.pi__MicroCampaign, 'js/micro_campaign_main.js')}"></apex:includeScript>
+<script type="text/javascript">
+	window.PardotBaseUrl = '{!pardotBaseUrl}';
+	window.SendEmailActionLocation = '{!$RemoteAction.MicroCampaignSetCtrl.sendMicrocampaignV2}';
+	window.GetRemainingPardotEmailSendsActionLocation = '{!$RemoteAction.MicroCampaignSetCtrl.getRemainingPardotEmailSends}';
+	window.GetPardotVariableTags = '{!$RemoteAction.MicroCampaignSetCtrl.getPardotVariableTags}';
+	window.PopulatePardotMergeTags = '{!$RemoteAction.MicroCampaignSetCtrl.populatePardotMergeTagsV3}';
+	window.TemplateHtmlActionLocation = '{!$RemoteAction.MicroCampaignSetCtrl.getEmailTemplate}';
+	window.determineIfRecipientsCanSoboActionLocation = '{!$RemoteAction.MicroCampaignSetCtrl.determineIfRecipientsCanSobo}';
+	window.determineIfOwnersExistsInPardotLocation = '{!$RemoteAction.MicroCampaignSetCtrl.determineIfOwnersExistsInPardotV2}';
+	window.getUsersActionLocation = '{!$RemoteAction.MicroCampaignSetCtrl.getUsers}';
+	window.logSanitizationInfo = '{!$RemoteAction.MicroCampaignSetCtrl.logSanitizationInfo}';
+	window.sendOnBehalfOfAbilities = {
+		contactOwner: {!IF(userCanSoboByEdit, "true", "false")} || {!IF(userCanSoboByAccountTeam, "true", "false")},
+		accountOwner: {!IF(userCanSoboByEdit, "true", "false")} || {!IF(userCanSoboByAccountTeam, "true", "false")},
+		leadOwner: false
+	}
+</script>
+</apex:page>

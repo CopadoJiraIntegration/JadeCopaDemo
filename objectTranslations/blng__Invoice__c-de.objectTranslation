@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Rechnung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Rechnungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Rechnung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Rechnungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Rechnung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Rechnungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Rechnung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Rechnungen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Invoice Status --></label>
+        <name>Invoice_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, this Invoice will be excluded from being attached to a Collections Plan. --></help>
+        <label><!-- Hold Collections --></label>
+        <name>SFBD__HoldCollections__c</name>
+    </fields>
+    <fields>
+        <label><!-- AR Status --></label>
+        <name>blng__ARStatus__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Account, für den diese Rechnung ausgestellt wird.</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>blng__Action__c</name>
+    </fields>
+    <fields>
+        <help>Saldo = Gesamtbetrag - Netto-Gesamtzahlungen - angewandte Gutschriftsanzeigen + angewandte Belastungsanzeigen + Negative Postenkonvertierungen</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Kontakt für diese Rechnung</help>
+        <label><!-- Bill To Contact --></label>
+        <name>blng__BillToContact__c</name>
+        <relationshipLabel><!-- Invoices (BillToContact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Corrective Action (Payment Run) --></label>
+        <name>blng__CorrectiveAction__c</name>
+        <picklistValues>
+            <masterLabel>Action Required</masterLabel>
+            <translation>Aktion erforderlich</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Summe aller Gutschriftsanzeigebeträge, die auf diese Rechnung angewandt wurden</help>
+        <label><!-- Credits --></label>
+        <name>blng__Credits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Outstanding --></label>
+        <name>blng__DaysOutstanding__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Zahlungszuordnungen und aufgehobenen Zuordnungen für Belastungsanzeigen, die dieser Rechnung zugeordnet wurden.</help>
+        <label><!-- Debit Payments --></label>
+        <name>blng__DebitPayments__c</name>
+    </fields>
+    <fields>
+        <help>Summe aller Belastungsanzeigebeträge, die auf diese Rechnung angewandt wurden.</help>
+        <label><!-- Debits --></label>
+        <name>blng__Debits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Declined Payment Count (Payment Run) --></label>
+        <name>blng__DeclinedPaymentRunCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>blng__DefaultPaymentType__c</name>
+    </fields>
+    <fields>
+        <help>Datum, an dem die Zahlung der Rechnung fällig ist.</help>
+        <label><!-- Due Date --></label>
+        <name>blng__DueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <help>Beeinflusst das Fälligkeitsdatum und die Berichtsperiode</help>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <help>Die Zahlung wird ausgeführt und die Rechnung ist gesperrt. Überprüfen Sie vor dem Freigeben, ob auf diese Rechnung bereits eine Zahlung geleistet wurde.</help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum, an dem die Rechnung gebucht wurde</help>
+        <label><!-- Invoice Posted Date --></label>
+        <name>blng__InvoicePostedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run (Created By) --></label>
+        <name>blng__InvoiceRunCreatedBy__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__InvoiceStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Run --></label>
+        <name>blng__LastPaymentRunId__c</name>
+        <relationshipLabel><!-- Invoices (Last Payment Run) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Run Processing Message --></label>
+        <name>blng__LastPaymentRunProcessingMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Negative Line Conversion --></label>
+        <name>blng__NegativeLineConversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Invoice Lines --></label>
+        <name>blng__NumberOfInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>blng__PaymentBatch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Autopay Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Dieses Feld wird in einer zukünftigen Version ersetzt.</help>
+        <label><!-- Payment Process Status (deprecated) --></label>
+        <name>blng__PaymentProcessStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Run --></label>
+        <name>blng__PaymentRunId__c</name>
+        <relationshipLabel><!-- Invoices (Payment Run) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Run Processing Message --></label>
+        <name>blng__PaymentRunProcessingMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Status --></label>
+        <name>blng__PaymentStatus__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Zahlungsbeträge, die Rechnungsposten in der Rechnung zugeordnet sind.</help>
+        <label><!-- Allocations Against Invoice Lines --></label>
+        <name>blng__PaymentsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Zahlungsbeträge, die dem Rechnungskopf zugeordnet sind. Sollte nur verwendet werden, wenn keine Zuordnungen auf Postenebene verwendet werden.</help>
+        <label><!-- Allocations Against Invoice --></label>
+        <name>blng__PaymentsAgainstInvoice__c</name>
+    </fields>
+    <fields>
+        <help>Nettozahlungen zum Ausgleich dieser Rechnung</help>
+        <label><!-- Payments --></label>
+        <name>blng__Payments__c</name>
+    </fields>
+    <fields>
+        <help>Stornierungen vorheriger Rechnungspostenzuordnungen</help>
+        <label><!-- Unallocations Against Invoice Lines --></label>
+        <name>blng__RefundsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help>Stornierungen vorheriger Rechnungszuordnungen</help>
+        <label><!-- Unallocations Against Invoice --></label>
+        <name>blng__RefundsAgainstInvoice__c</name>
+    </fields>
+    <fields>
+        <help>Orange = aktive Rechnung mit Saldo; Grün = kein Saldo fällig; Rot = überfällig; Weiß = storniert</help>
+        <label><!-- Status Flag --></label>
+        <name>blng__StatusFlag__c</name>
+    </fields>
+    <fields>
+        <help>Rechnungssumme (ohne Steuern)</help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target  Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <help>Summe aller Steuern für diese Rechnung</help>
+        <label><!-- Tax --></label>
+        <name>blng__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Errors --></label>
+        <name>blng__TaxErrors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <help>Rechnungssumme (inkl. Steuern). Entspricht Zwischensumme + Steuern.</help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <help>Eindeutige ID für diese Rechnung</help>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label>Saldoinformationen</label>
+            <section>Balance Information</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dunning and Collection --></label>
+            <section>Dunning and Collection</section>
+        </sections>
+        <sections>
+            <label>Informationen zum Rechnungsdatum</label>
+            <section>Invoice Date Information</section>
+        </sections>
+        <sections>
+            <label>Informationen zum Zahlungslauf</label>
+            <section>Payment Run Information</section>
+        </sections>
+        <sections>
+            <label>Zahlungslaufoptionen</label>
+            <section>Payment Run Options</section>
+        </sections>
+        <sections>
+            <label>Preisinformationen</label>
+            <section>Price Information</section>
+        </sections>
+        <sections>
+            <label>Steuerinformationen</label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Rechnungsnummer</nameFieldLabel>
+    <quickActions>
+        <label><!-- Update Invoice --></label>
+        <name>blng__Cancel_Rebill</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Cancel_Rebill --></label>
+        <name>blng__Cancel_Rebill</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ConvertNegativeLines --></label>
+        <name>blng__ConvertNegativeLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit --></label>
+        <name>blng__Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Payment_Virtual_Terminal --></label>
+        <name>blng__Payment_Virtual_Terminal</name>
+    </webLinks>
+</CustomObjectTranslation>

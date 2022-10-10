@@ -1,0 +1,7 @@
+<apex:page standardController="Account" extensions="dsfs.EnvelopeController" showHeader="false" sideBar="false"
+           title="{!$Label.dsfs__docusign}">
+    <apex:stylesheet value="{!$Resource.dsfs__styles}"/>
+    <apex:form >
+        <c:CreateEnvelope createEnvelopeAction="{!createEnvelope}" onCreatedAction="{!onCreated}"/>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,429 @@
+<template>
+    <!-- Page 1-->
+    <template if:true={isShowFirstPage}>
+        <article class="slds-card blngPaymentHome">
+            <div class="slds-card__header slds-grid">
+    
+            </div>
+            <div class="slds-card__body">
+                <div class="slds" >
+                    <div class="c-title">
+                        <span style="font-size:2.25rem;">Make a Payment</span>
+                    </div>
+                    <div class="small-title">
+                        <span style="font-size:0.875rem;">How would you like to pay?</span>
+                    </div>
+                </div>
+                <article>
+                    <div id="c-container" data-aura-rendered-by="50:0">
+                        <div class="slds-grid slds-grid_align-spread">
+                            <div class="slds-p-around_large slds-col slds-size_2-of-12 slds-small-size_1-of-12 slds-large-size_2-of-12">
+                                <!--render facet: 55:0-->
+                            </div>
+                            <div class="slds-p-around_large slds-col slds-size_4-of-12 slds-small-size_1-of-12 slds-large-size_4-of-12">
+                                <div class="slds-grid slds-grid_align-space">
+                                    <div class="slds-p-around_small slds-col">
+                                        <div class="c-card selected" id="amount">
+                                            <div class="blockclick">
+                                                <div class="triangle">
+    
+                                                </div>
+                                                <div>
+                                                <lightning-icon icon-name="utility:check" class="tick slds-icon-utility-check slds-icon_container slds-icon-text-warning">
+                                                </lightning-icon>
+                                                </div>
+                                                <div>
+                                                    <span class="c-title">By Amount</span>
+                                                </div>
+                                                <div class="small-title">
+                                                    <span>Choose how much you want to pay toward your account.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-p-around_large slds-col slds-size_2-of-12 slds-small-size_1-of-12 slds-large-size_2-of-12">
+                                <!--render facet: 68:0-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="slds-card__footer" style="padding-top: 0.75rem; background-color: #f7f9fb;">
+                        <div class="slds-grid">
+                            <div class="slds-col_bump-left">
+                                <button class="slds-button slds-button--neutral" type="button" id="cancelButton" title="Cancel">Cancel</button>
+                                <button class="slds-button slds-button_brand" id="nextButton" title="Next" onclick={showModalBox}>Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </article>
+    </template>
+
+    <!-- modal start --> 
+    <template if:true={isShowModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-022" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+        <!-- modal header start -->
+        <header class="slds-modal__header">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                alternative-text="close"
+                variant="inverse"
+                size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-0111" class="slds-text-heading_medium slds-hyphenate">Enter Payment Amount</h2>
+        </header>
+
+        <!-- modal body start -->
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-111">
+            <lightning-input type="text" value={inputAmount} label="Enter Payment Total" title="Enter Payment Total" required>
+            </lightning-input>
+        </div>
+
+        <!-- modal footer start-->
+        <footer class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+            <button class="slds-button slds-button_brand" onclick={showNextPage}>Next</button>
+        </footer>
+
+        </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <!-- modal end -->
+
+    <template if:true={isShowNext}>
+        <!--Modal Header-->
+        <header class="slds-modal__header">
+            <h1 id="modal-heading-031" class="slds-modal__title slds-hyphenate" style="font-size: 1.25rem; color: RGB(31, 97, 141);">Make a Payment</h1>
+        </header>
+        <!--Modal content -->
+        <div class="slds-modal__content slds-p-around_large" id="modal-content-id-3">
+            <br /> <br /> 
+            <template if:false = {isPaymentMethodAvailable}> 
+                <p style="font-size: 2rem; text-align: center; color: #00396b;">Hmmm... it looks like you need to set up a payment method.</p> 
+                <br />
+                <p style="font-size: 1rem; text-align: center; color: #00396b;">Select a payment type below and save it to your account future transactions.</p>
+            </template>
+            <template if:true = {isPaymentMethodAvailable}> 
+                <p style="font-size: 2rem; text-align: center; color: #00396b;">Great! Now choose a payment method.</p>
+            </template>     
+            <br /> <br />
+
+            <div class="slds-grid">
+            <!-- It is used if payment method is not available on Account -->
+            <template if:false = {isPaymentMethodAvailable}>
+                <div class="slds-p-horizontal_large slds-size_8-of-12 slds-small-size_1-of-1 slds-medium-size_8-of-12 slds-large-size--9-of-12">
+                    <div id="Credit_Card" onclick={selectDivElement} class={selectedCardCredit}>
+                        <lightning-card variant="narrow">
+                            <h1 slot="title">
+                            <lightning-icon icon-name="standard:poll" size="large" style="margin-right: 10px;"></lightning-icon>
+                            Credit Card</h1>
+                            <p class="slds-p-horizontal_small">Enter card information for Visa, Mastercard, American Express or Discover.</p>
+                        </lightning-card>
+                    </div>
+                    <br/>
+
+                    <div id="ACH" onclick={selectDivElement} class={selectedCardACH}>
+                        <lightning-card variant="narrow">
+                            <h1 slot="title">
+                            <lightning-icon icon-name="standard:poll" size="large" style="margin-right: 10px;"></lightning-icon>   
+                            ACH</h1>
+                            <p class="slds-p-horizontal_small">Enter banking details for an Automated Clearing House.</p>
+                        </lightning-card>
+                    </div>
+                </div>
+            </template>
+ 
+            <template if:true = {isPaymentMethodAvailable}> 
+                <div class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_8-of-12 slds-large-size_8-of-12">
+                    <div class="slds-box">
+                        <article class="slds-card" aria-describedby="header" style="background-color: #f7f9fb; padding-bottom: 0.01rem;">
+                            <div class="slds-card__header slds-grid">
+                                <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                                    <div class="slds-media__body" style="padding: 0.75rem;">
+                                        <h2 id="header">
+                                            <span class="slds-text-heading--small slds-truncate slds-m-right--xx-small" title="Payment Methods">
+                                                Saved Payment Methods
+                                            </span>
+                                        </h2>
+                                    </div>
+                                </header>
+                                <div class="slds-no-flex">
+                                    <div class="actionsContainer" style="padding:0.75rem;">
+                                        <ul class="slds-button-group slds-m-left--xx-small">
+                                            <li class="btn-align">
+                                                <lightning-button variant="neutral" label="New Credit Card"></lightning-button>
+                                            </li>
+                                            <li class="btn-align">
+                                                <lightning-button variant="neutral" label="New ACH" onclick={showACHModal}></lightning-button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="slds-grid">
+                                <div class="c-box">
+                                    <nav class="slds-nav-vertical" aria-label="Sub page">
+                                        <div class="slds-nav-vertical__section">
+                                            <span class="slds-nav-vertical__title slds-text-title_caps" id="folder-header">
+                                                Folders
+                                            </span>
+                                            <ul class="filterlist">
+                                                <li class="slds-nav-vertical__item" >
+                                                    <a class="slds-nav-vertical__action" name="all" aria-describedby="folder-header" id="allOption" href="javascript:void(0);">All</a>
+                                                </li>
+                                                <li class="slds-nav-vertical__item">
+                                                    <a class="slds-nav-vertical__action" name="creditcard" aria-describedby="folder-header" id="ccOption" data-aura-rendered-by="210:0" href="javascript:void(0);">Credit Cards</a>
+                                                </li>
+                                                <li class="slds-nav-vertical__item slds-is-selected slds-is-active" data-aura-rendered-by="212:0">
+                                                    <a class="slds-nav-vertical__action" name="ach" aria-describedby="folder-header" id="achOption" data-aura-rendered-by="213:0" href="javascript:void(0);">ACH</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout" role="grid" id="paymentMethodTable" style="width: 80%" data-aura-rendered-by="215:0">
+                                    <thead data-aura-rendered-by="216:0"
+                                    ><tr class="slds-card slds-text-title_caps" data-aura-rendered-by="217:0">
+                                        <th scope="col" style="padding:0.5rem;" data-aura-rendered-by="273:0">
+                                            <div class="slds-truncate" title="Nickname" data-aura-rendered-by="274:0">Nickname
+                                            </div>
+                                        </th>
+                                        <th scope="col" style="padding:0.5rem;" data-aura-rendered-by="818:0">
+                                            <div class="slds-truncate" title="Bank Name" data-aura-rendered-by="819:0">Bank Name</div>
+                                        </th>
+                                        <th scope="col" style="padding:0.5rem;" data-aura-rendered-by="821:0"><div class="slds-truncate" title="Bank Account Name" data-aura-rendered-by="822:0">Bank Account Name</div>
+                                        </th>
+                                        <th scope="col" style="padding:0.5rem;" data-aura-rendered-by="824:0"><div class="slds-truncate" title="Bank Account Number" data-aura-rendered-by="825:0">Bank Account Number</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody data-aura-rendered-by="219:0">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </div> 
+        </template>
+
+                <div class="slds-p-horizontal_large slds-size_4-of-12 slds-small-size_1-of-1 slds-medium-size_4-of-12 slds-large-size--3-of-12">
+                    <article class="slds-card" style="background-color: #FAFAF9;">
+                        <div style="padding: 0.5rem;">
+                            <div class="summary-title">
+                                Payment Summary
+                            </div>
+                            <hr style="margin: 0;">
+                            <div style="text-align: justify;padding: 1rem;font-size: 0.75rem;">
+                                <span>This payment is not being applied to any invoices. Please review the Payment related list on the Account to being Allocation.
+                                </span>
+                            </div>
+                            <hr style="margin: 0;">
+                            <div class="slds-grid" style="font-weight:bold;font-size:1rem; color:#555555;">
+                                Payment Total:
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <footer class="slds-modal__footer" style="background-color: #FFFFFF;">
+            <lightning-button variant="neutral" label="Cancel" class="slds-m-left_x-small" onclick={showPreviousPage}></lightning-button>
+            <lightning-button variant="brand" label="Next" class="slds-m-left_x-small" onclick={showPaymentModal}></lightning-button>
+        </footer>
+    </template>
+
+
+    <!-- Credit Card Modal Popup -->
+    <template if:true={isShowCreditCardModal}>
+      <!--  <section class="slds-modal slds-fade-in-open slds-is-relative" role="dialog" tabindex="-1"> -->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-022" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" style="width: 85%; max-width: 90%;">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                        <lightning-icon icon-name="utility:close"
+                        alternative-text="close"
+                        variant="inverse"
+                        size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate" data-aura-rendered-by="2610:0">Credit Card Details</h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-grid">
+                        <div class="slds-p-horizontal_small slds-size_8-of-12 slds-small-size_1-of-1 slds-medium-size_8-of-12 slds-large-size--8-of-12">
+                            <legend class="slds-page-header__title slds-form-element__label slds-text-title_caps">
+                                PERSONAL INFORMATION
+                            </legend>
+                        </div>
+
+                        <div class="slds-p-horizontal_large slds-size_4-of-12 slds-small-size_1-of-1 slds-medium-size_4-of-12 slds-large-size--3-of-12">
+                            <article class="slds-card" style="background-color: #FAFAF9;">
+                                <div style="padding: 0.5rem;">
+                                    <div class="summary-title">
+                                        Payment Summary
+                                    </div>
+                                    <hr style="margin: 0;">
+                                    <div style="text-align: justify;padding: 1rem;font-size: 0.75rem;">
+                                        <span>This payment is not being applied to any invoices. Please review the Payment related list on the Account to being Allocation.
+                                        </span>
+                                    </div>
+                                    <hr style="margin: 0;">
+                                    <div class="slds-grid" style="font-weight:bold;font-size:1rem; color:#555555;">
+                                        Payment Total:
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- modal footer start-->
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={showNextPage}>Pay Now</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+
+
+    <!-- ACH Modal Popup -->
+    <template if:true={isShowACHModal}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-101" aria-modal="true" aria-describedby="modal-content-id-101" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" style="width: 85%; max-width: 90%;">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                            <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate" data-aura-rendered-by="2610:0">ACH Details</h2>
+                </header>
+  
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-grid">
+                        <div class="slds-p-horizontal_small slds-size_8-of-12 slds-small-size_1-of-1 slds-medium-size_8-of-12 slds-large-size--8-of-12">
+                            <!--div class="form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-size--1-of-2">
+                                        Input 1
+                                    </div>
+                                    <div class="slds-size--1-of-2">
+                                        Input 2
+                                    </div>
+                                </div>
+                            </div -->
+                            <lightning-record-edit-form object-api-name={paymentMethodObject}>
+                                <lightning-messages></lightning-messages>
+                                <legend class="slds-page-header__title slds-form-element__label slds-text-title_caps">
+                                    PERSONAL INFORMATION
+                                </legend>
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning-input-field field-name={firstNameField}></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning-input-field field-name={lastNameField}></lightning-input-field>
+                                    </div>
+                                </div>
+                                <div class="slds-grid">
+                                    <lightning-input-field field-name={emailField}></lightning-input-field>
+                                </div>
+
+                                <br />
+                                <legend class="slds-page-header__title slds-form-element__label slds-text-title_caps">
+                                    ADDRESS INFORMATION
+                                </legend>
+                                <div class="slds-grid">
+                                    <lightning-input-field field-name={streetField}></lightning-input-field>
+                                </div>
+                                <div class="slds-grid">
+                                    <lightning-input-field field-name={cityField}></lightning-input-field>
+                                </div>
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-input-field field-name={countryField}></lightning-input-field>  
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-input-field field-name={stateField}></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-input-field field-name={zipField}></lightning-input-field>
+                                    </div>   
+                                </div>
+
+                                <br />
+                                <legend class="slds-page-header__title slds-form-element__label slds-text-title_caps">
+                                    BANK INFORMATION
+                                </legend>
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning-input-field field-name={bankNameField}></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning-input-field field-name={bankAccTypeField} required></lightning-input-field>
+                                    </div>
+                                </div>
+                                <div class="slds-grid">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <lightning-input-field field-name={bankAccNameField}></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">                                        
+                                        <lightning-input-field field-name={bankAccNumberField} required></lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">                                        
+                                        <lightning-input-field field-name={bankRoutingCodeField} required></lightning-input-field>
+                                    </div>         
+                                </div>
+
+                            </lightning-record-edit-form>
+                        </div>
+
+                        <div class="slds-p-horizontal_large slds-size_4-of-12 slds-small-size_1-of-1 slds-medium-size_4-of-12 slds-large-size--3-of-12">
+                            <article class="slds-card" style="background-color: #FAFAF9;">
+                                <div style="padding: 0.5rem;">
+                                    <div class="summary-title">
+                                        Payment Summary
+                                    </div>
+                                    <hr style="margin: 0;">
+                                    <div style="text-align: justify;padding: 1rem;font-size: 0.75rem;">
+                                        <span>This payment is not being applied to any invoices. Please review the Payment related list on the Account to being Allocation.
+                                        </span>
+                                    </div>
+                                    <hr style="margin: 0;">
+                                    <div class="slds-grid" style="font-weight:bold;font-size:1rem; color:#555555;">
+                                        Payment Total:
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- modal footer start-->
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={showNextPage}>Pay Now</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+</template>

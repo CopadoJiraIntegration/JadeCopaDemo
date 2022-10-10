@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Instantané du solde du compte</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Instantanés du solde du compte</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Balance --></label>
+        <name>blng__AccountBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Account Balance Snapshots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Balance Snapshot Run (Created By) --></label>
+        <name>blng__BalanceSnapshotRunCreatedBy__c</name>
+        <relationshipLabel><!-- Account Balance Snapshot --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 10 --></label>
+        <name>blng__InvoiceAgingBucket10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 1 --></label>
+        <name>blng__InvoiceAgingBucket1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 2 --></label>
+        <name>blng__InvoiceAgingBucket2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 3 --></label>
+        <name>blng__InvoiceAgingBucket3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 4 --></label>
+        <name>blng__InvoiceAgingBucket4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 5 --></label>
+        <name>blng__InvoiceAgingBucket5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 6 --></label>
+        <name>blng__InvoiceAgingBucket6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 7 --></label>
+        <name>blng__InvoiceAgingBucket7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 8 --></label>
+        <name>blng__InvoiceAgingBucket8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Aging Bucket 9 --></label>
+        <name>blng__InvoiceAgingBucket9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoices --></label>
+        <name>blng__Invoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snapshot Date --></label>
+        <name>blng__SnapshotDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Invoice Amount --></label>
+        <name>blng__TotalInvoiceAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unapplied Credit Note Amount --></label>
+        <name>blng__UnappliedCreditNoteAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unapplied Credit Notes --></label>
+        <name>blng__UnappliedCreditNotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unapplied DebitNote Amount --></label>
+        <name>blng__UnappliedDebitNoteAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unapplied DebitNotes --></label>
+        <name>blng__UnappliedDebitNotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unapplied Payment Amount --></label>
+        <name>blng__UnappliedPaymentAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unapplied Payments --></label>
+        <name>blng__UnappliedPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Account Balance Snapshot Layout</layout>
+        <sections>
+            <label>Informations sur la note de crédit</label>
+            <section>CreditNote Information</section>
+        </sections>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations sur la note de débit</label>
+            <section>DebitNote Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur la facture</label>
+            <section>Invoice Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur le paiement</label>
+            <section>Payment Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom d’instantané du solde du compte</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

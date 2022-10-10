@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>NetSuite</fullName>
+        <default>false</default>
+        <label>NetSuite</label>
+    </customValue>
+    <customValue>
+        <fullName>Oracle Cloud</fullName>
+        <default>false</default>
+        <label>Oracle Cloud</label>
+    </customValue>
+    <masterLabel>ERP System</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

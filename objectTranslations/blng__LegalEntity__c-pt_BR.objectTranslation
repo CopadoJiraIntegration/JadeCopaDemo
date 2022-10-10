@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entidade legal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entidades legais</value>
+    </caseValues>
+    <fields>
+        <help>Para desativar essa entidade legal, desmarque a caixa de seleção. Isso não afetará transações ou atribuições atuais ou anteriores.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>Nome da cidade</help>
+        <label><!-- City --></label>
+        <name>blng__City__c</name>
+    </fields>
+    <fields>
+        <help>Nome do país</help>
+        <label><!-- Country --></label>
+        <name>blng__Country__c</name>
+    </fields>
+    <fields>
+        <help>Nome do condado</help>
+        <label><!-- County --></label>
+        <name>blng__County__c</name>
+    </fields>
+    <fields>
+        <help>Gerado pelo sistema. Um número exclusivo para este registro de Pessoa jurídica.</help>
+        <label><!-- Legal Entity Number --></label>
+        <name>blng__LegalEntityNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Nome do estado</help>
+        <label><!-- State --></label>
+        <name>blng__State__c</name>
+    </fields>
+    <fields>
+        <help>Endereço de rua primário</help>
+        <label><!-- Street 1 --></label>
+        <name>blng__Street1__c</name>
+    </fields>
+    <fields>
+        <help>Endereço de rua, continuação.</help>
+        <label><!-- Street 2 --></label>
+        <name>blng__Street2__c</name>
+    </fields>
+    <fields>
+        <help>Código postal</help>
+        <label><!-- Zip / Postal Code --></label>
+        <name>blng__ZipPostalCode__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Legal Entity Layout</layout>
+        <sections>
+            <label>Informação de endereço</label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da pessoa jurídica</nameFieldLabel>
+</CustomObjectTranslation>

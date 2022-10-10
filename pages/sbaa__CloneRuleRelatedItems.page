@@ -1,0 +1,132 @@
+<apex:page standardController="sbaa__ApprovalRule__c" extensions="sbaa.ApprovalRuleExtController" standardStylesheets="false" title="{!$Label.sbaa__lbl_clone_rule_related_items}">
+    <link rel="shortcut icon" href="{!URLFOR($Resource.sbFavicon)}" />
+    <apex:stylesheet value="{!$Resource['sb']}"/>
+
+    <style>
+        .sb .message .messageText h4 {
+            color: #cc0000;
+        }
+    </style>
+
+    <div id="sbCloneRelated" class="sb">
+        <div class="sbForm">
+            <apex:form >
+                <c:pageHeader title="{!$Label.sbaa__lbl_clone_rule_related_items}" subtitle="{!sbaa__ApprovalRule__c.Name}" iconName="sf-icon-copy resize">
+                    <div class="sbBtns">
+                        <apex:commandButton styleClass="sbBtn" action="{!onClone}" value="{!OnCloneLabel}" />
+                        <apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="{!OnCancelLabel}" />
+                    </div>
+                </c:pageHeader>
+                <apex:pageMessages />
+                <apex:outputPanel rendered="{!approvalConditions.size!=0}">
+                    <div class="sbGroup">
+                        <header class="sbPageBlockSection">
+                            <h3>
+                                <apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.label}"/>&nbsp;
+                                <apex:outputText value="({!approvalConditions.size})"/>
+                            </h3>
+                            <div class="sbTool toggleButton"><i class="sf-icon-down" /></div>
+                        </header>
+                    </div>
+                    <div class="tableContainer standard">
+                        <table class="sbTable">
+                            <thead>
+                            <tr>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.Name.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__TestedField__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__TestedVariable__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__Operator__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__FilterType__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__FilterField__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__FilterValue__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__ApprovalCondition__c.fields.sbaa__FilterVariable__c.label}"/></th>
+                                <th><apex:outputText value="{!$Label.sbaa__lbl_smart_approval}"/></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <apex:repeat var="ac" value="{!approvalConditions}" rows="15">
+                                <tr>
+                                    <td><apex:outputField value="{!ac.Name}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__TestedField__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__TestedVariable__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__Operator__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__FilterType__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__FilterField__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__FilterValue__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__FilterVariable__c}"/></td>
+                                    <td><apex:outputField value="{!ac.sbaa__EnableSmartApproval__c}"/></td>
+                                </tr>
+                            </apex:repeat>
+                            <apex:outputPanel rendered="{!approvalConditions.size>15}">
+                                <tr><td colspan="42">
+                                    <apex:outputText value="{!$Label.sbaa__lbl_additional_cloned_items}">
+                                        <apex:param value="{!approvalConditions.size-15}"></apex:param>
+                                    </apex:outputText>
+                                </td></tr>
+                            </apex:outputPanel>
+                            </tbody>
+                        </table>
+                    </div>
+                </apex:outputPanel>
+
+                <apex:outputPanel rendered="{!trackedFields.size!=0}">
+                    <div class="sbGroup">
+                        <header class="sbPageBlockSection">
+                            <h3>
+                                <apex:outputText value="{!$ObjectType.sbaa__TrackedField__c.label}"/>&nbsp;
+                                <apex:outputText value="({!trackedFields.size})"/>
+                            </h3>
+                            <div class="sbTool toggleButton"><i class="sf-icon-down" /></div>
+                        </header>
+                    </div>
+                    <div class="tableContainer standard">
+                        <table class="sbTable">
+                            <thead>
+                            <tr>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__TrackedField__c.fields.Name.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__TrackedField__c.fields.sbaa__RecordField__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__TrackedField__c.fields.sbaa__TrackedField__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__TrackedField__c.fields.sbaa__TrackedObject__c.label}"/></th>
+                                <th><apex:outputText value="{!$ObjectType.sbaa__TrackedField__c.fields.sbaa__TrackingType__c.label}"/></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <apex:repeat var="tf" value="{!trackedFields}" rows="15">
+                                <tr>
+                                    <td><apex:outputField value="{!tf.Name}"/></td>
+                                    <td><apex:outputField value="{!tf.sbaa__RecordField__c}"/></td>
+                                    <td><apex:outputField value="{!tf.sbaa__TrackedField__c}"/></td>
+                                    <td><apex:outputField value="{!tf.sbaa__TrackedObject__c}"/></td>
+                                    <td><apex:outputField value="{!tf.sbaa__TrackingType__c}"/></td>
+                                </tr>
+                            </apex:repeat>
+                            <apex:outputPanel rendered="{!trackedFields.size>15}">
+                                <tr><td colspan="42">
+                                    <apex:outputText value="{!$Label.sbaa__lbl_additional_cloned_items}">
+                                        <apex:param value="{!trackedFields.size-15}"></apex:param>
+                                    </apex:outputText>
+                                </td></tr>
+                            </apex:outputPanel>
+                            </tbody>
+                        </table>
+                    </div>
+                </apex:outputPanel>
+            </apex:form>
+        </div>
+    </div>
+
+    <script>
+        var buttons = document.getElementsByClassName('toggleButton');
+        var tables = document.getElementsByClassName('tableContainer');
+
+        for (var i=0; i<buttons.length;i++) (function(i) {
+            buttons[i].onclick = function(){
+                if (tables[i].style.display=='block') {
+                    tables[i].style.display='none';
+                } else {
+                    tables[i].style.display = 'block';
+                }
+            }
+        })(i);
+    </script>
+</apex:page>

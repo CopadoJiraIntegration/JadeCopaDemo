@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Orientação de precificação da linha de cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Orientações de precificação da linha de cotação</value>
+    </caseValues>
+    <fields>
+        <help>Uma explicação deste guia de preços e recomendações de descontos a serem concedidos. Os representantes de vendas podem visualizar essa explicação do guia de preços no editor de linha da cotação.</help>
+        <label><!-- Explanation --></label>
+        <name>SBQQ__Explanation__c</name>
+    </fields>
+    <fields>
+        <help>Desconto alto para preços de exceção com base em vendas anteriores. Caso um representante de vendas queira usar esse preço, eles devem descontar a linha de cotação manualmente. Esse desconto pode exigir aprovações baseadas nas configurações de aprovação de sua organização.</help>
+        <label><!-- Floor --></label>
+        <name>SBQQ__Floor__c</name>
+    </fields>
+    <fields>
+        <help>Um representante de vendas aceitou o desconto de destino deste guia de preços no editor de linha da cotação.</help>
+        <label><!-- Guidance Used --></label>
+        <name>SBQQ__GuidanceUsed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>SBQQ__IsViewed__c</name>
+    </fields>
+    <fields>
+        <help>Desconto intermediário com base em vendas anteriores. Caso um representante de vendas queira usar esse preço, eles devem descontar a linha de cotação manualmente. Esse desconto pode exigir aprovações baseadas nas configurações de aprovação de sua organização.</help>
+        <label><!-- Norm --></label>
+        <name>SBQQ__Norm__c</name>
+    </fields>
+    <fields>
+        <help>A linha de cotação relacionada a este guia de preços.</help>
+        <label><!-- Quote Line --></label>
+        <name>SBQQ__QuoteLine__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>A cotação contendo a linha de cotação relacionada a este guia de preços.</help>
+        <label><!-- Quote --></label>
+        <name>SBQQ__Quote__c</name>
+        <relationshipLabel><!-- Quote Line Pricing Guidance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Desconto baixo ideal com base em vendas anteriores. Caso os representantes de vendas aceitem este guia de preços, o Salesforce CPQ aplica um desconto para atingir esse preço.</help>
+        <label><!-- Target --></label>
+        <name>SBQQ__Target__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome</nameFieldLabel>
+</CustomObjectTranslation>

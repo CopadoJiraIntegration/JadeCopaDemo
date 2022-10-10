@@ -1,0 +1,52 @@
+<!---
+//  Object: Revenue Recognition Rule
+//  Company: Salesforce
+//  Author: Savitha Hiremath
+//  Purpose: Page to validate Revenue Recognition Treatments on Rule
+// =============================================================================================
+// Use Cases or Requirements:
+// @UseCase number - @requirement Description
+// =============================================================================================
+// Changes: @Date Author
+//          @Description
+// ============================================================================================= -->
+<apex:page showHeader="true" sidebar="true" standardController="blng__RevenueRecognitionRule__c" standardStylesheets="true" extensions="blng.CurrencyUtils">
+    <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="/lightning/lightning.out.js" />
+
+    <style>
+        /* This prevents page shifting when scrollbar appears/disappears */
+        html {
+            overflow-y:scroll;
+        }
+    </style>
+
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show" >
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var revenuetreatment= '{!$ObjectType.RevenueRecognitionRule__c.Name}';
+        var invoice = '{!JSENCODE(BillingRawPrefix)}';
+        var invoice1 = '{!JSENCODE(BillingBarPrefix)}';
+        var namespace = invoice != '' ? invoice : 'c';
+        var prefix = invoice1 != '' ? invoice1 : '';
+
+        $Lightning.use(namespace+":ValidateRevenueRecognitionTreatmentApp", function() {
+            $Lightning.createComponent(namespace+":ValidateRevenueRecognitionTreatments",{
+                        "recordId" : "{!$CurrentPage.parameters.Id}",
+                        //"prefix" : prefix
+                    },
+                    "lightning",
+                    function(component) {
+                        document.getElementById('spinnerId').style.display = 'none';
+                    });
+        });
+
+    </script>
+</apex:page>

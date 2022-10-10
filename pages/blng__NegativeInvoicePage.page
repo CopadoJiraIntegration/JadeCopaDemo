@@ -1,0 +1,92 @@
+<apex:page showHeader="true" sidebar="true" standardController="blng__Invoice__c" standardStylesheets="true" extensions="blng.CurrencyUtils">
+    <!-- Include a JavaScript file in your Visualforce page -->
+     <apex:includeScript value="/lightning/lightning.out.js" />
+     <script src="../../soap/ajax/38.0/connection.js" type="text/javascript"/>
+    <style>
+        /* This prevents page shifting when scrollbar appears/disappears */
+        html {
+            overflow-y:scroll;
+        }
+    </style>
+    <article class="slds-card"  id="MessagingWindow" style="display:none;min-height:14rem;">
+      <div class="slds-card__header slds-grid">
+         <header class="slds-media slds-media--center slds-has-flexi-truncate">             
+                <div class="slds-media__body slds-truncate">               
+                    <div style="margin-left:40%; margin-top:5rem;font-size:1.3rem;">     
+                        <h1>Action valid for posted records only.</h1>
+                   </div>
+                </div>
+         </header>         
+          <div> 
+              <button class="slds-button slds-button--neutral" onclick="goBack()">Back</button>       
+          </div>   
+             
+        </div>
+    </article>
+    <div id="lightning">
+        <div id="spinnerId" class="slds-spinner_container slds-show" >
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>  
+  <script>
+          sforce.connection.sessionId='{!GETSESSIONID()}';
+          var invoiceName = '{!$ObjectType.PaymentAllocationDebitNoteLine__c.Name}';
+          var sample = invoiceName.toLowerCase();
+          var namespace;
+          var prefix;
+          if(sample == 'paymentallocationdebitnoteline__c'){
+            prefix = '';
+            namespace = 'c';
+          }else{
+            namespace = sample.slice(0, invoiceName.indexOf('__'));
+            prefix = sample.slice(0, invoiceName.indexOf('__')) + '__';
+          }
+
+          var status = '';
+          var Balance = '';
+          var currencyIsoCode = '';
+          currencyIsoCode = '{!JSENCODE(currencyISOCode)}';
+          var IdValue = '{!$CurrentPage.parameters.Id}';
+          var queryValue = "SELECT Name, "+prefix+"InvoiceDate__c," +prefix+"InvoiceStatus__c,"+prefix+"Account__c,"+prefix+"Balance__c from "+prefix+"Invoice__c WHERE Id='"+IdValue+"'";
+          var result = sforce.connection.query(queryValue);
+          var records = result.getArray("records");    	
+          var status = records[0][prefix+'InvoiceStatus__c'];
+          var Balance = records[0][prefix+'Balance__c'];
+          var accountID =  records[0][prefix+'Account__c'];
+    	  var name = records[0]['Name'];
+          var invoiceDate = records[0][prefix+'InvoiceDate__c'];
+          
+         if(status === 'Posted')
+         { 
+              $Lightning.use(namespace+":NegativeInvoiceLineApp", function() {
+              $Lightning.createComponent(namespace+":NegativeInvoiceLine",
+              { 
+                  "recordId" : "{!$CurrentPage.parameters.Id}",
+                  "accountId" : accountID,
+                  "currencyIsoCode" : currencyIsoCode,
+                  "prefix" : prefix,
+                  "invoiceName": name,
+                  "invoiceDate": invoiceDate
+              },
+              "lightning",
+              function(cmp) {
+                  
+               document.getElementById('spinnerId').style.display = 'none';
+              });
+            });
+         }
+         else 
+         {               
+            document.getElementById('spinnerId').style.display = 'none';
+            document.getElementById('MessagingWindow').style.display = 'block';      
+            document.getElementById('spanId').textContent = '{!JSENCODE($Label.NoPostedRecordstoDisplay)}';
+         }
+
+         
+            
+         function goBack() { window.history.back(); }    
+    </script>
+</apex:page>

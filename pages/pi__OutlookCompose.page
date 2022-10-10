@@ -1,0 +1,41 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false" controller="pi.OutlookComposeController">
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <apex:includeScript value="/lightning/lightning.out.js" />
+            <apex:includeScript value="{!URLFOR($Resource.pi__Outlook, 'js/compose_main.js')}"/>
+            <apex:slds />
+            <apex:stylesheet value="{!URLFOR($Resource.pi__Outlook, 'css/icons.css')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.pi__font_awesome_4_2_0, 'font-awesome-4.2.0/css/font-awesome.css')}"/>
+    </head>
+
+    <body class="slds-scope">
+        <div id="outlook-compose-vf"></div>
+        <script type='text/javascript'>
+            window.orgId = '{!orgId}'
+            window.isEngageLicensed = {!isEngageLicensed}
+            window.loggedInUser = '{!JSENCODE(loggedInUser)}'
+            var packageNamespace = '{!packageNamespace}' || 'c';
+            var eo = window.eo;
+            window.packageNamespace = packageNamespace;
+            $Lightning.use(packageNamespace + ":OutlookComposeVF", function() {
+                $Lightning.createComponent(packageNamespace + ":OutlookCompose", { "eo": eo }, "outlook-compose-vf", function(component){});
+            });
+
+
+            // We want to post the message, setupComplete, to the parent frame as soon as possible.
+            //  So instead of loading an external script with all it's dependencies, post the message inline
+            var matches = window.location.search.match(/parentOrigin=([^&]*)/);
+            if(matches) {
+                var origin = window.decodeURIComponent(matches[1])
+                // setup the request data in the same format that frame-js uses. The parent frame will handle this message with frame-js
+                var data = {
+                    messageName: 'setupComplete',
+                    request: undefined,
+                    id: 'getOrgId_staticRequestId123'
+                }
+                window.parent.postMessage(data, origin)
+            }
+        </script>
+        <apex:image value="{!cookiePath}" height="0" width="0" />
+    </body>
+</apex:page>

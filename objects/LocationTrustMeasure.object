@@ -161,7 +161,7 @@
     <listViews>
         <fullName>AllLocationTrustMeasures</fullName>
         <filterScope>Everything</filterScope>
-        <label>AllLocationTrustMeasures</label>
+        <label>All Location Trust Measures</label>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Location</customTabListAdditionalFields>

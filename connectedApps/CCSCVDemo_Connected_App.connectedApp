@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <attributes>
+        <formula>&apos;arn:aws:iam::896337382812:saml-provider/SalesforceServiceVoiceIdp&apos; &amp; &apos;,&apos; &amp; &apos;arn:aws:iam::896337382812:role/CCSCVDemo-SAMLRole&apos;</formula>
+        <key>https://aws.amazon.com/SAML/Attributes/Role</key>
+    </attributes>
+    <attributes>
+        <formula>$User.Alias &amp; &apos;@&apos; &amp; $User.Id &amp; &apos;@&apos; &amp; $Organization.Id</formula>
+        <key>https://aws.amazon.com/SAML/Attributes/RoleSessionName</key>
+    </attributes>
+    <contactEmail>rajaraman.anandhakrishnan@jadeglobal.com</contactEmail>
+    <description>Connection for Service Cloud Voice</description>
+    <label>CCSCVDemo Connected App</label>
+    <samlConfig>
+        <acsUrl>https://signin.aws.amazon.com/saml</acsUrl>
+        <entityUrl>CCSCVDemo</entityUrl>
+        <samlIdpSLOBindingEnum>RedirectBinding</samlIdpSLOBindingEnum>
+        <samlNameIdFormat>Persistent</samlNameIdFormat>
+        <samlSigningAlgoType>SHA1</samlSigningAlgoType>
+        <samlSloUrl>https://CCSCVDemo00D3C0000004vLw.my.connect.aws/logout</samlSloUrl>
+        <samlSubjectType>PersistentId</samlSubjectType>
+    </samlConfig>
+</ConnectedApp>

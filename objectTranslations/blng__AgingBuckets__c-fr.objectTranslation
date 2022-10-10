@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Compartiment âgé</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Compartiments âgés</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bucket Number --></label>
+        <name>blng__BucketNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ending Days from Past Due --></label>
+        <name>blng__EndingDaysfromPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Days from Past Due --></label>
+        <name>blng__StartingDaysfromPastDue__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Aging Buckets Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom des compartiments âgés</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

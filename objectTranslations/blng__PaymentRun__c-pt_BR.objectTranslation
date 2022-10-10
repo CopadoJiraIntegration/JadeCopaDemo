@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Execução de pagamento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Execuções de pagamento</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id (Clean Up) --></label>
+        <name>blng__ApexJobIdForCleanUp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Payment Run Status --></label>
+        <name>blng__CleanUpStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Time --></label>
+        <name>blng__CompletedTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Failed Transactions --></label>
+        <name>blng__FailedTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoices Processed --></label>
+        <name>blng__InvoicesProcessed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Run --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Scheduler --></label>
+        <name>blng__PaymentScheduler__c</name>
+        <relationshipLabel><!-- Payment Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>blng__StartTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Successful Transactions --></label>
+        <name>blng__SuccessfulTransactions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Payment Processed --></label>
+        <name>blng__TotalPaymentProcessed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transactions Generated --></label>
+        <name>blng__TransactionsGenerated__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Payment Run Layout</layout>
+        <sections>
+            <label>Links personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informações de data</label>
+            <section>Date Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nome da execução de pagamento</nameFieldLabel>
+    <webLinks>
+        <label><!-- CleanUpPaymentRun --></label>
+        <name>blng__CleanUpPaymentRun</name>
+    </webLinks>
+</CustomObjectTranslation>

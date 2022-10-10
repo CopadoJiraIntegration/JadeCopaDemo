@@ -1,0 +1,6 @@
+<apex:page standardController="blng__InvoiceRun__c" extensions="blng.ControllerInvoiceRun" action="{!postAllInvoices}" sideBar="false">
+    <apex:form >
+        <apex:pageMessages />
+        <apex:commandButton value="Back To Invoice Run" action="{!Cancel}" />
+    </apex:form>
+</apex:page>

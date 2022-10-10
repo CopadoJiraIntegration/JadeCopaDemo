@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>価格設定ガイダンス階層</value>
+    </caseValues>
+    <fields>
+        <help>過去の販売に基づく例外価格用の高い割引率。営業担当はこの価格を使用する必要がある場合、見積品目に割引を手動で適用する必要があります。この割引には、組織の承認設定に基づく承認が必要です。</help>
+        <label><!-- Floor Discount (%) --></label>
+        <name>SBQQ__FloorDiscount__c</name>
+    </fields>
+    <fields>
+        <help>この階層に適用する最小見積品目数量。この数値は前の階層の上限に一致する必要があります。</help>
+        <label><!-- Lower Bound --></label>
+        <name>SBQQ__LowerBound__c</name>
+    </fields>
+    <fields>
+        <help>過去の販売に基づく中間域の割引率。営業担当はこの価格を使用する必要がある場合、見積品目に割引を手動で適用する必要があります。この割引には、組織の承認設定に基づく承認が必要です。</help>
+        <label><!-- Norm Discount (%) --></label>
+        <name>SBQQ__NormDiscount__c</name>
+    </fields>
+    <fields>
+        <help>この階層を含む価格設定ガイダンス。</help>
+        <label><!-- Pricing Guidance --></label>
+        <name>SBQQ__PricingGuidance__c</name>
+        <relationshipLabel><!-- Pricing Guidance Tiers --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>過去の販売に基づく低域の適切な割引率。営業担当がこの価格設定ガイダンスを受け入れた場合、Salesforce CPQ はこの価格に達する割引を適用します。</help>
+        <label><!-- Target Discount (%) --></label>
+        <name>SBQQ__TargetDiscount__c</name>
+    </fields>
+    <fields>
+        <help>この階層に適用する最大見積品目数量。この数値は、この階層に含める最大数量に 1 を加えた値でなければなりません。</help>
+        <label><!-- Upper Bound --></label>
+        <name>SBQQ__UpperBound__c</name>
+    </fields>
+    <layouts>
+        <layout>Pricing Guidance Tier Layout</layout>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>名前</nameFieldLabel>
+</CustomObjectTranslation>

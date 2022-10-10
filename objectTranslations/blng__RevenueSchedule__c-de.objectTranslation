@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Umsatzplan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Umsatzpläne</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Umsatzplan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Umsatzpläne</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Umsatzplans</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Umsatzpläne</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Umsatzplan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Umsatzplänen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Summe aller Anpassungen, die am Umsatzplan vorgenommen wurden.</help>
+        <label><!-- Adjustments --></label>
+        <name>blng__Adjustments__c</name>
+    </fields>
+    <fields>
+        <help>Summe des zugeordneten Umsatzes</help>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Der gesamte Umsatz für einen Umsatzplan, der zur Anpassung oder Verteilung verfügbar ist.</help>
+        <label><!-- Available --></label>
+        <name>blng__Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Finanzbuch, in dem dieser Umsatz erfasst wird.</help>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Gutschriftsanzeigeposten, der mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Belastungsanzeigeposten, der mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Summe des nicht erfassten Umsatzes für den aktuellen Zeitraum</help>
+        <label><!-- Deferred Balance (deprecated) --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>Umsatz, der noch nicht im Umsatzplan erfasst wurde.</help>
+        <label><!-- Deferred --></label>
+        <name>blng__Deferred__c</name>
+    </fields>
+    <fields>
+        <help>Geschätzte Anzahl der Umsatztransaktionen</help>
+        <label><!-- Estimated Revenue Transaction Count --></label>
+        <name>blng__EstimatedRevenueTransactionCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Recognition Date --></label>
+        <name>blng__FullRecognitionDate__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Rechnungsposten, der mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf die juristische Person, für die dieser Umsatz erfasst wird.</help>
+        <label><!-- Revenue Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Auftragsprodukt, das mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Summe des Umsatzes, der für den aktuellen Zeitraum erfasst wurde</help>
+        <label><!-- Recognized --></label>
+        <name>blng__RecognizedRevenueLastClosedPeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Agreement Allocation Status --></label>
+        <name>blng__RevenueAgreementAllocationStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Agreement --></label>
+        <name>blng__RevenueAgreement__c</name>
+        <relationshipLabel><!-- Revenue Schedule --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Die Methode zur Berechnung, wie Umsatz auf Zeiträume verteilt wird, entsprechend der Definition
+        in der Umsatzrealisierungsregel.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf das Enddatum der Umsatzlaufzeit, das in der Umsatzregel definiert ist.</help>
+        <label><!-- Revenue End Date --></label>
+        <name>blng__RevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Erwarteter Gesamtumsatz in diesem Umsatzplan.</help>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Finanzbuch, in dem dieser Umsatz erfasst wird.</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Gesamte Umsatzverbindlichkeit</help>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <help>Gesamtumsatz, der mit diesem Umsatzplan erfasst werden soll</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Hauptbuchverfahren.</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zur Umsatzrealisierungsregel, die für diesen Umsatzplan verwendet wird.</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Schedules (Revenue Recognition Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zum Umsatzrealisierungsverfahren, das für diesen Umsatzplan verwendet wird.</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+        <relationshipLabel><!-- Revenue Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf das Startdatum der Umsatzlaufzeit, das in der Umsatzregel definiert ist.</help>
+        <label><!-- Revenue Start Date --></label>
+        <name>blng__RevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Status dieser Umsatztransaktion.</help>
+        <label><!-- Revenue Transaction Status --></label>
+        <name>blng__RevenueTransactionStatus__c</name>
+    </fields>
+    <fields>
+        <help>Nachschlagevorgang zur Hauptbuchregel, die mit diesem Umsatzplan verknüpft ist.</help>
+        <label><!-- Total Revenue Amount --></label>
+        <name>blng__TotalRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Summe des gesamten Umsatzes, der auf einen Umsatzplan verteilt ist, aber noch nicht erkannt wurde.</help>
+        <label><!-- Unrecognized --></label>
+        <name>blng__Unrecognized__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Revenue Schedule Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Umsatzdaten</label>
+            <section>Revenue Dates</section>
+        </sections>
+        <sections>
+            <label>Umsatzkennzahlen</label>
+            <section>Revenue Metrics</section>
+        </sections>
+        <sections>
+            <label>Quelldatensätze</label>
+            <section>Source Records</section>
+        </sections>
+        <sections>
+            <label>Informationen zur Zusammenfassung</label>
+            <section>Summary Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name</nameFieldLabel>
+    <webLinks>
+        <label><!-- RevenueAdjustment --></label>
+        <name>blng__RevenueAdjustment</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,9 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Engage Alerts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <apex:stylesheet value="{!URLFOR($Resource.pi__LeadDeck, 'css/notifier.min.css')}"></apex:stylesheet>
+  </head>
+  <body></body>
+</apex:page>

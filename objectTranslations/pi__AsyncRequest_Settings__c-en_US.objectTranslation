@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Is Enabled --></help>
+        <label><!-- Is Enabled --></label>
+        <name>pi__Is_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last run time. --></label>
+        <name>pi__Last_Run_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next run time. --></label>
+        <name>pi__Next_Run_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- JSON summary of any results --></label>
+        <name>pi__Result_Summary__c</name>
+    </fields>
+</CustomObjectTranslation>
