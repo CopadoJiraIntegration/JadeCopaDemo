@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Nutzungszusammenfassung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Nutzungszusammenfassungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Nutzungszusammenfassung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Nutzungszusammenfassungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Nutzungszusammenfassung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Nutzungszusammenfassungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Nutzungszusammenfassung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Nutzungszusammenfassungen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Usage Summaries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Applied Unit Price --></label>
+        <name>blng__AppliedUnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Quantity --></label>
+        <name>blng__BilledQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Revenue --></label>
+        <name>blng__BilledRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouped Quantity --></label>
+        <name>blng__GroupedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Unbilled Usage --></label>
+        <name>blng__IncludedUnbilledUsage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Usage Exhausted --></label>
+        <name>blng__IncludedUsageExhausted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- Usage Summaries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Processing Status --></label>
+        <name>blng__InvoiceRunProcessingStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Start Date --></label>
+        <name>blng__InvoiceRunStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run Status (Index) --></label>
+        <name>blng__InvoiceRunStatusIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run --></label>
+        <name>blng__InvoiceRun__c</name>
+        <relationshipLabel><!-- Usage Summaries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>blng__Invoice__c</name>
+        <relationshipLabel><!-- Usage Summaries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Matching Attribute --></label>
+        <name>blng__MatchingAttribute__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching ID --></label>
+        <name>blng__MatchingId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Billing Date --></label>
+        <name>blng__NextBillingDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Item Consumption Schedule --></label>
+        <name>blng__OrderItemConsumptionSchedule__c</name>
+        <relationshipLabel><!-- Usage Summary --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Usage Summaries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Usage Summaries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Override Status --></label>
+        <name>blng__OverrideStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Summary End Date --></label>
+        <name>blng__OverrideSummaryEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Summary Start Date --></label>
+        <name>blng__OverrideSummaryStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prerated Amount --></label>
+        <name>blng__PreratedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prerated Quantity --></label>
+        <name>blng__PreratedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>blng__Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unbilled Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary End Date --></label>
+        <name>blng__SummaryEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary Start Date --></label>
+        <name>blng__SummaryStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Quantity --></label>
+        <name>blng__TotalQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue --></label>
+        <name>blng__TotalRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unbilled Quantity --></label>
+        <name>blng__UnbilledQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unbilled Revenue --></label>
+        <name>blng__UnbilledRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Of Measure --></label>
+        <name>blng__UnitOfMeasure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>blng__UnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usage Count --></label>
+        <name>blng__UsageCount__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nutzungszusammenfassung</nameFieldLabel>
+</CustomObjectTranslation>

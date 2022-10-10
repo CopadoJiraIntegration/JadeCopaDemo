@@ -218,6 +218,20 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Extension_Configuration__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Extension Configuration</label>
+        <referenceTo>copado__ExtensionConfiguration__c</referenceTo>
+        <relationshipLabel>Quality Gate Rule Conditions</relationshipLabel>
+        <relationshipName>Quality_Gate_Rule_Conditions</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Filter_Criteria__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -286,6 +300,21 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>copado__Stage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Stage where this Quality Gate Condition will be evaluated. If no Pipeline is defined, this Condition will apply to all Pipelines where this Stage is connected to.</inlineHelpText>
+        <label>Stage</label>
+        <referenceTo>copado__Stage__c</referenceTo>
+        <relationshipLabel>Quality Gate Rule Conditions</relationshipLabel>
+        <relationshipName>Quality_Gate_Rule_Conditions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Status__c</fullName>
         <deprecated>false</deprecated>
         <description>Formula field to display parent Quality Gate Rule&apos;s Status in related lists.</description>
@@ -297,6 +326,38 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Tests_From__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select from where the tests to be executed as part of the Quality Gate are retrieved.</inlineHelpText>
+        <label>Tests From</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>User Story</fullName>
+                    <default>true</default>
+                    <label>User Story</label>
+                </value>
+                <value>
+                    <fullName>Feature</fullName>
+                    <default>false</default>
+                    <label>Feature</label>
+                </value>
+                <value>
+                    <fullName>Application</fullName>
+                    <default>false</default>
+                    <label>Application</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>copado__Tool__c</fullName>

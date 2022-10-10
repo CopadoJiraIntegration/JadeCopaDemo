@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Static Code Analysis Settings --></value>
+    </caseValues>
+    <fields>
+        <help>この組織IDは、セットアップメニューの「私の組織」の「あなたのプロファイル」の下にあるCodeScan Cloudで取得することができます。</help>
+        <label><!-- Cloud Organization --></label>
+        <name>copado__Cloud_Organization__c</name>
+    </fields>
+    <fields>
+        <label><!-- CodeScan Token --></label>
+        <name>copado__CodeScan_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- CodeScan URL --></label>
+        <name>copado__CodeScan_URL__c</name>
+    </fields>
+    <fields>
+        <help>クラウド版にはCodeScan Cloudライセンスが必要です。
+オンプレミスのSonarQubeには、インターネット経由でアクセスできるSonarQubeインスタンスが必要です。</help>
+        <label><!-- CodeScan Version --></label>
+        <name>copado__CodeScan_Version__c</name>
+        <picklistValues>
+            <masterLabel>Cloud</masterLabel>
+            <translation>クラウド</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On-premise SonarQube</masterLabel>
+            <translation>オンプレミス版SonarQube</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Report Issues From Latest Commit --></label>
+        <name>copado__ReportIssuesFromLatestCommit__c</name>
+    </fields>
+    <nameFieldLabel><!-- Static Code Analysis Settings Name --></nameFieldLabel>
+    <recordTypes>
+        <description><!-- Record Type for CodeScan integration. Requires CodeScan licensing. --></description>
+        <label><!-- CodeScan --></label>
+        <name>copado__CodeScan</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type for free of charge PMD integration --></description>
+        <label><!-- PMD --></label>
+        <name>copado__PMD</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Review the following required fields:
+Cloud Organization is required for Cloud Version.
+SonarQube Token and URL are required for On-premise Version. --></errorMessage>
+        <name>copado__CodeScan_Required_Fields</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_Default_RuleSet --></label>
+        <name>copado__Generate_Default_RuleSet</name>
+    </webLinks>
+</CustomObjectTranslation>

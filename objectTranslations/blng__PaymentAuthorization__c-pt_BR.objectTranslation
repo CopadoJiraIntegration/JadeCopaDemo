@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Autorização de pagamento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Autorizações de pagamento</value>
+    </caseValues>
+    <fields>
+        <help>Conta</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Saldo: valor atual - pagamentos líquidos</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <help>Valor original que temos o direito de cobrar</help>
+        <label><!-- Current Amount --></label>
+        <name>blng__CurrentAmount__c</name>
+    </fields>
+    <fields>
+        <help>Data final efetiva que tenho o direito de cobrar</help>
+        <label><!-- Effective End Date --></label>
+        <name>blng__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Data inicial efetiva que tenho o direito de cobrar</help>
+        <label><!-- Effective Start Date --></label>
+        <name>blng__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Os dados que serão usados pelo gateway para transações subsequentes</help>
+        <label><!-- Gateway Reference Details --></label>
+        <name>blng__GatewayReferenceDetails__c</name>
+    </fields>
+    <fields>
+        <help>ID de transação exclusivo gerado pelo gateway de pagamento</help>
+        <label><!-- Gateway Reference Number --></label>
+        <name>blng__GatewayReferenceNumber__c</name>
+    </fields>
+    <fields>
+        <help>Soma dos pagamentos</help>
+        <label><!-- Net Payments --></label>
+        <name>blng__NetPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Valor original que temos o direito de cobrar</help>
+        <label><!-- Original Amount --></label>
+        <name>blng__OriginalAmount__c</name>
+    </fields>
+    <fields>
+        <help>Gateway de pagamento usado para transação de autorização</help>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Método de pagamento</help>
+        <label><!-- Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Fonte da autorização de pagamento</help>
+        <label><!-- Source --></label>
+        <name>blng__Source__c</name>
+    </fields>
+    <fields>
+        <help>Status da autorização de pagamento</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome da autorização de pagamento</nameFieldLabel>
+</CustomObjectTranslation>

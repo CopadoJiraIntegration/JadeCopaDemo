@@ -775,6 +775,7 @@ TODAY() - DATEVALUE( CreatedDate )</formula>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>LEAD.RECORDTYPE</columns>
+        <columns>pi__Needs_Score_Synced__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>LEAD.STATUS</field>

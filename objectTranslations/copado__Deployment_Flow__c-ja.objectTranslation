@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Pipeline --></value>
+    </caseValues>
+    <fields>
+        <help>チェックされている場合は、デプロイメントフローですべてのブランチ管理機能が有効になります。</help>
+        <label><!-- Active --></label>
+        <name>copado__Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this option if you want User Stories which already promoted in your Copado Pipeline to apply to the connection behaviours for back promotions which you create in Copado Continuous Delivery --></help>
+        <label><!-- Apply Connection Behaviors to All --></label>
+        <name>copado__Apply_Connection_Behaviours_to_existing__c</name>
+    </fields>
+    <fields>
+        <help>チェックされている場合、このパイプラインにリンクされているユーザーストーリーの変更をコミットすることは許可されません</help>
+        <label><!-- Block Commits --></label>
+        <name>copado__Block_Commits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Branch Management Coordinates --></label>
+        <name>copado__Branch_Management_Coordinates__c</name>
+    </fields>
+    <fields>
+        <help>ブランチを選択した場合、ブランチ管理ページは従来通り動作し、ユーザーストーリーを選択した場合、ユーザーストーリーに基づいた結果が表示されます。</help>
+        <label><!-- Calculate Based on --></label>
+        <name>copado__Calculate_Based_on__c</name>
+        <picklistValues>
+            <masterLabel>Branch</masterLabel>
+            <translation>ブランチ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Story</masterLabel>
+            <translation>ユーザーストーリー</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the Job Template that implements the commit action for this Pipeline --></help>
+        <label><!-- Commit Job Template --></label>
+        <name>copado__CommitJobTemplate__c</name>
+        <relationshipLabel><!-- Pipelines (Commit Job Template) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Continuous Delivery Configuration Json --></label>
+        <name>copado__Continuous_Delivery_Configuration_Json__c</name>
+    </fields>
+    <fields>
+        <label><!-- Continuous Delivery Enabled --></label>
+        <name>copado__Continuous_Delivery_Enabled__c</name>
+    </fields>
+    <fields>
+        <help>選択されたDXモードにより、スクラッチメタデータソースが決定されます。</help>
+        <label><!-- Copado DX Mode --></label>
+        <name>copado__Copado_DX_Mode__c</name>
+        <picklistValues>
+            <masterLabel>Branches</masterLabel>
+            <translation>ブランチ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Git Package</masterLabel>
+            <translation>Gitパッケージ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Org Metadata</masterLabel>
+            <translation>組織メタデータ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce Package</masterLabel>
+            <translation>セールスフォースパッケージ</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Deployment Job Template --></label>
+        <name>copado__Deployment_Job_Template__c</name>
+        <relationshipLabel><!-- Pipelines (Deployment Job Template) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>チェックされている場合は、デプロイメントフローのステップに対するベストプラクティス検証が無効になります。</help>
+        <label><!-- Disable Validations --></label>
+        <name>copado__Disable_Validations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Copado DX --></label>
+        <name>copado__Enable_Copado_DX__c</name>
+    </fields>
+    <fields>
+        <help>チェックを外すと、Copadoはプロモーション実行中に、自動でのコンフリクト解決を適用しなくなります。ユーザーはプロモーション毎に、コンフリクトが発生した場合にはマニュアルで解決する必要があります</help>
+        <label><!-- Enable Smart Conflict Resolution --></label>
+        <name>copado__Enable_Smart_Conflict_Resolution__c</name>
+    </fields>
+    <fields>
+        <help>チェックされている場合、環境名はデプロイメントフローステップで対応するブランチと同じでなければなりません。</help>
+        <label><!-- Enforce branch/env naming convention --></label>
+        <name>copado__Equal_Branch_Environment_Name__c</name>
+    </fields>
+    <fields>
+        <help>選択したメタデータタイプで見つかったコンフリクトは、ユーザーストーリーブランチをプロモーションブランチにマージする際に、Copadoによって自動的には解決されません。このコンフリクトは、手動で解決して下さい。</help>
+        <label><!-- Exclude From Auto Resolve --></label>
+        <name>copado__Exclude_From_Auto_Resolve__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flow Step Coordinates --></label>
+        <name>copado__Flow_Step_Coordinates__c</name>
+    </fields>
+    <fields>
+        <help>デプロイメントフローにリンクされたGitリポジトリ。デプロイメントフローのステップのすべてのブランチは、このGitリポジトリに存在する必要があります。</help>
+        <label><!-- Git Repository --></label>
+        <name>copado__Git_Repository__c</name>
+        <relationshipLabel><!-- Pipelines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>ブランチ管理の詳細画面で非表示にするタブ</help>
+        <label><!-- Hide Tabs --></label>
+        <name>copado__Hide_Tabs__c</name>
+        <picklistValues>
+            <masterLabel>Auto Resolved Conflicts</masterLabel>
+            <translation>自動解決されたコンフリクト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commits Ahead</masterLabel>
+            <translation>コミット（Ahead）</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commits Behind</masterLabel>
+            <translation><!-- Commits Behind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance Scan Results</masterLabel>
+            <translation>コンプライアンススキャン結果</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployment Error</masterLabel>
+            <translation>デプロイメントエラー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Differences</masterLabel>
+            <translation>ファイル差分</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merged Files</masterLabel>
+            <translation>マージされたファイル</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selenium Test Groups</masterLabel>
+            <translation>Seleniumテストグループ</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>選択したGitリポジトリのメインブランチ（例えばDev1）。</help>
+        <label><!-- Main Branch --></label>
+        <name>copado__Main_Branch__c</name>
+    </fields>
+    <fields>
+        <help>ユーザーストーリーのプロモーションとバックプロモーションを実行するパイプラインマネジャーへののリンク</help>
+        <label><!-- Manage Releases --></label>
+        <name>copado__Manage_Branches__c</name>
+    </fields>
+    <fields>
+        <help>自動解決の際に、セマンティックエラーによりコンフリクトしたファイルをマージできない場合、デフォルトでファイル全体が上書きされます。コンフリクトしている行だけを上書きし、マージ可能な行をマージすることもできます。Copado では &quot;Theirs&quot; という Gitマージ方法を採用しています。</help>
+        <label><!-- Auto Resolve Conflict Strategy --></label>
+        <name>copado__Merge_Strategy__c</name>
+        <picklistValues>
+            <masterLabel>Overwrite conflicting lines only</masterLabel>
+            <translation>コンフリクトラインのみを上書き</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overwrite file</masterLabel>
+            <translation>ファイルを上書き</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>このフィールドは、デプロイ時に選択したユーザーストーリーの順序を変更する場合のみ入力してください。
+この値が設定されている場合、関連するプロモーションレコードの作成時に並び順フィールドが事前に入力されます。(使用例: 名前の昇順)</help>
+        <label><!-- Order User Stories by --></label>
+        <name>copado__Order_by__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation>セールスフォース</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion Job Template --></label>
+        <name>copado__Promotion_Job_Template__c</name>
+        <relationshipLabel><!-- Pipelines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>デプロイメントフローにリンクされた環境またはユーザーストーリーで実行されるたびに、静的コード解析の設定が使用されます。</help>
+        <label><!-- Static Code Analysis Settings --></label>
+        <name>copado__Static_Code_Analysis_Settings__c</name>
+        <relationshipLabel><!-- Pipelines --></relationshipLabel>
+    </fields>
+    <nameFieldLabel><!-- Pipeline Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- A pipeline cannot have the same job template for Commit, Promote and Deploy. --></errorMessage>
+        <name>copado__Unique_Job_Template</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Find_Replace_Rule_Editor --></label>
+        <name>copado__Find_Replace_Rule_Editor</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Branches --></label>
+        <name>copado__Manage_Branches</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Environment_Variables --></label>
+        <name>copado__Manage_Environment_Variables</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Regression_Tests --></label>
+        <name>copado__Manage_Regression_Tests</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pipeline_Wizard --></label>
+        <name>copado__Pipeline_Wizard</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Select_Main_Branch --></label>
+        <name>copado__Select_Main_Branch</name>
+    </webLinks>
+</CustomObjectTranslation>

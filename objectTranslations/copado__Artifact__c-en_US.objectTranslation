@@ -283,7 +283,7 @@ The credential where the unmanaged package is created from. --></help>
         <name>copado__Git_Artifact</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- Salesforce unlocked, First Generation Package or Second-Generation Package as a package --></description>
+        <description><!-- Salesforce Unlocked and Second-Generation Managed Package --></description>
         <label><!-- Salesforce Package --></label>
         <name>copado__Package_Artifact</name>
     </recordTypes>

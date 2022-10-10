@@ -78,6 +78,12 @@
                 <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>copado:jobStepFunctionChangeAlert</componentName>
+                <identifier>c_jobStepFunctionChangeAlert1</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -121,12 +127,6 @@
                 <fieldItem>Record.copado__Resource_Observations__c</fieldItem>
                 <identifier>RecordResource_Observations_cField1</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 AND 2</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.copado__Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Function</rightValue>
-                    </criteria>
                     <criteria>
                         <leftValue>{!Record.copado__UserStory__r.Name}</leftValue>
                         <operator>EQUAL</operator>

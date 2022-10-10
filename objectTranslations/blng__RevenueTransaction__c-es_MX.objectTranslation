@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transacción de ingresos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transacciones de ingresos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>blng__Contract__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Búsqueda en la nota de crédito asociada con esta programación de ingresos.</help>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Búsqueda en la nota de débito asociada con esta programación de ingresos.</help>
+        <label><!-- Debit Note Line --></label>
+        <name>blng__DebitNoteLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Saldo de ingresos aplazados después de reconocer ingresos para este periodo.</help>
+        <label><!-- Deferred Balance --></label>
+        <name>blng__DeferredBalance__c</name>
+    </fields>
+    <fields>
+        <help>Búsqueda en la partida de facturas asociada con esta programación de ingresos.</help>
+        <label><!-- Invoice Line --></label>
+        <name>blng__InvoiceLine__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nombre de la entidad legal asociada con esta transacción de ingresos.</help>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Búsqueda en el producto de pedido asociado con esta programación de ingresos.</help>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Hace referencia al periodo de finanzas original definido en la programación de ingresos.</help>
+        <label><!-- Original Finance Period --></label>
+        <name>blng__OriginalFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions (Original Finance Period) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Suma de todas las transacciones anteriores que utilizan esta programación de ingresos.</help>
+        <label><!-- Previously Recognized Revenue --></label>
+        <name>blng__PreviouslyRecognizedRevenue__c</name>
+    </fields>
+    <fields>
+        <help>Importe de los ingresos que hay que reconocer en este periodo.</help>
+        <label><!-- Revenue Amount --></label>
+        <name>blng__RevenueAmount__c</name>
+    </fields>
+    <fields>
+        <help>Hace referencia al método de distribución seleccionado en la programación de ingresos. Describe cómo se propagan los ingresos durante un periodo de tiempo establecido, todo de una vez o un periodo de tiempo ingresado manualmente.</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <name>blng__RevenueDistributionMethod__c</name>
+    </fields>
+    <fields>
+        <help>Hace referencia al libro de finanzas seleccionado en la programación de ingresos.</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+    </fields>
+    <fields>
+        <label><!-- RevenueFinancePeriodUniqueId --></label>
+        <name>blng__RevenueFinancePeriodUniqueId__c</name>
+    </fields>
+    <fields>
+        <help>Hace referencia al periodo de finanzas seleccionado en la programación de ingresos.</help>
+        <label><!-- Revenue Finance Period --></label>
+        <name>blng__RevenueFinancePeriod__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La regla de libro mayor de reconocimiento de ingresos seleccionada en la programación de ingresos.</help>
+        <label><!-- Revenue Recognition GL Rule --></label>
+        <name>blng__RevenueRecognitionGLRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Tratamiento de libro mayor de reconocimiento de ingresos</help>
+        <label><!-- Revenue Recognition GL Treatment --></label>
+        <name>blng__RevenueRecognitionGLTreatment__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La política de reconocimiento de ingresos seleccionada en la programación de ingresos y que se utiliza para calcular esta transacción.</help>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- RevenueTransactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Hace referencia al tratamiento de reconocimiento de ingresos seleccionado en la programación de ingresos que se utiliza para calcular esta transacción.</help>
+        <label><!-- Revenue Recognition Treatment --></label>
+        <name>blng__RevenueRecognitionTreatment__c</name>
+    </fields>
+    <fields>
+        <help>Programación de ingresos empleada para esta transacción</help>
+        <label><!-- Revenue Schedule --></label>
+        <name>blng__RevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Seleccione si estos ingresos se reconocen ahora o se aplazan hasta más adelante.</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Period Start Date --></label>
+        <name>blng__SystemPeriodStartDate__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre</nameFieldLabel>
+</CustomObjectTranslation>

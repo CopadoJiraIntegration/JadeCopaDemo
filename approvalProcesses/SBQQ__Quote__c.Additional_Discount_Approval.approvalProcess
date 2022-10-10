@@ -71,7 +71,7 @@
         <allowDelegate>false</allowDelegate>
         <assignedApprover>
             <approver>
-                <name>analytics@cpqdemo.com</name>
+                <name>raj.adapa@jadeglobal.com.jgcpq</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>

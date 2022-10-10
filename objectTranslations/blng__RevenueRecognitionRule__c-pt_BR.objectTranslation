@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Regra de reconhecimento de receita</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Regras de reconhecimento de receita</value>
+    </caseValues>
+    <fields>
+        <help>Para desativar a Regra de reconhecimento de receita, desmarque a caixa de seleção. Isso não afetará as transações pendentes ou antigas referentes a esta regra.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Revenue Schedule? --></label>
+        <name>blng__CreateRevenueSchedule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome</nameFieldLabel>
+    <webLinks>
+        <label><!-- ValidateRevenueRecognitionTreatments --></label>
+        <name>blng__ValidateRevenueRecognitionTreatments</name>
+    </webLinks>
+</CustomObjectTranslation>

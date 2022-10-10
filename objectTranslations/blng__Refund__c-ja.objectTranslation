@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>返金</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RefundFieldset --></label>
+        <name>blng__RefundFieldset</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この返金のために外部システムで発行された小切手への参照</help>
+        <label><!-- Check Number --></label>
+        <name>blng__CheckNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>支払ゲートウェイでこの返金を識別するために使用されるトランザクション ID</help>
+        <label><!-- Payment Gateway Transaction ID --></label>
+        <name>blng__PaymentGatewayTransactionID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Date --></label>
+        <name>blng__RefundDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Description --></label>
+        <name>blng__RefundDescription__c</name>
+    </fields>
+    <fields>
+        <help>[失敗] の状況は、返金品目を作成できなかったことを意味します。システム設定を確認してください。</help>
+        <label><!-- Refund Line Creation Status --></label>
+        <name>blng__RefundLineCreationStatus__c</name>
+    </fields>
+    <fields>
+        <help>[外部] モードは外部システムで作成された返金を表し、[電子] は Salesforce によって処理される返金を表します。</help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </fields>
+    <fields>
+        <help>この支払方法は、支払処理で使用できるクレジットカード情報または銀行情報を表します。</help>
+        <label><!-- Refund Payment Method --></label>
+        <name>blng__RefundPaymentMethod__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Refund Type --></label>
+        <name>blng__RefundType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunded from Credit Note Lines --></label>
+        <name>blng__RefundedfromCreditNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunded from Payments --></label>
+        <name>blng__RefundedfromPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <nameFieldLabel>返金番号</nameFieldLabel>
+</CustomObjectTranslation>

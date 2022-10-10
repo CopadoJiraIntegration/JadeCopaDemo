@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Selenium Test Result --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Batch No. --></label>
+        <name>copado__Batch_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Elapsed Time (seconds) --></label>
+        <name>copado__Elapsed_Time_Seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>copado__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result URL --></label>
+        <name>copado__Result_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selenium Test Run --></label>
+        <name>copado__Selenium_Test_Run__c</name>
+        <relationshipLabel><!-- Selenium Test Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Selenium Test Suite --></label>
+        <name>copado__Selenium_Test_Suite__c</name>
+        <relationshipLabel><!-- Selenium Test Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed successfully</masterLabel>
+            <translation>正常に完了しました</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed with errors</masterLabel>
+            <translation>エラーありで完了しました。</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>進行中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provider Failure</masterLabel>
+            <translation>プロバイダー失敗</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation><!-- Queued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starting</masterLabel>
+            <translation>開始</translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel><!-- ID --></nameFieldLabel>
+</CustomObjectTranslation>

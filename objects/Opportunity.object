@@ -227,6 +227,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>All_Opportunity_Score__c</fullName>
+        <externalId>false</externalId>
+        <isAIPredictionField>true</isAIPredictionField>
+        <label>All Opportunity Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Amount</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -671,7 +683,9 @@
         <columns>OPPORTUNITY.AMOUNT</columns>
         <columns>OPPORTUNITY.CLOSE_DATE</columns>
         <columns>OPPORTUNITY.RECORDTYPE</columns>
+        <columns>TOP_INSIGHT</columns>
         <columns>OPPORTUNITY_SCORE</columns>
+        <columns>All_Opportunity_Score__c</columns>
         <columns>OPPORTUNITY.STAGE_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>OPPORTUNITY.CREATED_DATE</columns>

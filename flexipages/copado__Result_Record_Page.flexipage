@@ -332,6 +332,20 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>locationId</name>
+                    <value>AQF.Result.Viewer</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>requiredInformation</name>
+                    <value>Test Tool</value>
+                </componentInstanceProperties>
+                <componentName>copado:dynamicUISectionContainer</componentName>
+                <identifier>c_dynamicUISectionContainer2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-1579e905-03d5-43e0-850e-6f9ce7d68e16</value>
                 </componentInstanceProperties>
@@ -373,12 +387,28 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <componentName>copado:resultViewerPublishMessage</componentName>
+                <identifier>c_resultViewerPublishMessage</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>force:recordDetailPanelMobile</componentName>
                 <identifier>force_recordDetailPanelMobile</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
         <name>detailTabContent</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>copado:resultLogVisualizer</componentName>
+                <identifier>c_resultLogVisualizer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-c34c6fb7-1bf3-4107-9f74-4f0868a67169</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -421,6 +451,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>customTab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-c34c6fb7-1bf3-4107-9f74-4f0868a67169</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Logs</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

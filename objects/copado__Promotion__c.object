@@ -978,7 +978,7 @@
         <height>600</height>
         <isResizable>true</isResizable>
         <linkType>page</linkType>
-        <masterLabel>Rollback (beta)</masterLabel>
+        <masterLabel>Rollback</masterLabel>
         <openType>newWindow</openType>
         <page>copado__RollbackWizard</page>
         <position>none</position>

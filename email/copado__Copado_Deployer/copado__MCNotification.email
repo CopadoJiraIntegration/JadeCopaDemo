@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="copado.Notification" recipientType="User" >
+    <messaging:htmlEmailBody >
+        <c:MCNotificationTemplate />
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

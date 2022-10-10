@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Quality Gate Rule Condition Record Page</description>
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
@@ -45,7 +46,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>dismissible</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>message</name>
@@ -66,6 +67,7 @@
                 </visibilityRule>
             </componentInstance>
         </itemInstances>
+        <mode>Replace</mode>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -78,12 +80,12 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
                 <identifier>RecordNameField1</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.CreatedBy.Username}</leftValue>
-                        <operator>NE</operator>
-                    </criteria>
-                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Extension_Configuration__c</fieldItem>
+                <identifier>RecordExtension_Configuration_cField1</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-d097369a-33e6-4be3-bbcb-e2838168a331</name>
@@ -130,14 +132,24 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.copado__Pipeline__c</fieldItem>
+                <identifier>RecordPipeline_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
                 <fieldItem>Record.copado__Platform__c</fieldItem>
                 <identifier>RecordPlatform_cField1</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.copado__Filter_Criteria__c</fieldItem>
-                <identifier>RecordFilter_Criteria_cField1</identifier>
+                <fieldItem>Record.copado__Tests_From__c</fieldItem>
+                <identifier>RecordTests_From_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-adf3ae84-3419-4471-9933-9aad5e3c7cc8</name>
@@ -146,12 +158,8 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Pipeline__c</fieldItem>
-                <identifier>RecordPipeline_cField1</identifier>
+                <fieldItem>Record.copado__Stage__c</fieldItem>
+                <identifier>RecordStage_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -189,44 +197,6 @@
             </componentInstance>
         </itemInstances>
         <name>Facet-36225cb7-77ee-44b4-a16d-922f6a18d013</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.copado__AcceptanceCriteria__c</fieldItem>
-                <identifier>RecordAcceptanceCriteria_cField1</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-9abcd26e-fde6-47fe-962f-b27986999244</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <name>Facet-3c78c129-7ebf-4413-9f92-809c65fb439a</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-9abcd26e-fde6-47fe-962f-b27986999244</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column7</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-3c78c129-7ebf-4413-9f92-809c65fb439a</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column8</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-43a84acb-8e88-417b-95f0-8dcadb8d0577</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -304,7 +274,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Evaluation Scope</value>
+                    <value>Scope</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection3</identifier>
@@ -312,16 +282,8 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-43a84acb-8e88-417b-95f0-8dcadb8d0577</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Pass Requirement</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection4</identifier>
+                <componentName>copado:qualityGatesConditionFilterContainer</componentName>
+                <identifier>c_qualityGatesConditionFilterContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -336,15 +298,32 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection2</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.CreatedBy.Username}</leftValue>
-                        <operator>NE</operator>
-                    </criteria>
-                </visibilityRule>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>force:recordDetailPanelMobile</componentName>
+                <identifier>force_recordDetailPanelMobile1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
         <name>detailTabContent</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>copado:qgrcAcceptanceCriteria</componentName>
+                <identifier>c_qgrcAcceptanceCriteria</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>copado:qgrcTestToolPublishMessage</componentName>
+                <identifier>c_qgrcTestToolPublishMessage</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-f46c7fac-d5d5-4976-a758-a203b824c9a9</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -366,6 +345,21 @@
                 <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-f46c7fac-d5d5-4976-a758-a203b824c9a9</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Acceptance Criteria</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
         <name>maintabs</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -380,13 +374,15 @@
                 <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
+        <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Quality Gate Rule Condition Record Page</masterLabel>
+    <parentFlexiPage>force__Default_rec_simple</parentFlexiPage>
     <sobjectType>copado__Quality_Gate_Rule_Condition__c</sobjectType>
     <template>
-        <name>flexipage:recordHomeSingleColTemplateDesktop</name>
+        <name>flexipage:recordHomeSimpleViewTemplate</name>
     </template>
     <type>RecordPage</type>
 </FlexiPage>

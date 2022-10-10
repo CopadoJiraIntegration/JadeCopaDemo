@@ -203,7 +203,7 @@
     </fields>
     <fields>
         <help><!-- If checked, this user story will not be included in the count of user stories ahead and behind. --></help>
-        <label><!-- Exclude From CBM --></label>
+        <label><!-- Exclude from Pipelines --></label>
         <name>copado__Exclude_From_CBM__c</name>
     </fields>
     <fields>
@@ -720,69 +720,49 @@
         <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Approval</masterLabel>
+            <translation><!-- Awaiting Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Backburner</masterLabel>
+            <translation><!-- Backburner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Backlog</masterLabel>
+            <translation><!-- Backlog --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Cancelled</masterLabel>
             <translation><!-- Cancelled --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Developer Assigned</masterLabel>
-            <translation><!-- Developer Assigned --></translation>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Development Complete</masterLabel>
-            <translation><!-- Development Complete --></translation>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Development In Progress</masterLabel>
-            <translation><!-- Development In Progress --></translation>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Grooming</masterLabel>
-            <translation><!-- Grooming --></translation>
+            <masterLabel>Ready for testing</masterLabel>
+            <translation><!-- Ready for testing --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Grooming Complete</masterLabel>
-            <translation><!-- Grooming Complete --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Production Released</masterLabel>
-            <translation><!-- Production Released --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>QA Complete</masterLabel>
-            <translation><!-- QA Complete --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>QA In Progress</masterLabel>
-            <translation><!-- QA In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Production</masterLabel>
-            <translation><!-- Ready for Production --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for QA</masterLabel>
-            <translation><!-- Ready for QA --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for UAT</masterLabel>
-            <translation><!-- Ready for UAT --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Requirements Verified</masterLabel>
-            <translation><!-- Requirements Verified --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>UAT Complete</masterLabel>
-            <translation><!-- UAT Complete --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>UAT In Progress</masterLabel>
-            <translation><!-- UAT In Progress --></translation>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
         </picklistValues>
     </fields>
     <fields>
         <help><!-- If checked, the User Story will not be indexed for Copado&apos;s Overlap Awareness. --></help>
-        <label><!-- Stop Indexing Metadata --></label>
+        <label><!-- Exclude from Overlap Awareness --></label>
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>

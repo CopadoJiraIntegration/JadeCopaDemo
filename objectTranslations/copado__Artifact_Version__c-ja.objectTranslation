@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Package Version --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Package --></label>
+        <name>copado__Artifact__c</name>
+        <relationshipLabel><!-- Package Versions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>パッケージのバージョンのブランチです。パッケージ版の内容は、指定されたリポジトリのこのブランチに格納されます。リポジトリ情報には、親アーティファクトのレコードからも辿り着くこともできます。</help>
+        <label><!-- Branch --></label>
+        <name>copado__Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data JSON --></label>
+        <name>copado__Data_JSON__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition File --></label>
+        <name>copado__DefinitionFile__c</name>
+    </fields>
+    <fields>
+        <help>パッケージバージョンはベータ版として作成され、リリースのためにプロモートすることができます。バージョンがリリースされると、このチェックボックスにチェックが入ります。</help>
+        <label><!-- Is released --></label>
+        <name>copado__Is_released__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Job Execution Id --></label>
+        <name>copado__LastJobExecutionId__c</name>
+    </fields>
+    <fields>
+        <help>パッケージバージョンIDは、パッケージバージョンの指定や更新の際に利用されます。</help>
+        <label><!-- Package Version Id --></label>
+        <name>copado__Package_Version_Id__c</name>
+    </fields>
+    <fields>
+        <help>このパッケージを本番環境にインストールするには、このURLを使用してください。</help>
+        <label><!-- Production Installation URL --></label>
+        <name>copado__Production_Installation_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Status --></label>
+        <name>copado__Release_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>copado__Release__c</name>
+        <relationshipLabel><!-- Package Versions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>このパッケージをサンドボックス環境にインストールするには、このURLを使用してください。</help>
+        <label><!-- Sandbox Installation URL --></label>
+        <name>copado__Sandbox_Installation_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation>キャンセル済</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation>ロック中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>開く</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>セールスフォース環境にパッケージをインストールするには、インストールURLはサブスクライバーIDを必要とします。インストールURLをご参照ください。</help>
+        <label><!-- Subscriber Version Id --></label>
+        <name>copado__Subscriber_Version_Id__c</name>
+    </fields>
+    <fields>
+        <help>パッケージのバージョンのタグです。パッケージバージョンの内容は、指定されたリポジトリのこのタグに格納されます。タグはバージョン番号ごとに作成されます。同じバージョン番号のバージョンは、互いに上書きされる可能性がありますので、バージョン番号は一意に保つようにしてください。</help>
+        <label><!-- Tag --></label>
+        <name>copado__Tag__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>copado__User_Story__c</name>
+        <relationshipLabel><!-- Bundle Versions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>パッケージバージョンの説明</help>
+        <label><!-- Version Description --></label>
+        <name>copado__Version_Description__c</name>
+    </fields>
+    <fields>
+        <help>バージョン作成中にユーザーによって入力されたバージョンの名前</help>
+        <label><!-- Version Name --></label>
+        <name>copado__Version_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>copado__Version__c</name>
+    </fields>
+    <fields>
+        <help>パッケージバージョンのバージョン番号。 major.minor.patch.buildフォーマットでなければなりません。</help>
+        <label><!-- Version number --></label>
+        <name>copado__Version_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- View In Git --></label>
+        <name>copado__View_In_Git__c</name>
+    </fields>
+    <nameFieldLabel><!-- Package Version Name --></nameFieldLabel>
+    <webLinks>
+        <label><!-- Merge_Version --></label>
+        <name>copado__Merge_Version</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Promote_Beta_to_Released --></label>
+        <name>copado__Promote_Beta_to_Released</name>
+    </webLinks>
+</CustomObjectTranslation>

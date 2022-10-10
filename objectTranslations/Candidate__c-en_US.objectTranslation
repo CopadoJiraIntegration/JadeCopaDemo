@@ -8,5 +8,17 @@
         <plural>true</plural>
         <value>Candidates</value>
     </caseValues>
+    <fields>
+        <label><!-- AGE --></label>
+        <name>AGE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age (with months) --></label>
+        <name>Age_with_months__c</name>
+    </fields>
+    <fields>
+        <label><!-- DOB --></label>
+        <name>DOB__c</name>
+    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

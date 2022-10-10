@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <help><!-- If ticked, test records created in the Test object or as a quality gate are automatically marked as Ready to Run. No manual configuration is required before their execution. --></help>
+        <label><!-- Automate Test Readiness --></label>
+        <name>copado__Automate_Test_Readiness__c</name>
+    </fields>
+    <fields>
         <label><!-- Job Template --></label>
         <name>copado__JobTemplate__c</name>
     </fields>
     <fields>
         <label><!-- Test Type --></label>
         <name>copado__TestType__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of the apex class that validates if the test configuration is complete and ready to run. This validation is triggered when a user tries to mark the test as Ready to Run. If the validation fails, the test cannot be marked as Ready To Run until the user completes the missing configuration. The apex class must inherit the interface with name “TestReadinessInterface”. --></help>
+        <label><!-- Test Readiness Logic --></label>
+        <name>copado__Test_Readiness_Logic__c</name>
     </fields>
 </CustomObjectTranslation>

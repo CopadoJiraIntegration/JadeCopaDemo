@@ -179,6 +179,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__CreditSyncStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An internal field to keep track of, if the function credit usage is synced</description>
+        <externalId>false</externalId>
+        <label>Credit Sync Status</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Custom_Function_Used_Credits__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>

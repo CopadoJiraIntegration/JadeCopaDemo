@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entité juridique</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entités juridiques</value>
+    </caseValues>
+    <fields>
+        <help>Pour désactiver cette entité juridique, désélectionnez la case. Les transactions ou attributions
+        existantes ou passées ne sont pas affectées.</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>Nom de la ville</help>
+        <label><!-- City --></label>
+        <name>blng__City__c</name>
+    </fields>
+    <fields>
+        <help>Nom du pays</help>
+        <label><!-- Country --></label>
+        <name>blng__Country__c</name>
+    </fields>
+    <fields>
+        <help>Nom de la région</help>
+        <label><!-- County --></label>
+        <name>blng__County__c</name>
+    </fields>
+    <fields>
+        <help>Système généré. Un numéro unique pour cet enregistrement d&apos;entité juridique.</help>
+        <label><!-- Legal Entity Number --></label>
+        <name>blng__LegalEntityNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Nom de l’état</help>
+        <label><!-- State --></label>
+        <name>blng__State__c</name>
+    </fields>
+    <fields>
+        <help>Adresse de rue principale</help>
+        <label><!-- Street 1 --></label>
+        <name>blng__Street1__c</name>
+    </fields>
+    <fields>
+        <help>Rue, suite.</help>
+        <label><!-- Street 2 --></label>
+        <name>blng__Street2__c</name>
+    </fields>
+    <fields>
+        <help>Code postal</help>
+        <label><!-- Zip / Postal Code --></label>
+        <name>blng__ZipPostalCode__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de l’entité juridique</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Método de distribución de ingresos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Métodos de distribución de ingresos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione cómo se reconocerán los ingresos: diariamente, mensualmente o todo de una vez</help>
+        <label><!-- Distribution Method --></label>
+        <name>blng__DistributionMethod__c</name>
+    </fields>
+    <fields>
+        <help>Si el método de distribución está lleno, seleccione Manual para ingresar una fecha.</help>
+        <label><!-- Full Recognition Date --></label>
+        <name>blng__FullRecognitionDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Recognition  Proration --></label>
+        <name>blng__MonthlyRecognitionProration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>La fecha de finalización puede basarse en la fecha de finalización del objeto o ingresarse manualmente. Para el reconocimiento completo, establézcala en Ninguna.</help>
+        <label><!-- Revenue Schedule Term End Date --></label>
+        <name>blng__RevenueScheduleTermEndDate__c</name>
+    </fields>
+    <fields>
+        <help>La fecha de inicio puede basarse en la fecha de inicio del objeto o ingresarse manualmente. Para el reconocimiento completo, establézcala en Ninguna.</help>
+        <label><!-- Revenue Schedule Term Start Date --></label>
+        <name>blng__RevenueScheduleTermStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione si las transacciones de ingresos se crean automática o manualmente</help>
+        <label><!-- Revenue Transaction Creation Process --></label>
+        <name>blng__RevenueTransactionCreationProcess__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione qué tipo de registro hay que utilizar para la distribución de ingresos.</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nombre</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Cannot select Manual on Revenue Schedule Term Start Date or Revenue Schedule End Date when Revenue Transaction Creation Process is Automatic --></errorMessage>
+        <name>blng__CannotSpecifyRevDatesifTransTypeAutomati</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Schedule Start Date and End Date should only be manual when Revenue Transaction Creation Process is Manual --></errorMessage>
+        <name>blng__DontSpecifyDatesIfCreationProcessManual</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Full Recognition date cannot be Manual when Revenue Transaction Creation Process is Automatic --></errorMessage>
+        <name>blng__DontSpecifyFRDateIfCreationProcessManual</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Schedule Start Date and End Date should not be specified when distribution method is Full Recognition --></errorMessage>
+        <name>blng__DontSpecifyStartDateEndDateForFullRecogn</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Full Recognition Date should only be manual when Revenue Transaction Creation Process is Manual --></errorMessage>
+        <name>blng__FulRecDateCanbeManualifTransTypeManual</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Full Recognition Date cannot be selected when Distribution Method is other than Full Recognition --></errorMessage>
+        <name>blng__FullRecDateEmptyForDailyMonthlyMethod</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Full Recognition Date is required when Distribution Method = Full Recognition --></errorMessage>
+        <name>blng__FullRecognitionDateIsRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Schedule End Date should be aligned with Type --></errorMessage>
+        <name>blng__RevenueScheduleEndDateAlignWithType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Revenue Schedule Start Date should be aligned with Type --></errorMessage>
+        <name>blng__RevenueScheduleStartDateAlignWithType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Full Recognition Date End Date should align with Type. --></errorMessage>
+        <name>blng__TYPESHOULDALIGNFULLRECOGNITIONDATE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Term End Date is required when Distribution Method = Monthly / Daily --></errorMessage>
+        <name>blng__TermEndDateIsRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Term Start Date  is required when Distribution Method = Monthly / Daily --></errorMessage>
+        <name>blng__TermStartDateIsRequired</name>
+    </validationRules>
+</CustomObjectTranslation>

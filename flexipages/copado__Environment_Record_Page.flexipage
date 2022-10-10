@@ -17,13 +17,6 @@
                         </valueListItems>
                         <valueListItems>
                             <value>CustomButton.copado__Environment__c.copado__Find_Replace_Rule_Editor</value>
-                            <visibilityRule>
-                                <criteria>
-                                    <leftValue>{!Record.copado__Platform__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Salesforce</rightValue>
-                                </criteria>
-                            </visibilityRule>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -169,24 +162,6 @@
             <fieldInstance>
                 <fieldItem>Record.copado__Latest_Deployment__c</fieldItem>
                 <identifier>RecordLatest_Deployment_cField1</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.copado__Deployment_Job_Template_Override__c</fieldItem>
-                <identifier>RecordDeployment_Job_Template_Override__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.copado__Promotion_Job_Template_Override__c</fieldItem>
-                <identifier>RecordPromotion_Job_Template_Override__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.copado__CommitJobTemplateOverride__c</fieldItem>
-                <identifier>RecordCommitJobTemplateOverride__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-fa51b080-a562-4607-865f-b1a6e6760fdc</name>
@@ -337,31 +312,11 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>parentFieldApiName</name>
-                    <value>copado__Environment__c.Id</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListApiName</name>
-                    <value>copado__Environmental_Variables__r</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>rowsToDisplay</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>showActionBar</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer19</identifier>
+                <componentName>copado:environmentVariablesPipelineRelatedList</componentName>
+                <identifier>c_environmentVariablesPipelineRelatedList2</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-3413cde4-d6b3-49e4-973c-19b0d3161af2</name>
+        <name>Facet-3c23c3b1-8203-44c6-904b-e193ce1e4ac2</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -505,14 +460,14 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-3413cde4-d6b3-49e4-973c-19b0d3161af2</value>
+                    <value>Facet-3c23c3b1-8203-44c6-904b-e193ce1e4ac2</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
-                    <value>Environment Variables</value>
+                    <value>Environment Variable</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab6</identifier>
+                <identifier>flexipage_tab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1253,28 +1208,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>parentFieldApiName</name>
-                    <value>copado__Environment__c.Id</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListApiName</name>
-                    <value>copado__Environmental_Variables__r</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>rowsToDisplay</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>showActionBar</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer7</identifier>
+                <componentName>copado:environmentVariablesPipelineRelatedList</componentName>
+                <identifier>c_environmentVariablesPipelineRelatedList</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-91a34ad5-ed84-426f-856e-c88e4e8d4d25</name>

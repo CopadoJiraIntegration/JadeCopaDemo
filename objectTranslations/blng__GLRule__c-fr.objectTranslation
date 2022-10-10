@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Règle du Grand livre</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Règles du Grand livre</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de la règle du Grand livre</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

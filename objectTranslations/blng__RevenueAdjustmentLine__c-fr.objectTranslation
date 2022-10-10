@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ligne d&apos;ajustement de revenu</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lignes d&apos;ajustement de revenu</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Revenue Adjustments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Amount --></label>
+        <name>blng__AdjustmentAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Book --></label>
+        <name>blng__FinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>blng__FinancePeriod__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Adjustment Date --></label>
+        <name>blng__RevenueAdjustmentDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Adjustment --></label>
+        <name>blng__RevenueAdjustment__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Revenue Schedule --></label>
+        <name>blng__TargetRevenueSchedule__c</name>
+        <relationshipLabel><!-- Revenue Adjustment Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de ligne d’ajustement de revenu</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

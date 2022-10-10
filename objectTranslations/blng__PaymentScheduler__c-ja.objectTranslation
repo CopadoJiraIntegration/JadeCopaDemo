@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払スケジューラ</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include All Currencies --></label>
+        <name>blng__IncludeAllCurrencies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>blng__PaymentBatches__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Scheduler --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>blng__PaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date and Time --></label>
+        <name>blng__Startdateandtime__c</name>
+    </fields>
+    <fields>
+        <help>請求設定に定義されている目標日に基づいて、どの請求書を支払うかを判断します。目標日は、請求書発行日以降または支払期日にすることができます。</help>
+        <label><!-- Target Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day Of Month --></label>
+        <name>blng__TargetDayOfMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Day of Week --></label>
+        <name>blng__TargetDayofWeek__c</name>
+    </fields>
+    <fields>
+        <help>スケジュールの種別。
+1 回のみ - 支払スケジューラは 1 回のみ実行されます。
+毎日 - 支払スケジューラは毎日継続的に繰り返されます。</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <nameFieldLabel>支払スケジューラ名</nameFieldLabel>
+</CustomObjectTranslation>

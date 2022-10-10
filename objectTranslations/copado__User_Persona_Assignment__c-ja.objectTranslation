@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- User Persona Assignment --></value>
+    </caseValues>
+    <fields>
+        <help>手動で編集しないでください。このフィールドは、権限スケジューラを制御するために使用されます</help>
+        <label><!-- Apply Schedule --></label>
+        <name>copado__Apply_Schedule__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the Apex Job ID for the scheduled permission revokal --></help>
+        <label><!-- End Schedule ID --></label>
+        <name>copado__End_Schedule_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>copado__End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copado__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Persona --></label>
+        <name>copado__Persona__c</name>
+        <relationshipLabel><!-- User Persona Assignments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>これは予定された権限割り当てのためのApexジョブIDです。</help>
+        <label><!-- Start Schedule ID --></label>
+        <name>copado__Start_Schedule_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>copado__Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Message --></label>
+        <name>copado__Status_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation>承認済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation>下書き</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permissions Assigned</masterLabel>
+            <translation>割り当てられた権限</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permissions Revoked</masterLabel>
+            <translation>許可が取り消されました</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation>拒絶</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>copado__Type__c</name>
+        <picklistValues>
+            <masterLabel>Permanent</masterLabel>
+            <translation>永続</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary</masterLabel>
+            <translation>一時的</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>copado__User__c</name>
+        <relationshipLabel><!-- User Persona Assignments --></relationshipLabel>
+    </fields>
+    <nameFieldLabel><!-- User Persona Assignment Ref --></nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Cannot  specify End and Start time for Permanent permissions. --></errorMessage>
+        <name>copado__Permanent_no_Dates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Time cannot be after the End Time. --></errorMessage>
+        <name>copado__Start_End_date_illogicalness</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Time or End Time cannot be in the past. Please add a couple of minutes to related field. --></errorMessage>
+        <name>copado__Start_date_issue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Specify End and Start time for Temporary permissions. --></errorMessage>
+        <name>copado__Temporary_with_Dates</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Planificateur d&apos;instantané de solde</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planificateurs d&apos;instantané de solde</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date Time --></label>
+        <name>blng__StartDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom de planificateurs d’instantané de so</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

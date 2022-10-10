@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- To deactivate this legal entity, clear the checkbox. This won&apos;t affect past or existing
+        transactions or assignments. --></help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- City Name --></help>
+        <label><!-- City --></label>
+        <name>blng__City__c</name>
+    </fields>
+    <fields>
+        <help><!-- Country Name --></help>
+        <label><!-- Country --></label>
+        <name>blng__Country__c</name>
+    </fields>
+    <fields>
+        <help><!-- County Name --></help>
+        <label><!-- County --></label>
+        <name>blng__County__c</name>
+    </fields>
+    <fields>
+        <help><!-- System generated. A unique number for this Legal Entity record. --></help>
+        <label><!-- Legal Entity Number --></label>
+        <name>blng__LegalEntityNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- State Name --></help>
+        <label><!-- State --></label>
+        <name>blng__State__c</name>
+    </fields>
+    <fields>
+        <help><!-- Primary Street Address --></help>
+        <label><!-- Street 1 --></label>
+        <name>blng__Street1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Street address, continued. --></help>
+        <label><!-- Street 2 --></label>
+        <name>blng__Street2__c</name>
+    </fields>
+    <fields>
+        <help><!-- ZIP or Postal Code --></help>
+        <label><!-- Zip / Postal Code --></label>
+        <name>blng__ZipPostalCode__c</name>
+    </fields>
+</CustomObjectTranslation>

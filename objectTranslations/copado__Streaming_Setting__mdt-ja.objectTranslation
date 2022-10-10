@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Streaming Setting --></value>
+    </caseValues>
+    <fields>
+        <help>ストリーミングチャネル（PushTopic）の名前</help>
+        <label><!-- Channel Name --></label>
+        <name>copado__Channel_Name__c</name>
+    </fields>
+    <fields>
+        <help>有効にすると、指定したチャンネルのストリーミングがリアルタイムで追跡できます。</help>
+        <label><!-- Enabled --></label>
+        <name>copado__Enabled__c</name>
+    </fields>
+    <fields>
+        <help>指定されたチャンネルのストリーミングサービスは、タイムアウト（ミリ秒）に達したときに登録解除されます。</help>
+        <label><!-- Timeout --></label>
+        <name>copado__Timeout__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- To deactivate the Revenue Recognition Rule, clear the checkbox. This won’t affect pending or past
+        transactions that reference the rule. --></help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Revenue Schedule? --></label>
+        <name>blng__CreateRevenueSchedule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- ValidateRevenueRecognitionTreatments --></label>
+        <name>blng__ValidateRevenueRecognitionTreatments</name>
+    </webLinks>
+</CustomObjectTranslation>

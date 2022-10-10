@@ -76,16 +76,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>copado:testsManager</componentName>
-                <identifier>c_testsManager1</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-9d758379-e386-4d1c-a265-49834263d4f3</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
                 <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
                     <value>NONE</value>
@@ -118,20 +108,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>detailTab</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-9d758379-e386-4d1c-a265-49834263d4f3</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Tests</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

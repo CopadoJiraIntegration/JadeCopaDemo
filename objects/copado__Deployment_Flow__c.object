@@ -167,6 +167,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>copado__Apply_Connection_Behaviours_to_existing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this option if you want User Stories which already promoted in your Copado Pipeline to apply to the connection behaviours for back promotions which you create in Copado Continuous Delivery</inlineHelpText>
+        <label>Apply Connection Behaviors to All</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Block_Commits__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -232,6 +243,27 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Continuous_Delivery_Configuration_Json__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Continuous Delivery Configuration Json</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__Continuous_Delivery_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Continuous Delivery Enabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>copado__Copado_DX_Mode__c</fullName>

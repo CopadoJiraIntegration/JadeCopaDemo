@@ -60,7 +60,7 @@
         <label>Additional Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>copado__Test_Title__c</field>
             </layoutItems>
             <layoutItems>

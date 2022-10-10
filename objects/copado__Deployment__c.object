@@ -887,7 +887,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <externalId>false</externalId>
         <label>Source Credential</label>
         <lookupFilter>
-            <active>true</active>
+            <active>false</active>
             <filterItems>
                 <field>copado__Org__c.CreatedById</field>
                 <operation>equals</operation>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>収益認識処理</value>
+    </caseValues>
+    <fields>
+        <help>収益認識処理を無効化するには、このチェックボックスをオフにします。これは、帳簿を
+        参照している既存のトランザクションに影響しません。</help>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <help>均一金額を入力します</help>
+        <label><!-- Flat Amount --></label>
+        <name>blng__FlatAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>パーセント値を入力します</help>
+        <label><!-- Percentage --></label>
+        <name>blng__Percentage__c</name>
+    </fields>
+    <fields>
+        <help>この収益処理を他のすべての処理よりも前に実行する場合は 1 を入力し、2 番目に実行する場合は 2 を入力します。</help>
+        <label><!-- Processing Order --></label>
+        <name>blng__ProcessingOrder__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールを収益契約に関連付けるためのオプションを選択します。</help>
+        <label><!-- Revenue Agreement Association --></label>
+        <name>blng__RevenueAgreementAssociation__c</name>
+    </fields>
+    <fields>
+        <help>複数の期間に収益を割り当てるために使用する収益分配方法</help>
+        <label><!-- Revenue Distribution Method --></label>
+        <lookupFilter>
+            <errorMessage><!-- Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Activation&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot; --></errorMessage>
+            <informationalMessage><!-- Revenue Distribution Methods of Type &quot;Order&quot; can be selected for &quot;Order Posting&quot; and Type &quot;Invoice&quot; can be selected for &quot;Invoice Posting&quot; and same for &quot;Credit Note&quot;, &quot;Debit Note&quot; and &quot;Other&quot; --></informationalMessage>
+        </lookupFilter>
+        <name>blng__RevenueDistributionMethod__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Distribution Method) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>財務帳簿のルックアップ</help>
+        <label><!-- Revenue Finance Book --></label>
+        <name>blng__RevenueFinanceBook__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Finance Book) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>総勘定元帳ルールのルックアップ</help>
+        <label><!-- Revenue GL Rule --></label>
+        <name>blng__RevenueGLRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益の法人のルックアップ</help>
+        <label><!-- Revenue Legal Entity --></label>
+        <name>blng__RevenueLegalEntity__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments (Revenue Legal Entity) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognition Rule --></label>
+        <name>blng__RevenueRecognitionRule__c</name>
+        <relationshipLabel><!-- Revenue Recognition Treatments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この収益スケジュール内で認識する収益の種別を選択します</help>
+        <label><!-- Revenue Schedule Amount --></label>
+        <name>blng__RevenueScheduleAmount__c</name>
+    </fields>
+    <fields>
+        <help>収益スケジュールの作成をトリガするイベントの種別</help>
+        <label><!-- Revenue Schedule Creation Action --></label>
+        <name>blng__RevenueScheduleCreationAction__c</name>
+    </fields>
+    <fields>
+        <help>金額の計算方法 (全体に対する割合、均一金額、または他の処理が実行された後の残り)。</help>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validate Result --></label>
+        <name>blng__ValidateResult__c</name>
+    </fields>
+    <nameFieldLabel>名前</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- If Revenue Schedule Creation is not Order Product Activation, Revenue Agreement Association must be “Not Applicable” or “Manual” --></errorMessage>
+        <name>blng__AGREEMENT_ASSOC_VALIDONLYFOROPACTIVATION</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To set the revenue schedule amount to Booking Amount, first set the revenue schedule creation action to Order Product Activation. --></errorMessage>
+        <name>blng__Bookings_Amount_Only_If_Order_Activation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If type is &quot;Flat Amount&quot;, Flat Amount is mandatory to populate. --></errorMessage>
+        <name>blng__Flat_Amount_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Flat Amount Cannot be less than Zero --></errorMessage>
+        <name>blng__Flat_Amount_Value_more_than_zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Percentage Cannot be greater than 100 --></errorMessage>
+        <name>blng__PERCENTAGE_MUST_BE_LESS_THAN_HUNDRED</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If type is &quot;Percentage&quot;, Percentage is mandatory to populate. --></errorMessage>
+        <name>blng__Percentage_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Percentage must be greater than zero --></errorMessage>
+        <name>blng__Percentage_Value_more_than_zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Processing Order cannot be Negative --></errorMessage>
+        <name>blng__Processing_Order_Cannot_be_negative</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Configuración de impuestos --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Configuraciones de impuestos --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Class Name --></label>
+        <name>blng__ClassName__c</name>
+    </fields>
+    
+</CustomObjectTranslation>

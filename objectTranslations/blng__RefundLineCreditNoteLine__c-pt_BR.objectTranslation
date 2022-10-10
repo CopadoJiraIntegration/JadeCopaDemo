@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Linha de reembolso (Linha de nota de crédito)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Linhas de reembolso (Linha de nota de crédito)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Refund Line Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Refund Line Credit Note Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Note Line --></label>
+        <name>blng__CreditNoteLine__c</name>
+        <relationshipLabel><!-- Refund Lines (Credit Note Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Refund Lines (Credit Note Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Refund Lines (Credit Note Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Refund Lines (Credit Note Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund --></label>
+        <name>blng__Refund__c</name>
+        <relationshipLabel><!-- Refund Lines (Credit Note Line) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocated? --></label>
+        <name>blng__Unallocated__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Número da linha de reembolso</nameFieldLabel>
+</CustomObjectTranslation>

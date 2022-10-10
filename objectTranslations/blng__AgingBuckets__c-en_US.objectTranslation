@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bucket Number --></label>
+        <name>blng__BucketNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ending Days from Past Due --></label>
+        <name>blng__EndingDaysfromPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Days from Past Due --></label>
+        <name>blng__StartingDaysfromPastDue__c</name>
+    </fields>
+</CustomObjectTranslation>

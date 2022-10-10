@@ -154,6 +154,19 @@
     <enableSharing>false</enableSharing>
     <enableStreamingApi>false</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <description>This is show me logged in users First name and last name</description>
+        <externalId>false</externalId>
+        <formula>$User.Title &amp; &quot; &quot; &amp; $User.FirstName &amp; &quot; &quot; &amp;  $User.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Job Requisition</label>
     <listViews>
         <fullName>All</fullName>

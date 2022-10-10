@@ -20,6 +20,11 @@
         <name>copado__ExecutionSequence__c</name>
     </fields>
     <fields>
+        <label><!-- Extension Configuration --></label>
+        <name>copado__Extension_Configuration__c</name>
+        <relationshipLabel><!-- Quality Gate Rule Conditions --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- Define a filter criteria to evaluate the condition only when the specified files are present in the configured Copado Action --></help>
         <label><!-- Filter Criteria --></label>
         <name>copado__Filter_Criteria__c</name>
@@ -48,8 +53,31 @@
         <relationshipLabel><!-- Quality Gate Rule Conditions --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Stage where this Quality Gate Condition will be evaluated. If no Pipeline is defined, this Condition will apply to all Pipelines where this Stage is connected to. --></help>
+        <label><!-- Stage --></label>
+        <name>copado__Stage__c</name>
+        <relationshipLabel><!-- Quality Gate Rule Conditions --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Status --></label>
         <name>copado__Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select from where the tests to be executed as part of the Quality Gate are retrieved. --></help>
+        <label><!-- Tests From --></label>
+        <name>copado__Tests_From__c</name>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature</masterLabel>
+            <translation><!-- Feature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Story</masterLabel>
+            <translation><!-- User Story --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Tool --></label>

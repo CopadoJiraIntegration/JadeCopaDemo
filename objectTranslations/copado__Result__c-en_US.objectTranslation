@@ -6,6 +6,10 @@
         <name>copado__ApexCallback__c</name>
     </fields>
     <fields>
+        <label><!-- Credit Sync Status --></label>
+        <name>copado__CreditSyncStatus__c</name>
+    </fields>
+    <fields>
         <help><!-- Copado credits used in the execution of the function. --></help>
         <label><!-- Copado Credits Used --></label>
         <name>copado__Custom_Function_Used_Credits__c</name>

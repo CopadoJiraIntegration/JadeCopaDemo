@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>blng__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Code --></label>
+        <name>blng__TaxCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Tax Treatments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Integration --></label>
+        <name>blng__TaxIntegration__c</name>
+        <relationshipLabel><!-- Tax Treatments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Legal Entity --></label>
+        <name>blng__TaxLegalEntity__c</name>
+        <relationshipLabel><!-- Tax Treatments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Tax Treatments --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

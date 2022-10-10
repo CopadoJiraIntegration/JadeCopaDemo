@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Scheduled Job --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job ID --></label>
+        <name>copado__Apex_Job_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cron Expression --></label>
+        <name>copado__Cron_Expression__c</name>
+    </fields>
+    <fields>
+        <help>ジョブが実行されると、この日数より古いすべての実行を確認し、履歴レコードを削除します。</help>
+        <label><!-- Delete Runs after (days) --></label>
+        <name>copado__Delete_Runs_after_days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>copado__Message__c</name>
+    </fields>
+    <fields>
+        <help>このユーザーは、Copadoライセンスを割り当てられ、組織クレデンシャルを持ち、API キーが作成されている必要があります。このAPIキーはWebhooksに使用されます。</help>
+        <label><!-- Run as User --></label>
+        <name>copado__Run_as_User__c</name>
+        <relationshipLabel><!-- Scheduled Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Failure</masterLabel>
+            <translation>失敗</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation>成功</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Webhook URL --></label>
+        <name>copado__Webhook_URL__c</name>
+    </fields>
+    <nameFieldLabel><!-- Scheduled Job Name --></nameFieldLabel>
+</CustomObjectTranslation>

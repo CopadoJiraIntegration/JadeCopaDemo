@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Team --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>copado__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>copado__Department__c</name>
+        <picklistValues>
+            <masterLabel>Analytics</masterLabel>
+            <translation>分析</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capacity</masterLabel>
+            <translation>容量</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Core</masterLabel>
+            <translation>コア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Core Infrastructure</masterLabel>
+            <translation>インフラストラクチャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Center Automation</masterLabel>
+            <translation>データセンターの自動化</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry</masterLabel>
+            <translation>業界</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation>マーケティング</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matrix</masterLabel>
+            <translation>マトリックス</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation>モバイル</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network and Systems Platform</masterLabel>
+            <translation>ネットワークとシステムのプラットフォーム</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Path-To-Production</masterLabel>
+            <translation>本番環境へのパス</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform</masterLabel>
+            <translation>プラットホーム</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production Support</masterLabel>
+            <translation>プロダクションサポート</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Productivity</masterLabel>
+            <translation>生産性</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Programmatic UI</masterLabel>
+            <translation><!-- Programmatic UI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R&amp;D App Delivery</masterLabel>
+            <translation>R&amp;Dアプリデリバリー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reliability</masterLabel>
+            <translation>信頼性</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation>売上高</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation>セキュリティー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation>サービス</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shared Services</masterLabel>
+            <translation>共有サービス</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust</masterLabel>
+            <translation>信頼する</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sprint Wall FieldSet Name --></label>
+        <name>copado__Sprint_Wall_FieldSet_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vision --></label>
+        <name>copado__Vision__c</name>
+    </fields>
+    <nameFieldLabel><!-- Team Name --></nameFieldLabel>
+</CustomObjectTranslation>

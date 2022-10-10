@@ -49,12 +49,6 @@
                             <value>copado__Promotion__c.copado__Merge_Deploy</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Clone</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Delete</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>copado__Promotion__c.copado__ValidateChanges</value>
                             <visibilityRule>
                                 <booleanFilter>1 AND 2</booleanFilter>
@@ -83,6 +77,12 @@
                                     <rightValue>Completed</rightValue>
                                 </criteria>
                             </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Clone</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Delete</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -184,27 +184,6 @@
                 <identifier>RecordPlatform__cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Send_Deployment_Complete_email__c</fieldItem>
-                <identifier>RecordSend_Deployment_Complete_email__cField</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.copado__Project__r.Name}</leftValue>
-                        <operator>NE</operator>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.copado__Release__r.Name}</leftValue>
-                        <operator>NE</operator>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-f826e26f-69e5-4bcc-bc34-c3edb086ca5e</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -279,73 +258,21 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Exclude_From_Auto_Resolve__c</fieldItem>
-                <identifier>RecordExclude_From_Auto_Resolve__cField</identifier>
+                <fieldItem>Record.CreatedById</fieldItem>
+                <identifier>RecordCreatedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Create_Full_Profiles_Step__c</fieldItem>
-                <identifier>RecordCreate_Full_Profiles_Step__cField</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>EQUAL</operator>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-18a98155-3b56-4f1a-9355-5b09cd98c127</name>
+        <name>Facet-e54e5b2c-5bc1-4c80-bc2c-e45955e347bb</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Order_by__c</fieldItem>
-                <identifier>RecordOrder_by__cField</identifier>
+                <fieldItem>Record.LastModifiedById</fieldItem>
+                <identifier>RecordLastModifiedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Create_Full_Permission_Sets_Step__c</fieldItem>
-                <identifier>RecordCreate_Full_Permission_Sets_Step__cField</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>EQUAL</operator>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-c16f281b-07c3-42a1-9f38-9fc62f261aab</name>
+        <name>Facet-4b29e1cf-b4be-46ac-877b-27b61c05415b</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -353,23 +280,23 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-18a98155-3b56-4f1a-9355-5b09cd98c127</value>
+                    <value>Facet-e54e5b2c-5bc1-4c80-bc2c-e45955e347bb</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column3</identifier>
+                <identifier>flexipage_column5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-c16f281b-07c3-42a1-9f38-9fc62f261aab</value>
+                    <value>Facet-4b29e1cf-b4be-46ac-877b-27b61c05415b</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column4</identifier>
+                <identifier>flexipage_column6</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-f4b715da-f667-434e-8009-057b068f0ce3</name>
+        <name>Facet-44ce0c1f-d92f-40b0-be1b-cf8a63ba1afe</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -391,14 +318,14 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
-                    <value>Facet-f4b715da-f667-434e-8009-057b068f0ce3</value>
+                    <value>Facet-44ce0c1f-d92f-40b0-be1b-cf8a63ba1afe</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Advanced Information</value>
+                    <value>System Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection2</identifier>
+                <identifier>flexipage_fieldSection3</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-1253e9d0-da3d-434e-8680-59d0c46d1ff0</name>
@@ -505,6 +432,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>copado:testsManager</componentName>
+                <identifier>c_testsManager</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-81e1b4ed-1b80-45f0-8ce7-8c0bbffaec3f</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
                     <value>Facet-1253e9d0-da3d-434e-8680-59d0c46d1ff0</value>
@@ -587,6 +524,20 @@
                 <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-81e1b4ed-1b80-45f0-8ce7-8c0bbffaec3f</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Tests</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>Facet-458e50a3-4d51-42c8-b545-6edcb6a65234</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -623,8 +574,16 @@
                     <name>fieldApiName</name>
                     <value>Last_Promotion_Execution_Id__c</value>
                 </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>noJobMessage</name>
+                    <value>{!$Label.copado__Promotion_Job_Execution_Not_Started_Message}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>noJobTitle</name>
+                    <value>{!$Label.copado__Promotion_Job_Execution_Not_Started_Title}</value>
+                </componentInstanceProperties>
                 <componentName>copado:resultMonitor</componentName>
-                <identifier>resultMonitor</identifier>
+                <identifier>c_resultMonitor</identifier>
                 <visibilityRule>
                     <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
@@ -645,8 +604,16 @@
                     <name>fieldApiName</name>
                     <value>Last_Deployment_Execution_Id__c</value>
                 </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>noJobMessage</name>
+                    <value>{!$Label.copado__Deployment_Job_Execution_Not_Started_Message}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>noJobTitle</name>
+                    <value>{!$Label.copado__Deployment_Job_Execution_Not_Started_Title}</value>
+                </componentInstanceProperties>
                 <componentName>copado:resultMonitor</componentName>
-                <identifier>c_resultMonitor1</identifier>
+                <identifier>c_resultMonitor2</identifier>
                 <visibilityRule>
                     <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
@@ -659,6 +626,12 @@
                         <operator>NE</operator>
                     </criteria>
                 </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>copado:publishPromotionPlatformMessage</componentName>
+                <identifier>c_publishPromotionPlatformMessage1</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>

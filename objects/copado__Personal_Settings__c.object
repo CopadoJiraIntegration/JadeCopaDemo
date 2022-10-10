@@ -96,6 +96,20 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>copado__Minimum_Logging_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Minimum log level for copado processes. 0: TRACE, 1: DEBUG, 2: INFO, 3: WARN, 4: ERROR
+Temporarily lower this value to get better information in the Result Objects when troubleshooting/developing a Multi-Cloud solution</description>
+        <externalId>false</externalId>
+        <label>Minimum Logging Level</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
     <label>Personal Settings</label>
     <visibility>Public</visibility>
 </CustomObject>

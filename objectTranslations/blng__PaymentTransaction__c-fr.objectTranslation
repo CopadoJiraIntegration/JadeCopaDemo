@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction de paiement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transactions de paiement</value>
+    </caseValues>
+    <fields>
+        <label><!-- AVS Response Code --></label>
+        <name>blng__AVSResponseCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- AVS Zip --></label>
+        <name>blng__AVSZip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Payment Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authorization --></label>
+        <name>blng__Authorization__c</name>
+    </fields>
+    <fields>
+        <help>Le nom associé au compte en banque</help>
+        <label><!-- Bank Account Name --></label>
+        <name>blng__BankAccountName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Number --></label>
+        <name>blng__BankAccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Type --></label>
+        <name>blng__BankAccountType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Name --></label>
+        <name>blng__BankName__c</name>
+    </fields>
+    <fields>
+        <help>Le numéro de routage valide de la banque, qui est aussi appelé le code ABA</help>
+        <label><!-- Bank Routing Code --></label>
+        <name>blng__BankRoutingCode__c</name>
+    </fields>
+    <fields>
+        <help>CVV/CVV2 correspond ou pas</help>
+        <label><!-- Card Code Response --></label>
+        <name>blng__CardCodeResponse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Expiration Month --></label>
+        <name>blng__CardExpirationMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Expiration Year --></label>
+        <name>blng__CardExpirationYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Type --></label>
+        <name>blng__CardType__c</name>
+    </fields>
+    <fields>
+        <help>Message d’exception
+Lorsqu’une transaction est créée et que le paiement n&apos;est pas créé contre la facture</help>
+        <label><!-- Exception Message --></label>
+        <name>blng__ExceptionMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gateway Date --></label>
+        <name>blng__GatewayDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Gateway ID --></label>
+        <name>blng__GatewayID__c</name>
+    </fields>
+    <fields>
+        <help>La demande envoyée à la passerelle</help>
+        <label><!-- Gateway Request --></label>
+        <name>blng__GatewayRequest__c</name>
+    </fields>
+    <fields>
+        <help>La réponse reçue de la passerelle</help>
+        <label><!-- Gateway Response --></label>
+        <name>blng__GatewayResponse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gateway Status --></label>
+        <name>blng__GatewayStatus__c</name>
+    </fields>
+    <fields>
+        <help>Il détermine si la transaction a créé un paiement.
+Applicable uniquement aux transactions facturées.</help>
+        <label><!-- Payment Created --></label>
+        <name>blng__IsPaymentProcessedSuccessfully__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Payment Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Run --></label>
+        <name>blng__PaymentRun__c</name>
+        <relationshipLabel><!-- Payment Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reason Code --></label>
+        <name>blng__ReasonCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request - Credit Card Number --></label>
+        <name>blng__RequestCreditCardNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>blng__RequestInvoice__c</name>
+        <relationshipLabel><!-- Payment Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request - Transaction Type --></label>
+        <name>blng__RequestTransactionType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request - Type Of Payment --></label>
+        <name>blng__RequestTypeOfPayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Code --></label>
+        <name>blng__ResponseCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Message --></label>
+        <name>blng__ResponseMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Status --></label>
+        <name>blng__ResponseStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response --></label>
+        <name>blng__Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Transaction Id --></label>
+        <name>blng__SourceTransactionId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Transaction --></label>
+        <name>blng__Transaction__c</name>
+        <relationshipLabel><!-- Payment Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de la transaction de paiement</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Refund --></label>
+        <name>blng__Refund</name>
+    </webLinks>
+</CustomObjectTranslation>

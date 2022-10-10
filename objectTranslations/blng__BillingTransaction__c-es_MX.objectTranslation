@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transacción de facturación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transacciones de facturación</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount To Be Billed --></label>
+        <name>blng__AmountToBeBilled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Schedule --></label>
+        <name>blng__BillingSchedule__c</name>
+        <relationshipLabel><!-- Billing Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Target Date --></label>
+        <name>blng__BillingTargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculated Status --></label>
+        <name>blng__CalculatedStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Plan Line --></label>
+        <name>blng__InvoicePlanLine__c</name>
+        <relationshipLabel><!-- Billing Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Override Amount --></label>
+        <name>blng__OverrideAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Billing Target Date --></label>
+        <name>blng__OverrideBillingTargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Status --></label>
+        <name>blng__OverrideStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>blng__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Period End --></label>
+        <name>blng__ServicePeriodEnd__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Period Start --></label>
+        <name>blng__ServicePeriodStart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>blng__Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de transacción de facturación</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Environment --></value>
+    </caseValues>
+    <fields>
+        <help><!-- Select a Job Template to override the default Commit Job Template defined in the Pipeline --></help>
+        <label><!-- Commit Job Template Override --></label>
+        <name>copado__CommitJobTemplateOverride__c</name>
+        <relationshipLabel><!-- Environments (Commit Job Template Override) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Compliance Rule Group --></label>
+        <name>copado__Compliance_Rule_Group__c</name>
+        <relationshipLabel><!-- Environments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Compliance Scan Events --></label>
+        <name>copado__Compliance_Scan_Events__c</name>
+        <picklistValues>
+            <masterLabel>Commits</masterLabel>
+            <translation>コミット</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployments</masterLabel>
+            <translation>デプロイメント</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Compliance Status --></label>
+        <name>copado__Compliance_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incoming Connection Behavior --></label>
+        <name>copado__Connection_Behavior__c</name>
+        <relationshipLabel><!-- Environment Default Behavior --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Code Coverage --></label>
+        <name>copado__Current_Code_Coverage__c</name>
+    </fields>
+    <fields>
+        <help>現在の静的コード解析スコア</help>
+        <label><!-- Current SCA Score --></label>
+        <name>copado__Current_SCA_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deployment Job Template Override --></label>
+        <name>copado__Deployment_Job_Template_Override__c</name>
+        <relationshipLabel><!-- Environments (Deployment Job Template Override) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled --></help>
+        <label><!-- Enable Rollback --></label>
+        <name>copado__Enable_Rollback__c</name>
+    </fields>
+    <fields>
+        <help>有効にすると、バックプロモーションが完了し、宛先環境（To）でユーザーストーリで選択されたメタデータが含まれている場合、そのユーザーストーリーのメタデータレコードのステータスが「Back Promoted」に更新されます。</help>
+        <label><!-- Index Back Promotion Metadata --></label>
+        <name>copado__Index_Back_Promotion_metadata__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Compliance Scan Date --></label>
+        <name>copado__Last_Compliance_Scan_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Refresh Date --></label>
+        <name>copado__Last_Refresh_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Deployment Status --></label>
+        <name>copado__Latest_Deployment_Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation>キャンセル済</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed Successfully</masterLabel>
+            <translation>正常に完了しました</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed with Errors</masterLabel>
+            <translation>エラーありで完了しました。</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation>下書き</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation>進行中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merge Conflict</masterLabel>
+            <translation>マージコンフリクト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paused</masterLabel>
+            <translation>一時停止</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation>スケジュール</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Latest Deployment --></label>
+        <name>copado__Latest_Deployment__c</name>
+        <relationshipLabel><!-- Environments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>静的コード解析スコアの最大値</help>
+        <label><!-- Maximum SCA Score --></label>
+        <name>copado__Maximum_SCA_Score__c</name>
+    </fields>
+    <fields>
+        <help>ここで最小Apexテストカバー率を設定し、組織クレデンシャル詳細ページのApexテスト結果で利用されます。</help>
+        <label><!-- Minimum Apex Test Coverage --></label>
+        <name>copado__Minimum_Apex_Test_Coverage__c</name>
+    </fields>
+    <fields>
+        <help>マネージドパッケージを開発している場合、SeleniumテストスイートでApexコードの前/後バージョンを1つだけ書くのに役立ちます。Copadoは、&quot;{!NS}&quot;テキストをこの値に置き換えます。</help>
+        <label><!-- Namespace --></label>
+        <name>copado__Namespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org ID --></label>
+        <name>copado__Org_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation>セールスフォース</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>ターゲット組織のデフォルトクレデンシャルは常にチェックされています。オプションで、ユーザーがターゲット組織の組織クレデンシャルを持っていない場合のみ、デフォルトのクレデンシャルを選択することができます。</help>
+        <label><!-- Promotion Default Credential --></label>
+        <name>copado__Promotion_Default_Credential__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation>いつも</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only If User Has No Org Credential</masterLabel>
+            <translation>ユーザーが組織クレデンシャルを持っていない場合のみ</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion Job Template Override --></label>
+        <name>copado__Promotion_Job_Template_Override__c</name>
+        <relationshipLabel><!-- Environments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>選択した場合、「すべてのローカルテストを実行」がこの環境にデプロイする際に適用されます。</help>
+        <label><!-- Run all local tests --></label>
+        <name>copado__Run_all_tests__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>copado__Type__c</name>
+        <picklistValues>
+            <masterLabel>Production/Developer</masterLabel>
+            <translation><!-- Production/Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sandbox</masterLabel>
+            <translation>サンドボックス</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scratch Org</masterLabel>
+            <translation>スクラッチ組織</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>ターゲット組織のデフォルトクレデンシャルは常にチェックされています。オプションで、ユーザーがターゲット組織の組織クレデンシャルを持っていない場合のみ、デフォルトのクレデンシャルを選択することができます。</help>
+        <label><!-- Validation Promotion Default Credential --></label>
+        <name>copado__Validation_Promotion_Default_Credential__c</name>
+        <picklistValues>
+            <masterLabel>All Validation Promotions</masterLabel>
+            <translation><!-- All Validation Promotions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only If User Has No Org Credential</masterLabel>
+            <translation>ユーザーが組織クレデンシャルを持っていない場合のみ</translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel><!-- Environment Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- An environment cannot have the same job template for Commit, Promote and Deploy. --></errorMessage>
+        <name>copado__Unique_Job_Template</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Find_Replace_Rule_Editor --></label>
+        <name>copado__Find_Replace_Rule_Editor</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Family --></label>
+        <name>blng__Family__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Book --></label>
+        <name>blng__FinanceBook__c</name>
+        <relationshipLabel><!-- Finance Periods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Period Family --></label>
+        <name>blng__FinancePeriodFamily__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name of legal entity associated with this finance period --></help>
+        <label><!-- Finance Period Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Finance Periods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Open Period --></label>
+        <name>blng__NextOpenPeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select an end date for the finance period. --></help>
+        <label><!-- Period End Date --></label>
+        <name>blng__PeriodEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the beginning of the finance period. --></help>
+        <label><!-- Period Start Date --></label>
+        <name>blng__PeriodStartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select Open to capture all transactions or Closed to prevent further transactions. --></help>
+        <label><!-- Period Status --></label>
+        <name>blng__PeriodStatus__c</name>
+    </fields>
+    <fields>
+        <help><!-- Refers to the period type selected in the finance book. --></help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Id --></label>
+        <name>blng__ReferenceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -6,7 +6,7 @@
     </fields>
     <fields>
         <help><!-- Git branch linked to the source environment. --></help>
-        <label>Source Branch</label>
+        <label><!-- Branch --></label>
         <name>copado__Branch__c</name>
     </fields>
     <fields>
@@ -78,6 +78,10 @@
         <name>copado__Merge_Auto_Resolved_Files__c</name>
     </fields>
     <fields>
+        <label><!-- Next Stage --></label>
+        <name>copado__Next_Stage__c</name>
+    </fields>
+    <fields>
         <help><!-- List of conflicted files auto resolved by Copado when merging the destination branch into the source branch. --></help>
         <label><!-- Pull Auto Resolved Files --></label>
         <name>copado__Pull_Auto_Resolved_Files__c</name>
@@ -86,6 +90,20 @@
         <label><!-- Source Environment --></label>
         <name>copado__Source_Environment__c</name>
         <relationshipLabel><!-- Pipeline Connections (Source Environment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Stage Connection where the source environment belongs to. --></help>
+        <label><!-- Stage Connection --></label>
+        <lookupFilter>
+            <errorMessage><!-- You can only select Stage Connections that belong to the same Pipeline. --></errorMessage>
+        </lookupFilter>
+        <name>copado__Stage_Connection__c</name>
+        <relationshipLabel><!-- Pipeline Connections --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Stage to which the source environment belongs. --></help>
+        <label><!-- Stage --></label>
+        <name>copado__Stage__c</name>
     </fields>
     <fields>
         <label><!-- Sync Merge State --></label>

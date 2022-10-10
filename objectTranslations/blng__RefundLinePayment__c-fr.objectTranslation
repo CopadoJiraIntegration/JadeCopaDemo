@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ligne de remboursement (paiement)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lignes de remboursement (paiement)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Refund Line Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Refund Line Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Refund Lines (Payment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Refund Lines (Payment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Refund Lines (Payment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Mode de paiement.
+ 1. « Électronique », lorsque les paiements/remboursements sont effectués par l&apos;intermédiaire d&apos;une passerelle de paiement.
+ 2. « Externe », lorsque les paiements/remboursements sont effectués manuellement par paiement en espèces/chèque.</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment --></label>
+        <name>blng__Payment__c</name>
+        <relationshipLabel><!-- Refund Lines (Payment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RefundLineDate --></label>
+        <name>blng__RefundLineDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund --></label>
+        <name>blng__Refund__c</name>
+        <relationshipLabel><!-- Refund Lines (Payment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>blng__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocated? --></label>
+        <name>blng__Unallocated__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Numéro de ligne de remboursement</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- We can not modify the Refund Amount --></errorMessage>
+        <name>blng__Rule_on_Refund_Amount</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Automation --></value>
+    </caseValues>
+    <fields>
+        <help>将来実行されるステップのグループ</help>
+        <label><!-- Automation Template --></label>
+        <name>copado__Automation_Template__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>タイプとして「コンプライアンスチェック」を選択した場合、どのコンプライアンスルールグループを実行する必要がありますか？</help>
+        <label><!-- Compliance Rule Group --></label>
+        <name>copado__Compliance_Rule_Group__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この品質ゲートはどの接続行動に付与しますか？</help>
+        <label><!-- Parent Connection Behavior --></label>
+        <name>copado__Connection_Behavior__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>タイプとして「URLコールアウト」が選択されている場合、これはコールアウトの詳細を格納しています。</help>
+        <label><!-- DataJSON --></label>
+        <name>copado__DataJSON__c</name>
+    </fields>
+    <fields>
+        <help>この自動化のトリガーとなるイベント</help>
+        <label><!-- Execution Event --></label>
+        <name>copado__Execution_Event__c</name>
+        <picklistValues>
+            <masterLabel>Deployment</masterLabel>
+            <translation>デプロイメント</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>自動化処理をイベントの前に実行するか後に実行するかを定義します。</help>
+        <label><!-- Execution Sequence --></label>
+        <name>copado__Execution_Sequence__c</name>
+        <picklistValues>
+            <masterLabel>After</masterLabel>
+            <translation>アフター(後)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before</masterLabel>
+            <translation>ビフォアー(前)</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>タイプとして「マニュアル承認」、「マニュアルテスト」、「プルリクエスト」を選択した場合、このタスクは誰に割り当てますか？</help>
+        <label><!-- Manual Task Owner --></label>
+        <name>copado__Manual_Task_Owner__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>自動処理と品質ゲートは、デプロイまたはコミットされたメタデータが、指定された値と一致するときに実行されます。</help>
+        <label><!-- Metadata Group --></label>
+        <name>copado__Metadata_Group__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>タイプとして「静的コード分析」が選択されている場合、どのような静的分析スコアを合格とみなすべきでしょうか。</help>
+        <label><!-- Static Analysis Score Threshold --></label>
+        <name>copado__Score_Threshold__c</name>
+    </fields>
+    <fields>
+        <help>タイプとして &apos;Seleniumテスト&apos; を選択した場合、どの Seleniumテストグループを実行する必要がありますか？</help>
+        <label><!-- Selenium Test Group --></label>
+        <name>copado__Selenium_Test_Group__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>タイプとして「静的コード分析」が選択されている場合、どの静的分析設定を使用する必要がありますか？</help>
+        <label><!-- Static Code Analysis Settings --></label>
+        <name>copado__Static_Code_Analysis_Settings__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>タイプとして”検証付きApexテスト”を選択した場合、テストレベルを選択する必要があります。”特定のテストの実行”では、デプロイされるユーザーストーリーに含まれているテストを実行します。</help>
+        <label><!-- Apex Test Level --></label>
+        <name>copado__Test_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この品質ゲートに対してどのような検証を行いますか？</help>
+        <label><!-- Type --></label>
+        <name>copado__Type__c</name>
+    </fields>
+    <nameFieldLabel><!-- Automation Name --></nameFieldLabel>
+</CustomObjectTranslation>

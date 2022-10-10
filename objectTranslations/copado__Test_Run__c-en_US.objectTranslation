@@ -93,6 +93,11 @@
         <relationshipLabel><!-- Test Runs --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Test Runs --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Tester --></label>
         <name>copado__Tester__c</name>
         <relationshipLabel><!-- Test Runs --></relationshipLabel>

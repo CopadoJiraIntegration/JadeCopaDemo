@@ -265,6 +265,28 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Parent_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Parent Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Parent__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( NOT( ISBLANK( copado__Parent_Id__c ) ) , HYPERLINK(&quot;/&quot;+copado__Parent_Id__c, copado__Parent_Id__c, &quot;_self&quot;) , &quot;&quot;)</formula>
+        <label>Parent</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Priority__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -298,6 +320,19 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Promotion</label>
+        <referenceTo>copado__Promotion__c</referenceTo>
+        <relationshipLabel>Tests</relationshipLabel>
+        <relationshipName>Tests</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__ReadyToRun__c</fullName>
@@ -359,6 +394,18 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Test_Tool__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(copado__ExtensionConfiguration__r.copado__ExtensionTool__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Test Tool</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Type__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -408,5 +455,13 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__PreventUpdatingToolConfiguration</fullName>
+        <active>true</active>
+        <description>This rule prevents users from modifying the Tool Configuration after the test is created.</description>
+        <errorConditionFormula>AND( NOT( ISNEW() ) ,
+ ISCHANGED( copado__ExtensionConfiguration__c ) )</errorConditionFormula>
+        <errorMessage>This Tool Configuration cannot be modified. Please create a new Test and select the Tool Configuration needed.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

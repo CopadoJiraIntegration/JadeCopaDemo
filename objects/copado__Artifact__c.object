@@ -865,7 +865,7 @@ The credential where the unmanaged package is created from.</inlineHelpText>
     <recordTypes>
         <fullName>copado__Package_Artifact</fullName>
         <active>true</active>
-        <description>Salesforce unlocked, First Generation Package or Second-Generation Package as a package</description>
+        <description>Salesforce Unlocked and Second-Generation Managed Package</description>
         <label>Salesforce Package</label>
         <picklistValues>
             <picklist>copado__Package_Type__c</picklist>

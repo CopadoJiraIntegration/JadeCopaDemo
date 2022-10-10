@@ -107,6 +107,11 @@
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- User Story --></label>
         <name>copado__User_Story__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>

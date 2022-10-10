@@ -153,6 +153,10 @@
                 <behavior>Edit</behavior>
                 <field>SBQQ__Quote__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Pricebook2Id</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

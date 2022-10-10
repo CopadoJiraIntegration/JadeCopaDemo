@@ -286,7 +286,7 @@
     <fields>
         <fullName>copado__Timeout__c</fullName>
         <deprecated>false</deprecated>
-        <description>The time period after which Copado updates the status to Failed if there is no response from the function’s job.</description>
+        <description>The number of minutes after which the function will automatically finish if it doesn&apos;t finish before.</description>
         <externalId>false</externalId>
         <inlineHelpText>The number of minutes after which the function will automatically end if there is no response from the function backend execution.</inlineHelpText>
         <label>Timeout</label>

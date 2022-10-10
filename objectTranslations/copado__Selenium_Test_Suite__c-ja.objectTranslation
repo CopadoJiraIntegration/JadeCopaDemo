@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Selenium Test Suite --></value>
+    </caseValues>
+    <fields>
+        <help>このテストスイートを実行した後に実行するオプションのApexコードです。変数 {!NS} を使って、実行中の環境の名前空間に置き換えることができます。</help>
+        <label><!-- Apex code after test --></label>
+        <name>copado__Apex_code_after_test__c</name>
+    </fields>
+    <fields>
+        <help>このテストスイートを実行する前に実行するオプションのApexコードです。 これは、データのクリーンアップや作成に使用することができます。変数 {!NS} を使って、実行環境の名前空間に置き換えることができます。</help>
+        <label><!-- Apex code before test --></label>
+        <name>copado__Apex_code_before_test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>copado__Notes__c</name>
+    </fields>
+    <fields>
+        <help>この検索は、 Copado変更管理テストスクリプトに関連しています。</help>
+        <label><!-- Test Script --></label>
+        <name>copado__Test_Script__c</name>
+        <relationshipLabel><!-- Selenium Test Suites --></relationshipLabel>
+    </fields>
+    <nameFieldLabel><!-- Selenium Test Suite Name --></nameFieldLabel>
+    <webLinks>
+        <label><!-- Add_Remove_Test_Cases --></label>
+        <name>copado__Add_Remove_Test_Cases</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Selection_to_a_Test_Group --></label>
+        <name>copado__Add_Selection_to_a_Test_Group</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quick_Run --></label>
+        <name>copado__Quick_Run</name>
+    </webLinks>
+</CustomObjectTranslation>

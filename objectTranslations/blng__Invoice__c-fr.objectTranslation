@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Facture</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Factures</value>
+    </caseValues>
+    <fields>
+        <label><!-- Invoice Status --></label>
+        <name>Invoice_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, this Invoice will be excluded from being attached to a Collections Plan. --></help>
+        <label><!-- Hold Collections --></label>
+        <name>SFBD__HoldCollections__c</name>
+    </fields>
+    <fields>
+        <label><!-- AR Status --></label>
+        <name>blng__ARStatus__c</name>
+    </fields>
+    <fields>
+        <help>Rechercher dans le compte la facturation de cette facture.</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>blng__Action__c</name>
+    </fields>
+    <fields>
+        <help>Solde = montant total - paiements nets totaux - notes de crédit appliquées + notes de débit appliquées + conversions de ligne négatives</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <help>Rechercher dans le contact de facturation pour cette facture</help>
+        <label><!-- Bill To Contact --></label>
+        <name>blng__BillToContact__c</name>
+        <relationshipLabel><!-- Invoices (BillToContact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Corrective Action (Payment Run) --></label>
+        <name>blng__CorrectiveAction__c</name>
+        <picklistValues>
+            <masterLabel>Action Required</masterLabel>
+            <translation>Action requise</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Somme de tous les montants de la note de crédit appliqués à cette facture</help>
+        <label><!-- Credits --></label>
+        <name>blng__Credits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Outstanding --></label>
+        <name>blng__DaysOutstanding__c</name>
+    </fields>
+    <fields>
+        <help>Somme de toutes les allocations et désallocations de paiements contre les notes de débit allouées à cette facture.</help>
+        <label><!-- Debit Payments --></label>
+        <name>blng__DebitPayments__c</name>
+    </fields>
+    <fields>
+        <help>Somme de tous les montants de la note de débit appliqués à cette facture</help>
+        <label><!-- Debits --></label>
+        <name>blng__Debits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Declined Payment Count (Payment Run) --></label>
+        <name>blng__DeclinedPaymentRunCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Payment Type --></label>
+        <name>blng__DefaultPaymentType__c</name>
+    </fields>
+    <fields>
+        <help>La date à laquelle le paiement de la facture est dû.</help>
+        <label><!-- Due Date --></label>
+        <name>blng__DueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <help>Lance la date d&apos;échéance et la période de reporting financier</help>
+        <label><!-- Invoice Date --></label>
+        <name>blng__InvoiceDate__c</name>
+    </fields>
+    <fields>
+        <help>Le paiement est en cours et la facture est verrouillée. Avant de la déverrouiller, vérifiez si un paiement a déjà été créé pour cette facture.</help>
+        <label><!-- Invoice Locked --></label>
+        <name>blng__InvoiceLocked__c</name>
+    </fields>
+    <fields>
+        <help>La date à laquelle la facture a été validée</help>
+        <label><!-- Invoice Posted Date --></label>
+        <name>blng__InvoicePostedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run (Created By) --></label>
+        <name>blng__InvoiceRunCreatedBy__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__InvoiceStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Run --></label>
+        <name>blng__LastPaymentRunId__c</name>
+        <relationshipLabel><!-- Invoices (Last Payment Run) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Run Processing Message --></label>
+        <name>blng__LastPaymentRunProcessingMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Negative Line Conversion --></label>
+        <name>blng__NegativeLineConversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Invoice Lines --></label>
+        <name>blng__NumberOfInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>blng__Order__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>blng__PaymentBatch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Autopay Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Ce champ sera déprécié dans une future version.</help>
+        <label><!-- Payment Process Status (deprecated) --></label>
+        <name>blng__PaymentProcessStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Run --></label>
+        <name>blng__PaymentRunId__c</name>
+        <relationshipLabel><!-- Invoices (Payment Run) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Run Processing Message --></label>
+        <name>blng__PaymentRunProcessingMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Status --></label>
+        <name>blng__PaymentStatus__c</name>
+    </fields>
+    <fields>
+        <help>Somme des montants de paiements alloués aux lignes de facture dans la facture.</help>
+        <label><!-- Allocations Against Invoice Lines --></label>
+        <name>blng__PaymentsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help>Somme des montants de paiement alloués à l&apos;en-tête de facture. Ne doit être utilisé que lorsque vous n&apos;utilisez pas les allocations de niveau ligne.</help>
+        <label><!-- Allocations Against Invoice --></label>
+        <name>blng__PaymentsAgainstInvoice__c</name>
+    </fields>
+    <fields>
+        <help>Paiement nets contre cette facture</help>
+        <label><!-- Payments --></label>
+        <name>blng__Payments__c</name>
+    </fields>
+    <fields>
+        <help>Annulations d’allocations précédentes aux lignes de facture</help>
+        <label><!-- Unallocations Against Invoice Lines --></label>
+        <name>blng__RefundsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help>Annulations d’allocations précédentes à la facture</help>
+        <label><!-- Unallocations Against Invoice --></label>
+        <name>blng__RefundsAgainstInvoice__c</name>
+    </fields>
+    <fields>
+        <help>Orange = facture active avec un solde ; Vert = pas de solde dû ; Rouge = arriéré ; Blanc = annulé</help>
+        <label><!-- Status Flag --></label>
+        <name>blng__StatusFlag__c</name>
+    </fields>
+    <fields>
+        <help>Total facture (hors taxes)</help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target  Date --></label>
+        <name>blng__TargetDate__c</name>
+    </fields>
+    <fields>
+        <help>Somme de toutes les taxes pour cette facture</help>
+        <label><!-- Tax --></label>
+        <name>blng__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Errors --></label>
+        <name>blng__TaxErrors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <help>Total facture (taxes comprises). Égal au sous-total + taxes.</help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <help>ID unique pour cette facture</help>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Numéro de la facture</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Cancel_Rebill --></label>
+        <name>blng__Cancel_Rebill</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ConvertNegativeLines --></label>
+        <name>blng__ConvertNegativeLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit --></label>
+        <name>blng__Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Payment_Virtual_Terminal --></label>
+        <name>blng__Payment_Virtual_Terminal</name>
+    </webLinks>
+</CustomObjectTranslation>

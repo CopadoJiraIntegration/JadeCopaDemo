@@ -244,20 +244,23 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Git_RepositoryId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Store git repository Id linked to Job step</description>
+        <externalId>false</externalId>
+        <label>Git RepositoryId</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Git_Repository__c</fullName>
         <deprecated>false</deprecated>
         <description>Id of the Git repository record linked to the pipeline.</description>
         <externalId>false</externalId>
-        <formula>BLANKVALUE(
-    copado__JobExecution__r.copado__Snapshot__r.copado__Git_Repository__c, 
-    BLANKVALUE(
-        copado__JobExecution__r.copado__Pipeline__r.copado__Git_Repository__c,
-        BLANKVALUE(
-            copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c, 
-            copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c
-        )
-    )
-)</formula>
+        <formula>copado__Git_RepositoryId__c</formula>
         <inlineHelpText>Id of the Git repository record linked to the pipeline to which the job step appliies.</inlineHelpText>
         <label>Git Repository</label>
         <required>false</required>
@@ -314,9 +317,21 @@
         <fullName>copado__Parent_Owner_Id__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(NOT(ISBLANK( copado__JobExecution__r.copado__Deployment__c )), copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.OwnerId,
-    IF(NOT(ISBLANK( copado__JobExecution__r.copado__Promotion__c )), copado__JobExecution__r.copado__Promotion__r.OwnerId, OwnerId))</formula>
+        <formula>OwnerId</formula>
         <label>Parent Owner Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__PipelineId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores pipeline Id linked to job execution</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores pipeline Id linked to job execution</inlineHelpText>
+        <label>PipelineId</label>
+        <length>18</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -327,19 +342,7 @@
         <deprecated>false</deprecated>
         <description>Id of the pipeline in which the job step has been executed.</description>
         <externalId>false</externalId>
-        <formula>BLANKVALUE(
-copado__JobExecution__r.copado__Pipeline__c,
-BLANKVALUE(
-    copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c, 
-    BLANKVALUE(
-        copado__JobExecution__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c,
-        BLANKVALUE(
-            copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c, 
-            copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c
-        )
-    )
-)
-)</formula>
+        <formula>copado__PipelineId__c</formula>
         <inlineHelpText>Id of the pipeline in which the job step has been executed.</inlineHelpText>
         <label>Pipeline Id</label>
         <required>false</required>

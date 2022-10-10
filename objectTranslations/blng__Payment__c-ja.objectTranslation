@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Allocated to Debit Note Lines --></label>
+        <name>blng__AllocatedtoDebitNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocated to Invoice Lines --></label>
+        <name>blng__AllocatedtoInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocated to Invoices --></label>
+        <name>blng__AllocatedtoInvoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocation Status --></label>
+        <name>blng__AllocationStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Name --></label>
+        <name>blng__BankAccountName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Number --></label>
+        <name>blng__BankAccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Type --></label>
+        <name>blng__BankAccountType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Name --></label>
+        <name>blng__BankName__c</name>
+    </fields>
+    <fields>
+        <help>銀行の有効な支店コードであり、ABA コードとも呼ばれます</help>
+        <label><!-- Bank Routing Code --></label>
+        <name>blng__BankRoutingCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Payment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Payment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Card Code Response --></label>
+        <name>blng__CardCodeResponse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Expiration Month --></label>
+        <name>blng__CardExpirationMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Expiration Year --></label>
+        <name>blng__CardExpirationYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Type --></label>
+        <name>blng__CardType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Date --></label>
+        <name>blng__CheckDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Number --></label>
+        <name>blng__CheckNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Period --></label>
+        <name>blng__FinancePeriod__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Gateway Transaction ID --></label>
+        <name>blng__GatewayID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>blng__Invoice__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paid By --></label>
+        <name>blng__PaidBy__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>支払収集で使用された支払承認</help>
+        <label><!-- Payment Authorization --></label>
+        <name>blng__PaymentAuthorization__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Date --></label>
+        <name>blng__PaymentDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Description --></label>
+        <name>blng__PaymentDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Token ID --></label>
+        <name>blng__PaymentGatewayToken__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Salesforce Billing を使用して支払を実行する場合は [電子] を選択し、他の場所で処理する支払を手動で入力するには [外部] を選択します。</help>
+        <label><!-- Payment Mode --></label>
+        <name>blng__PaymentMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>blng__PaymentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunds (Allocations) --></label>
+        <name>blng__RefundsAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunds (Unallocations) --></label>
+        <name>blng__RefundsUnallocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunds --></label>
+        <name>blng__Refunds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request - Credit Card Number --></label>
+        <name>blng__RequestCreditCardNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request - Type Of Payment --></label>
+        <name>blng__RequestTypeOfPayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction --></label>
+        <name>blng__Transaction__c</name>
+        <relationshipLabel><!-- Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unallocated from Debit Note Lines --></label>
+        <name>blng__UnallocatedfromDebitNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocated from Invoice Lines --></label>
+        <name>blng__UnallocatedfromInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocated from Invoices --></label>
+        <name>blng__UnallocatedfromInvoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocations --></label>
+        <name>blng__Unallocations__c</name>
+    </fields>
+    <nameFieldLabel>支払番号</nameFieldLabel>
+    <webLinks>
+        <label><!-- Allocations --></label>
+        <name>blng__Allocations</name>
+    </webLinks>
+</CustomObjectTranslation>

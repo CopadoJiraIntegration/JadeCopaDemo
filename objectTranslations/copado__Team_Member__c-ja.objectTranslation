@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Team Member --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Member --></label>
+        <name>copado__Member__c</name>
+        <relationshipLabel><!-- Team Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>copado__Role__c</name>
+        <picklistValues>
+            <masterLabel>Analyst</masterLabel>
+            <translation>アナリスト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Architect</masterLabel>
+            <translation>アーキテクト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BSA</masterLabel>
+            <translation><!-- BSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Owner</masterLabel>
+            <translation>ビジネスオーナー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capacity Planner</masterLabel>
+            <translation>キャパシティプランナー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DBA</masterLabel>
+            <translation><!-- DBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Center Engineer</masterLabel>
+            <translation>データセンターエンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dev Manager</masterLabel>
+            <translation>開発マネジャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developer</masterLabel>
+            <translation>デベロッパー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doc Editor</masterLabel>
+            <translation><!-- Doc Editor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doc Manager</masterLabel>
+            <translation><!-- Doc Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Engineer</masterLabel>
+            <translation>ネットワークエンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Engineer</masterLabel>
+            <translation>パフォーマンスエンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Owner</masterLabel>
+            <translation>プロダクトオーナー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Manager</masterLabel>
+            <translation>プログラムマネージャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisioning Specialist / Asset Manager</masterLabel>
+            <translation>プロビジョニングスペシャリスト/アセットマネジャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA Engineer</masterLabel>
+            <translation>品質保証(QA)エンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA Manager</masterLabel>
+            <translation>品質保証(QA)マネージャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Engineer</masterLabel>
+            <translation>リリースエンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Manager</masterLabel>
+            <translation>リリースマネージャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scrum Master</masterLabel>
+            <translation>スクラムマスター</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security Engineer</masterLabel>
+            <translation>セキュリティーエンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site Reliability Engineer</masterLabel>
+            <translation>サイト信頼性エンジニア</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SysAdmin</masterLabel>
+            <translation><!-- SysAdmin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SysAdmin Linux</masterLabel>
+            <translation><!-- SysAdmin Linux --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SysAdmin Storage</masterLabel>
+            <translation><!-- SysAdmin Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SysAdmin Win</masterLabel>
+            <translation><!-- SysAdmin Win --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TechOps Manager</masterLabel>
+            <translation>テックオプスマネジャー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Writer</masterLabel>
+            <translation>テクニカルライター</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust Engineer</masterLabel>
+            <translation><!-- Trust Engineer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UE</masterLabel>
+            <translation><!-- UE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UE Manager</masterLabel>
+            <translation>UEマネージャー</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Team --></label>
+        <name>copado__Team__c</name>
+        <relationshipLabel><!-- Team Members --></relationshipLabel>
+    </fields>
+    <nameFieldLabel><!-- Team Member Name --></nameFieldLabel>
+</CustomObjectTranslation>

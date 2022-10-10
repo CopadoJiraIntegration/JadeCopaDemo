@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Remboursement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Remboursements</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RefundFieldset --></label>
+        <name>blng__RefundFieldset</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Référence à un chèque émis dans un système externe pour ce remboursement</help>
+        <label><!-- Check Number --></label>
+        <name>blng__CheckNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>L&apos;ID de transaction utilisé pour identifier ce remboursement dans la passerelle de paiement</help>
+        <label><!-- Payment Gateway Transaction ID --></label>
+        <name>blng__PaymentGatewayTransactionID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Date --></label>
+        <name>blng__RefundDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Description --></label>
+        <name>blng__RefundDescription__c</name>
+    </fields>
+    <fields>
+        <help>Un statut Échec signifie que la ligne de remboursement n&apos;a pas pu être créée. Vérifiez la configuration du système.</help>
+        <label><!-- Refund Line Creation Status --></label>
+        <name>blng__RefundLineCreationStatus__c</name>
+    </fields>
+    <fields>
+        <help>Le mode Externe représente un remboursement effectué dans un système externe et Électronique représente un remboursement traité par Salesforce</help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </fields>
+    <fields>
+        <help>Le mode de paiement représente une carte de crédit ou des informations bancaires qui peuvent être utilisées pour traiter un paiement</help>
+        <label><!-- Refund Payment Method --></label>
+        <name>blng__RefundPaymentMethod__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Refund Type --></label>
+        <name>blng__RefundType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunded from Credit Note Lines --></label>
+        <name>blng__RefundedfromCreditNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunded from Payments --></label>
+        <name>blng__RefundedfromPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Numéro de remboursement</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

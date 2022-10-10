@@ -14,6 +14,7 @@
     </fields>
     <fields>
         <fullName>copado__DeployAPIName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
@@ -36,6 +37,7 @@
     </fields>
     <fields>
         <fullName>copado__PackageCreateApiName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
@@ -47,6 +49,7 @@
     </fields>
     <fields>
         <fullName>copado__PackageImportAPIName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
@@ -58,6 +61,7 @@
     </fields>
     <fields>
         <fullName>copado__PackageVersionCreateApiName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
@@ -69,6 +73,7 @@
     </fields>
     <fields>
         <fullName>copado__PackageVersionPublishAPIName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
@@ -80,13 +85,14 @@
     </fields>
     <fields>
         <fullName>copado__PlatformName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <label>PlatformName</label>
         <length>80</length>
-        <required>true</required>
+        <required>false</required>
         <type>Text</type>
         <unique>true</unique>
     </fields>
@@ -105,6 +111,7 @@
     </fields>
     <fields>
         <fullName>copado__PromoteAPIName__c</fullName>
+        <businessStatus>DeprecateCandidate</businessStatus>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>

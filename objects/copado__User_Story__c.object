@@ -6530,7 +6530,7 @@
         <description>If checked, this user story will not be included in the count of user stories ahead and behind.</description>
         <externalId>false</externalId>
         <inlineHelpText>If checked, this user story will not be included in the count of user stories ahead and behind.</inlineHelpText>
-        <label>Exclude From CBM</label>
+        <label>Exclude from Pipelines</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -7522,7 +7522,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <description>If checked, the User Story will not be indexed for Copado&apos;s Overlap Awareness.</description>
         <externalId>false</externalId>
         <inlineHelpText>If checked, the User Story will not be indexed for Copado&apos;s Overlap Awareness.</inlineHelpText>
-        <label>Stop Indexing Metadata</label>
+        <label>Exclude from Overlap Awareness</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>

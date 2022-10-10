@@ -8,5 +8,9 @@
         <plural>true</plural>
         <value>Job Requisitions</value>
     </caseValues>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Full_Name__c</name>
+    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

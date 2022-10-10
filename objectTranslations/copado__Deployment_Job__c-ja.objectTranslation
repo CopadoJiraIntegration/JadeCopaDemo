@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Deployment Job --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Async Job ID --></label>
+        <name>copado__Async_Job_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- % Deployed --></label>
+        <name>copado__Deployed__c</name>
+    </fields>
+    <fields>
+        <help>システムプロパティの置き換えのために内部的に使用される読み取り専用フィールド</help>
+        <label><!-- Destination Id --></label>
+        <name>copado__Destination_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destination Credential --></label>
+        <name>copado__Destination_Org__c</name>
+        <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Early Completion Status --></label>
+        <name>copado__Early_Completion_Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>失敗</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation>進行中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>保留中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation>成功</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copado__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Status --></label>
+        <name>copado__External_Status__c</name>
+    </fields>
+    <fields>
+        <help>システムプロパティの置き換えのために内部的に使用される読み取り専用フィールド</help>
+        <label><!-- Repository Id --></label>
+        <name>copado__Git_Repository__c</name>
+    </fields>
+    <fields>
+        <help>ジョブ実行の詳細を含む最新の結果</help>
+        <label><!-- Last Result --></label>
+        <name>copado__Last_Result__c</name>
+        <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>システムプロパティの置き換えのために内部的に使用される読み取り専用フィールド</help>
+        <label><!-- Pipeline Id --></label>
+        <name>copado__Pipeline_Id__c</name>
+    </fields>
+    <fields>
+        <help>システムプロパティの置き換えのために内部的に使用される読み取り専用フィールド</help>
+        <label><!-- Source Id --></label>
+        <name>copado__Source_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Flag --></label>
+        <name>copado__Status_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>失敗</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation>進行中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>保留中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation>成功</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Step --></label>
+        <name>copado__Step__c</name>
+        <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- To Credential Name --></label>
+        <name>copado__To_Org_Name__c</name>
+    </fields>
+    <fields>
+        <help>クイックデプロイメントに使用されます。メタデータAPI V33以降で利用可能（Spring 15）</help>
+        <label><!-- Validation ID --></label>
+        <name>copado__Validation_ID__c</name>
+    </fields>
+    <nameFieldLabel><!-- Deployment Job Name --></nameFieldLabel>
+</CustomObjectTranslation>

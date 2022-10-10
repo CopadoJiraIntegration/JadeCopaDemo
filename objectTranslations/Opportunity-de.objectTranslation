@@ -5,6 +5,10 @@
         <name>sbaa__DealDesk</name>
     </fieldSets>
     <fields>
+        <label><!-- All Opportunity Score --></label>
+        <name>All_Opportunity_Score__c</name>
+    </fields>
+    <fields>
         <label><!-- Annual Contract Value (ACV) --></label>
         <name>AnnualContractValue__c</name>
     </fields>

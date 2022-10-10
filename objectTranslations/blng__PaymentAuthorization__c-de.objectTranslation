@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Zahlungsautorisierung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Zahlungsautorisierungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Zahlungsautorisierung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Zahlungsautorisierungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Zahlungsautorisierung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Zahlungsautorisierungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Zahlungsautorisierung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Zahlungsautorisierungen</value>
+    </caseValues>
+    <fields>
+        <help>Account</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Saldo: Aktueller Betrag - Nettozahlungen</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <help>Ursprünglicher Betrag, der von uns eingezogen werden darf</help>
+        <label><!-- Current Amount --></label>
+        <name>blng__CurrentAmount__c</name>
+    </fields>
+    <fields>
+        <help>Effektives Enddatum, an dem von mir eingezogen werden darf</help>
+        <label><!-- Effective End Date --></label>
+        <name>blng__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Effektives Startdatum, an dem von mir eingezogen werden darf</help>
+        <label><!-- Effective Start Date --></label>
+        <name>blng__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Die Daten die das Gateway für nachfolgende Transaktionen verwendet</help>
+        <label><!-- Gateway Reference Details --></label>
+        <name>blng__GatewayReferenceDetails__c</name>
+    </fields>
+    <fields>
+        <help>Die eindeutige vom Zahlungs-Gateway generierte Transaktions-ID</help>
+        <label><!-- Gateway Reference Number --></label>
+        <name>blng__GatewayReferenceNumber__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Zahlungen</help>
+        <label><!-- Net Payments --></label>
+        <name>blng__NetPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Ursprünglicher Betrag, der von uns eingezogen werden darf</help>
+        <label><!-- Original Amount --></label>
+        <name>blng__OriginalAmount__c</name>
+    </fields>
+    <fields>
+        <help>Das zur Autorisierung der Transaktion verwendete Zahlungs-Gateway</help>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Zahlungsmethode</help>
+        <label><!-- Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Quelle der Zahlungsautorisierung</help>
+        <label><!-- Source --></label>
+        <name>blng__Source__c</name>
+    </fields>
+    <fields>
+        <help>Status der Zahlungsautorisierung</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Name der Zahlungsautorisierung</nameFieldLabel>
+</CustomObjectTranslation>

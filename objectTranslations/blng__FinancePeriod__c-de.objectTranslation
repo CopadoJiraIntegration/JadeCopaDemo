@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Finanzzeitraum</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Finanzzeiträume</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Finanzzeitraum</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Finanzzeiträume</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Finanzzeitraums</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Finanzzeiträume</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Finanzzeitraum</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Finanzzeiträumen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Family --></label>
+        <name>blng__Family__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Book --></label>
+        <name>blng__FinanceBook__c</name>
+        <relationshipLabel><!-- Finance Periods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Period Family --></label>
+        <name>blng__FinancePeriodFamily__c</name>
+    </fields>
+    <fields>
+        <help>Name der juristischen Person, die mit diesem Finanzzeitraum verknüpft ist</help>
+        <label><!-- Finance Period Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Finance Periods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Open Period --></label>
+        <name>blng__NextOpenPeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie ein Enddatum für den Finanzzeitraum aus.</help>
+        <label><!-- Period End Date --></label>
+        <name>blng__PeriodEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie den Beginn des Finanzzeitraums aus.</help>
+        <label><!-- Period Start Date --></label>
+        <name>blng__PeriodStartDate__c</name>
+    </fields>
+    <fields>
+        <help>Wählen Sie &quot;Offen&quot; aus, um alle Transaktionen zu erfassen, oder &quot;Geschlossen&quot;, um weitere Transaktionen zu verhindern.</help>
+        <label><!-- Period Status --></label>
+        <name>blng__PeriodStatus__c</name>
+    </fields>
+    <fields>
+        <help>Bezieht sich auf den im Finanzbuch ausgewählten Zeitraumtyp.</help>
+        <label><!-- Period Type --></label>
+        <name>blng__PeriodType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Id --></label>
+        <name>blng__ReferenceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Name des Finanzzeitraums</nameFieldLabel>
+</CustomObjectTranslation>

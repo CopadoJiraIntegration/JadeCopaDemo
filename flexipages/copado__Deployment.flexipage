@@ -162,31 +162,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>dismissible</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>message</name>
-                    <value>Automation Template functionality will be deprecated in 2023. Please use new Job Template functionality.</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>variant</name>
-                    <value>info</value>
-                </componentInstanceProperties>
-                <componentName>copado:copadoAlert</componentName>
-                <identifier>c_copadoAlert1</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Automation_Template</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-4fa38cf3-5b80-481d-bf68-73b26444643c</value>
                 </componentInstanceProperties>

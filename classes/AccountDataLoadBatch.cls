@@ -5,6 +5,7 @@ public class AccountDataLoadBatch implements Database.Batchable<SObject>,Databas
     list<Account> lstAccToInsert = new list<Account>();
     list<id> lstAccIds = new list<id>();
     
+    
     /**
      * Constructor to prepare the query.
      * @Params: NA.
@@ -64,15 +65,8 @@ public class AccountDataLoadBatch implements Database.Batchable<SObject>,Databas
                 //System.debug('Successfully inserted account. Account ID: ' + sr.getId());
                 lstAccIds.add(sr.getId());
             }
-            /*else {
-                    // Operation failed, so get all errors                
-                    for(Database.Error err : sr.getErrors()) {
-                    System.debug('The following error has occurred.');                    
-                    System.debug(err.getStatusCode() + ': ' + err.getMessage());
-                    System.debug('Account fields that affected this error: ' + err.getFields());
-                    }
-                    }*/
         }
+        
     }
     
     /**
@@ -81,6 +75,7 @@ public class AccountDataLoadBatch implements Database.Batchable<SObject>,Databas
      * @Output: void
     */
     public void finish(Database.BatchableContext bc){
-        Database.executeBatch(new OppDataLoadBatch(lstAccIds)); 
+        Database.executeBatch(new CaseDataLoadBatch(lstAccIds));
+        Database.executeBatch(new OppDataLoadBatch(lstAccIds));
     }
 }

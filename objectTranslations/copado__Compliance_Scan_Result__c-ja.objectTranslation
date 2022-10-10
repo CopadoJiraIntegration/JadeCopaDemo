@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Compliance Scan Result --></value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Compliance_Result_Tab --></label>
+        <name>copado__Compliance_Result_Tab</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Deployment Step --></label>
+        <name>copado__Deployment_Step__c</name>
+        <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Deployment --></label>
+        <name>copado__Deployment__c</name>
+        <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Environment --></label>
+        <name>copado__Environment__c</name>
+        <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- # Findings --></label>
+        <name>copado__Findings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Git Snapshot --></label>
+        <name>copado__Git_Snapshot__c</name>
+        <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>コンプライアンス調査結果の中で最も厳しい処置</help>
+        <label><!-- Highest Rule Action --></label>
+        <name>copado__Highest_Rule_Action__c</name>
+    </fields>
+    <fields>
+        <help>コンプライアンスに関する指摘事項で最も重大なもの。</help>
+        <label><!-- Highest Severity --></label>
+        <name>copado__Highest_Severity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credential --></label>
+        <name>copado__Org_Credential__c</name>
+        <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resolution Details --></label>
+        <name>copado__Resolution_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scan Duration in Minutes --></label>
+        <name>copado__Scan_Duration_in_Minutes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scan End --></label>
+        <name>copado__Scan_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scan Start --></label>
+        <name>copado__Scan_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed - Findings detected</masterLabel>
+            <translation>完了 - 検出された結果</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed - No Findings</masterLabel>
+            <translation>完了 - 見つかりませんでした。</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed - Resolved</masterLabel>
+            <translation>完了しました - 解決済</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation>エラー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>進行中</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Investigation</masterLabel>
+            <translation>調査中</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>copado__User_Story__c</name>
+        <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
+    </fields>
+    <nameFieldLabel><!-- Scan Result Reference --></nameFieldLabel>
+    <recordTypes>
+        <description><!-- This record type is used for scan results produced by Copado. --></description>
+        <label><!-- Copado --></label>
+        <name>copado__Copado</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Use this record type to capture non-Salesforce scan results. --></description>
+        <label><!-- Other --></label>
+        <name>copado__Other</name>
+    </recordTypes>
+</CustomObjectTranslation>

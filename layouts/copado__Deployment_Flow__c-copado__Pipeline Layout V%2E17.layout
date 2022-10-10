@@ -147,6 +147,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>copado__Manage_Regression_Tests</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>10</sortOrder>
@@ -155,11 +160,6 @@
             <actionName>copado__Find_Replace_Rule_Editor</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>11</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Delete</actionName>

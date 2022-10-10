@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MLPredictionDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiApplicationDeveloperName>Opportunity_Scoring</aiApplicationDeveloperName>
+    <developerName>mlpd_Opportunity_Scoring_1664793943041_v0</developerName>
+    <masterLabel>Opportunity Scoring</masterLabel>
+    <negativeExpression>
+        <filterName>75a512ef-d3b9-4e6d-9b32-f820058f675c</filterName>
+        <lhPredictionField>Opportunity.StageName</lhPredictionField>
+        <operation>Equals</operation>
+        <rhType>String</rhType>
+        <rhValue>Closed Lost</rhValue>
+    </negativeExpression>
+    <positiveExpression>
+        <filterName>692b304b-7bdb-4ee3-aafe-e2ca0a03cc12</filterName>
+        <lhPredictionField>Opportunity.StageName</lhPredictionField>
+        <operation>Equals</operation>
+        <rhType>String</rhType>
+        <rhValue>Closed Won</rhValue>
+    </positiveExpression>
+    <pushbackField>Opportunity.All_Opportunity_Score__c</pushbackField>
+    <status>Enabled</status>
+    <type>BinaryClassification</type>
+</MLPredictionDefinition>

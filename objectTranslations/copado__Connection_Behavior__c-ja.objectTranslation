@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Connection Behavior --></value>
+    </caseValues>
+    <fields>
+        <help>ユーザーストーリーをより高い環境（PROD / TEST）から下の環境（TEST / DEV）にどのように移動させますか。</help>
+        <label><!-- Back-Promotion Execution --></label>
+        <name>copado__Back_Promotion_Behavior__c</name>
+        <picklistValues>
+            <masterLabel>Automated</masterLabel>
+            <translation>自動化</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disabled</masterLabel>
+            <translation>無効</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation>マニュアル</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation>スケジュール</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この基準を満たすユーザーストーリーのみが自動的にバックプロモーション対象になります。</help>
+        <label><!-- Back-Promotion Criteria --></label>
+        <name>copado__Back_Promotion_Criteria__c</name>
+    </fields>
+    <fields>
+        <help>バックプロモーションのスケジュール（スケジュールされている場合）</help>
+        <label><!-- Back-Promotion Schedule --></label>
+        <name>copado__Back_Promotion_Schedule__c</name>
+    </fields>
+    <fields>
+        <help>スケジュールされたバックプロモーションジョブに関連するセールスフォースのスケジュールされたジョブID</help>
+        <label><!-- Back-Promotion Scheduled Job ID --></label>
+        <name>copado__Back_Promotion_Scheduled_Job_ID__c</name>
+    </fields>
+    <fields>
+        <help>この接続動作の概要</help>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Environment Branch --></label>
+        <name>copado__DisableEnvironmentBranch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Execute back-promotions in parallel --></label>
+        <name>copado__Execute_back_promotions_in_parallel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Execute promotions in parallel --></label>
+        <name>copado__Execute_promotions_in_parallel__c</name>
+    </fields>
+    <fields>
+        <help>1に設定すると、各ストーリーを個別にデプロイします。デプロイをバッチ処理すると、プロセスが高速化されますが、バッチ内のすべてのストーリーが一緒に成功または失敗するようになります。このため、エラー原因の特定が難しくなったり、いくつかの問題のないユーザーストーリーも遅れる可能性があります。</help>
+        <label><!-- Scheduled Back-Promotion US Group Size --></label>
+        <name>copado__Max_Scheduled_Back_Promotion_Batch_Size__c</name>
+    </fields>
+    <fields>
+        <help>1に設定すると、各ストーリーを個別にデプロイします。デプロイをバッチ処理すると、プロセスが高速化されますが、バッチ内のすべてのストーリーが一緒に成功または失敗するようになります。このため、エラー原因の特定が難しくなったり、いくつかの問題のないユーザーストーリーも遅れる可能性があります。</help>
+        <label><!-- Scheduled Promotion US Group Size --></label>
+        <name>copado__Max_Scheduled_Promotion_Batch_Size__c</name>
+    </fields>
+    <fields>
+        <help>ユーザーストーリーを低い（DEV / TEST）環境からより高い環境にどのように展開されるでしょうか（TEST / PROD）</help>
+        <label><!-- Promotion Execution --></label>
+        <name>copado__Promotion_Behavior__c</name>
+    </fields>
+    <fields>
+        <help>この基準を満たすユーザーストーリーのみが自動的にプロモーション対象になります。</help>
+        <label><!-- Promotion Criteria --></label>
+        <name>copado__Promotion_Criteria__c</name>
+    </fields>
+    <fields>
+        <help>デプロイメントスケジュール（スケジュールされている場合）</help>
+        <label><!-- Promotion Schedule --></label>
+        <name>copado__Promotion_Schedule__c</name>
+    </fields>
+    <fields>
+        <help>スケジュールされたデプロイメントジョブに関連するセールスフォースのスケジュールされたジョブID</help>
+        <label><!-- Deployment Scheduled Job ID --></label>
+        <name>copado__Promotion_Scheduled_Job_ID__c</name>
+    </fields>
+    <fields>
+        <help>バックプロモーションをスケジュールするためのリンク</help>
+        <label><!-- Schedule Back-Promotions --></label>
+        <name>copado__Schedule_Back_Promotion__c</name>
+    </fields>
+    <fields>
+        <help>デプロイメントをスケジュールするためのアクションリンク</help>
+        <label><!-- Schedule Promotion --></label>
+        <name>copado__Schedule_Promotion__c</name>
+    </fields>
+    <fields>
+        <help>ユーザーストーリーが正常にデプロイされた後に設定するステータスは何に設定されますか？</help>
+        <label><!-- User Story Status After Promotion --></label>
+        <name>copado__Story_Status_After_Deployment__c</name>
+    </fields>
+    <nameFieldLabel><!-- Connection Behavior Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Batch Size fields for Promotion or Back Promotion needs to be between 1 and 2000 --></errorMessage>
+        <name>copado__Batch_Size_Valid_Interval</name>
+    </validationRules>
+</CustomObjectTranslation>

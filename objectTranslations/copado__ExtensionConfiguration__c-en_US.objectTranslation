@@ -49,4 +49,8 @@
         <label><!-- Test Type --></label>
         <name>copado__TestType__c</name>
     </fields>
+    <validationRules>
+        <errorMessage><!-- This Extension Tool cannot be modified. Please create a new Extension Configuration record instead. --></errorMessage>
+        <name>copado__PreventUpdatingExtensionTool</name>
+    </validationRules>
 </CustomObjectTranslation>

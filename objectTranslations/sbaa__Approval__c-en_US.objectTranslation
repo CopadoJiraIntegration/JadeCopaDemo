@@ -5,6 +5,26 @@
         <name>sbaa__RequestFields</name>
     </fieldSets>
     <fields>
+        <label><!-- Approval Time Taken Category --></label>
+        <name>Approval_Time_Taken_Category__c</name>
+        <picklistValues>
+            <masterLabel>2-4 Hours</masterLabel>
+            <translation><!-- 2-4 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4-8 Hours</masterLabel>
+            <translation><!-- 4-8 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 2 Hours</masterLabel>
+            <translation><!-- Less than 2 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than 8 Hours</masterLabel>
+            <translation><!-- More than 8 Hours --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Approved/Rejected/Revoked Date --></label>
         <name>Approved_Rejected_Revoked_Date__c</name>
     </fields>

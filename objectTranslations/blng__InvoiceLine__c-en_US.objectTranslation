@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AR Status --></label>
+        <name>blng__ARStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Allocation Amount --></label>
+        <name>blng__AllocatedRevenueAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asset --></label>
+        <name>blng__Asset__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Total Amount (with tax) - Payments - Credits + Debits + Negative Line Conversion --></help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance without Debits --></label>
+        <name>blng__BalancewithoutDebits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Period --></label>
+        <name>blng__BillingFinancePeriod__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Frequency --></label>
+        <name>blng__BillingFrequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Rule --></label>
+        <name>blng__BillingGLRule__c</name>
+        <relationshipLabel><!-- Invoice Lines (Billing GL Rule) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing GL Treatment --></label>
+        <name>blng__BillingGLTreatment__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Rule --></label>
+        <name>blng__BillingRule__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Transaction --></label>
+        <name>blng__BillingTransaction__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Treatment --></label>
+        <name>blng__BillingTreatment__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This indicates the actual number of times the charge is being applied for the line. If you bill a monthly invoice for 45 days this value will be 1.5 --></help>
+        <label><!-- Calculated Quantity --></label>
+        <name>blng__CalculatedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charge Date --></label>
+        <name>blng__ChargeDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charge Type --></label>
+        <name>blng__ChargeType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Credit Note Line --></label>
+        <name>blng__ConvertedCreditNoteLine__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Net of allocations and canceled allocations for credit notes --></help>
+        <label><!-- Credits --></label>
+        <name>blng__Credits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Past Due --></label>
+        <name>blng__DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit Payments --></label>
+        <name>blng__DebitPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debits (Payment Allocations) --></label>
+        <name>blng__DebitsPaymentAllocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debits (Payment Unallocations) --></label>
+        <name>blng__DebitsPaymentUnallocations__c</name>
+    </fields>
+    <fields>
+        <help><!-- Net of allocations and canceled allocations for debit notes --></help>
+        <label><!-- Debits --></label>
+        <name>blng__Debits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>blng__DueDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The last day of the billing period. --></help>
+        <label><!-- End Date --></label>
+        <name>blng__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouped Quantity --></label>
+        <name>blng__GroupedQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Line Type --></label>
+        <name>blng__InvoiceLineState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__InvoiceLineStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Run --></label>
+        <name>blng__InvoiceRun__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>blng__Invoice__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LegalEntityReference --></label>
+        <name>blng__LegalEntityReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Negative Line Conversion --></label>
+        <name>blng__NegativeLineConversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Allocations Against Invoice Lines --></label>
+        <name>blng__NetAllocationsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product --></label>
+        <name>blng__OrderProduct__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue End Date --></label>
+        <name>blng__OverrideInitialRevenueEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Initial Revenue Start Date --></label>
+        <name>blng__OverrideInitialRevenueStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocations Against Debit Note Lines --></label>
+        <name>blng__PaymentsAgainstDebitNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocations Against Invoice Lines --></label>
+        <name>blng__PaymentsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <help><!-- Net payments. All Payments less refunds. --></help>
+        <label><!-- Payments --></label>
+        <name>blng__Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>blng__Product__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>blng__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocations Against Debit Note Lines --></label>
+        <name>blng__RefundsAgainstDebitNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unallocations Against Invoice Lines --></label>
+        <name>blng__RefundsAgainstInvoiceLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Expected Amount --></label>
+        <name>blng__RevenueExpectedAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Liability Amount --></label>
+        <name>blng__RevenueLiabilityAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Most Likely Amount --></label>
+        <name>blng__RevenueMostLikelyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Schedule Status --></label>
+        <name>blng__RevenueScheduleStatus__c</name>
+    </fields>
+    <fields>
+        <help><!-- The first day of the billing period. --></help>
+        <label><!-- Start Date --></label>
+        <name>blng__StartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Invoice Line total (before taxes). --></help>
+        <label><!-- Subtotal --></label>
+        <name>blng__Subtotal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sum of all taxes for this invoice line --></help>
+        <label><!-- Tax --></label>
+        <name>blng__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <help><!-- For use in tax calculations. Destination city for this product. --></help>
+        <label><!-- Tax City --></label>
+        <name>blng__TaxCity__c</name>
+    </fields>
+    <fields>
+        <help><!-- For use in tax calculations. Destination Country for this product. --></help>
+        <label><!-- Tax Country --></label>
+        <name>blng__TaxCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax County (Override) --></label>
+        <name>blng__TaxCounty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error Message --></label>
+        <name>blng__TaxErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Error --></label>
+        <name>blng__TaxError__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Rule --></label>
+        <name>blng__TaxGLRule__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax GL Treatment --></label>
+        <name>blng__TaxGLTreatment__c</name>
+        <relationshipLabel><!-- Invoice Lines (Tax GL Treatment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tax Location Code (Override) --></label>
+        <name>blng__TaxLocationCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Percentage Applied --></label>
+        <name>blng__TaxPercentageApplied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Rule --></label>
+        <name>blng__TaxRule__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- For use in tax calculations. Destination State for this product. --></help>
+        <label><!-- Tax State --></label>
+        <name>blng__TaxState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Status --></label>
+        <name>blng__TaxStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Street 2 --></label>
+        <name>blng__TaxStreet2__c</name>
+    </fields>
+    <fields>
+        <help><!-- For use in tax calculations. Destination Street Address for this product. --></help>
+        <label><!-- Tax Street 1 --></label>
+        <name>blng__TaxStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Treatment --></label>
+        <name>blng__TaxTreatment__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- For use in tax calculations. Destination ZIP Code/Postal Code for this product. --></help>
+        <label><!-- Tax Postal Code --></label>
+        <name>blng__TaxZipCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- SubTotal + Tax --></help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>blng__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Id --></label>
+        <name>blng__UniqueId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>blng__UnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usage Summary --></label>
+        <name>blng__UsageSummary__c</name>
+        <relationshipLabel><!-- Invoice Lines --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

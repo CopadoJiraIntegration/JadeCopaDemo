@@ -178,6 +178,40 @@
         <label>RequestFields</label>
     </fieldSets>
     <fields>
+        <fullName>Approval_Time_Taken_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Time Taken Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>More than 8 Hours</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>4-8 Hours</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>2-4 Hours</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>Less than 2 Hours</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Approved_Rejected_Revoked_Date__c</fullName>
         <description>This is stamped when either the quote is approved, rejected or revoked</description>
         <externalId>false</externalId>

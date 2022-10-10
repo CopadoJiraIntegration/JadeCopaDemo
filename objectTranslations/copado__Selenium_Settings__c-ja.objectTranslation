@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Selenium Settings --></value>
+    </caseValues>
+    <fields>
+        <help>このクレデンシャルは、クイックランのために使用されます。各ユーザーは独自のクイック設定を持っており、この設定に基づいてテストが実行されます。</help>
+        <label><!-- Default Credential --></label>
+        <name>copado__Default_Org_Credential__c</name>
+        <relationshipLabel><!-- Selenium Settings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Desired Capabilities --></label>
+        <name>copado__Desired_Capabilities__c</name>
+    </fields>
+    <fields>
+        <help>Windows / Macプラットフォーム用の表示サイズ。例えば。 Windowsを使用したSauceLabsは小さいサイズだけをサポートします（&lt;1280x1024）</help>
+        <label><!-- Device Screen Size --></label>
+        <name>copado__Device_Screen_Size__c</name>
+        <picklistValues>
+            <masterLabel>Big screen</masterLabel>
+            <translation>大画面</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium screen</masterLabel>
+            <translation>普通のスクリーン</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small screen</masterLabel>
+            <translation>小画面</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Provider --></label>
+        <name>copado__Provider__c</name>
+        <picklistValues>
+            <masterLabel>Browser Stack</masterLabel>
+            <translation>ブラウザスタック</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom/Other</masterLabel>
+            <translation>カスタム/その他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sauce Labs</masterLabel>
+            <translation><!-- Sauce Labs --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Selected Platforms --></label>
+        <name>copado__Selected_Platforms__c</name>
+    </fields>
+    <fields>
+        <help>ローカルプロキシを使用して、VPNの背後にある組織にアクセスできますか？これにより、SauceLabs ConnectまたはBrowserStackローカルテストが可能になります。</help>
+        <label><!-- Webdriver Proxy --></label>
+        <name>copado__Webdriver_Proxy__c</name>
+    </fields>
+    <fields>
+        <help><!-- Eg for Browserstack:
+http://USER:TOKEN@hub.browserstack.com:80/wd/hub
+
+Eg for Saucelabs:
+http://USER:TOKEN@ondemand.saucelabs.com:80/wd/hub/ --></help>
+        <label><!-- Webdriver URL --></label>
+        <name>copado__Webdriver_URL__c</name>
+    </fields>
+    <nameFieldLabel><!-- Selenium Test Provider Name --></nameFieldLabel>
+</CustomObjectTranslation>

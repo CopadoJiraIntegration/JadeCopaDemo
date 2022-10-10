@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払の承認</value>
+    </caseValues>
+    <fields>
+        <help>取引先</help>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>残高:  現在の金額 - 正価支払</help>
+        <label><!-- Balance --></label>
+        <name>blng__Balance__c</name>
+    </fields>
+    <fields>
+        <help>回収する権利のある元金</help>
+        <label><!-- Current Amount --></label>
+        <name>blng__CurrentAmount__c</name>
+    </fields>
+    <fields>
+        <help>回収する権利のある有効終了日</help>
+        <label><!-- Effective End Date --></label>
+        <name>blng__EffectiveEndDate__c</name>
+    </fields>
+    <fields>
+        <help>回収する権利のある有効開始日</help>
+        <label><!-- Effective Start Date --></label>
+        <name>blng__EffectiveStartDate__c</name>
+    </fields>
+    <fields>
+        <help>後続のトランザクションでゲートウェイにより使用されるデータ</help>
+        <label><!-- Gateway Reference Details --></label>
+        <name>blng__GatewayReferenceDetails__c</name>
+    </fields>
+    <fields>
+        <help>支払ゲートウェイにより生成された一意のトランザクション ID</help>
+        <label><!-- Gateway Reference Number --></label>
+        <name>blng__GatewayReferenceNumber__c</name>
+    </fields>
+    <fields>
+        <help>支払金額の合計</help>
+        <label><!-- Net Payments --></label>
+        <name>blng__NetPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>回収する権利のある元金</help>
+        <label><!-- Original Amount --></label>
+        <name>blng__OriginalAmount__c</name>
+    </fields>
+    <fields>
+        <help>承認トランザクションで使用する支払ゲートウェイ</help>
+        <label><!-- Payment Gateway --></label>
+        <name>blng__PaymentGateway__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>支払方法</help>
+        <label><!-- Payment Method --></label>
+        <name>blng__PaymentMethod__c</name>
+        <relationshipLabel><!-- Payment Authorizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>支払の承認ソース</help>
+        <label><!-- Source --></label>
+        <name>blng__Source__c</name>
+    </fields>
+    <fields>
+        <help>支払の承認状況</help>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <nameFieldLabel>支払の承認名</nameFieldLabel>
+</CustomObjectTranslation>

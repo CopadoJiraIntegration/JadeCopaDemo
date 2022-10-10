@@ -31,6 +31,13 @@
                         </valueListItems>
                         <valueListItems>
                             <value>Delete</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.copado__Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Inactive</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Clone</value>

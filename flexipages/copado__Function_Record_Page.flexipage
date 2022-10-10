@@ -151,6 +151,12 @@
                 <identifier>RecordImage_Name__cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Worker_Size__c</fieldItem>
+                <identifier>RecordWorker_Size_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-730db199-f6c9-4431-ae6f-3af1a7f6a41d</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -327,6 +333,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>copado:functionReferences</componentName>
+                <identifier>c_functionReferences1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-13aa141f-7ea4-4af8-aaee-0a233b041e7e</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>parentFieldApiName</name>
                     <value>copado__Function__c.Id</value>
@@ -428,6 +444,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>customTab4</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-13aa141f-7ea4-4af8-aaee-0a233b041e7e</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>References</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

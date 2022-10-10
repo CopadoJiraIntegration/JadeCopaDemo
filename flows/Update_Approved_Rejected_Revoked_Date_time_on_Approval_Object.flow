@@ -2,6 +2,12 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
     <environments>Default</environments>
+    <formulas>
+        <description>To calculate the Approval time taken based on the difference of the time between the approval submitted and approved. Multiplied by 24 to convert it into hours</description>
+        <name>ApprovalTimeTakenCategory</name>
+        <dataType>String</dataType>
+        <expression>IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*24) &lt; 2, &apos;4&apos;,  IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*24) &gt;= 2 &amp;&amp; FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*24) &lt; 4, &apos;3&apos;, IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*24) &gt;= 4 &amp;&amp; FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*24) &lt;= 8, &apos;2&apos;, IF(FLOOR(({!$Flow.CurrentDateTime} - {!$Record.CreatedDate})*24) &gt; 8, &apos;1&apos;, NULL))))</expression>
+    </formulas>
     <interviewLabel>Update Approved Rejected Revoked Date time on Approval Object {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Update Approved Rejected Revoked Date time on Approval Object</label>
     <processMetadataValues>
@@ -28,6 +34,12 @@
         <label>Capture Approved Rejected Revoked Date time on Approval</label>
         <locationX>176</locationX>
         <locationY>311</locationY>
+        <inputAssignments>
+            <field>Approval_Time_Taken_Category__c</field>
+            <value>
+                <elementReference>ApprovalTimeTakenCategory</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>Approved_Rejected_Revoked_Date__c</field>
             <value>

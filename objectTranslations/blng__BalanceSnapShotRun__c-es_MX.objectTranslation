@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ejecución de instantánea de balance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ejecuciones de instantáneas de balance</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apex Job Id --></label>
+        <name>blng__ApexJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance Snapshot Scheduler --></label>
+        <name>blng__BalanceSnapshotScheduler__c</name>
+        <relationshipLabel><!-- Balance SnapShot Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de ejecución de instantánea de ba</nameFieldLabel>
+</CustomObjectTranslation>

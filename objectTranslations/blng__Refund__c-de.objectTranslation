@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Erstattung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Erstattungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Erstattung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Erstattungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Erstattung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Erstattungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Erstattung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Erstattungen</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RefundFieldset --></label>
+        <name>blng__RefundFieldset</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Account --></label>
+        <name>blng__Account__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>blng__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency Amount --></label>
+        <name>blng__BaseCurrencyAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Date --></label>
+        <name>blng__BaseCurrencyFXDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency FX Rate --></label>
+        <name>blng__BaseCurrencyFXRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Currency --></label>
+        <name>blng__BaseCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Finance Book --></label>
+        <name>blng__BillingFinanceBook__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Verweis auf einen Scheck, der in einem externen System für diese Erstattung ausgestellt wurde.</help>
+        <label><!-- Check Number --></label>
+        <name>blng__CheckNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- GL Rule --></label>
+        <name>blng__GLRule__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GL Treatment --></label>
+        <name>blng__GLTreatment__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact Amount --></label>
+        <name>blng__ImpactAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>blng__LegalEntity__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>blng__Notes__c</name>
+    </fields>
+    <fields>
+        <help>Die Transaktions-ID, die zum Identifizieren dieser Erstattung im Zahlungs-Gateway verwendet wird.</help>
+        <label><!-- Payment Gateway Transaction ID --></label>
+        <name>blng__PaymentGatewayTransactionID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Date --></label>
+        <name>blng__RefundDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refund Description --></label>
+        <name>blng__RefundDescription__c</name>
+    </fields>
+    <fields>
+        <help>Der Status &quot;Fehlgeschlagen&quot; bedeutet, dass der Erstattungsposten nicht erstellt werden konnte. Prüfen Sie die Systemkonfiguration.</help>
+        <label><!-- Refund Line Creation Status --></label>
+        <name>blng__RefundLineCreationStatus__c</name>
+    </fields>
+    <fields>
+        <help>Der Modus &quot;Extern&quot; stellt eine Erstattung dar, die in einem externen System vorgenommen wurde, und &quot;Elektronisch&quot; bezeichnet eine Erstattung, die von Salesforce verarbeitet wird. </help>
+        <label><!-- Refund Mode --></label>
+        <name>blng__RefundMode__c</name>
+    </fields>
+    <fields>
+        <help>Die Zahlungsmethode gibt eine Kreditkarte oder Bankinformationen an, die zum Verarbeiten einer Zahlung verwendet werden können.</help>
+        <label><!-- Refund Payment Method --></label>
+        <name>blng__RefundPaymentMethod__c</name>
+        <relationshipLabel><!-- Refunds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Refund Type --></label>
+        <name>blng__RefundType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunded from Credit Note Lines --></label>
+        <name>blng__RefundedfromCreditNoteLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refunded from Payments --></label>
+        <name>blng__RefundedfromPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>blng__Status__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Erstattungsnummer</nameFieldLabel>
+</CustomObjectTranslation>
