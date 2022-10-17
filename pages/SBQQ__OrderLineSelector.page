@@ -98,7 +98,7 @@
         }
 
         function setScale(num, scale) {
-            return parseInt(num).toFixed(scale);
+            return Number(num).toFixed(scale);
         }
 
         function disableOnClick(input) {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Cloud Einstein</label>
+    <license>SalesCloudEinsteinPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AccountIQUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AutomatedDataEntry</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AutomaticActivityCapture</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LeadScoreUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>OpportunityIQUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>OpportunityScoreUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SCEViewAllData</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SalesforceIQInbox</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>VideoConferenceZoomUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewForecastingPredictive</name>
+    </userPermissions>
+</PermissionSet>

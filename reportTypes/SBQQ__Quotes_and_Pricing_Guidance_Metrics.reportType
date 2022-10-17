@@ -1197,26 +1197,6 @@
             <field>SBQQ__WatermarkShown__c</field>
             <table>SBQQ__Quote__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Business_Profile__c</field>
-            <table>SBQQ__Quote__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>is_Approved__c</field>
-            <table>SBQQ__Quote__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Quote_Life_Cycle_In_Days__c</field>
-            <table>SBQQ__Quote__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Accepted_Rejected_Date__c</field>
-            <table>SBQQ__Quote__c</table>
-        </columns>
         <masterLabel>Quotes</masterLabel>
     </sections>
 </ReportType>

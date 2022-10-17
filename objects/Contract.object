@@ -777,7 +777,7 @@
         <fullName>SBQQ__SubscriptionQuantitiesCombined__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Amendments.</description>
+        <description>Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Legacy Amendments.</description>
         <externalId>false</externalId>
         <inlineHelpText>Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Amendments.</inlineHelpText>
         <label>Combine Subscription Quantities</label>

@@ -236,6 +236,8 @@
 								<apex:inputField value="{!generalSettings.SBQQ__HideUncalcQuoteWarning__c}"/>
 								<!-- Enable Manual Edits for Usage Based Pricing products-->
 								<apex:inputField value="{!generalSettings.SBQQ__QuoteLineEditsforUsageBasedPricing__c}" styleClass="enableManualEditsCB" />
+								<!-- Enable CPQ + C2C Integration in the CPQ Package. This is the enablement / kill switch -->
+								<apex:inputField value="{!generalSettings.SBQQ__UseIntegrationUserForCalculations__c}"/>
 							</apex:pageBlockSection>
 
 							<apex:pageBlockSection columns="1" id="calculatorOptions">
@@ -430,6 +432,7 @@
 								<apex:inputField value="{!generalSettings.SBQQ__GlobalHeaderPermUsed__c}"/>
 								<!-- External Configurator URL -->
 								<apex:inputField styleClass="externalURL" value="{!generalSettings.SBQQ__ExternalConfiguratorURL__c}"/>
+								
 								<!-- Service Region -->
 								<apex:pageBlockSectionItem helpText="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__ServiceRegion__c.inLineHelpText}">
 									<apex:outputLabel value="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__ServiceRegion__c.label}"/>
@@ -445,10 +448,10 @@
                                 <apex:inputField value="{!generalSettings.SBQQ__OpenSearchFilterByDefault__c}"/>
 								<!-- Call configuration services ansychronously for large bundles, off by default-->
 								<apex:inputField value="{!generalSettings.SBQQ__EnableLargeConfigurations__c}"/>
-								<!-- Enable Polymer 3 UI -->
-								<apex:inputField value="{!generalSettings.SBQQ__EnablePolymer3UI__c}"/>
 								<!-- Hide Product Feature when no options are visible -->
 								<apex:inputField value="{!generalSettings.SBQQ__HideFeatureNoOptions__c}"/>
+								<!-- Apply nested bundles for external configurator -->
+								<apex:inputField styleClass="extConfigNestedBundles" value="{!generalSettings.SBQQ__ExternalConfiguratorNestedBundles__c}"/>
 							</apex:pageBlockSection>
 							<!-- Post Install Steps -->
 							<apex:pageBlockSection columns="1" id="postInstallScripts">
@@ -530,11 +533,14 @@
 	let productVisualizationCB = document.getElementsByClassName("productVisualizationCB")[0];
 	let expandCollapseCB = document.getElementsByClassName("expandCollapseEnabledCB")[0];
 	const usageBasedPricingEnabledCB = document.getElementsByClassName('usageBasedPricingEnabledCB')[0];
+	const externalConfiguratorNestedBundles = document.getElementsByClassName('extConfigNestedBundles')[0];
+	const thirdParty = document.getElementsByClassName("thirdParty")[0];
+	const externalConfigNestedBundles = document.getElementsByClassName('extConfigNestedBundles')[0];
 
 	changeTheme();
-	toggleExternalURL();
 	toggleBundleSettings();
 	toggleManualEditsForUbpSettings();
+	disableExternalConfiguratorFieldsOnLoad();
 
 	themeSelector.addEventListener("change", function() {
 		changeTheme();
@@ -546,6 +552,7 @@
 	productVisualizationCB.addEventListener("change", toggleBundleSettings);
 	expandCollapseCB.addEventListener("change", toggleBundleSettings);
 	usageBasedPricingEnabledCB.addEventListener('change', toggleManualEditsForUbpSettings);
+	externalConfiguratorNestedBundles.addEventListener('change', toggleExternalConfiguratorNestedBundles);
 
 	function changeTheme() {
 		if(themeSelector.value !== ''){
@@ -554,15 +561,58 @@
 		}
 	}
 
+	/**
+	 * When the page loads...
+	 * °disable the third party configurator checkbox if the externalURL field is empty
+	 * °disable the third party configurator checkbox if the nested bundle external configurator checkbox is checked
+	 * °disable the nested bundle external configurator checkbox if the externalURL field is empty
+	 *
+	 */
+	function disableExternalConfiguratorFieldsOnLoad() {
+		if (externalURL.value === '' || externalURL.value === null) {
+			thirdParty.disabled = true;
+			externalConfigNestedBundles.disabled = true;
+		}
+		else {
+			// Make sure the third party setting is disabled if external config nested bundles is enabled
+			thirdParty.disabled = externalConfigNestedBundles.checked === true || externalConfigNestedBundles.checked === 'checked';
+			externalConfigNestedBundles.disabled = false;
+		}
+	}
+
+	/**
+	 * When the external configurator URL field is changed...
+	 * °disable and uncheck the third party configurator checkbox if the externalURL field is empty
+	 * °disable and uncheck the nested bundle external configurator checkbox if the externalURL field is empty
+	 */
 	function toggleExternalURL() {
-	    let thirdParty = document.getElementsByClassName("thirdParty")[0];
-	    if(externalURL.value === '' || externalURL.value === null) {
-	        thirdParty.disabled = true;
-	        thirdParty.value = false;
-        } else {
-	        thirdParty.disabled = false;
-        }
-    }
+		if (externalURL.value === '' || externalURL.value === null) {
+			thirdParty.disabled = true;
+			thirdParty.value = false;
+			thirdParty.checked = false;
+			externalConfigNestedBundles.disabled = true;
+			externalConfigNestedBundles.value = false;
+			externalConfigNestedBundles.checked = false;
+		} else {
+			// Make sure the third party setting is disabled if external config nested bundles is enabled
+			thirdParty.disabled = externalConfigNestedBundles.checked === true || externalConfigNestedBundles.checked === 'checked';
+			externalConfigNestedBundles.disabled = false;
+		}
+	}
+
+	/**
+	 * When the external configurator nested bundles field is changed...
+	 * °disable and uncheck the third party configurator checkbox if the external configurator nested bundles field is checked
+	 */
+	function toggleExternalConfiguratorNestedBundles() {
+		if (externalConfigNestedBundles.checked === true || externalConfigNestedBundles.checked === 'checked') {
+			thirdParty.disabled = true;
+			thirdParty.checked = true;
+			thirdParty.value = true;
+		} else {
+			thirdParty.disabled = false;
+		}
+	}
 
 	function buttonPending(btn) {
 		btn.disabled = true;

@@ -9,6 +9,12 @@
         <fullName>ActiveTime</fullName>
     </fields>
     <fields>
+        <fullName>AcwExtensionCount</fullName>
+    </fields>
+    <fields>
+        <fullName>AcwExtensionDuration</fullName>
+    </fields>
+    <fields>
         <fullName>AfterConversationActualTime</fullName>
     </fields>
     <fields>
