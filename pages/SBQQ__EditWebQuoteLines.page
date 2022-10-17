@@ -81,11 +81,11 @@
 		<div id="mainContent">
 			<form id="mainForm" name="mainForm">
 			<c:quoteLineEditor headerTitle="Edit Quote Products" headerSubtitle="{!SBQQ__WebQuote__c.Name}" objectNames="{!$ObjectType.SBQQ__WebQuote__c.name},{!$ObjectType.SBQQ__WebQuoteLine__c.name}"/>
-			<c:productLookup headerTitle="{!$Label.SBQQ__lbl_product_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
-			<c:productConfigurator headerTitle="{!$Label.SBQQ__lbl_configure_products}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
-			<c:productUpgrader headerTitle="{!$Label.SBQQ__lbl_asset_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
-			<c:subscriptionLookup headerTitle="{!$Label.SBQQ__lbl_subscription_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
-			<c:assetLookup headerTitle="{!$Label.SBQQ__lbl_asset_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}" assetFromAccount="false"/>
+			<c:productLookup headerTitle="{!$Label.sbqq__lbl_product_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
+			<c:productConfigurator headerTitle="{!$Label.sbqq__lbl_configure_products}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
+			<c:productUpgrader headerTitle="{!$Label.sbqq__lbl_asset_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
+			<c:subscriptionLookup headerTitle="{!$Label.sbqq__lbl_subscription_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}"/>
+			<c:assetLookup headerTitle="{!$Label.sbqq__lbl_asset_selection}" headerSubtitle="{!SBQQ__WebQuote__c.Name}" assetFromAccount="false"/>
 			</form>
 		</div>
     </div>

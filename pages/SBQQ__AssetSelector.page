@@ -1,4 +1,4 @@
-<apex:page standardController="Account"  docType="html-5.0" showheader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_asset_selection}">
+<apex:page standardController="Account"  docType="html-5.0" showheader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.sbqq__lbl_asset_selection}">
 	<apex:includeScript value="/soap/ajax/31.0/connection.js"/>
 	<apex:includeScript value="/soap/ajax/31.0/apex.js"/>
     <apex:includeScript value="{!$Resource.SBQQ__jQuery}"/>
@@ -36,21 +36,21 @@
         <apex:outputPanel rendered="{!NOT(ISBLANK($CurrentPage.parameters.oppId))}">
             <div id="mainContent" rendered="">
                 <form id="mainForm" name="mainForm">
-                    <c:assetLookup headerTitle="{!$Label.SBQQ__lbl_asset_selection}" accountId="{!$CurrentPage.parameters.accountId}" assetFromAccount="true" assetAmend="true"/>
+                    <c:assetLookup headerTitle="{!$Label.sbqq__lbl_asset_selection}" accountId="{!$CurrentPage.parameters.accountId}" assetFromAccount="true" assetAmend="true"/>
                 </form>
             </div>
         </apex:outputPanel>
         <apex:outputPanel rendered="{!AND(ISBLANK($CurrentPage.parameters.isAmend), ISBLANK($CurrentPage.parameters.oppId))}">
             <div id="mainContent" rendered="">
                 <form id="mainForm" name="mainForm">
-                    <c:assetLookup headerTitle="{!$Label.SBQQ__lbl_asset_selection}" headerSubtitle="{!Account.Name}" accountId="{!Account.Id}" assetFromAccount="true" assetAmend="false"/>
+                    <c:assetLookup headerTitle="{!$Label.sbqq__lbl_asset_selection}" headerSubtitle="{!Account.Name}" accountId="{!Account.Id}" assetFromAccount="true" assetAmend="false"/>
                 </form>
             </div>
         </apex:outputPanel>
         <apex:outputPanel rendered="{!AND(NOT(ISBLANK($CurrentPage.parameters.isAmend)), ISBLANK($CurrentPage.parameters.oppId))}">
             <div id="mainContent" rendered="">
                 <form id="mainForm" name="mainForm">
-                    <c:assetLookup headerTitle="{!$Label.SBQQ__lbl_asset_selection}" headerSubtitle="{!Account.Name}" accountId="{!Account.Id}" assetFromAccount="true" assetAmend="true"/>
+                    <c:assetLookup headerTitle="{!$Label.sbqq__lbl_asset_selection}" headerSubtitle="{!Account.Name}" accountId="{!Account.Id}" assetFromAccount="true" assetAmend="true"/>
                 </form>
             </div>
         </apex:outputPanel>

@@ -22,4 +22,13 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Salesforce CPQ Admin User Access</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>SBQQ__PriceSchedule__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
 </PermissionSet>

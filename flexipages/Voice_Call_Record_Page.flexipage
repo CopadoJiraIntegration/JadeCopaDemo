@@ -146,6 +146,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>opencti:acwTimer</componentName>
+                <identifier>opencti_acwTimer1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>scrt:conversationBody</componentName>
                 <identifier>scrt_conversationBody1</identifier>
             </componentInstance>

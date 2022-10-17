@@ -6,5 +6,6 @@
     <enableSCVBYOT>false</enableSCVBYOT>
     <enableSCVExternalTelephony>false</enableSCVExternalTelephony>
     <enableServiceCloudVoice>false</enableServiceCloudVoice>
+    <enableVendorQueueManagement>false</enableVendorQueueManagement>
     <enableVoiceInGovCloudOptIn>false</enableVoiceInGovCloudOptIn>
 </ServiceCloudVoiceSettings>

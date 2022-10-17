@@ -1197,11 +1197,6 @@
             <field>SBQQ__WatermarkShown__c</field>
             <table>SBQQ__Quote__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Business_Profile__c</field>
-            <table>SBQQ__Quote__c</table>
-        </columns>
         <masterLabel>Quotes</masterLabel>
     </sections>
 </ReportType>

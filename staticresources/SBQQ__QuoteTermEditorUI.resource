@@ -154,7 +154,7 @@ QuoteTermEditorCtrl.prototype.onClose = function () {
 
 QuoteTermEditorCtrl.prototype.onRevert = function () {
 	sb.dialog.confirm(
-		this.labels.dirty_message + ' ' + this.labels.confirm_message,
+		this.labels.revert_message + ' ' + this.labels.confirm_message,
 		{
 			ok: this.labels.ok,
 			cancel: this.labels.cancel

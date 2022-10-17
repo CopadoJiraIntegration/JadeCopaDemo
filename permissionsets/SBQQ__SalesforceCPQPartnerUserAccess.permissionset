@@ -153,4 +153,13 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Salesforce CPQ Partner User Access</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SBQQ__PriceSchedule__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
 </PermissionSet>

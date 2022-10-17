@@ -5,11 +5,11 @@
     <autoInstallApps>true</autoInstallApps>
     <canAccessAnalyticsViaAPI>false</canAccessAnalyticsViaAPI>
     <canAnnotateDashboards>false</canAnnotateDashboards>
-    <canEnableBYOMZeroDayScoring>false</canEnableBYOMZeroDayScoring>
     <canEnableSavedView>true</canEnableSavedView>
     <canExploreDataConversationally>false</canExploreDataConversationally>
     <canShareAppsWithCommunities>false</canShareAppsWithCommunities>
     <canViewThumbnailAssets>false</canViewThumbnailAssets>
+    <enableAmazonRedshiftOutputConnector>false</enableAmazonRedshiftOutputConnector>
     <enableAnalyticsSharingEnable>true</enableAnalyticsSharingEnable>
     <enableAutoCompleteCombo>true</enableAutoCompleteCombo>
     <enableAzureDLGen2OutputConnector>false</enableAzureDLGen2OutputConnector>
@@ -52,6 +52,7 @@
     <enableWaveSharingInheritance>true</enableWaveSharingInheritance>
     <enableWaveSqlCFIndexing>false</enableWaveSqlCFIndexing>
     <enableWaveTrendedDatasetCleanup>true</enableWaveTrendedDatasetCleanup>
+    <isHighVolumePushbackEnabled>false</isHighVolumePushbackEnabled>
     <maxHoursAppInProgress>48</maxHoursAppInProgress>
     <recipeDirectDataPref>true</recipeDirectDataPref>
     <recipeFiscalPref>false</recipeFiscalPref>
