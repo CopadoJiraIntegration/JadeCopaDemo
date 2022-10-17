@@ -12,7 +12,6 @@ global with sharing class SiteLoginController {
         System.debug('--end to end testing---');
         System.debug('--Demo for Commit Changes---');
         System.debug('--Demo for Commit Changes part 2---');
-        System.debug('--Before final demo');
         return Site.login(username, password, startUrl);
     }
     

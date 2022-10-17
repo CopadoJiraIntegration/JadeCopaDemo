@@ -13,7 +13,6 @@
     <customButtons>SBQQ__ImportLines</customButtons>
     <customButtons>SBQQ__ModifyQuoteTerms</customButtons>
     <customButtons>SBQQ__CalculateQuote</customButtons>
-    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>false</detailHeading>
@@ -78,6 +77,18 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Business_Profile__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>is_Approved__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Quote_Life_Cycle_In_Days__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Accepted_Rejected_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -600,11 +611,6 @@
             <sortOrder>27</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>SBQQ__ImportLines</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>28</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>SBQQ__IncludeDocument</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>29</sortOrder>
@@ -628,6 +634,11 @@
             <actionName>Preview_Approval</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>33</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>SBQQ__ImportLines</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>28</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
@@ -738,6 +749,14 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Favorites__c.Original_Quote__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CreatedDate</fields>
+        <fields>StepStatus</fields>
+        <fields>OriginalActor</fields>
+        <fields>Actor</fields>
+        <fields>Comments</fields>
+        <relatedList>RelatedProcessHistoryList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
