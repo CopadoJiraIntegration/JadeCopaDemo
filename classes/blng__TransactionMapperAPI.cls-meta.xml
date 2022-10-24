@@ -3,7 +3,7 @@
     <apiVersion>46.0</apiVersion>
     <packageVersions>
         <majorNumber>240</majorNumber>
-        <minorNumber>1</minorNumber>
+        <minorNumber>2</minorNumber>
         <namespace>blng</namespace>
     </packageVersions>
     <status>Active</status>

@@ -429,6 +429,15 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>New_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>New Account</description>
+        <externalId>false</externalId>
+        <label>New Account</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>NumberOfEmployees</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>

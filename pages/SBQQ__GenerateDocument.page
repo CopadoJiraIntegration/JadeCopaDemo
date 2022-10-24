@@ -1,4 +1,4 @@
-<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteDocumentController,SBQQ.QueueableJobCheckerExt" docType="html-5.0" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader) && formFactor == 'desktop'}" standardStylesheets="false" title="{!$Label.sbqq__lbl_generate_document}">
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteDocumentController,SBQQ.QueueableJobCheckerExt" docType="html-5.0" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader) && formFactor == 'desktop'}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_generate_document}">
 	<apex:variable var="stylesheet" value="{!IF(formFactor == 'desktop', 'sb', 'MobileCSS')}" />
 	<apex:stylesheet value="{!$Resource[stylesheet]}"/>
 	<c:theme formFactor="{!formFactor}"/>
@@ -41,7 +41,7 @@
 
 	<div id="qq" style="display: none" class="sb">
 		<div id="sbDocGenPreview" ng-controller="QuoteDocumentGeneratorCtrl" ng-init="onLoad('{!Quote__c.Id}', 'generate')">
-			<c:pageHeader title="{!$Label.sbqq__lbl_generate_document}" subtitle="{!SBQQ__Quote__c.Name}" formFactor="{!formFactor}" iconName="sf-icon-document" customTheme="18">
+			<c:pageHeader title="{!$Label.SBQQ__lbl_generate_document}" subtitle="{!SBQQ__Quote__c.Name}" formFactor="{!formFactor}" iconName="sf-icon-document" customTheme="18">
 				<apex:outputPanel layout="none" rendered="{!formfactor != 'phone'}">
 					<div class="sbButtons">
 						<button ng-click="onPreview()" class="sbBtn">{!$Label.lbl_preview}</button>

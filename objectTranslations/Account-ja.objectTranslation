@@ -58,6 +58,10 @@
         <name>NetSuiteCustomerID__c</name>
     </fields>
     <fields>
+        <label><!-- New Account --></label>
+        <name>New_Account__c</name>
+    </fields>
+    <fields>
         <label><!-- Oracle Customer ID --></label>
         <name>OracleCustomerID__c</name>
     </fields>

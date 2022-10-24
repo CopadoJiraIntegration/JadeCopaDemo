@@ -3,7 +3,7 @@
     <apiVersion>44.0</apiVersion>
     <packageVersions>
         <majorNumber>240</majorNumber>
-        <minorNumber>2</minorNumber>
+        <minorNumber>3</minorNumber>
         <namespace>SBQQ</namespace>
     </packageVersions>
     <status>Active</status>

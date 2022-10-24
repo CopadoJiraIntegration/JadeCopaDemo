@@ -1,4 +1,4 @@
-<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteTermEditorController,SBQQ.ServiceRouter" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" id="QuoteTermEditor" standardStylesheets="false" title="{!$Label.sbqq__lbl_modify_term}">
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteTermEditorController,SBQQ.ServiceRouter" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" id="QuoteTermEditor" standardStylesheets="false" title="{!$Label.SBQQ__lbl_modify_term}">
 	<apex:variable var="stylesheet" value="{!IF(formFactor == 'desktop', 'sb', 'MobileCSS')}"/>
 	<apex:stylesheet value="{!$Resource[stylesheet]}"/>
 	<apex:stylesheet value="{!URLFOR($Resource.SBQQ__dialog,'dialog.css')}"/>
@@ -54,7 +54,7 @@
 
 	<div id="qq" style="display: none" class="sb">
 		<div id="sbQuoteTermEditor" ng-controller="QuoteTermEditorCtrl" ng-init="onLoad('{!Quote__c}')">
-			<c:pageHeader title="{!$Label.sbqq__lbl_modify_term}"
+			<c:pageHeader title="{!$Label.SBQQ__lbl_modify_term}"
 						  subtitle="{!SBQQ__Quote__c.Name}"
 						  formFactor="{!formFactor}"
 						  iconName="sf-icon-document"

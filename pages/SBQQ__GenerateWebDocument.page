@@ -32,7 +32,7 @@
 
     <div id="qq" style="display: none" class="sb">
 		<div id="sbDocGenPreview" ng-controller="QuoteDocumentGeneratorCtrl" ng-init="onLoad('{!WebQuote__c.Id}')">
-			<c:pageHeader title="{!$Label.sbqq__lbl_generate_document}" subtitle="{!SBQQ__WebQuote__c.Name}" formFactor="{!formFactor}" customTheme="18">
+			<c:pageHeader title="{!$Label.SBQQ__lbl_generate_document}" subtitle="{!SBQQ__WebQuote__c.Name}" formFactor="{!formFactor}" customTheme="18">
         <div class="sbButtons">
           <button ng-click="onPreview()" class="sbBtn">{!$Label.lbl_preview}</button>
           <button ng-click="onEmailMe()" class="sbBtn">{!$Label.lbl_email_me}</button>

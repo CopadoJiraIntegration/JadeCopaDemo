@@ -21,11 +21,11 @@ public class Sample {
                 
         list<string> lstCountry = new list<string>{'Germany'};     
         // Query the active user that are having role assigned from system
-        list<User> lstUser = [select id, Name from User where UserRoleId != null and isActive = true];
+        list<User> lstUser = [select id, Name from User where UserRoleId != null and isActive = true limit 1 ];
         
         for(string country: lstCountry){
             for(User usr: lstUser){  
-                if(usr.Name != 'Integration User' && usr.Name != 'CPQ User'){
+                //if(usr.Name != 'Integration User' && usr.Name != 'CPQ User'){
                     Account acc = new Account();
                     acc.Name = country.substring(0, 3) + '_'+ 'Account'+'_'+ DateTime.now().millisecondGMT() + DateTime.now().minute() +DateTime.now().hour()+Date.today().day()+Date.today().month()+Date.today().year();
                     system.debug('Acc Name : '+ acc.Name);
@@ -39,7 +39,7 @@ public class Sample {
                     system.debug('acc owner name : '+ usr.Name);
                     lstAccName.add(acc.Name);
                     lstAccToInsert.add(acc);
-                } 
+                //} 
             }    
         }
         
@@ -144,9 +144,9 @@ public class Sample {
             }else {
                 qt.SBQQ__Status__c = lstQuoteStatuses.get(Integer.valueof((Math.random() * (lstQuoteStatuses.size()-1)))); 
             }
-            qt.SBQQ__Opportunity2__c = Oppty.Id;
+            qt.SBQQ__Opportunity2__c = oppty.Id;
             qt.SBQQ__Primary__c = true;
-            qt.SBQQ__PriceBook__c = Oppty.Pricebook2Id;
+            qt.SBQQ__PriceBook__c = oppty.Pricebook2Id;
             
             lstQuoteToInsert.add(qt);
         }
@@ -154,9 +154,9 @@ public class Sample {
         //Insert Quotes
         if(!lstQuoteToInsert.isEmpty()){
             //insert lstQuoteToInsert;
-            SBQQ.TriggerControl.disable();
+            ////SBQQ.TriggerControl.disable();
             Database.SaveResult[] srList = Database.insert(lstQuoteToInsert, false);
-			SBQQ.TriggerControl.enable();		
+			//SBQQ.TriggerControl.enable();		
             for(Database.SaveResult sr : srList) {
                 if(sr.isSuccess()){
                     // Operation was successful, so get the ID of the record that was processed
@@ -257,6 +257,7 @@ public class Sample {
             opp.SBQQ__PrimaryQuote__c = mapOppIdToQtId.get(opp.id);
             opp.SBQQ__Ordered__c = true;
             lstOppsToUpdate_1.add(opp);
+            
         }
         
         update lstOppsToUpdate_1;
@@ -268,8 +269,8 @@ public class Sample {
             lstOppsToUpdate_2.add(opp);
         }
         
-        //update lstOppsToUpdate_2;
-        */
+        update lstOppsToUpdate_2;*/
+        
         
         
         /*

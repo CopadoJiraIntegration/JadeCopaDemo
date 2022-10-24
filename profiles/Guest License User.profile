@@ -6323,6 +6323,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>blng__OrderAmendmentUtil</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>blng__OrderDAO</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -6336,6 +6340,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>blng__OrderDomainTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>blng__OrderItemBillingSummary</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -15908,6 +15916,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.NetSuiteCustomerID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.New_Account__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
