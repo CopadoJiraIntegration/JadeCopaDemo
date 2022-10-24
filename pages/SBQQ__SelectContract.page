@@ -1,20 +1,20 @@
-<apex:page controller="SBQQ.ContractSelectorController" tabStyle="SBQQ__Quote__c" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" standardStylesheets="false" title="{!$Label.SBQQ__lbl_contract_selector}">
+<apex:page controller="SBQQ.ContractSelectorController" tabStyle="SBQQ__Quote__c" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" standardStylesheets="false" title="{!$Label.sbqq__lbl_contract_selector}">
 	<apex:stylesheet value="{!$Resource['sb']}"/>
 	<c:theme />
 	<div id="sbSelectContract" class="sb">
 		<apex:form >
-			<c:pageHeader title="{!$Label.SBQQ__lbl_existing_contracts}" subtitle="{!quote.Name}" iconName="sf-icon-contract-1">
+			<c:pageHeader title="{!$Label.sbqq__lbl_existing_contracts}" subtitle="{!quote.Name}" iconName="sf-icon-contract-1">
 				<div class="sbButtons">
-		          	<apex:commandButton styleClass="sbBtn" action="{!onSelect}" value="{!$Label.SBQQ__lbl_select}"/>
-					<apex:commandButton styleClass="sbBtn" action="{!onSkip}" value="{!$Label.SBQQ__lbl_skip}"/>
-					<apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="{!$Label.SBQQ__lbl_cancel}"/>
+		          	<apex:commandButton styleClass="sbBtn" action="{!onSelect}" value="{!$Label.sbqq__lbl_select}"/>
+					<apex:commandButton styleClass="sbBtn" action="{!onSkip}" value="{!$Label.sbqq__lbl_skip}"/>
+					<apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="{!$Label.sbqq__lbl_cancel}"/>
 		        </div>
 			</c:pageHeader>
 			<div class="sbBody">
         		<div class="sbPageBlockSection">
         			<apex:pageMessages />
 					<apex:inputHidden id="selectedContractId" value="{!selectedContractId}"/>
-					<c:pageBlockSection title="{!$Label.SBQQ__lbl_select_contract}">
+					<c:pageBlockSection title="{!$Label.sbqq__lbl_select_contract}">
 						<table class="sbTable" border="0" cellspacing="0" cellpadding="0" width="100%">
 							<thead class="dr-table-thead">
 								<tr class="headerRow">

@@ -1,15 +1,15 @@
-<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.ImportLinesController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" standardStylesheets="false" title="{!$Label.SBQQ__lbl_import_lines}">
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.ImportLinesController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" standardStylesheets="false" title="{!$Label.sbqq__lbl_import_lines}">
     <apex:stylesheet value="{!IF(formfactor == 'desktop', $Resource['sb'], $Resource['MobileCSS'])}"/>
     <c:theme formFactor="{!formFactor}"/>
     <div id="sbImportLines" class="sb">
         <apex:form >
-            <c:pageHeader title="{!$Label.SBQQ__lbl_upload_quote_lines}" subtitle="{!SBQQ__Quote__c.Name}" iconName="sf-icon-download resize">
+            <c:pageHeader title="{!$Label.sbqq__lbl_upload_quote_lines}" subtitle="{!SBQQ__Quote__c.Name}" iconName="sf-icon-download resize">
                 <div class="sbButtons">
                     <!--Import button-->
-                    <apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_import}" id="Submit" onClick="importOnClick(this); return false;" />
+                    <apex:commandButton styleClass="sbBtn" value="{!$Label.sbqq__lbl_import}" id="Submit" onClick="importOnClick(this); return false;" />
                     <apex:actionFunction name="doSubmit" action="{!onUploadFile}" />
                     <!--Cancel Button-->
-                    <apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_cancel}" action="{!onCancel}"/>
+                    <apex:commandButton styleClass="sbBtn" value="{!$Label.sbqq__lbl_cancel}" action="{!onCancel}"/>
                 </div>
             </c:pageHeader>
 
@@ -18,11 +18,11 @@
             <div class="sbBody">
                 <div class="sbPageBlockSection">
 
-                    <c:pageBlockSection title="{!$Label.SBQQ__msg_choose_quote_line_import}">
+                    <c:pageBlockSection title="{!$Label.sbqq__msg_choose_quote_line_import}">
                         <div id="sbImportOptions">
                             <apex:actionRegion >
                                 <fieldset>
-                                    <apex:outputLabel value="{!$Label.SBQQ__msg_import_format_select}"/>
+                                    <apex:outputLabel value="{!$Label.sbqq__msg_import_format_select}"/>
                                     <apex:selectList value="{!selectedFormatId}" size="1">
                                         <apex:selectOption itemValue="" itemLabel="---None---"/>
                                         <apex:selectOptions value="{!formatOptions}"/>
@@ -30,7 +30,7 @@
                                     </apex:selectList>
                                 </fieldset>
                                 <fieldset>
-                                    <apex:outputLabel value="{!$Label.SBQQ__msg_import_required_csv_column_tip}"/>
+                                    <apex:outputLabel value="{!$Label.sbqq__msg_import_required_csv_column_tip}"/>
                                     <apex:panelGroup >
                                         <apex:outputPanel id="Details">{!selectedFormatColumns}</apex:outputPanel>
                                     </apex:panelGroup>
@@ -39,21 +39,21 @@
 
                             <apex:outputPanel rendered="{!showGroup}">
                                 <fieldset>
-                                    <apex:outputLabel value="{!$Label.SBQQ__lbl_quote_line_group_to_import}"/>
+                                    <apex:outputLabel value="{!$Label.sbqq__lbl_quote_line_group_to_import}"/>
                                     <apex:selectList value="{!selectedQuoteLineGroupId}" size="1">
-                                        <apex:selectOption itemValue="" itemLabel="{!$Label.SBQQ__lbl_create_new_name}"/>
+                                        <apex:selectOption itemValue="" itemLabel="{!$Label.sbqq__lbl_create_new_name}"/>
                                         <apex:selectOptions value="{!quoteLineGroupOptions}"/>
                                     </apex:selectList>
                                 </fieldset>
 
                                 <fieldset>
-                                    <apex:outputLabel value="{!$Label.SBQQ__lbl_new_group_name}"/>
+                                    <apex:outputLabel value="{!$Label.sbqq__lbl_new_group_name}"/>
                                     <apex:inputText value="{!newGroupName}" maxlength="80"/>
                                 </fieldset>
                             </apex:outputPanel>
 
                             <fieldset>
-                                <apex:outputLabel value="{!$Label.SBQQ__lbl_browse_import_file}"/>
+                                <apex:outputLabel value="{!$Label.sbqq__lbl_browse_import_file}"/>
                                 <apex:inputFile value="{!importFile.Body}" contentType="{!importFile.ContentType}" fileName="{!importFile.Name}" fileSize="{!importFile.BodyLength}" accept=".csv"/>
                             </fieldset>
                         </div>
@@ -71,7 +71,7 @@
              */
             function importOnClick (objImportBtn) {
                 objImportBtn.disabled = true;
-                objImportBtn.value = '{!JSINHTMLENCODE($Label.SBQQ__lbl_importing)}';
+                objImportBtn.value = '{!JSINHTMLENCODE($Label.sbqq__lbl_importing)}';
                 doSubmit();
             }
         </script>

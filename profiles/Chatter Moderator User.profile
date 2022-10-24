@@ -3764,6 +3764,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TemperatureConverter</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TemperatureConverterTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>acslider__BR_Carousel</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -5476,6 +5484,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>blng__OrderAmendmentUtil</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>blng__OrderDAO</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -5489,6 +5501,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>blng__OrderDomainTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>blng__OrderItemBillingSummary</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

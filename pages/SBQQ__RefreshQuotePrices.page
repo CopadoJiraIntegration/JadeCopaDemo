@@ -1,12 +1,12 @@
-<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.RefreshQuotePricesController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" recordSetVar="quotes" standardStylesheets="false" title="{!$Label.SBQQ__lbl_refresh_quote_prices}">
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.RefreshQuotePricesController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" recordSetVar="quotes" standardStylesheets="false" title="{!$Label.sbqq__lbl_refresh_quote_prices}">
 	<apex:stylesheet value="{!$Resource['sb']}"/>
 	<c:theme />
 	<div id="sbRefreshPrices" class="sb">
 		<div class="sbForm"><apex:form >
-			<c:pageHeader title="{!$Label.SBQQ__lbl_refresh_quote_prices}" subtitle="" iconName="sf-icon-refresh resize">
+			<c:pageHeader title="{!$Label.sbqq__lbl_refresh_quote_prices}" subtitle="" iconName="sf-icon-refresh resize">
 				<div class="sbButtons">
-					<apex:commandButton styleClass="sbBtn" rendered="{!hasNewPrices || hasNewPricebook}" action="{!refreshPrices}" value="{!$Label.SBQQ__lbl_refresh}" />
-					<apex:commandButton styleClass="sbBtn" action="{!cancel}" value="{!$Label.SBQQ__lbl_cancel}" />
+					<apex:commandButton styleClass="sbBtn" rendered="{!hasNewPrices || hasNewPricebook}" action="{!refreshPrices}" value="{!$Label.sbqq__lbl_refresh}" />
+					<apex:commandButton styleClass="sbBtn" action="{!cancel}" value="{!$Label.sbqq__lbl_cancel}" />
 				</div>
 			</c:pageHeader>
 			<apex:pageMessages />
@@ -42,8 +42,8 @@
 								<th><apex:outputText value="{!$ObjectType.SBQQ__Quote__c.fields.Name.label}"/></th>
 								<th><apex:outputText value="{!$ObjectType.SBQQ__QuoteLine__c.fields.Name.label}"/></th>
 								<th><apex:outputText value="{!$ObjectType.SBQQ__QuoteLine__c.fields.SBQQ__ProductName__c.label}"/></th>
-								<th><apex:outputText value="{!$Label.SBQQ__lbl_original_price}"/></th>
-								<th><apex:outputText value="{!$Label.SBQQ__lbl_updated_price}"/></th>
+								<th><apex:outputText value="{!$Label.sbqq__lbl_original_price}"/></th>
+								<th><apex:outputText value="{!$Label.sbqq__lbl_updated_price}"/></th>
 							</tr>
 						</thead>
 						<apex:repeat var="quoteId" value="{!mapQuoteIdQuoteLineList}">

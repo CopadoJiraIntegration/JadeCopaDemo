@@ -2,12 +2,12 @@
  - Created by jfeingold on 7/11/16.
  -->
 
-<apex:page id="ClonePriceRule" standardController="SBQQ__PriceRule__c" extensions="SBQQ.PriceRuleExtController" title="{!$Label.SBQQ__lbl_clone_price_rule_preview}">
+<apex:page id="ClonePriceRule" standardController="SBQQ__PriceRule__c" extensions="SBQQ.PriceRuleExtController" title="{!$Label.sbqq__lbl_clone_price_rule_preview}">
 	<apex:stylesheet value="{!$Resource['sb']}"/>
 	<c:theme />
 	<div id="sbCloneRelated" class="sb">
 		<div class="sbForm"><apex:form >
-			<c:pageHeader title="{!$Label.SBQQ__lbl_price_rule_clone_preview}" iconName="sf-icon-copy resize">
+			<c:pageHeader title="{!$Label.sbqq__lbl_price_rule_clone_preview}" iconName="sf-icon-copy resize">
 				<div class="sbBtns">
 					<apex:commandButton styleClass="sbBtn" action="{!onClone}" value="{!onCloneLabel}" />
 					<apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="{!onCancelLabel}" />
@@ -55,7 +55,7 @@
 						</apex:repeat>
 						<apex:outputPanel rendered="{!conditions.size>15}">
 							<tr><td colspan="42">
-								<apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+								<apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
 									<apex:param value="{!conditions.size-15}"></apex:param>
 								</apex:outputText>
 							</td></tr>
@@ -97,7 +97,7 @@
 						</apex:repeat>
 						<apex:outputPanel rendered="{!queries.size>15}">
 							<tr><td colspan="42">
-								<apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+								<apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
 									<apex:param value="{!queries.size-15}"></apex:param>
 								</apex:outputText>
 							</td></tr>
@@ -143,7 +143,7 @@
 						</apex:repeat>
 						<apex:outputPanel rendered="{!actions.size>15}">
 							<tr><td colspan="42">
-								<apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+								<apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
 									<apex:param value="{!actions.size-15}"></apex:param>
 								</apex:outputText>
 							</td></tr>

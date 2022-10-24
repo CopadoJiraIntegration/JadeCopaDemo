@@ -1,10 +1,10 @@
-<apex:page standardController="SBQQ__TemplateSection__c" extensions="SBQQ.UploadRelatedContentController" docType="html-5.0" standardStylesheets="false" title="{!$Label.SBQQ__lbl_related_content}">
+<apex:page standardController="SBQQ__TemplateSection__c" extensions="SBQQ.UploadRelatedContentController" docType="html-5.0" standardStylesheets="false" title="{!$Label.sbqq__lbl_related_content}">
 <apex:stylesheet value="{!IF(formfactor == 'desktop', $Resource['sb'], $Resource['MobileCSS'])}"/>
 <c:theme formFactor="{!formFactor}"/>
 <div id="sbNewRelatedContent" class="sb">
   <apex:form id="form">
   <apex:outputPanel rendered="{!formFactor == 'desktop'}">
-  <c:pageHeader subtitle="{!SBQQ__TemplateSection__c.Name}" title="{!$Label.SBQQ__lbl_related_content}" iconName="sf-icon-document" formFactor="{!formFactor}">
+  <c:pageHeader subtitle="{!SBQQ__TemplateSection__c.Name}" title="{!$Label.sbqq__lbl_related_content}" iconName="sf-icon-document" formFactor="{!formFactor}">
   <div class="sbButtons">
     <apex:commandButton styleClass="sbBtn" value="Save" action="{!onSave}"/>
     <apex:commandButton styleClass="sbBtn" value="Cancel" action="{!cancel}"/>
@@ -12,7 +12,7 @@
 </c:pageHeader>
 </apex:outputPanel>
 <apex:outputPanel rendered="{!formFactor != 'desktop'}">
-<c:pageHeader title="{!$Label.SBQQ__lbl_related_content}" formFactor="{!formFactor}" customTheme="18">
+<c:pageHeader title="{!$Label.sbqq__lbl_related_content}" formFactor="{!formFactor}" customTheme="18">
 <div class="buttonContainer">
   <div class="sbPageButtons">
     <div class="center">
@@ -33,7 +33,7 @@
           <tr>
             <apex:outputLabel >
             <td>
-              <label> {!$Label.SBQQ__lbl_quote_related_content_upload} </label>
+              <label> {!$Label.sbqq__lbl_quote_related_content_upload} </label>
             </td>
             <td>
               <apex:inputFile value="{!UploadFile.Body}" contentType="{!UploadFile.ContentType}" fileName="{!UploadFile.Name}" fileSize="{!UploadFile.BodyLength}" accept="application/pdf" id="UploadFile"/>
@@ -43,8 +43,8 @@
         <tr>
           <apex:outputLabel rendered="{!RenderDisplayOrder}">
           <td>
-            <label> {!$Label.SBQQ__lbl_display_order} </label>
-            <i class="sb-icon-help-circled" ng-show="{!formFactor == 'desktop'}" title="{!$Label.SBQQ__msg_quote_related_content_display_order}"/>
+            <label> {!$Label.sbqq__lbl_display_order} </label>
+            <i class="sb-icon-help-circled" ng-show="{!formFactor == 'desktop'}" title="{!$Label.sbqq__msg_quote_related_content_display_order}"/>
           </td>
         </apex:outputLabel>
         <td>

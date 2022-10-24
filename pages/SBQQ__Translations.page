@@ -1,4 +1,4 @@
-<apex:page standardController="SBQQ__Localization__c" extensions="SBQQ.LocalizationController" docType="html-5.0" standardStylesheets="false" title="{!$Label.SBQQ__lbl_translations}">
+<apex:page standardController="SBQQ__Localization__c" extensions="SBQQ.LocalizationController" docType="html-5.0" standardStylesheets="false" title="{!$Label.sbqq__lbl_translations}">
 	<apex:stylesheet value="{!IF(formfactor == 'desktop', $Resource['sb'], $Resource['MobileCSS'])}"/>
     <!-- temporary style fix for error message -->
     <style>
@@ -16,11 +16,11 @@
 	<apex:form >
 		<apex:actionFunction name="onLanguageChange" action="{!onLanguageChange}" rerender="sbFieldsTable, sbUserDefinedFieldsTable" onComplete="reapplyEditorCSS()"/>
 		<div id="sbTranslate" class="sb">
-			<c:pageHeader title="{!$Label.SBQQ__lbl_translations}" subtitle="{!targetObjectName}" iconName="sf-icon-replace resize">
+			<c:pageHeader title="{!$Label.sbqq__lbl_translations}" subtitle="{!targetObjectName}" iconName="sf-icon-replace resize">
 				<div class="sbButtons">
-					<apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_save}" action="{!onSave}"/>
-					<apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_quick_save}" action="{!onQuickSave}"/>
-					<apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_cancel}" action="{!onCancel}"/>
+					<apex:commandButton styleClass="sbBtn" value="{!$Label.sbqq__lbl_save}" action="{!onSave}"/>
+					<apex:commandButton styleClass="sbBtn" value="{!$Label.sbqq__lbl_quick_save}" action="{!onQuickSave}"/>
+					<apex:commandButton styleClass="sbBtn" value="{!$Label.sbqq__lbl_cancel}" action="{!onCancel}"/>
 				</div>
 			</c:pageHeader>
 		
@@ -30,7 +30,7 @@
 					<header>
 						<h3>{!$ObjectType.SBQQ__Localization__c.fields.SBQQ__Language__c.label}</h3>
 					</header>
-					<span>{!$Label.SBQQ__lbl_select_language}</span>
+					<span>{!$Label.sbqq__lbl_select_language}</span>
 					<apex:selectList value="{!SBQQ__Localization__c.SBQQ__Language__c}" id="language" size="1" onchange="changeLanguage()">
 						<apex:selectOptions value="{!languages}" />
 					</apex:selectList>

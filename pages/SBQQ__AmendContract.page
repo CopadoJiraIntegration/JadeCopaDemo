@@ -1,4 +1,4 @@
-<apex:page standardController="Contract" extensions="SBQQ.AmendContractController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_amend_contract}">
+<apex:page standardController="Contract" extensions="SBQQ.AmendContractController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.sbqq__lbl_amend_contract}">
 	<apex:stylesheet value="{!$Resource['sb']}"/>
 	<apex:includeScript value="{!$Resource.SBQQ__QueueableJobChecker}"/>
 	<apex:slds />
@@ -7,10 +7,10 @@
 	<apex:pageMessages />
 	<div id="sbAmendContract" class="sb">
 	    <apex:form >
-	    	<c:pageHeader title="{!$Label.SBQQ__lbl_amend_contract}" subtitle="{!contractNumber}" subtitleMessage="{!displayedSubscriptionsMsg}" formFactor="{!formFactor}" iconName="sf-icon-contract-1">
+	    	<c:pageHeader title="{!$Label.sbqq__lbl_amend_contract}" subtitle="{!contractNumber}" subtitleMessage="{!displayedSubscriptionsMsg}" formFactor="{!formFactor}" iconName="sf-icon-contract-1">
 		    	<div class="sbButtons">
-	                <apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_amend}" action="{!onAmend}" onclick="toggleLoadingMask(true)"/>
-	                <apex:commandButton styleClass="sbBtn" action="{!returnToContract}" value="{!$Label.SBQQ__lbl_cancel}" />
+	                <apex:commandButton styleClass="sbBtn" value="{!$Label.sbqq__lbl_amend}" action="{!onAmend}" onclick="toggleLoadingMask(true)"/>
+	                <apex:commandButton styleClass="sbBtn" action="{!returnToContract}" value="{!$Label.sbqq__lbl_cancel}" />
 	            </div>
 			</c:pageHeader>
 		</apex:form>

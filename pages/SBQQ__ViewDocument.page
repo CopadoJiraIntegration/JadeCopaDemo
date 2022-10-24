@@ -10,7 +10,7 @@
                 <c:pageBlockSection >
                     <apex:outputText value="{!$ObjectType.SBQQ__QuoteDocument__c.label} "/>
                     <apex:outputLink value="{!$CurrentPage.parameters.retURL}" id="qDocLink">{!quoteDocName}</apex:outputLink>
-                    <apex:outputText value=" {!$Label.SBQQ__msg_attachment_is_downloaded_successfully}"/>
+                    <apex:outputText value=" {!$Label.sbqq__msg_attachment_is_downloaded_successfully}"/>
                 </c:pageBlockSection>
             </div>
         </div>

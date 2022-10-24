@@ -118,15 +118,15 @@
 
             <c:pageHeader title="{!headerTitle}" subtitle="{!headerSubtitle}" formFactor="{!formFactor}" customTheme="18" iconName="sf-icon-product">
                 <div class="sbButtons">
-                    <apex:commandButton action="{!addOrderProducts}" value="{!$Label.SBQQ__lbl_save}"
+                    <apex:commandButton action="{!addOrderProducts}" value="{!$Label.sbqq__lbl_save}"
                                         styleClass="sbBtn"
                                         rendered="{!totalNumberOfProducts > 0 && editable == TRUE}"
                                         onclick="disableOnClick(this);"/>
-                    <apex:commandButton action="{!quickSave}" value="{!$Label.SBQQ__lbl_quick_save}"
+                    <apex:commandButton action="{!quickSave}" value="{!$Label.sbqq__lbl_quick_save}"
                                         styleClass="sbBtn"
                                         rendered="{!totalNumberOfProducts > 0 && editable == TRUE}"
                                         onclick="disableOnClick(this);"/>
-                    <apex:commandButton action="{!onCancel}" value="{!$Label.SBQQ__lbl_cancel}"
+                    <apex:commandButton action="{!onCancel}" value="{!$Label.sbqq__lbl_cancel}"
                                         styleClass="sbBtn"/>
                 </div>
             </c:pageHeader>

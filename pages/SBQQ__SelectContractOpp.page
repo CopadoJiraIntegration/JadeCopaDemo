@@ -1,4 +1,4 @@
-<apex:page id="SelectContractOpp" standardController="Opportunity" extensions="SBQQ.SelectContractOppController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" tabStyle="SBQQ__Quote__c" title="{!$Label.SBQQ__lbl_contract_selector}">
+<apex:page id="SelectContractOpp" standardController="Opportunity" extensions="SBQQ.SelectContractOppController,SBQQ.QueueableJobCheckerExt" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" tabStyle="SBQQ__Quote__c" title="{!$Label.sbqq__lbl_contract_selector}">
 	<apex:stylesheet value="{!$Resource['sb']}"/>
 	<apex:includeScript value="{!$Resource.SBQQ__QueueableJobChecker}"/>
 	<c:theme />
@@ -8,7 +8,7 @@
 			<apex:actionFunction name="displayErrorMessage" rerender="pageMessages" action="{!displayErrorMessage}">
 				<apex:param name="errorMessage" value=""/>
 			</apex:actionFunction>
-			<c:pageHeader title="{!$Label.SBQQ__lbl_existing_contracts}" subtitle="{! opp.name}" iconName="sf-icon-contract-1 resetHeight">
+			<c:pageHeader title="{!$Label.sbqq__lbl_existing_contracts}" subtitle="{! opp.name}" iconName="sf-icon-contract-1 resetHeight">
 				<div class="sbButtons">
 					<apex:commandButton styleClass="sbBtn" action="{!onSelect}" onclick="toggleLoadingMask(true)" value="Select"  rendered="{!IF(!isAssetBased && hasContracts, true,false)}"/>
 					<apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="Cancel"/>
@@ -20,7 +20,7 @@
 					<apex:inputHidden id="selectedContractId" value="{!selectedContractId}"/>
 					<!-- Create Tab panel -->
 					<apex:tabPanel styleClass="sbTabs" switchType="client" selectedTab="activeContractsTab" id="ContractsTabPanel">
-						<apex:tab label="{!$Label.SBQQ__lbl_active_contracts}" name="activeContractsTab" id="tabOne">
+						<apex:tab label="{!$Label.sbqq__lbl_active_contracts}" name="activeContractsTab" id="tabOne">
 							<c:pageBlockSection >
 								<table class="sbTable" border="0" cellspacing="0" cellpadding="0" width="100%">
 									<thead class="dr-table-thead">
@@ -50,7 +50,7 @@
 								</table>
 							</c:pageBlockSection>
 						</apex:tab>
-						<apex:tab label="{!$Label.SBQQ__lbl_evergreen_contracts}" name="evergreenContractsTab" id="tabTwo">
+						<apex:tab label="{!$Label.sbqq__lbl_evergreen_contracts}" name="evergreenContractsTab" id="tabTwo">
 							<c:pageBlockSection >
 								<table class="sbTable" border="0" cellspacing="0" cellpadding="0" width="100%">
 									<thead class="dr-table-thead">

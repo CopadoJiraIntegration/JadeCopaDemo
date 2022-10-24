@@ -1,9 +1,9 @@
-<apex:page standardController="SBQQ__Quote__c" action="{!onInitClone}" extensions="SBQQ.QuoteExtController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_related_items_preview}">
+<apex:page standardController="SBQQ__Quote__c" action="{!onInitClone}" extensions="SBQQ.QuoteExtController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.sbqq__lbl_related_items_preview}">
     <apex:stylesheet value="{!$Resource['sb']}"/>
     <c:theme />
     <div id="sbCloneRelated" class="sb">
         <div class="sbForm"><apex:form >
-            <c:pageHeader title="{!$Label.SBQQ__lbl_related_items_preview}" subtitle="{!SBQQ__Quote__c.Name}" iconName="sf-icon-copy resize">
+            <c:pageHeader title="{!$Label.sbqq__lbl_related_items_preview}" subtitle="{!SBQQ__Quote__c.Name}" iconName="sf-icon-copy resize">
                 <div class="sbBtns">
 					<!-- Clone Button -->
 					<apex:commandButton styleClass="sbBtn" value="{!onCloneLabel}" id="Submit" onClick="cloneOnClick(this); return false;" />
@@ -50,7 +50,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!lineCount > quoteLines.size}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!lineCount-quoteLines.size}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -92,7 +92,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!quoteGroups.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!quoteGroups.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>

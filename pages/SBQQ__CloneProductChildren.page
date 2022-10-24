@@ -1,9 +1,9 @@
-<apex:page standardController="Product2" extensions="SBQQ.ProductExtController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.SBQQ__lbl_related_items_preview}">
+<apex:page standardController="Product2" extensions="SBQQ.ProductExtController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false" title="{!$Label.sbqq__lbl_related_items_preview}">
     <apex:stylesheet value="{!$Resource['sb']}"/>
     <c:theme />
     <div id="sbCloneRelated" class="sb">
         <div class="sbForm"><apex:form >
-            <c:pageHeader title="{!$Label.SBQQ__lbl_related_items_preview}" subtitle="{!Product2.Name}" iconName="sf-icon-copy resize">
+            <c:pageHeader title="{!$Label.sbqq__lbl_related_items_preview}" subtitle="{!Product2.Name}" iconName="sf-icon-copy resize">
                 <div class="sbBtns">
                     <apex:commandButton styleClass="sbBtn" action="{!onClone}" value="{!onCloneLabel}" />
                     <apex:commandButton styleClass="sbBtn" action="{!onCancel}" value="{!onCancelLabel}" />
@@ -37,7 +37,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!additionalDocs.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!additionalDocs.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -75,7 +75,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!blockPrices.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!blockPrices.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -111,7 +111,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!costs.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!costs.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -153,7 +153,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!configAttrs.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!configAttrs.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -191,7 +191,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!configRules.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!configRules.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -231,7 +231,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!optionConstraints.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!optionConstraints.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -265,7 +265,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!dimensions.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!dimensions.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -303,7 +303,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!productFeatures.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!productFeatures.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -343,7 +343,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!productOptions.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!productOptions.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -377,7 +377,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!upgradeSources.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!upgradeSources.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -413,7 +413,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!priceRules.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!priceRules.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
@@ -449,7 +449,7 @@
                             </apex:repeat>
                             <apex:outputPanel rendered="{!translations.size>5}">
                                 <tr><td colspan="42">
-                                    <apex:outputText value="{!$Label.SBQQ__lbl_additional_cloned_items}">
+                                    <apex:outputText value="{!$Label.sbqq__lbl_additional_cloned_items}">
                                         <apex:param value="{!translations.size-5}"></apex:param>
                                     </apex:outputText>
                                 </td></tr>
